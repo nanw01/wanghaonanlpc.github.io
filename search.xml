@@ -4,6 +4,23 @@
   
     
     <entry>
+      <title><![CDATA[升级Hexo出现ERROR Deployer not found: git 解决方案]]></title>
+      <url>http://wanghaonanlpc.github.io/2017/02/26/%E5%8D%87%E7%BA%A7Hexo%E5%87%BA%E7%8E%B0ERROR-Deployer-not-found-git/</url>
+      <content type="html"><![CDATA[<p>执行以下代码即可</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install hexo-deployer-git --save</div></pre></td></tr></table></figure>
+<p>重新deploy即可。</p>
+]]></content>
+      
+        
+        <tags>
+            
+            <tag> hexo </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[mac下查找端口是否占用及关闭占用端口进程]]></title>
       <url>http://wanghaonanlpc.github.io/2017/02/26/mac%E4%B8%8B%E6%9F%A5%E6%89%BE%E7%AB%AF%E5%8F%A3%E6%98%AF%E5%90%A6%E5%8D%A0%E7%94%A8%E5%8F%8A%E5%85%B3%E9%97%AD%E5%8D%A0%E7%94%A8%E7%AB%AF%E5%8F%A3%E8%BF%9B%E7%A8%8B/</url>
       <content type="html"><![CDATA[<p>如何查找某个端口是否被占用:</p>
