@@ -1,0 +1,1533 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>一个老白 | 野厨</title>
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://wanghaonanlpc.github.io/"/>
+  <updated>2017-02-26T11:36:08.000Z</updated>
+  <id>http://wanghaonanlpc.github.io/</id>
+  
+  <author>
+    <name>Alex</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>mac下查找端口是否占用及关闭占用端口进程</title>
+    <link href="http://wanghaonanlpc.github.io/2017/02/26/mac%E4%B8%8B%E6%9F%A5%E6%89%BE%E7%AB%AF%E5%8F%A3%E6%98%AF%E5%90%A6%E5%8D%A0%E7%94%A8%E5%8F%8A%E5%85%B3%E9%97%AD%E5%8D%A0%E7%94%A8%E7%AB%AF%E5%8F%A3%E8%BF%9B%E7%A8%8B/"/>
+    <id>http://wanghaonanlpc.github.io/2017/02/26/mac下查找端口是否占用及关闭占用端口进程/</id>
+    <published>2017-02-26T11:34:32.000Z</published>
+    <updated>2017-02-26T11:36:08.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>如何查找某个端口是否被占用:</p>
+<p>我们查找下 4000 端口当前被谁占用</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">AlexdeMacBook-Air:Hexo_Material apple$ lsof -i:4000</div></pre></td></tr></table></figure>
+<p>结果显示:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">COMMAND  PID  USER   FD   TYPE             DEVICE SIZE/OFF NODE NAME</div><div class="line">node    1341 apple   28u  IPv4 0x72e37ef4542a1f31      0t0  TCP *:terabase (LISTEN)</div><div class="line">node    1341 apple   35u  IPv4 0x72e37ef454cfc449      0t0  TCP localhost:terabase-&gt;localhost:53866 (CLOSE_WAIT)</div><div class="line">node    1341 apple   36u  IPv4 0x72e37ef44b50d259      0t0  TCP localhost:terabase-&gt;localhost:53867 (CLOSE_WAIT)</div><div class="line">node    1341 apple   37u  IPv4 0x72e37ef44b87e259      0t0  TCP localhost:terabase-&gt;localhost:53868 (CLOSE_WAIT)</div><div class="line">node    1341 apple   38u  IPv4 0x72e37ef447e55f31      0t0  TCP localhost:terabase-&gt;localhost:53869 (CLOSE_WAIT)</div><div class="line">node    1341 apple   39u  IPv4 0x72e37ef448b52b51      0t0  TCP localhost:terabase-&gt;localhost:53870 (CLOSE_WAIT)</div></pre></td></tr></table></figure>
+<p>可以看到一个node进程占用了 4000 端口.</p>
+<p>如何关闭此进程:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">AlexdeMacBook-Air:Hexo_Material apple$ kill -9 1341</div></pre></td></tr></table></figure>
+<p>ok,这样就结束了占用 4000 端口的进程.</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;如何查找某个端口是否被占用:&lt;/p&gt;
+&lt;p&gt;我们查找下 4000 端口当前被谁占用&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Material的使用</title>
+    <link href="http://wanghaonanlpc.github.io/2017/02/26/Material%E7%9A%84%E4%BD%BF%E7%94%A8/"/>
+    <id>http://wanghaonanlpc.github.io/2017/02/26/Material的使用/</id>
+    <published>2017-02-26T11:19:29.000Z</published>
+    <updated>2017-02-26T11:38:49.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>安装Hexo后，运行以下命令在目标中初始化Hexo ``。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ hexo init &lt;folder&gt;</div><div class="line">$ cd &lt;folder&gt;</div><div class="line">$ npm install</div></pre></td></tr></table></figure>
+<p>一旦初始化，这里是你的项目文件夹将是什么样子：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">.</div><div class="line">├── _config.yml</div><div class="line">├── package.json</div><div class="line">├── scaffolds</div><div class="line">├── source</div><div class="line">|   ├── _drafts</div><div class="line">|   └── _posts</div><div class="line">└── themes</div></pre></td></tr></table></figure>
+<h2 id="安装「Material」"><a href="#安装「Material」" class="headerlink" title="安装「Material」"></a>安装「Material」</h2><p>Hexo 安装主题的方式非常简单，只需要将主题文件放置于站点目录的 <code>themes</code> 目录下，然后修改下配置文件即可。<br>具体到 Material 来说，有 <code>Github</code> 和 <code>NPM</code> 两种方式。</p>
+<h3 id="Github"><a href="#Github" class="headerlink" title="Github"></a>Github</h3><blockquote>
+<p>可以选择 克隆 或者 下载 <a href="https://github.com/viosey/hexo-theme-material/releases" target="_blank" rel="external">稳定的发布版本</a>。</p>
+</blockquote>
+<p>为了方便之后的更新，建议使用 <strong>克隆</strong> 的方式。克隆命令如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ cd your-hexo-site/themes</div><div class="line">$ git clone https://github.com/viosey/hexo-theme-material.git material</div></pre></td></tr></table></figure>
+<h3 id="NPM"><a href="#NPM" class="headerlink" title="NPM"></a>NPM</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install hexo-material</div></pre></td></tr></table></figure>
+<p>该方式会把 Material 主题下载到 <code>hexo</code> 目录下的 <code>node_modules</code> 文件夹中。<br>找到 <code>hexo-material</code> 文件夹，然后把文件复制到 <code>themes</code> 目录中的 <code>Material</code> 主题文件夹里。</p>
+<h2 id="启用「Material」"><a href="#启用「Material」" class="headerlink" title="启用「Material」"></a>启用「Material」</h2><p>克隆完成后，修改主题文件夹名称，将其改为 <code>material</code> 。<br>然后打开 <strong>站点配置文件</strong>，找到 <code>theme</code> 字段，并将其值更改为 <code>material</code> 。</p>
+<blockquote>
+<p>文件夹名称可自由修改，并不是唯一的，只需 <code>theme</code> 字段与之对应即可。</p>
+</blockquote>
+<p>运行 <code>hexo s --debug</code>，并访问 <code>http://localhost:4000</code>，确保站点正确运行。</p>
+<h2 id="更新「Material」"><a href="#更新「Material」" class="headerlink" title="更新「Material」"></a>更新「Material」</h2><h3 id="Github-1"><a href="#Github-1" class="headerlink" title="Github"></a>Github</h3><p>使用</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git pull</div></pre></td></tr></table></figure>
+<p>即可拉取最新版本。</p>
+<h3 id="NPM-1"><a href="#NPM-1" class="headerlink" title="NPM"></a>NPM</h3><p>NPM 更新有两种方式：</p>
+<h4 id="npm-update"><a href="#npm-update" class="headerlink" title="npm-update"></a>npm-update</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm update hexo-material</div></pre></td></tr></table></figure>
+<p>然后将文件复制到 <code>Material</code> 主题文件夹中。</p>
+<h4 id="npm-check"><a href="#npm-check" class="headerlink" title="npm-check"></a>npm-check</h4><p><a href="https://www.npmjs.com/package/npm-check" target="_blank" rel="external">npm-check</a> 是用来检查 npm 依赖包是否有更新，错误以及不在使用的，我们也可以使用 npm-check 进行包的更新。</p>
+<p>安装 npm-check：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install -g npm-check</div></pre></td></tr></table></figure>
+<p>检查 npm 包的状态:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm-check hexo-material</div></pre></td></tr></table></figure>
+<p>使用空格键可以选择需要处理的包，回车直接进行处理。</p>
+<h2 id="基本设定"><a href="#基本设定" class="headerlink" title="基本设定"></a>基本设定</h2><h3 id="语言"><a href="#语言" class="headerlink" title="语言"></a>语言</h3><p>编辑 <strong>站点配置文件</strong>，将 <code>language</code> 设置成你所需要的语言。<br>可用的语言如下：</p>
+<ul>
+<li>العَرَبِيَّة (ar)</li>
+<li>English (en)</li>
+<li>Español (es)</li>
+<li>Français (fr)</li>
+<li>Deutsche (de)</li>
+<li>日本語 (ja)</li>
+<li>Malay (ms)</li>
+<li>简体中文 (zh-CN)</li>
+<li>繁體中文 (zh-TW)</li>
+</ul>
+<blockquote>
+<p>例如：选用繁體中文，则配置为：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&gt; language: zh-TW</div><div class="line">&gt;</div></pre></td></tr></table></figure>
+</blockquote>
+<h3 id="URL"><a href="#URL" class="headerlink" title="URL"></a>URL</h3><p>编辑 <strong>站点配置文件</strong>，<code>url</code> 填写主域名，<code>root</code> 填写 子目录/根域名</p>
+<blockquote>
+<p>例如：站点域名为 <code>http://example.com/hexo</code>：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&gt; url: http://example.com</div><div class="line">&gt; root: /hexo</div><div class="line">&gt;</div></pre></td></tr></table></figure>
+</blockquote>
+<p>若你的站点没有运行在子目录中，则 <code>root</code> 填写为 <code>/</code>。</p>
+<h3 id="作者名称"><a href="#作者名称" class="headerlink" title="作者名称"></a>作者名称</h3><p>编辑 <strong>站点配置文件</strong>，设置 <code>author</code> 为你的昵称。</p>
+<h3 id="站点描述设置"><a href="#站点描述设置" class="headerlink" title="站点描述设置"></a>站点描述设置</h3><p>编辑 <strong>站点配置文件</strong>，设置 <code>description</code> 字段为你的站点描述。站点描述可以是你喜欢的一句签名:)</p>
+<h3 id="RSS"><a href="#RSS" class="headerlink" title="RSS"></a>RSS</h3><p>安装插件：<a href="https://github.com/hexojs/hexo-generator-feed" target="_blank" rel="external">hexo-generator-feed</a>，配置方式如插件 <code>README.md</code> 所示。<br>然后在 <a href="https://material.viosey.com/intro/#url" target="_blank" rel="external">url: rss</a> 中添加生成的 feed 路径。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;安装Hexo后，运行以下命令在目标中初始化Hexo ``。&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://wanghaonanlpc.github.io/2017/02/26/hello-world/"/>
+    <id>http://wanghaonanlpc.github.io/2017/02/26/hello-world/</id>
+    <published>2017-02-26T10:55:46.000Z</published>
+    <updated>2017-02-26T10:55:46.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>新产品开发过程（一）</title>
+    <link href="http://wanghaonanlpc.github.io/2017/02/25/%E6%96%B0%E4%BA%A7%E5%93%81%E5%BC%80%E5%8F%91%E8%BF%87%E7%A8%8B/"/>
+    <id>http://wanghaonanlpc.github.io/2017/02/25/新产品开发过程/</id>
+    <published>2017-02-25T14:14:40.000Z</published>
+    <updated>2017-02-24T15:23:59.000Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="大纲"><a href="#大纲" class="headerlink" title="大纲"></a>大纲</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">- 定义</div><div class="line">- 阶段回顾法</div><div class="line">- 阶段关卡发</div><div class="line">- 瀑布式开发法</div><div class="line">- 敏捷式开发法</div><div class="line">- 精益生产开发法</div><div class="line">- 设计思考</div><div class="line">- 过程拥有者</div></pre></td></tr></table></figure>
+<h4 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h4><h5 id="过程定义："><a href="#过程定义：" class="headerlink" title="-过程定义："></a>-过程定义：</h5><p>新产品开发过程</p>
+<ol>
+<li>一组严谨定义的任务与步骤，用以描述一家公司将初期构想各自转换成可以销售的产品与或服务的正规方法。</li>
+<li>新产品开发词汇表。<strong><em>（存疑）</em></strong></li>
+</ol>
+<p>步骤、活动、决策、目标的组合</p>
+<p>如果执行得当将会产生出组织需要的新产品</p>
+<h5 id="为什么需要过程"><a href="#为什么需要过程" class="headerlink" title="-为什么需要过程"></a>-为什么需要过程</h5><p>10项能赢的重要成功因素</p>
+<ol>
+<li>独特优越的产品</li>
+<li>强力的市场导向</li>
+<li>更多前期的研究</li>
+<li>在开发前敏锐而提早的产品定义</li>
+<li>正确的组织架构 —— 团队合作</li>
+<li>创新而又支持性的环境</li>
+<li>领导阶层支持</li>
+<li>创建一个漏斗而非隧道</li>
+<li>将产品管理视为过程</li>
+<li>给予产品开发足够的资源</li>
+</ol>
+<h5 id="前期多做研究是否意味上市时间落后？"><a href="#前期多做研究是否意味上市时间落后？" class="headerlink" title="- 前期多做研究是否意味上市时间落后？"></a>- 前期多做研究是否意味上市时间落后？</h5><p>​    在前期话费较多时间和金钱可以大幅改善成功的机会 - 对此有明显的证据</p>
+<p>​    更多的黄钻被工作会导致更好更敏捷的产品和项目定义 - 这会加速开发阶段（较少不断地浪费时间）</p>
+<p>​    完成前期准备工作可以预先考虑到产品问题和设计改更 - 这些产品设计变更可以在这过程早起完成，而不是等产品上市才做</p>
+<h5 id="各种过程的演化"><a href="#各种过程的演化" class="headerlink" title="-各种过程的演化"></a>-各种过程的演化</h5><p>​    大多数公司修改新产品开发过程以符合所需</p>
+<p>​    任何种类的新产品开发过程都比没有任何过程要有生产力</p>
+<p>​    其他一致的系统有：</p>
+<ul>
+<li>阶段回顾</li>
+<li>阶段关卡</li>
+</ul>
+<h4 id="阶段回顾法"><a href="#阶段回顾法" class="headerlink" title="阶段回顾法"></a>阶段回顾法</h4><h5 id="阶段回顾法-1"><a href="#阶段回顾法-1" class="headerlink" title="阶段回顾法"></a>阶段回顾法</h5><p>​    在阶段性的产品开发过程中，首先，一项功能完成一组任务，然后将产生的信息持续不断地传递给其他功能，在逐次地完成西一组任务并将所有信息传递给下一功能。</p>
+<p>在这种产品开发过程中，非常缺乏多功能的团队合作。</p>
+<p>也称为接力过程</p>
+<p>大多数公司已从这种流程转移至使用多功能软对的阶段关卡发</p>
+<p><br></p>
+<p>阶段一：识别机会、选择</p>
+<p>阶段二：产生概念</p>
+<p>阶段三：概念项目评量</p>
+<p>阶段四：开发</p>
+<p>阶段五：上市</p>
+<h5 id="模糊的的前端"><a href="#模糊的的前端" class="headerlink" title="模糊的的前端"></a>模糊的的前端</h5><p>阶段1~3成为模糊的前端</p>
+<p>当产品概念仍然很模糊的时候，产品呢开发的刚起步时期会很混乱</p>
+<p>在更正式的产品开发过程之前，一般包括三项任务</p>
+<ul>
+<li>策略规则</li>
+<li>概念产生</li>
+<li>预做技术评量</li>
+</ul>
+<p>这些活动通常杂乱无章，不可预期，毫无组织</p>
+<p>比较起来，后来的新产品开发过程典型的有组织、可预期以及有条理，具有一组规定的活动，应回答的问题以及该做的决定</p>
+<h4 id="阶段关卡法"><a href="#阶段关卡法" class="headerlink" title="阶段关卡法"></a>阶段关卡法</h4><p>阶段关卡过程是为了将一种新产品的项目从想法逐渐转变成上市产品的一种概念</p>
+<p>阶段关卡法讲所要付出的努力以管理决策关卡区分成不同的阶段</p>
+<p>跨功能团队在管理层批准进行下一阶段的产品开发之前，必须成功地完成每一阶段所规定的一组跨功能任务</p>
+<p><img src="./process_icons.gif" alt="process_icons"></p>
+<h5 id="阶段-1-2"><a href="#阶段-1-2" class="headerlink" title="阶段(1/2)"></a>阶段(1/2)</h5><p>阶段是跨功能的（其中没有研究和开发或营销阶段）以及为了提升上市的速度，每一项活动是并行的</p>
+<p>每一阶段的成本都高于前一阶段，结果是渐进的承诺。一旦不确定性降低，可以提高支出，风险也可管控（As uncertainties decrease, expenditures are allowed to rise and risk is managed.）</p>
+<p><img src="./stages-diagram.gif" alt="stages-diagram"></p>
+<h5 id="阶段-2-2"><a href="#阶段-2-2" class="headerlink" title="阶段(2/2)"></a>阶段(2/2)</h5><p>活动：团队必须根据项目计划进行工作</p>
+<p>集成分析：所有功能性活动结果的团队集成分析可以藉由跨功能互动推衍</p>
+<p>集成物：代表集成分析的结果</p>
+<p>活动 + 分析 = 交付物</p>
+<p><img src="./stages.gif" alt="stages"></p>
+<h5 id="关卡"><a href="#关卡" class="headerlink" title="关卡"></a>关卡</h5><p>交付物：关卡查验的输入 - 项目领导者和团队交付至会议的东西</p>
+<p>标准：为了能做出继续/终止以及优先序的决策，项目在接受评判时所需的条件</p>
+<p>输出：关卡查验的结果。关卡必须清楚地表达结果，须包括：一项决策（继续、终止、暂停、循环）以及下一步怎么走（核准的项目计划，日期以及下一关卡所同意的交付物）</p>
+<p><img src="./gates.gif" alt="gates"></p>
+<h5 id="关卡通过标准"><a href="#关卡通过标准" class="headerlink" title="关卡通过标准"></a>关卡通过标准</h5><h6 id="必须符合"><a href="#必须符合" class="headerlink" title="必须符合"></a>必须符合</h6><p>​    有是非题，一个NO表示终止的决定，检查清单是用来表示必须符合条目最平常的格式</p>
+<h6 id="应该符合"><a href="#应该符合" class="headerlink" title="应该符合"></a>应该符合</h6><p>​    有高度渴望的项目特性，但是对问题回答NO并不会终止该项目；确切的地说是对这些问题加以评分并决定项目的分数，评分模型将‘应该符合’的问题处理得很好</p>
+<h5 id="关卡会议"><a href="#关卡会议" class="headerlink" title="关卡会议"></a>关卡会议</h5><p>把关者（守门人）包括技术和商业人民</p>
+<p>可以透过鄙视来对比评量标准以审核关于项目的想法</p>
+<p>这一份必须符合标准的清单会以“是”、“否”来给分，并且所有的答案必须是“是”；只要有一个“否”便会终止此项目</p>
+<p>当高层主管在关卡会议批准团队的行动计划，表示他们也愿意拨出资源：金钱，人力以及给予项目领导者和团队时间</p>
+<h5 id="阶段0：探索发现-Discovery"><a href="#阶段0：探索发现-Discovery" class="headerlink" title="阶段0：探索发现 Discovery"></a>阶段0：探索发现 Discovery</h5><p>设计前置工作一发现并揭露机会以及产生想法（点子）</p>
+<p>关键活动</p>
+<pre><code>1. 想法的捕捉和处理系统
+2. 在顾客产业中策略性分裂
+3. 产生剧本
+4. 顾客声音的研究
+5. 和领先用户一同工作
+6. 趋势导向的技术开发
+</code></pre><h5 id="探索发现Discovery（阶段0）（1-2）"><a href="#探索发现Discovery（阶段0）（1-2）" class="headerlink" title="探索发现Discovery（阶段0）（1/2）"></a>探索发现Discovery（阶段0）（1/2）</h5><p>这是任何产品开发的第一部分，无论是否为阶段关卡模型都会使用</p>
+<p>开发团队决定哪些项目是公司想要的并有能力追求的</p>
+<p>对公司而言，在这阶段参与想法产生活动，例如头脑风暴或其他团队思考阶段，是很普通的</p>
+<p>一旦点子产生团队选定一个他们想要进行的项目，此项目通过由组织决策选的第一关卡</p>
+<h5 id="探索发现Discovery（阶段0）（2-2）"><a href="#探索发现Discovery（阶段0）（2-2）" class="headerlink" title="探索发现Discovery（阶段0）（2/2）"></a>探索发现Discovery（阶段0）（2/2）</h5><p>当寻找产品点子时，为了能启发商业机会，组织能去看看外面的世界是有益的</p>
+<p>与顾客沟通以了解他们如何使用产品后，对于点子产生会有很大的突破。特别是和领先用户沟通可以对开发者提供极大的反馈，领先用户是最有可能对陈品感到热情的顾客</p>
+<p>除了和领先用户沟通，和供货商沟通也许会有帮助。了解所有商业种类如何运用原料或许可以据此发现之前尚未被开发的可能性</p>
+<h5 id="阶段0：主要输出"><a href="#阶段0：主要输出" class="headerlink" title="阶段0：主要输出"></a>阶段0：主要输出</h5><h6 id="机会概念"><a href="#机会概念" class="headerlink" title="机会概念"></a>机会概念</h6><p>一家公司的技能和资源，或顾客问题。技术驱动或者市场驱动或者两者都是</p>
+<h6 id="产品创新章程"><a href="#产品创新章程" class="headerlink" title="产品创新章程"></a>产品创新章程</h6><p>组织努力的中心是将新产品推向市场，这包括项目开始的原因、目标、目的，指导方针以及项目的范围，章程要包括市场喜好，顾客需求，以及潜在销售和利润的假设。</p>
+<h5 id="关卡-1：筛选点子"><a href="#关卡-1：筛选点子" class="headerlink" title="关卡 1：筛选点子"></a>关卡 1：筛选点子</h5><p>筛选点子是讲资源投入项目的第一项选择，项目就此诞生</p>
+<p>假设在发现阶段获得很多点子，接着的任务便是筛选并排列出值得话费时间和金钱的点子</p>
+<p>关卡1是一般性筛选，奖项木透过少数关键的“必须符合”以及“应该符合”的标准作判断</p>
+<p>财务标准并非典型第一步筛选的一部分</p>
+<blockquote>
+<p>以下晚点更新</p>
+</blockquote>
+<h5 id="关卡-1-评估标准（1-2）"><a href="#关卡-1-评估标准（1-2）" class="headerlink" title="关卡 1 评估标准（1/2）"></a>关卡 1 评估标准（1/2）</h5><h5 id="关卡-1-评估标准（2-2）"><a href="#关卡-1-评估标准（2-2）" class="headerlink" title="关卡 1 评估标准（2/2）"></a>关卡 1 评估标准（2/2）</h5><h5 id="阶段1：定义范围"><a href="#阶段1：定义范围" class="headerlink" title="阶段1：定义范围"></a>阶段1：定义范围</h5><h5 id="阶段1：定义范围-1"><a href="#阶段1：定义范围-1" class="headerlink" title="阶段1：定义范围"></a>阶段1：定义范围</h5><h5 id="关卡2：二次筛选"><a href="#关卡2：二次筛选" class="headerlink" title="关卡2：二次筛选"></a>关卡2：二次筛选</h5><h5 id="关卡2：评估标准"><a href="#关卡2：评估标准" class="headerlink" title="关卡2：评估标准"></a>关卡2：评估标准</h5><h5 id="阶段2：建立商业论证"><a href="#阶段2：建立商业论证" class="headerlink" title="阶段2：建立商业论证"></a>阶段2：建立商业论证</h5><h5 id="主要输出"><a href="#主要输出" class="headerlink" title="主要输出"></a>主要输出</h5><h5 id="关卡3：开始开发"><a href="#关卡3：开始开发" class="headerlink" title="关卡3：开始开发"></a>关卡3：开始开发</h5><h5 id="关卡3：必须满足的评估标准"><a href="#关卡3：必须满足的评估标准" class="headerlink" title="关卡3：必须满足的评估标准"></a>关卡3：必须满足的评估标准</h5><h5 id="关卡3：应该满足的评估标准（1-2）"><a href="#关卡3：应该满足的评估标准（1-2）" class="headerlink" title="关卡3：应该满足的评估标准（1/2）"></a>关卡3：应该满足的评估标准（1/2）</h5><h5 id="关卡3：应该满足的评估标准（2-2）"><a href="#关卡3：应该满足的评估标准（2-2）" class="headerlink" title="关卡3：应该满足的评估标准（2/2）"></a>关卡3：应该满足的评估标准（2/2）</h5><h5 id="阶段3：开发"><a href="#阶段3：开发" class="headerlink" title="阶段3：开发"></a>阶段3：开发</h5><h5 id="关卡4：开始测试"><a href="#关卡4：开始测试" class="headerlink" title="关卡4：开始测试"></a>关卡4：开始测试</h5><h5 id="阶段4：测试与验证"><a href="#阶段4：测试与验证" class="headerlink" title="阶段4：测试与验证"></a>阶段4：测试与验证</h5><h5 id="阶段4：主要活动与输出"><a href="#阶段4：主要活动与输出" class="headerlink" title="阶段4：主要活动与输出"></a>阶段4：主要活动与输出</h5><h5 id="测试与验证（阶段4）"><a href="#测试与验证（阶段4）" class="headerlink" title="测试与验证（阶段4）"></a>测试与验证（阶段4）</h5><h5 id="关卡5：上市"><a href="#关卡5：上市" class="headerlink" title="关卡5：上市"></a>关卡5：上市</h5><h5 id="阶段5：上市"><a href="#阶段5：上市" class="headerlink" title="阶段5：上市"></a>阶段5：上市</h5><h5 id="产品上市（阶段5）"><a href="#产品上市（阶段5）" class="headerlink" title="产品上市（阶段5）"></a>产品上市（阶段5）</h5><h5 id="决策"><a href="#决策" class="headerlink" title="决策"></a>决策</h5><h5 id="过程例外"><a href="#过程例外" class="headerlink" title="过程例外"></a>过程例外</h5><h5 id="先产品开发是每个人的责任"><a href="#先产品开发是每个人的责任" class="headerlink" title="先产品开发是每个人的责任"></a>先产品开发是每个人的责任</h5><h4 id="瀑布式开发法"><a href="#瀑布式开发法" class="headerlink" title="瀑布式开发法"></a>瀑布式开发法</h4><blockquote>
+<p>未完待续</p>
+</blockquote>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h4 id=&quot;大纲&quot;&gt;&lt;a href=&quot;#大纲&quot; class=&quot;headerlink&quot; title=&quot;大纲&quot;&gt;&lt;/a&gt;大纲&lt;/h4&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div c
+    
+    </summary>
+    
+    
+      <category term="npdp" scheme="http://wanghaonanlpc.github.io/tags/npdp/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>支持NFC的手机（2016）</title>
+    <link href="http://wanghaonanlpc.github.io/2017/02/24/%E6%94%AF%E6%8C%81NFC%E7%9A%84%E6%89%8B%E6%9C%BA%EF%BC%882016%EF%BC%89/"/>
+    <id>http://wanghaonanlpc.github.io/2017/02/24/支持NFC的手机（2016）/</id>
+    <published>2017-02-24T06:15:32.000Z</published>
+    <updated>2017-02-24T06:19:03.000Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="华为"><a href="#华为" class="headerlink" title="华为"></a>华为</h4><p>华为Mate 9(64GB/全网通)<br>华为Mate S臻逸版(128GB/双4G)<br>华为Mate S压感屏版(128GB/电信4G)<br>华为Mate S臻享版(64GB/移动4G)<br>华为Mate S臻享版(32GB/电信4G)<br>华为Mate 8(64GB/全网通)<br>华为Mate 8(32GB/全网通)<br>华为Mate 8(64GB/电信4G)<br>华为Mate 8(32GB/电信4G)<br>华为Mate 8(32GB/移动4G)<br>华为Mate S臻享版(64GB/电信4G)<br>华为Mate S臻享版(64GB/双4G)<br>华为Nexus 7(移动4G)<br>华为Mate 7标准版(16GB/移动4G)</p>
+<h4 id="荣耀"><a href="#荣耀" class="headerlink" title="荣耀"></a>荣耀</h4><p>荣耀V9标准版(64GB/全网通)<br>荣耀V9尊享版(128GB/全网通)<br>荣耀V9高配版(64GB/全网通)<br>荣耀8吴亦凡定制版(64GB/全网通)<br>荣耀8(32GB/双4G)<br>荣耀8高配版(32GB/全网通)<br>荣耀8高配版(64GB/全网通)<br>荣耀7超女定制版(64GB/全网通)<br>荣耀8(32GB/全网通)<br>荣耀V8(32GB/全网通)<br>荣耀畅玩4C 增强版(16GB/电信4G)<br>荣耀畅玩5X Plus(64GB/移动4G)<br>荣耀7(16GB/双4G)<br>荣耀7(16GB/电信4G)<br>荣耀7(64GB/全网通)<br>荣耀畅玩4C 标准版(8GB/电信4G)<br>荣耀6(32GB/移动4G)<br>荣耀6(16GB/移动4G)<br>荣耀6(16GB/联通4G)</p>
+<h4 id="小米"><a href="#小米" class="headerlink" title="小米"></a>小米</h4><p>小米MIX(128GB/全网通)<br>小米5S(64GB/全网通)<br>小米5(32GB/全网通)<br>小米5S Plus(64GB/全网通)<br>小米5S(32GB/全网通)<br>小米5高配版(64GB/全网通)<br>小米5S Plus(128GB/全网通)<br>小米5S(128GB/全网通)<br>小米5尊享版(128GB/全网通)<br>小米Max(32GB/全网通)<br>小米MIX尊享版(256GB/全网通)<br>小米5尊享3D玻璃版(128GB/全网通)</p>
+<h4 id="三星"><a href="#三星" class="headerlink" title="三星"></a>三星</h4><p>三星GALAXY S7 Edge皇帝版(128GB/全网通)<br>三星GALAXY C9 Pro(64GB/全网通)<br>三星GALAXY S7 Edge奥运典藏版(32GB/全网通)<br>三星GALAXY S7 Edge蝙蝠侠特别版(32GB/全网通)<br>三星2016版GALAXY J7(16GB/电信4G)<br>三星GALAXY S7 Edge(64GB/全网通)<br>三星GALAXY Note 5(64GB/全网通)<br>三星2016版Galaxy A5(16GB/移动4G)<br>三星GALAXY S7移动定制(32GB/移动4G)<br>三星GALAXY A9高配版(32GB/全网通)<br>三星2016版GALAXY J7(16GB/双4G)<br>三星2016版GALAXY J5(16GB/双4G)<br>三星2016版Galaxy A5(16GB/全网通)</p>
+<p>三星GALAXY Note 7(64GB/全网通)<br>三星GALAXY A8升级版(32GB/移动4G)<br>三星SM-A310(16GB/全网通)<br>三星SM-A510(16GB/移动4G)<br>三星GALAXY S7 Edge(32GB/全网通)<br>三星Galaxy S6 Edge+(64GB/全网通)<br>三星Galaxy S6 Edge+(32GB/全网通)<br>三星GALAXY A8(32GB/全网通)<br>三星GALAXY S6 Mini(16GB/移动4G)<br>三星Project Zero 2(移动4G)<br>三星G430(移动4G)<br>三星GALAXY S6 Edge(64GB/全网通)<br>三星GALAXY S7(32GB/全网通)<br>三星GALAXY S6(32GB/电信4G)<br>三星GALAXY A8(16GB/全网通)<br>三星2016版Galaxy A9(32GB/全网通)</p>
+<p>三星Galaxy S6 Active(移动4G)<br>三星GALAXY J3(8GB/电信4G)<br>三星GALAXY J5(16GB/移动4G)<br>三星GALAXY J7(16GB/移动4G)<br>三星GALAXY S6(32GB/移动4G)<br>三星GALAXY S6 Edge(32GB/全网通)<br>三星GALAXY Note 5(32GB/全网通)<br>三星W2015(16GB/电信4G)<br>三星GALAXY Note 4公开版(16GB/双4G)<br>三星Galaxy Note Edge(64GB/双4G)<br>三星GALAXY Note 4(16GB/联通4G)<br>三星GALAXY Note 4 N9109W(16GB/电信4G)<br>三星GALAXY S5 G9009W(16GB/电信4G)<br>三星GALAXY S6(32GB/全网通)<br>三星GALAXY S5 G9008W(16GB/移动4G)<br>三星GALAXY S5 G9008V(16GB/移动4G)</p>
+<p>三星GALAXY S5 G9009D(16GB/电信3G)<br>三星GALAXY Note 4(16GB/移动4G)<br>三星GALAXY S5 G9006V(16GB/联通4G)<br>三星N9006 Galaxy Note 3(64GB/联通3G)<br>三星GALAXY S4 粉色版<br>三星GALAXY S4 棕色版<br>三星GALAXY S4 I9500(64GB/联通3G)</p>
+<h4 id="OPPO"><a href="#OPPO" class="headerlink" title="OPPO"></a>OPPO</h4><p>OPPO A37(16GB/全网通)<br>OPPO Find 9<br>OPPO N3(32GB/移动4G)<br>OPPO N1 Mini(16GB/移动4G)<br>OPPO N3(32GB/双4G)<br>OPPO N1 Mini(16GB/联通4G)</p>
+<h4 id="vivo"><a href="#vivo" class="headerlink" title="vivo"></a>vivo</h4><p>vivo Xplay 5美国队长定制版(128GB/全网通)<br>vivo Xplay 5旗舰版(128GB/全网通)<br>vivo X5Pro V(16GB/电信4G)<br>vivo X5Pro D 3G运存版(16GB/双4G)<br>vivo Xplay3S X520A(32GB/双4G)</p>
+<h4 id="LG"><a href="#LG" class="headerlink" title="LG"></a>LG</h4><p>LG X300(16GB/双4G)<br>LG G4 DUAL皮质版(32G/移动4G)<br>LG V20(64GB/双4G)<br>LG G5 Lite(32GB/移动4G)<br>LG H740<br>LG G4s(8GB/移动4G)<br>LG V10(64GB/双4G)<br>LG G4国际版(32GB/双4G)<br>LG G4 Stylus(4G版)<br>LG VW820(移动4G)<br>LG G3 Beat D729(8GB/电信4G)<br>LG G4(32GB/电信4G)<br>LG G3 D859(32GB/电信3G)<br>LG G3 D858(32GB/移动4G)<br>LG G2 D820(16GB/电信3G)<br>LG G2(16GB/联通3G)<br>LG G2(32GB/联通3G)</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h4 id=&quot;华为&quot;&gt;&lt;a href=&quot;#华为&quot; class=&quot;headerlink&quot; title=&quot;华为&quot;&gt;&lt;/a&gt;华为&lt;/h4&gt;&lt;p&gt;华为Mate 9(64GB/全网通)&lt;br&gt;华为Mate S臻逸版(128GB/双4G)&lt;br&gt;华为Mate S压感屏版(128GB/电信4
+    
+    </summary>
+    
+    
+      <category term="NFC" scheme="http://wanghaonanlpc.github.io/tags/NFC/"/>
+    
+      <category term="android" scheme="http://wanghaonanlpc.github.io/tags/android/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>献给写作者的markdown新手指南</title>
+    <link href="http://wanghaonanlpc.github.io/2017/02/22/%E5%85%88%E7%BB%99%E5%86%99%E4%BD%9C%E8%80%85%E7%9A%84markdown%E6%96%B0%E6%89%8B%E6%8C%87%E5%8D%97/"/>
+    <id>http://wanghaonanlpc.github.io/2017/02/22/先给写作者的markdown新手指南/</id>
+    <published>2017-02-22T14:58:59.000Z</published>
+    <updated>2017-02-22T15:00:33.000Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="Hello-world！"><a href="#Hello-world！" class="headerlink" title="Hello world！"></a>Hello world！</h4>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h4 id=&quot;Hello-world！&quot;&gt;&lt;a href=&quot;#Hello-world！&quot; class=&quot;headerlink&quot; title=&quot;Hello world！&quot;&gt;&lt;/a&gt;Hello world！&lt;/h4&gt;
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>那些你听到的前端名词</title>
+    <link href="http://wanghaonanlpc.github.io/2017/02/22/%E9%82%A3%E4%BA%9B%E4%BD%A0%E5%90%AC%E5%88%B0%E7%9A%84%E5%89%8D%E7%AB%AF%E5%90%8D%E8%AF%8D/"/>
+    <id>http://wanghaonanlpc.github.io/2017/02/22/那些你听到的前端名词/</id>
+    <published>2017-02-22T12:55:04.000Z</published>
+    <updated>2017-02-22T13:30:06.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<p>那些你听到的前端名词</p>
+</blockquote>
+<h3 id="NodeJs"><a href="#NodeJs" class="headerlink" title="NodeJs"></a>NodeJs</h3><blockquote>
+<p>Node.js是JavaScript在服务器端的一个运行环境，也是一个工具库，用来和服务器端其他软件互动。它的JavaScript解释器，采用了Google公司的V8引擎。</p>
+</blockquote>
+<p>nodejs是由<a href="https://github.com/ry" target="_blank" rel="external">Ryan Dahl</a>写的。他做nodejs的初衷是为了做一个高性能是web服务器。<br>为了实现高性能服务器，实现要点是：</p>
+<ul>
+<li>事件驱动</li>
+<li>非阻塞I / O（异步I / O）</li>
+</ul>
+<h4 id="nodejs的特点"><a href="#nodejs的特点" class="headerlink" title="nodejs的特点"></a>nodejs的特点</h4><ul>
+<li>异步I / O</li>
+<li>事件与回调函数</li>
+<li>单线程</li>
+</ul>
+<h4 id="nodejs优缺点"><a href="#nodejs优缺点" class="headerlink" title="nodejs优缺点"></a>nodejs优缺点</h4><p>优点</p>
+<ul>
+<li>高并发（最重要的优点）</li>
+<li>适合I / O密集型应用</li>
+</ul>
+<h5 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h5><ul>
+<li>不适合CPU密集型应用; CPU密集型应用给节点带来的挑战主要是：由于JavaScript单线程的原因，如果有长时间运行的计算（比如大循环），将会导致CPU时间片不能释放，使得后续I / O无法发起<br>解决方案：分解大型运算任务为多个小任务，使得运算能够适时释放，不阻塞I / O调用的发起</li>
+<li>可靠性低，一旦代码某个环节崩溃，整个系统都崩溃<br>解决方案：Nnigx反向代理，负载均衡，开多个进程，绑定多个端口;开多个进程监听同一个端口，使用集群模块;也可以使用forever或pm2模块</li>
+<li>开源组件库质量参差不齐，更新快，向下不兼容</li>
+</ul>
+<h3 id="Vue-js"><a href="#Vue-js" class="headerlink" title="Vue.js"></a>Vue.js</h3><blockquote>
+<p>Vue.js（读音 /vjuː/, 类似于 <strong>view</strong>） 是一套构建用户界面的 <strong>渐进式框架</strong>。与其他重量级框架不同的是，Vue 采用自底向上增量开发的设计。Vue 的核心库只关注视图层，并且非常容易学习，非常容易与其它库或已有项目整合。另一方面，Vue 完全有能力驱动采用<a href="http://cn.vuejs.org/v2/guide/single-file-components.html" target="_blank" rel="external">单文件组件</a>和 <a href="http://github.com/vuejs/awesome-vue#libraries--plugins" target="_blank" rel="external">Vue 生态系统支持的库</a>开发的复杂单页应用。</p>
+</blockquote>
+<h4 id="Vue-js-主要是干啥的？"><a href="#Vue-js-主要是干啥的？" class="headerlink" title="Vue.js 主要是干啥的？"></a>Vue.js 主要是干啥的？</h4><p>​    它是一个 MVVM 前端框架<br>​    Model / View / ViewModel<br>​    我们不需要撰写任何 DOM 操作代码：被绑定增强的 HTML 模板是底层数据状态的声明式的映射，    数据不过是普通 JavaScript 对象。我们的视图完全由数据驱动。</p>
+<h4 id="为什么要用Vue-js"><a href="#为什么要用Vue-js" class="headerlink" title="为什么要用Vue.js"></a>为什么要用Vue.js</h4><pre><code>1.  清晰简单的API让业务代码更好的组织
+2.  解决了前端交互复杂而带来的性能问题
+3.  健全、颜值高的官⽅⽂档
+4.  完整的开发生态链
+</code></pre><h4 id="哪些公司在用Vue-js"><a href="#哪些公司在用Vue-js" class="headerlink" title="哪些公司在用Vue.js"></a>哪些公司在用Vue.js</h4><p>​    Google，Facebook，Airbnb，微博 小米 阿里巴巴，百度，饿了么，58</p>
+<h3 id="React-js"><a href="#React-js" class="headerlink" title="React.js"></a>React.js</h3><blockquote>
+<p>待整理</p>
+</blockquote>
+<h3 id="Angular-js"><a href="#Angular-js" class="headerlink" title="Angular.js"></a>Angular.js</h3><blockquote>
+<p>待整理</p>
+</blockquote>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;那些你听到的前端名词&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&quot;NodeJs&quot;&gt;&lt;a href=&quot;#NodeJs&quot; class=&quot;headerlink&quot; title=&quot;NodeJs&quot;&gt;&lt;/a&gt;NodeJs&lt;/h3&gt;&lt;blockquote&gt;
+    
+    </summary>
+    
+      <category term="前端" scheme="http://wanghaonanlpc.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+      <category term="javascript" scheme="http://wanghaonanlpc.github.io/categories/%E5%89%8D%E7%AB%AF/javascript/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>移动端app内置浏览器优化</title>
+    <link href="http://wanghaonanlpc.github.io/2017/02/21/%E7%A7%BB%E5%8A%A8%E7%AB%AFapp%E5%86%85%E7%BD%AE%E6%B5%8F%E8%A7%88%E5%99%A8%E4%BC%98%E5%8C%96/"/>
+    <id>http://wanghaonanlpc.github.io/2017/02/21/移动端app内置浏览器优化/</id>
+    <published>2017-02-21T13:01:06.000Z</published>
+    <updated>2017-02-22T12:59:04.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<p>未总结完，待续</p>
+</blockquote>
+<h5 id="微信"><a href="#微信" class="headerlink" title="微信"></a>微信</h5><p>Blink内核与Webkit内核</p>
+<p>Blink内核</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">blink内核是由谷歌开发，chromium/chrome浏览器的内核，实际上也是由webkit衍生而来。</div></pre></td></tr></table></figure>
+<p>Webkit内核</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">webkit是通用内核，适合各种各样的平台，chromium只是其中一个。开源，有专门团队维护。苹果的safari浏览器脱自webkit内核，话语权中。后来Google chromium的理念与webkit有分歧，谷歌自立门户，开始Blink。</div></pre></td></tr></table></figure>
+<h5 id="支付宝"><a href="#支付宝" class="headerlink" title="支付宝"></a>支付宝</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">安卓的好像是UC的，ios的应该是Safar</div></pre></td></tr></table></figure>
+<p>安卓app替换webview</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">低于android 4.4 的webview 是蹩脚的Android WebKit浏览器内核（android版本越低性能就越差,android 4.4以上已经使用了Chromium ）</div></pre></td></tr></table></figure>
+<h5 id="几款web引擎"><a href="#几款web引擎" class="headerlink" title="几款web引擎"></a>几款web引擎</h5><ol>
+<li>Crosswalk</li>
+<li>Tencent X5</li>
+</ol>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;未总结完，待续&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h5 id=&quot;微信&quot;&gt;&lt;a href=&quot;#微信&quot; class=&quot;headerlink&quot; title=&quot;微信&quot;&gt;&lt;/a&gt;微信&lt;/h5&gt;&lt;p&gt;Blink内核与Webkit内核&lt;/p&gt;
+&lt;p&gt;Blin
+    
+    </summary>
+    
+      <category term="移动端" scheme="http://wanghaonanlpc.github.io/categories/%E7%A7%BB%E5%8A%A8%E7%AB%AF/"/>
+    
+    
+      <category term="android" scheme="http://wanghaonanlpc.github.io/tags/android/"/>
+    
+      <category term="ios" scheme="http://wanghaonanlpc.github.io/tags/ios/"/>
+    
+      <category term="浏览器" scheme="http://wanghaonanlpc.github.io/tags/%E6%B5%8F%E8%A7%88%E5%99%A8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo与github搭建个人博客(二)</title>
+    <link href="http://wanghaonanlpc.github.io/2017/02/21/Hexo%E4%B8%8Egithub%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2-%E4%BA%8C/"/>
+    <id>http://wanghaonanlpc.github.io/2017/02/21/Hexo与github搭建个人博客-二/</id>
+    <published>2017-02-21T11:25:48.000Z</published>
+    <updated>2017-02-22T12:58:16.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<p>介绍本地Hexo博客网站与Github叠加</p>
+</blockquote>
+<h2 id="Github"><a href="#Github" class="headerlink" title="Github"></a>Github</h2><h3 id="创建仓库"><a href="#创建仓库" class="headerlink" title="创建仓库"></a>创建仓库</h3><p>新建一个名为<code>你的用户名.github.io</code>的仓库，比如说，如果你的github用户名是test，那么你就新建<code>test.github.io</code>的仓库（必须是你的用户名，其它名称无效）。</p>
+<p>注意事项</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">1. 注册的邮箱一定要验证，否则不会成功；</div><div class="line">2. 仓库名字必须是：username.github.io，其中username是你的用户名；</div><div class="line">3. 仓库创建成功不会立即生效，需要过一段时间，大概10-30分钟，或者更久，我的等了半个小时才生效；</div></pre></td></tr></table></figure>
+<h3 id="绑定域名"><a href="#绑定域名" class="headerlink" title="绑定域名"></a>绑定域名</h3><blockquote>
+<p>此部分以后在介绍</p>
+</blockquote>
+<h2 id="Hexo"><a href="#Hexo" class="headerlink" title="Hexo"></a>Hexo</h2><h3 id="上传到Github"><a href="#上传到Github" class="headerlink" title="上传到Github"></a>上传到Github</h3><p>首先，<code>ssh key</code>必须要配置好</p>
+<p>然后，配置<code>_config.yml</code>中有关deploy的部分：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">  type: git</div><div class="line">  repository: git@github.com:wanghaonanlpc/wanghaonanlpc.github.io.git</div><div class="line">  branch: master</div></pre></td></tr></table></figure>
+<p>此时直接执行<code>hexo d</code>的话一般会报如下错误：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Deployer not found: github 或者 Deployer not found: git</div></pre></td></tr></table></figure>
+<p>原因是还需要安装一个插件：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install hexo-deployer-git --save</div></pre></td></tr></table></figure>
+<p>其它命令不确定，部署这个命令一定要用git bash，否则会提示<code>Permission denied (publickey).</code></p>
+<p>打开你的git bash，输入<code>hexo d</code>就会将本次有改动的代码全部提交，没有改动的不会：</p>
+<h2 id="常用hexo命令"><a href="#常用hexo命令" class="headerlink" title="常用hexo命令"></a>常用hexo命令</h2><p>常见命令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">hexo new &quot;postName&quot; #新建文章</div><div class="line">hexo new page &quot;pageName&quot; #新建页面</div><div class="line">hexo generate #生成静态页面至public目录</div><div class="line">hexo server #开启预览访问端口（默认端口4000，&apos;ctrl + c&apos;关闭server）</div><div class="line">hexo deploy #部署到GitHub</div><div class="line">hexo help  # 查看帮助</div><div class="line">hexo version  #查看Hexo的版本</div></pre></td></tr></table></figure>
+<p>缩写：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">hexo n == hexo new</div><div class="line">hexo g == hexo generate</div><div class="line">hexo s == hexo server</div><div class="line">hexo d == hexo deploy</div></pre></td></tr></table></figure>
+<p>组合命令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">hexo s -g #生成并本地预览</div><div class="line">hexo d -g #生成并上传</div></pre></td></tr></table></figure>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>到此已经可以完成Hexo与Github搭建个人博客。</p>
+<blockquote>
+<p>相关文章<a href="http://www.cnblogs.com/liuxianan/p/build-blog-website-by-hexo-github.html#绑定域名" target="_blank" rel="external">小茗同学的博客园</a></p>
+</blockquote>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;介绍本地Hexo博客网站与Github叠加&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;Github&quot;&gt;&lt;a href=&quot;#Github&quot; class=&quot;headerlink&quot; title=&quot;Github&quot;&gt;&lt;/a&gt;Github&lt;/h2&gt;&lt;
+    
+    </summary>
+    
+      <category term="前端" scheme="http://wanghaonanlpc.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+      <category term="hexo" scheme="http://wanghaonanlpc.github.io/categories/%E5%89%8D%E7%AB%AF/hexo/"/>
+    
+    
+      <category term="hexo" scheme="http://wanghaonanlpc.github.io/tags/hexo/"/>
+    
+      <category term="node.js" scheme="http://wanghaonanlpc.github.io/tags/node-js/"/>
+    
+      <category term="gtihub" scheme="http://wanghaonanlpc.github.io/tags/gtihub/"/>
+    
+      <category term="markdown" scheme="http://wanghaonanlpc.github.io/tags/markdown/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo与github搭建个人博客(一)</title>
+    <link href="http://wanghaonanlpc.github.io/2017/02/21/Hexo%E4%B8%8Egithub%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2-%E4%B8%80/"/>
+    <id>http://wanghaonanlpc.github.io/2017/02/21/Hexo与github搭建个人博客-一/</id>
+    <published>2017-02-21T11:19:41.000Z</published>
+    <updated>2017-02-22T12:58:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<p>介绍Hexo</p>
+</blockquote>
+<h2 id="什么是Hexo？"><a href="#什么是Hexo？" class="headerlink" title="什么是Hexo？"></a>什么是Hexo？</h2><p>Hexo是一个快速，简单和强大的博客框架。你写的帖子在<a href="http://daringfireball.net/projects/markdown/" target="_blank" rel="external">Markdown</a>（或其他语言）和Hexo生成静态文件与美丽的主题在几秒钟内。</p>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>它只需要几分钟来设置Hexo。如果你遇到一个问题，在这里找不到解决方案，请<a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">提交一个GitHub问题</a>，我会尽力解决它。</p>
+<h3 id="要求"><a href="#要求" class="headerlink" title="要求"></a>要求</h3><p>安装Hexo非常容易。但是，你需要先安装几个其他的东西：</p>
+<ul>
+<li><a href="http://nodejs.org/" target="_blank" rel="external">Node.js</a></li>
+<li><a href="http://git-scm.com/" target="_blank" rel="external">Git</a></li>
+</ul>
+<p>如果你的电脑已经有这些，恭喜你！只需用npm安装Hexo：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install -g hexo-cli</div></pre></td></tr></table></figure>
+<p>如果没有，请按照以下说明安装所有要求。</p>
+<blockquote>
+<p><strong>对于Mac用户</strong>编译时可能会遇到一些问题。请先从App Store安装Xcode。安装Xcode后，打开Xcode并转到<strong>首选项 - &gt;下载 - &gt;命令行工具 - &gt;安装</strong>以安装命令行工具。</p>
+</blockquote>
+<h3 id="安装Git"><a href="#安装Git" class="headerlink" title="安装Git"></a>安装Git</h3><ul>
+<li>Windows：下载并安装<a href="https://git-scm.com/download/win" target="_blank" rel="external">git</a>。</li>
+<li>苹果：用它安装<a href="http://mxcl.github.com/homebrew/" target="_blank" rel="external">自制</a>，<a href="http://www.macports.org/" target="_blank" rel="external">MacPorts的</a>或<a href="http://sourceforge.net/projects/git-osx-installer/" target="_blank" rel="external">安装程序</a>。</li>
+<li>Linux（Ubuntu，Debian）： <code>sudo apt-get install git-core</code></li>
+<li>Linux（Fedora，Red Hat，CentOS）： <code>sudo yum install git-core</code></li>
+</ul>
+<h3 id="安装Node-js"><a href="#安装Node-js" class="headerlink" title="安装Node.js"></a>安装Node.js</h3><p>安装Node.js的最好方法是使用<a href="https://github.com/creationix/nvm" target="_blank" rel="external">nvm</a>。</p>
+<p>卷曲：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | 嘘</div></pre></td></tr></table></figure>
+<p>Wget：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ wget -qO- https://raw.githubusercontent.com/creationix/nvm/master/install.sh | 嘘</div></pre></td></tr></table></figure>
+<p>安装nvm后，重新启动终端并运行以下命令以安装Node.js.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ nvm install stable</div></pre></td></tr></table></figure>
+<p>或者，下载并运行<a href="http://nodejs.org/" target="_blank" rel="external">安装程序</a>。</p>
+<h3 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h3><p>一旦所有要求都安装完毕，您可以使用npm安装Hexo。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install -g hexo-cli</div></pre></td></tr></table></figure>
+<h3 id="Setup"><a href="#Setup" class="headerlink" title="Setup"></a>Setup</h3><p>Once Hexo is installed, run the following commands to initialise Hexo in the target <folder>.</folder></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ hexo init &lt;folder&gt;</div><div class="line">$ cd &lt;folder&gt;</div><div class="line">$ npm install</div></pre></td></tr></table></figure>
+<p>Once initialised, here’s what your project folder will look like:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">.</div><div class="line">├── _config.yml</div><div class="line">├── package.json</div><div class="line">├── scaffolds</div><div class="line">├── source</div><div class="line">|   ├── _drafts</div><div class="line">|   └── _posts</div><div class="line">└── themes</div></pre></td></tr></table></figure>
+<h2 id="组态"><a href="#组态" class="headerlink" title="组态"></a>组态</h2><p>**</p>
+<p>您可以<code>_config.yml</code>在<a href="https://hexo.io/docs/configuration.html#Using-an-Alternate-Config" target="_blank" rel="external">备用配置文件</a>中或其中修改站点设置。</p>
+<h3 id="现场"><a href="#现场" class="headerlink" title="现场"></a>现场</h3><table>
+<thead>
+<tr>
+<th>设置</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>title</code></td>
+<td>您网站的标题</td>
+</tr>
+<tr>
+<td><code>subtitle</code></td>
+<td>您网站的字幕</td>
+</tr>
+<tr>
+<td><code>description</code></td>
+<td>您网站的描述</td>
+</tr>
+<tr>
+<td><code>author</code></td>
+<td>你的名字</td>
+</tr>
+<tr>
+<td><code>language</code></td>
+<td>您网站的语言。使用<a href="https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes" target="_blank" rel="external">2个字母ISO-639-1代码</a>。默认为<code>en</code>。</td>
+</tr>
+<tr>
+<td><code>timezone</code></td>
+<td>您网站的时区。Hexo默认情况下使用计算机上的设置。您可以在<a href="https://en.wikipedia.org/wiki/List_of_tz_database_time_zones" target="_blank" rel="external">这里</a>找到可用的时区列表。一些实例是<code>America/New_York</code>，<code>Japan</code>，和<code>UTC</code>。</td>
+</tr>
+</tbody>
+</table>
+<h3 id="网址"><a href="#网址" class="headerlink" title="网址"></a>网址</h3><table>
+<thead>
+<tr>
+<th>设置</th>
+<th>描述</th>
+<th>默认</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>url</code></td>
+<td>您网站的网址</td>
+<td></td>
+</tr>
+<tr>
+<td><code>root</code></td>
+<td>您网站的根目录</td>
+<td></td>
+</tr>
+<tr>
+<td><code>permalink</code></td>
+<td>文章的<a href="https://hexo.io/docs/permalinks.html" target="_blank" rel="external">永久链接</a>格式</td>
+<td><code>:year/:month/:day/:title/</code></td>
+</tr>
+<tr>
+<td><code>permalink_default</code></td>
+<td>固定链接中每个段的默认值</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>网站在子目录</strong>如果您的网站位于<code>http://example.org/blog</code>设置<code>url</code>为<code>http://example.org/blog</code>并设置<code>root</code>为的子目录（如）中<code>/blog/</code>。</p>
+</blockquote>
+<h3 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h3><table>
+<thead>
+<tr>
+<th>设置</th>
+<th>描述</th>
+<th>默认</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>source_dir</code></td>
+<td>源文件夹。您的内容存储在哪里</td>
+<td><code>source</code></td>
+</tr>
+<tr>
+<td><code>public_dir</code></td>
+<td>公共文件夹。将生成静态站点的位置</td>
+<td><code>public</code></td>
+</tr>
+<tr>
+<td><code>tag_dir</code></td>
+<td>标记目录</td>
+<td><code>tags</code></td>
+</tr>
+<tr>
+<td><code>archive_dir</code></td>
+<td>存档目录</td>
+<td><code>archives</code></td>
+</tr>
+<tr>
+<td><code>category_dir</code></td>
+<td>类别目录</td>
+<td><code>categories</code></td>
+</tr>
+<tr>
+<td><code>code_dir</code></td>
+<td>包括代码目录</td>
+<td><code>downloads/code</code></td>
+</tr>
+<tr>
+<td><code>i18n_dir</code></td>
+<td>i18n目录</td>
+<td><code>:lang</code></td>
+</tr>
+<tr>
+<td><code>skip_render</code></td>
+<td>不要渲染的路径。您可以使用<a href="https://github.com/isaacs/minimatch" target="_blank" rel="external">glob表达式</a>进行路径匹配</td>
+</tr>
+</tbody>
+</table>
+<h3 id="写作"><a href="#写作" class="headerlink" title="写作"></a>写作</h3><table>
+<thead>
+<tr>
+<th>设置</th>
+<th>描述</th>
+<th>默认</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>new_post_name</code></td>
+<td>新帖子的文件名格式</td>
+<td><code>:title.md</code></td>
+</tr>
+<tr>
+<td><code>default_layout</code></td>
+<td>默认布局</td>
+<td><code>post</code></td>
+</tr>
+<tr>
+<td><code>titlecase</code></td>
+<td>将标题转换为标题大小写？</td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><code>external_link</code></td>
+<td>在新标签页中打开外部链接？</td>
+<td><code>true</code></td>
+</tr>
+<tr>
+<td><code>filename_case</code></td>
+<td>将文件名转换为<code>1</code>小写; <code>2</code>大写</td>
+<td><code>0</code></td>
+</tr>
+<tr>
+<td><code>render_drafts</code></td>
+<td>显示草稿？</td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><code>post_asset_folder</code></td>
+<td>启用<a href="https://hexo.io/docs/asset-folders.html" target="_blank" rel="external">资产文件夹</a>？</td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><code>relative_link</code></td>
+<td>相对于根文件夹创建链接？</td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><code>future</code></td>
+<td>显示未来帖子？</td>
+<td><code>true</code></td>
+</tr>
+<tr>
+<td><code>highlight</code></td>
+<td>代码块设置</td>
+</tr>
+</tbody>
+</table>
+<h3 id="类别和标签"><a href="#类别和标签" class="headerlink" title="类别和标签"></a>类别和标签</h3><table>
+<thead>
+<tr>
+<th>设置</th>
+<th>描述</th>
+<th>默认</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>default_category</code></td>
+<td>默认类别</td>
+<td><code>uncategorized</code></td>
+</tr>
+<tr>
+<td><code>category_map</code></td>
+<td>类别lug。</td>
+<td></td>
+</tr>
+<tr>
+<td><code>tag_map</code></td>
+<td>标签lug。</td>
+</tr>
+</tbody>
+</table>
+<h3 id="日期-时间格式"><a href="#日期-时间格式" class="headerlink" title="日期/时间格式"></a>日期/时间格式</h3><p>Hexo使用<a href="http://momentjs.com/" target="_blank" rel="external">Moment.js</a>处理日期。</p>
+<table>
+<thead>
+<tr>
+<th>设置</th>
+<th>描述</th>
+<th>默认</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>date_format</code></td>
+<td>日期格式</td>
+<td><code>YYYY-MM-DD</code></td>
+</tr>
+<tr>
+<td><code>time_format</code></td>
+<td>时间格式</td>
+<td><code>HH:mm:ss</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="分页"><a href="#分页" class="headerlink" title="分页"></a>分页</h3><table>
+<thead>
+<tr>
+<th>设置</th>
+<th>描述</th>
+<th>默认</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>per_page</code></td>
+<td>单个页面上显示的帖子数量。<code>0</code>禁用分页</td>
+<td><code>10</code></td>
+</tr>
+<tr>
+<td><code>pagination_dir</code></td>
+<td>分页目录</td>
+<td><code>page</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="扩展"><a href="#扩展" class="headerlink" title="扩展"></a>扩展</h3><table>
+<thead>
+<tr>
+<th>设置</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>theme</code></td>
+<td>主题名称。<code>false</code>禁用主题</td>
+</tr>
+<tr>
+<td><code>deploy</code></td>
+<td>部署设置</td>
+</tr>
+</tbody>
+</table>
+<h3 id="使用备用配置"><a href="#使用备用配置" class="headerlink" title="使用备用配置"></a>使用备用配置</h3><p>可以通过将<code>--config</code>标志添加<code>hexo</code>到备用YAML或JSON配置文件的路径或多个YAML或JSON文件的逗号分隔列表（无空格）的路径来指定自定义配置文件路径。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">＃use&apos;custom.yml&apos;代替&apos;_config.yml&apos;</div><div class="line">$ hexo server --config custom.yml</div><div class="line"></div><div class="line">＃use&apos;custom.yml&apos;＆&apos;custom2.json&apos;，优先&apos;custom2.json&apos;</div><div class="line">$ hexo server --config custom.yml，custom2.json</div></pre></td></tr></table></figure>
+<p>使用多个文件组合所有配置文件并将合并的设置保存到<code>_multiconfig.yml</code>。后面的值优先。它适用于任意数量的具有任意深度对象的JSON和YAML文件。请注意，<strong>列表中不允许有空格</strong>。</p>
+<p>例如，在上面的例子<code>foo: bar</code>中<code>custom.yml</code>，如果是，但是<code>&quot;foo&quot;: &quot;dinosaur&quot;</code>在<code>custom2.json</code>，<code>_multiconfig.yml</code>将包含<code>foo: dinosaur</code>。**</p>
+<h2 id="命令"><a href="#命令" class="headerlink" title="命令"></a>命令</h2><h3 id="在里面"><a href="#在里面" class="headerlink" title="在里面"></a>在里面</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo init [文件夹]</div></pre></td></tr></table></figure>
+<p>初始化网站。如果没有<code>folder</code>提供，Hexo将在当前目录中设置网站。</p>
+<h3 id="新建"><a href="#新建" class="headerlink" title="新建"></a>新建</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new [layout] &lt;title&gt;</div></pre></td></tr></table></figure>
+<p>创建新文章。如果没有<code>layout</code>提供，Hexo将使用<code>default_layout</code>from <a href="https://hexo.io/docs/configuration.html" target="_blank" rel="external">_config.yml</a>。如果<code>title</code>包含空格，请用引号将其括起来。</p>
+<h3 id="生成"><a href="#生成" class="headerlink" title="生成"></a>生成</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo生成</div></pre></td></tr></table></figure>
+<p>生成静态文件。</p>
+<table>
+<thead>
+<tr>
+<th>选项</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-d</code>， <code>--deploy</code></td>
+<td>一代完成后部署</td>
+</tr>
+<tr>
+<td><code>-w</code>， <code>--watch</code></td>
+<td>观察文件更改</td>
+</tr>
+</tbody>
+</table>
+<h3 id="发布"><a href="#发布" class="headerlink" title="发布"></a>发布</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo publish [layout] &lt;filename&gt;</div></pre></td></tr></table></figure>
+<p>发布草稿。</p>
+<h3 id="服务器"><a href="#服务器" class="headerlink" title="服务器"></a>服务器</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
+<p>启动本地服务器。默认情况下，这是<code>http://localhost:4000/</code>。</p>
+<table>
+<thead>
+<tr>
+<th>选项</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-p</code>， <code>--port</code></td>
+<td>覆盖默认端口</td>
+</tr>
+<tr>
+<td><code>-s</code>， <code>--static</code></td>
+<td>仅提供静态文件</td>
+</tr>
+<tr>
+<td><code>-l</code>， <code>--log</code></td>
+<td>启用记录器。覆盖记录器格式。</td>
+</tr>
+</tbody>
+</table>
+<h3 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
+<p>部署您的网站。</p>
+<table>
+<thead>
+<tr>
+<th>选项</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-g</code>， <code>--generate</code></td>
+<td>部署前生成</td>
+</tr>
+</tbody>
+</table>
+<h3 id="渲染"><a href="#渲染" class="headerlink" title="渲染"></a>渲染</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo render &lt;file1&gt; [file2] ...</div></pre></td></tr></table></figure>
+<p>渲染文件。</p>
+<table>
+<thead>
+<tr>
+<th>选项</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-o</code>， <code>--output</code></td>
+<td>输出目的地</td>
+</tr>
+</tbody>
+</table>
+<h3 id="迁移"><a href="#迁移" class="headerlink" title="迁移"></a>迁移</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo migrate &lt; type &gt;</div></pre></td></tr></table></figure>
+<p><a href="https://hexo.io/docs/migration.html" target="_blank" rel="external">迁移</a>来自其他博客系统的内容。</p>
+<h3 id="清洁"><a href="#清洁" class="headerlink" title="清洁"></a>清洁</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo清洁</div></pre></td></tr></table></figure>
+<p>清除缓存文件（<code>db.json</code>）和生成的文件（<code>public</code>）。</p>
+<h3 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo list &lt; type &gt;</div></pre></td></tr></table></figure>
+<p>列出所有路线。</p>
+<h3 id="版"><a href="#版" class="headerlink" title="版"></a>版</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo version</div></pre></td></tr></table></figure>
+<p>显示版本信息。</p>
+<h2 id="选项"><a href="#选项" class="headerlink" title="选项"></a>选项</h2><h3 id="安全模式"><a href="#安全模式" class="headerlink" title="安全模式"></a>安全模式</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo --safe</div></pre></td></tr></table></figure>
+<p>禁用加载插件和脚本。如果您在安装新插件后遇到问题，请尝试此操作。</p>
+<h3 id="调试模式"><a href="#调试模式" class="headerlink" title="调试模式"></a>调试模式</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo --debug</div></pre></td></tr></table></figure>
+<p>将详细消息记录到终端和日志<code>debug.log</code>。如果您在Hexo遇到任何问题，请尝试此操作。如果您看到错误，请<a href="https://github.com/hexojs/hexo/issues/new" target="_blank" rel="external">提出一个GitHub问题</a>。</p>
+<h3 id="静音模式"><a href="#静音模式" class="headerlink" title="静音模式"></a>静音模式</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo --silent</div></pre></td></tr></table></figure>
+<p>静音输出到终端。</p>
+<h3 id="自定义配置文件路径"><a href="#自定义配置文件路径" class="headerlink" title="自定义配置文件路径"></a>自定义配置文件路径</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo --config custom.yml</div></pre></td></tr></table></figure>
+<p>使用自定义配置文件（而不是<code>_config.yml</code>）。还接受JSON或YAML配置文件的逗号分隔列表（无空格），这些文件将文件合并为一个<code>_multiconfig.yml</code>。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo --config custom.yml，custom2.json</div></pre></td></tr></table></figure>
+<h3 id="显示草稿"><a href="#显示草稿" class="headerlink" title="显示草稿"></a>显示草稿</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo --draft</div></pre></td></tr></table></figure>
+<p>显示草稿帖子（存储在<code>source/_drafts</code>文件夹中）。</p>
+<h3 id="自定义CWD"><a href="#自定义CWD" class="headerlink" title="自定义CWD"></a>自定义CWD</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo --cwd / path / to / cwd</div></pre></td></tr></table></figure>
+<p>自定义当前工作目录的路径。</p>
+<h2 id="总结："><a href="#总结：" class="headerlink" title="总结："></a>总结：</h2><p>到此已经使用Hexo创建了自己的个人博客。<a href="https://hexo.io/themes/" target="_blank" rel="external">Click this!</a>可以选择自己的喜欢的主题进行配置。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      Hexo与github搭建个人博客
+    
+    </summary>
+    
+      <category term="前端" scheme="http://wanghaonanlpc.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+      <category term="hexo" scheme="http://wanghaonanlpc.github.io/categories/%E5%89%8D%E7%AB%AF/hexo/"/>
+    
+    
+      <category term="hexo" scheme="http://wanghaonanlpc.github.io/tags/hexo/"/>
+    
+      <category term="node.js" scheme="http://wanghaonanlpc.github.io/tags/node-js/"/>
+    
+      <category term="gtihub" scheme="http://wanghaonanlpc.github.io/tags/gtihub/"/>
+    
+      <category term="markdown" scheme="http://wanghaonanlpc.github.io/tags/markdown/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://wanghaonanlpc.github.io/2017/02/21/hello-world%202/"/>
+    <id>http://wanghaonanlpc.github.io/2017/02/21/hello-world 2/</id>
+    <published>2017-02-21T03:02:14.000Z</published>
+    <updated>2017-02-21T03:02:14.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>IMAPOST</title>
+    <link href="http://wanghaonanlpc.github.io/2017/02/21/IMAPOST/"/>
+    <id>http://wanghaonanlpc.github.io/2017/02/21/IMAPOST/</id>
+    <published>2017-02-21T01:45:56.000Z</published>
+    <updated>2017-02-21T02:02:59.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>#hello world!</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;#hello world!&lt;/p&gt;
+
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>支持NFC的手机总结</title>
+    <link href="http://wanghaonanlpc.github.io/2016/05/24/%E6%94%AF%E6%8C%81NFC%E7%9A%84%E6%89%8B%E6%9C%BA%E6%80%BB%E7%BB%93/"/>
+    <id>http://wanghaonanlpc.github.io/2016/05/24/支持NFC的手机总结/</id>
+    <published>2016-05-24T05:20:58.000Z</published>
+    <updated>2017-02-24T05:21:58.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>截止2016年5月</p>
+<h5 id="三星"><a href="#三星" class="headerlink" title="三星"></a>三星</h5><p>Galaxy S7 Edge、Galaxy S7、Galaxy S6 edge+、Galaxy S6 edge、Galaxy S6、Galaxy A9及高配版、Galaxy A8、Galaxy A7(2016)、Galaxy A5(2016)、GalaxyJ7(2016)、Galaxy J7、Galaxy J5(2016)、Galaxy J5、Galaxy J3 Pro、Galaxy J3、Galaxy Note5、Galaxy Note3 N9006、Galaxy Note3 N9008V、Galaxy Note3 N9008S（UICC,eSE）、Galaxy C5、Galaxy GRAND Prime、Galaxy MEGA2、Galaxy ALPHA G8508S、Galaxy CORE Lite 4G、Galaxy CORE Advance、W2016、W2015、领世旗舰III G9198、</p>
+<h5 id="小米"><a href="#小米" class="headerlink" title="小米"></a>小米</h5><p>小米5（这些统统都没有：小米Max、小米4S、小米4C、红米Note3、红米3S、红米3、更早的机型不想提了。）</p>
+<h5 id="华为"><a href="#华为" class="headerlink" title="华为"></a>华为</h5><p>荣耀6高配版、荣耀6plus双4G版、荣耀V8全网通版、Mate7、Mate8、Mate 9、MateS</p>
+<h5 id="魅族"><a href="#魅族" class="headerlink" title="魅族"></a>魅族</h5><p>魅族PRO 5（NXP PN65T NFC 芯片）</p>
+<h5 id="OPPO"><a href="#OPPO" class="headerlink" title="OPPO"></a>OPPO</h5><p>OPPO Find7、OPPO Find5、OPPO N3、OPPO N1、OPPO A37、OPPO 3007、OPPO 3005</p>
+<h5 id="vivo"><a href="#vivo" class="headerlink" title="vivo"></a>vivo</h5><p>vivo Xplay 3S、vivo Xplay、vivo X5Pro电信版</p>
+<h5 id="努比亚"><a href="#努比亚" class="headerlink" title="努比亚"></a>努比亚</h5><p>nubia Z9、nubia Z9 Max、nubia Z7 Max、nubia Z5 Mini、nubia Z5S LET版</p>
+<h5 id="酷派"><a href="#酷派" class="headerlink" title="酷派"></a>酷派</h5><p>酷派铂顿、锋尚3、锋尚2电信版、锋尚移动版、锋尚电信版、锋尚Air移动版、锋尚Air电信版、锋尚pro电信版、锋尚MAX尊享版、锋尚MAX极速版</p>
+<h5 id="索尼"><a href="#索尼" class="headerlink" title="索尼"></a>索尼</h5><p>索尼Xperia Z5 双卡双待版、索尼Xperia Z5 尊享版、索尼Xperia Z3+Dual双卡双待版、索尼Xperia Z1、索尼MT27i、索尼LT26i</p>
+<h5 id="HTC"><a href="#HTC" class="headerlink" title="HTC"></a>HTC</h5><p>HTC 10 lifestyle、HTC 10、New HTC One、HTC One E9+、HTC One M9、HTC One (M8)、HTC Desire 626</p>
+<h5 id="锤子"><a href="#锤子" class="headerlink" title="锤子"></a>锤子</h5><p>Smartisan T2、Smartisan T1、坚果</p>
+<h5 id="摩托罗拉"><a href="#摩托罗拉" class="headerlink" title="摩托罗拉"></a>摩托罗拉</h5><p>Moto x极、Moto X Style</p>
+<h5 id="中兴"><a href="#中兴" class="headerlink" title="中兴"></a>中兴</h5><p>中兴天机 7、AXON天机</p>
+<h5 id="谷歌"><a href="#谷歌" class="headerlink" title="谷歌"></a>谷歌</h5><p>Nexus系列</p>
+<h5 id="LG"><a href="#LG" class="headerlink" title="LG"></a>LG</h5><p>LG G5、LG G4、LG G3 Beat、LG G3、LG G2、LG V10、LG AKA</p>
+<h5 id="一加"><a href="#一加" class="headerlink" title="一加"></a>一加</h5><p>一加手机3、一加手机1</p>
+<h5 id="金立"><a href="#金立" class="headerlink" title="金立"></a>金立</h5><p>风华3（GN709L）</p>
+<h5 id="联想"><a href="#联想" class="headerlink" title="联想"></a>联想</h5><p>乐檬X3</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;截止2016年5月&lt;/p&gt;
+&lt;h5 id=&quot;三星&quot;&gt;&lt;a href=&quot;#三星&quot; class=&quot;headerlink&quot; title=&quot;三星&quot;&gt;&lt;/a&gt;三星&lt;/h5&gt;&lt;p&gt;Galaxy S7 Edge、Galaxy S7、Galaxy S6 edge+、Galaxy S6 ed
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>使用github pages服务搭建博客</title>
+    <link href="http://wanghaonanlpc.github.io/2016/02/21/%E4%BD%BF%E7%94%A8github%20pages%E6%9C%8D%E5%8A%A1%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/"/>
+    <id>http://wanghaonanlpc.github.io/2016/02/21/使用github pages服务搭建博客/</id>
+    <published>2016-02-21T05:57:52.000Z</published>
+    <updated>2017-02-23T13:39:51.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>使用github pages服务搭建博客的好处有：</p>
+<ol>
+<li>全是静态文件，访问速度快；</li>
+<li>免费方便，不用花一分钱就可以搭建一个自由的个人博客，不需要服务器不需要后台；</li>
+<li>可以随意绑定自己的域名，不仔细看的话根本看不出来你的网站是基于github的；</li>
+</ol>
+<a id="more"></a>
+<ol>
+<li>数据绝对安全，基于github的版本管理，想恢复到哪个历史版本都行；</li>
+<li>博客内容可以轻松打包、转移、发布到其它平台；</li>
+<li>等等；</li>
+</ol>
+]]></content>
+    
+    <summary type="html">
+    
+      附加一段文章摘要，字数最好在140字以内，会出现在meta的description里面
+    
+    </summary>
+    
+    
+      <category term="hello" scheme="http://wanghaonanlpc.github.io/tags/hello/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Example Post using Keynote Layout</title>
+    <link href="http://wanghaonanlpc.github.io/2015/07/09/js-module-7day/"/>
+    <id>http://wanghaonanlpc.github.io/2015/07/09/js-module-7day/</id>
+    <published>2015-07-08T16:00:00.000Z</published>
+    <updated>2017-02-21T01:40:43.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<p>下滑这里查看更多内容</p>
+</blockquote>
+<p>7月9日，我在公司内部进行了名为「JavaScript 模块化七日谈」分享，并将该 Slides 分享到了微博上。出乎意料地，这篇微博先后被 @JS小组 @尤小右 @寸志 等近 200 人转发，阅读达到 10w，获得了还不错的评价。</p>
+<p>于是，我决定将它重新发到我的博客上，并为它专门制作了适用于 Keynote 展示文稿的新布局。它能自动根据屏幕大小/旋转以一定比例填充屏幕，你也可以直接点击下方链接在新页面打开，来获得更好的、沉浸式的全屏体验</p>
+<h3 id="Watch-Slides-→"><a href="#Watch-Slides-→" class="headerlink" title="Watch Slides →"></a><a href="http://huangxuan.me/js-module-7day" target="_blank" rel="external">Watch Slides →</a></h3><p><img src="http://huangxuan.me/js-module-7day/attach/qrcode.png" width="350" height="350"></p>
+<p><small class="img-hint">你也可以通过扫描二维码在手机上观看</small></p>
+<p>这个 Web Slides 开源在<a href="https://github.com/Huxpro/js-module-7day" target="_blank" rel="external">我的 Github 上</a>，欢迎你帮助我完善这个展示文稿，你可以给我提 issue，可以 fork &amp; pull request。如果它能帮助到你了，希望你还能不吝啬 star 一下这个项目</p>
+<h3 id="Catalog"><a href="#Catalog" class="headerlink" title="Catalog"></a>Catalog</h3><ul>
+<li>第一日 上古时期 <strong><em>Module?</em></strong> 从设计模式说起</li>
+<li>第二日 石器时代 <strong><em>Script Loader</em></strong> 只有封装性可不够，我们还需要加载</li>
+<li>第三日 蒸汽朋克 <strong><em>Module Loader</em></strong> 模块化架构的工业革命</li>
+<li>第四日 号角吹响 <strong><em>CommonJS</em></strong> 征服世界的第一步是跳出浏览器</li>
+<li>第五日 双塔奇兵 <strong><em>AMD/CMD</em></strong> 浏览器环境模块化方案</li>
+<li>第六日 精灵宝钻 <strong><em>Browserify/Webpack</em></strong> 大势所趋，去掉这层包裹！</li>
+<li>第七日 王者归来 <strong><em>ES6 Module</em></strong> 最后的战役</li>
+</ul>
+<h3 id="Thanks"><a href="#Thanks" class="headerlink" title="Thanks"></a>Thanks</h3><p><a href="http://lab.hakim.se/reveal-js" target="_blank" rel="external">Reveal.js</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;下滑这里查看更多内容&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;7月9日，我在公司内部进行了名为「JavaScript 模块化七日谈」分享，并将该 Slides 分享到了微博上。出乎意料地，这篇微博先后被 @JS小组 @尤小右 @寸志 等近 200
+    
+    </summary>
+    
+    
+      <category term="前端开发" scheme="http://wanghaonanlpc.github.io/tags/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
+    
+      <category term="JavaScript" scheme="http://wanghaonanlpc.github.io/tags/JavaScript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Example Post With Default Header Image</title>
+    <link href="http://wanghaonanlpc.github.io/2015/04/14/unix-linux-note/"/>
+    <id>http://wanghaonanlpc.github.io/2015/04/14/unix-linux-note/</id>
+    <published>2015-04-13T16:00:00.000Z</published>
+    <updated>2017-02-21T01:40:43.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<p>This document is not completed and will be updated anytime.</p>
+</blockquote>
+<h2 id="Catagory"><a href="#Catagory" class="headerlink" title="Catagory"></a>Catagory</h2><ol>
+<li><a href="#unix">Unix</a><ol>
+<li><a href="#bell-labs">Bell Labs</a></li>
+<li><a href="#xenix">Xenix</a></li>
+<li><a href="#bsd">BSD</a></li>
+<li><a href="#freebsd--apple">FreeBSD &amp; Apple</a></li>
+<li><a href="#nextstep">NeXTStep</a></li>
+<li><a href="#darwin">Darwin</a></li>
+<li><a href="#posix">POSIX</a></li>
+</ol>
+</li>
+<li><a href="#unix-like">Unix-like</a><ol>
+<li><a href="#single-unix-specification">Single Unix Specification</a></li>
+<li><a href="#apple-ios">Apple iOS</a></li>
+<li><a href="#xnu-kernel">XNU Kernel</a></li>
+</ol>
+</li>
+<li><a href="#linux">Linux</a><ol>
+<li><a href="#linux-kernel">Linux Kernel</a></li>
+<li><a href="#gnu-project">GNU Project</a></li>
+<li><a href="#android">Android</a></li>
+<li><a href="#android-kernel">Android Kernel</a></li>
+<li><a href="#android-rom">Android ROM</a></li>
+<li><a href="#chrome-os">Chrome OS</a></li>
+<li><a href="#chromium-os">Chromium OS</a></li>
+</ol>
+</li>
+</ol>
+<hr>
+<h2 id="Unix"><a href="#Unix" class="headerlink" title="Unix"></a>Unix</h2><blockquote>
+<p>Unix is a <strong>family</strong> of multitasking, multiuser computer OS.</p>
+</blockquote>
+<p>Derive from the original <strong>AT&amp;T Unix</strong>, Developed in the 1970s at <strong>Bell Labs</strong> (贝尔实验室), initially intended for use inside the <strong>Bell System</strong>.</p>
+<ul>
+<li><h4 id="Bell-Labs"><a href="#Bell-Labs" class="headerlink" title="Bell Labs"></a>Bell Labs</h4>Bell 和 AT&amp;A 在那时已经是一家了，可以看到那时的通信公司真是一线 IT 公司呢。<br><strong>C 语言也是 Bell Labs 的产物</strong>，从一开始就是为了用于 Unix 而设计出来的。所以 Unix （在 73 年用 C 重写）在高校流行后，C 语言也获得了广泛支持。</li>
+</ul>
+<p>AT&amp;T licensed Unix to outside parties(第三方) from the late 1970s, leading to a variety of both <strong>academic</strong> (最有有名的 BSD ) and <strong>commercial</strong> (Microsoft Xenix, IBM AIX, SunOS Solaris)</p>
+<ul>
+<li><h4 id="Xenix"><a href="#Xenix" class="headerlink" title="Xenix"></a>Xenix</h4><p>微软 1979 年从 AT&amp;A 授权来的 Unix OS，配合着 x86 成为当时最受欢迎的 Unix 发行版。后来 M$ 和 IBM 合作开发 OS/2 操作系统后放弃，后来最终转向 <strong>Windows NT</strong>。</p>
+</li>
+<li><h4 id="BSD"><a href="#BSD" class="headerlink" title="BSD"></a>BSD</h4><p><strong>Barkeley Software Distribution</strong>, also called Berkeley Unix. Today the term “BSD” is used to refer to any of the BSD descendants(后代) which together form a branch of the family of Unix-like OS.(共同组成了一个分支)</p>
+<ul>
+<li><strong>BSD 最大的贡献是在 BSD 中率先增加了虚拟存储器和 Internet 协议</strong>，其 TCP/IP(IPv4 only) 代码仍然在现代 OS 上使用（ Microsoft Windows and most of the foundation of Apple’s OS X and iOS ）</li>
+<li>BSD 后来发展出了众多开源后代，包括 FreeBSD, OpenBSD, NetBSD 等等……很多闭源的 vendor Unix 也都从 BSD 衍生而来。</li>
+</ul>
+</li>
+<li><h4 id="FreeBSD-amp-Apple"><a href="#FreeBSD-amp-Apple" class="headerlink" title="FreeBSD &amp; Apple"></a>FreeBSD &amp; Apple</h4><p>FreeBSD 不但是 Open Source BSD 中占有率最高的，还直接影响了 Apple Inc : NeXT Computer 的团队在 FreeBSD 上衍生出了 NeXTSTEP 操作系统，这货后来在 Apple 时期演化成了 <strong>Darwin</strong> ，这个“达尔文”居然还是个开源系统，而且是 the Core of <strong>Mac OS X</strong> and <strong>iOS</strong>.</p>
+</li>
+<li><h4 id="NeXTSTEP"><a href="#NeXTSTEP" class="headerlink" title="NeXTSTEP"></a>NeXTSTEP</h4><p>An <strong>object-oriented</strong>, multitasking OS. Low-level C but High-level OC language and runtime the first time, combined with an <strong>OO aplication layer</strong> and including several “kits”.<br>大家都知道 NeXT 是 Steve Jobs 被 forced out of Apple 后和 a few of his coworkers 创办的，所以 <strong>NeXTSTEP 绝对是证明 Jobs 实力的作品。</strong></p>
+</li>
+<li><h4 id="Darwin"><a href="#Darwin" class="headerlink" title="Darwin"></a>Darwin</h4><p><a href="http://en.wikipedia.org/wiki/Darwin_(operating_system\" target="_blank" rel="external">Darwin</a>), the core set of components upon which Mac OS X and iOS based, mostly POSIX compatible, but has never, by itself, been certified as being compatible with any version of <strong>POSIX</strong>. (OS X, since Leopard, has been certified as compatible with the Single UNIX Specification version 3)<br><strong>所以说 Mac OS X 算是很正统 Unix 的了</strong></p>
+</li>
+<li><h4 id="POSIX"><a href="#POSIX" class="headerlink" title="POSIX"></a>POSIX</h4><p>可移植操作系统接口, Portable Operating System Interface, is a family of standards specified by the IEEE from maintaining compatibility between OS, defines the API along with Command Line Shells and utility interfaces, for software comaptibility with variants of Unix and other OS.</p>
+<ul>
+<li>Fully POSIX compliant:<ul>
+<li>OS X</li>
+<li>QNX OS (BlackBerry)</li>
+</ul>
+</li>
+<li>Mostly complicant:<ul>
+<li>Linux</li>
+<li>OpenBSD/FreeBSD</li>
+<li>Darwin (Core of <strong>iOS</strong> &amp; OS X)</li>
+<li><strong>Android</strong></li>
+</ul>
+</li>
+<li>Complicant via compatibility feature （通过兼容功能实现兼容）<ul>
+<li>Windows NT Kernel<ul>
+<li>Windows Server 2000, 2003, 2008, 2008 R2, 2012</li>
+</ul>
+</li>
+<li>Symbian OS (with PIPS)<ul>
+<li>Symbian was a closed-source OS.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="Unix-like"><a href="#Unix-like" class="headerlink" title="Unix-like"></a>Unix-like</h2><blockquote>
+<p>A Unix-like (sometimes referred to as UN<em>X or </em>nix) operating system is one that behaves in a manner similar to a Unix system, while not necessarily conforming to or being certified to any version of the <strong>Single UNIX Specification</strong>.</p>
+</blockquote>
+<p>There is no standard for defining the term.<br>其实 Unix-like 是个相对模糊的概念：</p>
+<ul>
+<li>最狭义的 Unix 单指 Bell Labs’s Unix</li>
+<li>稍广义的 Unix 指代所有 Licensed Unix, 即通过了 SUS 的 Unix-like ，比如 OS X</li>
+<li>最广义的 Unix 即所有 Unix-like 系统，无论它是否通过过任何 SUS，包括 Linux，BSD Family 等</li>
+</ul>
+<h4 id="Single-UNIX-Specification"><a href="#Single-UNIX-Specification" class="headerlink" title="Single UNIX Specification"></a>Single UNIX Specification</h4><p>The Single UNIX Specification (SUS) is the collective name of a family of standards for computer OS, compliance with which is required to <strong>qualify for the name “Unix”</strong>, like <strong>POSIX</strong>.</p>
+<h4 id="Apple-iOS"><a href="#Apple-iOS" class="headerlink" title="Apple iOS"></a>Apple iOS</h4><p>iOS is a <strong>Unix-like OS based on Darwin(BSD)</strong> and OS X, which share some frameworks including Core Foundation, Founadtion and the Darwin foundation with OS X, but, Unix-like shell access is not avaliable for users and restricted for apps, <strong>making iOS not fully Unix-compatible either.</strong></p>
+<p>The iOS kernal is <strong>XNU</strong>, the kernal of Darwin.</p>
+<h4 id="XNU-Kernel"><a href="#XNU-Kernel" class="headerlink" title="XNU Kernel"></a>XNU Kernel</h4><p>XNU, the acronym(首字母缩写) for <strong><em>X is Not Unix</em></strong>, which is the <strong>Computer OS Kernel</strong> developed at Apple Inc since Dec 1996 for use in the Mac OS X and released as free open source software as part of Darwin.</p>
+<hr>
+<h2 id="Linux"><a href="#Linux" class="headerlink" title="Linux"></a>Linux</h2><blockquote>
+<p>Linux is a Unix-like and mostly POSIX-compliant computer OS.</p>
+</blockquote>
+<p><img src="http://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Unix_timeline.en.svg/800px-Unix_timeline.en.svg.png" alt="Unix_timeline"></p>
+<h4 id="Linux-Kernel"><a href="#Linux-Kernel" class="headerlink" title="Linux Kernel"></a>Linux Kernel</h4><p>严格来讲，术语 Linux 只表示 <a href="http://en.wikipedia.org/wiki/Linux_kernel" target="_blank" rel="external">Linux Kernel</a> 操作系统内核本身，比如说 Android is Based on Linux (Kernel). Linus 编写的也只是这一部分，一个免费的 Unix-like Kernel，并不属于 GNU Project 的一部分。</p>
+<p>但通常把 Linux 作为 Linux Kernel 与大量配合使用的 GNU Project Software Kit (包括 Bash, Lib, Compiler, 以及后期的 GUI etc) 所组合成的 OS 的统称。（包括各类 Distribution 发行版）</p>
+<p>这类操作系统也被称为 <strong>GNU/Linux</strong></p>
+<h4 id="GNU-Project"><a href="#GNU-Project" class="headerlink" title="GNU Project"></a>GNU Project</h4><p>The GNU Project is a <strong>free software, mass collaboration</strong> project, which based on the following freedom rights:</p>
+<ul>
+<li>Users are free to run the software, share (copy, distribute), study and modify it.</li>
+<li>GNU software guarantees these freedom-rights legally (via its license).</li>
+<li>So it is not only FREE but, more important, FREEDOM.</li>
+</ul>
+<p>In order to ensure that the <em>entire</em> software of a computer grants its users all freedom rights (use, share, study, modify), even the most fundamental and important part, <strong>the operating system</strong>, needed to be written.</p>
+<p>This OS is decided to called <strong>GNU (a recursive acronym meaning “GNU is not Unix”)</strong>. By 1992, the GNU Project had completed all of the major OS components except for their kernel, <em>GNU Hurd</em>.</p>
+<p>With the release of the third-party <strong>Linux Kernel</strong>, started independently by <em>Linus Torvalds</em> in 1991 and released under the GPLv0.12 in 1992, for the first time it was possible to run an OS <strong>composed completely of free software</strong>.</p>
+<p>Though the Linux kernel is not part of the GNU project, it was developed using GCC and other GNU programming tools and was released as free software under the GPL.</p>
+<p>Anyway, there eventually comes to the <strong>GNU/Linux</strong></p>
+<ul>
+<li><strong>GPL</strong>: GNU General Public License</li>
+<li><strong>GCC</strong>: GNU Compiler Collection</li>
+</ul>
+<p>其他与 GPL 相关的自由/开源软件公共许可证：</p>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Mozilla_Public_License" target="_blank" rel="external">Mozilla Public License</a></li>
+<li><a href="http://en.wikipedia.org/wiki/MIT_License" target="_blank" rel="external">MIT License</a></li>
+<li><a href="http://en.wikipedia.org/wiki/BSD_licenses" target="_blank" rel="external">BSD Public License</a><ul>
+<li>GPL 强制后续版本必须是自由软件，而 BSD 的后续可以选择继续开源或者封闭</li>
+</ul>
+</li>
+<li><a href="http://en.wikipedia.org/wiki/Apache_License" target="_blank" rel="external">Apache License</a></li>
+</ul>
+<p><img src="http://dl2.iteye.com/upload/attachment/0047/4142/d770c85a-49b7-3c7f-8ae2-cbb6451e00d8.png" alt="Public License"></p>
+<h4 id="Android"><a href="#Android" class="headerlink" title="Android"></a>Android</h4><p>Android is a mobile OS based on <strong>Linux Kernel</strong>, so it’s definitely <strong>Unix-like</strong>.  </p>
+<p><strong>Linux is under GPL so Android has to be open source</strong>.<br>Android’s source code is released by Google under open source licenses, although most Android devices ultimately ship with a combination of open source and proprietary software, including proprietary software developed and licensed by Google <em>(GMS are all proprietary)</em>  </p>
+<h4 id="Android-Kernel"><a href="#Android-Kernel" class="headerlink" title="Android Kernel"></a>Android Kernel</h4><p>Android’s kernel is based on one of the Linux kernel’s long-term support (LTS) branches.   </p>
+<p><strong>Android’s variant of the Linux kernel</strong> has further architectural changes that are implemented by Google outside the typical Linux kernel development cycle, and, certain features that Google contributed back to the Linux kernel. Google maintains a public code repo that contains their experimental work to re-base Android off the latest stable Linux versions.</p>
+<p>Android Kernel 大概是 Linux Kernel 最得意的分支了，Android 也是 Linux 最流行的发行版。不过，也有一些 Google 工程师认为 Android is not Linux in the traditional Unix-like Linux distribution sense. 总之这类东西就算有各种协议也还是很难说清楚，在我理解里 Android Kernel 大概就是 fork Linux Kernel 之后改动和定制比较深的例子。</p>
+<h4 id="Android-ROM"><a href="#Android-ROM" class="headerlink" title="Android ROM"></a>Android ROM</h4><p>既然提到 Android 就不得不提提 Android ROM</p>
+<p>ROM 的本义实际上是只读内存：  </p>
+<p><strong>Read-only memory</strong> (ROM) is a class of storage medium used in computers and other electronic devices. Data stored in ROM can only be modified slowly, with difficulty, or not at all, so it is <strong>mainly used to distribute firmware (固件)</strong> (software that is very closely tied to specific hardware, and unlikely to need frequent updates).</p>
+<p>ROM 在发展的过程中不断进化，从只读演变成了可编程可擦除，并最终演化成了 Flash  </p>
+<ul>
+<li>PROM (Programmable read-only memory)</li>
+<li>EPROM (Erasable programmable read-only memory)</li>
+<li>EEPROM (Electrically erasable programmable read-only memory)<ul>
+<li>Flash memory (闪存)</li>
+</ul>
+</li>
+</ul>
+<p>Flash 的出现是历史性的，它不但可以作为 ROM 使用，又因其极高的读写速度和稳定性，先后发展成为U盘（USB flash drives）、移动设备主要内置存储，和虐机械硬盘几条街的固态硬盘（SSD），可以说这货基本统一了高端存储市场的技术规格。</p>
+<p>所以我们平时习惯说的 ROM 其实还是来源于老单片机时代，那时的 ROM 真的是写了就很难（需要上电复位）、甚至无法修改，所以那时往 ROM 里烧下去的程序就被称作 firmware ，固件。久而久之，虽然技术发展了，固件仍然指代那些不常需要更新的软件，而 ROM 这个词也就这么沿用下来了。</p>
+<p>所以在 wiki 里是没有 Android ROM 这个词条的，只有 <a href="http://en.wikipedia.org/wiki/List_of_custom_Android_firmwares" target="_blank" rel="external">List of custom Android firmwares</a></p>
+<blockquote>
+<p>A custom firmware, also known as a custom ROM, ROM, or custom OS, is an aftermarket distribution of the Android operating system. They are based on the Android Open Source Project (AOSP), hence most are open-sourced releases, unlike proprietary modifications by device manufacturers.</p>
+</blockquote>
+<p>各类 Android ROM 在 Android 词类下也都是属于 <strong>Forks and distributions</strong> 一类的。</p>
+<p>所以我说，其实各类 Android ROM 也好，fork Android 之流的 YunOS、FireOS 也好，改了多少东西，碰到多深的 codebase ……<strong>其实 ROM 和 Distribution OS 的界限是很模糊的</strong>，为什么 Android 就不可以是移动时代的 Linux ，为什么 Devlik/ART 就不能是移动时代的 GCC 呢？</p>
+<h4 id="Chrome-OS"><a href="#Chrome-OS" class="headerlink" title="Chrome OS"></a>Chrome OS</h4><p>Chrome OS is an operating system based on the <strong>Linux kernel</strong> and designed by Google to work with web applications and installed applications.</p>
+<p>虽然目前只是个 Web Thin Client OS ，但是 RoadMap 非常酷……</p>
+<ul>
+<li><strong>Chrome Packaged Application</strong> (Support working offline and installed)</li>
+<li><strong>Android App Runtime</strong> (run Android applications natively…fxxking awesome)</li>
+</ul>
+<p>平复一下激动的心情，还是回到正题来：</p>
+<h4 id="Chromium-OS"><a href="#Chromium-OS" class="headerlink" title="Chromium OS"></a>Chromium OS</h4><p>Chrome OS is based on Chromium OS, which is the open-source development version of Chrome OS, which is a <strong>Linux distribution</strong> designed by Google.</p>
+<p>For Detail, Chromium OS based on <a href="http://en.wikipedia.org/wiki/Gentoo_Linux" target="_blank" rel="external">Gentoo Linux</a>, emm…</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;This document is not completed and will be updated anytime.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;Catagory&quot;&gt;&lt;a href=&quot;#Catagory&quot; class=&quot;h
+    
+    </summary>
+    
+    
+      <category term="OS" scheme="http://wanghaonanlpc.github.io/tags/OS/"/>
+    
+      <category term="Unix" scheme="http://wanghaonanlpc.github.io/tags/Unix/"/>
+    
+      <category term="Linux" scheme="http://wanghaonanlpc.github.io/tags/Linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Example Post</title>
+    <link href="http://wanghaonanlpc.github.io/2014/09/22/js-version/"/>
+    <id>http://wanghaonanlpc.github.io/2014/09/22/js-version/</id>
+    <published>2014-09-21T16:00:00.000Z</published>
+    <updated>2017-02-21T01:40:43.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>JavaScript 有着很奇怪的命名史。</p>
+<p>1995 年，它作为网景浏览器（Netscape Navigator）的一部分首次发布，网景给这个新语言命名为 LiveScript。一年后，为了搭上当时媒体热炒 Java 的顺风车，临时改名为了 JavaScript <em>（当然，Java 和 JavaScript 的关系，就和雷锋和雷锋塔一样 —— 并没有什么关系）</em></p>
+<p><img src="javascript-java.jpg" alt="java-javascript"><br><small class="img-hint">歪果仁的笑话怎么一点都不好笑</small></p>
+<blockquote>
+<p>译者注：<a href="https://en.wikipedia.org/wiki/JavaScript#History" target="_blank" rel="external">wikipedia 的 JavaScript 词条</a> 更详细的叙述了这段历史</p>
+</blockquote>
+<p>1996 年，网景将 JavaScript 提交给 <a href="http://www.ecma-international.org/" target="_blank" rel="external">ECMA International（欧洲计算机制造商协会）</a> 进行标准化，并最终确定出新的语言标准，它就是 ECMAScript。自此，ECMAScript 成为所有 JavaScript 实现的基础，不过，由于 JavaScript 名字的历史原因和市场原因（很显然 ECMAScript 这个名字并不令人喜欢……），现实中我们只用 ECMAScript 称呼标准，平时都还是使用 JavaScript 来称呼这个语言。</p>
+<blockquote>
+<p>术语（译者注）：</p>
+<ul>
+<li><em>标准（Standard）</em>： 用于定义与其他事物区别的一套规则</li>
+<li><em>实现（Implementation）</em>： 某个标准的具体实施/真实实践</li>
+</ul>
+</blockquote>
+<p>不过，JavaScript 开发者们并不怎么在乎这些，因为在诞生之后的 15 年里，ECMAScript 并没有多少变化，而且现实中的很多实现都已经和标准大相径庭。其实在第一版的 ECMAScript 发布后，很快又跟进发布了两个版本，但是自从 1999 年 ECMAScript 3 发布后，十年内都没有任何改动被成功添加到官方规范里。取而代之的，是各大浏览器厂商们争先进行自己的语言拓展，web 开发者们别无选择只能去尝试并且支持这些 API。即使是在 2009 年 ECMAScript 5 发布之后，仍然用了数年这些新规范才得到了浏览器的广泛支持，可是大部分开发者还是写着 ECMAScript 3 风格的代码，并不觉得有必要去了解这些规范。</p>
+<blockquote>
+<p>译者注：<a href="https://en.wikipedia.org/wiki/ECMAScript#4th_Edition_.28abandoned.29" target="_blank" rel="external">ECMAScript 第四版草案</a>由于太过激进而被抛弃，Adobe 的 <a href="https://en.wikipedia.org/wiki/ActionScript" target="_blank" rel="external">ActionScript 3.0</a> 是 ECMAScript edition 4 的唯一实现（ Flash 差点就统一 Web 了）</p>
+</blockquote>
+<p>到了 2012 年，事情突然开始有了转变。大家开始推动停止对旧版本 IE 浏览器的支持，用 ECMAScript 5 (ES5) 风格来编写代码也变得更加可行。与此同时，一个新的 ECMAScript 规范也开始启动。到了这时，大家开始逐渐习惯以对 ECMAScript 规范的版本支持程度来形容各种 JavaScript 实现。在正式被指名为 ECMAScript 第 6 版 (ES6) 之前，这个新的标准原本被称为 ES.Harmony（和谐）。2015 年，负责制定 ECMAScript 规范草案的委员会 TC39 决定将定义新标准的制度改为一年一次，这意味着每个新特性一旦被批准就可以添加，而不像以往一样，规范只有在整个草案完成，所有特性都没问题后才能被定稿。因此，ECMAScript 第 6 版在六月份公布之前，又被重命名为了 ECMAScript 2015（ES2015）</p>
+<p>目前，仍然有很多新的 JavaScript 特性或语法正在提议中，包括 <a href="https://github.com/wycats/javascript-decorators" target="_blank" rel="external">decorators（装饰者）</a>，<a href="https://github.com/lukehoban/ecmascript-asyncawait" target="_blank" rel="external">async-await（async-await 异步编程模型）</a> 和 <a href="https://github.com/jeffmo/es-class-properties" target="_blank" rel="external">static class properties（静态类属性）</a>。它们通常被称为 ES7，ES2016 或者 ES.Next 的特性，不过实际上它们只能被称作提案或者说可能性，毕竟 ES2016 的规范还没有完成，有可能全部都会引入，也有可能一个都没有。TC39 把一个提案分为 4 个阶段，你可以在 <a href="https://babeljs.io/docs/usage/experimental/" target="_blank" rel="external">Babel 的官网</a> 上查看各个提案目前都在哪个阶段了。</p>
+<p>所以，我们该如何使用这一大堆术语呢？下面的列表或许能帮助到你：</p>
+<ul>
+<li><strong>ECMAScript</strong>：一个由 ECMA International 进行标准化，TC39 委员会进行监督的语言。通常用于指代标准本身。</li>
+<li><strong>JavaScript</strong>：ECMAScript 标准的各种实现的最常用称呼。这个术语并不局限于某个特定版本的 ECMAScript 规范，并且可能被用于任何不同程度的任意版本的 ECMAScript 的实现。</li>
+<li><strong>ECMAScript 5 (ES5)</strong>：ECMAScript 的第五版修订，于 2009 年完成标准化。这个规范在所有现代浏览器中都相当完全的实现了。</li>
+<li><strong>ECMAScript 6 (ES6) / ECMAScript 2015 (ES2015)</strong>：ECMAScript 的第六版修订，于 2015 年完成标准化。这个标准被部分实现于大部分现代浏览器。可以查阅<a href="http://kangax.github.io/compat-table/es6/" target="_blank" rel="external">这张兼容性表</a>来查看不同浏览器和工具的实现情况。</li>
+<li><strong>ECMAScript 2016</strong>：预计的第七版 ECMAScript 修订，计划于明年夏季发布。这份规范具体将包含哪些特性还没有最终确定</li>
+<li><strong>ECMAScript Proposals</strong>：被考虑加入未来版本 ECMAScript 标准的特性与语法提案，他们需要经历五个阶段：Strawman（稻草人），Proposal（提议），Draft（草案），Candidate（候选）以及 Finished （完成）。</li>
+</ul>
+<p>在这整个 Blog 中，我将把目前的 ECMAScript 版本称作 ES6（因为这是大部分开发者最习以为常的），把明年的规范称作 ES2016（因为，与 ES6/ES2015 不同，这个名字将在整个标准化过程中沿用）并且将那些还没有成为 ECMAScript 定稿或草案的未来语言概念称为 ECMAScript 提案或者 JavaScript 提案。我将尽我所能在任何可能引起困惑的场合沿用这篇文章。</p>
+<h4 id="一些资源"><a href="#一些资源" class="headerlink" title="一些资源"></a>一些资源</h4><ul>
+<li>TC39 的 <a href="https://github.com/tc39/ecma262" target="_blank" rel="external">Github 仓库</a>上可以看到所有目前公开的提案</li>
+<li>如果你还不熟悉 ES6，Babel 有一个<a href="https://babeljs.io/docs/learn-es2015/" target="_blank" rel="external">很不错的特性概览</a></li>
+<li>如果你希望深入 ES6，这里有两本很不错的书： Axel Rauschmayer 的 <a href="http://exploringjs.com/" target="_blank" rel="external">Exploring ES6</a>和 Nicholas Zakas 的 <a href="https://leanpub.com/understandinges6" target="_blank" rel="external">Understanding ECMAScript 6</a>。Axel 的博客 <a href="http://www.2ality.com/" target="_blank" rel="external">2ality</a> 也是很不错的 ES6 资源</li>
+</ul>
+<p><img class="shadow" width="320" src="keep-calm-and-learn-javascript.png"><br><small class="img-hint">来学 JavaScript 吧！</small></p>
+<h4 id="著作权声明"><a href="#著作权声明" class="headerlink" title="著作权声明"></a>著作权声明</h4><p>本文译自 <a href="http://benmccormick.org/2015/09/14/es5-es6-es2016-es-next-whats-going-on-with-javascript-versioning/" target="_blank" rel="external">ES5, ES6, ES2016, ES.Next: What’s going on with JavaScript versioning?</a><br>译者 <a href="http://weibo.com/huxpro" target="_blank" rel="external">黄玄</a>，首次发布于 <a href="http://huangxuan.me" target="_blank" rel="external">Hux Blog</a>，转载请保留以上链接</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;JavaScript 有着很奇怪的命名史。&lt;/p&gt;
+&lt;p&gt;1995 年，它作为网景浏览器（Netscape Navigator）的一部分首次发布，网景给这个新语言命名为 LiveScript。一年后，为了搭上当时媒体热炒 Java 的顺风车，临时改名为了 JavaScrip
+    
+    </summary>
+    
+    
+      <category term="前端开发" scheme="http://wanghaonanlpc.github.io/tags/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
+    
+      <category term="JavaScript" scheme="http://wanghaonanlpc.github.io/tags/JavaScript/"/>
+    
+      <category term="翻译" scheme="http://wanghaonanlpc.github.io/tags/%E7%BF%BB%E8%AF%91/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Welcome to Hux Blog</title>
+    <link href="http://wanghaonanlpc.github.io/2014/01/29/hello-2015/"/>
+    <id>http://wanghaonanlpc.github.io/2014/01/29/hello-2015/</id>
+    <published>2014-01-29T04:00:00.000Z</published>
+    <updated>2017-02-21T01:40:43.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<p>“Yeah It’s on. ”</p>
+</blockquote>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>Hux 的 Blog 就这么开通了。</p>
+<p><a href="#build">跳过废话，直接看技术实现 </a></p>
+<p>2015 年，Hux 总算有个地方可以好好写点东西了。</p>
+<p>作为一个程序员， Blog 这种轮子要是挂在大众博客程序上就太没意思了。一是觉得大部分 Blog 服务都太丑，二是觉得不能随便定制不好玩。之前因为太懒没有折腾，结果就一直连个写 Blog 的地儿都没有。</p>
+<p>在玩了一段时间知乎之后，答题的快感又激起了我开博客的冲动。之前的<a href="http://huangxuan.me/portfolio" target="_blank" rel="external">个人网站</a>是作品集形式的（现在集成进来了），并不适合用来写博文，一不做二不休，花一天搞一个吧！</p>
+<h2 id=""><a href="#" class="headerlink" title=""></a><p id="build"></p></h2><h2 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h2><p>接下来说说搭建这个博客的技术细节。  </p>
+<p>正好之前就有关注过 <a href="https://pages.github.com/" target="_blank" rel="external">GitHub Pages</a> + <a href="http://jekyllrb.com/" target="_blank" rel="external">Jekyll</a> 快速 Building Blog 的技术方案，非常轻松时尚。</p>
+<p>其优点非常明显：</p>
+<ul>
+<li><strong>Markdown</strong> 带来的优雅写作体验</li>
+<li>非常熟悉的 Git workflow ，<strong>Git Commit 即 Blog Post</strong></li>
+<li>利用 GitHub Pages 的域名和免费无限空间，不用自己折腾主机<ul>
+<li>如果需要自定义域名，也只需要简单改改 DNS 加个 CNAME 就好了</li>
+</ul>
+</li>
+<li>Jekyll 的自定制非常容易，基本就是个模版引擎</li>
+</ul>
+<p>本来觉得最大的缺点可能是 GitHub 在国内访问起来太慢，所以第二天一起床就到 GitCafe(Chinese GitHub Copy) 迁移了一个<a href="http://huxpro.gitcafe.io" target="_blank" rel="external">镜像</a>出来，结果还是巨慢。</p>
+<p>哥哥可是个前端好嘛！ 果断开 Chrome DevTool 查了下网络请求，原来是 <strong>pending 在了 Google Fonts</strong> 上，页面渲染一直被阻塞到请求超时为止，难怪这么慢。<br>忍痛割爱，只好把 Web Fonts 去了（反正超时看到的也只能是 fallback ），果然一下就正常了，而且 GitHub 和 GitCafe 对比并没有感受到明显的速度差异，虽然 github 的 ping 值明显要高一些，达到了 300ms，于是用 DNSPOD 优化了一下速度。</p>
+<hr>
+<p>配置的过程中也没遇到什么坑，基本就是 Git 的流程，相当顺手</p>
+<p>大的 Jekyll 主题上直接 fork 了 Clean Blog（这个主题也相当有名，就不多赘述了。唯一的缺点大概就是没有标签支持，于是我给它补上了。）</p>
+<p>本地调试环境需要 <code>gem install jekyll</code>，结果 rubygem 的源居然被墙了……后来手动改成了我大淘宝的镜像源才成功</p>
+<p>Theme 的 CSS 是基于 Bootstrap 定制的，看得不爽的地方直接在 Less 里改就好了（平时更习惯 SCSS 些），<strong>不过其实我一直觉得 Bootstrap 在移动端的体验做得相当一般，比我在淘宝参与的团队 CSS 框架差多了……</strong>所以为了体验，也补了不少 CSS 进去</p>
+<p>最后就进入了耗时反而最长的<strong>做图、写字</strong>阶段，也算是进入了<strong>写博客</strong>的正轨，因为是类似 Hack Day 的方式去搭这个站的，所以折腾折腾着大半夜就过去了。</p>
+<p>第二天考虑中文字体的渲染，fork 了 <a href="http://www.typeisbeautiful.com/" target="_blank" rel="external">Type is Beautiful</a> 的 <code>font</code> CSS，调整了字号，适配了 Win 的渣渲染，中英文混排效果好多了。</p>
+<h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><p>回顾这个博客的诞生，纯粹是出于个人兴趣。在知乎相关问题上回答并获得一定的 star 后，我决定把这个博客主题当作一个小小的开源项目来维护。</p>
+<p>在经历 v1.0 - v1.5 的蜕变后，这个博客主题愈发完整，不但增加了诸多 UI 层的优化（opinionated）；在代码层面，更加丰富的配置项也使得这个主题拥有了更好的灵活性与可拓展性。而作为一个开源项目，我也积极的为其完善文档与解决 issue。</p>
+<p>如果你恰好逛到了这里，希望你也能喜欢这个博客主题。</p>
+<p>—— Hux 后记于 2015.10</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;“Yeah It’s on. ”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;Hux 的 Blog 就这么开通了。&lt;
+    
+    </summary>
+    
+    
+      <category term="生活" scheme="http://wanghaonanlpc.github.io/tags/%E7%94%9F%E6%B4%BB/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Example Post with Code Highlight</title>
+    <link href="http://wanghaonanlpc.github.io/2013/05/25/js-module-loader/"/>
+    <id>http://wanghaonanlpc.github.io/2013/05/25/js-module-loader/</id>
+    <published>2013-05-24T16:00:00.000Z</published>
+    <updated>2017-02-21T01:40:43.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Foreword"><a href="#Foreword" class="headerlink" title="Foreword"></a>Foreword</h2><blockquote>
+<p>Here comes Module!</p>
+</blockquote>
+<p>随着网站逐渐变成「互联网应用程序」，嵌入网页的 JavaScript 代码越来越庞大，越来越复杂。网页越来越像桌面程序，需要一个团队分工协作、进度管理、单元测试……我们不得不使用软件工程的方法，来管理网页的业务逻辑。</p>
+<p>于是，JavaScript 的模块化成为迫切需求。在 ES6 Module 来临之前，JavaScript 社区提供了强大支持，尝试在现有的运行环境下，实现模块的效果。</p>
+<hr>
+<h2 id="Catalog"><a href="#Catalog" class="headerlink" title="Catalog"></a>Catalog</h2><ol>
+<li><a href="#commonjs--node">CommonJS &amp; Node</a></li>
+<li><a href="#history">History</a></li>
+<li><a href="#requirejs--amd">RequireJS &amp; AMD</a></li>
+<li><a href="#seajs--cmd">SeaJS &amp; CMD</a></li>
+<li><a href="#amd-vs-cmd">AMD vs CMD</a></li>
+<li><a href="#webpack">WebPack</a></li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">function autoDetect()&#123;</div><div class="line">    console.log(&apos;ye, it is written in JavaScript!&apos;)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="CommonJS-amp-Node"><a href="#CommonJS-amp-Node" class="headerlink" title="CommonJS &amp; Node"></a>CommonJS &amp; Node</h2><blockquote>
+<p>Javascript: not just for browsers any more! —— CommonJS Slogen</p>
+</blockquote>
+<p>前端模块化的事实标准之一，2009 年 8 月，<a href="http://wiki.commonjs.org/wiki/CommonJS" target="_blank" rel="external">CommonJS</a> 诞生。</p>
+<p>CommonJS 本质上只是一套规范（API 定义），而 Node.js 采用并实现了部分规范，CommonJS Module 的写法也因此广泛流行。</p>
+<p>让我们看看 Node 中的实现：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 由于 Node 原生支持模块的作用域，并不需要额外的 wrapper</span></div><div class="line"><span class="comment">// "as though the module was wrapped in a function"</span></div><div class="line"></div><div class="line"><span class="keyword">var</span> a = <span class="built_in">require</span>(<span class="string">'./a'</span>)  <span class="comment">// 加载模块（同步加载）</span></div><div class="line">a.doSomething()         <span class="comment">// 等上一句执行完才会执行</span></div><div class="line"></div><div class="line">exports.b = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123; <span class="comment">// 暴露 b 函数接口</span></div><div class="line">  <span class="comment">// do something</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p><code>exports</code>是一个内置对象，就像<code>require</code>是一个内置加载函数一样。如果你希望直接赋值一个完整的对象或者构造函数，覆写<code>module.exports</code>就可以了。</p>
+<p>CommonJS 前身叫 ServerJS ，<strong>后来希望能更加 COMMON，成为通吃各种环境的模块规范，改名为 CommonJS</strong> 。CommonJS 最初只专注于 Server-side 而非浏览器环境，因此它采用了同步加载的机制，这对服务器环境（硬盘 I/O 速度）不是问题，而对浏览器环境（网速）来说并不合适。</p>
+<p>因此，各种适用于浏览器环境的模块框架与标准逐个诞生，他们的共同点是：</p>
+<ul>
+<li>采用异步加载（预先加载所有依赖的模块后回调执行，符合浏览器的网络环境）</li>
+<li>虽然代码风格不同，但其实都可以看作 CommonJS Modules 语法的变体。</li>
+<li>都在向着 <strong>COMMON</strong> 的方向进化：<strong>兼容不同风格，兼容浏览器和服务器两种环境</strong></li>
+</ul>
+<p>本文接下来要讨论的典例是：</p>
+<ul>
+<li>RequireJS &amp; AMD（异步加载，预执行，依赖前置。默认推荐 AMD 写法）</li>
+<li>SeaJS &amp; CMD（异步加载，懒执行，依赖就近，默认推荐 CommonJS 写法）</li>
+</ul>
+<h2 id="History"><a href="#History" class="headerlink" title="History"></a>History</h2><!--<h2 id="history"> History </h2>-->
+<blockquote>
+<p>此段落参考自玉伯的 <a href="https://github.com/seajs/seajs/issues/588" target="_blank" rel="external">前端模块化开发那点历史</a></p>
+</blockquote>
+<p>09-10 年间，CommonJS（那时还叫 ServerJS） 社区推出 <a href="http://wiki.commonjs.org/wiki/Modules" target="_blank" rel="external">Modules/1.0</a> 规范，并且在 Node.js 等环境下取得了很不错的实践。</p>
+<p>09年下半年这帮充满干劲的小伙子们想把 ServerJS 的成功经验进一步推广到浏览器端，于是将社区改名叫 CommonJS，同时激烈争论 Modules 的下一版规范。分歧和冲突由此诞生，逐步形成了三大流派：</p>
+<ol>
+<li><strong>Modules/1.x</strong> 流派。这个观点觉得 1.x 规范已经够用，只要移植到浏览器端就好。要做的是新增 <a href="http://wiki.commonjs.org/wiki/Modules/Transport" target="_blank" rel="external">Modules/Transport</a> 规范，即在浏览器上运行前，先通过转换工具将模块转换为符合 Transport 规范的代码。主流代表是服务端的开发人员。现在值得关注的有两个实现：越来越火的 component 和走在前沿的 es6 module transpiler。</li>
+<li><strong>Modules/Async</strong> 流派。这个观点觉得浏览器有自身的特征，不应该直接用 Modules/1.x 规范。这个观点下的典型代表是 <a href="http://wiki.commonjs.org/wiki/Modules/AsynchronousDefinition" target="_blank" rel="external">AMD</a> 规范及其实现 <a href="http://requirejs.org/" target="_blank" rel="external">RequireJS</a>。这个稍后再细说。</li>
+<li><strong>Modules/2.0</strong> 流派。这个观点觉得浏览器有自身的特征，不应该直接用 Modules/1.x 规范，但应该尽可能与 Modules/1.x 规范保持一致。这个观点下的典型代表是 BravoJS 和 FlyScript 的作者。BravoJS 作者对 CommonJS 的社区的贡献很大，这份 Modules/2.0-draft 规范花了很多心思。FlyScript 的作者提出了 Modules/Wrappings 规范，这规范是 CMD 规范的前身。可惜的是 BravoJS 太学院派，FlyScript 后来做了自我阉割，将整个网站（flyscript.org）下线了。这个观点在本文中的典型代表就是 SeaJS 和 CMD 了</li>
+</ol>
+<p>补一嘴：阿里 KISSY 的 KMD 其实跟 AMD 非常类似，只是用 <code>add</code>和<code>use</code> 两个源自于 YUI Modules 的函数名替换了 <code>define</code> 和 <code>require</code> ，但其原理更接近 RequireJS ，与 YUI Modules 的 <code>Y</code> 沙箱 Attach 机制并不相同</p>
+<h2 id="RequireJS-amp-AMD"><a href="#RequireJS-amp-AMD" class="headerlink" title="RequireJS &amp; AMD"></a>RequireJS &amp; AMD</h2><p><a href="http://wiki.commonjs.org/wiki/Modules/AsynchronousDefinition" target="_blank" rel="external">AMD (Async Module Definition)</a> 是 RequireJS 在推广过程中对模块定义的规范化产出。</p>
+<blockquote>
+<p>RequireJS is a JavaScript file and module loader. It is optimized for in-browser use, but it can be used in other JavaScript environments</p>
+</blockquote>
+<p>RequireJS 主要解决的还是 CommonJS 同步加载脚本不适合浏览器 这个问题：</p>
+<script src="//gist.github.com/65481dbbf6d16e831a6cc89c3e37e6e5.js?file=display-emails-from-database.php"></script>
+<blockquote>
+<p>As the comment indicates above, if require() is async, this code will not work. However, loading scripts synchronously in the browser kills performance. So, what to do?</p>
+</blockquote>
+<p>所以我们需要 <strong>Function Wrapping</strong> 来获取依赖并且提前通过 script tag 提前加载进来</p>
+<iframe scrolling="no" width="[width]" height="[height]" src="http://jsfiddle.net/shorttag/embedded/[tabs]/[skin]" frameborder="0" allowfullscreen></iframe>
+<p>当依赖模块非常多时，这种<strong>依赖前置</strong>的写法会显得有点奇怪，所以 AMD 给了一个语法糖， <strong>simplified CommonJS wrapping</strong>，借鉴了 CommonJS 的 require 就近风格，也更方便对 CommonJS 模块的兼容：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">define(<span class="function"><span class="keyword">function</span> (<span class="params">require</span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> dependency1 = <span class="built_in">require</span>(<span class="string">'dependency1'</span>),</div><div class="line">        dependency2 = <span class="built_in">require</span>(<span class="string">'dependency2'</span>);</div><div class="line"></div><div class="line">    <span class="keyword">return</span> <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;&#125;;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<p>The AMD loader will parse out the <code>require(&#39;&#39;)</code> calls by using <code>Function.prototype.toString()</code>, then internally convert the above define call into this:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">define([<span class="string">'require'</span>, <span class="string">'dependency1'</span>, <span class="string">'dependency2'</span>], <span class="function"><span class="keyword">function</span> (<span class="params">require</span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> dependency1 = <span class="built_in">require</span>(<span class="string">'dependency1'</span>),</div><div class="line">        dependency2 = <span class="built_in">require</span>(<span class="string">'dependency2'</span>);</div><div class="line"></div><div class="line">    <span class="keyword">return</span> <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;&#125;;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<p>出于<code>Function.prototype.toString()</code>兼容性和性能的考虑，最好的做法还是做一次 <strong>optimized build</strong></p>
+<p>AMD 和 CommonJS 的核心争议如下：</p>
+<h3 id="1-执行时机"><a href="#1-执行时机" class="headerlink" title="1. 执行时机"></a>1. <strong>执行时机</strong></h3><p>Modules/1.0:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> a = <span class="built_in">require</span>(<span class="string">"./a"</span>) <span class="comment">// 执行到此时，a.js 才同步下载并执行</span></div></pre></td></tr></table></figure>
+<p>AMD: （使用 require 的语法糖时）</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">define([<span class="string">"require"</span>],<span class="function"><span class="keyword">function</span>(<span class="params">require</span>))</span>&#123;</div><div class="line">    <span class="comment">// 在这里，a.js 已经下载并且执行好了</span></div><div class="line">    <span class="comment">// 使用 require() 并不是 AMD 的推荐写法</span></div><div class="line">    <span class="keyword">var</span> a = <span class="built_in">require</span>(<span class="string">"./a"</span>) <span class="comment">// 此处仅仅是取模块 a 的 exports</span></div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<p>AMD 里提前下载 a.js 是出于对浏览器环境的考虑，只能采取异步下载，这个社区都认可（Sea.js 也是这么做的）</p>
+<p>但是 AMD 的执行是 Early Executing，而 Modules/1.0 是第一次 require 时才执行。这个差异很多人不能接受，包括持 Modules/2.0 观点的人也不能接受。</p>
+<h3 id="2-书写风格"><a href="#2-书写风格" class="headerlink" title="2. 书写风格"></a>2. <strong>书写风格</strong></h3><p>AMD 推荐的风格并不使用<code>require</code>，而是通过参数传入，破坏了<strong>依赖就近</strong>：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">define([<span class="string">"a"</span>, <span class="string">"b"</span>, <span class="string">"c"</span>],<span class="function"><span class="keyword">function</span>(<span class="params">a, b, c</span>)</span>&#123;</div><div class="line">    <span class="comment">// 提前申明了并初始化了所有模块</span></div><div class="line"></div><div class="line">    <span class="literal">true</span> || b.foo(); <span class="comment">//即便根本没用到模块 b，但 b 还是提前执行了。</span></div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<p>不过，在笔者看来，风格喜好因人而异，主要还是<strong>预执行</strong>和<strong>懒执行</strong>的差异。</p>
+<p>另外，require 2.0 也开始思考异步处理<strong>软依赖</strong>（区别于一定需要的<strong>硬依赖</strong>）的问题，提出了这样的方案：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 函数体内：</span></div><div class="line"><span class="keyword">if</span>(status)&#123;</div><div class="line">    <span class="keyword">async</span>([<span class="string">'a'</span>],<span class="function"><span class="keyword">function</span>(<span class="params">a</span>)</span>&#123;</div><div class="line">        a.doSomething()</div><div class="line">    &#125;)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="SeaJS-amp-CMD"><a href="#SeaJS-amp-CMD" class="headerlink" title="SeaJS &amp; CMD"></a>SeaJS &amp; CMD</h2><p>CMD (Common Module Definition) 是 <a href="http://seajs.org/docs/" target="_blank" rel="external">SeaJS</a> 在推广过程中对模块定义的规范化产出，是 Modules/2.0 流派的支持者，因此 SeaJS 的模块写法尽可能与 Modules/1.x 规范保持一致。</p>
+<p>不过目前国外的该流派都死得差不多了，RequireJS 目前成为浏览器端模块的事实标准，国内最有名气的就是玉伯的 Sea.js ，不过对国际的推广力度不够。</p>
+<ul>
+<li>CMD Specification<ul>
+<li><a href="https://github.com/cmdjs/specification/blob/master/draft/module.md" target="_blank" rel="external">English (CMDJS-repo)</a></li>
+<li><a href="https://github.com/seajs/seajs/issues/242" target="_blank" rel="external">Chinese (SeaJS-repo)</a></li>
+</ul>
+</li>
+</ul>
+<p>CMD 主要有 define, factory, require, export 这么几个东西</p>
+<ul>
+<li>define <code>define(id?, deps?, factory)</code></li>
+<li>factory <code>factory(require, exports, module)</code></li>
+<li>require <code>require(id)</code></li>
+<li>exports <code>Object</code></li>
+</ul>
+<p>CMD 推荐的 Code Style 是使用 CommonJS 风格的 <code>require</code>：</p>
+<ul>
+<li>这个 require 实际上是一个全局函数，用于加载模块，这里实际就是传入而已</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">define(<span class="function"><span class="keyword">function</span>(<span class="params">require, exports</span>) </span>&#123;</div><div class="line"></div><div class="line">    <span class="comment">// 获取模块 a 的接口</span></div><div class="line">    <span class="keyword">var</span> a = <span class="built_in">require</span>(<span class="string">'./a'</span>);</div><div class="line">    <span class="comment">// 调用模块 a 的方法</span></div><div class="line">    a.doSomething();</div><div class="line"></div><div class="line">    <span class="comment">// 对外提供 foo 属性</span></div><div class="line">    exports.foo = <span class="string">'bar'</span>;</div><div class="line">    <span class="comment">// 对外提供 doSomething 方法</span></div><div class="line">    exports.doSomething = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;&#125;;</div><div class="line"></div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<p>但是你也可以使用 AMD 风格，或者使用 return 来进行模块暴露</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">define(<span class="string">'hello'</span>, [<span class="string">'jquery'</span>], <span class="function"><span class="keyword">function</span>(<span class="params">require, exports, module</span>) </span>&#123;</div><div class="line"></div><div class="line">    <span class="comment">// 模块代码...</span></div><div class="line"></div><div class="line">    <span class="comment">// 直接通过 return 暴露接口</span></div><div class="line">    <span class="keyword">return</span> &#123;</div><div class="line">        <span class="attr">foo</span>: <span class="string">'bar'</span>,</div><div class="line">        <span class="attr">doSomething</span>: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;&#125;</div><div class="line">    &#125;;</div><div class="line"></div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<p>Sea.js 借鉴了 RequireJS 的不少东西，比如将 FlyScript 中的 module.declare 改名为 define 等。Sea.js 更多地来自 Modules/2.0 的观点，但尽可能去掉了学院派的东西，加入了不少实战派的理念。</p>
+<h2 id="AMD-vs-CMD"><a href="#AMD-vs-CMD" class="headerlink" title="AMD vs CMD"></a>AMD vs CMD</h2><p><strong>虽然两者目前都兼容各种风格，但其底层原理并不相同，从其分别推荐的写法就可以看出两者背后原理的不同：</strong></p>
+<ol>
+<li>对于依赖的模块，AMD 是<strong>提前执行</strong>，CMD 是<strong>懒执行</strong>。（都是先加载）</li>
+</ol>
+<ul>
+<li>CMD 推崇<strong>依赖就近</strong>，AMD 推崇<strong>依赖前置</strong>。   </li>
+</ul>
+<p>看代码：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// AMD 默认推荐</span></div><div class="line"></div><div class="line">define([<span class="string">'./a'</span>, <span class="string">'./b'</span>], <span class="function"><span class="keyword">function</span>(<span class="params">a, b</span>) </span>&#123;  <span class="comment">// 依赖前置，提前执行</span></div><div class="line"></div><div class="line">    a.doSomething()</div><div class="line">    b.doSomething()</div><div class="line"></div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// CMD</span></div><div class="line"></div><div class="line">define(<span class="function"><span class="keyword">function</span>(<span class="params">require, exports, module</span>) </span>&#123;</div><div class="line"></div><div class="line">    <span class="keyword">var</span> a = <span class="built_in">require</span>(<span class="string">'./a'</span>)</div><div class="line">    a.doSomething()</div><div class="line"></div><div class="line">    <span class="keyword">var</span> b = <span class="built_in">require</span>(<span class="string">'./b'</span>) <span class="comment">// 依赖就近，延迟执行</span></div><div class="line">    b.doSomething()</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<h2 id="WebPack"><a href="#WebPack" class="headerlink" title="WebPack"></a>WebPack</h2><blockquote>
+<p>working…</p>
+</blockquote>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;Foreword&quot;&gt;&lt;a href=&quot;#Foreword&quot; class=&quot;headerlink&quot; title=&quot;Foreword&quot;&gt;&lt;/a&gt;Foreword&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;Here comes Module!&lt;/p&gt;
+&lt;/blockquo
+    
+    </summary>
+    
+    
+      <category term="前端开发" scheme="http://wanghaonanlpc.github.io/tags/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
+    
+      <category term="JavaScript" scheme="http://wanghaonanlpc.github.io/tags/JavaScript/"/>
+    
+  </entry>
+  
+</feed>

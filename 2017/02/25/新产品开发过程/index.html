@@ -1,0 +1,1036 @@
+<!DOCTYPE html>
+<html lang="zh">
+    <head>
+    <!-- 
+        © Material Theme
+        https://github.com/viosey/hexo-theme-material
+        Version: 1.3.0 -->
+
+    <!-- Title -->
+    
+    <title>
+        
+            新产品开发过程（一） | 
+        
+        一个老白 | 野厨
+    </title>
+
+    <!-- Favicons -->
+    <link rel="icon shortcut" type="image/ico" href="/img/favicon.png">
+    <link rel="icon" sizes="192x192" href="/img/favicon.png">
+    <link rel="apple-touch-icon" href="/img/favicon.png">
+
+    <!-- Meta & Info -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#0097A7">
+    <meta name="author" content="Alex">
+    <meta name="description" content="null">
+    <meta name="keywords" content="null,npdp">
+
+    <!--iOS -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-title" content="Title">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="480">
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="一个老白 | 野厨">
+
+    <!-- The Open Graph protocol -->
+    <meta property="og:url" content="http://wanghaonanlpc.github.io">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="新产品开发过程（一） | 一个老白 | 野厨">
+    <meta property="og:description" content="null">
+    <meta property="og:article:tag" content="npdp"> 
+
+    <!--[if lte IE 9]>
+        <link rel="stylesheet" href="/css/ie-blocker.css">
+
+        
+            <script src="/js/ie-blocker.zhCN.js"></script>
+        
+    <![endif]-->
+
+    <!-- Import CSS -->
+    <link rel="stylesheet" href="/css/material.min.css">
+    <link rel="stylesheet" href="/css/style.min.css">
+    <!-- Config CSS -->
+
+
+<!-- Other Styles -->
+<style>
+  body, html {
+    font-family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+  }
+
+  a {
+    color: #00838F;
+  }
+
+  .mdl-card__media,
+  #search-label,
+  #search-form-label:after,
+  #scheme-Paradox .hot_tags-count,
+  #scheme-Paradox .sidebar_archives-count,
+  #scheme-Paradox .sidebar-colored .sidebar-header,
+  #scheme-Paradox .sidebar-colored .sidebar-badge{
+    background-color: #0097A7 !important;
+  }
+
+  /* Sidebar User Drop Down Menu Text Color */
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus {
+    color: #0097A7 !important;
+  }
+
+  #post_entry-right-info,
+  .sidebar-colored .sidebar-nav li:hover > a,
+  .sidebar-colored .sidebar-nav li:hover > a i,
+  .sidebar-colored .sidebar-nav li > a:hover,
+  .sidebar-colored .sidebar-nav li > a:hover i,
+  .sidebar-colored .sidebar-nav li > a:focus i,
+  .sidebar-colored .sidebar-nav > .open > a,
+  .sidebar-colored .sidebar-nav > .open > a:hover,
+  .sidebar-colored .sidebar-nav > .open > a:focus,
+  #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a {
+    color: #0097A7 !important;
+  }
+
+  .toTop {
+    background: #757575 !important;
+  }
+
+  .material-layout .material-post>.material-nav,
+  .material-layout .material-index>.material-nav,
+  .material-nav a {
+    color: #757575;
+  }
+
+  #scheme-Paradox .MD-burger-layer {
+    background-color: #757575;
+  }
+
+  #scheme-Paradox #post-toc-trigger-btn {
+    color: #757575;
+  }
+
+  .post-toc a:hover {
+    color: #00838F;
+    text-decoration: underline;
+  }
+</style>
+
+
+<!-- Theme Background Related-->
+
+    <style>
+      body{
+        background-color: #F5F5F5;
+      }
+
+      /* blog_info bottom background */
+      #scheme-Paradox .material-layout .something-else .mdl-card__supporting-text{
+        background-color: #fff;
+      }
+    </style>
+
+
+
+
+<!-- Fade Effect -->
+
+    <style>
+      .fade {
+        transition: all 800ms linear;
+        -webkit-transform: translate3d(0,0,0);
+        -moz-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+        -o-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+        opacity: 1;
+      }
+
+      .fade.out{
+        opacity: 0;
+      }
+    </style>
+
+
+
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/queue.js"></script>
+
+    <!-- UC Browser Compatible -->
+    <script>
+        var agent = navigator.userAgent.toLowerCase();
+        if(agent.indexOf('ucbrowser')>0) {
+            document.write("<link rel=\"stylesheet\" href=\"/css/uc.css\">");
+            alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
+        }
+    </script>
+
+    
+
+    
+
+    <!-- Bing Background -->
+    
+
+    <!-- Custom Head -->
+    
+</head>
+
+
+    
+        <body id="scheme-Paradox" class="lazy">
+            <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
+                
+
+                <!-- Main Container -->
+                <main class="material-layout__content" id="main">
+
+                    <!-- Top Anchor -->
+                    <div id="top"></div>
+
+                    
+                        <!-- Hamburger Button -->
+                        <button class="MD-burger-icon sidebar-toggle">
+                            <span class="MD-burger-layer"></span>
+                        </button>
+                    
+
+                    <!-- Post TOC -->
+
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+    <!-- Left aligned menu below button -->
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#大纲"><span class="post-toc-number">1.</span> <span class="post-toc-text">大纲</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#定义"><span class="post-toc-number">2.</span> <span class="post-toc-text">定义</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#过程定义："><span class="post-toc-number">2.1.</span> <span class="post-toc-text">-过程定义：</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#为什么需要过程"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">-为什么需要过程</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#前期多做研究是否意味上市时间落后？"><span class="post-toc-number">2.3.</span> <span class="post-toc-text">- 前期多做研究是否意味上市时间落后？</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#各种过程的演化"><span class="post-toc-number">2.4.</span> <span class="post-toc-text">-各种过程的演化</span></a></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#阶段回顾法"><span class="post-toc-number">3.</span> <span class="post-toc-text">阶段回顾法</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#阶段回顾法-1"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">阶段回顾法</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#模糊的的前端"><span class="post-toc-number">3.2.</span> <span class="post-toc-text">模糊的的前端</span></a></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#阶段关卡法"><span class="post-toc-number">4.</span> <span class="post-toc-text">阶段关卡法</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#阶段-1-2"><span class="post-toc-number">4.1.</span> <span class="post-toc-text">阶段(1/2)</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#阶段-2-2"><span class="post-toc-number">4.2.</span> <span class="post-toc-text">阶段(2/2)</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#关卡"><span class="post-toc-number">4.3.</span> <span class="post-toc-text">关卡</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#关卡通过标准"><span class="post-toc-number">4.4.</span> <span class="post-toc-text">关卡通过标准</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#必须符合"><span class="post-toc-number">4.4.1.</span> <span class="post-toc-text">必须符合</span></a></li><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#应该符合"><span class="post-toc-number">4.4.2.</span> <span class="post-toc-text">应该符合</span></a></li></ol></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#关卡会议"><span class="post-toc-number">4.5.</span> <span class="post-toc-text">关卡会议</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#阶段0：探索发现-Discovery"><span class="post-toc-number">4.6.</span> <span class="post-toc-text">阶段0：探索发现 Discovery</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#探索发现Discovery（阶段0）（1-2）"><span class="post-toc-number">4.7.</span> <span class="post-toc-text">探索发现Discovery（阶段0）（1/2）</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#探索发现Discovery（阶段0）（2-2）"><span class="post-toc-number">4.8.</span> <span class="post-toc-text">探索发现Discovery（阶段0）（2/2）</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#阶段0：主要输出"><span class="post-toc-number">4.9.</span> <span class="post-toc-text">阶段0：主要输出</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#机会概念"><span class="post-toc-number">4.9.1.</span> <span class="post-toc-text">机会概念</span></a></li><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#产品创新章程"><span class="post-toc-number">4.9.2.</span> <span class="post-toc-text">产品创新章程</span></a></li></ol></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#关卡-1：筛选点子"><span class="post-toc-number">4.10.</span> <span class="post-toc-text">关卡 1：筛选点子</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#关卡-1-评估标准（1-2）"><span class="post-toc-number">4.11.</span> <span class="post-toc-text">关卡 1 评估标准（1/2）</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#关卡-1-评估标准（2-2）"><span class="post-toc-number">4.12.</span> <span class="post-toc-text">关卡 1 评估标准（2/2）</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#阶段1：定义范围"><span class="post-toc-number">4.13.</span> <span class="post-toc-text">阶段1：定义范围</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#阶段1：定义范围-1"><span class="post-toc-number">4.14.</span> <span class="post-toc-text">阶段1：定义范围</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#关卡2：二次筛选"><span class="post-toc-number">4.15.</span> <span class="post-toc-text">关卡2：二次筛选</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#关卡2：评估标准"><span class="post-toc-number">4.16.</span> <span class="post-toc-text">关卡2：评估标准</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#阶段2：建立商业论证"><span class="post-toc-number">4.17.</span> <span class="post-toc-text">阶段2：建立商业论证</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#主要输出"><span class="post-toc-number">4.18.</span> <span class="post-toc-text">主要输出</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#关卡3：开始开发"><span class="post-toc-number">4.19.</span> <span class="post-toc-text">关卡3：开始开发</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#关卡3：必须满足的评估标准"><span class="post-toc-number">4.20.</span> <span class="post-toc-text">关卡3：必须满足的评估标准</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#关卡3：应该满足的评估标准（1-2）"><span class="post-toc-number">4.21.</span> <span class="post-toc-text">关卡3：应该满足的评估标准（1/2）</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#关卡3：应该满足的评估标准（2-2）"><span class="post-toc-number">4.22.</span> <span class="post-toc-text">关卡3：应该满足的评估标准（2/2）</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#阶段3：开发"><span class="post-toc-number">4.23.</span> <span class="post-toc-text">阶段3：开发</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#关卡4：开始测试"><span class="post-toc-number">4.24.</span> <span class="post-toc-text">关卡4：开始测试</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#阶段4：测试与验证"><span class="post-toc-number">4.25.</span> <span class="post-toc-text">阶段4：测试与验证</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#阶段4：主要活动与输出"><span class="post-toc-number">4.26.</span> <span class="post-toc-text">阶段4：主要活动与输出</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#测试与验证（阶段4）"><span class="post-toc-number">4.27.</span> <span class="post-toc-text">测试与验证（阶段4）</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#关卡5：上市"><span class="post-toc-number">4.28.</span> <span class="post-toc-text">关卡5：上市</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#阶段5：上市"><span class="post-toc-number">4.29.</span> <span class="post-toc-text">阶段5：上市</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#产品上市（阶段5）"><span class="post-toc-number">4.30.</span> <span class="post-toc-text">产品上市（阶段5）</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#决策"><span class="post-toc-number">4.31.</span> <span class="post-toc-text">决策</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#过程例外"><span class="post-toc-number">4.32.</span> <span class="post-toc-text">过程例外</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#先产品开发是每个人的责任"><span class="post-toc-number">4.33.</span> <span class="post-toc-text">先产品开发是每个人的责任</span></a></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#瀑布式开发法"><span class="post-toc-number">5.</span> <span class="post-toc-text">瀑布式开发法</span></a></li></ol>
+
+        <!--
+        <li class="mdl-menu__item">
+            Some Action
+        </li>
+        -->
+    </ul>
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
+    
+        
+            <!-- Random Thumbnail -->
+            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
+            <script>
+    var randomNum = Math.floor(Math.random() * 19 + 1);
+
+    $('.post_thumbnail-random').css('background-image', 'url(' + '/img/random/material-' + randomNum + '.png' + ')');
+</script>
+
+        
+    
+            <p class="article-headline-p">
+                新产品开发过程（一）
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/avatar.png" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>Alex</strong>
+        <span>2月 25, 2017</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+        <button id="article-functions-qrcode-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+            <i class="material-icons" role="presentation">devices other</i>
+            <span class="visuallyhidden">devices other</span>
+        </button>
+        <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button">
+            <li class="mdl-menu__item">在其它设备中阅读本文章</li>
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPYAAAD2CAAAAADAeSUUAAAC3UlEQVR42u3aQVLDQAwEwPz/0/AAiD2SUpTRtk9UcNbb5iBWo9fXkdcLGxsbGxsbGxsb+5HsV3y9Xe7Nb5PvXq+TrJzvGRsbG3s3u7qhn5/3fs6p83uwsbGxT2C/KwDJdvMN5fcnrybZMzY2NjZ27zHXgOr62NjY2NifZV83d6qHlmjT8xWwsbGxD2AnB4Z3D7h+fB4hRI3+v++lYWNjYz+enYemz/n5T/NtbGxs7Aezq1d+8Mhj3eTzavDwy66wsbGxl7LzwpCUvfl4TX5/eUgUGxsb+xh2b7wmKW/VVtRNk6gYOWNjY2NvZefb7UWt1VHOybdujjfY2NjYh7FzfPVg0Ls/j42joBcbGxt7ETtp5Uf/6MeDO/kTe3eW821sbGzsf84uFIC4EZ+0nKpNq6TNVG4qYWNjYy9iJ4/MHzNp+ueHnOqfARsbG3srOzkA9IZs8rg3f2WTIoqNjY29m51vpRcMV8tkPohTiKuxsbGxl7I/dUio3nNdzPJworBzbGxs7NXsZkkotpl6ccI8DMbGxsbezc7LQz5SWS2Ek/i2cKDCxsbGXs3uteOT2LUwHDm+5+bVYGNjYx/DzgPayXerB5j8t+VUBBsbG3sRe7LopK3/qdJ406LCxsbGXsqutuPz9lCPkccS2NjY2Nh5e30yTFMdsqm+7kIsjY2Njb2U3TtaTAZ3PjsAlJcxbGxs7N3s3qKTIDYPaPOVywUMGxsbeym7t5VJ4cmbVr3QAhsbG/s0dlLA8qPLfIizemFjY2Ofxq5e+StI4uSkgZWUSWxsbOyT2ZPCkDd6cszkpdzsFhsbG3s1Oy855VZOHPcmA0CTgoqNjY19Aru3ofwl5k2lecsJGxsbG7v6r38vDMjZvXgYGxsbGzt/8KR05YFxHl1gY2Njn8nuRbN5M6g60NP7vFzAsLGxsVew8+NE9ZjRG7vJDySFIxA2Njb2UvY5FzY2NjY2NjY2NvZjrm9PhHIUN7pIVQAAAABJRU5ErkJggg==">
+        </ul>
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/npdp/">npdp</a>
+    </ul>
+    
+
+    <!-- Share -->
+    <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+    <!-- Leancloud Views -->
+        <a class="post_share-link" href="#">
+            <li class="mdl-menu__item">
+                <span id="/2017/02/25/新产品开发过程/" class="leancloud-views_num" data-flag-title="新产品开发过程（一）">
+     &nbsp;浏览量
+</span>
+
+            </li>
+        </a>
+    
+
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=新产品开发过程（一）&url=http://wanghaonanlpc.github.io//2017/02/25/新产品开发过程/index.html&pic=&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+
+    <!-- Share Facebook -->
+    
+
+    <!-- Share Google+ -->
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=一个老白 | 野厨&title=新产品开发过程（一）&summary=null&pics=http://wanghaonanlpc.github.io/img/favicon.png&url=http://wanghaonanlpc.github.io/2017/02/25/新产品开发过程/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 QQ
+            </li>
+        </a>
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <h4 id="大纲"><a href="#大纲" class="headerlink" title="大纲"></a>大纲</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">- 定义</div><div class="line">- 阶段回顾法</div><div class="line">- 阶段关卡发</div><div class="line">- 瀑布式开发法</div><div class="line">- 敏捷式开发法</div><div class="line">- 精益生产开发法</div><div class="line">- 设计思考</div><div class="line">- 过程拥有者</div></pre></td></tr></table></figure>
+<h4 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h4><h5 id="过程定义："><a href="#过程定义：" class="headerlink" title="-过程定义："></a>-过程定义：</h5><p>新产品开发过程</p>
+<ol>
+<li>一组严谨定义的任务与步骤，用以描述一家公司将初期构想各自转换成可以销售的产品与或服务的正规方法。</li>
+<li>新产品开发词汇表。<strong><em>（存疑）</em></strong></li>
+</ol>
+<p>步骤、活动、决策、目标的组合</p>
+<p>如果执行得当将会产生出组织需要的新产品</p>
+<h5 id="为什么需要过程"><a href="#为什么需要过程" class="headerlink" title="-为什么需要过程"></a>-为什么需要过程</h5><p>10项能赢的重要成功因素</p>
+<ol>
+<li>独特优越的产品</li>
+<li>强力的市场导向</li>
+<li>更多前期的研究</li>
+<li>在开发前敏锐而提早的产品定义</li>
+<li>正确的组织架构 —— 团队合作</li>
+<li>创新而又支持性的环境</li>
+<li>领导阶层支持</li>
+<li>创建一个漏斗而非隧道</li>
+<li>将产品管理视为过程</li>
+<li>给予产品开发足够的资源</li>
+</ol>
+<h5 id="前期多做研究是否意味上市时间落后？"><a href="#前期多做研究是否意味上市时间落后？" class="headerlink" title="- 前期多做研究是否意味上市时间落后？"></a>- 前期多做研究是否意味上市时间落后？</h5><p>​    在前期话费较多时间和金钱可以大幅改善成功的机会 - 对此有明显的证据</p>
+<p>​    更多的黄钻被工作会导致更好更敏捷的产品和项目定义 - 这会加速开发阶段（较少不断地浪费时间）</p>
+<p>​    完成前期准备工作可以预先考虑到产品问题和设计改更 - 这些产品设计变更可以在这过程早起完成，而不是等产品上市才做</p>
+<h5 id="各种过程的演化"><a href="#各种过程的演化" class="headerlink" title="-各种过程的演化"></a>-各种过程的演化</h5><p>​    大多数公司修改新产品开发过程以符合所需</p>
+<p>​    任何种类的新产品开发过程都比没有任何过程要有生产力</p>
+<p>​    其他一致的系统有：</p>
+<ul>
+<li>阶段回顾</li>
+<li>阶段关卡</li>
+</ul>
+<h4 id="阶段回顾法"><a href="#阶段回顾法" class="headerlink" title="阶段回顾法"></a>阶段回顾法</h4><h5 id="阶段回顾法-1"><a href="#阶段回顾法-1" class="headerlink" title="阶段回顾法"></a>阶段回顾法</h5><p>​    在阶段性的产品开发过程中，首先，一项功能完成一组任务，然后将产生的信息持续不断地传递给其他功能，在逐次地完成西一组任务并将所有信息传递给下一功能。</p>
+<p>在这种产品开发过程中，非常缺乏多功能的团队合作。</p>
+<p>也称为接力过程</p>
+<p>大多数公司已从这种流程转移至使用多功能软对的阶段关卡发</p>
+<p><br></p>
+<p>阶段一：识别机会、选择</p>
+<p>阶段二：产生概念</p>
+<p>阶段三：概念项目评量</p>
+<p>阶段四：开发</p>
+<p>阶段五：上市</p>
+<h5 id="模糊的的前端"><a href="#模糊的的前端" class="headerlink" title="模糊的的前端"></a>模糊的的前端</h5><p>阶段1~3成为模糊的前端</p>
+<p>当产品概念仍然很模糊的时候，产品呢开发的刚起步时期会很混乱</p>
+<p>在更正式的产品开发过程之前，一般包括三项任务</p>
+<ul>
+<li>策略规则</li>
+<li>概念产生</li>
+<li>预做技术评量</li>
+</ul>
+<p>这些活动通常杂乱无章，不可预期，毫无组织</p>
+<p>比较起来，后来的新产品开发过程典型的有组织、可预期以及有条理，具有一组规定的活动，应回答的问题以及该做的决定</p>
+<h4 id="阶段关卡法"><a href="#阶段关卡法" class="headerlink" title="阶段关卡法"></a>阶段关卡法</h4><p>阶段关卡过程是为了将一种新产品的项目从想法逐渐转变成上市产品的一种概念</p>
+<p>阶段关卡法讲所要付出的努力以管理决策关卡区分成不同的阶段</p>
+<p>跨功能团队在管理层批准进行下一阶段的产品开发之前，必须成功地完成每一阶段所规定的一组跨功能任务</p>
+<p><img src="./process_icons.gif" alt="process_icons"></p>
+<h5 id="阶段-1-2"><a href="#阶段-1-2" class="headerlink" title="阶段(1/2)"></a>阶段(1/2)</h5><p>阶段是跨功能的（其中没有研究和开发或营销阶段）以及为了提升上市的速度，每一项活动是并行的</p>
+<p>每一阶段的成本都高于前一阶段，结果是渐进的承诺。一旦不确定性降低，可以提高支出，风险也可管控（As uncertainties decrease, expenditures are allowed to rise and risk is managed.）</p>
+<p><img src="./stages-diagram.gif" alt="stages-diagram"></p>
+<h5 id="阶段-2-2"><a href="#阶段-2-2" class="headerlink" title="阶段(2/2)"></a>阶段(2/2)</h5><p>活动：团队必须根据项目计划进行工作</p>
+<p>集成分析：所有功能性活动结果的团队集成分析可以藉由跨功能互动推衍</p>
+<p>集成物：代表集成分析的结果</p>
+<p>活动 + 分析 = 交付物</p>
+<p><img src="./stages.gif" alt="stages"></p>
+<h5 id="关卡"><a href="#关卡" class="headerlink" title="关卡"></a>关卡</h5><p>交付物：关卡查验的输入 - 项目领导者和团队交付至会议的东西</p>
+<p>标准：为了能做出继续/终止以及优先序的决策，项目在接受评判时所需的条件</p>
+<p>输出：关卡查验的结果。关卡必须清楚地表达结果，须包括：一项决策（继续、终止、暂停、循环）以及下一步怎么走（核准的项目计划，日期以及下一关卡所同意的交付物）</p>
+<p><img src="./gates.gif" alt="gates"></p>
+<h5 id="关卡通过标准"><a href="#关卡通过标准" class="headerlink" title="关卡通过标准"></a>关卡通过标准</h5><h6 id="必须符合"><a href="#必须符合" class="headerlink" title="必须符合"></a>必须符合</h6><p>​    有是非题，一个NO表示终止的决定，检查清单是用来表示必须符合条目最平常的格式</p>
+<h6 id="应该符合"><a href="#应该符合" class="headerlink" title="应该符合"></a>应该符合</h6><p>​    有高度渴望的项目特性，但是对问题回答NO并不会终止该项目；确切的地说是对这些问题加以评分并决定项目的分数，评分模型将‘应该符合’的问题处理得很好</p>
+<h5 id="关卡会议"><a href="#关卡会议" class="headerlink" title="关卡会议"></a>关卡会议</h5><p>把关者（守门人）包括技术和商业人民</p>
+<p>可以透过鄙视来对比评量标准以审核关于项目的想法</p>
+<p>这一份必须符合标准的清单会以“是”、“否”来给分，并且所有的答案必须是“是”；只要有一个“否”便会终止此项目</p>
+<p>当高层主管在关卡会议批准团队的行动计划，表示他们也愿意拨出资源：金钱，人力以及给予项目领导者和团队时间</p>
+<h5 id="阶段0：探索发现-Discovery"><a href="#阶段0：探索发现-Discovery" class="headerlink" title="阶段0：探索发现 Discovery"></a>阶段0：探索发现 Discovery</h5><p>设计前置工作一发现并揭露机会以及产生想法（点子）</p>
+<p>关键活动</p>
+<pre><code>1. 想法的捕捉和处理系统
+2. 在顾客产业中策略性分裂
+3. 产生剧本
+4. 顾客声音的研究
+5. 和领先用户一同工作
+6. 趋势导向的技术开发
+</code></pre><h5 id="探索发现Discovery（阶段0）（1-2）"><a href="#探索发现Discovery（阶段0）（1-2）" class="headerlink" title="探索发现Discovery（阶段0）（1/2）"></a>探索发现Discovery（阶段0）（1/2）</h5><p>这是任何产品开发的第一部分，无论是否为阶段关卡模型都会使用</p>
+<p>开发团队决定哪些项目是公司想要的并有能力追求的</p>
+<p>对公司而言，在这阶段参与想法产生活动，例如头脑风暴或其他团队思考阶段，是很普通的</p>
+<p>一旦点子产生团队选定一个他们想要进行的项目，此项目通过由组织决策选的第一关卡</p>
+<h5 id="探索发现Discovery（阶段0）（2-2）"><a href="#探索发现Discovery（阶段0）（2-2）" class="headerlink" title="探索发现Discovery（阶段0）（2/2）"></a>探索发现Discovery（阶段0）（2/2）</h5><p>当寻找产品点子时，为了能启发商业机会，组织能去看看外面的世界是有益的</p>
+<p>与顾客沟通以了解他们如何使用产品后，对于点子产生会有很大的突破。特别是和领先用户沟通可以对开发者提供极大的反馈，领先用户是最有可能对陈品感到热情的顾客</p>
+<p>除了和领先用户沟通，和供货商沟通也许会有帮助。了解所有商业种类如何运用原料或许可以据此发现之前尚未被开发的可能性</p>
+<h5 id="阶段0：主要输出"><a href="#阶段0：主要输出" class="headerlink" title="阶段0：主要输出"></a>阶段0：主要输出</h5><h6 id="机会概念"><a href="#机会概念" class="headerlink" title="机会概念"></a>机会概念</h6><p>一家公司的技能和资源，或顾客问题。技术驱动或者市场驱动或者两者都是</p>
+<h6 id="产品创新章程"><a href="#产品创新章程" class="headerlink" title="产品创新章程"></a>产品创新章程</h6><p>组织努力的中心是将新产品推向市场，这包括项目开始的原因、目标、目的，指导方针以及项目的范围，章程要包括市场喜好，顾客需求，以及潜在销售和利润的假设。</p>
+<h5 id="关卡-1：筛选点子"><a href="#关卡-1：筛选点子" class="headerlink" title="关卡 1：筛选点子"></a>关卡 1：筛选点子</h5><p>筛选点子是讲资源投入项目的第一项选择，项目就此诞生</p>
+<p>假设在发现阶段获得很多点子，接着的任务便是筛选并排列出值得话费时间和金钱的点子</p>
+<p>关卡1是一般性筛选，奖项木透过少数关键的“必须符合”以及“应该符合”的标准作判断</p>
+<p>财务标准并非典型第一步筛选的一部分</p>
+<blockquote>
+<p>以下晚点更新</p>
+</blockquote>
+<h5 id="关卡-1-评估标准（1-2）"><a href="#关卡-1-评估标准（1-2）" class="headerlink" title="关卡 1 评估标准（1/2）"></a>关卡 1 评估标准（1/2）</h5><h5 id="关卡-1-评估标准（2-2）"><a href="#关卡-1-评估标准（2-2）" class="headerlink" title="关卡 1 评估标准（2/2）"></a>关卡 1 评估标准（2/2）</h5><h5 id="阶段1：定义范围"><a href="#阶段1：定义范围" class="headerlink" title="阶段1：定义范围"></a>阶段1：定义范围</h5><h5 id="阶段1：定义范围-1"><a href="#阶段1：定义范围-1" class="headerlink" title="阶段1：定义范围"></a>阶段1：定义范围</h5><h5 id="关卡2：二次筛选"><a href="#关卡2：二次筛选" class="headerlink" title="关卡2：二次筛选"></a>关卡2：二次筛选</h5><h5 id="关卡2：评估标准"><a href="#关卡2：评估标准" class="headerlink" title="关卡2：评估标准"></a>关卡2：评估标准</h5><h5 id="阶段2：建立商业论证"><a href="#阶段2：建立商业论证" class="headerlink" title="阶段2：建立商业论证"></a>阶段2：建立商业论证</h5><h5 id="主要输出"><a href="#主要输出" class="headerlink" title="主要输出"></a>主要输出</h5><h5 id="关卡3：开始开发"><a href="#关卡3：开始开发" class="headerlink" title="关卡3：开始开发"></a>关卡3：开始开发</h5><h5 id="关卡3：必须满足的评估标准"><a href="#关卡3：必须满足的评估标准" class="headerlink" title="关卡3：必须满足的评估标准"></a>关卡3：必须满足的评估标准</h5><h5 id="关卡3：应该满足的评估标准（1-2）"><a href="#关卡3：应该满足的评估标准（1-2）" class="headerlink" title="关卡3：应该满足的评估标准（1/2）"></a>关卡3：应该满足的评估标准（1/2）</h5><h5 id="关卡3：应该满足的评估标准（2-2）"><a href="#关卡3：应该满足的评估标准（2-2）" class="headerlink" title="关卡3：应该满足的评估标准（2/2）"></a>关卡3：应该满足的评估标准（2/2）</h5><h5 id="阶段3：开发"><a href="#阶段3：开发" class="headerlink" title="阶段3：开发"></a>阶段3：开发</h5><h5 id="关卡4：开始测试"><a href="#关卡4：开始测试" class="headerlink" title="关卡4：开始测试"></a>关卡4：开始测试</h5><h5 id="阶段4：测试与验证"><a href="#阶段4：测试与验证" class="headerlink" title="阶段4：测试与验证"></a>阶段4：测试与验证</h5><h5 id="阶段4：主要活动与输出"><a href="#阶段4：主要活动与输出" class="headerlink" title="阶段4：主要活动与输出"></a>阶段4：主要活动与输出</h5><h5 id="测试与验证（阶段4）"><a href="#测试与验证（阶段4）" class="headerlink" title="测试与验证（阶段4）"></a>测试与验证（阶段4）</h5><h5 id="关卡5：上市"><a href="#关卡5：上市" class="headerlink" title="关卡5：上市"></a>关卡5：上市</h5><h5 id="阶段5：上市"><a href="#阶段5：上市" class="headerlink" title="阶段5：上市"></a>阶段5：上市</h5><h5 id="产品上市（阶段5）"><a href="#产品上市（阶段5）" class="headerlink" title="产品上市（阶段5）"></a>产品上市（阶段5）</h5><h5 id="决策"><a href="#决策" class="headerlink" title="决策"></a>决策</h5><h5 id="过程例外"><a href="#过程例外" class="headerlink" title="过程例外"></a>过程例外</h5><h5 id="先产品开发是每个人的责任"><a href="#先产品开发是每个人的责任" class="headerlink" title="先产品开发是每个人的责任"></a>先产品开发是每个人的责任</h5><h4 id="瀑布式开发法"><a href="#瀑布式开发法" class="headerlink" title="瀑布式开发法"></a>瀑布式开发法</h4><blockquote>
+<p>未完待续</p>
+</blockquote>
+
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+    <!-- 使用多说评论 -->
+    <link rel="stylesheet" href="/css/duoshuo.min.css">
+<style>
+    #ds-thread #ds-reset .ds-post-button{
+        background-color: #0097A7 !important;
+    }
+    #ds-wrapper #ds-reset .ds-icons-32{
+        background-color: #0097A7 !important;
+    }
+    #ds-reset .ds-highlight {
+        color: #0097A7 !important;
+    }
+</style>
+<div id="comments">
+    <!-- 多说评论框 start -->
+    <div class="ds-thread"
+        data-thread-key="2017/02/25/新产品开发过程/"
+        data-url="http://wanghaonanlpc.github.io/2017/02/25/新产品开发过程/"
+        data-title="新产品开发过程（一）">
+    </div>
+    <!-- 多说评论框 end -->
+</div>
+
+
+
+
+
+
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+        <a href="/2017/02/26/hello-world/" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            新篇
+        </a>
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2017/02/24/支持NFC的手机（2016）/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
+
+
+                    
+                        <!-- Overlay For Active Sidebar -->
+<div class="sidebar-overlay"></div>
+
+<!-- Material sidebar -->
+<aside id="sidebar" class="sidebar sidebar-colored sidebar-fixed-left" role="navigation">
+    <div id="sidebar-main">
+        <!-- Sidebar Header -->
+        <div class="sidebar-header header-cover" style="background-image: url(/img/sidebar_header.png);">
+    <!-- Top bar -->
+    <div class="top-bar"></div>
+
+    <!-- Sidebar toggle button -->
+    <button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display: initial;" data-upgraded=",MaterialButton,MaterialRipple">
+        <i class="material-icons">clear_all</i>
+        <span class="mdl-button__ripple-container">
+            <span class="mdl-ripple">
+            </span>
+        </span>
+    </button>
+
+    <!-- Sidebar Avatar -->
+    <div class="sidebar-image">
+        <img src="/img/avatar.png" alt="Alex's avatar">
+    </div>
+
+    <!-- Sidebar Email -->
+    <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
+        15208292733@163.com
+        <b class="caret"></b>
+    </a>
+</div>
+
+
+        <!-- Sidebar Navigation  -->
+        <ul class="nav sidebar-nav">
+    <!-- User dropdown  -->
+    <li class="dropdown">
+        <ul id="settings-dropdown" class="dropdown-menu">
+            
+                <li>
+                    <a href="#" target="_blank" title="Email Me">
+                        
+                            <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i>
+                        
+                        Email Me
+                    </a>
+                </li>
+            
+        </ul>
+    </li>
+
+    <!-- Homepage -->
+    
+        <li id="sidebar-first-li">
+            <a href="/" target="_self">
+                
+                    <i class="material-icons sidebar-material-icons">home</i>
+                
+                主页
+            </a>
+        </li>
+        
+    
+
+    <!-- Archives  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">inbox</i>
+                
+                    归档
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+            <li>
+                <a class="sidebar_archives-link" href="/archives/2017/02/">二月 2017<span class="sidebar_archives-count">12</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/05/">五月 2016<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/02/">二月 2016<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2015/07/">七月 2015<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2015/04/">四月 2015<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2014/09/">九月 2014<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2014/01/">一月 2014<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2013/05/">五月 2013<span class="sidebar_archives-count">1</span></a>
+            </ul>
+        </li>
+        
+    
+
+    <!-- Categories  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">chrome_reader_mode</i>
+                
+                分类
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+                <li>
+                <a class="sidebar_archives-link" href="/categories/前端/">前端<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/前端/hexo/">hexo<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/前端/javascript/">javascript<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/移动端/">移动端<span class="sidebar_archives-count">1</span></a>
+            </ul>
+        </li>
+        
+    
+
+    <!-- Pages  -->
+    
+        <li>
+            <a href="/about" title="About">
+                
+                    <i class="material-icons sidebar-material-icons">person</i>
+                
+                About
+            </a>
+        </li>
+        
+    
+
+    <!-- Article Number  -->
+    
+        <li>
+            <a href="/archives">
+                文章总数
+                <span class="sidebar-badge">19</span>
+            </a>
+        </li>
+        
+    
+</ul>
+
+
+        <!-- Sidebar Footer -->
+        <!--
+I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright, I will thank you so much.
+If you still want to delete the copyrights, could you still retain the first one? Which namely "Theme Material"
+It will not impact the appearance and can give developers a lot of support :)
+
+很高兴您使用并喜欢该主题，开发不易 十分谢谢与希望您可以保留一下版权声明。
+如果您仍然想删除的话 能否只保留第一项呢？即 "Theme Material"
+它不会影响美观并可以给开发者很大的支持和动力。 :)
+-->
+
+<!-- Sidebar Divider -->
+
+    <div class="sidebar-divider"></div>
+
+
+<!-- Theme Material -->
+
+    <a href="https://github.com/viosey/hexo-theme-material"  class="sidebar-footer-text-a" target="_blank">
+        <div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div" data-upgraded=",MaterialButton,MaterialRipple">
+            主题 - Material
+            <span class="sidebar-badge badge-circle">i</span>
+        </div>
+    </a>
+
+
+<!-- Help & Support -->
+<!--
+
+-->
+
+<!-- Feedback -->
+<!--
+
+    <a href="https://github.com/viosey/hexo-theme-material/issues" target="_blank" class="sidebar-footer-text-a">
+        <div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div" data-upgraded=",MaterialButton,MaterialRipple">
+        sidebar.feedback
+        <span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></div>
+    </a>
+
+-->
+
+<!-- About Theme -->
+<!--
+
+    <a href="https://blog.viosey.com/index.php/Material.html" target="_blank" class="sidebar-footer-text-a">
+        <div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div" data-upgraded=",MaterialButton,MaterialRipple">
+             sidebar.about_theme
+            <span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></div>
+    </a>
+
+-->
+
+    </div>
+
+    <!-- Sidebar Image -->
+    
+
+</aside>
+
+                    
+
+                    
+                        <!-- Footer Top Button -->
+                        <div class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
+
+                    
+
+                    <!--Footer-->
+<footer class="mdl-mini-footer" id="bottom">
+    
+        <!-- Paradox Footer Left Section -->
+        <div class="mdl-mini-footer--left-section sns-list">
+    <!-- Twitter -->
+    
+        <a href="https://twitter.com/twitter" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn" style="background-image: url(/img/footer/footer_ico-twitter.png);">
+                <span class="visuallyhidden">Twitter</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Facebook -->
+    
+        <a href="https://www.facebook.com/facebook" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn" style="background-image: url(/img/footer/footer_ico-facebook.png);">
+                <span class="visuallyhidden">Facebook</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Google + -->
+    
+        <a href="https://www.google.com/" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn" style="background-image: url(/img/footer/footer_ico-gplus.png);">
+                <span class="visuallyhidden">Google Plus</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Weibo -->
+    
+        <a href="http://weibo.com/2123136342/profile?topnav=1&amp;wvr=6" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn" style="background-image: url(/img/footer/footer_ico-weibo.png);">
+                <span class="visuallyhidden">Weibo</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Instagram -->
+    
+
+    <!-- Tumblr -->
+    
+
+    <!-- Github -->
+    
+        <a href="https://github.com/wanghaonanlpc" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn" style="background-image: url(/img/footer/footer_ico-github.png);">
+                <span class="visuallyhidden">Github</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- LinkedIn -->
+    
+
+    <!-- Zhihu -->
+    
+        <a href="https://www.zhihu.com/people/wanghaonanlpc" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn" style="background-image: url(/img/footer/footer_ico-zhihu.png);">
+                <span class="visuallyhidden">Zhihu</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Bilibili -->
+    
+
+    <!-- Telegram -->
+    
+</div>
+
+
+        <!--Copyright-->
+        <div id="copyright">
+            Copyright&nbsp;©&nbsp;
+            <script type="text/javascript">
+                var fd = new Date();
+                document.write(fd.getFullYear());
+            </script>
+            &nbsp;一个老白 | 野厨
+        </div>
+
+        <!-- Paradox Footer Right Section -->
+
+        <!--
+        I am glad you use this theme, the development is no so easy, I hope you can keep the copyright.
+        It will not impact the appearance and can give developers a lot of support :)
+
+        很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
+        它不会影响美观并可以给开发者很大的支持。 :)
+        -->
+
+        <div class="mdl-mini-footer--right-section">
+            <div>
+                <div class="footer-develop-div">Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a></div>
+                <div class="footer-develop-div">Theme - <a href="https://github.com/viosey/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a></div>
+            </div>
+        </div>
+    
+</footer>
+
+
+                    <!-- Import File -->
+<script src="/js/lazyload.min.js"></script>
+<script src="/js/js.min.js"></script>
+<script src="/js/nprogress.js"></script>
+
+<script type="text/javascript">
+    NProgress.configure({
+        showSpinner: true
+    });
+    NProgress.start();
+    $('#nprogress .bar').css({
+        'background': '#29d'
+    });
+    $('#nprogress .peg').css({
+        'box-shadow': '0 0 10px #29d, 0 0 15px #29d'
+    });
+    $('#nprogress .spinner-icon').css({
+        'border-top-color': '#29d',
+        'border-left-color': '#29d'
+    });
+    setTimeout(function() {
+        NProgress.done();
+        $('.fade').removeClass('out');
+    }, 800);
+</script>
+
+
+
+    <script src="/js/smoothscroll.js"></script>
+
+
+
+    <!-- Leancloud -->
+    <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+    <script>
+        AV.initialize('VadYH9itW5BSteJpvBD6W2p1-gzGzoHsz', 'w8vi528umHoqY2e41U6MAW0c');
+    </script>
+    <script>
+    function showTime(Counter) {
+        var query = new AV.Query(Counter);
+        $('.leancloud-views_num').each(function() {
+            var url = $(this).attr('id').trim();
+            query.equalTo('url', url);
+            query.find({
+                success: function(results) {
+                    if (results.length === 0) {
+                        var content = '0 ' + $(document.getElementById(url)).text();
+                        $(document.getElementById(url)).text(content);
+                        return;
+                    }
+                    for (var i = 0; i < results.length; i++) {
+                        var object = results[i];
+                        var content = object.get('time') + ' ' + $(document.getElementById(url)).text();
+                        $(document.getElementById(url)).text(content);
+                    }
+                },
+                error: function(object, error) {
+                    console.log('Error: ' + error.code + ' ' + error.message);
+                }
+            });
+        });
+    }
+
+    function addCount(Counter) {
+      var Counter = AV.Object.extend('Counter');
+      url = $('.leancloud-views_num').attr('id').trim();
+      title = $('.leancloud-views_num').attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+      query.equalTo('url', url);
+      query.find({
+          success: function(results) {
+            if (results.length > 0) {
+                var counter = results[0];
+                counter.fetchWhenSave(true);
+                counter.increment('time');
+                counter.save(null, {
+                    success: function(counter) {
+                        var content =  counter.get('time') + ' ' + $(document.getElementById(url)).text();
+                        $(document.getElementById(url)).text(content);
+                    },
+                    error: function(counter, error) {
+                        console.log('Failed to save Visitor num, with error message: ' + error.message);
+                    }
+                });
+            } else {
+              var newcounter = new Counter();
+              newcounter.set('title', title);
+              newcounter.set('url', url);
+              newcounter.set('time', 1);
+              newcounter.save(null, {
+                  success: function(newcounter) {
+                      console.log('newcounter.get(\'time\')='+newcounter.get('time'));
+                      var content = newcounter.get('time') + ' ' + $(document.getElementById(url)).text();
+                      $(document.getElementById(url)).text(content);
+                  },
+                  error: function(newcounter, error) {
+                      console.log('Failed to create');
+                  }
+              });
+            }
+        },
+        error: function(error) {
+            console.log('Error:' + error.code + ' ' + error.message);
+        }
+      });
+    }
+    $(function() {
+        var Counter = AV.Object.extend('Counter');
+        if ($('.leancloud-views_num').length === 1) {
+            addCount(Counter);
+        } else if ($('.post-title-link').length > 1) {
+            showTime(Counter);
+        }
+    });
+</script>
+
+
+
+
+
+
+    <!-- 多说公共 js 代码 start -->
+    <script type="text/javascript">
+        queue.offer(function(){
+            var duoshuoQuery = {
+                short_name: 'wanghaonanlpc'
+            };
+            (function() {
+                var ds = document.createElement('script');
+                ds.type = 'text/javascript';
+                ds.async = true;
+                ds.src = 'https://static.duoshuo.com/embed.js';
+                ds.charset = 'UTF-8';
+                (document.getElementsByTagName('head')[0]
+                 || document.getElementsByTagName('body')[0]).appendChild(ds);
+            })();
+        });
+    </script>
+    <!-- 多说公共 js 代码 end -->
+
+
+
+
+
+<!-- Swiftye -->
+
+
+<!-- Local Search-->
+
+
+<!-- Window Load-->
+<script>
+    $(window).load(function() {
+        // Post_Toc parent position fixed
+        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
+    });
+</script>
+
+<!-- MathJax Load-->
+
+
+                </main>
+            </div>
+        </body>
+    
+</html>
