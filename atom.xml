@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://wanghaonanlpc.github.io/"/>
-  <updated>2017-02-26T13:22:37.000Z</updated>
+  <updated>2017-02-26T14:48:27.000Z</updated>
   <id>http://wanghaonanlpc.github.io/</id>
   
   <author>
@@ -14,6 +14,495 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Material主题Github博客</title>
+    <link href="http://wanghaonanlpc.github.io/2017/02/26/%E5%9F%BA%E4%BA%8EHexo%E5%88%9B%E5%BB%BAMaterial%E4%B8%BB%E9%A2%98%E7%9A%84%E5%8D%9A%E5%AE%A2%E7%BD%91%E7%AB%99/"/>
+    <id>http://wanghaonanlpc.github.io/2017/02/26/基于Hexo创建Material主题的博客网站/</id>
+    <published>2017-02-26T14:48:27.000Z</published>
+    <updated>2017-02-26T14:48:27.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<p>前文中刚有提到怎样基于Hexo搭建github博客，在此不赘述。本文主要讲解安装Material主题。</p>
+</blockquote>
+<h3 id="强烈建议点击看原文，原文排版及内容都由于本文！！！"><a href="#强烈建议点击看原文，原文排版及内容都由于本文！！！" class="headerlink" title="强烈建议点击看原文，原文排版及内容都由于本文！！！"></a>强烈建议点击看原文，原文排版及内容都由于本文！！！</h3><h3 id="原文地址-https-material-viosey-com"><a href="#原文地址-https-material-viosey-com" class="headerlink" title="原文地址:https://material.viosey.com/"></a><strong><a href="https://material.viosey.com/" target="_blank" rel="external">原文地址:https://material.viosey.com/</a></strong></h3><p>在 Hexo 中，通常有两份配置文件，一个是站点根目录下的 <code>_config.yml</code>；另外一个是主题目录下的 <code>_config.yml</code>。为了描述方便，在以下说明中，将前者称为 <strong>站点配置文件</strong>，后者称为 <strong>主题配置文件</strong>。</p>
+<h2 id="安装「Material」"><a href="#安装「Material」" class="headerlink" title="安装「Material」"></a>安装「Material」</h2><p>Hexo 安装主题的方式非常简单，只需要将主题文件放置于站点目录的 <code>themes</code> 目录下，然后修改下配置文件即可。<br>具体到 Material 来说，有 <code>Github</code> 和 <code>NPM</code> 两种方式。</p>
+<h3 id="Github"><a href="#Github" class="headerlink" title="Github"></a>Github</h3><blockquote>
+<p>可以选择 克隆 或者 下载 <a href="https://github.com/viosey/hexo-theme-material/releases" target="_blank" rel="external">稳定的发布版本</a>。</p>
+</blockquote>
+<p>为了方便之后的更新，建议使用 <strong>克隆</strong> 的方式。克隆命令如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ cd your-hexo-site/themes</div><div class="line">$ git clone https://github.com/viosey/hexo-theme-material.git material</div></pre></td></tr></table></figure>
+<h3 id="NPM"><a href="#NPM" class="headerlink" title="NPM"></a>NPM</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install hexo-material</div></pre></td></tr></table></figure>
+<p>该方式会把 Material 主题下载到 <code>hexo</code> 目录下的 <code>node_modules</code> 文件夹中。<br>找到 <code>hexo-material</code> 文件夹，然后把文件复制到 <code>themes</code> 目录中的 <code>Material</code> 主题文件夹里。</p>
+<h2 id="启用「Material」"><a href="#启用「Material」" class="headerlink" title="启用「Material」"></a>启用「Material」</h2><p>克隆完成后，修改主题文件夹名称，将其改为 <code>material</code> 。<br>然后打开 <strong>站点配置文件</strong>，找到 <code>theme</code> 字段，并将其值更改为 <code>material</code> 。</p>
+<blockquote>
+<p>文件夹名称可自由修改，并不是唯一的，只需 <code>theme</code> 字段与之对应即可。</p>
+</blockquote>
+<p>运行 <code>hexo s --debug</code>，并访问 <code>http://localhost:4000</code>，确保站点正确运行。</p>
+<h2 id="更新「Material」"><a href="#更新「Material」" class="headerlink" title="更新「Material」"></a>更新「Material」</h2><h3 id="Github-1"><a href="#Github-1" class="headerlink" title="Github"></a>Github</h3><p>使用</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git pull</div></pre></td></tr></table></figure>
+<p>即可拉取最新版本。</p>
+<h3 id="NPM-1"><a href="#NPM-1" class="headerlink" title="NPM"></a>NPM</h3><p>NPM 更新有两种方式：</p>
+<h4 id="npm-update"><a href="#npm-update" class="headerlink" title="npm-update"></a>npm-update</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm update hexo-material</div></pre></td></tr></table></figure>
+<p>然后将文件复制到 <code>Material</code> 主题文件夹中。</p>
+<h4 id="npm-check"><a href="#npm-check" class="headerlink" title="npm-check"></a>npm-check</h4><p><a href="https://www.npmjs.com/package/npm-check" target="_blank" rel="external">npm-check</a> 是用来检查 npm 依赖包是否有更新，错误以及不在使用的，我们也可以使用 npm-check 进行包的更新。</p>
+<p>安装 npm-check：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install -g npm-check</div></pre></td></tr></table></figure>
+<p>检查 npm 包的状态:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm-check hexo-material</div></pre></td></tr></table></figure>
+<p>使用空格键可以选择需要处理的包，回车直接进行处理。</p>
+<h2 id="基本设定"><a href="#基本设定" class="headerlink" title="基本设定"></a>基本设定</h2><h3 id="语言"><a href="#语言" class="headerlink" title="语言"></a>语言</h3><p>编辑 <strong>站点配置文件</strong>，将 <code>language</code> 设置成你所需要的语言。<br>可用的语言如下：</p>
+<ul>
+<li>العَرَبِيَّة (ar)</li>
+<li>English (en)</li>
+<li>Español (es)</li>
+<li>Français (fr)</li>
+<li>Deutsche (de)</li>
+<li>日本語 (ja)</li>
+<li>Malay (ms)</li>
+<li>简体中文 (zh-CN)</li>
+<li>繁體中文 (zh-TW)</li>
+</ul>
+<blockquote>
+<p>例如：选用繁體中文，则配置为：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&gt; language: zh-TW</div><div class="line">&gt;</div></pre></td></tr></table></figure>
+</blockquote>
+<h3 id="URL"><a href="#URL" class="headerlink" title="URL"></a>URL</h3><p>编辑 <strong>站点配置文件</strong>，<code>url</code> 填写主域名，<code>root</code> 填写 子目录/根域名</p>
+<blockquote>
+<p>例如：站点域名为 <code>http://example.com/hexo</code>：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&gt; url: http://example.com</div><div class="line">&gt; root: /hexo</div><div class="line">&gt;</div></pre></td></tr></table></figure>
+</blockquote>
+<p>若你的站点没有运行在子目录中，则 <code>root</code> 填写为 <code>/</code>。</p>
+<h3 id="作者名称"><a href="#作者名称" class="headerlink" title="作者名称"></a>作者名称</h3><p>编辑 <strong>站点配置文件</strong>，设置 <code>author</code> 为你的昵称。</p>
+<h3 id="站点描述设置"><a href="#站点描述设置" class="headerlink" title="站点描述设置"></a>站点描述设置</h3><p>编辑 <strong>站点配置文件</strong>，设置 <code>description</code> 字段为你的站点描述。站点描述可以是你喜欢的一句签名:)</p>
+<h3 id="RSS"><a href="#RSS" class="headerlink" title="RSS"></a>RSS</h3><p>安装插件：<a href="https://github.com/hexojs/hexo-generator-feed" target="_blank" rel="external">hexo-generator-feed</a>，配置方式如插件 <code>README.md</code> 所示。<br>然后在 <a href="https://material.viosey.com/intro/#url" target="_blank" rel="external">url: rss</a> 中添加生成的 feed 路径。</p>
+<h2 id="分支「Scheme」介绍"><a href="#分支「Scheme」介绍" class="headerlink" title="分支「Scheme」介绍"></a>分支「Scheme」介绍</h2><p>Material 主题提供了多种分支主题外观，亦称「Scheme」。<br>目前 Material 支持三种 Scheme：</p>
+<h3 id="Nexus（开发中）"><a href="#Nexus（开发中）" class="headerlink" title="Nexus（开发中）"></a>Nexus（开发中）</h3><p>最为标准的 Material Design 样式。</p>
+<h3 id="Paradox"><a href="#Paradox" class="headerlink" title="Paradox"></a>Paradox</h3><p>默认 Scheme，是 Material 的最初样式。居中布局，图文并茂。</p>
+<h3 id="Isolation"><a href="#Isolation" class="headerlink" title="Isolation"></a>Isolation</h3><p>Paradox 的至简样式，简洁明了。</p>
+<h3 id="切换"><a href="#切换" class="headerlink" title="切换"></a>切换</h3><p>Scheme 的切换通过更改 <strong>主题配置文件</strong>，搜索 <code>scheme</code> 关键字。 你会看到有几行 scheme 的配置，将你需用启用的 scheme 去掉前面注释 <code>#</code> 即可。</p>
+<blockquote>
+<p>例如 - 选择 Paradox Scheme</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&gt; #scheme: Nexus</div><div class="line">&gt; scheme: Paradox</div><div class="line">&gt; #scheme: Isolation</div><div class="line">&gt;</div></pre></td></tr></table></figure>
+</blockquote>
+<h2 id="主题配置文件介绍"><a href="#主题配置文件介绍" class="headerlink" title="主题配置文件介绍"></a>主题配置文件介绍</h2><h3 id="Site-Information"><a href="#Site-Information" class="headerlink" title="Site Information"></a>Site Information</h3><h4 id="head"><a href="#head" class="headerlink" title="head"></a>head</h4><p>用于配置生成的 HTML 文件的头部信息。</p>
+<ul>
+<li>favicon</li>
+<li>high_res_favicon: 高清 favicon</li>
+<li>high_res_favicon: iOS 主屏按钮图标</li>
+<li>keywords: 网站关键词</li>
+</ul>
+<h4 id="url"><a href="#url" class="headerlink" title="url"></a>url</h4><p>用于设置跳转链接。</p>
+<ul>
+<li>rss: 设置生成的 rss 或 atom url。</li>
+<li>daily_pic: 设置 <code>daily_pic</code> 模块 跳转 url。</li>
+<li>logo: 设置 logo 的跳转 url。</li>
+</ul>
+<h3 id="Style"><a href="#Style" class="headerlink" title="Style"></a>Style</h3><h4 id="scheme"><a href="#scheme" class="headerlink" title="scheme"></a>scheme</h4><p>如果要使用其中一个主题，将前面的注释 <code>#</code> 去掉即可。</p>
+<p>比如，选择使用 Paradox Scheme，只需要这样配置：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">#scheme: Nexus</div><div class="line">scheme: Paradox</div><div class="line">#scheme: Isolation</div></pre></td></tr></table></figure>
+<h4 id="uiux"><a href="#uiux" class="headerlink" title="uiux"></a>uiux</h4><p>用于设置主题 UI 与 UX。</p>
+<ul>
+<li>slogan: 显示在 <code>blog_info</code> 模块中的标语，现在可以设置多行标语：</li>
+</ul>
+<blockquote>
+<p>单行标语使用</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&gt; slogan: 标语</div><div class="line">&gt;</div></pre></td></tr></table></figure>
+</blockquote>
+<p>&gt;</p>
+<blockquote>
+<p>多行标语使用</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&gt; slogan:</div><div class="line">&gt;  - &quot;标语第一行&quot;</div><div class="line">&gt;  - &quot;标语第二行&quot;</div><div class="line">&gt;  - &quot;标语第三行&quot;</div><div class="line">&gt;</div></pre></td></tr></table></figure>
+</blockquote>
+<p>&gt;</p>
+<blockquote>
+</blockquote>
+<ul>
+<li>theme_color: 主题主要颜色。大部分地方使用此颜色。</li>
+<li>theme_sub_color: 主题辅助颜色。</li>
+<li>hyperlink_color: 超链接颜色。</li>
+<li>button_color: 按钮颜色，例如 <code>toTop</code> 或 <code>menu_button</code>。</li>
+<li>android_chrome_color: 安卓 Chrome 浏览器地址栏颜色。</li>
+<li>nprogress_color: 页面加载时顶部加载进度条的颜色。</li>
+<li>nprogress_buffer: 页面加载时顶部加载进度条的缓冲。</li>
+</ul>
+<h4 id="js-effect"><a href="#js-effect" class="headerlink" title="js_effect"></a>js_effect</h4><p>用来控制 Material 主题中自带的多种 js 特性。</p>
+<ul>
+<li>fade: 页面加载时部分模块的渐显效果。默认为 true。</li>
+<li>smoothscroll: 页面平滑滚动特效。默认为 false。</li>
+</ul>
+<h4 id="reading"><a href="#reading" class="headerlink" title="reading"></a>reading</h4><p>用于设置阅读体验。</p>
+<ul>
+<li>entry_excerpt: 首页文章输出摘要的字符长度。默认为80。</li>
+</ul>
+<h4 id="thumbnail"><a href="#thumbnail" class="headerlink" title="thumbnail"></a>thumbnail</h4><p>用于设置文章缩略图相关。</p>
+<ul>
+<li>purecolor: 填入颜色代码。如果文章内无设置缩略图，此项又不为空，则使用纯色缩略图。</li>
+<li>random_amount: 随机图片数量，根据 <code>主题文件夹 -&gt; source -&gt; img -&gt; random</code> 中的图片数量设置。</li>
+</ul>
+<h4 id="background"><a href="#background" class="headerlink" title="background"></a>background</h4><p>用于设置站点背景。</p>
+<ul>
+<li>purecolor: 填入颜色代码。则站点使用纯色背景。</li>
+<li>bgimg: 背景地址，默认调用 <code>主题文件夹 -&gt; source -&gt; img</code> 中的 <code>bg.png</code>。可更换此图片或者自己填入 url。</li>
+<li>bing: 用于启用 bing 图片。<ul>
+<li><code>parameter</code> 参数可用：<code>new</code>, <code>color=</code>, <code>type=</code>。</li>
+<li><code>color=</code>: black, blue, brown, green, multi, orange, pink, purple, red, white, yellow。</li>
+<li><code>type=</code>: A (animal), C (culture), N (nature), S (space), T (travel)。</li>
+</ul>
+</li>
+</ul>
+<h4 id="img"><a href="#img" class="headerlink" title="img"></a>img</h4><p>用于设置站点图片。</p>
+<ul>
+<li>logo: 显示于 <code>blog_info</code> 模块中。</li>
+<li>avatar: 你的头像设置。</li>
+<li>daily_pic: 显示于 <code>daily_pic</code> 模块中。</li>
+<li>sidebar_header: 显示于 <code>sidebar</code> 顶部。</li>
+<li>footerico: 设置 <code>footer</code> 中 SNS 图标的路径。</li>
+<li>random_thumbnail: 随机缩略图的路径。</li>
+<li>footer_image: 你可以在侧边栏底部放置任何你想要的图片。</li>
+</ul>
+<p>比如，你可以这样配置 又拍云 Logo：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">footer_image:</div><div class="line">    upyun_logo:</div><div class="line">        link: &quot;https://www.upyun.com/&quot;</div><div class="line">        src: &quot;/img/upyun_logo.png&quot;</div></pre></td></tr></table></figure>
+<h4 id="fonts"><a href="#fonts" class="headerlink" title="fonts"></a>fonts</h4><p>用于设置站点的字体。</p>
+<p>默认值为 <code>Roboto, &quot;Helvetica Neue&quot;, Helvetica, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei&quot;, &quot;微软雅黑&quot;, Arial, sans-serif</code></p>
+<blockquote>
+<p>该字体设定较为规范，如无特殊要求 无需额外修改。</p>
+</blockquote>
+<h4 id="card-elevation"><a href="#card-elevation" class="headerlink" title="card_elevation"></a>card_elevation</h4><p>用于设置文章列表的卡片阴影，如无特殊要求 无需额外修改。</p>
+<h3 id="Menu"><a href="#Menu" class="headerlink" title="Menu"></a>Menu</h3><h4 id="sns"><a href="#sns" class="headerlink" title="sns"></a>sns</h4><p>用于填写你的 SNS 信息，除了 <code>email</code>，其他信息会以按钮的形式显示在 <code>footer</code>。</p>
+<ul>
+<li>email: 显示在侧边栏中。</li>
+<li>twitter</li>
+<li>facebook</li>
+<li>googleplus</li>
+<li>weibo</li>
+<li>instagram</li>
+<li>tumblr</li>
+<li>github</li>
+<li>linkedin</li>
+<li>facebook</li>
+</ul>
+<h4 id="sns-share"><a href="#sns-share" class="headerlink" title="sns_share"></a>sns_share</h4><p>用于定义分享菜单中的项目， <code>false</code> 的项将不会显示在分享菜单中。</p>
+<ul>
+<li>twitter</li>
+<li>googleplus</li>
+<li>weibo</li>
+<li>linkedin</li>
+<li>qq</li>
+<li>telegram</li>
+</ul>
+<h4 id="dropdown"><a href="#dropdown" class="headerlink" title="dropdown"></a>dropdown</h4><p>用于设置 Paradox 侧边栏用户下拉菜单，默认为空。</p>
+<p>以</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">Name:</div><div class="line">	link: &quot;/link/&quot;</div><div class="line">	icon: icon</div></pre></td></tr></table></figure>
+<p>作为一个单位。</p>
+<p><code>Name</code> 是该独立页面的名称，请自行修改。<br><code>link</code> 的参数为相对路径，对应 hexo 目录下的 <code>source</code> 文件夹内的相应文件夹。<br><code>icon</code> 的参数为自定义的 Material 图标，可用图标可在 <a href="https://material.io/icons/" target="_blank" rel="external">Material icons</a> 查询。</p>
+<blockquote>
+<p>参考配置样式</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">dropdown:</div><div class="line">    Email Me:</div><div class="line">        link: &quot;#&quot;</div><div class="line">        icon: email</div></pre></td></tr></table></figure>
+<h5 id="homepage"><a href="#homepage" class="headerlink" title="homepage"></a>homepage</h5><p>设置 “主页” 按钮</p>
+<ul>
+<li><code>use</code>: 设置 <code>true</code> 时会在侧边栏显示 “主页” 按钮.</li>
+<li><code>icon</code>: 在 “主页” 前面显示一个 Material 图标。为空和被注释时则不显示.</li>
+<li><code>divider</code>: 设置成 <code>true</code></li>
+</ul>
+<h5 id="archives"><a href="#archives" class="headerlink" title="archives"></a>archives</h5><p>用来设置归档下拉菜单。</p>
+<ul>
+<li><code>use</code>: 设置成 <code>true</code> 时在侧边栏显示归档。</li>
+<li><code>icon</code>: 为归档添加一个 Material Icon，注释掉或为空则不显示 Icon</li>
+<li><code>divider</code>: 设置成 <code>true</code> 后会在归档按钮底部增加一条分割线。</li>
+</ul>
+<h5 id="categories"><a href="#categories" class="headerlink" title="categories"></a>categories</h5><p>用来设置分类显示按钮。</p>
+<ul>
+<li><code>use</code>: 设为 <code>true</code> 在侧边栏显示分类按钮。</li>
+<li><code>icon</code>: 在分类按钮前显示一个 Material Icon，注释掉或为空则不显示 Icon</li>
+<li><code>divider</code>: 设置成 <code>true</code> 后会在归档按钮底部增加一条分割线。</li>
+</ul>
+<h5 id="pages"><a href="#pages" class="headerlink" title="pages"></a>pages</h5><p>用于设置独立页面，默认为空。填写条目后独立页面入口将显示在：</p>
+<ul>
+<li><code>logo card</code> <code>Page</code> 按钮的下拉菜单中。(Scheme Paradox)</li>
+<li>侧边栏中。(Scheme Paradox)</li>
+<li>站点左侧。(Scheme Isolation)</li>
+</ul>
+<p>请按照如下样例添加个人独立页面。 <code>divider</code> 设置成 <code>true</code> 后会在该条目底部增加一条分割线。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">pages:</div><div class="line">    About:</div><div class="line">        link: &quot;#about&quot;</div><div class="line">        icon: person</div><div class="line">        divider: false</div><div class="line">    timeline archive:</div><div class="line">        link: &quot;/timeline/&quot;</div><div class="line">        icon:</div><div class="line">        divider: false</div></pre></td></tr></table></figure>
+<h5 id="article-num"><a href="#article-num" class="headerlink" title="article_num"></a>article_num</h5><p>Used to display the number of articles.</p>
+<ul>
+<li><code>use</code>: 设置成 <code>true</code> 时会在侧边栏显示文章总数。</li>
+<li><code>divider</code>: 设置成 <code>true</code> 后会在该条目底部增加一条分割线。</li>
+</ul>
+<h5 id="footer"><a href="#footer" class="headerlink" title="footer"></a>footer</h5><p>Used to customize the sidebar footer.</p>
+<ul>
+<li><code>divider</code>: 设置成 <code>true</code> 后会在侧边栏底部之前增加一条分割线。</li>
+<li><code>theme</code>: 设置成 <code>true</code> 后会在侧边栏底部增加一个指向 Material 主题的链接。</li>
+</ul>
+<h4 id="qrcode"><a href="#qrcode" class="headerlink" title="qrcode"></a>qrcode</h4><p>用于在文章页中显示二维码，扫描二维码即可直接打开文章。<br>需要 hexo-helper-qrcode 支持，使用 <code>npm install hexo-helper-qrcode --save</code> 进行安装。</p>
+<h4 id="topPost（开发中）"><a href="#topPost（开发中）" class="headerlink" title="topPost（开发中）"></a>topPost（开发中）</h4><p>使用该插件可以将指定文章置顶。<br>如果您需要这个功能，请使用 <code>npm install hexo-helper-post-top --save</code> 安装支持插件，然后将这个开关设置为 <code>true</code>。<br>之后在您需要置顶文章的 <code>front-matter</code> 中，添加 <code>top: true</code> 即可置顶。</p>
+<h3 id="Integrated-Services"><a href="#Integrated-Services" class="headerlink" title="Integrated Services"></a>Integrated Services</h3><h4 id="comment"><a href="#comment" class="headerlink" title="comment"></a>comment</h4><p>用于于设置评论系统。</p>
+<p>具体设置参考 <a href="https://material.viosey.com/services/#评论系统" target="_blank" rel="external">评论系统</a></p>
+<p>目前可使用 <code>duoshuo</code> <code>disqus</code> 和 <code>disqus_click</code>。</p>
+<blockquote>
+<p>使用 Disqus_Click 时，页面不会主动加载 Disqus 评论，直到按下按钮。这项设置有助于改善处在 <code>公开、平等、有序 的中国互联网环境</code> 下的浏览者体验。</p>
+</blockquote>
+<ul>
+<li>use:</li>
+<li>shortname:</li>
+<li>duoshuo_thread_key_type: 用于设置多说 tread key 的使用，默认为 <code>path</code>，可设置为 <code>id</code>。</li>
+<li>duoshuo_embed_js_url: 多说 js。</li>
+</ul>
+<h4 id="search"><a href="#search" class="headerlink" title="search"></a>search</h4><p>用于设置搜索系统。</p>
+<p>具体设置参考 <a href="https://material.viosey.com/services/#搜索系统" target="_blank" rel="external">搜索系统</a></p>
+<p>目前可使用 <code>google</code> <code>swiftype</code> <code>local</code>。</p>
+<ul>
+<li>use</li>
+<li>swiftype_key</li>
+</ul>
+<h4 id="analytics"><a href="#analytics" class="headerlink" title="analytics"></a>analytics</h4><p>用于设置访客分析服务，支持 <code>Google Analysis</code> 和 <code>百度站长工具</code></p>
+<ul>
+<li><code>baidu_id</code>: 百度 ID</li>
+<li><code>google_id</code>: Google Analysis 密钥</li>
+</ul>
+<h4 id="leancloud"><a href="#leancloud" class="headerlink" title="leancloud"></a>leancloud</h4><p>具体设置参考 <a href="https://material.viosey.com/services/#Leancloud" target="_blank" rel="external">设置 Leancloud 浏览次数统计</a></p>
+<ul>
+<li>enable: 默认为 false。</li>
+<li>app_id: APP ID。</li>
+<li>app_key: APP Key。</li>
+<li>av_core_mini: 统计 js。</li>
+</ul>
+<h4 id="busuanzi"><a href="#busuanzi" class="headerlink" title="busuanzi"></a>busuanzi</h4><p>具体设置参考 <a href="https://material.viosey.com/services/#不蒜子" target="_blank" rel="external">不蒜子</a></p>
+<ul>
+<li>enable: 默认为 false。</li>
+<li>all_site_uv: 默认为 false。</li>
+<li>post_pv: 默认为 false。</li>
+<li>busuanzi_pure_mini_js: 统计 js。</li>
+</ul>
+<h2 id="主要协助开发者"><a href="#主要协助开发者" class="headerlink" title="主要协助开发者"></a>主要协助开发者</h2><p><a href="https://github.com/viosey/hexo-theme-material/graphs/contributors" target="_blank" rel="external">Github - Contributors</a></p>
+<ul>
+<li><a href="https://github.com/neoFelhz" target="_blank" rel="external">neoFelhz</a></li>
+<li><a href="https://github.com/pidupuis" target="_blank" rel="external">pidupuis</a></li>
+<li><a href="https://github.com/cubesky" target="_blank" rel="external">cubesky</a></li>
+<li><a href="https://github.com/AkarinServer" target="_blank" rel="external">AkarinServer</a></li>
+</ul>
+<h2 id="创建文章"><a href="#创建文章" class="headerlink" title="创建文章"></a>创建文章</h2><h3 id="使用命令行"><a href="#使用命令行" class="headerlink" title="使用命令行"></a>使用命令行</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo new &lt;title&gt;</div></pre></td></tr></table></figure>
+<h3 id="手动创建"><a href="#手动创建" class="headerlink" title="手动创建"></a>手动创建</h3><p>在 hexo 主目录下 <code>source -&gt; _posts</code> 新建以 <code>.md</code> 为后缀的文件。</p>
+<h3 id="Front-matter"><a href="#Front-matter" class="headerlink" title="Front-matter"></a>Front-matter</h3><p><a href="https://hexo.io/zh-cn/docs/front-matter.html" target="_blank" rel="external">Front-matter - 官方介绍</a></p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>layout</code></td>
+<td>布局</td>
+<td>post</td>
+</tr>
+<tr>
+<td><code>title</code></td>
+<td>标题</td>
+<td>文件名</td>
+</tr>
+<tr>
+<td><code>date</code></td>
+<td>建立日期</td>
+<td>文件建立日期</td>
+</tr>
+<tr>
+<td><code>updated</code></td>
+<td>更新日期</td>
+<td>文件更新日期</td>
+</tr>
+<tr>
+<td><code>tags</code></td>
+<td>标签（不适用于分页）</td>
+<td></td>
+</tr>
+<tr>
+<td><code>categories</code></td>
+<td>分类（不适用于分页）</td>
+<td></td>
+</tr>
+<tr>
+<td><code>permalink</code></td>
+<td>覆盖文章网址</td>
+<td></td>
+</tr>
+<tr>
+<td><code>thumbnail</code></td>
+<td>缩略图地址</td>
+<td></td>
+</tr>
+<tr>
+<td><code>toc</code></td>
+<td>显示 TOC 按钮</td>
+<td>true</td>
+</tr>
+<tr>
+<td><code>comment</code></td>
+<td>显示评论</td>
+<td>true</td>
+</tr>
+<tr>
+<td><code>notag</code></td>
+<td>不生成标签按钮</td>
+<td>false</td>
+</tr>
+<tr>
+<td><code>top</code></td>
+<td>置顶</td>
+<td>false</td>
+</tr>
+</tbody>
+</table>
+<p>注1：置顶功能请参考 <a href="https://material.viosey.com/intro/#topPost" target="_blank" rel="external">topPost</a></p>
+<h3 id="缩略图功能"><a href="#缩略图功能" class="headerlink" title="缩略图功能"></a>缩略图功能</h3><p>在 Material 主题中，每个 Scheme 都有缩略图功能。<br>只需要在 <code>Front-matter</code> 中添加参数 <code>thumbnail:</code>，然后填入缩略图地址即可。</p>
+<h4 id="Paradox-1"><a href="#Paradox-1" class="headerlink" title="Paradox"></a>Paradox</h4><p>此 Scheme 如果没有自定义缩略图，则使用默认随机缩略图，随机缩略图目录位于主题文件夹下 <code>source -&gt; img -&gt; random</code>。<br>随机缩略图可添加自己喜好的图片，格式为 <code>.png</code> 。然后在 <strong>主题配置文件</strong> 中 <code>thumbnail:random_amount</code> 修改缩略图数量。</p>
+<h4 id="Isolation-1"><a href="#Isolation-1" class="headerlink" title="Isolation"></a>Isolation</h4><p>此 Scheme 只会显示已自定义缩略图。</p>
+<h2 id="创建「关于我」页面"><a href="#创建「关于我」页面" class="headerlink" title="创建「关于我」页面"></a>创建「关于我」页面</h2><p>新建一个 <code>about</code> 页面：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo new page &quot;about&quot;</div></pre></td></tr></table></figure>
+<p>如果想添加「关于我」页面的入口，请参考 <a href="https://material.viosey.com/intro/#pages" target="_blank" rel="external">独立页面</a>。</p>
+<h2 id="创建「友情链接」页面"><a href="#创建「友情链接」页面" class="headerlink" title="创建「友情链接」页面"></a>创建「友情链接」页面</h2><h3 id="创建页面"><a href="#创建页面" class="headerlink" title="创建页面"></a>创建页面</h3><p>在 hexo 目录下的 <code>source</code> 文件夹内创建一个名为 <code>links</code>（只是建议，可根据自己喜好修改）的文件夹。</p>
+<p>然后在文件内创建一个名为 <code>index.md</code> 的 Markdown 文件。</p>
+<p>在 <code>index.md</code> 文件内写入如下内容即可。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">---</div><div class="line">title: links</div><div class="line">date:</div><div class="line">layout: links</div><div class="line">---</div></pre></td></tr></table></figure>
+<blockquote>
+<p><code>title</code> 可修改，<code>layout</code> 不可修改。</p>
+</blockquote>
+<p>如果想添加「友情链接」页面的入口，请参考 <a href="https://material.viosey.com/intro/#pages" target="_blank" rel="external">独立页面</a>。</p>
+<h3 id="添加数据"><a href="#添加数据" class="headerlink" title="添加数据"></a>添加数据</h3><p>同样在在 hexo 目录下的 <code>source</code> 文件夹内创建一个名为 <code>_data</code>（禁止改名）的文件夹。</p>
+<p>然后在文件内创建一个名为 <code>links.yml</code> 的文件。</p>
+<p>单个友情链接的格式为：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">Name:</div><div class="line">    link: http://example.com</div><div class="line">    avatar: http://example.com/avatar.png</div><div class="line">    descr: &quot;这是一个描述&quot;</div></pre></td></tr></table></figure>
+<blockquote>
+<p>添加多个友情链接，只需要根据上面的格式重复填写即可。</p>
+</blockquote>
+<ul>
+<li>将 <code>Name</code> 改为友情链接的名字，例如 <code>Viosey</code>。</li>
+<li><code>http://example.com</code> 为友情链接的地址。</li>
+<li><code>http://example.com/avatar.png</code> 为友情链接的头像。</li>
+<li><code>这是一个描述</code> 为友情链接描述。</li>
+</ul>
+<h2 id="创建「图库」页面"><a href="#创建「图库」页面" class="headerlink" title="创建「图库」页面"></a>创建「图库」页面</h2><h3 id="创建页面-1"><a href="#创建页面-1" class="headerlink" title="创建页面"></a>创建页面</h3><p>在 hexo 目录下的 <code>source</code> 文件夹内创建一个名为 <code>gallery</code>（只是建议，可根据自己喜好修改）的文件夹。</p>
+<p>然后在文件内创建一个名为 <code>index.md</code> 的 Markdown 文件。</p>
+<p>在 <code>index.md</code> 文件内写入如下内容即可。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">---</div><div class="line">title: gallery</div><div class="line">date:</div><div class="line">layout: gallery</div><div class="line">---</div></pre></td></tr></table></figure>
+<blockquote>
+<p><code>title</code> 可修改，<code>layout</code> 不可修改。</p>
+</blockquote>
+<p>如果想添加「图库」页面的入口，请参考 <a href="https://material.viosey.com/intro/#pages" target="_blank" rel="external">独立页面</a>。</p>
+<h3 id="添加数据-1"><a href="#添加数据-1" class="headerlink" title="添加数据"></a>添加数据</h3><p>同样在在 hexo 目录下的 <code>source</code> 文件夹内创建一个名为 <code>_data</code>（禁止改名）的文件夹。</p>
+<p>然后在文件内创建一个名为 <code>gallery.yml</code> 的文件。</p>
+<p>单个图片的格式为：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">Name:</div><div class="line">	full_link: http://example.com/full-image.png</div><div class="line">	thumb_link: http://example.com/thumb-image.png</div><div class="line">	descr: &quot;这是一个描述&quot;</div></pre></td></tr></table></figure>
+<blockquote>
+<p>添加多张图片，只需要根据上面的格式重复填写即可。</p>
+</blockquote>
+<ul>
+<li>将 <code>Name</code> 改为图片名字，例如 <code>Material</code>。</li>
+<li><code>http://example.com/full-image.png</code> 为完整图片的地址。</li>
+<li><code>http://example.com/thumb-image.png</code> 为图片缩略图的地址，如果没有缩略图也可使用完整图片的地址。</li>
+<li><code>这是一个描述</code> 为图片描述。</li>
+</ul>
+<h2 id="创建「标签云」页面"><a href="#创建「标签云」页面" class="headerlink" title="创建「标签云」页面"></a>创建「标签云」页面</h2><h3 id="创建页面-2"><a href="#创建页面-2" class="headerlink" title="创建页面"></a>创建页面</h3><p>在 hexo 目录下的 <code>source</code> 文件夹内创建一个名为 <code>tags</code>（只是建议，可根据自己喜好修改）的文件夹。</p>
+<p>然后在文件内创建一个名为 <code>index.md</code> 的 Markdown 文件。</p>
+<p>在 <code>index.md</code> 文件内写入如下内容即可。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">---</div><div class="line">title: tags</div><div class="line">date:</div><div class="line">layout: tags</div><div class="line">---</div></pre></td></tr></table></figure>
+<blockquote>
+<p><code>title</code> 可修改，<code>layout</code> 不可修改。</p>
+</blockquote>
+<p>如果想添加「标签云」页面的入口，请参考 <a href="https://material.viosey.com/intro/#pages" target="_blank" rel="external">独立页面</a>。</p>
+<h2 id="创建「私有」页面"><a href="#创建「私有」页面" class="headerlink" title="创建「私有」页面"></a>创建「私有」页面</h2><p>如果某篇文章不想显示在站点中，只需要在 <code>front-matter</code> 中加入</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">layout: private</div></pre></td></tr></table></figure>
+<h2 id="添加自定义代码"><a href="#添加自定义代码" class="headerlink" title="添加自定义代码"></a>添加自定义代码</h2><p>如果想要在站点添加自定义 <code>font-face</code> 或者统计代码（例如 <code>Google Analytics</code>）。</p>
+<p>需要在 hexo 目录下的 <code>source</code> 文件夹内创建一个名为 <code>_data</code>（禁止改名）的文件夹。</p>
+<p>然后在文件内创建一个名为 head.yml 的文件。</p>
+<p>单个代码格式为：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Name:</div><div class="line">	&quot;put your code here&quot;</div></pre></td></tr></table></figure>
+<p>代码将显示在 <code>` 之前，</code>Name` 将作为注释显示在代码上方。</p>
+<h2 id="调色板"><a href="#调色板" class="headerlink" title="调色板"></a>调色板</h2><p><a href="https://material.google.com/style/color.html#color-color-palette" target="_blank" rel="external">Color palette</a></p>
+<h2 id="Material-图标"><a href="#Material-图标" class="headerlink" title="Material 图标"></a>Material 图标</h2><p>用于自定义例如 <code>dropdown: icon</code> 的图标。</p>
+<p><a href="https://material.io/icons/" target="_blank" rel="external">Material icons</a></p>
+<h2 id="代码高亮样式"><a href="#代码高亮样式" class="headerlink" title="代码高亮样式"></a>代码高亮样式</h2><p>从 <code>1.3.0</code> 版本开始，您可以使用 <code>hexo-prism-plugin</code> 进行代码染色，具体文档请参阅<a href="https://github.com/ele828/hexo-prism-plugin" target="_blank" rel="external">Hexo-Prism-Plugin 插件文档</a></p>
+<p>在 <strong>主题配置文件</strong> 中定位到 <code>Integrated Services</code> 即可进行第三方服务的配置。</p>
+<h2 id="评论系统"><a href="#评论系统" class="headerlink" title="评论系统"></a>评论系统</h2><h3 id="多说"><a href="#多说" class="headerlink" title="多说"></a>多说</h3><p>Material 内置了一套 多说 的 Material Design 样式。</p>
+<p>使用 <a href="https://duoshuo.com/" target="_blank" rel="external">多说</a>，仅需在 <strong>主题配置文件</strong> 中填写 <code>comment: use:</code> 字段，值设置为 <code>&quot;duoshuo&quot;</code>。</p>
+<p>然后在 <code>comment: shortname:</code> 填入你的多说 shortname</p>
+<blockquote>
+<p>主题的多说评论使用两种 <code>tread key</code>，使用方式参考：<a href="https://material.vss.im/intro/#comment" target="_blank" rel="external">comment</a>。<br>默认为文章的相对路径。<br>另一种为 id，需要在 <code>front-matter</code> 中添加</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&gt; id: id_number</div><div class="line">&gt;</div></pre></td></tr></table></figure>
+</blockquote>
+<p>&gt;</p>
+<blockquote>
+</blockquote>
+<p>如果是从其他博客系统迁移过来，需要和多说后台的 Thread_Key 保持一致。</p>
+<h3 id="Disqus"><a href="#Disqus" class="headerlink" title="Disqus"></a>Disqus</h3><p>使用 <a href="https://disqus.com/" target="_blank" rel="external">Disqus</a>，仅需在 <strong>主题配置文件</strong> 中填写 <code>comment: use:</code> 字段，值设置为 <code>&quot;disqus&quot;</code> 或者 <code>&quot;disqus_click&quot;</code>。</p>
+<p>然后在 <code>comment: shortname:</code> 填入你的 Disqus shortname</p>
+<hr>
+<p>需要注意的是此处的 <code>shortname</code> 不是你的登录的 id，是你的评论二级域名去掉 <code>.duoshuo.com</code> 或 <code>.disqus.com</code> 部分</p>
+<blockquote>
+<p>例如：多说域名 <code>example.duoshuo.com</code> / Disqus 域名 <code>example.disqus.com</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&gt; shortname: example</div><div class="line">&gt;</div></pre></td></tr></table></figure>
+</blockquote>
+<h2 id="搜索系统"><a href="#搜索系统" class="headerlink" title="搜索系统"></a>搜索系统</h2><p>阅读 <a href="https://material.viosey.com/intro/#comment" target="_blank" rel="external">Intro-comment</a> 搜索系统配置介绍。</p>
+<h3 id="Google"><a href="#Google" class="headerlink" title="Google"></a>Google</h3><p>调用 Google 搜索引擎对您的站点进行搜索。</p>
+<p>在 <strong>主题配置文件</strong> 中修改 <code>search: use</code> 的值为 <code>google</code> 即可。</p>
+<h3 id="本地搜索"><a href="#本地搜索" class="headerlink" title="本地搜索"></a>本地搜索</h3><p>使用本地搜索需要安装 <a href="https://github.com/PaicHyperionDev/hexo-generator-search" target="_blank" rel="external">hexo-generator-search</a> 插件。<br>然后在 <code>站点配置</code> 文件中添加</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">search:</div><div class="line">	path: search.xml</div><div class="line">	field: post</div></pre></td></tr></table></figure>
+<h3 id="Swiftype"><a href="#Swiftype" class="headerlink" title="Swiftype"></a>Swiftype</h3><p>注册 <a href="https://swiftype.com/" target="_blank" rel="external">Swiftype</a>，然后在 <strong>主题配置文件</strong> 中修改 <code>search: use</code> 的值为 <code>swiftype</code>，并填入你的 <code>swiftype_key</code>。</p>
+<blockquote>
+<p>在你的 Swiftype Install Code 中，有这么一行代码 <code>_st(&#39;install&#39;,&#39;*****&#39;,&#39;2.0.0&#39;);</code></p>
+<p><code>*****</code> 即为 <code>swiftype_key</code></p>
+</blockquote>
+<h2 id="浏览统计"><a href="#浏览统计" class="headerlink" title="浏览统计"></a>浏览统计</h2><h3 id="Leancloud"><a href="#Leancloud" class="headerlink" title="Leancloud"></a>Leancloud</h3><h4 id="注册"><a href="#注册" class="headerlink" title="注册"></a>注册</h4><p>打开 LeanCloud 官网，进入<a href="https://leancloud.cn/login.html#/signup" target="_blank" rel="external">注册页面</a>注册。完成邮箱激活后，点击头像，进入控制台页面，如下：</p>
+<p><img src="https://qiniu.viosey.com/img/leancloud-config-1.png" alt="img"></p>
+<h4 id="创建新应用"><a href="#创建新应用" class="headerlink" title="创建新应用"></a>创建新应用</h4><p>创建一个新应用 (默认类型为JavaScript SDK)，点击应用进入；</p>
+<p>创建名称为 <code>Counter</code> 的 Class<br>注意：<code>ACL 权限</code> 必须为 <code>无限制</code><br><img src="https://qiniu.viosey.com/img/leancloud-config-2.png" alt="img"><br><img src="https://qiniu.viosey.com/img/leancloud-config-3.png" alt="img"></p>
+<h4 id="修改配置文件"><a href="#修改配置文件" class="headerlink" title="修改配置文件"></a>修改配置文件</h4><p>编辑 <code>主题配置文件</code> ，修改 <code>leancloud</code> 条目<br>将 <code>enable</code> 改为 <code>true</code>，再填入 <code>app_id</code> 与 <code>app_key</code>。</p>
+<blockquote>
+<p>在 <code>应用-&gt;设置-&gt;应用 Key</code> 可看到 <code>APP ID</code> 与 <code>APP Key</code>，</p>
+</blockquote>
+<h4 id="Web-安全性"><a href="#Web-安全性" class="headerlink" title="Web 安全性"></a>Web 安全性</h4><p>为了保证应用的统计计数功能仅应用于自己的博客系统，你可以在 <code>应用-&gt;设置-&gt;安全中心</code> 的Web安全域名中加入自己的博客域名，以保证数据的调用安全。</p>
+<h3 id="不蒜子"><a href="#不蒜子" class="headerlink" title="不蒜子"></a>不蒜子</h3><p>使用 不蒜子 浏览次数统计，仅需在 <strong>主题配置文件</strong> 中将 <code>busuanzi: enable:</code> 的值设置为 <code>true</code>。</p>
+<p>其中：</p>
+<ul>
+<li><code>all_site_uv</code> 可统计全站的独立访客人数，即可在 <code>blog_info</code> 模块的 <code>Menu</code> 菜单中看到。</li>
+<li><code>post_pv</code> 统计每篇文章的页面浏览次数，在文章页的 <code>分享按钮</code> 菜单中可看到。</li>
+<li><code>busuanzi_pure_mini_js</code> 调用不蒜子统计 js 文件，可将改文件放到自己的 CDN 然后修改值。</li>
+</ul>
+<h2 id="捐赠是什么？"><a href="#捐赠是什么？" class="headerlink" title="捐赠是什么？"></a>捐赠是什么？</h2><p>捐赠是国外用来支持开发者和资源贡献者的一种常见的方式。这些开发者不通过加入广告或者进行第三方推广获得收入，仅通过使用的用户自己主动捐赠来表达对开发者的感谢。</p>
+<h2 id="为什么要捐赠？"><a href="#为什么要捐赠？" class="headerlink" title="为什么要捐赠？"></a>为什么要捐赠？</h2><p>我（viosey）把开发 Material 主题作为我的业余爱好，同时我对此乐此不疲。但是，这毕竟让我付出了时间成本、设备成本，同时为了 Material 文档和 Demo 的稳定访问也使用了 CDN。为了平衡宽带，服务器，CDN 的使用费用，因此，我希望使用捐赠的方式来平衡以上活动之中的投入。</p>
+<p>所以如果您觉得我制作的 主题、我写的教程、我维护的项目或者提供的其它资源对你有帮助，您可以对我进行捐赠。捐赠是自愿的，非强制性的，捐赠多少也都没关系；您的支持就是对我最大的支持！</p>
+<h2 id="捐赠的作用？"><a href="#捐赠的作用？" class="headerlink" title="捐赠的作用？"></a>捐赠的作用？</h2><p>当一个非盈利项目仅仅依靠兴趣的支撑，很难确定它还能走多远。所有的捐赠都将用于提升我的环境配置，维持网站的运行和提高我的积极性。</p>
+<h2 id="捐赠的渠道？"><a href="#捐赠的渠道？" class="headerlink" title="捐赠的渠道？"></a>捐赠的渠道？</h2><p><a href="https://www.paypal.me/viosey" target="_blank" rel="external">PayPal</a></p>
+<p><strong>支付宝：</strong><br><img src="https://material.viosey.com/images/donate/AliPayQR.png" alt="img"></p>
+<p><strong>微信支付：</strong><br><img src="https://material.viosey.com/images/donate/WeChanQR.png" alt="img"></p>
+<p><strong>比特币：</strong><br><img src="https://material.viosey.com/images/donate/BTCQR.png" alt="img"></p>
+<h2 id="捐赠者名单"><a href="#捐赠者名单" class="headerlink" title="捐赠者名单"></a>捐赠者名单</h2><p>十分感谢以下捐赠者给予的打赏：</p>
+<ul>
+<li>$ 20.00 SGD — Sun Ximeng</li>
+<li>￥ 10.00 CNY — 佚名 (微信捐赠）</li>
+<li>￥ 5.00 CNY — 神楽坂立音</li>
+<li>￥ 5.00 CNY — Before_summ</li>
+</ul>
+<h2 id="捐赠前要考虑什么-？"><a href="#捐赠前要考虑什么-？" class="headerlink" title="捐赠前要考虑什么 ？"></a>捐赠前要考虑什么 ？</h2><p>这个渠道的存在并不意味着你必须捐赠。你也可以继续使用而不做任何事。</p>
+<p>你的捐赠意味着你对我过去所做的表示感谢，而不是表达对未来的期望。但你的捐赠会提高我的积极性和设备配置让我努力把手头上的事做的更好。</p>
+<p>我会维护一份名单以感谢所有的捐赠者。正如我所说，捐赠是一个向我表示感谢的方式。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;前文中刚有提到怎样基于Hexo搭建github博客，在此不赘述。本文主要讲解安装Material主题。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&quot;强烈建议点击看原文，原文排版及内容都由于本文！！！&quot;&gt;&lt;a href=&quot;#强烈建议点击看原文
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>升级Hexo出现ERROR Deployer not found: git 解决方案</title>
@@ -1418,141 +1907,6 @@
     
     
       <category term="生活" scheme="http://wanghaonanlpc.github.io/tags/%E7%94%9F%E6%B4%BB/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Example Post with Code Highlight</title>
-    <link href="http://wanghaonanlpc.github.io/2013/05/25/js-module-loader/"/>
-    <id>http://wanghaonanlpc.github.io/2013/05/25/js-module-loader/</id>
-    <published>2013-05-24T16:00:00.000Z</published>
-    <updated>2017-02-21T01:40:43.000Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="Foreword"><a href="#Foreword" class="headerlink" title="Foreword"></a>Foreword</h2><blockquote>
-<p>Here comes Module!</p>
-</blockquote>
-<p>随着网站逐渐变成「互联网应用程序」，嵌入网页的 JavaScript 代码越来越庞大，越来越复杂。网页越来越像桌面程序，需要一个团队分工协作、进度管理、单元测试……我们不得不使用软件工程的方法，来管理网页的业务逻辑。</p>
-<p>于是，JavaScript 的模块化成为迫切需求。在 ES6 Module 来临之前，JavaScript 社区提供了强大支持，尝试在现有的运行环境下，实现模块的效果。</p>
-<hr>
-<h2 id="Catalog"><a href="#Catalog" class="headerlink" title="Catalog"></a>Catalog</h2><ol>
-<li><a href="#commonjs--node">CommonJS &amp; Node</a></li>
-<li><a href="#history">History</a></li>
-<li><a href="#requirejs--amd">RequireJS &amp; AMD</a></li>
-<li><a href="#seajs--cmd">SeaJS &amp; CMD</a></li>
-<li><a href="#amd-vs-cmd">AMD vs CMD</a></li>
-<li><a href="#webpack">WebPack</a></li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">function autoDetect()&#123;</div><div class="line">    console.log(&apos;ye, it is written in JavaScript!&apos;)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h2 id="CommonJS-amp-Node"><a href="#CommonJS-amp-Node" class="headerlink" title="CommonJS &amp; Node"></a>CommonJS &amp; Node</h2><blockquote>
-<p>Javascript: not just for browsers any more! —— CommonJS Slogen</p>
-</blockquote>
-<p>前端模块化的事实标准之一，2009 年 8 月，<a href="http://wiki.commonjs.org/wiki/CommonJS" target="_blank" rel="external">CommonJS</a> 诞生。</p>
-<p>CommonJS 本质上只是一套规范（API 定义），而 Node.js 采用并实现了部分规范，CommonJS Module 的写法也因此广泛流行。</p>
-<p>让我们看看 Node 中的实现：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 由于 Node 原生支持模块的作用域，并不需要额外的 wrapper</span></div><div class="line"><span class="comment">// "as though the module was wrapped in a function"</span></div><div class="line"></div><div class="line"><span class="keyword">var</span> a = <span class="built_in">require</span>(<span class="string">'./a'</span>)  <span class="comment">// 加载模块（同步加载）</span></div><div class="line">a.doSomething()         <span class="comment">// 等上一句执行完才会执行</span></div><div class="line"></div><div class="line">exports.b = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123; <span class="comment">// 暴露 b 函数接口</span></div><div class="line">  <span class="comment">// do something</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p><code>exports</code>是一个内置对象，就像<code>require</code>是一个内置加载函数一样。如果你希望直接赋值一个完整的对象或者构造函数，覆写<code>module.exports</code>就可以了。</p>
-<p>CommonJS 前身叫 ServerJS ，<strong>后来希望能更加 COMMON，成为通吃各种环境的模块规范，改名为 CommonJS</strong> 。CommonJS 最初只专注于 Server-side 而非浏览器环境，因此它采用了同步加载的机制，这对服务器环境（硬盘 I/O 速度）不是问题，而对浏览器环境（网速）来说并不合适。</p>
-<p>因此，各种适用于浏览器环境的模块框架与标准逐个诞生，他们的共同点是：</p>
-<ul>
-<li>采用异步加载（预先加载所有依赖的模块后回调执行，符合浏览器的网络环境）</li>
-<li>虽然代码风格不同，但其实都可以看作 CommonJS Modules 语法的变体。</li>
-<li>都在向着 <strong>COMMON</strong> 的方向进化：<strong>兼容不同风格，兼容浏览器和服务器两种环境</strong></li>
-</ul>
-<p>本文接下来要讨论的典例是：</p>
-<ul>
-<li>RequireJS &amp; AMD（异步加载，预执行，依赖前置。默认推荐 AMD 写法）</li>
-<li>SeaJS &amp; CMD（异步加载，懒执行，依赖就近，默认推荐 CommonJS 写法）</li>
-</ul>
-<h2 id="History"><a href="#History" class="headerlink" title="History"></a>History</h2><!--<h2 id="history"> History </h2>-->
-<blockquote>
-<p>此段落参考自玉伯的 <a href="https://github.com/seajs/seajs/issues/588" target="_blank" rel="external">前端模块化开发那点历史</a></p>
-</blockquote>
-<p>09-10 年间，CommonJS（那时还叫 ServerJS） 社区推出 <a href="http://wiki.commonjs.org/wiki/Modules" target="_blank" rel="external">Modules/1.0</a> 规范，并且在 Node.js 等环境下取得了很不错的实践。</p>
-<p>09年下半年这帮充满干劲的小伙子们想把 ServerJS 的成功经验进一步推广到浏览器端，于是将社区改名叫 CommonJS，同时激烈争论 Modules 的下一版规范。分歧和冲突由此诞生，逐步形成了三大流派：</p>
-<ol>
-<li><strong>Modules/1.x</strong> 流派。这个观点觉得 1.x 规范已经够用，只要移植到浏览器端就好。要做的是新增 <a href="http://wiki.commonjs.org/wiki/Modules/Transport" target="_blank" rel="external">Modules/Transport</a> 规范，即在浏览器上运行前，先通过转换工具将模块转换为符合 Transport 规范的代码。主流代表是服务端的开发人员。现在值得关注的有两个实现：越来越火的 component 和走在前沿的 es6 module transpiler。</li>
-<li><strong>Modules/Async</strong> 流派。这个观点觉得浏览器有自身的特征，不应该直接用 Modules/1.x 规范。这个观点下的典型代表是 <a href="http://wiki.commonjs.org/wiki/Modules/AsynchronousDefinition" target="_blank" rel="external">AMD</a> 规范及其实现 <a href="http://requirejs.org/" target="_blank" rel="external">RequireJS</a>。这个稍后再细说。</li>
-<li><strong>Modules/2.0</strong> 流派。这个观点觉得浏览器有自身的特征，不应该直接用 Modules/1.x 规范，但应该尽可能与 Modules/1.x 规范保持一致。这个观点下的典型代表是 BravoJS 和 FlyScript 的作者。BravoJS 作者对 CommonJS 的社区的贡献很大，这份 Modules/2.0-draft 规范花了很多心思。FlyScript 的作者提出了 Modules/Wrappings 规范，这规范是 CMD 规范的前身。可惜的是 BravoJS 太学院派，FlyScript 后来做了自我阉割，将整个网站（flyscript.org）下线了。这个观点在本文中的典型代表就是 SeaJS 和 CMD 了</li>
-</ol>
-<p>补一嘴：阿里 KISSY 的 KMD 其实跟 AMD 非常类似，只是用 <code>add</code>和<code>use</code> 两个源自于 YUI Modules 的函数名替换了 <code>define</code> 和 <code>require</code> ，但其原理更接近 RequireJS ，与 YUI Modules 的 <code>Y</code> 沙箱 Attach 机制并不相同</p>
-<h2 id="RequireJS-amp-AMD"><a href="#RequireJS-amp-AMD" class="headerlink" title="RequireJS &amp; AMD"></a>RequireJS &amp; AMD</h2><p><a href="http://wiki.commonjs.org/wiki/Modules/AsynchronousDefinition" target="_blank" rel="external">AMD (Async Module Definition)</a> 是 RequireJS 在推广过程中对模块定义的规范化产出。</p>
-<blockquote>
-<p>RequireJS is a JavaScript file and module loader. It is optimized for in-browser use, but it can be used in other JavaScript environments</p>
-</blockquote>
-<p>RequireJS 主要解决的还是 CommonJS 同步加载脚本不适合浏览器 这个问题：</p>
-<script src="//gist.github.com/65481dbbf6d16e831a6cc89c3e37e6e5.js?file=display-emails-from-database.php"></script>
-<blockquote>
-<p>As the comment indicates above, if require() is async, this code will not work. However, loading scripts synchronously in the browser kills performance. So, what to do?</p>
-</blockquote>
-<p>所以我们需要 <strong>Function Wrapping</strong> 来获取依赖并且提前通过 script tag 提前加载进来</p>
-<iframe scrolling="no" width="[width]" height="[height]" src="http://jsfiddle.net/shorttag/embedded/[tabs]/[skin]" frameborder="0" allowfullscreen></iframe>
-<p>当依赖模块非常多时，这种<strong>依赖前置</strong>的写法会显得有点奇怪，所以 AMD 给了一个语法糖， <strong>simplified CommonJS wrapping</strong>，借鉴了 CommonJS 的 require 就近风格，也更方便对 CommonJS 模块的兼容：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">define(<span class="function"><span class="keyword">function</span> (<span class="params">require</span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> dependency1 = <span class="built_in">require</span>(<span class="string">'dependency1'</span>),</div><div class="line">        dependency2 = <span class="built_in">require</span>(<span class="string">'dependency2'</span>);</div><div class="line"></div><div class="line">    <span class="keyword">return</span> <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;&#125;;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
-<p>The AMD loader will parse out the <code>require(&#39;&#39;)</code> calls by using <code>Function.prototype.toString()</code>, then internally convert the above define call into this:</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">define([<span class="string">'require'</span>, <span class="string">'dependency1'</span>, <span class="string">'dependency2'</span>], <span class="function"><span class="keyword">function</span> (<span class="params">require</span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> dependency1 = <span class="built_in">require</span>(<span class="string">'dependency1'</span>),</div><div class="line">        dependency2 = <span class="built_in">require</span>(<span class="string">'dependency2'</span>);</div><div class="line"></div><div class="line">    <span class="keyword">return</span> <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;&#125;;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
-<p>出于<code>Function.prototype.toString()</code>兼容性和性能的考虑，最好的做法还是做一次 <strong>optimized build</strong></p>
-<p>AMD 和 CommonJS 的核心争议如下：</p>
-<h3 id="1-执行时机"><a href="#1-执行时机" class="headerlink" title="1. 执行时机"></a>1. <strong>执行时机</strong></h3><p>Modules/1.0:</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> a = <span class="built_in">require</span>(<span class="string">"./a"</span>) <span class="comment">// 执行到此时，a.js 才同步下载并执行</span></div></pre></td></tr></table></figure>
-<p>AMD: （使用 require 的语法糖时）</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">define([<span class="string">"require"</span>],<span class="function"><span class="keyword">function</span>(<span class="params">require</span>))</span>&#123;</div><div class="line">    <span class="comment">// 在这里，a.js 已经下载并且执行好了</span></div><div class="line">    <span class="comment">// 使用 require() 并不是 AMD 的推荐写法</span></div><div class="line">    <span class="keyword">var</span> a = <span class="built_in">require</span>(<span class="string">"./a"</span>) <span class="comment">// 此处仅仅是取模块 a 的 exports</span></div><div class="line">&#125;)</div></pre></td></tr></table></figure>
-<p>AMD 里提前下载 a.js 是出于对浏览器环境的考虑，只能采取异步下载，这个社区都认可（Sea.js 也是这么做的）</p>
-<p>但是 AMD 的执行是 Early Executing，而 Modules/1.0 是第一次 require 时才执行。这个差异很多人不能接受，包括持 Modules/2.0 观点的人也不能接受。</p>
-<h3 id="2-书写风格"><a href="#2-书写风格" class="headerlink" title="2. 书写风格"></a>2. <strong>书写风格</strong></h3><p>AMD 推荐的风格并不使用<code>require</code>，而是通过参数传入，破坏了<strong>依赖就近</strong>：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">define([<span class="string">"a"</span>, <span class="string">"b"</span>, <span class="string">"c"</span>],<span class="function"><span class="keyword">function</span>(<span class="params">a, b, c</span>)</span>&#123;</div><div class="line">    <span class="comment">// 提前申明了并初始化了所有模块</span></div><div class="line"></div><div class="line">    <span class="literal">true</span> || b.foo(); <span class="comment">//即便根本没用到模块 b，但 b 还是提前执行了。</span></div><div class="line">&#125;)</div></pre></td></tr></table></figure>
-<p>不过，在笔者看来，风格喜好因人而异，主要还是<strong>预执行</strong>和<strong>懒执行</strong>的差异。</p>
-<p>另外，require 2.0 也开始思考异步处理<strong>软依赖</strong>（区别于一定需要的<strong>硬依赖</strong>）的问题，提出了这样的方案：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 函数体内：</span></div><div class="line"><span class="keyword">if</span>(status)&#123;</div><div class="line">    <span class="keyword">async</span>([<span class="string">'a'</span>],<span class="function"><span class="keyword">function</span>(<span class="params">a</span>)</span>&#123;</div><div class="line">        a.doSomething()</div><div class="line">    &#125;)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h2 id="SeaJS-amp-CMD"><a href="#SeaJS-amp-CMD" class="headerlink" title="SeaJS &amp; CMD"></a>SeaJS &amp; CMD</h2><p>CMD (Common Module Definition) 是 <a href="http://seajs.org/docs/" target="_blank" rel="external">SeaJS</a> 在推广过程中对模块定义的规范化产出，是 Modules/2.0 流派的支持者，因此 SeaJS 的模块写法尽可能与 Modules/1.x 规范保持一致。</p>
-<p>不过目前国外的该流派都死得差不多了，RequireJS 目前成为浏览器端模块的事实标准，国内最有名气的就是玉伯的 Sea.js ，不过对国际的推广力度不够。</p>
-<ul>
-<li>CMD Specification<ul>
-<li><a href="https://github.com/cmdjs/specification/blob/master/draft/module.md" target="_blank" rel="external">English (CMDJS-repo)</a></li>
-<li><a href="https://github.com/seajs/seajs/issues/242" target="_blank" rel="external">Chinese (SeaJS-repo)</a></li>
-</ul>
-</li>
-</ul>
-<p>CMD 主要有 define, factory, require, export 这么几个东西</p>
-<ul>
-<li>define <code>define(id?, deps?, factory)</code></li>
-<li>factory <code>factory(require, exports, module)</code></li>
-<li>require <code>require(id)</code></li>
-<li>exports <code>Object</code></li>
-</ul>
-<p>CMD 推荐的 Code Style 是使用 CommonJS 风格的 <code>require</code>：</p>
-<ul>
-<li>这个 require 实际上是一个全局函数，用于加载模块，这里实际就是传入而已</li>
-</ul>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">define(<span class="function"><span class="keyword">function</span>(<span class="params">require, exports</span>) </span>&#123;</div><div class="line"></div><div class="line">    <span class="comment">// 获取模块 a 的接口</span></div><div class="line">    <span class="keyword">var</span> a = <span class="built_in">require</span>(<span class="string">'./a'</span>);</div><div class="line">    <span class="comment">// 调用模块 a 的方法</span></div><div class="line">    a.doSomething();</div><div class="line"></div><div class="line">    <span class="comment">// 对外提供 foo 属性</span></div><div class="line">    exports.foo = <span class="string">'bar'</span>;</div><div class="line">    <span class="comment">// 对外提供 doSomething 方法</span></div><div class="line">    exports.doSomething = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;&#125;;</div><div class="line"></div><div class="line">&#125;);</div></pre></td></tr></table></figure>
-<p>但是你也可以使用 AMD 风格，或者使用 return 来进行模块暴露</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">define(<span class="string">'hello'</span>, [<span class="string">'jquery'</span>], <span class="function"><span class="keyword">function</span>(<span class="params">require, exports, module</span>) </span>&#123;</div><div class="line"></div><div class="line">    <span class="comment">// 模块代码...</span></div><div class="line"></div><div class="line">    <span class="comment">// 直接通过 return 暴露接口</span></div><div class="line">    <span class="keyword">return</span> &#123;</div><div class="line">        <span class="attr">foo</span>: <span class="string">'bar'</span>,</div><div class="line">        <span class="attr">doSomething</span>: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;&#125;</div><div class="line">    &#125;;</div><div class="line"></div><div class="line">&#125;);</div></pre></td></tr></table></figure>
-<p>Sea.js 借鉴了 RequireJS 的不少东西，比如将 FlyScript 中的 module.declare 改名为 define 等。Sea.js 更多地来自 Modules/2.0 的观点，但尽可能去掉了学院派的东西，加入了不少实战派的理念。</p>
-<h2 id="AMD-vs-CMD"><a href="#AMD-vs-CMD" class="headerlink" title="AMD vs CMD"></a>AMD vs CMD</h2><p><strong>虽然两者目前都兼容各种风格，但其底层原理并不相同，从其分别推荐的写法就可以看出两者背后原理的不同：</strong></p>
-<ol>
-<li>对于依赖的模块，AMD 是<strong>提前执行</strong>，CMD 是<strong>懒执行</strong>。（都是先加载）</li>
-</ol>
-<ul>
-<li>CMD 推崇<strong>依赖就近</strong>，AMD 推崇<strong>依赖前置</strong>。   </li>
-</ul>
-<p>看代码：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// AMD 默认推荐</span></div><div class="line"></div><div class="line">define([<span class="string">'./a'</span>, <span class="string">'./b'</span>], <span class="function"><span class="keyword">function</span>(<span class="params">a, b</span>) </span>&#123;  <span class="comment">// 依赖前置，提前执行</span></div><div class="line"></div><div class="line">    a.doSomething()</div><div class="line">    b.doSomething()</div><div class="line"></div><div class="line">&#125;)</div></pre></td></tr></table></figure>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// CMD</span></div><div class="line"></div><div class="line">define(<span class="function"><span class="keyword">function</span>(<span class="params">require, exports, module</span>) </span>&#123;</div><div class="line"></div><div class="line">    <span class="keyword">var</span> a = <span class="built_in">require</span>(<span class="string">'./a'</span>)</div><div class="line">    a.doSomething()</div><div class="line"></div><div class="line">    <span class="keyword">var</span> b = <span class="built_in">require</span>(<span class="string">'./b'</span>) <span class="comment">// 依赖就近，延迟执行</span></div><div class="line">    b.doSomething()</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
-<h2 id="WebPack"><a href="#WebPack" class="headerlink" title="WebPack"></a>WebPack</h2><blockquote>
-<p>working…</p>
-</blockquote>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;Foreword&quot;&gt;&lt;a href=&quot;#Foreword&quot; class=&quot;headerlink&quot; title=&quot;Foreword&quot;&gt;&lt;/a&gt;Foreword&lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;Here comes Module!&lt;/p&gt;
-&lt;/blockquo
-    
-    </summary>
-    
-    
-      <category term="前端开发" scheme="http://wanghaonanlpc.github.io/tags/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
-    
-      <category term="JavaScript" scheme="http://wanghaonanlpc.github.io/tags/JavaScript/"/>
     
   </entry>
   
