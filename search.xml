@@ -21,7 +21,7 @@
     </entry>
     
     <entry>
-      <title><![CDATA[Material的使用]]></title>
+      <title><![CDATA[Hexo主题Material的使用]]></title>
       <url>http://wanghaonanlpc.github.io/2017/02/26/Material%E7%9A%84%E4%BD%BF%E7%94%A8/</url>
       <content type="html"><![CDATA[<p>安装Hexo后，运行以下命令在目标中初始化Hexo ``。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ hexo init &lt;folder&gt;</div><div class="line">$ cd &lt;folder&gt;</div><div class="line">$ npm install</div></pre></td></tr></table></figure>
@@ -79,6 +79,12 @@
 <h3 id="RSS"><a href="#RSS" class="headerlink" title="RSS"></a>RSS</h3><p>安装插件：<a href="https://github.com/hexojs/hexo-generator-feed" target="_blank" rel="external">hexo-generator-feed</a>，配置方式如插件 <code>README.md</code> 所示。<br>然后在 <a href="https://material.viosey.com/intro/#url" target="_blank" rel="external">url: rss</a> 中添加生成的 feed 路径。</p>
 ]]></content>
       
+        
+        <tags>
+            
+            <tag> hexo </tag>
+            
+        </tags>
         
     </entry>
     
