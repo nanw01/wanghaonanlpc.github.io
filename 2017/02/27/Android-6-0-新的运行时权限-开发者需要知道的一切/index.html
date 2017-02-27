@@ -1,0 +1,1212 @@
+<!DOCTYPE html>
+<html lang="zh">
+    <head>
+    <!-- 
+        © Material Theme
+        https://github.com/viosey/hexo-theme-material
+        Version: 1.3.0 -->
+
+    <!-- Title -->
+    
+    <title>
+        
+            Android 6.0+新的运行时权限[转载] | 
+        
+        一个老白 | 野厨
+    </title>
+
+    <!-- Favicons -->
+    <link rel="icon shortcut" type="image/ico" href="/img/favicon.png">
+    <link rel="icon" sizes="192x192" href="/img/favicon.png">
+    <link rel="apple-touch-icon" href="/img/favicon.png">
+
+    <!-- Meta & Info -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#0097A7">
+    <meta name="author" content="Alex">
+    <meta name="description" content="null">
+    <meta name="keywords" content="null">
+
+    <!--iOS -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-title" content="Title">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="480">
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="一个老白 | 野厨">
+
+    <!-- The Open Graph protocol -->
+    <meta property="og:url" content="http://wanghaonanlpc.github.io">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="Android 6.0+新的运行时权限[转载] | 一个老白 | 野厨">
+    <meta property="og:description" content="null">
+    
+
+    <!--[if lte IE 9]>
+        <link rel="stylesheet" href="/css/ie-blocker.css">
+
+        
+            <script src="/js/ie-blocker.zhCN.js"></script>
+        
+    <![endif]-->
+
+    <!-- Import CSS -->
+    <link rel="stylesheet" href="/css/material.min.css">
+    <link rel="stylesheet" href="/css/style.min.css">
+    <!-- Config CSS -->
+
+
+<!-- Other Styles -->
+<style>
+  body, html {
+    font-family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+  }
+
+  a {
+    color: #00838F;
+  }
+
+  .mdl-card__media,
+  #search-label,
+  #search-form-label:after,
+  #scheme-Paradox .hot_tags-count,
+  #scheme-Paradox .sidebar_archives-count,
+  #scheme-Paradox .sidebar-colored .sidebar-header,
+  #scheme-Paradox .sidebar-colored .sidebar-badge{
+    background-color: #0097A7 !important;
+  }
+
+  /* Sidebar User Drop Down Menu Text Color */
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus {
+    color: #0097A7 !important;
+  }
+
+  #post_entry-right-info,
+  .sidebar-colored .sidebar-nav li:hover > a,
+  .sidebar-colored .sidebar-nav li:hover > a i,
+  .sidebar-colored .sidebar-nav li > a:hover,
+  .sidebar-colored .sidebar-nav li > a:hover i,
+  .sidebar-colored .sidebar-nav li > a:focus i,
+  .sidebar-colored .sidebar-nav > .open > a,
+  .sidebar-colored .sidebar-nav > .open > a:hover,
+  .sidebar-colored .sidebar-nav > .open > a:focus,
+  #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a {
+    color: #0097A7 !important;
+  }
+
+  .toTop {
+    background: #757575 !important;
+  }
+
+  .material-layout .material-post>.material-nav,
+  .material-layout .material-index>.material-nav,
+  .material-nav a {
+    color: #757575;
+  }
+
+  #scheme-Paradox .MD-burger-layer {
+    background-color: #757575;
+  }
+
+  #scheme-Paradox #post-toc-trigger-btn {
+    color: #757575;
+  }
+
+  .post-toc a:hover {
+    color: #00838F;
+    text-decoration: underline;
+  }
+</style>
+
+
+<!-- Theme Background Related-->
+
+    <style>
+      body{
+        background-color: #F5F5F5;
+      }
+
+      /* blog_info bottom background */
+      #scheme-Paradox .material-layout .something-else .mdl-card__supporting-text{
+        background-color: #fff;
+      }
+    </style>
+
+
+
+
+<!-- Fade Effect -->
+
+    <style>
+      .fade {
+        transition: all 800ms linear;
+        -webkit-transform: translate3d(0,0,0);
+        -moz-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+        -o-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+        opacity: 1;
+      }
+
+      .fade.out{
+        opacity: 0;
+      }
+    </style>
+
+
+
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/queue.js"></script>
+
+    <!-- UC Browser Compatible -->
+    <script>
+        var agent = navigator.userAgent.toLowerCase();
+        if(agent.indexOf('ucbrowser')>0) {
+            document.write("<link rel=\"stylesheet\" href=\"/css/uc.css\">");
+            alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
+        }
+    </script>
+
+    
+
+    
+
+    <!-- Bing Background -->
+    
+
+    <!-- Custom Head -->
+    
+</head>
+
+
+    
+        <body id="scheme-Paradox" class="lazy">
+            <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
+                
+
+                <!-- Main Container -->
+                <main class="material-layout__content" id="main">
+
+                    <!-- Top Anchor -->
+                    <div id="top"></div>
+
+                    
+                        <!-- Hamburger Button -->
+                        <button class="MD-burger-icon sidebar-toggle">
+                            <span class="MD-burger-layer"></span>
+                        </button>
+                    
+
+                    <!-- Post TOC -->
+
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+    <!-- Left aligned menu below button -->
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Android-6-0-新的运行时权限-开发者需要知道的一切"><span class="post-toc-number">1.</span> <span class="post-toc-text">Android 6.0+新的运行时权限 开发者需要知道的一切</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#新运行时权限"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">新运行时权限</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#已经发布了的app会发生什么"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">已经发布了的app会发生什么</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#PROTECTION-NORMAL类权限"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">PROTECTION_NORMAL类权限</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#让你的app支持新运行时权限"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">让你的app支持新运行时权限</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#处理-“不再提醒”"><span class="post-toc-number">1.5.</span> <span class="post-toc-text">处理 “不再提醒”</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#一次请求多个权限"><span class="post-toc-number">1.6.</span> <span class="post-toc-text">一次请求多个权限</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#用兼容库使代码兼容旧版"><span class="post-toc-number">1.7.</span> <span class="post-toc-text">用兼容库使代码兼容旧版</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#第三方库简化代码"><span class="post-toc-number">1.8.</span> <span class="post-toc-text">第三方库简化代码</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#如果我的app还开着呢，权限被撤销了，会发生生么"><span class="post-toc-number">1.9.</span> <span class="post-toc-text">如果我的app还开着呢，权限被撤销了，会发生生么</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#结论建议"><span class="post-toc-number">1.10.</span> <span class="post-toc-text">结论建议</span></a></li></ol></li></ol>
+
+        <!--
+        <li class="mdl-menu__item">
+            Some Action
+        </li>
+        -->
+    </ul>
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
+    
+        
+            <!-- Random Thumbnail -->
+            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
+            <script>
+    var randomNum = Math.floor(Math.random() * 19 + 1);
+
+    $('.post_thumbnail-random').css('background-image', 'url(' + '/img/random/material-' + randomNum + '.png' + ')');
+</script>
+
+        
+    
+            <p class="article-headline-p">
+                Android 6.0+新的运行时权限[转载]
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/avatar.png" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>Alex</strong>
+        <span>2月 27, 2017</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+        <button id="article-functions-qrcode-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+            <i class="material-icons" role="presentation">devices other</i>
+            <span class="visuallyhidden">devices other</span>
+        </button>
+        <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button">
+            <li class="mdl-menu__item">在其它设备中阅读本文章</li>
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASYAAAEmCAAAAADqr2IGAAAEGklEQVR42u3aSxIaMQwFQO5/6WSbRQaeJEMxomdFUeCx2wvr48cfT/A8EGDChAkTJkweTJgwYfp6pkf8vBj04jf/fn/1ORmzOsPqf/8zAiZMmDBhWsRUJbj65jnKqWVfjZDPNlojJkyYMGFax5S8+HmIUA0gknfNUZrjYMKECROmH2bqfa6GFHMITJgwYcKEacKUj3CqoPz899WABhMmTJgw/RpT3lb8/G+ShVVbrW+shWPChAkTpi9jyg/p+37+6P0mTJgwYcL0NUzVZ5JYzou/+YWhPFy4XCkmTJgwYVrBlB+cebE1WUDzkC4WgqvrwoQJEyZM+5jy8mvves2pFma1sNvjw4QJEyZMW5mqSeykcdhbRvW/1eS5UCHAhAkTJky3Yuotu1rMfV/S23tjtHZMmDBhwrSC6XkokDcjz46Qv2WybS/ehQkTJkyYVjBVj8lq+TU/ws+mx8l8XmwbJkyYMGFawVSdRDVVrh7V1bS8mnjn24wJEyZMmHYwJeXRauPwVHp8aszqhmHChAkTpk1Mk1QzJ85Z58ltb/MwYcKECdNWpuQQ7bU/8w3oXdOpblKeEmPChAkTpn1Mk+QzKfX2tmR+5FehMWHChAnTbqbekvLDuLqAU/89XAvHhAkTJky3YspT0/nUexzV6zs5HCZMmDBh+gWmydWcXrsxGT8JPhKU6vZjwoQJE6Z9TL2yabVZmLc/J23Rs+NjwoQJE6ZNTL0DNT/mey3PnL5wHWcSEGDChAkTptsyTcq7+Ti9BmR+/J8tJWPChAkTpq1MSQKZl197wUSSoJ7aqsvVYcKECROmRUzVNPJU0JDModrIzAu7L5JkTJgwYcK0gik/MqvJZ94onaBXj/m8MI0JEyZMmHYw5QuYJ73VkOJ9heMotcaECRMmTCuYqsMV2oH5hGLiXqJbDSkwYcKECdM+pmq6mx/AvQS1WiauNl/L7UxMmDBhwrSOaX6pdFLwrR7/1W+i9WLChAkTpkVM+fHcay7mU8zLu5NG5qhCgAkTJkyYbs40SVZziN5BfqrZeSAgwIQJEyZMN2HKk9Jeg/B9G5DPp1kUxoQJEyZMi5jyxHJShJ0kxr2N6SFiwoQJE6ZNTFWOvLVZJU4W88nmKyZMmDBh2sFUfaoTnReFe2Xc6giYMGHChGkr0yN+ErLnyWdSYM3nkPwrSYwLqS8mTJgwYbotU6+1ORnh1EWfeUhRuN+ECRMmTJhuztQshrau9ZwKRPJg4vnqMGHChAkTpjzdTVLcSaocJa5JGfeTAQEmTJgwYbohU76A6i+rn3vXd16EHZgwYcKEaR1TflmnWmbtlYbzdHoyz7e0MzFhwoQJ05cxVUuiSeOwmgD3+PJApJzMY8KECROmFUyeKCDwYMKECRMmTJg8mDBh+pbnL1nkzq6OqKVAAAAAAElFTkSuQmCC">
+        </ul>
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        
+    </ul>
+    
+
+    <!-- Share -->
+    <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+    <!-- Leancloud Views -->
+        <a class="post_share-link" href="#">
+            <li class="mdl-menu__item">
+                <span id="/2017/02/27/Android-6-0-新的运行时权限-开发者需要知道的一切/" class="leancloud-views_num" data-flag-title="Android 6.0+新的运行时权限[转载]">
+     &nbsp;浏览量
+</span>
+
+            </li>
+        </a>
+    
+
+    
+        
+            <!-- Busuanzi Views -->
+            <a class="post_share-link" href="#">
+                <li class="mdl-menu__item">
+                    <span id="busuanzi_container_page_pv">
+                        <span id="busuanzi_value_page_pv"></span>&nbsp;浏览量
+                    </span>
+                </li>
+            </a>
+        
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=Android 6.0+新的运行时权限[转载]&url=http://wanghaonanlpc.github.io//2017/02/27/Android-6-0-新的运行时权限-开发者需要知道的一切/index.html&pic=&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=Android 6.0+新的运行时权限[转载]&url=http://wanghaonanlpc.github.io//2017/02/27/Android-6-0-新的运行时权限-开发者需要知道的一切/index.html&via=Alex" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://wanghaonanlpc.github.io//2017/02/27/Android-6-0-新的运行时权限-开发者需要知道的一切/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://wanghaonanlpc.github.io//2017/02/27/Android-6-0-新的运行时权限-开发者需要知道的一切/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=一个老白 | 野厨&title=Android 6.0+新的运行时权限[转载]&summary=null&pics=http://wanghaonanlpc.github.io/img/favicon.png&url=http://wanghaonanlpc.github.io/2017/02/27/Android-6-0-新的运行时权限-开发者需要知道的一切/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 QQ
+            </li>
+        </a>
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <h1 id="Android-6-0-新的运行时权限-开发者需要知道的一切"><a href="#Android-6-0-新的运行时权限-开发者需要知道的一切" class="headerlink" title="Android 6.0+新的运行时权限 开发者需要知道的一切"></a>Android 6.0+新的运行时权限 开发者需要知道的一切</h1><p>android M 的名字官方刚发布不久，最终正式版即将来临！<br>android在不断发展，最近的更新 M 非常不同，一些主要的变化例如运行时权限将有颠覆性影响。惊讶的是android社区鲜有谈论这事儿，尽管这事很重要或许在不远的将来会引发很严重的问题。<br>这是今天我写<a href="http://ocnyang.com/2016/08/16/AndroidMPermission/#more" target="_blank" rel="external">这篇博客</a>的原因。这里有一切关于android运行时权限你需要知道的，包括如何在代码中实现。现在亡羊补牢还不晚。</p>
+<h2 id="新运行时权限"><a href="#新运行时权限" class="headerlink" title="新运行时权限"></a>新运行时权限</h2><p>android的权限系统一直是首要的安全概念，因为这些权限只在安装的时候被询问一次。一旦安装了，app可以在用户毫不知晓的情况下访问权限内的所有东西。<br>难怪一些坏蛋利用这个缺陷恶意收集用户数据用来做坏事了！<br>android小组也知道这事儿。7年了！权限系统终于被重新设计了。在android6.0棉花糖，app将不会在安装的时候授予权限。取而代之的是，app不得不在运行时一个一个询问用户授予权限。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2625875-0180c3c006b72f69.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="img"></p>
+<p>注意权限询问对话框不会自己弹出来。开发者不得不自己调用。如果开发者要调用的一些函数需要某权限而用户又拒绝授权的话，函数将抛出异常直接导致程序崩溃。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2625875-469ca2e40633a306.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="img"></p>
+<p>另外，用户也可以随时在设置里取消已经授权的权限。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2625875-266590a23f9a9bc9.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="img"></p>
+<p>你或许已经感觉到背后生出一阵寒意。。。如果你是个android开发者，意味着要完全改变你的程序逻辑。你不能像以前那样直接调用方法了，你不得不为每个需要的地方检察权限，否则app就崩溃了！<br>是的。我不能哄你说这是简单的事儿。尽管这对用户来说是好事，但是对开发者来说就是噩梦。我们不得不修改编码不然不论短期还是长远来看都是潜在的问题。<br>这个新的运行时权限仅当我们设置targetSdkVersion to 23（这意味着你已经在23上测试通过了）才起作用，当然还要是M系统的手机。app在6.0之前的设备依然使用旧的权限系统。</p>
+<h2 id="已经发布了的app会发生什么"><a href="#已经发布了的app会发生什么" class="headerlink" title="已经发布了的app会发生什么"></a>已经发布了的app会发生什么</h2><blockquote>
+<p>新运行时权限可能已经让你开始恐慌了。<strong>“hey，伙计！我三年前发布的app可咋整呢。如果他被装到android 6.0上，我的app会崩溃吗？！？”</strong><br>莫慌张，放轻松。android小队又不傻，肯定考虑到了这情况。<strong>如果app的targetSdkVersion 低于 23，那将被认为app没有用23新权限测试过，那将被继续使用旧有规则：用户在安装的时候不得不接受所有权限，安装后app就有了那些权限咯！</strong></p>
+</blockquote>
+<p><img src="http://upload-images.jianshu.io/upload_images/2625875-9ebfcbb36dff38b9.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="img"></p>
+<p>然后app像以前一样奔跑！注意，此时用户依然可以取消已经同意的授权！用户取消授权时，android 6.0系统会警告，但这不妨碍用户取消授权。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2625875-c6424f0b749605c3.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="img"></p>
+<p>问题又来了，这时候你的app崩溃吗？<br>善意的主把这事也告诉了android小组，当我们在targetSdkVersion 低于23的app调用一个需要权限的函数时，这个权限如果被用户取消授权了的话，不抛出异常。但是他将啥都不干，结果导致函数返回值是null或者0.</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2625875-486ba9bdb91de1a9.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="img"></p>
+<p>别高兴的太早。尽管app不会调用这个函数时崩溃，返回值null或者0可能接下来依然导致崩溃。<br>好消息（至少目前看来）是这类取消权限的情况比较少，我相信很少用户这么搞。如果他们这么办了，后果自负咯。<br>但从长远看来，我相信还是会有大量用户会关闭一些权限。我们app不能在新设备完美运行这是不可接受的。<br>怎样让他完美运行呢，你最好修改代码支持最新的权限系统，而且我建议你立刻着手搞起！<br>代码没有成功改为支持最新运行时权限的app,不要设置targetSdkVersion 23 发布，否则你就有麻烦了。只有当你测试过了，再改为targetSdkVersion 23 。</p>
+<blockquote>
+<p><strong>警告：现在你在android studio新建项目，targetSdkVersion 会自动设置为 23。如果你还没支持新运行时权限，我建议你首先把targetSdkVersion 降级到22</strong></p>
+</blockquote>
+<h2 id="PROTECTION-NORMAL类权限"><a href="#PROTECTION-NORMAL类权限" class="headerlink" title="PROTECTION_NORMAL类权限"></a>PROTECTION_NORMAL类权限</h2><p>当用户安装或更新应用时，系统将授予应用所请求的属于 PROTECTION_NORMAL 的所有权限（安装时授权的一类基本权限）。这类权限包括：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div></pre></td><td class="code"><pre><div class="line">android.permission.ACCESS_LOCATION_EXTRA_COMMANDS</div><div class="line">android.permission.ACCESS_NETWORK_STATE</div><div class="line">android.permission.ACCESS_NOTIFICATION_POLICY</div><div class="line">android.permission.ACCESS_WIFI_STATE</div><div class="line">android.permission.ACCESS_WIMAX_STATE</div><div class="line">android.permission.BLUETOOTH</div><div class="line">android.permission.BLUETOOTH_ADMIN</div><div class="line">android.permission.BROADCAST_STICKY</div><div class="line">android.permission.CHANGE_NETWORK_STATE</div><div class="line">android.permission.CHANGE_WIFI_MULTICAST_STATE</div><div class="line">android.permission.CHANGE_WIFI_STATE</div><div class="line">android.permission.CHANGE_WIMAX_STATE</div><div class="line">android.permission.DISABLE_KEYGUARD</div><div class="line">android.permission.EXPAND_STATUS_BAR</div><div class="line">android.permission.FLASHLIGHT</div><div class="line">android.permission.GET_ACCOUNTS</div><div class="line">android.permission.GET_PACKAGE_SIZE</div><div class="line">android.permission.INTERNET</div><div class="line">android.permission.KILL_BACKGROUND_PROCESSES</div><div class="line">android.permission.MODIFY_AUDIO_SETTINGS</div><div class="line">android.permission.NFC</div><div class="line">android.permission.READ_SYNC_SETTINGS</div><div class="line">android.permission.READ_SYNC_STATS</div><div class="line">android.permission.RECEIVE_BOOT_COMPLETED</div><div class="line">android.permission.REORDER_TASKS</div><div class="line">android.permission.REQUEST_INSTALL_PACKAGES</div><div class="line">android.permission.SET_TIME_ZONE</div><div class="line">android.permission.SET_WALLPAPER</div><div class="line">android.permission.SET_WALLPAPER_HINTS</div><div class="line">android.permission.SUBSCRIBED_FEEDS_READ</div><div class="line">android.permission.TRANSMIT_IR</div><div class="line">android.permission.USE_FINGERPRINT</div><div class="line">android.permission.VIBRATE</div><div class="line">android.permission.WAKE_LOCK</div><div class="line">android.permission.WRITE_SYNC_SETTINGS</div><div class="line">com.android.alarm.permission.SET_ALARM</div><div class="line">com.android.launcher.permission.INSTALL_SHORTCUT</div><div class="line">com.android.launcher.permission.UNINSTALL_SHORTCUT</div></pre></td></tr></table></figure>
+<p>只需要在AndroidManifest.xml中简单声明这些权限就好，安装时就授权。不需要每次使用时都检查权限，而且用户不能取消以上授权。</p>
+<h2 id="让你的app支持新运行时权限"><a href="#让你的app支持新运行时权限" class="headerlink" title="让你的app支持新运行时权限"></a>让你的app支持新运行时权限</h2><p>是时候让我们的app支持新权限模型了，从设置<strong>compileSdkVersion</strong> and <strong>targetSdkVersion</strong> 为 23开始吧.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">android &#123;</div><div class="line">    compileSdkVersion 23</div><div class="line">    ...</div><div class="line"></div><div class="line">    defaultConfig &#123;</div><div class="line">        ...</div><div class="line">        targetSdkVersion 23</div><div class="line">        ...</div><div class="line">    &#125;</div></pre></td></tr></table></figure>
+<p>例子，我想用以下方法添加联系人。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line">privatestaticfinal String TAG = &quot;Contacts&quot;;</div><div class="line">privatevoid insertDummyContact() &#123;</div><div class="line">// Two operations are needed to insert a new contact.</div><div class="line">    ArrayList operations = new ArrayList(2);</div><div class="line"></div><div class="line">// First, set up a new raw contact.</div><div class="line">    ContentProviderOperation.Builder op =</div><div class="line">            ContentProviderOperation.newInsert(ContactsContract.RawContacts.CONTENT_URI)</div><div class="line">                    .withValue(ContactsContract.RawContacts.ACCOUNT_TYPE, null)</div><div class="line">                    .withValue(ContactsContract.RawContacts.ACCOUNT_NAME, null);</div><div class="line">    operations.add(op.build());</div><div class="line"></div><div class="line">// Next, set the name for the contact.</div><div class="line">    op = ContentProviderOperation.newInsert(ContactsContract.Data.CONTENT_URI)</div><div class="line">            .withValueBackReference(ContactsContract.Data.RAW_CONTACT_ID, 0)</div><div class="line">            .withValue(ContactsContract.Data.MIMETYPE,</div><div class="line">                    ContactsContract.CommonDataKinds.StructuredName.CONTENT_ITEM_TYPE)</div><div class="line">            .withValue(ContactsContract.CommonDataKinds.StructuredName.DISPLAY_NAME,</div><div class="line">&quot;__DUMMY CONTACT from runtime permissions sample&quot;);</div><div class="line">    operations.add(op.build());</div><div class="line"></div><div class="line">// Apply the operations.</div><div class="line">    ContentResolver resolver = getContentResolver();</div><div class="line">try &#123;</div><div class="line">        resolver.applyBatch(ContactsContract.AUTHORITY, operations);</div><div class="line">    &#125; catch (RemoteException e) &#123;</div><div class="line">        Log.d(TAG, &quot;Could not add a new contact: &quot; + e.getMessage());</div><div class="line">    &#125; catch (OperationApplicationException e) &#123;</div><div class="line">        Log.d(TAG, &quot;Could not add a new contact: &quot; + e.getMessage());</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>上面代码需要WRITE_CONTACTS权限。如果不询问授权，app就崩了。<br>下一步像以前一样在AndroidManifest.xml添加声明权限。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;uses-permission  android:name=&quot;android.permission.WRITE_CONTACTS&quot;/&gt;</div></pre></td></tr></table></figure>
+<p>下一步，不得不再写个方法检查有没有权限。如果没有弹个对话框询问用户授权。然后你才可以下一步创建联系人。<br>权限被分组了，如下表：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2625875-52d385bb509f5ba1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="img"></p>
+<p>同一组的任何一个权限被授权了，其他权限也自动被授权。例如，一旦WRITE_CONTACTS被授权了，app也有READ_CONTACTS和GET_ACCOUNTS权限了。<br>源码中被用来检查和请求权限的方法分别是Activity的checkSelfPermission和requestPermissions。这些方法在api23引入。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">finalprivateint REQUEST_CODE_ASK_PERMISSIONS = 123;</div><div class="line"></div><div class="line">privatevoid insertDummyContactWrapper() &#123;</div><div class="line">int hasWriteContactsPermission = checkSelfPermission(Manifest.permission.WRITE_CONTACTS);</div><div class="line">if (hasWriteContactsPermission != PackageManager.PERMISSION_GRANTED) &#123;</div><div class="line">        requestPermissions(new String[] &#123;Manifest.permission.WRITE_CONTACTS&#125;,</div><div class="line">                REQUEST_CODE_ASK_PERMISSIONS);</div><div class="line">return;</div><div class="line">    &#125;</div><div class="line">    insertDummyContact();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>如果已有权限，insertDummyContact()会执行。否则，requestPermissions被执行来弹出请求授权对话框，如下：</p>
+<p>不论用户同意还是拒绝，activity的onRequestPermissionsResult会被回调来通知结果（通过第三个参数），grantResults,如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">@Override</div><div class="line">publicvoid onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) &#123;</div><div class="line">switch (requestCode) &#123;</div><div class="line">caseREQUEST_CODE_ASK_PERMISSIONS:</div><div class="line">if (grantResults[0] == PackageManager.PERMISSION_GRANTED) &#123;</div><div class="line">// Permission Granted</div><div class="line">                insertDummyContact();</div><div class="line">            &#125; else &#123;</div><div class="line">// Permission Denied</div><div class="line">                Toast.makeText(MainActivity.this, &quot;WRITE_CONTACTS Denied&quot;, Toast.LENGTH_SHORT)</div><div class="line">                        .show();</div><div class="line">            &#125;</div><div class="line">break;</div><div class="line">        default:</div><div class="line">super.onRequestPermissionsResult(requestCode, permissions, grantResults);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>这就是新权限模型工作过程。代码真复杂但是只能去习惯它。。。为了让app很好兼容新权限模型，你不得不用以上类似方法处理所有需要的情况。<br>如果你想捶墙，现在是时候了。。。</p>
+<h2 id="处理-“不再提醒”"><a href="#处理-“不再提醒”" class="headerlink" title="处理 “不再提醒”"></a>处理 “不再提醒”</h2><p>如果用户拒绝某授权。下一次弹框，用户会有一个“不再提醒”的选项的来防止app以后继续请求授权。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2625875-c79ef49ce512ed84.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="img"></p>
+<p>如果这个选项在拒绝授权前被用户勾选了。下次为这个权限请求requestPermissions时，对话框就不弹出来了，结果就是，app啥都不干。<br>这将是很差的用户体验，用户做了操作却得不到响应。这种情况需要好好处理一下。在请求requestPermissions前，我们通过activity的shouldShowRequestPermissionRationale方法来检查是否需要弹出请求权限的提示对话框，代码如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line">final private int REQUEST_CODE_ASK_PERMISSIONS = 123;</div><div class="line"></div><div class="line">private void insertDummyContactWrapper() &#123;</div><div class="line">int hasWriteContactsPermission = checkSelfPermission(Manifest.permission.WRITE_CONTACTS);</div><div class="line">if (hasWriteContactsPermission != PackageManager.PERMISSION_GRANTED) &#123;</div><div class="line">if (!shouldShowRequestPermissionRationale(Manifest.permission.WRITE_CONTACTS)) &#123;</div><div class="line">                showMessageOKCancel(&quot;You need to allow access to Contacts&quot;,</div><div class="line">new DialogInterface.OnClickListener() &#123;</div><div class="line">@Override</div><div class="line">publicvoid onClick(DialogInterface dialog, int which) &#123;</div><div class="line">                                requestPermissions(new String[] &#123;Manifest.permission.WRITE_CONTACTS&#125;,</div><div class="line">                                        REQUEST_CODE_ASK_PERMISSIONS);</div><div class="line">                            &#125;</div><div class="line">                        &#125;);</div><div class="line">return;</div><div class="line">            &#125;</div><div class="line">        requestPermissions(new String[] &#123;Manifest.permission.WRITE_CONTACTS&#125;,</div><div class="line">                REQUEST_CODE_ASK_PERMISSIONS);</div><div class="line">return;</div><div class="line">    &#125;</div><div class="line">    insertDummyContact();</div><div class="line">&#125;</div><div class="line"></div><div class="line">private void showMessageOKCancel(String message, DialogInterface.OnClickListener okListener) &#123;</div><div class="line">new AlertDialog.Builder(MainActivity.this)</div><div class="line">            .setMessage(message)</div><div class="line">            .setPositiveButton(&quot;OK&quot;, okListener)</div><div class="line">            .setNegativeButton(&quot;Cancel&quot;, null)</div><div class="line">            .create()</div><div class="line">            .show();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>当一个权限第一次被请求和用户标记过不再提醒的时候,我们写的对话框被展示。<br>最后一种情况，onRequestPermissionsResult 会收到PERMISSION_DENIED ，系统询问对话框不展示。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2625875-4b5fe5ae89720b96.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="img"></p>
+<p>搞定！</p>
+<h2 id="一次请求多个权限"><a href="#一次请求多个权限" class="headerlink" title="一次请求多个权限"></a>一次请求多个权限</h2><p>当然了有时候需要好多权限，可以用上面方法一次请求多个权限。不要忘了为每个权限检查“不再提醒”的设置。<br>修改后的代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div></pre></td><td class="code"><pre><div class="line">final private int REQUEST_CODE_ASK_MULTIPLE_PERMISSIONS = 124;</div><div class="line"></div><div class="line">private void insertDummyContactWrapper() &#123;</div><div class="line">    List&lt;String&gt; permissionsNeeded = new ArrayList&lt;String&gt;();</div><div class="line"></div><div class="line">    final List&lt;String&gt; permissionsList = new ArrayList&lt;String&gt;();</div><div class="line">    if (!addPermission(permissionsList, Manifest.permission.ACCESS_FINE_LOCATION))</div><div class="line">        permissionsNeeded.add(&quot;GPS&quot;);</div><div class="line">    if (!addPermission(permissionsList, Manifest.permission.READ_CONTACTS))</div><div class="line">        permissionsNeeded.add(&quot;Read Contacts&quot;);</div><div class="line">    if (!addPermission(permissionsList, Manifest.permission.WRITE_CONTACTS))</div><div class="line">        permissionsNeeded.add(&quot;Write Contacts&quot;);</div><div class="line"></div><div class="line">    if (permissionsList.size() &gt; 0) &#123;</div><div class="line">        if (permissionsNeeded.size() &gt; 0) &#123;</div><div class="line">            // Need Rationale</div><div class="line">            String message = &quot;You need to grant access to &quot; + permissionsNeeded.get(0);</div><div class="line">            for (int i = 1; i &lt; permissionsNeeded.size(); i++)</div><div class="line">                message = message + &quot;, &quot; + permissionsNeeded.get(i);</div><div class="line">            showMessageOKCancel(message,</div><div class="line">                    new DialogInterface.OnClickListener() &#123;</div><div class="line">                        @Override</div><div class="line">                        public void onClick(DialogInterface dialog, int which) &#123;</div><div class="line">                            requestPermissions(permissionsList.toArray(new String[permissionsList.size()]),</div><div class="line">                                    REQUEST_CODE_ASK_MULTIPLE_PERMISSIONS);</div><div class="line">                        &#125;</div><div class="line">                    &#125;);</div><div class="line">            return;</div><div class="line">        &#125;</div><div class="line">        requestPermissions(permissionsList.toArray(new String[permissionsList.size()]),</div><div class="line">                REQUEST_CODE_ASK_MULTIPLE_PERMISSIONS);</div><div class="line">        return;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    insertDummyContact();</div><div class="line">&#125;</div><div class="line"></div><div class="line">private boolean addPermission(List&lt;String&gt; permissionsList, String permission) &#123;</div><div class="line">    if (checkSelfPermission(permission) != PackageManager.PERMISSION_GRANTED) &#123;</div><div class="line">        permissionsList.add(permission);</div><div class="line">        // Check for Rationale Option</div><div class="line">        if (!shouldShowRequestPermissionRationale(permission))</div><div class="line">            return false;</div><div class="line">    &#125;</div><div class="line">    return true;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>如果所有权限被授权，依然回调onRequestPermissionsResult，我用hashmap让代码整洁便于阅读。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line">@Override</div><div class="line">publicvoid onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) &#123;</div><div class="line">switch (requestCode) &#123;</div><div class="line">caseREQUEST_CODE_ASK_MULTIPLE_PERMISSIONS:</div><div class="line">            &#123;</div><div class="line">            Map perms = new HashMap();</div><div class="line">// Initial</div><div class="line">            perms.put(Manifest.permission.ACCESS_FINE_LOCATION, PackageManager.PERMISSION_GRANTED);</div><div class="line">            perms.put(Manifest.permission.READ_CONTACTS, PackageManager.PERMISSION_GRANTED);</div><div class="line">            perms.put(Manifest.permission.WRITE_CONTACTS, PackageManager.PERMISSION_GRANTED);</div><div class="line">// Fill with results</div><div class="line">for (int i = 0; i &lt; permissions.length; i++)</div><div class="line">                perms.put(permissions[i], grantResults[i]);</div><div class="line">// Check for ACCESS_FINE_LOCATION</div><div class="line">if (perms.get(Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED</div><div class="line">                    &amp;&amp; perms.get(Manifest.permission.READ_CONTACTS) == PackageManager.PERMISSION_GRANTED</div><div class="line">                    &amp;&amp; perms.get(Manifest.permission.WRITE_CONTACTS) == PackageManager.PERMISSION_GRANTED) &#123;</div><div class="line">// All Permissions Granted</div><div class="line">                insertDummyContact();</div><div class="line">            &#125; else &#123;</div><div class="line">// Permission Denied</div><div class="line">                Toast.makeText(MainActivity.this, &quot;Some Permission is Denied&quot;, Toast.LENGTH_SHORT)</div><div class="line">                        .show();</div><div class="line">            &#125;</div><div class="line">            &#125;</div><div class="line">break;</div><div class="line">        default:</div><div class="line">super.onRequestPermissionsResult(requestCode, permissions, grantResults);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>条件灵活的，你自己设置。有的情况，一个权限没有授权，就不可用；但是也有情况，能工作，但是表现的是有所限制的。对于这个我不做评价，你自己设计吧。</p>
+<h2 id="用兼容库使代码兼容旧版"><a href="#用兼容库使代码兼容旧版" class="headerlink" title="用兼容库使代码兼容旧版"></a>用兼容库使代码兼容旧版</h2><p>以上代码在android 6.0以上运行没问题，但是23 api之前就不行了，因为没有那些方法。<br>粗暴的方法是检查版本</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">if (Build.VERSION.SDK_INT &gt;= 23) &#123;</div><div class="line">// Marshmallow+</div><div class="line">&#125; else &#123;</div><div class="line">// Pre-Marshmallow</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>但是太复杂，我建议用v4兼容库，已对这个做过兼容，用这个方法代替：</p>
+<ul>
+<li>ContextCompat.checkSelfPermission()<br>被授权函数返回PERMISSION_GRANTED，否则返回PERMISSION_DENIED ，在所有版本都是如此。</li>
+<li>ActivityCompat.requestPermissions()<br>这个方法在M之前版本调用，OnRequestPermissionsResultCallback 直接被调用，带着正确的 PERMISSION_GRANTED或者 PERMISSION_DENIED 。</li>
+<li>ActivityCompat.shouldShowRequestPermissionRationale()<br>在M之前版本调用，永远返回false。<br>用v4包的这三方法，完美兼容所有版本！这个方法需要额外的参数，Context or Activity。别的就没啥特别的了。下面是代码：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">private void insertDummyContactWrapper()&#123;</div><div class="line">int hasWriteContactsPermission = ContextCompat.checkSelfPermission(MainActivity.this,</div><div class="line">            Manifest.permission.WRITE_CONTACTS);</div><div class="line">if (hasWriteContactsPermission != PackageManager.PERMISSION_GRANTED) &#123;</div><div class="line">if (!ActivityCompat.shouldShowRequestPermissionRationale(MainActivity.this,Manifest.permission.WRITE_CONTACTS)) &#123;</div><div class="line">            showMessageOKCancel(&quot;You need to allow access to Contacts&quot;,new DialogInterface.OnClickListener() &#123;</div><div class="line">@Override</div><div class="line">public void onClick (DialogInterface dialog, int which)&#123;</div><div class="line">                            ActivityCompat.requestPermissions(MainActivity.this,new String[] &#123;Manifest.permission.WRITE_CONTACTS&#125;,</div><div class="line">                                    REQUEST_CODE_ASK_PERMISSIONS);</div><div class="line">                        &#125;</div><div class="line">                    &#125;);</div><div class="line">return;</div><div class="line">        &#125;</div><div class="line">        ActivityCompat.requestPermissions(MainActivity.this,</div><div class="line">new String[] &#123;Manifest.permission.WRITE_CONTACTS&#125;,</div><div class="line">                REQUEST_CODE_ASK_PERMISSIONS);</div><div class="line">return;</div><div class="line">    &#125;</div><div class="line">    insertDummyContact();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>后两个方法，我们也可以在Fragment中使用，用v13兼容包：FragmentCompat.requestPermissions() and FragmentCompat.shouldShowRequestPermissionRationale()和activity效果一样。</p>
+<h2 id="第三方库简化代码"><a href="#第三方库简化代码" class="headerlink" title="第三方库简化代码"></a>第三方库简化代码</h2><p>以上代码真尼玛复杂。为解决这事，有许多第三方库已经问世了，真66溜真有速度。我试了很多最终找到了个满意的<a href="https://github.com/hotchemi/PermissionsDispatcher" target="_blank" rel="external">hotchemi’s PermissionsDispatcher</a>。<br>他和我上面做的一样，只是简化了代码。灵活易扩展，试一下吧。如果不满足你可以找些其他的。</p>
+<h2 id="如果我的app还开着呢，权限被撤销了，会发生生么"><a href="#如果我的app还开着呢，权限被撤销了，会发生生么" class="headerlink" title="如果我的app还开着呢，权限被撤销了，会发生生么"></a>如果我的app还开着呢，权限被撤销了，会发生生么</h2><p>权限随时可以被撤销。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2625875-f7bd9b68fd7bf84a.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="img"></p>
+<p>当app开着的时候被撤消了会发生什么呢？我试过了发现这时app会突然终止 terminated。app中的一切都被简单粗暴的停止了，因为terminated！对我来说这可以理解，因为系统如果允许它继续运行（没有某权限），这会召唤弗雷迪到我的噩梦里。或许更糟…</p>
+<h2 id="结论建议"><a href="#结论建议" class="headerlink" title="结论建议"></a>结论建议</h2><p>我相信你对新权限模型已经有了清晰的认识。我相信你也意识到了问题的严峻。<br>但是你没得选择。新运行时权限已经在棉花糖中被使用了。我们没有退路。我们现在唯一能做的就是保证app适配新权限模型.<br>欣慰的是只有少数权限需要运行时权限模型。大多数常用的权限，例如，网络访问，属于Normal Permission 在安装时自动会授权，当然你要声明，以后无需检查。因此，只有少部分代码你需要修改。<br>两个建议：</p>
+<ol>
+<li>严肃对待新权限模型</li>
+<li>如果你代码没支持新权限，不要设置targetSdkVersion 23 。尤其是当你在Studio新建工程时，不要忘了修改！</li>
+</ol>
+<p>说一下代码修改。这是大事，如果代码结构被设计的不够好，你需要一些很蛋疼的重构。每个app都要被修正。如上所说，我们没的选择。。。<br>列出所有你需要请求的权限所有情形，如果A被授权，B被拒绝，会发生什么。blah，blah。<br>祝重构顺利。把它列为你需要做的大事，从现在就开始着手做，以保证M正式发布的时候没有问题。<br>希望本文对你有用，快乐编码！</p>
+
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+
+
+
+
+    <!-- 使用 DISQUS_CLICK -->
+    <div id="disqus-comment">	
+        <div id="disqus_thread"></div>
+<!-- include js -->
+<script src="/js/ripple.js"></script>
+
+<!-- add animation -->
+<style>
+        .ripple-container {
+        }
+        .ripple-container .ripple{
+            background-color: rgba(255,255,255,0.4);
+            animation: ripple 2s forwards cubic-bezier(0, 0, 0.2, 1);
+        }
+        @keyframes ripple {
+            0% {
+                transform: scale(0);
+                opacity: 1;
+            }
+            80% {
+                transform: scale(1);
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+		.disqus_click_btn {
+            background-color: dodgerblue;
+            color: white;
+            padding: 10px 20px;
+            border:0;
+            font-size: 14px;
+            cursor: pointer
+        }
+</style>
+	
+<!-- add data-ripple attribute -->
+<div class="btn_click_load"> 
+    <button class="disqus_click_btn" data-ripple>阅读评论 「请确保 disq.us &amp; disquscdn.com &amp; disqus.com 可以正常加载」</button>
+</div>
+	
+<script>
+    // add effect to elements
+    Array.prototype.forEach.call(document.querySelectorAll('[data-ripple]'), function(element){
+        // find all elements and attach effect
+        new RippleEffect(element); // element is instance of javascript element node
+    });
+</script>
+
+<script>
+    $('.btn_click_load').click(function() {  //click to load comments
+        var disqus_config = function () {
+            this.page.url = 'http://wanghaonanlpc.github.io/2017/02/27/Android-6-0-新的运行时权限-开发者需要知道的一切/index.html';  // Replace PAGE_URL with your page's canonical URL variable
+            this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        };
+        (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document;
+            var s = d.createElement('script');
+            s.src = '//wanghaonanlpc.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', + new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+        $('.btn_click_load').css('display','none');
+    });
+</script>
+  	
+
+    </div>
+    <style>
+        #disqus-comment{
+            background-color: #eee;
+            padding: 2pc;
+        }
+    </style>
+
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+        <a href="/2017/02/27/在Android-6-0-设备上动态获取权限/" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            新篇
+        </a>
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2017/02/26/基于Hexo创建Material主题的博客网站/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
+
+
+                    
+                        <!-- Overlay For Active Sidebar -->
+<div class="sidebar-overlay"></div>
+
+<!-- Material sidebar -->
+<aside id="sidebar" class="sidebar sidebar-colored sidebar-fixed-left" role="navigation">
+    <div id="sidebar-main">
+        <!-- Sidebar Header -->
+        <div class="sidebar-header header-cover" style="background-image: url(/img/sidebar_header.png);">
+    <!-- Top bar -->
+    <div class="top-bar"></div>
+
+    <!-- Sidebar toggle button -->
+    <button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display: initial;" data-upgraded=",MaterialButton,MaterialRipple">
+        <i class="material-icons">clear_all</i>
+        <span class="mdl-button__ripple-container">
+            <span class="mdl-ripple">
+            </span>
+        </span>
+    </button>
+
+    <!-- Sidebar Avatar -->
+    <div class="sidebar-image">
+        <img src="/img/avatar.png" alt="Alex's avatar">
+    </div>
+
+    <!-- Sidebar Email -->
+    <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
+        15208292733@163.com
+        <b class="caret"></b>
+    </a>
+</div>
+
+
+        <!-- Sidebar Navigation  -->
+        <ul class="nav sidebar-nav">
+    <!-- User dropdown  -->
+    <li class="dropdown">
+        <ul id="settings-dropdown" class="dropdown-menu">
+            
+                <li>
+                    <a href="#" target="_blank" title="Email Me">
+                        
+                            <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i>
+                        
+                        Email Me
+                    </a>
+                </li>
+            
+        </ul>
+    </li>
+
+    <!-- Homepage -->
+    
+        <li id="sidebar-first-li">
+            <a href="/" target="_self">
+                
+                    <i class="material-icons sidebar-material-icons">home</i>
+                
+                主页
+            </a>
+        </li>
+        
+    
+
+    <!-- Archives  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">inbox</i>
+                
+                    归档
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+            <li>
+                <a class="sidebar_archives-link" href="/archives/2017/02/">二月 2017<span class="sidebar_archives-count">16</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/05/">五月 2016<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/02/">二月 2016<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2015/07/">七月 2015<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2015/04/">四月 2015<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2014/09/">九月 2014<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2014/01/">一月 2014<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2013/05/">五月 2013<span class="sidebar_archives-count">1</span></a>
+            </ul>
+        </li>
+        
+    
+
+    <!-- Categories  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">chrome_reader_mode</i>
+                
+                分类
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+                <li>
+                <a class="sidebar_archives-link" href="/categories/前端/">前端<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/前端/hexo/">hexo<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/前端/javascript/">javascript<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/移动端/">移动端<span class="sidebar_archives-count">1</span></a>
+            </ul>
+        </li>
+        
+    
+
+    <!-- Pages  -->
+    
+        <li>
+            <a href="/about" title="About">
+                
+                    <i class="material-icons sidebar-material-icons">person</i>
+                
+                About
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/links" title="Links">
+                
+                    <i class="material-icons sidebar-material-icons">link</i>
+                
+                Links
+            </a>
+        </li>
+        
+    
+
+    <!-- Article Number  -->
+    
+        <li>
+            <a href="/archives">
+                文章总数
+                <span class="sidebar-badge">23</span>
+            </a>
+        </li>
+        
+    
+</ul>
+
+
+        <!-- Sidebar Footer -->
+        <!--
+I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright, I will thank you so much.
+If you still want to delete the copyrights, could you still retain the first one? Which namely "Theme Material"
+It will not impact the appearance and can give developers a lot of support :)
+
+很高兴您使用并喜欢该主题，开发不易 十分谢谢与希望您可以保留一下版权声明。
+如果您仍然想删除的话 能否只保留第一项呢？即 "Theme Material"
+它不会影响美观并可以给开发者很大的支持和动力。 :)
+-->
+
+<!-- Sidebar Divider -->
+
+    <div class="sidebar-divider"></div>
+
+
+<!-- Theme Material -->
+
+    <a href="https://github.com/viosey/hexo-theme-material"  class="sidebar-footer-text-a" target="_blank">
+        <div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div" data-upgraded=",MaterialButton,MaterialRipple">
+            主题 - Material
+            <span class="sidebar-badge badge-circle">i</span>
+        </div>
+    </a>
+
+
+<!-- Help & Support -->
+<!--
+
+    <a href="mailto:hiviosey@gmail.com" class="sidebar-footer-text-a">
+        <div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div" data-upgraded=",MaterialButton,MaterialRipple">
+        sidebar.help
+        <span class="mdl-button__ripple-container">
+          <span class="mdl-ripple"></span>
+        </span>
+      </div>
+    </a>
+
+-->
+
+<!-- Feedback -->
+<!--
+
+    <a href="https://github.com/viosey/hexo-theme-material/issues" target="_blank" class="sidebar-footer-text-a">
+        <div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div" data-upgraded=",MaterialButton,MaterialRipple">
+        sidebar.feedback
+        <span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></div>
+    </a>
+
+-->
+
+<!-- About Theme -->
+<!--
+
+    <a href="https://blog.viosey.com/index.php/Material.html" target="_blank" class="sidebar-footer-text-a">
+        <div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div" data-upgraded=",MaterialButton,MaterialRipple">
+             sidebar.about_theme
+            <span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></div>
+    </a>
+
+-->
+
+    </div>
+
+    <!-- Sidebar Image -->
+    
+
+</aside>
+
+                    
+
+                    
+                        <!-- Footer Top Button -->
+                        <div class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
+
+                    
+
+                    <!--Footer-->
+<footer class="mdl-mini-footer" id="bottom">
+    
+        <!-- Paradox Footer Left Section -->
+        <div class="mdl-mini-footer--left-section sns-list">
+    <!-- Twitter -->
+    
+        <a href="https://twitter.com/_wanghaonanlpc" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn" style="background-image: url(/img/footer/footer_ico-twitter.png);">
+                <span class="visuallyhidden">Twitter</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Facebook -->
+    
+        <a href="https://www.facebook.com/profile.php?id=100011481588031" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn" style="background-image: url(/img/footer/footer_ico-facebook.png);">
+                <span class="visuallyhidden">Facebook</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Google + -->
+    
+        <a href="https://plus.google.com/u/0/104162583407619782102" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn" style="background-image: url(/img/footer/footer_ico-gplus.png);">
+                <span class="visuallyhidden">Google Plus</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Weibo -->
+    
+        <a href="http://weibo.com/2123136342/profile?topnav=1&amp;wvr=6" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn" style="background-image: url(/img/footer/footer_ico-weibo.png);">
+                <span class="visuallyhidden">Weibo</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Instagram -->
+    
+        <a href="https://www.instagram.com/wanghaonanlpc/" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn" style="background-image: url(/img/footer/footer_ico-instagram.png);">
+                <span class="visuallyhidden">Instagram</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Tumblr -->
+    
+        <a href="https://www.tumblr.com/" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn" style="background-image: url(/img/footer/footer_ico-tumblr.png);">
+                <span class="visuallyhidden">Tumblr</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Github -->
+    
+        <a href="https://github.com/wanghaonanlpc" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn" style="background-image: url(/img/footer/footer_ico-github.png);">
+                <span class="visuallyhidden">Github</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- LinkedIn -->
+    
+
+    <!-- Zhihu -->
+    
+        <a href="https://www.zhihu.com/people/wanghaonanlpc" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn" style="background-image: url(/img/footer/footer_ico-zhihu.png);">
+                <span class="visuallyhidden">Zhihu</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Bilibili -->
+    
+        <a href="http://www.bilibili.com/" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn" style="background-image: url(/img/footer/footer_ico-bilibili.png);">
+                <span class="visuallyhidden">Bilibili</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Telegram -->
+    
+        <a href="https://telegram.org/" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn" style="background-image: url(/img/footer/footer_ico-telegram.png);">
+                <span class="visuallyhidden">Telegram</span>
+            </button><!--
+     --></a>
+    
+</div>
+
+
+        <!--Copyright-->
+        <div id="copyright">
+            Copyright&nbsp;©&nbsp;
+            <script type="text/javascript">
+                var fd = new Date();
+                document.write(fd.getFullYear());
+            </script>
+            &nbsp;一个老白 | 野厨
+        </div>
+
+        <!-- Paradox Footer Right Section -->
+
+        <!--
+        I am glad you use this theme, the development is no so easy, I hope you can keep the copyright.
+        It will not impact the appearance and can give developers a lot of support :)
+
+        很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
+        它不会影响美观并可以给开发者很大的支持。 :)
+        -->
+
+        <div class="mdl-mini-footer--right-section">
+            <div>
+                <div class="footer-develop-div">Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a></div>
+                <div class="footer-develop-div">Theme - <a href="https://github.com/viosey/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a></div>
+            </div>
+        </div>
+    
+</footer>
+
+
+                    <!-- Import File -->
+<script src="/js/lazyload.min.js"></script>
+<script src="/js/js.min.js"></script>
+<script src="/js/nprogress.js"></script>
+
+<script type="text/javascript">
+    NProgress.configure({
+        showSpinner: true
+    });
+    NProgress.start();
+    $('#nprogress .bar').css({
+        'background': '#29d'
+    });
+    $('#nprogress .peg').css({
+        'box-shadow': '0 0 10px #29d, 0 0 15px #29d'
+    });
+    $('#nprogress .spinner-icon').css({
+        'border-top-color': '#29d',
+        'border-left-color': '#29d'
+    });
+    setTimeout(function() {
+        NProgress.done();
+        $('.fade').removeClass('out');
+    }, 800);
+</script>
+
+
+
+    <script src="/js/smoothscroll.js"></script>
+
+
+
+    <!-- Leancloud -->
+    <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+    <script>
+        AV.initialize('VadYH9itW5BSteJpvBD6W2p1-gzGzoHsz', 'w8vi528umHoqY2e41U6MAW0c');
+    </script>
+    <script>
+    function showTime(Counter) {
+        var query = new AV.Query(Counter);
+        $('.leancloud-views_num').each(function() {
+            var url = $(this).attr('id').trim();
+            query.equalTo('url', url);
+            query.find({
+                success: function(results) {
+                    if (results.length === 0) {
+                        var content = '0 ' + $(document.getElementById(url)).text();
+                        $(document.getElementById(url)).text(content);
+                        return;
+                    }
+                    for (var i = 0; i < results.length; i++) {
+                        var object = results[i];
+                        var content = object.get('time') + ' ' + $(document.getElementById(url)).text();
+                        $(document.getElementById(url)).text(content);
+                    }
+                },
+                error: function(object, error) {
+                    console.log('Error: ' + error.code + ' ' + error.message);
+                }
+            });
+        });
+    }
+
+    function addCount(Counter) {
+      var Counter = AV.Object.extend('Counter');
+      url = $('.leancloud-views_num').attr('id').trim();
+      title = $('.leancloud-views_num').attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+      query.equalTo('url', url);
+      query.find({
+          success: function(results) {
+            if (results.length > 0) {
+                var counter = results[0];
+                counter.fetchWhenSave(true);
+                counter.increment('time');
+                counter.save(null, {
+                    success: function(counter) {
+                        var content =  counter.get('time') + ' ' + $(document.getElementById(url)).text();
+                        $(document.getElementById(url)).text(content);
+                    },
+                    error: function(counter, error) {
+                        console.log('Failed to save Visitor num, with error message: ' + error.message);
+                    }
+                });
+            } else {
+              var newcounter = new Counter();
+              newcounter.set('title', title);
+              newcounter.set('url', url);
+              newcounter.set('time', 1);
+              newcounter.save(null, {
+                  success: function(newcounter) {
+                      console.log('newcounter.get(\'time\')='+newcounter.get('time'));
+                      var content = newcounter.get('time') + ' ' + $(document.getElementById(url)).text();
+                      $(document.getElementById(url)).text(content);
+                  },
+                  error: function(newcounter, error) {
+                      console.log('Failed to create');
+                  }
+              });
+            }
+        },
+        error: function(error) {
+            console.log('Error:' + error.code + ' ' + error.message);
+        }
+      });
+    }
+    $(function() {
+        var Counter = AV.Object.extend('Counter');
+        if ($('.leancloud-views_num').length === 1) {
+            addCount(Counter);
+        } else if ($('.post-title-link').length > 1) {
+            showTime(Counter);
+        }
+    });
+</script>
+
+
+
+
+    <!-- Busuanzi -->
+    <script src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+
+
+
+<!-- Swiftye -->
+
+
+<!-- Local Search-->
+
+    <script>
+    var searchFunc = function(path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: 'xml',
+            success: function( xmlResponse ) {
+                // get the contents from search data
+                var datas = $( 'entry', xmlResponse ).map(function() {
+                    return {
+                        title: $( 'title', this ).text(),
+                        content: $('content',this).text(),
+                        url: $( 'url' , this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function() {
+                    var str='<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = '';
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function(data) {
+                        var isMatch = true;
+                        var content_index = [];
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g,'').toLowerCase();
+                        var data_url = data.url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if(data_title !== '' && data_content !== '') {
+                            keywords.forEach(function(keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if( index_title < 0 && index_content < 0 ) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += '<li><a href="'+ data_url +'" class="search-result-title" target="_blank">'+ data_title;
+                            var content = data.content.trim().replace(/<[^>]+>/g, '');
+                            if (first_occur >= 0) {
+                                // cut out characters
+                                var start = first_occur - 6;
+                                var end = first_occur + 6;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 10;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function(keyword) {
+                                    var regS = new RegExp(keyword, 'gi');
+                                    match_content = match_content.replace(regS, '<em class="search-keyword">'+keyword+'</em>');
+                                })
+                                str += '<p class="search-result">' + match_content + '...</p>' +'</a>';
+                            }
+                        }
+                    });
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    }
+</script>
+
+
+    <script>
+        var inputArea = document.querySelector('#search');
+        var getSearchFile = function() {
+            var path = 'search.xml';
+            searchFunc(path, 'search', 'local-search-result');
+        }
+
+        if(inputArea) {
+            inputArea.onfocus = function() {
+                getSearchFile();
+            }
+        }
+    </script>
+
+
+<!-- Window Load-->
+<script>
+    $(window).load(function() {
+        // Post_Toc parent position fixed
+        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
+    });
+</script>
+
+<!-- MathJax Load-->
+
+
+                </main>
+            </div>
+        </body>
+    
+</html>

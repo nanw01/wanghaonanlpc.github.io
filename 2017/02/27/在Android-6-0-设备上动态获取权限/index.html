@@ -10,7 +10,7 @@
     
     <title>
         
-            支持NFC的手机（2016） | 
+            在Android 6.0 设备上动态获取权限 | 
         
         一个老白 | 野厨
     </title>
@@ -27,7 +27,7 @@
     <meta name="theme-color" content="#0097A7">
     <meta name="author" content="Alex">
     <meta name="description" content="null">
-    <meta name="keywords" content="null,NFC,android">
+    <meta name="keywords" content="null">
 
     <!--iOS -->
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
@@ -48,9 +48,9 @@
     <!-- The Open Graph protocol -->
     <meta property="og:url" content="http://wanghaonanlpc.github.io">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="支持NFC的手机（2016） | 一个老白 | 野厨">
+    <meta property="og:title" content="在Android 6.0 设备上动态获取权限 | 一个老白 | 野厨">
     <meta property="og:description" content="null">
-    <meta property="og:article:tag" content="NFC"> <meta property="og:article:tag" content="android"> 
+    
 
     <!--[if lte IE 9]>
         <link rel="stylesheet" href="/css/ie-blocker.css">
@@ -234,7 +234,7 @@
     </button>
 
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#华为"><span class="post-toc-number">1.</span> <span class="post-toc-text">华为</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#荣耀"><span class="post-toc-number">2.</span> <span class="post-toc-text">荣耀</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#小米"><span class="post-toc-number">3.</span> <span class="post-toc-text">小米</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#三星"><span class="post-toc-number">4.</span> <span class="post-toc-text">三星</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#OPPO"><span class="post-toc-number">5.</span> <span class="post-toc-text">OPPO</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#vivo"><span class="post-toc-number">6.</span> <span class="post-toc-text">vivo</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#LG"><span class="post-toc-number">7.</span> <span class="post-toc-text">LG</span></a></li></ol>
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#在Android-6-0-设备上动态获取权限"><span class="post-toc-number">1.</span> <span class="post-toc-text">在Android 6.0 设备上动态获取权限</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#实现拨号功能"><span class="post-toc-number">1.0.1.</span> <span class="post-toc-text">实现拨号功能</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#问题"><span class="post-toc-number">1.0.2.</span> <span class="post-toc-text">问题</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#权限动态分配"><span class="post-toc-number">1.0.3.</span> <span class="post-toc-text">权限动态分配</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#解决方案"><span class="post-toc-number">1.0.4.</span> <span class="post-toc-text">解决方案</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#有用的链接"><span class="post-toc-number">1.0.5.</span> <span class="post-toc-text">有用的链接</span></a></li></ol></li></ol></li></ol>
 
         <!--
         <li class="mdl-menu__item">
@@ -270,7 +270,7 @@
         
     
             <p class="article-headline-p">
-                支持NFC的手机（2016）
+                在Android 6.0 设备上动态获取权限
             </p>
         </div>
 
@@ -289,7 +289,7 @@
     <!-- Author Name & Date -->
     <div>
         <strong>Alex</strong>
-        <span>2月 24, 2017</span>
+        <span>2月 27, 2017</span>
     </div>
 
     <div class="section-spacer"></div>
@@ -310,7 +310,7 @@
         </button>
         <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button">
             <li class="mdl-menu__item">在其它设备中阅读本文章</li>
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPYAAAD2CAAAAADAeSUUAAACzklEQVR42u3aUW7jMAwE0Nz/0tsDFElmKG2bSk9fQWDHei5Qghw9/l25HtjY2NjY2NjY2NgfyX7EK7/r+zXPvvn+m8+esmHP2NjY2Eez3/zrf7nRdVhy7/qesbGxsW9gvy5FyTWv7329ueSlzPaMjY2NjZ1ck1w5+/32KdjY2NjYybbyxiDaUHwNNjY2Nvb6UGkWBswakqSA/dAsDRsbG/vj2Sttw299/tF8GxsbG/uD2e3atfU8AM6L1pudY2NjYx/KzgtDftRmnZEPqoqGBxsbG/sCdltyZsd32tWGCk/3jI2NjX00e/0BbUFKCuQs3K1nadjY2Nh/nJ2Xrpw6K4FtE1LvHxsbG/tQ9qw41QOd0YHOtpRuqNvY2NjYf5y90k7k2x2Wn+XoFxsbG/tU9tLAPWbMClUbKmBjY2PfyZ6RksLTvsRZE1KUW2xsbOwL2O0BnbzxaNuP/KUX4TE2Njb2Bezo5nKQlLQWefTbvkpsbGzsG9jtVvJIuB36zEraMOjFxsbGPoidtxmzYzez4VE+9spHTtjY2NinslfGNG0QOxtgzcpVkW9jY2NjH8duj+DMotwNBaltWrCxsbGPZuchQVJgVlqRPCreUMCwsbGxj2O3G20L2GyANWtasLGxsW9jJ7w8EmiDhDzuXRmBYWNjY5/KzkczK4P+dvSfhMF1tIyNjY19MTsf9+8KBv5HO4SNjY19AzvfxKyotIc723I4bEWwsbGxj2MnbUk7Qmrj4dl684fBxsbGPpTdrtnof+WaXXEvNjY29qnsWXnIC94M2X6OnoiNjY19NHsvKR8/5eFxO2zCxsbGvpPdDomSeCBpRdpmY1ZusbGxsbHXX0F7+DJ54raTStjY2NgXszdvrjzKkzQn2NjY2PewZ4Oh9ps2Nh42HtjY2NiXsfOfnkUFeRPSNiRLrQg2Njb2Eex7FjY2NjY2NjY2NvbHrC9jxQttGZ+GQQAAAABJRU5ErkJggg==">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQ4AAAEOCAAAAABd2qZ5AAADiklEQVR42u3aS27cMBAFQN//0sk2QDDye92krUVxZcgDiSwtWv35+mP9s74Q4MCBAwcOHDhw4MDxYo6veP3/+093eL7+/9Pzvz9dmZ0FBw4cOHDc4/gmFD1yJNeff/O8n/ZV5WfBgQMHDhy3OfLHtGE1D5YJXLLP4iw4cODAgeNXOdogl4TeWVjNPwhw4MCBA8ebOfKD3SDIUzgcOHDgwPEGjk3BLk+xTnG/olaKAwcOHDgODTS8+e9fmO/AgQMHDhyLlRcB22QvD7dJobA4EQ4cOHDgOMrxPMo2C7ftAESSkkUhczSohwMHDhw4znLsafaNpTxUz8YdhikcDhw4cOBYcOQHeA5as3GHHPRsGwwHDhw4cNzgaJOuTRkxRzyVNEbFRxw4cODAcZQj2ejZVlOSHLaH37SpcODAgQPHDY79iEMeGluUYugt+Dg4PCqHAwcOHDjK4uCmzNcOds/aTu0vceDAgQPHbY5Ng6dNn/Yp36w99k0ZEQcOHDhwXOBIgla+0dk43Qa9/XTAgQMHDhz3OGZtpFmQPtVGmpUvP/4XBw4cOHBc5kgaQhu+/f1PtaBw4MCBA8c9jlka1hb19oXIWeI37MLhwIEDB45DHO22Nq2pWQuq3RUOHDhw4HgDx6lCYZuwtWNws5CPAwcOHDjuceSbaI+a36Hl3tPjwIEDB47bHEm4zcPwfvhgNgzXBmYcOHDgwHGPoy205YGz5cuTtDapi4qDOHDgwIFjzdEmTskD8vJccrz8hc0+C3DgwIEDx1mOfPgsT+3aX7ZjDfnriQI8Dhw4cOA4ytEeexOAZ4Fzk7bhwIEDB46f52gTrU3CNhuJaFHqYQscOHDgwHGUY99Y2g8ZtPfMQ2k90IADBw4cONYcm8bSM1bbatoQP+/hm08EHDhw4MBxlKMNb8n1WfEueTH5i8zDOQ4cOHDguMGxeXAS5PLQ2CZ7X+XCgQMHDhw/w5GvuqlThsA2DUvaYHXbCQcOHDhwLDjaEDU7Rp6Y5QT7YT4cOHDgwHGPY7a5PG1LAmSSzrXXV5ODOHDgwIHjR4awk/A8226L2H4cfHwKDhw4cOD4VY68/dM2sU61suoyIg4cOHDgeAFHnSaVd5sVBGehHQcOHDhw3OPIg1abkuVw+XPz1PFi2wkHDhw4cBwaaGibUrOBudm4Q5tY4sCBAweOsxwWDhw4cODAgQMHDhw4Xrb+AhEy3j+6ybbPAAAAAElFTkSuQmCC">
         </ul>
     
 
@@ -322,7 +322,7 @@
     </button>
     <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
         <li class="mdl-menu__item">
-        <a class="post_tag-link" href="/tags/NFC/">NFC</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/android/">android</a>
+        
     </ul>
     
 
@@ -336,7 +336,7 @@
     <!-- Leancloud Views -->
         <a class="post_share-link" href="#">
             <li class="mdl-menu__item">
-                <span id="/2017/02/24/支持NFC的手机（2016）/" class="leancloud-views_num" data-flag-title="支持NFC的手机（2016）">
+                <span id="/2017/02/27/在Android-6-0-设备上动态获取权限/" class="leancloud-views_num" data-flag-title="在Android 6.0 设备上动态获取权限">
      &nbsp;浏览量
 </span>
 
@@ -359,7 +359,7 @@
 
     <!-- Share Weibo -->
     
-        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=支持NFC的手机（2016）&url=http://wanghaonanlpc.github.io//2017/02/24/支持NFC的手机（2016）/index.html&pic=&searchPic=false&style=simple" target="_blank">
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=在Android 6.0 设备上动态获取权限&url=http://wanghaonanlpc.github.io//2017/02/27/在Android-6-0-设备上动态获取权限/index.html&pic=&searchPic=false&style=simple" target="_blank">
             <li class="mdl-menu__item">
                 分享到微博
             </li>
@@ -368,7 +368,7 @@
 
     <!-- Share Twitter -->
     
-        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=支持NFC的手机（2016）&url=http://wanghaonanlpc.github.io//2017/02/24/支持NFC的手机（2016）/index.html&via=Alex" target="_blank">
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=在Android 6.0 设备上动态获取权限&url=http://wanghaonanlpc.github.io//2017/02/27/在Android-6-0-设备上动态获取权限/index.html&via=Alex" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Twitter
             </li>
@@ -377,7 +377,7 @@
 
     <!-- Share Facebook -->
     
-        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://wanghaonanlpc.github.io//2017/02/24/支持NFC的手机（2016）/index.html" target="_blank">
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://wanghaonanlpc.github.io//2017/02/27/在Android-6-0-设备上动态获取权限/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Facebook
             </li>
@@ -386,7 +386,7 @@
 
     <!-- Share Google+ -->
     
-        <a class="post_share-link" href="https://plus.google.com/share?url=http://wanghaonanlpc.github.io//2017/02/24/支持NFC的手机（2016）/index.html" target="_blank">
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://wanghaonanlpc.github.io//2017/02/27/在Android-6-0-设备上动态获取权限/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Google+
             </li>
@@ -398,7 +398,7 @@
 
     <!-- Share QQ -->
     
-        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=一个老白 | 野厨&title=支持NFC的手机（2016）&summary=null&pics=http://wanghaonanlpc.github.io/img/favicon.png&url=http://wanghaonanlpc.github.io/2017/02/24/支持NFC的手机（2016）/index.html" target="_blank">
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=一个老白 | 野厨&title=在Android 6.0 设备上动态获取权限&summary=null&pics=http://wanghaonanlpc.github.io/img/favicon.png&url=http://wanghaonanlpc.github.io/2017/02/27/在Android-6-0-设备上动态获取权限/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 QQ
             </li>
@@ -416,16 +416,41 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <h4 id="华为"><a href="#华为" class="headerlink" title="华为"></a>华为</h4><p>华为Mate 9(64GB/全网通)<br>华为Mate S臻逸版(128GB/双4G)<br>华为Mate S压感屏版(128GB/电信4G)<br>华为Mate S臻享版(64GB/移动4G)<br>华为Mate S臻享版(32GB/电信4G)<br>华为Mate 8(64GB/全网通)<br>华为Mate 8(32GB/全网通)<br>华为Mate 8(64GB/电信4G)<br>华为Mate 8(32GB/电信4G)<br>华为Mate 8(32GB/移动4G)<br>华为Mate S臻享版(64GB/电信4G)<br>华为Mate S臻享版(64GB/双4G)<br>华为Nexus 7(移动4G)<br>华为Mate 7标准版(16GB/移动4G)</p>
-<h4 id="荣耀"><a href="#荣耀" class="headerlink" title="荣耀"></a>荣耀</h4><p>荣耀V9标准版(64GB/全网通)<br>荣耀V9尊享版(128GB/全网通)<br>荣耀V9高配版(64GB/全网通)<br>荣耀8吴亦凡定制版(64GB/全网通)<br>荣耀8(32GB/双4G)<br>荣耀8高配版(32GB/全网通)<br>荣耀8高配版(64GB/全网通)<br>荣耀7超女定制版(64GB/全网通)<br>荣耀8(32GB/全网通)<br>荣耀V8(32GB/全网通)<br>荣耀畅玩4C 增强版(16GB/电信4G)<br>荣耀畅玩5X Plus(64GB/移动4G)<br>荣耀7(16GB/双4G)<br>荣耀7(16GB/电信4G)<br>荣耀7(64GB/全网通)<br>荣耀畅玩4C 标准版(8GB/电信4G)<br>荣耀6(32GB/移动4G)<br>荣耀6(16GB/移动4G)<br>荣耀6(16GB/联通4G)</p>
-<h4 id="小米"><a href="#小米" class="headerlink" title="小米"></a>小米</h4><p>小米MIX(128GB/全网通)<br>小米5S(64GB/全网通)<br>小米5(32GB/全网通)<br>小米5S Plus(64GB/全网通)<br>小米5S(32GB/全网通)<br>小米5高配版(64GB/全网通)<br>小米5S Plus(128GB/全网通)<br>小米5S(128GB/全网通)<br>小米5尊享版(128GB/全网通)<br>小米Max(32GB/全网通)<br>小米MIX尊享版(256GB/全网通)<br>小米5尊享3D玻璃版(128GB/全网通)</p>
-<h4 id="三星"><a href="#三星" class="headerlink" title="三星"></a>三星</h4><p>三星GALAXY S7 Edge皇帝版(128GB/全网通)<br>三星GALAXY C9 Pro(64GB/全网通)<br>三星GALAXY S7 Edge奥运典藏版(32GB/全网通)<br>三星GALAXY S7 Edge蝙蝠侠特别版(32GB/全网通)<br>三星2016版GALAXY J7(16GB/电信4G)<br>三星GALAXY S7 Edge(64GB/全网通)<br>三星GALAXY Note 5(64GB/全网通)<br>三星2016版Galaxy A5(16GB/移动4G)<br>三星GALAXY S7移动定制(32GB/移动4G)<br>三星GALAXY A9高配版(32GB/全网通)<br>三星2016版GALAXY J7(16GB/双4G)<br>三星2016版GALAXY J5(16GB/双4G)<br>三星2016版Galaxy A5(16GB/全网通)</p>
-<p>三星GALAXY Note 7(64GB/全网通)<br>三星GALAXY A8升级版(32GB/移动4G)<br>三星SM-A310(16GB/全网通)<br>三星SM-A510(16GB/移动4G)<br>三星GALAXY S7 Edge(32GB/全网通)<br>三星Galaxy S6 Edge+(64GB/全网通)<br>三星Galaxy S6 Edge+(32GB/全网通)<br>三星GALAXY A8(32GB/全网通)<br>三星GALAXY S6 Mini(16GB/移动4G)<br>三星Project Zero 2(移动4G)<br>三星G430(移动4G)<br>三星GALAXY S6 Edge(64GB/全网通)<br>三星GALAXY S7(32GB/全网通)<br>三星GALAXY S6(32GB/电信4G)<br>三星GALAXY A8(16GB/全网通)<br>三星2016版Galaxy A9(32GB/全网通)</p>
-<p>三星Galaxy S6 Active(移动4G)<br>三星GALAXY J3(8GB/电信4G)<br>三星GALAXY J5(16GB/移动4G)<br>三星GALAXY J7(16GB/移动4G)<br>三星GALAXY S6(32GB/移动4G)<br>三星GALAXY S6 Edge(32GB/全网通)<br>三星GALAXY Note 5(32GB/全网通)<br>三星W2015(16GB/电信4G)<br>三星GALAXY Note 4公开版(16GB/双4G)<br>三星Galaxy Note Edge(64GB/双4G)<br>三星GALAXY Note 4(16GB/联通4G)<br>三星GALAXY Note 4 N9109W(16GB/电信4G)<br>三星GALAXY S5 G9009W(16GB/电信4G)<br>三星GALAXY S6(32GB/全网通)<br>三星GALAXY S5 G9008W(16GB/移动4G)<br>三星GALAXY S5 G9008V(16GB/移动4G)</p>
-<p>三星GALAXY S5 G9009D(16GB/电信3G)<br>三星GALAXY Note 4(16GB/移动4G)<br>三星GALAXY S5 G9006V(16GB/联通4G)<br>三星N9006 Galaxy Note 3(64GB/联通3G)<br>三星GALAXY S4 粉色版<br>三星GALAXY S4 棕色版<br>三星GALAXY S4 I9500(64GB/联通3G)</p>
-<h4 id="OPPO"><a href="#OPPO" class="headerlink" title="OPPO"></a>OPPO</h4><p>OPPO A37(16GB/全网通)<br>OPPO Find 9<br>OPPO N3(32GB/移动4G)<br>OPPO N1 Mini(16GB/移动4G)<br>OPPO N3(32GB/双4G)<br>OPPO N1 Mini(16GB/联通4G)</p>
-<h4 id="vivo"><a href="#vivo" class="headerlink" title="vivo"></a>vivo</h4><p>vivo Xplay 5美国队长定制版(128GB/全网通)<br>vivo Xplay 5旗舰版(128GB/全网通)<br>vivo X5Pro V(16GB/电信4G)<br>vivo X5Pro D 3G运存版(16GB/双4G)<br>vivo Xplay3S X520A(32GB/双4G)</p>
-<h4 id="LG"><a href="#LG" class="headerlink" title="LG"></a>LG</h4><p>LG X300(16GB/双4G)<br>LG G4 DUAL皮质版(32G/移动4G)<br>LG V20(64GB/双4G)<br>LG G5 Lite(32GB/移动4G)<br>LG H740<br>LG G4s(8GB/移动4G)<br>LG V10(64GB/双4G)<br>LG G4国际版(32GB/双4G)<br>LG G4 Stylus(4G版)<br>LG VW820(移动4G)<br>LG G3 Beat D729(8GB/电信4G)<br>LG G4(32GB/电信4G)<br>LG G3 D859(32GB/电信3G)<br>LG G3 D858(32GB/移动4G)<br>LG G2 D820(16GB/电信3G)<br>LG G2(16GB/联通3G)<br>LG G2(32GB/联通3G)</p>
+        <h1 id="在Android-6-0-设备上动态获取权限"><a href="#在Android-6-0-设备上动态获取权限" class="headerlink" title="在Android 6.0 设备上动态获取权限"></a>在Android 6.0 设备上动态获取权限</h1><p>众所周知，Android 6.0 相比之前的Android版本有一个很大的不同点，就是动态获取权限。最近要修改原来的程序适配安卓6.0+。以记录下在Android 6.0 上如何动态获取权限。</p>
+<p>下面从自己一开始的问题入手</p>
+<h3 id="实现拨号功能"><a href="#实现拨号功能" class="headerlink" title="实现拨号功能"></a>实现拨号功能</h3><p>说到拨号，一个 Intent 就搞定，代码如下，</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">private void callDirectly(String mobile)&#123;</div><div class="line">     Intent intent = new Intent();</div><div class="line">     intent.setAction(&quot;android.intent.action.CALL&quot;);</div><div class="line">     intent.setData(Uri.parse(&quot;tel:&quot; + mobile));</div><div class="line">     mContext.startActivity(intent);</div><div class="line"> &#125;</div></pre></td></tr></table></figure>
+<p>当然 你可别忘了在 Manifest 文件中去声明拨号的权限</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;uses-permission android:name=&quot;android.permission.CALL_PHONE&quot; /&gt;</div></pre></td></tr></table></figure>
+<h3 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h3><p>如果在 Android 6.0 以前的设备上，上面的代码都是没有问题的，但是如果是在 Android 6.0 设备上，并且项目的 targetSdkVersion 你设置的是23，那么 当你执行上面的拨号代码时，程序将会奔溃掉。</p>
+<p>此时你肯定想到了 如果 targetSdkVersion 值设置的小于23是不是就不会奔溃了，恩，确实如此， 此时即使使用Android6.0的设备，程序也不会奔溃，原因显而易见，Android 的权限机制是 Android M 后才加入的。从 Android M 开始 应用程序申请的权限是在运行时动态赋给用户的。</p>
+<p>关于动态分配权限，一些同学可能不是很清楚。这里稍稍提一下 Android 6.0 的权限动态分配。 如果你只对最终的解决方案感兴趣，可以跳过下面这节，直接去看解决方案</p>
+<h3 id="权限动态分配"><a href="#权限动态分配" class="headerlink" title="权限动态分配"></a>权限动态分配</h3><p>在 Android6.0 之前，下载好一个应用程序，点击安装我们看到的大都是像这样的界面。</p>
+<p><a href="http://obbu6r1mi.bkt.clouddn.com/android_m_install.jpg" target="_blank" rel="external"><img src="http://obbu6r1mi.bkt.clouddn.com/android_m_install.jpg" alt="img"></a></p>
+<p>上图分别是Nexus6和小米手机在安装软件时的界面。</p>
+<p>在安装时你会发现，手机操作系统会提示，这个软件会索要了你手机的那些权限，并且给用一个列表进行展示，但是这些提示只是在安装是提示，只要你点击接受或者安装， 表示你允许这个应用在可以获取它申明的所有权限。一般很少有人在安装时，会因为看到某个应用因为申请了某一个敏感权限而放弃安装应用。因为这个权限虽然敏感， 但是对于当前的用户是不可感知的，因为他现在并没有立即去查看你的最近通话、短信记录…</p>
+<p>说到这里，我们自然而然的会想到，其实最好的方式是，当这个应用在用户使用过程中，正准备使用某个权限时，比如说读取短信列表，系统能及时的弹出一个提示框，说这个应用要读取您的短信内容， 您是否允许。然后用户结合当前应用的执行动作，依据当前条件判断，是不是应该授予应用读取短信记录的权限。这绝对的最完美的。 因为在具体的使用过程中，用户可以结合当前应用的使用场景，去思考、判断是不是应该给这个应用相应的权限。不给能怎样，给了会怎样， 这样对用户而言，完全是主动的，相比安装时那种选择，这样的做法无疑是对用户莫大的尊重，同时这也保证了用户的个人隐私。</p>
+<p>说到这里，不得不插一句，其实 MIUI 早就实现了这个系统特性，在这一点上 MIUI 确实走到了 Android团队的前面，恩，给 MIUI 点个赞。</p>
+<p>然而直到 Android 6.0 这个版本开始，上面的假设终于得到了谷歌的实践，除了在应用安装时，操作系统会提示应用会获取那些权限，在运行过程中，当应用去真的获取一些敏感 权限时，系统还会弹出一个提示框，询问用户是不是授予应用相应的权限。如下图所示。</p>
+<p><a href="http://obbu6r1mi.bkt.clouddn.com/android_m_sms.jpeg" target="_blank" rel="external"><img src="http://obbu6r1mi.bkt.clouddn.com/android_m_sms.jpeg" alt="img"></a></p>
+<p>这就是 Android 6.0 的运行时权限检查机制。下面是Google官方对此的解释，只截取介绍部分</p>
+<blockquote>
+<p>Beginning in Android 6.0 (API level 23), users grant permissions to apps while the app is running, not when they install the app. This approach streamlines the app install process, since the user does not need to grant permissions when they install or update the app. It also gives the user more control over the app’s functionality; for example, a user could choose to give a camera app access to the camera but not to the device location. The user can revoke the permissions at any time, by going to the app’s Settings screen.</p>
+</blockquote>
+<h3 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h3><p>其实上面已经说了一种取巧的方案，将 targetSdkVersion 设为小于23的值，程序将不会奔溃， 但是在Android 6.0 上你的应用程序依旧拨不了电话，这是真的。所以要想兼容6.0版本，必须通过下面的方式进行代码层面的兼容。</p>
+<p>对Android版本做判断，然后对Android 6.0 做特殊处理，代码如下</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">final public static int REQUEST_CODE_ASK_CALL_PHONE = 123;</div><div class="line"></div><div class="line">public void onCall(String mobile)&#123;</div><div class="line">       this.mMobile = mobile;</div><div class="line">       if (Build.VERSION.SDK_INT &gt;= 23) &#123;</div><div class="line">           int checkCallPhonePermission = ContextCompat.checkSelfPermission(mContext,Manifest.permission.CALL_PHONE);</div><div class="line">           if(checkCallPhonePermission != PackageManager.PERMISSION_GRANTED)&#123;</div><div class="line">               ActivityCompat.requestPermissions(mContext,new String[]&#123;Manifest.permission.CALL_PHONE&#125;,REQUEST_CODE_ASK_CALL_PHONE);</div><div class="line">               return;</div><div class="line">           &#125;else&#123;</div><div class="line">               //上面已经写好的拨号方法</div><div class="line">               callDirectly(mobile);</div><div class="line">           &#125;</div><div class="line">       &#125; else &#123;</div><div class="line">           //上面已经写好的拨号方法</div><div class="line">           callDirectly(mobile);</div><div class="line">       &#125;</div><div class="line">   &#125;</div></pre></td></tr></table></figure>
+<p>此时，如果一个Android6.0的用户触发拨号动作，执行上面的代码，那么他将会看到一个很好看的MaterialDialog，如下图所示。</p>
+<p><a href="http://obbu6r1mi.bkt.clouddn.com/android_m_permission.jpeg" target="_blank" rel="external"><img src="http://obbu6r1mi.bkt.clouddn.com/android_m_permission.jpeg" alt="img"></a></p>
+<p>那么用户点击拒绝或者允许，我们怎么才能拿到回调呢，如果能拿到回调，我们就可以根据用户的选择来执行不同的操作了。</p>
+<p>这里应该会看到在 ActivityCompat 的 requestPermissions 方法中，最后一个参数是一个requestCode，看到它自然而然想到了经常用到的onActivityResult， 这里当执行 ActivityCompat 的 requestPermissions 方法后有一个回调机制，需要我们在当前 Activity 中实现 onRequestPermissionsResult 这个方法，具体如下</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">@Override</div><div class="line">public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) &#123;</div><div class="line">    switch (requestCode) &#123;</div><div class="line">        case REQUEST_CODE_ASK_CALL_PHONE:</div><div class="line">            if (grantResults[0] == PackageManager.PERMISSION_GRANTED) &#123;</div><div class="line">                // Permission Granted</div><div class="line">                callDirectly(mobile);</div><div class="line">            &#125; else &#123;</div><div class="line">                // Permission Denied</div><div class="line">                Toast.makeText(MainActivity.this, &quot;CALL_PHONE Denied&quot;, Toast.LENGTH_SHORT)</div><div class="line">                        .show();</div><div class="line">            &#125;</div><div class="line">            break;</div><div class="line">        default:</div><div class="line">            super.onRequestPermissionsResult(requestCode, permissions, grantResults);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>这里会对提供了一个对用户点击做判断的入口，开发者可以根据 grantResults[0] 的类型，来判断用户点击的是允许还是拒绝，接着就可以执行相应的逻辑了。</p>
+<h3 id="有用的链接"><a href="#有用的链接" class="headerlink" title="有用的链接"></a>有用的链接</h3><p>关于AndroidM上权限的动态获取，这里只给出了一个最简单的示例，如果你还没有尽兴，那么下面这篇国外的博文，一定会让你满足。</p>
+<p><a href="https://inthecheesefactory.com/blog/things-you-need-to-know-about-android-m-permission-developer-edition/en" target="_blank" rel="external">Everything every Android Developer must know about new Android’s Runtime Permission</a></p>
+<p>这篇英文博文内容很长、内容也比较多，十足的干货。您慢用~</p>
+<p>后记：偶然发现已经有哥们把上面的这篇文章做了翻译，真是极好的，这里给大家也摘录过来了，附上<strong>翻译链接</strong>，给翻译者同学点赞，辛苦！</p>
+<p>另外，最近看到一个Github上的开源项目 <a href="https://github.com/k0shk0sh/PermissionHelper" target="_blank" rel="external">PermissionHelper</a> ，专门用于处理 Android 6.0 的权限兼容问题。</p>
 
     
 
@@ -494,7 +519,7 @@
 <script>
     $('.btn_click_load').click(function() {  //click to load comments
         var disqus_config = function () {
-            this.page.url = 'http://wanghaonanlpc.github.io/2017/02/24/支持NFC的手机（2016）/index.html';  // Replace PAGE_URL with your page's canonical URL variable
+            this.page.url = 'http://wanghaonanlpc.github.io/2017/02/27/在Android-6-0-设备上动态获取权限/index.html';  // Replace PAGE_URL with your page's canonical URL variable
             this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
         };
         (function() { // DON'T EDIT BELOW THIS LINE
@@ -524,21 +549,13 @@
             <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
     <!-- Prev Nav -->
     
-        <a href="/2017/02/25/新产品开发过程/" id="post_nav-newer" class="prev-content">
-            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
-                <i class="material-icons">arrow_back</i>
-            </button>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            新篇
-        </a>
-    
 
     <!-- Section Spacer -->
     <div class="section-spacer"></div>
 
     <!-- Next Nav -->
     
-        <a href="/2017/02/22/先给写作者的markdown新手指南/" id="post_nav-older" class="next-content">
+        <a href="/2017/02/27/Android-6-0-新的运行时权限-开发者需要知道的一切/" id="post_nav-older" class="next-content">
             旧篇
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
