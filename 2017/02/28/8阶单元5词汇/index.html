@@ -10,7 +10,7 @@
     
     <title>
         
-            标签: 翻译 | 
+            8阶单元5词汇 | 
         
         一个老白 | 野厨
     </title>
@@ -27,7 +27,7 @@
     <meta name="theme-color" content="#0097A7">
     <meta name="author" content="Alex">
     <meta name="description" content="null">
-    <meta name="keywords" content="null">
+    <meta name="keywords" content="null,EN">
 
     <!--iOS -->
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
@@ -48,9 +48,9 @@
     <!-- The Open Graph protocol -->
     <meta property="og:url" content="http://wanghaonanlpc.github.io">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="标签: 翻译 | 一个老白 | 野厨">
+    <meta property="og:title" content="8阶单元5词汇 | 一个老白 | 野厨">
     <meta property="og:description" content="null">
-    
+    <meta property="og:article:tag" content="EN"> 
 
     <!--[if lte IE 9]>
         <link rel="stylesheet" href="/css/ie-blocker.css">
@@ -208,96 +208,333 @@
                         </button>
                     
 
-                    <!-- Index Module -->
-<div class="material-index mdl-grid">
-    
-    <div class="locate-thumbnail-symbol"></div>
+                    <!-- Post TOC -->
 
-    <!-- Pin on top -->
     
-        
-    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
 
-    <!-- Normal Post -->
-    
+    <!-- Left aligned menu below button -->
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn">
         
-        
-            <!-- Paradox Thumbnail -->
-            <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
+
+        <!--
+        <li class="mdl-menu__item">
+            Some Action
+        </li>
+        -->
+    </ul>
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
     
         
             <!-- Random Thumbnail -->
             <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
+            <script>
+    var randomNum = Math.floor(Math.random() * 19 + 1);
 
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2014/09/22/js-version/">Example Post</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            JavaScript 有着很奇怪的命名史。
-1995 年，它作为网景浏览器（Netscape Navigator）的一部分首次发布，网...
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2014/09/22/js-version/" target="_self">继续阅读</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="Alex's avatar">
-            </div>
-            <div>
-                <strong>Alex</strong>
-                <span>9月 22, 2014</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-            <!-- Category -->
-            <span class="post_entry-category">
-                
-            </span>
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-        
-        
-        
-    
-
-    
-
-    
-        <script>
-    var randomNum;
-
-    var locatePost = $('.locate-thumbnail-symbol').next();
-    for(var i = 0; i < 10; i++) {
-        randomNum = Math.floor(Math.random() * 19 + 1);
-
-        locatePost.children('.post_thumbnail-random').attr('id', 'random_thumbnail-'+randomNum);
-        locatePost.children('.post_thumbnail-random').css('background-image', 'url(' + '/img/random/material-' + randomNum + '.png' + ')')
-
-        locatePost = locatePost.next();
-    }
+    $('.post_thumbnail-random').css('background-image', 'url(' + '/img/random/material-' + randomNum + '.png' + ')');
 </script>
 
+        
+    
+            <p class="article-headline-p">
+                8阶单元5词汇
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/avatar.png" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>Alex</strong>
+        <span>2月 28, 2017</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+        <button id="article-functions-qrcode-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+            <i class="material-icons" role="presentation">devices other</i>
+            <span class="visuallyhidden">devices other</span>
+        </button>
+        <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button">
+            <li class="mdl-menu__item">在其它设备中阅读本文章</li>
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPYAAAD2CAAAAADAeSUUAAAC2UlEQVR42u3awU7kMBAE0Pn/n4YrEppQ5Q4o2M+n0cIkfuZQ291+fRy5XtjY2NjY2NjY2NiPZL/i9fZxX376/fevv/vuW++eP9kzNjY29t7sZFv51t+9/vqArt+1dpTY2NjYp7Hz7d61xWt2cjTJnrGxsbGx10IoL1HqogIbGxsbe8yex9L1G/NQxMbGxsZuGzRJ8ORtqeuoaxtPv9hLw8bGxn48Oy8GnvP5T+fb2NjY2A9mtytpIV0fax5F7XD3h51jY2Njb8rOgyHH562iu4a7UVsKGxsbe1N2MojN20NrW2/jarGxhY2Njb01u23iJyXH2tg4HzbUF4mwsbGxt2avNeXvajNNjjUPYGxsbOzT2JNBbFsw5DGWRxc2Njb2aey7yoBJSdM+s30LNjY29q7sNkiKwCjHw2uFRzFOxsbGxt6UXf+H/qbm/lrZk4+iRxUYNjY29hbsecCsvaU9uOTfsbGxsU9gJ62lPLrmYdYWLdGhYGNjY2/KTl6QRFpylG0ITUa8xXgAGxsbeyN2XmDMWz93jRCKUTE2Njb2puykVbQWcnlhU4RQsOqmEjY2NvY/Z+eASYN+bXiQHFMSk9jY2Nh7s5NWUR4t7aaj4IlXPRXBxsbG3oK9duEmj428yMkLnvbPgI2NjX0CO/9874byyJwXJNjY2NgnsPNGT3sRMz/KtlFVhCg2Njb2Aew1ZI7Py4a1xtYPb8HGxsY+gL1WbORN//aSTTuQvqEUwcbGxt6CPeG1Q9m14EzGDHWAYWNjY/9bdrsm5UTePMrDqShRsLGxsTdlr0XO2nfzz+13o5EwNjY29tbsPHLyoiK/7tOOnPNmEzY2NvZp7DY87iobfmNhY2NjY7dlQD7unTeb2vIGGxsbGzt/dHvhJilU5pd7sLGxsc9hTxo6kzImf34+4sXGxsY+jb12tXESS22x0Y4osLGxsc9hn7OwsbGxsbGxsbGxH7M+AR65w6Z8Brr3AAAAAElFTkSuQmCC">
+        </ul>
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/EN/">EN</a>
+    </ul>
+    
+
+    <!-- Share -->
+    <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+    <!-- Leancloud Views -->
+        <a class="post_share-link" href="#">
+            <li class="mdl-menu__item">
+                <span id="/2017/02/28/8阶单元5词汇/" class="leancloud-views_num" data-flag-title="8阶单元5词汇">
+     &nbsp;浏览量
+</span>
+
+            </li>
+        </a>
+    
+
+    
+        
+            <!-- Busuanzi Views -->
+            <a class="post_share-link" href="#">
+                <li class="mdl-menu__item">
+                    <span id="busuanzi_container_page_pv">
+                        <span id="busuanzi_value_page_pv"></span>&nbsp;浏览量
+                    </span>
+                </li>
+            </a>
+        
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=8阶单元5词汇&url=http://wanghaonanlpc.github.io//2017/02/28/8阶单元5词汇/index.html&pic=&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=8阶单元5词汇&url=http://wanghaonanlpc.github.io//2017/02/28/8阶单元5词汇/index.html&via=Alex" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://wanghaonanlpc.github.io//2017/02/28/8阶单元5词汇/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://wanghaonanlpc.github.io//2017/02/28/8阶单元5词汇/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=一个老白 | 野厨&title=8阶单元5词汇&summary=null&pics=http://wanghaonanlpc.github.io/img/favicon.png&url=http://wanghaonanlpc.github.io/2017/02/28/8阶单元5词汇/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 QQ
+            </li>
+        </a>
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <p>8级 单元 5</p>
+<p>belt    [英式][belt] [美式][belt]    noun    腰带, 皮带<br>blouse    [英式] [blaʊz] [美式] [blaʊs]    noun    女式罩衫<br>cashmere    [英式] [ˈkæʃmɪə(r)] [美式] [ˈkæʒmɪr]    noun    山羊绒<br>disappointed    [英式] [ˌdɪsəˈpɔɪntɪd] [美式] [ˌdɪsəˈpɔɪntɪd]    adj.    感到失望的, 灰心的<br>enthusiastic    [英式][ɪnˌθjuːziˈæstɪk] [美式][ɪnˌθuːziˈæstɪk]    adj.    热情的<br>exquisite    [英式] [ɪkˈskwɪzɪt] [美式] [ɪkˈskwɪzɪt]    adj.    精美<br>genuine    [英式][ˈdʒenjuɪn] [美式][ˈdʒenjuɪn]    adj.    真实的, 纯正的<br>handmade    [英式][ˌhændˈmeɪd] [美式][ˌhændˈmeɪd]    adj.    手工制造<br>neutral    [英式][ˈnjuːtrəl] [美式][ˈnuːtrəl]    adj.    无明显特性的<br>skinny    [英式] [ˈskɪni] [美式] [ˈskɪni]    adj.    枯瘦的,骨瘦如柴的<br>soft    [英式] [sɒft] [美式] [sɔːft]    adj.    柔软的<br>turquoise    [英式] [ˈtɜːkwɔɪz] [美式] [ˈtɜːrkwɔɪz]    noun    蓝绿色<br>unique    [英式] [juˈniːk] [美式] [juˈniːk]    adj.    独一无二的, 独有的, 独特的<br>blend    [英式] [blend] [美式] [blend]    noun    混合物;(不同类型东西的)混合品<br>cashier    [英式] [kæˈʃɪə(r)] [美式] [kæˈʃɪr]    noun    收银员<br>debit card        noun    借记卡<br>percentage    [英式] [pəˈsentɪdʒ] [美式] [pərˈsentɪdʒ]    noun    百分比; 百分率,比例,部分<br>press    [英式] [pres] [美式] [pres]    verb    压, 贴, 挤<br>sales tax        noun    营业税, 销售税<br>sign    [英式] [saɪn] [美式] [saɪn]    verb    签名<br>slide    [英式] [slaɪd] [美式] [slaɪd]    verb    滑, 滑动<br>total    [英式] [ˈtəʊtl] [美式] [ˈtoʊtl]    adj.    总计的, 全体的, 总括的, 总体的<br>within    [英式] [wɪˈðɪn] [美式] [wɪˈðɪn]    prep.    在……之内<br>describe    [英式] [dɪˈskraɪb] [美式] [dɪˈskraɪb]    verb    描述<br>flat    [英式] [flæt] [美式] [flæt]    adj.    平的<br>heated    [英式] [ˈhiːtɪd] [美式] [ˈhiːtɪd]    adj.    加热<br>humankind    [英式] [ˌhjuːmənˈkaɪnd] [美式] [ˌhjuːmənˈkaɪnd]    noun    人类<br>invent    [英式] [ɪnˈvent] [美式] [ɪnˈvent]    verb    发明, 创造<br>mobile    [英式] [ˈməʊbaɪl] [美式] [ˈmoʊbl]    adj.    可移动的, 非固定的<br>organization    [英式] [ˌɔːɡənaɪˈzeɪʃn] [美式] [ˌɔːrɡənəˈzeɪʃn]    noun    组织, 机构<br>revolution    [英式] [ˌrevəˈluːʃn] [美式] [ˌrevəˈluːʃn]    noun    革命<br>run    [英式] [rʌn] [美式] [rʌn]    verb    经营<br>touch screen        noun    触摸屏<br>video game        noun    电视游戏<br>wall    [英式] [wɔːl] [美式] [wɔːl]    noun    墙, 墙壁, 围墙<br>battery    [英式] [ˈbætri] [美式] [ˈbætri]    noun    电池<br>chat    [英式] [tʃæt] [美式] [tʃæt]    verb    聊天<br>connection    [英式] [kəˈnekʃn] [美式] [kəˈnekʃn]    noun    连接物<br>dead    [英式] [ded] [美式] [ded]    adj.    不通电的, 无电流的<br>file    [英式] [faɪl] [美式] [faɪl]    noun    文件, 档案<br>gigabyte    [英式] [ˈɡɪɡəbaɪt] [美式] [ˈɡɪɡəbaɪt]    noun    技嘉科技<br>impact    [英式] [ˈɪmpækt] [美式] [ˈɪmpækt]    noun    影响, 冲击力<br>memory    [英式] [ˈmeməri] [美式] [ˈmeməri]    noun    存储器, 存储, 内存<br>rethink    [英式] [ˌriːˈθɪŋk] [美式] [ˌriːˈθɪŋk]    verb    重新考虑,再考虑<br>search    [英式] [sɜːtʃ] [美式] [sɜːrtʃ]    noun    寻找, 研究<br>produce    [英式] [prəˈdjuːs] [美式] [prəˈduːs]    verb    生产, 制造<br>stop    [英式] [stɒp] [美式] [stɑːp]    verb    停止, 中止<br>text    [英式] [tekst] [美式] [tekst]    verb    发短信<br>topic    [英式] [ˈtɒpɪk] [美式] [ˈtɑːpɪk]    noun    题目, 主题<br>useful    [英式] [ˈjuːsfl] [美式] [ˈjuːsfl]    adj.    有用的, 有益的, 实用的</p>
+
+    
+
     
 </div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+
+
+
+
+    <!-- 使用 DISQUS_CLICK -->
+    <div id="disqus-comment">	
+        <div id="disqus_thread"></div>
+<!-- include js -->
+<script src="/js/ripple.js"></script>
+
+<!-- add animation -->
+<style>
+        .ripple-container {
+        }
+        .ripple-container .ripple{
+            background-color: rgba(255,255,255,0.4);
+            animation: ripple 2s forwards cubic-bezier(0, 0, 0.2, 1);
+        }
+        @keyframes ripple {
+            0% {
+                transform: scale(0);
+                opacity: 1;
+            }
+            80% {
+                transform: scale(1);
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+		.disqus_click_btn {
+            background-color: dodgerblue;
+            color: white;
+            padding: 10px 20px;
+            border:0;
+            font-size: 14px;
+            cursor: pointer
+        }
+</style>
+	
+<!-- add data-ripple attribute -->
+<div class="btn_click_load"> 
+    <button class="disqus_click_btn" data-ripple>阅读评论 「请确保 disq.us &amp; disquscdn.com &amp; disqus.com 可以正常加载」</button>
+</div>
+	
+<script>
+    // add effect to elements
+    Array.prototype.forEach.call(document.querySelectorAll('[data-ripple]'), function(element){
+        // find all elements and attach effect
+        new RippleEffect(element); // element is instance of javascript element node
+    });
+</script>
+
+<script>
+    $('.btn_click_load').click(function() {  //click to load comments
+        var disqus_config = function () {
+            this.page.url = 'http://wanghaonanlpc.github.io/2017/02/28/8阶单元5词汇/index.html';  // Replace PAGE_URL with your page's canonical URL variable
+            this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        };
+        (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document;
+            var s = d.createElement('script');
+            s.src = '//wanghaonanlpc.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', + new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+        $('.btn_click_load').css('display','none');
+    });
+</script>
+  	
+
+    </div>
+    <style>
+        #disqus-comment{
+            background-color: #eee;
+            padding: 2pc;
+        }
+    </style>
+
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2017/02/27/在Android-6-0-设备上动态获取权限/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
 
 
                     
@@ -507,6 +744,14 @@ It will not impact the appearance and can give developers a lot of support :)
 </aside>
 
                     
+
+                    
+                        <!-- Footer Top Button -->
+                        <div class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
 
                     
 
