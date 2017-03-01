@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://wanghaonanlpc.github.io/"/>
-  <updated>2017-03-01T13:17:12.000Z</updated>
+  <updated>2017-03-01T13:20:54.000Z</updated>
   <id>http://wanghaonanlpc.github.io/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://wanghaonanlpc.github.io/2017/03/01/Bugly%E5%AE%9E%E7%8E%B0%E7%83%AD%E6%9B%B4%E6%96%B0/"/>
     <id>http://wanghaonanlpc.github.io/2017/03/01/Bugly实现热更新/</id>
     <published>2017-03-01T12:49:44.000Z</published>
-    <updated>2017-03-01T13:17:12.000Z</updated>
+    <updated>2017-03-01T13:20:54.000Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>推荐阅读：<a href="http://www.jianshu.com/p/2d0f70e30111#" target="_blank" rel="external">Bugly热更新SDK你需要知道的一些事</a></p>
@@ -113,6 +113,8 @@
     
       <category term="安卓" scheme="http://wanghaonanlpc.github.io/categories/%E5%AE%89%E5%8D%93/"/>
     
+    
+      <category term="安卓" scheme="http://wanghaonanlpc.github.io/tags/%E5%AE%89%E5%8D%93/"/>
     
   </entry>
   
