@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://wanghaonanlpc.github.io/"/>
-  <updated>2017-02-28T11:26:24.000Z</updated>
+  <updated>2017-03-01T01:41:51.000Z</updated>
   <id>http://wanghaonanlpc.github.io/</id>
   
   <author>
@@ -16,11 +16,83 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>TBS服务报告(2017.02)</title>
+    <link href="http://wanghaonanlpc.github.io/2017/03/01/TBS%E6%9C%8D%E5%8A%A1%E6%8A%A5%E5%91%8A-2017-02/"/>
+    <id>http://wanghaonanlpc.github.io/2017/03/01/TBS服务报告-2017-02/</id>
+    <published>2017-03-01T01:22:37.000Z</published>
+    <updated>2017-03-01T01:41:51.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>TBS服务报告(2017.02)</p>
+<p><a href="https://mp.weixin.qq.com/s?__biz=MzIyNTU2NzUyMw==&amp;mid=2247483672&amp;idx=1&amp;sn=d495422f7e213b2fe14705b06e751ca6&amp;chksm=e87cf754df0b7e426872107b7ece14fefe42b4f2f3a71ce87aaed65251ed451b9dc69800cc1f&amp;scene=0&amp;key=b531a7627afeba4885945c32a7d62783d64c062be87a9233bf64113c8d72153b00932a9b3c1b8174a578df1829e2a6e024c7351fc084b63ea7652ea394992f7d694cf57c10c3ced9a012f14d6bf7f986&amp;ascene=0&amp;uin=MjUxOTYwNTg4MA%3D%3D&amp;devicetype=iMac+MacBookAir6%2C2+OSX+OSX+10.12.3+build(16D32" target="_blank" rel="external"><strong>原文地址：腾讯浏览服务微信公众号</strong></a>&amp;version=12020010&amp;nettype=WIFI&amp;fontScale=100&amp;pass_ticket=grDPWOVxL4siCpybSzNJTRq4JUQ%2BB9fYOJjkMX%2F6Nrg8M3eEasftcW1DlLNM9tFF)</p>
+<p>2017-02-28 腾讯浏览服务</p>
+<p><img src="https://ww4.sinaimg.cn/large/006tKfTcly1fd73d3qsvzj30hs0a0jrr.jpg" alt=""></p>
+<p><img src="https://ww3.sinaimg.cn/large/006tNbRwly1fd73dgg4vrj30hs0a0wer.jpg" alt=""></p>
+<p>Part 1.版本信息：TBS3.0.1版本</p>
+<p>发布计划</p>
+<p>已全量发布</p>
+<p>版本特性</p>
+<p>升级至Chromium53版本（历史版本为Chromium37版本），内核核心能力全面提升，更多信息请参考官网x5.tencent.com</p>
+<p><img src="https://ww2.sinaimg.cn/large/006tNbRwly1fd73dqa04sj30fg0b1wfa.jpg" alt=""></p>
+<p><img src="https://ww2.sinaimg.cn/large/006tNbRwly1fd73dvdfasj30fg0b1gmk.jpg" alt=""></p>
+<p>Part 1.版本信息：在研版本</p>
+<p>在研版本</p>
+<p>TBS3.1</p>
+<p>版本特性</p>
+<p>内核启动速度提升（冷启动场景下提升30%）、TLS占用减少（12个 降低为1个）、稳定性全面优化，提升内核核心基础能力；AR能力带出</p>
+<p>发布情况</p>
+<p><img src="https://ww1.sinaimg.cn/large/006tNbRwly1fd73e1ngftj30hs00tt8q.jpg" alt=""></p>
+<p>Part 2.大盘数据情况：日浏览量</p>
+<p><img src="https://ww2.sinaimg.cn/large/006tNbRwly1fd73e5xgbej30hs0a9wfs.jpg" alt=""></p>
+<p>Part 2.大盘数据情况：日承载用户数</p>
+<p><img src="https://ww3.sinaimg.cn/large/006tNbRwly1fd73eabx09j30hs0aj75l.jpg" alt=""></p>
+<p>Part 3.TBS技术前沿：Content Cache开启</p>
+<p>技术简介</p>
+<p>Content Cache是内存级别的缓存，在切换页面时，被切换出去的页面所对应的内核模型被存储在内存的缓冲区中，再前进后退到该页面时，会从内存缓冲区取出该页面对应的内核模型直接进行处理，无需重新加载解析排版再构建该模型</p>
+<p>技术价值</p>
+<p>为解决前进后退中重新网络请求，内核解析渲染造成的流量浪费和不够流畅的体验问题，提升页面切换平滑体验；目前X5内核已支持根据App或者域名等多纬度动态开启或关闭Content Cache</p>
+<p>当前规划</p>
+<p>已随TBS2.5版本带出，目前根据合作方需求开启，预计年后将择期全面放开</p>
+<p>Part 3.TBS技术前沿：ReactNative能力</p>
+<p>技术简介</p>
+<p>参考<a href="http://reactnative.cn/" target="_blank" rel="external">http://reactnative.cn/</a></p>
+<p>技术价值</p>
+<p>当前TBS将ReactNative中所使用的JS引擎替换成了X5内核的V8引擎，接入TBS后可以为后续引入ReactNative时App包大小减少1M左右，并且稳定性和性能都有显著提升。未来会输出ReactNative的整体接入技术方案，App如果需要接入ReactNative只需要接入TBS SDK即可。</p>
+<p>当前状态</p>
+<p>手机QQ、QQ浏览器已经接入完成。</p>
+<p>Part 3.TBS技术前沿：AR能力</p>
+<p>技术简介</p>
+<p>TBS将集成AR的能力提供给前端开发者使用，包括使用摄像头的能力，优化用户体验的AR播放器以及准确高效的实时识别建模能力</p>
+<p>技术价值</p>
+<p>AR是当前最火热的前沿领域之一，目前的应用主要还是在native使用，而Web上对AR能力的支持将提供给AR应用更大想象空间，结合Web的优势诞生更多具有创意的AR应用</p>
+<p>当前规划</p>
+<p>摄像头能力和AR播放器已在TBS2.5版本带出，识别能力将在3.1版本带出，并在后续版本持续扩展，AR开放平台正在搭建中，计划上半年完成</p>
+<p>Part 4. 行业趋势报告</p>
+<p>AR&amp;VR</p>
+<p>AR和VR的设备成本在持续下降，相关标准正在建立之中，而app应用的生态圈也正在开始浮现。浏览服务也已开始投入AR和VR基础能力建设工作，预计近期将有所落地。</p>
+<p>https迁移</p>
+<p>http向https的迁移大势已定，浏览服务也已基本完成部门内业务的https迁移工作并积累了一些部署和优化经验（例如https防劫持等），进一步的深入优化继续开展中。</p>
+<p><img src="https://ww2.sinaimg.cn/large/006tNbRwly1fd73ei8zj2j30hs0a0mxb.jpg" alt=""></p>
+<p><img src="https://ww3.sinaimg.cn/large/006tNbRwly1fd73eonqpcj303l03laa3.jpg" alt=""></p>
+<p>微信扫一扫</p>
+<p>关注该公众号</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;TBS服务报告(2017.02)&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s?__biz=MzIyNTU2NzUyMw==&amp;amp;mid=2247483672&amp;amp;idx=1&amp;amp;sn=d495422f7e213b2fe1
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
     <title>8阶单元5词汇</title>
     <link href="http://wanghaonanlpc.github.io/2017/02/28/8%E9%98%B6%E5%8D%95%E5%85%835%E8%AF%8D%E6%B1%87/"/>
     <id>http://wanghaonanlpc.github.io/2017/02/28/8阶单元5词汇/</id>
     <published>2017-02-28T11:25:20.000Z</published>
-    <updated>2017-02-28T11:26:24.000Z</updated>
+    <updated>2017-02-28T12:57:29.000Z</updated>
     
     <content type="html"><![CDATA[<p>8级 单元 5</p>
 <p>belt    [英式][belt] [美式][belt]    noun    腰带, 皮带<br>blouse    [英式] [blaʊz] [美式] [blaʊs]    noun    女式罩衫<br>cashmere    [英式] [ˈkæʃmɪə(r)] [美式] [ˈkæʒmɪr]    noun    山羊绒<br>disappointed    [英式] [ˌdɪsəˈpɔɪntɪd] [美式] [ˌdɪsəˈpɔɪntɪd]    adj.    感到失望的, 灰心的<br>enthusiastic    [英式][ɪnˌθjuːziˈæstɪk] [美式][ɪnˌθuːziˈæstɪk]    adj.    热情的<br>exquisite    [英式] [ɪkˈskwɪzɪt] [美式] [ɪkˈskwɪzɪt]    adj.    精美<br>genuine    [英式][ˈdʒenjuɪn] [美式][ˈdʒenjuɪn]    adj.    真实的, 纯正的<br>handmade    [英式][ˌhændˈmeɪd] [美式][ˌhændˈmeɪd]    adj.    手工制造<br>neutral    [英式][ˈnjuːtrəl] [美式][ˈnuːtrəl]    adj.    无明显特性的<br>skinny    [英式] [ˈskɪni] [美式] [ˈskɪni]    adj.    枯瘦的,骨瘦如柴的<br>soft    [英式] [sɒft] [美式] [sɔːft]    adj.    柔软的<br>turquoise    [英式] [ˈtɜːkwɔɪz] [美式] [ˈtɜːrkwɔɪz]    noun    蓝绿色<br>unique    [英式] [juˈniːk] [美式] [juˈniːk]    adj.    独一无二的, 独有的, 独特的<br>blend    [英式] [blend] [美式] [blend]    noun    混合物;(不同类型东西的)混合品<br>cashier    [英式] [kæˈʃɪə(r)] [美式] [kæˈʃɪr]    noun    收银员<br>debit card        noun    借记卡<br>percentage    [英式] [pəˈsentɪdʒ] [美式] [pərˈsentɪdʒ]    noun    百分比; 百分率,比例,部分<br>press    [英式] [pres] [美式] [pres]    verb    压, 贴, 挤<br>sales tax        noun    营业税, 销售税<br>sign    [英式] [saɪn] [美式] [saɪn]    verb    签名<br>slide    [英式] [slaɪd] [美式] [slaɪd]    verb    滑, 滑动<br>total    [英式] [ˈtəʊtl] [美式] [ˈtoʊtl]    adj.    总计的, 全体的, 总括的, 总体的<br>within    [英式] [wɪˈðɪn] [美式] [wɪˈðɪn]    prep.    在……之内<br>describe    [英式] [dɪˈskraɪb] [美式] [dɪˈskraɪb]    verb    描述<br>flat    [英式] [flæt] [美式] [flæt]    adj.    平的<br>heated    [英式] [ˈhiːtɪd] [美式] [ˈhiːtɪd]    adj.    加热<br>humankind    [英式] [ˌhjuːmənˈkaɪnd] [美式] [ˌhjuːmənˈkaɪnd]    noun    人类<br>invent    [英式] [ɪnˈvent] [美式] [ɪnˈvent]    verb    发明, 创造<br>mobile    [英式] [ˈməʊbaɪl] [美式] [ˈmoʊbl]    adj.    可移动的, 非固定的<br>organization    [英式] [ˌɔːɡənaɪˈzeɪʃn] [美式] [ˌɔːrɡənəˈzeɪʃn]    noun    组织, 机构<br>revolution    [英式] [ˌrevəˈluːʃn] [美式] [ˌrevəˈluːʃn]    noun    革命<br>run    [英式] [rʌn] [美式] [rʌn]    verb    经营<br>touch screen        noun    触摸屏<br>video game        noun    电视游戏<br>wall    [英式] [wɔːl] [美式] [wɔːl]    noun    墙, 墙壁, 围墙<br>battery    [英式] [ˈbætri] [美式] [ˈbætri]    noun    电池<br>chat    [英式] [tʃæt] [美式] [tʃæt]    verb    聊天<br>connection    [英式] [kəˈnekʃn] [美式] [kəˈnekʃn]    noun    连接物<br>dead    [英式] [ded] [美式] [ded]    adj.    不通电的, 无电流的<br>file    [英式] [faɪl] [美式] [faɪl]    noun    文件, 档案<br>gigabyte    [英式] [ˈɡɪɡəbaɪt] [美式] [ˈɡɪɡəbaɪt]    noun    技嘉科技<br>impact    [英式] [ˈɪmpækt] [美式] [ˈɪmpækt]    noun    影响, 冲击力<br>memory    [英式] [ˈmeməri] [美式] [ˈmeməri]    noun    存储器, 存储, 内存<br>rethink    [英式] [ˌriːˈθɪŋk] [美式] [ˌriːˈθɪŋk]    verb    重新考虑,再考虑<br>search    [英式] [sɜːtʃ] [美式] [sɜːrtʃ]    noun    寻找, 研究<br>produce    [英式] [prəˈdjuːs] [美式] [prəˈduːs]    verb    生产, 制造<br>stop    [英式] [stɒp] [美式] [stɑːp]    verb    停止, 中止<br>text    [英式] [tekst] [美式] [tekst]    verb    发短信<br>topic    [英式] [ˈtɒpɪk] [美式] [ˈtɑːpɪk]    noun    题目, 主题<br>useful    [英式] [ˈjuːsfl] [美式] [ˈjuːsfl]    adj.    有用的, 有益的, 实用的</p>
@@ -33,7 +105,7 @@
     </summary>
     
     
-      <category term="EN" scheme="http://wanghaonanlpc.github.io/tags/EN/"/>
+      <category term="英语" scheme="http://wanghaonanlpc.github.io/tags/%E8%8B%B1%E8%AF%AD/"/>
     
   </entry>
   
@@ -1623,26 +1695,6 @@
     <summary type="html">
     
       &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>IMAPOST</title>
-    <link href="http://wanghaonanlpc.github.io/2017/02/21/IMAPOST/"/>
-    <id>http://wanghaonanlpc.github.io/2017/02/21/IMAPOST/</id>
-    <published>2017-02-21T01:45:56.000Z</published>
-    <updated>2017-02-21T02:02:59.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>#hello world!</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;#hello world!&lt;/p&gt;
-
     
     </summary>
     

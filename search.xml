@@ -4,6 +4,67 @@
   
     
     <entry>
+      <title><![CDATA[TBS服务报告(2017.02)]]></title>
+      <url>http://wanghaonanlpc.github.io/2017/03/01/TBS%E6%9C%8D%E5%8A%A1%E6%8A%A5%E5%91%8A-2017-02/</url>
+      <content type="html"><![CDATA[<p>TBS服务报告(2017.02)</p>
+<p><a href="https://mp.weixin.qq.com/s?__biz=MzIyNTU2NzUyMw==&amp;mid=2247483672&amp;idx=1&amp;sn=d495422f7e213b2fe14705b06e751ca6&amp;chksm=e87cf754df0b7e426872107b7ece14fefe42b4f2f3a71ce87aaed65251ed451b9dc69800cc1f&amp;scene=0&amp;key=b531a7627afeba4885945c32a7d62783d64c062be87a9233bf64113c8d72153b00932a9b3c1b8174a578df1829e2a6e024c7351fc084b63ea7652ea394992f7d694cf57c10c3ced9a012f14d6bf7f986&amp;ascene=0&amp;uin=MjUxOTYwNTg4MA%3D%3D&amp;devicetype=iMac+MacBookAir6%2C2+OSX+OSX+10.12.3+build(16D32" target="_blank" rel="external"><strong>原文地址：腾讯浏览服务微信公众号</strong></a>&amp;version=12020010&amp;nettype=WIFI&amp;fontScale=100&amp;pass_ticket=grDPWOVxL4siCpybSzNJTRq4JUQ%2BB9fYOJjkMX%2F6Nrg8M3eEasftcW1DlLNM9tFF)</p>
+<p>2017-02-28 腾讯浏览服务</p>
+<p><img src="https://ww4.sinaimg.cn/large/006tKfTcly1fd73d3qsvzj30hs0a0jrr.jpg" alt=""></p>
+<p><img src="https://ww3.sinaimg.cn/large/006tNbRwly1fd73dgg4vrj30hs0a0wer.jpg" alt=""></p>
+<p>Part 1.版本信息：TBS3.0.1版本</p>
+<p>发布计划</p>
+<p>已全量发布</p>
+<p>版本特性</p>
+<p>升级至Chromium53版本（历史版本为Chromium37版本），内核核心能力全面提升，更多信息请参考官网x5.tencent.com</p>
+<p><img src="https://ww2.sinaimg.cn/large/006tNbRwly1fd73dqa04sj30fg0b1wfa.jpg" alt=""></p>
+<p><img src="https://ww2.sinaimg.cn/large/006tNbRwly1fd73dvdfasj30fg0b1gmk.jpg" alt=""></p>
+<p>Part 1.版本信息：在研版本</p>
+<p>在研版本</p>
+<p>TBS3.1</p>
+<p>版本特性</p>
+<p>内核启动速度提升（冷启动场景下提升30%）、TLS占用减少（12个 降低为1个）、稳定性全面优化，提升内核核心基础能力；AR能力带出</p>
+<p>发布情况</p>
+<p><img src="https://ww1.sinaimg.cn/large/006tNbRwly1fd73e1ngftj30hs00tt8q.jpg" alt=""></p>
+<p>Part 2.大盘数据情况：日浏览量</p>
+<p><img src="https://ww2.sinaimg.cn/large/006tNbRwly1fd73e5xgbej30hs0a9wfs.jpg" alt=""></p>
+<p>Part 2.大盘数据情况：日承载用户数</p>
+<p><img src="https://ww3.sinaimg.cn/large/006tNbRwly1fd73eabx09j30hs0aj75l.jpg" alt=""></p>
+<p>Part 3.TBS技术前沿：Content Cache开启</p>
+<p>技术简介</p>
+<p>Content Cache是内存级别的缓存，在切换页面时，被切换出去的页面所对应的内核模型被存储在内存的缓冲区中，再前进后退到该页面时，会从内存缓冲区取出该页面对应的内核模型直接进行处理，无需重新加载解析排版再构建该模型</p>
+<p>技术价值</p>
+<p>为解决前进后退中重新网络请求，内核解析渲染造成的流量浪费和不够流畅的体验问题，提升页面切换平滑体验；目前X5内核已支持根据App或者域名等多纬度动态开启或关闭Content Cache</p>
+<p>当前规划</p>
+<p>已随TBS2.5版本带出，目前根据合作方需求开启，预计年后将择期全面放开</p>
+<p>Part 3.TBS技术前沿：ReactNative能力</p>
+<p>技术简介</p>
+<p>参考<a href="http://reactnative.cn/" target="_blank" rel="external">http://reactnative.cn/</a></p>
+<p>技术价值</p>
+<p>当前TBS将ReactNative中所使用的JS引擎替换成了X5内核的V8引擎，接入TBS后可以为后续引入ReactNative时App包大小减少1M左右，并且稳定性和性能都有显著提升。未来会输出ReactNative的整体接入技术方案，App如果需要接入ReactNative只需要接入TBS SDK即可。</p>
+<p>当前状态</p>
+<p>手机QQ、QQ浏览器已经接入完成。</p>
+<p>Part 3.TBS技术前沿：AR能力</p>
+<p>技术简介</p>
+<p>TBS将集成AR的能力提供给前端开发者使用，包括使用摄像头的能力，优化用户体验的AR播放器以及准确高效的实时识别建模能力</p>
+<p>技术价值</p>
+<p>AR是当前最火热的前沿领域之一，目前的应用主要还是在native使用，而Web上对AR能力的支持将提供给AR应用更大想象空间，结合Web的优势诞生更多具有创意的AR应用</p>
+<p>当前规划</p>
+<p>摄像头能力和AR播放器已在TBS2.5版本带出，识别能力将在3.1版本带出，并在后续版本持续扩展，AR开放平台正在搭建中，计划上半年完成</p>
+<p>Part 4. 行业趋势报告</p>
+<p>AR&amp;VR</p>
+<p>AR和VR的设备成本在持续下降，相关标准正在建立之中，而app应用的生态圈也正在开始浮现。浏览服务也已开始投入AR和VR基础能力建设工作，预计近期将有所落地。</p>
+<p>https迁移</p>
+<p>http向https的迁移大势已定，浏览服务也已基本完成部门内业务的https迁移工作并积累了一些部署和优化经验（例如https防劫持等），进一步的深入优化继续开展中。</p>
+<p><img src="https://ww2.sinaimg.cn/large/006tNbRwly1fd73ei8zj2j30hs0a0mxb.jpg" alt=""></p>
+<p><img src="https://ww3.sinaimg.cn/large/006tNbRwly1fd73eonqpcj303l03laa3.jpg" alt=""></p>
+<p>微信扫一扫</p>
+<p>关注该公众号</p>
+]]></content>
+      
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[8阶单元5词汇]]></title>
       <url>http://wanghaonanlpc.github.io/2017/02/28/8%E9%98%B6%E5%8D%95%E5%85%835%E8%AF%8D%E6%B1%87/</url>
       <content type="html"><![CDATA[<p>8级 单元 5</p>
@@ -13,7 +74,7 @@
         
         <tags>
             
-            <tag> EN </tag>
+            <tag> 英语 </tag>
             
         </tags>
         
@@ -1483,15 +1544,6 @@
 <p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
 <h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
 <p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-]]></content>
-      
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[IMAPOST]]></title>
-      <url>http://wanghaonanlpc.github.io/2017/02/21/IMAPOST/</url>
-      <content type="html"><![CDATA[<p>#hello world!</p>
 ]]></content>
       
         
