@@ -10,7 +10,7 @@
     
     <title>
         
-            TBS服务报告 | 
+            Bugly实现热更新 | 
         
         一个老白 | 野厨
     </title>
@@ -27,7 +27,7 @@
     <meta name="theme-color" content="#0097A7">
     <meta name="author" content="Alex">
     <meta name="description" content="null">
-    <meta name="keywords" content="null,移动端,浏览器">
+    <meta name="keywords" content="null">
 
     <!--iOS -->
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
@@ -48,9 +48,9 @@
     <!-- The Open Graph protocol -->
     <meta property="og:url" content="http://wanghaonanlpc.github.io">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="TBS服务报告 | 一个老白 | 野厨">
+    <meta property="og:title" content="Bugly实现热更新 | 一个老白 | 野厨">
     <meta property="og:description" content="null">
-    <meta property="og:article:tag" content="移动端"> <meta property="og:article:tag" content="浏览器"> 
+    
 
     <!--[if lte IE 9]>
         <link rel="stylesheet" href="/css/ie-blocker.css">
@@ -234,7 +234,7 @@
     </button>
 
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn">
-        
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#一、配置参数"><span class="post-toc-number">1.</span> <span class="post-toc-text">一、配置参数</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#二、集成SDK"><span class="post-toc-number">2.</span> <span class="post-toc-text">二、集成SDK</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#三、初始化SDK"><span class="post-toc-number">3.</span> <span class="post-toc-text">三、初始化SDK</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#四、AndroidManifest-xml配置"><span class="post-toc-number">4.</span> <span class="post-toc-text">四、AndroidManifest.xml配置</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#五、混淆配置"><span class="post-toc-number">5.</span> <span class="post-toc-text">五、混淆配置</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#六、编译基准包"><span class="post-toc-number">6.</span> <span class="post-toc-text">六、编译基准包</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#七、修复基准版代码"><span class="post-toc-number">7.</span> <span class="post-toc-text">七、修复基准版代码</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#八、生成补丁包"><span class="post-toc-number">8.</span> <span class="post-toc-text">八、生成补丁包</span></a></li></ol>
 
         <!--
         <li class="mdl-menu__item">
@@ -258,19 +258,11 @@
                 
     <!-- Paradox Post Header -->
     
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-            <script>
-    var randomNum = Math.floor(Math.random() * 19 + 1);
-
-    $('.post_thumbnail-random').css('background-image', 'url(' + '/img/random/material-' + randomNum + '.png' + ')');
-</script>
-
-        
+        <!-- Custom Thumbnail -->
+        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50" style="background-image:url(https://ww3.sinaimg.cn/large/006tNbRwly1fd7nh2frm9j30wb0b641r.jpg)">
     
             <p class="article-headline-p">
-                TBS服务报告
+                Bugly实现热更新
             </p>
         </div>
 
@@ -310,7 +302,7 @@
         </button>
         <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button">
             <li class="mdl-menu__item">在其它设备中阅读本文章</li>
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPYAAAD2CAAAAADAeSUUAAAC00lEQVR42u3aS5bbMAwEQN//0skBEindoCajIYsrP39EFDcwAH5+Hbk+2NjY2NjY2NjY2K9kf+L1lwctfHr1/eTTWczY2NjYe7PbgP4MYiX0ZPd8l8uYsbGxsQ9gXyWA+9fJO08lrVnM2NjY2NgJIylI8tCTIgcbGxsb+6kEtpKK8rT3uryNjY2N/Ur2rCS437gdIdyDv62Xho2Njf16dj40fc/r/zrfxsbGxn4xu12z5tFlKAsFTB05NjY29qbsr2vTJ5dy7htM+RFHe2FjY2Nvys5bPNHf/ThdzcbJ7QgZGxsb+wT2fSj52LUdG8x+m8RZ9NKwsbGxt2An27cHNCsk8pZWXhphY2Njn8NuGzftBco8peXH2jaYsLGxsc9htwG144Rh+omHxNjY2NhnsttGTz4MiBr3QUmTJ1RsbGzs09grF3SGA9fyEk+bwIqbStjY2NgbsdtEslLG5G2m/OJOPR7AxsbG3prdDl/zI5sFnRxflAKxsbGxN2Xnjft26LvS3E9aXQ8MerGxsbE3ZbdJJf/VrFWUPCG6BoSNjY29KbtNXfmItw6rHOK2JRM2Njb2aewVTN4Geqp5FMWPjY2NvTW7TTbtSCC5mpmnz+HRY2NjYx/Dbpv1s4JkdumzPRRsbGzsE9jt8PWp0exKa2mY8LCxsbE3ZbcPXdq4PKCVQ1+aimBjY2P/QHaScvK2ztWvZiktKX4e66VhY2Njb8G+DzpPfnmZMWse1dFiY2NjH8DOE1t+xScfJKyvYQLDxsbG/uHsduXp5KkhRJImo8PFxsbG3pS9fplmVh48+xobGxsbOx/xtmVJO2xYGRv845vY2NjYB7BnZcYs4X31wsbGxsZuC4w2iDwVrZc32NjY2NgJcp3UfjPfCxsbG/scdj6aza/LJEPfWeu/LpmwsbGxt2a3j87fX7l2s96QwsbGxj6Bfc7CxsbGxsbGxsbGfs36DXFfNDa87wwlAAAAAElFTkSuQmCC">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPYAAAD2CAAAAADAeSUUAAAC2UlEQVR42u3ay47iQAwFUP7/p2e2sxjIvTbdgsrJCgGq+ASp3X48/tzyemBjY2NjY2NjY2N/JPsRX/856Mmn/76Tv359zj5mbGxs7LPZF3/638p+9mkewyxmbGxs7DuwnyWAhFEkkiA1Jo87jxkbGxsbuy0bEmr+KLGxsbGxf5M9axW1yQwbGxsbe9NUaouNBJzca98Iw8bGxj6bnTeGPuf1r863sbGxsT+Y3V6bsmE2AGhHwk/vhY2NjX0oO08Mm+IkfxyzEUL0Y2BjY2Mfys6TStsG2jf98ztGSREbGxv7aPbrtJGvUc6Gu7OVnTpabGxs7EPZbUB56srTYT64naVGbGxs7LPZ+T/3STrJT8i//3qJZzXoxcbGxj6Ond9gNrjNhwc/MfrFxsbGPpudBN2GuCob4jXQ/OfBxsbGPpWdj1GLkWoZYlL2bO6OjY2NfTZ7E+h+ITIvVJLk9+amEjY2NvaXsNvgZk3/vGm1aXJdNK2wsbGxD2W3o9y2rTNb4kkeRIvHxsbGPpW9bwDlIbbnt+CLdIuNjY19A3Y7Xm0HvRdNn/V3LqLCxsbGPpQ9G6O27af9YtBmII2NjY19Njs57ieWbNpypW1avWFTCRsbG/ur2JsiJF+a2SwDtUXLGyowbGxs7C9nt4zk++2Dmz2O1XgAGxsb+2vZeWsmL0iK1BIXM3k6LJpK2NjY2Aex8+PeNQDY84o0iY2NjX0D9qyV0xYqm6SVFC3Y2NjYd2bn78wGuu1K5ewaliLY2NjYX8tur3ZMm6fJpChalSjY2NjYh7I3iaFNSLNw85KmLkWwsbGxD2InSet1Kydv9LTgNr09/SY2Njb2DdibMmNWliQJ712tJWxsbGzsGWO/BpSnz4uosLGxsbFHY4AkLbXUfICBjY2NfTf2fiknD7QdIexbVNjY2Nhns9vjZqPZ2WB402zCxsbGvgP7Phc2NjY2NjY2Njb2x1x/AYPTmt0rS0ARAAAAAElFTkSuQmCC">
         </ul>
     
 
@@ -322,7 +314,7 @@
     </button>
     <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
         <li class="mdl-menu__item">
-        <a class="post_tag-link" href="/tags/浏览器/">浏览器</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/移动端/">移动端</a>
+        
     </ul>
     
 
@@ -336,7 +328,7 @@
     <!-- Leancloud Views -->
         <a class="post_share-link" href="#">
             <li class="mdl-menu__item">
-                <span id="/2017/03/01/TBS服务报告/" class="leancloud-views_num" data-flag-title="TBS服务报告">
+                <span id="/2017/03/01/Bugly实现热更新/" class="leancloud-views_num" data-flag-title="Bugly实现热更新">
      &nbsp;浏览量
 </span>
 
@@ -359,7 +351,7 @@
 
     <!-- Share Weibo -->
     
-        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=TBS服务报告&url=http://wanghaonanlpc.github.io//2017/03/01/TBS服务报告/index.html&pic=&searchPic=false&style=simple" target="_blank">
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=Bugly实现热更新&url=http://wanghaonanlpc.github.io//2017/03/01/Bugly实现热更新/index.html&pic=&searchPic=false&style=simple" target="_blank">
             <li class="mdl-menu__item">
                 分享到微博
             </li>
@@ -368,7 +360,7 @@
 
     <!-- Share Twitter -->
     
-        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=TBS服务报告&url=http://wanghaonanlpc.github.io//2017/03/01/TBS服务报告/index.html&via=Alex" target="_blank">
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=Bugly实现热更新&url=http://wanghaonanlpc.github.io//2017/03/01/Bugly实现热更新/index.html&via=Alex" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Twitter
             </li>
@@ -377,7 +369,7 @@
 
     <!-- Share Facebook -->
     
-        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://wanghaonanlpc.github.io//2017/03/01/TBS服务报告/index.html" target="_blank">
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://wanghaonanlpc.github.io//2017/03/01/Bugly实现热更新/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Facebook
             </li>
@@ -386,7 +378,7 @@
 
     <!-- Share Google+ -->
     
-        <a class="post_share-link" href="https://plus.google.com/share?url=http://wanghaonanlpc.github.io//2017/03/01/TBS服务报告/index.html" target="_blank">
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://wanghaonanlpc.github.io//2017/03/01/Bugly实现热更新/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Google+
             </li>
@@ -398,7 +390,7 @@
 
     <!-- Share QQ -->
     
-        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=一个老白 | 野厨&title=TBS服务报告&summary=null&pics=http://wanghaonanlpc.github.io/img/favicon.png&url=http://wanghaonanlpc.github.io/2017/03/01/TBS服务报告/index.html" target="_blank">
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=一个老白 | 野厨&title=Bugly实现热更新&summary=null&pics=http://wanghaonanlpc.github.io/img/favicon.png&url=http://wanghaonanlpc.github.io/2017/03/01/Bugly实现热更新/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 QQ
             </li>
@@ -416,59 +408,85 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <p>TBS服务报告(2017.02)</p>
-<p><a href="https://mp.weixin.qq.com/s?__biz=MzIyNTU2NzUyMw==&amp;mid=2247483672&amp;idx=1&amp;sn=d495422f7e213b2fe14705b06e751ca6&amp;chksm=e87cf754df0b7e426872107b7ece14fefe42b4f2f3a71ce87aaed65251ed451b9dc69800cc1f&amp;scene=0&amp;key=b531a7627afeba4885945c32a7d62783d64c062be87a9233bf64113c8d72153b00932a9b3c1b8174a578df1829e2a6e024c7351fc084b63ea7652ea394992f7d694cf57c10c3ced9a012f14d6bf7f986&amp;ascene=0&amp;uin=MjUxOTYwNTg4MA%3D%3D&amp;devicetype=iMac+MacBookAir6%2C2+OSX+OSX+10.12.3+build(16D32" target="_blank" rel="external"><strong>原文地址：腾讯浏览服务微信公众号</strong></a>&amp;version=12020010&amp;nettype=WIFI&amp;fontScale=100&amp;pass_ticket=grDPWOVxL4siCpybSzNJTRq4JUQ%2BB9fYOJjkMX%2F6Nrg8M3eEasftcW1DlLNM9tFF)</p>
-<p>2017-02-28 腾讯浏览服务</p>
-<p><img src="https://ww4.sinaimg.cn/large/006tKfTcly1fd73d3qsvzj30hs0a0jrr.jpg" alt=""></p>
-<p><img src="https://ww3.sinaimg.cn/large/006tNbRwly1fd73dgg4vrj30hs0a0wer.jpg" alt=""></p>
-<p>Part 1.版本信息：TBS3.0.1版本</p>
-<p>发布计划</p>
-<p>已全量发布</p>
-<p>版本特性</p>
-<p>升级至Chromium53版本（历史版本为Chromium37版本），内核核心能力全面提升，更多信息请参考官网x5.tencent.com</p>
-<p><img src="https://ww2.sinaimg.cn/large/006tNbRwly1fd73dqa04sj30fg0b1wfa.jpg" alt=""></p>
-<p><img src="https://ww2.sinaimg.cn/large/006tNbRwly1fd73dvdfasj30fg0b1gmk.jpg" alt=""></p>
-<p>Part 1.版本信息：在研版本</p>
-<p>在研版本</p>
-<p>TBS3.1</p>
-<p>版本特性</p>
-<p>内核启动速度提升（冷启动场景下提升30%）、TLS占用减少（12个 降低为1个）、稳定性全面优化，提升内核核心基础能力；AR能力带出</p>
-<p>发布情况</p>
-<p><img src="https://ww1.sinaimg.cn/large/006tNbRwly1fd73e1ngftj30hs00tt8q.jpg" alt=""></p>
-<p>Part 2.大盘数据情况：日浏览量</p>
-<p><img src="https://ww2.sinaimg.cn/large/006tNbRwly1fd73e5xgbej30hs0a9wfs.jpg" alt=""></p>
-<p>Part 2.大盘数据情况：日承载用户数</p>
-<p><img src="https://ww3.sinaimg.cn/large/006tNbRwly1fd73eabx09j30hs0aj75l.jpg" alt=""></p>
-<p>Part 3.TBS技术前沿：Content Cache开启</p>
-<p>技术简介</p>
-<p>Content Cache是内存级别的缓存，在切换页面时，被切换出去的页面所对应的内核模型被存储在内存的缓冲区中，再前进后退到该页面时，会从内存缓冲区取出该页面对应的内核模型直接进行处理，无需重新加载解析排版再构建该模型</p>
-<p>技术价值</p>
-<p>为解决前进后退中重新网络请求，内核解析渲染造成的流量浪费和不够流畅的体验问题，提升页面切换平滑体验；目前X5内核已支持根据App或者域名等多纬度动态开启或关闭Content Cache</p>
-<p>当前规划</p>
-<p>已随TBS2.5版本带出，目前根据合作方需求开启，预计年后将择期全面放开</p>
-<p>Part 3.TBS技术前沿：ReactNative能力</p>
-<p>技术简介</p>
-<p>参考<a href="http://reactnative.cn/" target="_blank" rel="external">http://reactnative.cn/</a></p>
-<p>技术价值</p>
-<p>当前TBS将ReactNative中所使用的JS引擎替换成了X5内核的V8引擎，接入TBS后可以为后续引入ReactNative时App包大小减少1M左右，并且稳定性和性能都有显著提升。未来会输出ReactNative的整体接入技术方案，App如果需要接入ReactNative只需要接入TBS SDK即可。</p>
-<p>当前状态</p>
-<p>手机QQ、QQ浏览器已经接入完成。</p>
-<p>Part 3.TBS技术前沿：AR能力</p>
-<p>技术简介</p>
-<p>TBS将集成AR的能力提供给前端开发者使用，包括使用摄像头的能力，优化用户体验的AR播放器以及准确高效的实时识别建模能力</p>
-<p>技术价值</p>
-<p>AR是当前最火热的前沿领域之一，目前的应用主要还是在native使用，而Web上对AR能力的支持将提供给AR应用更大想象空间，结合Web的优势诞生更多具有创意的AR应用</p>
-<p>当前规划</p>
-<p>摄像头能力和AR播放器已在TBS2.5版本带出，识别能力将在3.1版本带出，并在后续版本持续扩展，AR开放平台正在搭建中，计划上半年完成</p>
-<p>Part 4. 行业趋势报告</p>
-<p>AR&amp;VR</p>
-<p>AR和VR的设备成本在持续下降，相关标准正在建立之中，而app应用的生态圈也正在开始浮现。浏览服务也已开始投入AR和VR基础能力建设工作，预计近期将有所落地。</p>
-<p>https迁移</p>
-<p>http向https的迁移大势已定，浏览服务也已基本完成部门内业务的https迁移工作并积累了一些部署和优化经验（例如https防劫持等），进一步的深入优化继续开展中。</p>
-<p><img src="https://ww2.sinaimg.cn/large/006tNbRwly1fd73ei8zj2j30hs0a0mxb.jpg" alt=""></p>
-<p><img src="https://ww3.sinaimg.cn/large/006tNbRwly1fd73eonqpcj303l03laa3.jpg" alt=""></p>
-<p>微信扫一扫</p>
-<p>关注该公众号</p>
+        <blockquote>
+<p>推荐阅读：<a href="http://www.jianshu.com/p/2d0f70e30111#" target="_blank" rel="external">Bugly热更新SDK你需要知道的一些事</a></p>
+</blockquote>
+<p>列举一些大家比较熟悉的一些热更新方案：</p>
+<p>微信开源：<a href="https://github.com/Tencent/tinker" target="_blank" rel="external">Tinker</a><br>大众点评：<a href="https://github.com/jasonross/Nuwa" target="_blank" rel="external">Nuwa</a><br>阿里巴巴：<a href="https://github.com/alibaba/dexposed" target="_blank" rel="external">Dexposed</a><br>阿里巴巴：<a href="https://github.com/alibaba/AndFix" target="_blank" rel="external">AndFix</a><br>美团：<a href="http://tech.meituan.com/android_robust.html" target="_blank" rel="external">Robust</a></p>
+<p><strong>Bugly也是出于高可用性的考虑，Tinker支持动态下发代码、So库以及资源，所以我们最终选择了Tinker方案作为我们SDK的一项能力。</strong></p>
+<p><a href="https://bugly.qq.com/docs/user-guide/instruction-manual-android-hotfix/?v=20170205190410" target="_blank" rel="external">Bugly热修复官方文档</a></p>
+<h3 id="一、配置参数"><a href="#一、配置参数" class="headerlink" title="一、配置参数"></a>一、配置参数</h3><ul>
+<li><p><strong>添加插件依赖</strong></p>
+<p>工程根目录下“build.gradle”文件中添加：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">buildscript &#123;</div><div class="line">    repositories &#123;</div><div class="line">        jcenter()</div><div class="line">    &#125;</div><div class="line">    dependencies &#123;</div><div class="line">        // tinkersupport插件，其中latest.release指代最新版本号，也可以指定明确的版本号，例如1.0.3</div><div class="line">        classpath &quot;com.tencent.bugly:tinker-support:latest.release&quot;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="二、集成SDK"><a href="#二、集成SDK" class="headerlink" title="二、集成SDK"></a>二、集成SDK</h3><ul>
+<li><p><strong>gradle配置</strong></p>
+<p>在app module的“build.gradle”文件中添加（示例配置）：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">dependencies &#123;</div><div class="line">      compile &quot;com.android.support:multidex:1.0.1&quot; </div><div class="line">      compile &apos;com.tencent.bugly:crashreport_upgrade:latest.release&apos;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>在app module的“build.gradle”文件中添加：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">// 依赖插件脚本</div><div class="line">apply from: &apos;tinker-support.gradle&apos;</div></pre></td></tr></table></figure>
+</li>
+<li><p><strong>tinker-support.gradle</strong>内容如下所示（示例配置）：</p>
+<p><em>需要在同级目录下创建tinker-support.gradle这个文件</em></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div></pre></td><td class="code"><pre><div class="line">apply plugin: &apos;com.tencent.bugly.tinker-support&apos;</div><div class="line"></div><div class="line">def bakPath = file(&quot;$&#123;buildDir&#125;/bakApk/&quot;)</div><div class="line"></div><div class="line">def appName = &quot;app-0111-15-18-41&quot;</div><div class="line"></div><div class="line">/**</div><div class="line">* 对于插件各参数的详细解析请参考</div><div class="line">*/</div><div class="line">tinkerSupport &#123;</div><div class="line"></div><div class="line">    // 开启tinker-support插件，默认值true</div><div class="line">    enable = true</div><div class="line"></div><div class="line">    // 指定归档目录，默认值当前module的子目录tinker</div><div class="line">    autoBackupApkDir = &quot;$&#123;bakPath&#125;&quot;</div><div class="line"></div><div class="line">    // 是否启用覆盖tinkerPatch配置功能，默认值false</div><div class="line">    // 开启后tinkerPatch配置不生效，即无需添加tinkerPatch</div><div class="line">    overrideTinkerPatchConfiguration = true</div><div class="line"></div><div class="line">    // 编译补丁包时，必需指定基线版本的apk，默认值为空</div><div class="line">    // 如果为空，则表示不是进行补丁包的编译</div><div class="line">    // @&#123;link tinkerPatch.oldApk &#125;</div><div class="line">    baseApk =  &quot;$&#123;bakPath&#125;/$&#123;appName&#125;/app-release.apk&quot;</div><div class="line"></div><div class="line">    // 对应tinker插件applyMapping</div><div class="line">    baseApkProguardMapping = &quot;$&#123;bakPath&#125;/$&#123;appName&#125;/app-release-mapping.txt&quot;</div><div class="line"></div><div class="line">    // 对应tinker插件applyResourceMapping</div><div class="line">    baseApkResourceMapping = &quot;$&#123;bakPath&#125;/$&#123;appName&#125;/app-release-R.txt&quot;</div><div class="line"></div><div class="line">    // 唯一标识当前版本</div><div class="line">    tinkerId = &quot;1.0.1-base&quot;</div><div class="line"></div><div class="line">    // 是否开启代理Application，设置之后无须改造Application，默认为false</div><div class="line">    enableProxyApplication = false</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="三、初始化SDK"><a href="#三、初始化SDK" class="headerlink" title="三、初始化SDK"></a>三、初始化SDK</h3><p><strong>enableProxyApplication = false 的情况</strong></p>
+<ul>
+<li>自定义Application</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">public class SampleApplication extends TinkerApplication &#123;</div><div class="line">    public SampleApplication() &#123;</div><div class="line">        super(ShareConstants.TINKER_ENABLE_ALL, &quot;com.yiba.test.buglypatch.SampleApplicationLike&quot;,</div><div class="line">                &quot;com.tencent.tinker.loader.TinkerLoader&quot;, false);</div><div class="line">    &#125;</div><div class="line">&#125;123456123456</div></pre></td></tr></table></figure>
+<ul>
+<li>自定义ApplicationLike</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div></pre></td><td class="code"><pre><div class="line">public class SampleApplicationLike extends DefaultApplicationLike &#123;</div><div class="line"></div><div class="line">    public static final String TAG = &quot;Tinker.SampleApplicationLike&quot;;</div><div class="line"></div><div class="line">    public SampleApplicationLike(Application application, int tinkerFlags,</div><div class="line">            boolean tinkerLoadVerifyFlag, long applicationStartElapsedTime,</div><div class="line">            long applicationStartMillisTime, Intent tinkerResultIntent, Resources[] resources,</div><div class="line">            ClassLoader[] classLoader, AssetManager[] assetManager) &#123;</div><div class="line">        super(application, tinkerFlags, tinkerLoadVerifyFlag, applicationStartElapsedTime,</div><div class="line">                applicationStartMillisTime, tinkerResultIntent, resources, classLoader,</div><div class="line">                assetManager);</div><div class="line">    &#125;</div><div class="line"></div><div class="line"></div><div class="line">    @Override</div><div class="line">    public void onCreate() &#123;</div><div class="line">        super.onCreate();</div><div class="line">        // 这里实现SDK初始化，appId替换成你的在Bugly平台申请的appId</div><div class="line">        Bugly.init(getApplication(), &quot;900029763&quot;, true);</div><div class="line">    &#125;</div><div class="line"></div><div class="line"></div><div class="line">    @TargetApi(Build.VERSION_CODES.ICE_CREAM_SANDWICH)</div><div class="line">    @Override</div><div class="line">    public void onBaseContextAttached(Context base) &#123;</div><div class="line">        super.onBaseContextAttached(base);</div><div class="line">        // you must install multiDex whatever tinker is installed!</div><div class="line">        MultiDex.install(base);</div><div class="line"></div><div class="line">        // 安装tinker</div><div class="line">        // TinkerManager.installTinker(this); 替换成下面Bugly提供的方法</div><div class="line">        Beta.installTinker(this);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    @TargetApi(Build.VERSION_CODES.ICE_CREAM_SANDWICH)</div><div class="line">    public void registerActivityLifecycleCallback(Application.ActivityLifecycleCallbacks callbacks) &#123;</div><div class="line">        getApplication().registerActivityLifecycleCallbacks(callbacks);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="四、AndroidManifest-xml配置"><a href="#四、AndroidManifest-xml配置" class="headerlink" title="四、AndroidManifest.xml配置"></a>四、AndroidManifest.xml配置</h3><ul>
+<li>权限配置</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&lt;uses-permission android:name=&quot;android.permission.READ_PHONE_STATE&quot; /&gt;</div><div class="line">&lt;uses-permission android:name=&quot;android.permission.INTERNET&quot; /&gt;</div><div class="line">&lt;uses-permission android:name=&quot;android.permission.ACCESS_NETWORK_STATE&quot; /&gt;</div><div class="line">&lt;uses-permission android:name=&quot;android.permission.ACCESS_WIFI_STATE&quot; /&gt;</div><div class="line">&lt;uses-permission android:name=&quot;android.permission.READ_LOGS&quot; /&gt;</div><div class="line">&lt;uses-permission android:name=&quot;android.permission.WRITE_EXTERNAL_STORAGE&quot; /&gt;</div><div class="line">&lt;uses-permission android:name=&quot;android.permission.READ_EXTERNAL_STORAGE&quot;/&gt;</div></pre></td></tr></table></figure>
+<ul>
+<li>Activity配置</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;activity</div><div class="line">    android:name=&quot;com.tencent.bugly.beta.ui.BetaActivity&quot;</div><div class="line">    android:theme=&quot;@android:style/Theme.Translucent&quot; /&gt;</div></pre></td></tr></table></figure>
+<ul>
+<li><p>配置FileProvider（<a href="http://lib.csdn.net/base/android" target="_blank" rel="external">Android</a> N之后配置）</p>
+<p>见<a href="https://bugly.qq.com/docs/user-guide/instruction-manual-android-hotfix/?v=20170205190410" target="_blank" rel="external">文档</a></p>
+</li>
+</ul>
+<h3 id="五、混淆配置"><a href="#五、混淆配置" class="headerlink" title="五、混淆配置"></a>五、混淆配置</h3><p>为了避免混淆SDK，在Proguard混淆文件中增加以下配置：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">-dontwarn com.tencent.bugly.**</div><div class="line">-keep public class com.tencent.bugly.**&#123;*;&#125;</div></pre></td></tr></table></figure>
+<p>如果你使用了support-v4包，你还需要配置以下混淆规则：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">-keep class android.support.**&#123;*;&#125;</div></pre></td></tr></table></figure>
+<hr>
+<h3 id="六、编译基准包"><a href="#六、编译基准包" class="headerlink" title="六、编译基准包"></a>六、编译基准包</h3><p>基准包就是原先运行有bug的包。</p>
+<p>点击Android Studio右上角的Gradle按钮，找到项目的assembleRelease任务，双击执行assembleRelease任务。</p>
+<p><img src="http://oe9ggtbcb.bkt.clouddn.com/K%29RNI48%5DNN%28PS~MG%5B3LK%7BEK.png" alt="image"></p>
+<p>任务执行完成后，会在build的目录下生成如下文件：</p>
+<p><img src="http://oe9ggtbcb.bkt.clouddn.com/RCMZ3Q%29%5D7B%7B_YYQ%28HC6$RTS.png" alt="image"></p>
+<h3 id="七、修复基准版代码"><a href="#七、修复基准版代码" class="headerlink" title="七、修复基准版代码"></a>七、修复基准版代码</h3><p>修复前代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">public class BugClass &#123;</div><div class="line"></div><div class="line">    public String bug() &#123;</div><div class="line">        String str = &quot;This is a bug&quot;;</div><div class="line">        str = null;</div><div class="line">        Log.e(&quot;zhang&quot;, &quot;BugClass --&gt; bug--&gt; str length :&quot; + str.length());</div><div class="line">        return str;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<hr>
+<p>修复后代码:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">public class BugClass &#123;</div><div class="line"></div><div class="line">    public String bug() &#123;</div><div class="line">        String str = &quot;This is a bug&quot;;</div><div class="line">//        str = null;</div><div class="line">        Log.e(&quot;zhang&quot;, &quot;BugClass --&gt; bug--&gt; str length :&quot; + str.length());</div><div class="line">        return str + &quot;  , fixed!!!&quot;;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<hr>
+<p>调用代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">public class MainActivity extends AppCompatActivity &#123;</div><div class="line"></div><div class="line">    @Override</div><div class="line">    protected void onCreate(Bundle savedInstanceState) &#123;</div><div class="line">        super.onCreate(savedInstanceState);</div><div class="line">        setContentView(R.layout.activity_main);</div><div class="line"></div><div class="line">        Button btn = (Button) findViewById(R.id.btn);</div><div class="line"></div><div class="line">        btn.setOnClickListener(new View.OnClickListener() &#123;</div><div class="line">            @Override</div><div class="line">            public void onClick(View v) &#123;</div><div class="line">                BugClass bugClass = new BugClass();</div><div class="line">                String bug = bugClass.bug();</div><div class="line">                Toast.makeText(MainActivity.this, bug, Toast.LENGTH_SHORT).show();</div><div class="line">            &#125;</div><div class="line">        &#125;);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="八、生成补丁包"><a href="#八、生成补丁包" class="headerlink" title="八、生成补丁包"></a>八、生成补丁包</h3><ul>
+<li>修改appName名称以及文件名称都需要保持一致。同时将基准包的tinkerid=1.0.1-base改为补丁包的tinkerid=1.0.1-patch。</li>
+</ul>
+<p><img src="http://oe9ggtbcb.bkt.clouddn.com/R4TK_IQ9@7JMDN4H%289A7HLH.png" alt="image"></p>
+<ul>
+<li><strong>生成补丁包</strong></li>
+</ul>
+<p>执行生成补丁包的任务操作：</p>
+<p><img src="http://oe9ggtbcb.bkt.clouddn.com/GD8C4NOLEE0%5BBBLFB_R4%29$U.png" alt="image"></p>
+<p>任务执行完之后，会生成3个文件，其中patch_signed_7zip.apk是我们需要的补丁包</p>
+<p><img src="http://oe9ggtbcb.bkt.clouddn.com/E4TCAATO%5B4E%602_S5PO6%5B0G6.png" alt="image"></p>
+<p>将补丁包上传至bugly的应用升级模块的热更新中</p>
+<p>具体见<a href="https://bugly.qq.com/docs/user-guide/instruction-manual-android-hotfix-demo/?v=20170205190410" target="_blank" rel="external">bugly的官方文档</a>。</p>
+<p><img src="https://ww3.sinaimg.cn/large/006tNbRwly1fd7nh2frm9j30wb0b641r.jpg" alt=""></p>
 
     
 
@@ -537,7 +555,7 @@
 <script>
     $('.btn_click_load').click(function() {  //click to load comments
         var disqus_config = function () {
-            this.page.url = 'http://wanghaonanlpc.github.io/2017/03/01/TBS服务报告/index.html';  // Replace PAGE_URL with your page's canonical URL variable
+            this.page.url = 'http://wanghaonanlpc.github.io/2017/03/01/Bugly实现热更新/index.html';  // Replace PAGE_URL with your page's canonical URL variable
             this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
         };
         (function() { // DON'T EDIT BELOW THIS LINE
@@ -567,21 +585,13 @@
             <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
     <!-- Prev Nav -->
     
-        <a href="/2017/03/01/Bugly实现热更新/" id="post_nav-newer" class="prev-content">
-            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
-                <i class="material-icons">arrow_back</i>
-            </button>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            新篇
-        </a>
-    
 
     <!-- Section Spacer -->
     <div class="section-spacer"></div>
 
     <!-- Next Nav -->
     
-        <a href="/2017/02/28/8阶单元5词汇/" id="post_nav-older" class="next-content">
+        <a href="/2017/03/01/TBS服务报告/" id="post_nav-older" class="next-content">
             旧篇
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">

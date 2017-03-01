@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://wanghaonanlpc.github.io/"/>
-  <updated>2017-03-01T06:23:48.000Z</updated>
+  <updated>2017-03-01T13:17:12.000Z</updated>
   <id>http://wanghaonanlpc.github.io/</id>
   
   <author>
@@ -14,6 +14,107 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Bugly实现热更新</title>
+    <link href="http://wanghaonanlpc.github.io/2017/03/01/Bugly%E5%AE%9E%E7%8E%B0%E7%83%AD%E6%9B%B4%E6%96%B0/"/>
+    <id>http://wanghaonanlpc.github.io/2017/03/01/Bugly实现热更新/</id>
+    <published>2017-03-01T12:49:44.000Z</published>
+    <updated>2017-03-01T13:17:12.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<p>推荐阅读：<a href="http://www.jianshu.com/p/2d0f70e30111#" target="_blank" rel="external">Bugly热更新SDK你需要知道的一些事</a></p>
+</blockquote>
+<p>列举一些大家比较熟悉的一些热更新方案：</p>
+<p>微信开源：<a href="https://github.com/Tencent/tinker" target="_blank" rel="external">Tinker</a><br>大众点评：<a href="https://github.com/jasonross/Nuwa" target="_blank" rel="external">Nuwa</a><br>阿里巴巴：<a href="https://github.com/alibaba/dexposed" target="_blank" rel="external">Dexposed</a><br>阿里巴巴：<a href="https://github.com/alibaba/AndFix" target="_blank" rel="external">AndFix</a><br>美团：<a href="http://tech.meituan.com/android_robust.html" target="_blank" rel="external">Robust</a></p>
+<p><strong>Bugly也是出于高可用性的考虑，Tinker支持动态下发代码、So库以及资源，所以我们最终选择了Tinker方案作为我们SDK的一项能力。</strong></p>
+<p><a href="https://bugly.qq.com/docs/user-guide/instruction-manual-android-hotfix/?v=20170205190410" target="_blank" rel="external">Bugly热修复官方文档</a></p>
+<h3 id="一、配置参数"><a href="#一、配置参数" class="headerlink" title="一、配置参数"></a>一、配置参数</h3><ul>
+<li><p><strong>添加插件依赖</strong></p>
+<p>工程根目录下“build.gradle”文件中添加：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">buildscript &#123;</div><div class="line">    repositories &#123;</div><div class="line">        jcenter()</div><div class="line">    &#125;</div><div class="line">    dependencies &#123;</div><div class="line">        // tinkersupport插件，其中latest.release指代最新版本号，也可以指定明确的版本号，例如1.0.3</div><div class="line">        classpath &quot;com.tencent.bugly:tinker-support:latest.release&quot;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="二、集成SDK"><a href="#二、集成SDK" class="headerlink" title="二、集成SDK"></a>二、集成SDK</h3><ul>
+<li><p><strong>gradle配置</strong></p>
+<p>在app module的“build.gradle”文件中添加（示例配置）：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">dependencies &#123;</div><div class="line">      compile &quot;com.android.support:multidex:1.0.1&quot; </div><div class="line">      compile &apos;com.tencent.bugly:crashreport_upgrade:latest.release&apos;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>在app module的“build.gradle”文件中添加：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">// 依赖插件脚本</div><div class="line">apply from: &apos;tinker-support.gradle&apos;</div></pre></td></tr></table></figure>
+</li>
+<li><p><strong>tinker-support.gradle</strong>内容如下所示（示例配置）：</p>
+<p><em>需要在同级目录下创建tinker-support.gradle这个文件</em></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div></pre></td><td class="code"><pre><div class="line">apply plugin: &apos;com.tencent.bugly.tinker-support&apos;</div><div class="line"></div><div class="line">def bakPath = file(&quot;$&#123;buildDir&#125;/bakApk/&quot;)</div><div class="line"></div><div class="line">def appName = &quot;app-0111-15-18-41&quot;</div><div class="line"></div><div class="line">/**</div><div class="line">* 对于插件各参数的详细解析请参考</div><div class="line">*/</div><div class="line">tinkerSupport &#123;</div><div class="line"></div><div class="line">    // 开启tinker-support插件，默认值true</div><div class="line">    enable = true</div><div class="line"></div><div class="line">    // 指定归档目录，默认值当前module的子目录tinker</div><div class="line">    autoBackupApkDir = &quot;$&#123;bakPath&#125;&quot;</div><div class="line"></div><div class="line">    // 是否启用覆盖tinkerPatch配置功能，默认值false</div><div class="line">    // 开启后tinkerPatch配置不生效，即无需添加tinkerPatch</div><div class="line">    overrideTinkerPatchConfiguration = true</div><div class="line"></div><div class="line">    // 编译补丁包时，必需指定基线版本的apk，默认值为空</div><div class="line">    // 如果为空，则表示不是进行补丁包的编译</div><div class="line">    // @&#123;link tinkerPatch.oldApk &#125;</div><div class="line">    baseApk =  &quot;$&#123;bakPath&#125;/$&#123;appName&#125;/app-release.apk&quot;</div><div class="line"></div><div class="line">    // 对应tinker插件applyMapping</div><div class="line">    baseApkProguardMapping = &quot;$&#123;bakPath&#125;/$&#123;appName&#125;/app-release-mapping.txt&quot;</div><div class="line"></div><div class="line">    // 对应tinker插件applyResourceMapping</div><div class="line">    baseApkResourceMapping = &quot;$&#123;bakPath&#125;/$&#123;appName&#125;/app-release-R.txt&quot;</div><div class="line"></div><div class="line">    // 唯一标识当前版本</div><div class="line">    tinkerId = &quot;1.0.1-base&quot;</div><div class="line"></div><div class="line">    // 是否开启代理Application，设置之后无须改造Application，默认为false</div><div class="line">    enableProxyApplication = false</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="三、初始化SDK"><a href="#三、初始化SDK" class="headerlink" title="三、初始化SDK"></a>三、初始化SDK</h3><p><strong>enableProxyApplication = false 的情况</strong></p>
+<ul>
+<li>自定义Application</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">public class SampleApplication extends TinkerApplication &#123;</div><div class="line">    public SampleApplication() &#123;</div><div class="line">        super(ShareConstants.TINKER_ENABLE_ALL, &quot;com.yiba.test.buglypatch.SampleApplicationLike&quot;,</div><div class="line">                &quot;com.tencent.tinker.loader.TinkerLoader&quot;, false);</div><div class="line">    &#125;</div><div class="line">&#125;123456123456</div></pre></td></tr></table></figure>
+<ul>
+<li>自定义ApplicationLike</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div></pre></td><td class="code"><pre><div class="line">public class SampleApplicationLike extends DefaultApplicationLike &#123;</div><div class="line"></div><div class="line">    public static final String TAG = &quot;Tinker.SampleApplicationLike&quot;;</div><div class="line"></div><div class="line">    public SampleApplicationLike(Application application, int tinkerFlags,</div><div class="line">            boolean tinkerLoadVerifyFlag, long applicationStartElapsedTime,</div><div class="line">            long applicationStartMillisTime, Intent tinkerResultIntent, Resources[] resources,</div><div class="line">            ClassLoader[] classLoader, AssetManager[] assetManager) &#123;</div><div class="line">        super(application, tinkerFlags, tinkerLoadVerifyFlag, applicationStartElapsedTime,</div><div class="line">                applicationStartMillisTime, tinkerResultIntent, resources, classLoader,</div><div class="line">                assetManager);</div><div class="line">    &#125;</div><div class="line"></div><div class="line"></div><div class="line">    @Override</div><div class="line">    public void onCreate() &#123;</div><div class="line">        super.onCreate();</div><div class="line">        // 这里实现SDK初始化，appId替换成你的在Bugly平台申请的appId</div><div class="line">        Bugly.init(getApplication(), &quot;900029763&quot;, true);</div><div class="line">    &#125;</div><div class="line"></div><div class="line"></div><div class="line">    @TargetApi(Build.VERSION_CODES.ICE_CREAM_SANDWICH)</div><div class="line">    @Override</div><div class="line">    public void onBaseContextAttached(Context base) &#123;</div><div class="line">        super.onBaseContextAttached(base);</div><div class="line">        // you must install multiDex whatever tinker is installed!</div><div class="line">        MultiDex.install(base);</div><div class="line"></div><div class="line">        // 安装tinker</div><div class="line">        // TinkerManager.installTinker(this); 替换成下面Bugly提供的方法</div><div class="line">        Beta.installTinker(this);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    @TargetApi(Build.VERSION_CODES.ICE_CREAM_SANDWICH)</div><div class="line">    public void registerActivityLifecycleCallback(Application.ActivityLifecycleCallbacks callbacks) &#123;</div><div class="line">        getApplication().registerActivityLifecycleCallbacks(callbacks);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="四、AndroidManifest-xml配置"><a href="#四、AndroidManifest-xml配置" class="headerlink" title="四、AndroidManifest.xml配置"></a>四、AndroidManifest.xml配置</h3><ul>
+<li>权限配置</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&lt;uses-permission android:name=&quot;android.permission.READ_PHONE_STATE&quot; /&gt;</div><div class="line">&lt;uses-permission android:name=&quot;android.permission.INTERNET&quot; /&gt;</div><div class="line">&lt;uses-permission android:name=&quot;android.permission.ACCESS_NETWORK_STATE&quot; /&gt;</div><div class="line">&lt;uses-permission android:name=&quot;android.permission.ACCESS_WIFI_STATE&quot; /&gt;</div><div class="line">&lt;uses-permission android:name=&quot;android.permission.READ_LOGS&quot; /&gt;</div><div class="line">&lt;uses-permission android:name=&quot;android.permission.WRITE_EXTERNAL_STORAGE&quot; /&gt;</div><div class="line">&lt;uses-permission android:name=&quot;android.permission.READ_EXTERNAL_STORAGE&quot;/&gt;</div></pre></td></tr></table></figure>
+<ul>
+<li>Activity配置</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;activity</div><div class="line">    android:name=&quot;com.tencent.bugly.beta.ui.BetaActivity&quot;</div><div class="line">    android:theme=&quot;@android:style/Theme.Translucent&quot; /&gt;</div></pre></td></tr></table></figure>
+<ul>
+<li><p>配置FileProvider（<a href="http://lib.csdn.net/base/android" target="_blank" rel="external">Android</a> N之后配置）</p>
+<p>见<a href="https://bugly.qq.com/docs/user-guide/instruction-manual-android-hotfix/?v=20170205190410" target="_blank" rel="external">文档</a></p>
+</li>
+</ul>
+<h3 id="五、混淆配置"><a href="#五、混淆配置" class="headerlink" title="五、混淆配置"></a>五、混淆配置</h3><p>为了避免混淆SDK，在Proguard混淆文件中增加以下配置：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">-dontwarn com.tencent.bugly.**</div><div class="line">-keep public class com.tencent.bugly.**&#123;*;&#125;</div></pre></td></tr></table></figure>
+<p>如果你使用了support-v4包，你还需要配置以下混淆规则：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">-keep class android.support.**&#123;*;&#125;</div></pre></td></tr></table></figure>
+<hr>
+<h3 id="六、编译基准包"><a href="#六、编译基准包" class="headerlink" title="六、编译基准包"></a>六、编译基准包</h3><p>基准包就是原先运行有bug的包。</p>
+<p>点击Android Studio右上角的Gradle按钮，找到项目的assembleRelease任务，双击执行assembleRelease任务。</p>
+<p><img src="http://oe9ggtbcb.bkt.clouddn.com/K%29RNI48%5DNN%28PS~MG%5B3LK%7BEK.png" alt="image"></p>
+<p>任务执行完成后，会在build的目录下生成如下文件：</p>
+<p><img src="http://oe9ggtbcb.bkt.clouddn.com/RCMZ3Q%29%5D7B%7B_YYQ%28HC6$RTS.png" alt="image"></p>
+<h3 id="七、修复基准版代码"><a href="#七、修复基准版代码" class="headerlink" title="七、修复基准版代码"></a>七、修复基准版代码</h3><p>修复前代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">public class BugClass &#123;</div><div class="line"></div><div class="line">    public String bug() &#123;</div><div class="line">        String str = &quot;This is a bug&quot;;</div><div class="line">        str = null;</div><div class="line">        Log.e(&quot;zhang&quot;, &quot;BugClass --&gt; bug--&gt; str length :&quot; + str.length());</div><div class="line">        return str;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<hr>
+<p>修复后代码:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">public class BugClass &#123;</div><div class="line"></div><div class="line">    public String bug() &#123;</div><div class="line">        String str = &quot;This is a bug&quot;;</div><div class="line">//        str = null;</div><div class="line">        Log.e(&quot;zhang&quot;, &quot;BugClass --&gt; bug--&gt; str length :&quot; + str.length());</div><div class="line">        return str + &quot;  , fixed!!!&quot;;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<hr>
+<p>调用代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">public class MainActivity extends AppCompatActivity &#123;</div><div class="line"></div><div class="line">    @Override</div><div class="line">    protected void onCreate(Bundle savedInstanceState) &#123;</div><div class="line">        super.onCreate(savedInstanceState);</div><div class="line">        setContentView(R.layout.activity_main);</div><div class="line"></div><div class="line">        Button btn = (Button) findViewById(R.id.btn);</div><div class="line"></div><div class="line">        btn.setOnClickListener(new View.OnClickListener() &#123;</div><div class="line">            @Override</div><div class="line">            public void onClick(View v) &#123;</div><div class="line">                BugClass bugClass = new BugClass();</div><div class="line">                String bug = bugClass.bug();</div><div class="line">                Toast.makeText(MainActivity.this, bug, Toast.LENGTH_SHORT).show();</div><div class="line">            &#125;</div><div class="line">        &#125;);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="八、生成补丁包"><a href="#八、生成补丁包" class="headerlink" title="八、生成补丁包"></a>八、生成补丁包</h3><ul>
+<li>修改appName名称以及文件名称都需要保持一致。同时将基准包的tinkerid=1.0.1-base改为补丁包的tinkerid=1.0.1-patch。</li>
+</ul>
+<p><img src="http://oe9ggtbcb.bkt.clouddn.com/R4TK_IQ9@7JMDN4H%289A7HLH.png" alt="image"></p>
+<ul>
+<li><strong>生成补丁包</strong></li>
+</ul>
+<p>执行生成补丁包的任务操作：</p>
+<p><img src="http://oe9ggtbcb.bkt.clouddn.com/GD8C4NOLEE0%5BBBLFB_R4%29$U.png" alt="image"></p>
+<p>任务执行完之后，会生成3个文件，其中patch_signed_7zip.apk是我们需要的补丁包</p>
+<p><img src="http://oe9ggtbcb.bkt.clouddn.com/E4TCAATO%5B4E%602_S5PO6%5B0G6.png" alt="image"></p>
+<p>将补丁包上传至bugly的应用升级模块的热更新中</p>
+<p>具体见<a href="https://bugly.qq.com/docs/user-guide/instruction-manual-android-hotfix-demo/?v=20170205190410" target="_blank" rel="external">bugly的官方文档</a>。</p>
+<p><img src="https://ww3.sinaimg.cn/large/006tNbRwly1fd7nh2frm9j30wb0b641r.jpg" alt=""></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;推荐阅读：&lt;a href=&quot;http://www.jianshu.com/p/2d0f70e30111#&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Bugly热更新SDK你需要知道的一些事&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquo
+    
+    </summary>
+    
+      <category term="安卓" scheme="http://wanghaonanlpc.github.io/categories/%E5%AE%89%E5%8D%93/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>TBS服务报告</title>
@@ -902,7 +1003,7 @@
     <link href="http://wanghaonanlpc.github.io/2017/02/25/%E6%96%B0%E4%BA%A7%E5%93%81%E5%BC%80%E5%8F%91%E8%BF%87%E7%A8%8B/"/>
     <id>http://wanghaonanlpc.github.io/2017/02/25/新产品开发过程/</id>
     <published>2017-02-25T14:14:40.000Z</published>
-    <updated>2017-02-24T15:23:59.000Z</updated>
+    <updated>2017-03-01T13:10:57.000Z</updated>
     
     <content type="html"><![CDATA[<h4 id="大纲"><a href="#大纲" class="headerlink" title="大纲"></a>大纲</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">- 定义</div><div class="line">- 阶段回顾法</div><div class="line">- 阶段关卡发</div><div class="line">- 瀑布式开发法</div><div class="line">- 敏捷式开发法</div><div class="line">- 精益生产开发法</div><div class="line">- 设计思考</div><div class="line">- 过程拥有者</div></pre></td></tr></table></figure>
 <h4 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h4><h5 id="过程定义："><a href="#过程定义：" class="headerlink" title="-过程定义："></a>-过程定义：</h5><p>新产品开发过程</p>
@@ -958,19 +1059,19 @@
 <h4 id="阶段关卡法"><a href="#阶段关卡法" class="headerlink" title="阶段关卡法"></a>阶段关卡法</h4><p>阶段关卡过程是为了将一种新产品的项目从想法逐渐转变成上市产品的一种概念</p>
 <p>阶段关卡法讲所要付出的努力以管理决策关卡区分成不同的阶段</p>
 <p>跨功能团队在管理层批准进行下一阶段的产品开发之前，必须成功地完成每一阶段所规定的一组跨功能任务</p>
-<p><img src="./process_icons.gif" alt="process_icons"></p>
+<p><img src="https://ww4.sinaimg.cn/large/006tNbRwly1fd7nanvqd8g30fu02tmx8.gif" alt=""></p>
 <h5 id="阶段-1-2"><a href="#阶段-1-2" class="headerlink" title="阶段(1/2)"></a>阶段(1/2)</h5><p>阶段是跨功能的（其中没有研究和开发或营销阶段）以及为了提升上市的速度，每一项活动是并行的</p>
 <p>每一阶段的成本都高于前一阶段，结果是渐进的承诺。一旦不确定性降低，可以提高支出，风险也可管控（As uncertainties decrease, expenditures are allowed to rise and risk is managed.）</p>
-<p><img src="./stages-diagram.gif" alt="stages-diagram"></p>
+<p><img src="https://ww4.sinaimg.cn/large/006tNbRwly1fd7naxr3brg30ai02tjra.gif" alt=""></p>
 <h5 id="阶段-2-2"><a href="#阶段-2-2" class="headerlink" title="阶段(2/2)"></a>阶段(2/2)</h5><p>活动：团队必须根据项目计划进行工作</p>
 <p>集成分析：所有功能性活动结果的团队集成分析可以藉由跨功能互动推衍</p>
 <p>集成物：代表集成分析的结果</p>
 <p>活动 + 分析 = 交付物</p>
-<p><img src="./stages.gif" alt="stages"></p>
+<p><img src="https://ww4.sinaimg.cn/large/006tNbRwly1fd7nbb7jyog3080030q2t.gif" alt=""></p>
 <h5 id="关卡"><a href="#关卡" class="headerlink" title="关卡"></a>关卡</h5><p>交付物：关卡查验的输入 - 项目领导者和团队交付至会议的东西</p>
 <p>标准：为了能做出继续/终止以及优先序的决策，项目在接受评判时所需的条件</p>
 <p>输出：关卡查验的结果。关卡必须清楚地表达结果，须包括：一项决策（继续、终止、暂停、循环）以及下一步怎么走（核准的项目计划，日期以及下一关卡所同意的交付物）</p>
-<p><img src="./gates.gif" alt="gates"></p>
+<p><img src="https://ww4.sinaimg.cn/large/006tNbRwly1fd7nbh2dvtg3080030wed.gif" alt=""></p>
 <h5 id="关卡通过标准"><a href="#关卡通过标准" class="headerlink" title="关卡通过标准"></a>关卡通过标准</h5><h6 id="必须符合"><a href="#必须符合" class="headerlink" title="必须符合"></a>必须符合</h6><p>​    有是非题，一个NO表示终止的决定，检查清单是用来表示必须符合条目最平常的格式</p>
 <h6 id="应该符合"><a href="#应该符合" class="headerlink" title="应该符合"></a>应该符合</h6><p>​    有高度渴望的项目特性，但是对问题回答NO并不会终止该项目；确切的地说是对这些问题加以评分并决定项目的分数，评分模型将‘应该符合’的问题处理得很好</p>
 <h5 id="关卡会议"><a href="#关卡会议" class="headerlink" title="关卡会议"></a>关卡会议</h5><p>把关者（守门人）包括技术和商业人民</p>
@@ -1012,8 +1113,8 @@
     
     </summary>
     
+      <category term="npdp" scheme="http://wanghaonanlpc.github.io/categories/npdp/"/>
     
-      <category term="npdp" scheme="http://wanghaonanlpc.github.io/tags/npdp/"/>
     
   </entry>
   
@@ -1183,7 +1284,7 @@
     <link href="http://wanghaonanlpc.github.io/2017/02/21/Hexo%E4%B8%8Egithub%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2-%E4%BA%8C/"/>
     <id>http://wanghaonanlpc.github.io/2017/02/21/Hexo与github搭建个人博客-二/</id>
     <published>2017-02-21T11:25:48.000Z</published>
-    <updated>2017-02-22T12:58:16.000Z</updated>
+    <updated>2017-03-01T13:04:50.000Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>介绍本地Hexo博客网站与Github叠加</p>
@@ -1224,18 +1325,8 @@
     
     </summary>
     
-      <category term="前端" scheme="http://wanghaonanlpc.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+      <category term="hexo" scheme="http://wanghaonanlpc.github.io/categories/hexo/"/>
     
-      <category term="hexo" scheme="http://wanghaonanlpc.github.io/categories/%E5%89%8D%E7%AB%AF/hexo/"/>
-    
-    
-      <category term="hexo" scheme="http://wanghaonanlpc.github.io/tags/hexo/"/>
-    
-      <category term="node.js" scheme="http://wanghaonanlpc.github.io/tags/node-js/"/>
-    
-      <category term="gtihub" scheme="http://wanghaonanlpc.github.io/tags/gtihub/"/>
-    
-      <category term="markdown" scheme="http://wanghaonanlpc.github.io/tags/markdown/"/>
     
   </entry>
   
@@ -1738,7 +1829,7 @@
     <link href="http://wanghaonanlpc.github.io/2016/03/01/Retrofit-2-0%EF%BC%9AAndroid%E4%B8%8A%E6%9C%80%E5%A5%BD%E7%9A%84HTTP%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%BA%93%E7%9A%84%E6%9C%80%E5%A4%A7%E6%9B%B4%E6%96%B0/"/>
     <id>http://wanghaonanlpc.github.io/2016/03/01/Retrofit-2-0：Android上最好的HTTP客户端库的最大更新/</id>
     <published>2016-03-01T07:33:09.000Z</published>
-    <updated>2017-03-01T07:36:03.000Z</updated>
+    <updated>2017-03-01T07:51:10.000Z</updated>
     
     <content type="html"><![CDATA[<p>Retrofit是Android最受欢迎的HTTP客户端库之一，由于其简单性和与其他应用程序相比的出色性能。</p>
 <p>无论如何，它的弱点是没有任何直接的方法取消正在进行的交易Retrofit 1.x. 如果你想这样做，你必须在Thread上调用它，并手动杀死这是很难管理。</p>
@@ -1844,38 +1935,6 @@
     
       <category term="android" scheme="http://wanghaonanlpc.github.io/categories/android/"/>
     
-    
-  </entry>
-  
-  <entry>
-    <title>使用github pages服务搭建博客</title>
-    <link href="http://wanghaonanlpc.github.io/2016/02/21/%E4%BD%BF%E7%94%A8github%20pages%E6%9C%8D%E5%8A%A1%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/"/>
-    <id>http://wanghaonanlpc.github.io/2016/02/21/使用github pages服务搭建博客/</id>
-    <published>2016-02-21T05:57:52.000Z</published>
-    <updated>2017-02-23T13:39:51.000Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>使用github pages服务搭建博客的好处有：</p>
-<ol>
-<li>全是静态文件，访问速度快；</li>
-<li>免费方便，不用花一分钱就可以搭建一个自由的个人博客，不需要服务器不需要后台；</li>
-<li>可以随意绑定自己的域名，不仔细看的话根本看不出来你的网站是基于github的；</li>
-</ol>
-<a id="more"></a>
-<ol>
-<li>数据绝对安全，基于github的版本管理，想恢复到哪个历史版本都行；</li>
-<li>博客内容可以轻松打包、转移、发布到其它平台；</li>
-<li>等等；</li>
-</ol>
-]]></content>
-    
-    <summary type="html">
-    
-      附加一段文章摘要，字数最好在140字以内，会出现在meta的description里面
-    
-    </summary>
-    
-    
-      <category term="hello" scheme="http://wanghaonanlpc.github.io/tags/hello/"/>
     
   </entry>
   
