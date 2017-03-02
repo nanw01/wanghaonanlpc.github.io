@@ -159,10 +159,16 @@
 <p>关注该公众号</p>
 ]]></content>
       
+        <categories>
+            
+            <category> 安卓 </category>
+            
+        </categories>
+        
         
         <tags>
             
-            <tag> 移动端 </tag>
+            <tag> android </tag>
             
             <tag> 浏览器 </tag>
             
@@ -226,6 +232,20 @@
 <p>另外，最近看到一个Github上的开源项目 <a href="https://github.com/k0shk0sh/PermissionHelper" target="_blank" rel="external">PermissionHelper</a> ，专门用于处理 Android 6.0 的权限兼容问题。</p>
 ]]></content>
       
+        <categories>
+            
+            <category> 安卓 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> android </tag>
+            
+            <tag> permission </tag>
+            
+        </tags>
         
     </entry>
     
@@ -303,6 +323,20 @@
 <p>说一下代码修改。这是大事，如果代码结构被设计的不够好，你需要一些很蛋疼的重构。每个app都要被修正。如上所说，我们没的选择。。。<br>列出所有你需要请求的权限所有情形，如果A被授权，B被拒绝，会发生什么。blah，blah。<br>祝重构顺利。把它列为你需要做的大事，从现在就开始着手做，以保证M正式发布的时候没有问题。<br>希望本文对你有用，快乐编码！</p>
 ]]></content>
       
+        <categories>
+            
+            <category> 安卓 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> android </tag>
+            
+            <tag> permission </tag>
+            
+        </tags>
         
     </entry>
     
@@ -1033,9 +1067,9 @@
         
         <tags>
             
-            <tag> NFC </tag>
-            
             <tag> android </tag>
+            
+            <tag> NFC </tag>
             
         </tags>
         
@@ -1135,9 +1169,9 @@
         
         <tags>
             
-            <tag> 浏览器 </tag>
-            
             <tag> android </tag>
+            
+            <tag> 浏览器 </tag>
             
             <tag> ios </tag>
             
@@ -1624,6 +1658,110 @@
 <p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
 ]]></content>
       
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[VirtualAPK：滴滴 Android 插件化的实践之路]]></title>
+      <url>http://wanghaonanlpc.github.io/2016/12/27/VirtualAPK%EF%BC%9A%E6%BB%B4%E6%BB%B4-Android-%E6%8F%92%E4%BB%B6%E5%8C%96%E7%9A%84%E5%AE%9E%E8%B7%B5%E4%B9%8B%E8%B7%AF/</url>
+      <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>在Android插件化技术日新月异的今天，开发并落地一款插件化框架到底是简单还是困难，这个问题不同人会有不同的答案。但是我相信，完成一个插件化框架的demo并不是多难的事，但是要开发一款完善的插件化框架却不是一件容易的事，尤其在国内，各大Rom厂商都对Android系统做了一定程度的定制，这进一步加剧了Android本身的碎片化问题。</p>
+<p>滴滴出行在插件化上的探索起步较晚，由于滴滴业务发展较快，业务迭代占据了大量的时间，这使得我们在2016年才开始研究这方面的技术。经过半年的开发、测试、适配和线上验证，目前我们推出了一款比较完善的插件化框架：VirtualAPK。之所以现在推出来，是因为VirtualAPK在我们内部已经得到了很好的验证，我们在迭代过程中不断地做机型适配和细节特性的支持，目前已经达到一个非常稳定的状况，足以支撑滴滴部分乃至全部业务的动态发版需求。目前滴滴出行最新版本（v5.0.4）上面，小巴和接送机业务均为插件，大家可以去体验。</p>
+<h1 id="插件化的现状"><a href="#插件化的现状" class="headerlink" title="插件化的现状"></a>插件化的现状</h1><p>到目前为止，业界已经有很多优秀的开源项目，比如早期的基于静态代理思想的DynamicLoadApk，随后的基于占坑思想的DynamicApk、Small，还有360手机助手的DroidPlugin。他们都是优秀的开源项目，他们很大程度上促进了国内插件化技术的发展。</p>
+<p>尽管有如此多的优秀框架存在，但是兼容性问题仍然是制约插件化发展的一个难题。一款插件化框架，也许可以在一款手机上完美运行，但是在数以千万的设备上却总是容易存在这样那样的兼容性问题。我相信上线过插件化的工程师应该深有体会。滴滴为什么还要自研一款新的插件化框架？因为我们需要一款功能完备的、兼容性优秀的、适用于滴滴业务的插件化框架，目前市面上的开源不能满足我们的需求，所以我们必须重新造轮子，于是VirtualAPK诞生了。</p>
+<h1 id="VirtualAPK的诞生"><a href="#VirtualAPK的诞生" class="headerlink" title="VirtualAPK的诞生"></a>VirtualAPK的诞生</h1><p>VirtualAPK是滴滴出行自研的一款优秀的插件化框架，主要有如下几个特性。</p>
+<h3 id="功能完备"><a href="#功能完备" class="headerlink" title="功能完备"></a>功能完备</h3><ul>
+<li><p>支持几乎所有的Android特性；</p>
+</li>
+<li><p>四大组件方面<br><strong>四大组件均不需要在宿主manifest中预注册，每个组件都有完整的生命周期。</strong> </p>
+</li>
+<li><ol>
+<li>Activity：支持显示和隐式调用，支持Activity的theme和LaunchMode，支持透明主题；</li>
+<li>Service：支持显示和隐式调用，支持Service的start、stop、bind和unbind，并支持跨进程bind插件中的Service；</li>
+<li>Receiver：支持静态注册和动态注册的Receiver；</li>
+<li>ContentProvider：支持provider的所有操作，包括CRUD和call方法等，支持跨进程访问插件中的Provider。</li>
+</ol>
+</li>
+<li><p>自定义View：支持自定义View，支持自定义属性和style，支持动画；</p>
+</li>
+<li><p>PendingIntent：支持PendingIntent以及和其相关的Alarm、Notification和AppWidget；</p>
+</li>
+<li><p>支持插件Application以及插件manifest中的meta-data；</p>
+</li>
+<li><p>支持插件中的so。</p>
+</li>
+</ul>
+<h3 id="优秀的兼容性"><a href="#优秀的兼容性" class="headerlink" title="优秀的兼容性"></a>优秀的兼容性</h3><ul>
+<li>兼容市面上几乎所有的Android手机，这一点已经在滴滴出行客户端中得到验证；</li>
+<li>资源方面适配小米、Vivo、Nubia等，对未知机型采用自适应适配方案；</li>
+<li>极少的Binder Hook，目前仅仅hook了两个Binder：AMS和IContentProvider，Hook过程做了充分的兼容性适配；</li>
+<li>插件运行逻辑和宿主隔离，确保框架的任何问题都不会影响宿主的正常运行。</li>
+</ul>
+<h3 id="入侵性极低"><a href="#入侵性极低" class="headerlink" title="入侵性极低"></a>入侵性极低</h3><ul>
+<li>插件开发等同于原生开发，四大组件无需继承特定的基类；</li>
+<li>精简的插件包，插件可以依赖宿主中的代码和资源，也可以不依赖；</li>
+<li>插件的构建过程简单，通过Gradle插件来完成插件的构建，整个过程对开发者透明。</li>
+</ul>
+<h1 id="VirtualAPK的工作过程"><a href="#VirtualAPK的工作过程" class="headerlink" title="VirtualAPK的工作过程"></a>VirtualAPK的工作过程</h1><hr>
+<p>VirtualAPK对插件没有额外的约束，原生的apk即可作为插件。插件工程编译生成apk后，即可通过宿主App加载，每个插件apk被加载后，都会在宿主中创建一个单独的LoadedPlugin对象。如下图所示，通过这些LoadedPlugin对象，VirtualAPK就可以管理插件并赋予插件新的意义，使其可以像手机中安装过的App一样运行。 </p>
+<p><img src="https://ww3.sinaimg.cn/large/006tNbRwly1fd8g0n3x7ej30hs0950tg.jpg" alt=""></p>
+<h3 id="VirtualAPK的运行形态"><a href="#VirtualAPK的运行形态" class="headerlink" title="VirtualAPK的运行形态"></a>VirtualAPK的运行形态</h3><p>我们计划赋予VirtualAPK两种工作形态，耦合形态和独立形态。目前VirtualAPK对耦合形态已经有了很好的支持，我们接下来将计划支持独立形态。<br><strong>耦合形态</strong><br>插件对宿主可以有代码或者资源的依赖，也可以没有依赖。这种模式下，插件中的类不能和宿主重复，资源id也不能和宿主冲突。这是VirtualAPK的默认形态，也是适用于大多数业务的形态。<br><strong>独立形态</strong><br>插件对宿主没有代码或者资源的依赖。这种模式下，插件和宿主没有任何关系，所以插件中的类和资源均可以和宿主重复。这种形态的主要作用是用于运行一些第三方apk。</p>
+<h3 id="如何使用"><a href="#如何使用" class="headerlink" title="如何使用"></a>如何使用</h3><p>第一步： 初始化插件引擎</p>
+<p><img src="https://ww2.sinaimg.cn/large/006tNbRwly1fd8g0uu0kjj30hs03y3yr.jpg" alt=""></p>
+<p>第二步：加载插件</p>
+<p><img src="https://ww1.sinaimg.cn/large/006tNbRwly1fd8g13o04mj30hs031q33.jpg" alt=""></p>
+<p>我们对上述加载过程进行了一些封装，通过如下方式即可异步地去加载一个插件。</p>
+<p><img src="https://ww4.sinaimg.cn/large/006tNbRwly1fd8g191wqoj30hs07674z.jpg" alt=""></p>
+<p><strong>当插件入口被调用后，插件的后续逻辑均不需要宿主干预，均走原生的Android流程。</strong><br>比如，在插件内部，如下代码将正确执行：</p>
+<p><img src="https://ww4.sinaimg.cn/large/006tNbRwly1fd8g1jsot3j30hs09gab9.jpg" alt=""></p>
+<h1 id="探究原理"><a href="#探究原理" class="headerlink" title="探究原理"></a>探究原理</h1><h3 id="基本原理"><a href="#基本原理" class="headerlink" title="基本原理"></a>基本原理</h3><ul>
+<li><strong>合并宿主和插件的ClassLoader</strong><br>需要注意的是，插件中的类不可以和宿主重复</li>
+<li><strong>合并插件和宿主的资源</strong><br>重设插件资源的packageId，将插件资源和宿主资源合并</li>
+<li><strong>去除插件包对宿主的引用</strong><br>构建时通过Gradle插件去除插件对宿主的代码以及资源的引用</li>
+</ul>
+<h3 id="四大组件的实现原理"><a href="#四大组件的实现原理" class="headerlink" title="四大组件的实现原理"></a>四大组件的实现原理</h3><p><img src="https://ww3.sinaimg.cn/large/006tNbRwly1fd8g1y57iaj30ca0akq39.jpg" alt=""></p>
+<ul>
+<li><strong>Activity</strong><br>采用宿主manifest中占坑的方式来绕过系统校验，然后再加载真正的activity；</li>
+<li><strong>Service</strong><br>动态代理AMS，拦截service相关的请求，将其中转给一个虚拟空间（Matrix）去处理，Matrix会接管系统的所有操作；</li>
+<li><strong>Receiver</strong><br>将插件中静态注册的receiver重新注册一遍；</li>
+<li><strong>ContentProvider</strong><br>动态代理IContentProvider，拦截provider相关的请求，将其中转给一个虚拟空间（Matrix）去处理，Matrix会接管系统的所有操作。</li>
+</ul>
+<p>如下是VirtualAPK的整体结构图。<br><img src="https://ww1.sinaimg.cn/large/006tNbRwly1fd8g2ahan3j30hs0afwf6.jpg" alt=""></p>
+<h1 id="填坑之路"><a href="#填坑之路" class="headerlink" title="填坑之路"></a>填坑之路</h1><p>在实践中我们遇到了很多很多的问题，比如机型适配、API版本适配、Binder hook的稳定性保证等问题，这里拿一个典型的资源适配问题来说明。</p>
+<p>其实这是一个很无奈的问题，由于国内各大Rom厂商喜欢深度定制Android系统，所以就出现了这种适配问题。<br>正常情况下我们通过如下代码去创建插件的Resources对象：</p>
+<p><img src="https://ww4.sinaimg.cn/large/006tNbRwly1fd8g2p2atzj30hs01djrf.jpg" alt=""><br>然后在Vivo手机上，竟然出现了如下的类型转换错误，看起来是Vivo自己派生了Resources的子类。</p>
+<p><img src="https://ww2.sinaimg.cn/large/006tNbRwly1fd8g2wd9qqj30hs09f768.jpg" alt=""><br>于是反编译了下Vivo的framework代码，果不其然，在如下代码中进行了类型转换，所以在加载插件资源的时候就报错了。</p>
+<p><img src="https://ww2.sinaimg.cn/large/006tNbRwly1fd8g35jicrj30hs054mxr.jpg" alt=""><br>为了解决这个问题，我们分析了VivoResources的代码实现，然后在创建插件资源的时候，采用了如下的代码。</p>
+<p><img src="https://ww3.sinaimg.cn/large/006tNbRwly1fd8g3b1tcdj30hs04faao.jpg" alt=""></p>
+<p>除了Vivo以外，有类似问题的还有MiUI、Nubia以及其它不知名的机型。而且在Vivo手机上，除了类型转换错误的问题，还有其他很坑的问题。</p>
+<p>事实上我们还处理了很多其他的坑，这里无法一一说明，所以说如何保证插件化的稳定性是一件很有技术挑战的事情。</p>
+<h1 id="一些暂时不支持的特性"><a href="#一些暂时不支持的特性" class="headerlink" title="一些暂时不支持的特性"></a>一些暂时不支持的特性</h1><hr>
+<p>由于种种原因，VirtualAPK目前未能支持所有的Android的特性，如下是已知的几点。</p>
+<ul>
+<li>不支持Activity的部分属性，比如process、configChanges等；</li>
+<li>暂不支持overridePendingTransition(int enterAnim, int exitAnim)这种形式的转场动画；</li>
+<li>插件中弹通知，不能使用插件中的资源，比如图片。</li>
+</ul>
+<h1 id="开源计划"><a href="#开源计划" class="headerlink" title="开源计划"></a>开源计划</h1><hr>
+<p>我们的目标是打造一款功能完备的插件化框架，使得各个业务线都能以插件的形式集成，从而实现Android App的热更新能力。</p>
+<p>目前VirtualAPK还有一些特性需要进一步完善，待完善后，将会有开源计划。我们期望VirtualAPK开源后，可以让其他App能够无缝集成，无需考虑细节实现和兼容性问题即可轻松拥有热更新能力。</p>
+<p>请关注滴滴 App 开发技术微信公众号 <strong>DDApp</strong>，我们会在上面发布 VirtualAPK的最新进展，也将会把滴滴 iOS 和 Android 开发的干货技术文章分享给大家：</p>
+<p><img src="https://ww3.sinaimg.cn/large/006tNbRwly1fd8g3iq999j30by0by0tk.jpg" alt=""></p>
+]]></content>
+      
+        <categories>
+            
+            <category> 安卓 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> android </tag>
+            
+            <tag> 插件化 </tag>
+            
+        </tags>
         
     </entry>
     

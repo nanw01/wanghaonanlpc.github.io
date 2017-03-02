@@ -10,7 +10,7 @@
     
     <title>
         
-            Retrofit 2.0：Android上最好的HTTP客户端库的最大更新 | 
+            VirtualAPK：滴滴 Android 插件化的实践之路 | 
         
         一个老白 | 野厨
     </title>
@@ -27,7 +27,7 @@
     <meta name="theme-color" content="#0097A7">
     <meta name="author" content="Alex">
     <meta name="description" content="null">
-    <meta name="keywords" content="null">
+    <meta name="keywords" content="null,android,插件化">
 
     <!--iOS -->
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
@@ -48,9 +48,9 @@
     <!-- The Open Graph protocol -->
     <meta property="og:url" content="http://wanghaonanlpc.github.io">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="Retrofit 2.0：Android上最好的HTTP客户端库的最大更新 | 一个老白 | 野厨">
+    <meta property="og:title" content="VirtualAPK：滴滴 Android 插件化的实践之路 | 一个老白 | 野厨">
     <meta property="og:description" content="null">
-    
+    <meta property="og:article:tag" content="android"> <meta property="og:article:tag" content="插件化"> 
 
     <!--[if lte IE 9]>
         <link rel="stylesheet" href="/css/ie-blocker.css">
@@ -234,7 +234,7 @@
     </button>
 
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#相同旧包与新版本"><span class="post-toc-number">1.</span> <span class="post-toc-text">相同旧包与新版本</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#新服务声明。不再有同步和异步。"><span class="post-toc-number">2.</span> <span class="post-toc-text">新服务声明。不再有同步和异步。</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#持续交易取消"><span class="post-toc-number">3.</span> <span class="post-toc-text">持续交易取消</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#新服务创建。转换器现在被排除在Retrofit之外。"><span class="post-toc-number">4.</span> <span class="post-toc-text">新服务创建。转换器现在被排除在Retrofit之外。</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#自定义Gson对象"><span class="post-toc-number">5.</span> <span class="post-toc-text">自定义Gson对象</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#新的URL解析概念。与相同"><span class="post-toc-number">6.</span> <span class="post-toc-text">新的URL解析概念。与相同</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#OkHttp现在是必需的"><span class="post-toc-number">7.</span> <span class="post-toc-text">OkHttp现在是必需的</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#onResponse仍然被称为eventhough有响应的问题"><span class="post-toc-number">8.</span> <span class="post-toc-text">onResponse仍然被称为eventhough有响应的问题</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#缺少INTERNET权限导致SecurityException抛出"><span class="post-toc-number">9.</span> <span class="post-toc-text">缺少INTERNET权限导致SecurityException抛出</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#使用OkHttp中的拦截器"><span class="post-toc-number">10.</span> <span class="post-toc-text">使用OkHttp中的拦截器</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#证书钉住"><span class="post-toc-number">11.</span> <span class="post-toc-text">证书钉住</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#RxJava与CallAdapter集成"><span class="post-toc-number">12.</span> <span class="post-toc-text">RxJava与CallAdapter集成</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#结论"><span class="post-toc-number">13.</span> <span class="post-toc-text">结论</span></a></li></ol>
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#前言"><span class="post-toc-number">1.</span> <span class="post-toc-text">前言</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#插件化的现状"><span class="post-toc-number">2.</span> <span class="post-toc-text">插件化的现状</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#VirtualAPK的诞生"><span class="post-toc-number">3.</span> <span class="post-toc-text">VirtualAPK的诞生</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#功能完备"><span class="post-toc-number">3.0.1.</span> <span class="post-toc-text">功能完备</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#优秀的兼容性"><span class="post-toc-number">3.0.2.</span> <span class="post-toc-text">优秀的兼容性</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#入侵性极低"><span class="post-toc-number">3.0.3.</span> <span class="post-toc-text">入侵性极低</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#VirtualAPK的工作过程"><span class="post-toc-number">4.</span> <span class="post-toc-text">VirtualAPK的工作过程</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#VirtualAPK的运行形态"><span class="post-toc-number">4.0.1.</span> <span class="post-toc-text">VirtualAPK的运行形态</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#如何使用"><span class="post-toc-number">4.0.2.</span> <span class="post-toc-text">如何使用</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#探究原理"><span class="post-toc-number">5.</span> <span class="post-toc-text">探究原理</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#基本原理"><span class="post-toc-number">5.0.1.</span> <span class="post-toc-text">基本原理</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#四大组件的实现原理"><span class="post-toc-number">5.0.2.</span> <span class="post-toc-text">四大组件的实现原理</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#填坑之路"><span class="post-toc-number">6.</span> <span class="post-toc-text">填坑之路</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#一些暂时不支持的特性"><span class="post-toc-number">7.</span> <span class="post-toc-text">一些暂时不支持的特性</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#开源计划"><span class="post-toc-number">8.</span> <span class="post-toc-text">开源计划</span></a></li></ol>
 
         <!--
         <li class="mdl-menu__item">
@@ -258,19 +258,11 @@
                 
     <!-- Paradox Post Header -->
     
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-            <script>
-    var randomNum = Math.floor(Math.random() * 19 + 1);
-
-    $('.post_thumbnail-random').css('background-image', 'url(' + '/img/random/material-' + randomNum + '.png' + ')');
-</script>
-
-        
+        <!-- Custom Thumbnail -->
+        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50" style="background-image:url(https://ww4.sinaimg.cn/large/006tNbRwly1fd8g6eeoykj30fa0a7q3p.jpg)">
     
             <p class="article-headline-p">
-                Retrofit 2.0：Android上最好的HTTP客户端库的最大更新
+                VirtualAPK：滴滴 Android 插件化的实践之路
             </p>
         </div>
 
@@ -289,7 +281,7 @@
     <!-- Author Name & Date -->
     <div>
         <strong>Alex</strong>
-        <span>3月 01, 2016</span>
+        <span>12月 27, 2016</span>
     </div>
 
     <div class="section-spacer"></div>
@@ -310,7 +302,7 @@
         </button>
         <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button">
             <li class="mdl-menu__item">在其它设备中阅读本文章</li>
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASYAAAEmCAAAAADqr2IGAAAEHklEQVR42u3aS24jMQwFwNz/0jMHCOK8R/YMYqa0CgK7LVUvxN/HHytYHwgwYcKECRMmCxMmTJh+PNNHvL761uf/55/56j+vP/l6b693UpwREyZMmDAdYvrmalx/5vNWXh9j9sz2NXzzLUyYMGHCdI4p2W57uW4+nz8hZ8pfCSZMmDBh+s1MbfI8S03zY/+L4AMTJkyYMP1mptcEz5Zck3Bhv39MmDBhwvQbmPJDztqQeQszb5fm5eD/WgvHhAkTJkw/jGlzPb/L3/91vgkTJkyYMP0YpnblbcvZoE9eRE5S69VJMWHChAnTCab84txsa3Y9563Q9tVGe8aECRMmTEeZ2uBgs91NK3RTPo4KypgwYcKE6RBTOySac8yS29fPeXbY6Mt9YsKECROmQ0wJxyYdbb+bvLbk8DMgTJgwYcJ0j2k/vpOPnM7KykkS+1TZGhMmTJgwXWJqR2qebTTuU+W81Js/HxMmTJgw3WNqC69FAjkqHLfDQEnDsj4XJkyYMGE6ypSnuG1YkIcUq5S15IsGdzBhwoQJ05szPZVkts3FfYu0Ta2HgzuYMGHChOnNmXKO2cHay3iWuM5eRp36YsKECROmt2LaH6z9+dmL2V/5q4AAEyZMmDAdYmoHd9rj5az7odjV/zFhwoQJ0yGmNo1sS7r7gm8bCrT7x4QJEyZMV5n2ZdxNuXYWLrQc+UvChAkTJkxXmZJxnPzvZ5/ZFmc3e8aECRMmTPeYNiXafCCmDQjyUvIsoKkDAkyYMGHC9OZMbZH39TE2w0Btejwr8kalakyYMGHCdJrpqYGbNolNXsCs/Zmn4pgwYcKE6RJTO4KzSWXzJmULtB/cKWrhmDBhwoTpbZnyUmmyufyCb1/VjLgOYjBhwoQJ0yGmTYNzVsDNr/nZ4dvQIQoIMGHChAnTGzIlAzEzmry1mfzKMH1dYGHChAkTphtMbUL71KDMvt2YUw6brJgwYcKE6RBTcj3nSensMs4HcfIhoXYYCBMmTJgw3WP6GK38eO0Wc4I8eZ4tTJgwYcJ0g2nWtmyDg/yqboOJNvUtWqeYMGHChOkc06zAmm+0DQL2afDsJWHChAkTpntMbTtwMyr61Hfzaz4vSWPChAkTpntMs3ZgW3J9asRn1qSclYYxYcKECdMNprrJVyaum1DgqQJuXj7GhAkTJkz3mNphnVkwkRdn26JtS1A8HxMmTJgwHWJqW4b5D9dNxDIgSH5xWD7GhAkTJkznmPILtW0fttvdpK/tkzFhwoQJE6a2tTlrRs7an3kok58XEyZMmDBhyod18mt4M4izSXe//BYmTJgwYTrH9C8ah68DiDYI2OwqeQImTJgwYbrKNCuJ7g+QtDPz57QhwjejRZgwYcKE6QSTFQUEFiZMmDBhwoTJwoQJ009ZfwHATeJi4GykkgAAAABJRU5ErkJggg==">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQ4AAAEOCAAAAABd2qZ5AAADl0lEQVR42u3aQW4bQQwEQP//08nVQLBWNzljKUDtSbBk7Wz5QDfJrz+ub9cXAhw4cODAgQMHDhw4PpjjK76+f/7pG/79zNP3/Py7T59MXufPggMHDhw47nG8KEUxx9O3JSgJR3KX/Flw4MCBA8dtjllxbYtl/m5ewlfPggMHDhw43sqR3+ZFeYsfLPkD4MCBAweO/5fj5weehaukwZe/iwMHDhw4PocjL5Nt9JpxJ6X3zb1SHDhw4MBxdKHhM1+/bb8DBw4cOHCMrmSxoG0OtusU7d1ffD8OHDhw4DjKkYx/2hWEVdkri+hmuIUDBw4cOO5x/Pyo+agpGT5tViI2xI+nwoEDBw4cRzluBLDkiAlrO4JqizcOHDhw4LjBkUSmNs61lO2KW7vosGoO4sCBAweO0dgpCV2z0phz5BD5aYcLDThw4MCBY8GRt9jyAHa20G6KfdJ8xIEDBw4cNzjyY+VlbzOmasdRq9YkDhw4cOA4ytHevn282fpCUSbL+IcDBw4cOG5zJAWpLbdnG4IbpqhZiQMHDhw4LnDMHnuzBtEu0g2XFfaJFgcOHDhwjLph+SHywpYPmdoB2GaUhQMHDhw4foejbeclKwUt6OxR84WGx5/gwIEDB46jHHnESkppW5L3cHmAxIEDBw4cv8mR/3K7jjAbVuUDsH2Qw4EDBw4cZznahl07asrXC/JH3Yy+hs1BHDhw4MARc8yWDPLwlq+stUsMbYvwwKocDhw4cOAYcSQ3yJk28Wy/zI0DBw4cON7LMSufm2iXo+QxMl+5w4EDBw4ctzmGhWrdOpwFudlpceDAgQPHbY62RdjStEUxj47tGt/jT3DgwIEDx1GOTUuuHfNsRlD7RmER4XDgwIEDx4LjVLNvtnbQtvZymuKEOHDgwIHjKEcbrvJ32xiWNwTze0WtTxw4cODAcZRjM7BJDrEJZu2yxbAFiQMHDhw4LnDsy+e+gXgv7A0TLQ4cOHDgWHDkVx66ZksS7UipDYfF/x04cODAgWPE0ZaovPF3qp23/8Mc2O/AgQMHDhwlR1Jc8+OeIsvLbR5KiykcDhw4cOBYcyTFdRPVZvEsv1cb83DgwIEDxydwzILTLGidCngv7ogDBw4cOD6AIy97mwA2jGTxIAoHDhw4cNzmSJp3eQsvaQ7OBkWHz4ADBw4cOC5wtO25TaxKim77PX+CCwcOHDhw/A6HCwcOHDhw4MCBAwcOHB92/QXLydMEMQMFPwAAAABJRU5ErkJggg==">
         </ul>
     
 
@@ -322,7 +314,7 @@
     </button>
     <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
         <li class="mdl-menu__item">
-        
+        <a class="post_tag-link" href="/tags/android/">android</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/插件化/">插件化</a>
     </ul>
     
 
@@ -336,7 +328,7 @@
     <!-- Leancloud Views -->
         <a class="post_share-link" href="#">
             <li class="mdl-menu__item">
-                <span id="/2016/03/01/Retrofit-2-0：Android上最好的HTTP客户端库的最大更新/" class="leancloud-views_num" data-flag-title="Retrofit 2.0：Android上最好的HTTP客户端库的最大更新">
+                <span id="/2016/12/27/VirtualAPK：滴滴-Android-插件化的实践之路/" class="leancloud-views_num" data-flag-title="VirtualAPK：滴滴 Android 插件化的实践之路">
      &nbsp;浏览量
 </span>
 
@@ -359,7 +351,7 @@
 
     <!-- Share Weibo -->
     
-        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=Retrofit 2.0：Android上最好的HTTP客户端库的最大更新&url=http://wanghaonanlpc.github.io//2016/03/01/Retrofit-2-0：Android上最好的HTTP客户端库的最大更新/index.html&pic=&searchPic=false&style=simple" target="_blank">
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=VirtualAPK：滴滴 Android 插件化的实践之路&url=http://wanghaonanlpc.github.io//2016/12/27/VirtualAPK：滴滴-Android-插件化的实践之路/index.html&pic=&searchPic=false&style=simple" target="_blank">
             <li class="mdl-menu__item">
                 分享到微博
             </li>
@@ -368,7 +360,7 @@
 
     <!-- Share Twitter -->
     
-        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=Retrofit 2.0：Android上最好的HTTP客户端库的最大更新&url=http://wanghaonanlpc.github.io//2016/03/01/Retrofit-2-0：Android上最好的HTTP客户端库的最大更新/index.html&via=Alex" target="_blank">
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=VirtualAPK：滴滴 Android 插件化的实践之路&url=http://wanghaonanlpc.github.io//2016/12/27/VirtualAPK：滴滴-Android-插件化的实践之路/index.html&via=Alex" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Twitter
             </li>
@@ -377,7 +369,7 @@
 
     <!-- Share Facebook -->
     
-        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://wanghaonanlpc.github.io//2016/03/01/Retrofit-2-0：Android上最好的HTTP客户端库的最大更新/index.html" target="_blank">
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://wanghaonanlpc.github.io//2016/12/27/VirtualAPK：滴滴-Android-插件化的实践之路/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Facebook
             </li>
@@ -386,7 +378,7 @@
 
     <!-- Share Google+ -->
     
-        <a class="post_share-link" href="https://plus.google.com/share?url=http://wanghaonanlpc.github.io//2016/03/01/Retrofit-2-0：Android上最好的HTTP客户端库的最大更新/index.html" target="_blank">
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://wanghaonanlpc.github.io//2016/12/27/VirtualAPK：滴滴-Android-插件化的实践之路/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Google+
             </li>
@@ -398,7 +390,7 @@
 
     <!-- Share QQ -->
     
-        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=一个老白 | 野厨&title=Retrofit 2.0：Android上最好的HTTP客户端库的最大更新&summary=null&pics=http://wanghaonanlpc.github.io/img/favicon.png&url=http://wanghaonanlpc.github.io/2016/03/01/Retrofit-2-0：Android上最好的HTTP客户端库的最大更新/index.html" target="_blank">
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=一个老白 | 野厨&title=VirtualAPK：滴滴 Android 插件化的实践之路&summary=null&pics=http://wanghaonanlpc.github.io/img/favicon.png&url=http://wanghaonanlpc.github.io/2016/12/27/VirtualAPK：滴滴-Android-插件化的实践之路/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 QQ
             </li>
@@ -416,99 +408,88 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <p>Retrofit是Android最受欢迎的HTTP客户端库之一，由于其简单性和与其他应用程序相比的出色性能。</p>
-<p>无论如何，它的弱点是没有任何直接的方法取消正在进行的交易Retrofit 1.x. 如果你想这样做，你必须在Thread上调用它，并手动杀死这是很难管理。</p>
-<p>广场在几年前承诺，这个功能将在Retrofit 2.0上可用，但几年过去了，仍然没有更新的消息。</p>
-<p>直到上周，Retrofit 2.0才刚刚通过了它的Release Candidate阶段到Beta 1，并已向所有人公开发布。在尝试之后，我必须说，我对它的新模式及其新功能印象深刻。好的方法有很多变化。我将在本文中描述这些。让我们开始吧 ！</p>
-<h2 id="相同旧包与新版本"><a href="#相同旧包与新版本" class="headerlink" title="相同旧包与新版本"></a>相同旧包与新版本</h2><p>如果要将Retrofit 2.0导入到项目中，请将此行添加到您的<code>build.gradle</code>in <code>dependencies</code> 部分。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">compile &apos;com.squareup.retrofit2:retrofit:2.0.0-beta4&apos;</div></pre></td></tr></table></figure>
-<p>同步您的gradle文件，您现在可以使用Retrofit 2.0 =）</p>
-<p>正如你所看到的，Retrofit 2的包名与以前的版本不一样。现在  <code>com.squareup.retrofit2</code>。</p>
-<h2 id="新服务声明。不再有同步和异步。"><a href="#新服务声明。不再有同步和异步。" class="headerlink" title="新服务声明。不再有同步和异步。"></a>新服务声明。不再有同步和异步。</h2><p>关于Retrofit 1.9中的服务接口声明，如果要声明一个同步函数，则必须声明如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">/* Synchronous in Retrofit 1.9 */</div><div class="line"></div><div class="line">public interface APIService &#123;</div><div class="line"></div><div class="line">    @POST(&quot;/list&quot;)</div><div class="line">    Repo loadRepo();</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>你必须声明一个异步的，像这样：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">/* Asynchronous in Retrofit 1.9 */</div><div class="line"></div><div class="line">public interface APIService &#123;</div><div class="line"></div><div class="line">    @POST(&quot;/list&quot;)</div><div class="line">    void loadRepo(Callback&lt;Repo&gt; cb);</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>但在<strong>Retrofit 2.0上</strong>，它更简单，因为你可以只声明一个模式。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">import retrofit.Call;</div><div class="line"></div><div class="line">/* Retrofit 2.0 */</div><div class="line"></div><div class="line">public interface APIService &#123;</div><div class="line"></div><div class="line">    @POST(&quot;/list&quot;)</div><div class="line">    Call&lt;Repo&gt; loadRepo();</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>调用已创建服务的方式也会更改为与<a href="http://square.github.io/okhttp/" target="_blank" rel="external">OkHttp</a>相同的模式。要调用是作为同步请求，只是调用  <code>execute</code> 或调用  <code>enqueue</code> 来做异步请求。</p>
-<p><strong>同步请求</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">// Synchronous Call in Retrofit 2.0</div><div class="line"></div><div class="line">Call&lt;Repo&gt; call = service.loadRepo();</div><div class="line">Repo repo = call.execute();</div></pre></td></tr></table></figure>
-<p>上面的源代码将阻塞线程，所以你<em>不能</em>在Android上的主线程调用它，否则你会面对<code>NetworkOnMainThreadException</code>。如果你想调用<code>execute</code>方法，你必须在后台线程上做。</p>
-<p><strong>异步请求</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">// Asynchronous Call in Retrofit 2.0</div><div class="line"></div><div class="line">Call&lt;Repo&gt; call = service.loadRepo();</div><div class="line">call.enqueue(new Callback&lt;Repo&gt;() &#123;</div><div class="line">    @Override</div><div class="line">    public void onResponse(Response&lt;Repo&gt; response) &#123;</div><div class="line">        // Get result Repo from response.body()</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    @Override</div><div class="line">    public void onFailure(Throwable t) &#123;</div><div class="line"></div><div class="line">    &#125;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
-<p>上面的代码将在后台线程中发出一个请求，并将一个结果作为一个对象，你可以从响应中提取<code>response.body()</code>方法。请注意，这些调用方法：  <code>onResponse</code>并将<code>onFailure</code> 在<strong>主线程中</strong>调用。</p>
-<p>我建议你使用<code>enqueue</code>。它适合Android操作系统的行为最好。</p>
-<h2 id="持续交易取消"><a href="#持续交易取消" class="headerlink" title="持续交易取消"></a>持续交易取消</h2><p>服务模式改变的背后的原因  <code>Call</code> 是使得正在进行的事务能够被取消。要这样做，只是简单地调用 <code>call.cancel()</code></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">call.cancel();</div></pre></td></tr></table></figure>
-<p>该交易将在不久后被取消。容易，是吗？= D</p>
-<h2 id="新服务创建。转换器现在被排除在Retrofit之外。"><a href="#新服务创建。转换器现在被排除在Retrofit之外。" class="headerlink" title="新服务创建。转换器现在被排除在Retrofit之外。"></a>新服务创建。转换器现在被排除在Retrofit之外。</h2><p>在Retrofit 1.9中，GsonConverter包含在包中，并且在<code>RestAdapter</code>创建时自动启动。因此，来自服务器的json结果将被自动解析为定义的数据访问对象（DAO）。</p>
-<p>但在Retrofit 2.0中，Converter <strong>*不再*</strong>包含在包中了。你需要自己插入一个Converter或Retrofit将只能接受String结果。因此，Retrofit 2.0不再依赖于Gson了。</p>
-<p>如果你想接受json结果并将其解析成DAO，你必须召唤Gson Converter作为一个单独的依赖。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">compile &apos;com.squareup.retrofit:converter-gson:2.0.0-beta2&apos;</div></pre></td></tr></table></figure>
-<p>并插入通过  <code>addConverterFactory</code>。请注意，<code>RestAdapter</code>现在也被重命名为<code>Retrofit</code>。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">Retrofit retrofit = new Retrofit.Builder()</div><div class="line">        .baseUrl(&quot;http://api.nuuneoi.com/base/&quot;)</div><div class="line">        .addConverterFactory(GsonConverterFactory.create())</div><div class="line">        .build();</div><div class="line"></div><div class="line">service = retrofit.create(APIService.class);</div></pre></td></tr></table></figure>
-<p>这里是Square提供的官方转换器模块的列表。选择一个最适合您的要求。</p>
-<p><strong>Gson：</strong> com.squareup.retrofit：converter-gson<br><strong>Jackson：</strong> com.squareup.retrofit：converter-jackson<br><strong>Moshi：</strong> com.squareup.retrofit：converter-moshi<br><strong>Protobuf：</strong> com.squareup.retrofit：converter-protobuf<br><strong>Wire：</strong> com.squareup。 retrofit：converter-wire<br><strong>简单的XML：</strong> com.squareup.retrofit：converter-simplexml</p>
-<p>您还可以通过实现Converter.Factory接口自己创建自定义<a href="https://github.com/square/retrofit/blob/master/retrofit/src/main/java/retrofit/Converter.java" target="_blank" rel="external">转换</a>器。</p>
-<p>我支持这种新模式。它使Retrofit更清楚它实际上做了什么。</p>
-<h2 id="自定义Gson对象"><a href="#自定义Gson对象" class="headerlink" title="自定义Gson对象"></a>自定义Gson对象</h2><p>如果你需要调整json中的某些格式，例如，日期格式。你可以通过创建一个Gson对象并传递给它 <code>GsonConverterFactory.create()</code></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">Gson gson = new GsonBuilder()</div><div class="line">        .setDateFormat(&quot;yyyy-MM-dd&apos;T&apos;HH:mm:ssZ&quot;)</div><div class="line">        .create();</div><div class="line"></div><div class="line">Retrofit retrofit = new Retrofit.Builder()</div><div class="line">        .baseUrl(&quot;http://api.nuuneoi.com/base/&quot;)</div><div class="line">        .addConverterFactory(GsonConverterFactory.create(gson))</div><div class="line">        .build();</div><div class="line"></div><div class="line">service = retrofit.create(APIService.class);</div></pre></td></tr></table></figure>
-<p>完成。</p>
-<h2 id="新的URL解析概念。与相同"><a href="#新的URL解析概念。与相同" class="headerlink" title="新的URL解析概念。与相同"></a>新的URL解析概念。与<a href="">相同</a></h2><p>Retrofit 2.0带有新的URL解析概念。基本URL和@Url不只是简单地组合在一起，而是以相同的方式解决相同的方式  <code>[</code>](…) 。请查看下面的示例以了解澄清。</p>
-<p><img src="https://inthecheesefactory.com/uploads/source/blog/retrofit2/apiservice1.png" alt="img"></p>
-<p><img src="https://inthecheesefactory.com/uploads/source/blog/retrofit2/apiservice2.png" alt="img"></p>
-<p><img src="https://inthecheesefactory.com/uploads/source/blog/retrofit2/apiservice3.png" alt="img"></p>
-<p>这是我对Retrofit 2.0中的新URL声明模式的建议：</p>
-<ul>
-<li><p><strong>基本URL</strong>：始终以/</p>
+        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>在Android插件化技术日新月异的今天，开发并落地一款插件化框架到底是简单还是困难，这个问题不同人会有不同的答案。但是我相信，完成一个插件化框架的demo并不是多难的事，但是要开发一款完善的插件化框架却不是一件容易的事，尤其在国内，各大Rom厂商都对Android系统做了一定程度的定制，这进一步加剧了Android本身的碎片化问题。</p>
+<p>滴滴出行在插件化上的探索起步较晚，由于滴滴业务发展较快，业务迭代占据了大量的时间，这使得我们在2016年才开始研究这方面的技术。经过半年的开发、测试、适配和线上验证，目前我们推出了一款比较完善的插件化框架：VirtualAPK。之所以现在推出来，是因为VirtualAPK在我们内部已经得到了很好的验证，我们在迭代过程中不断地做机型适配和细节特性的支持，目前已经达到一个非常稳定的状况，足以支撑滴滴部分乃至全部业务的动态发版需求。目前滴滴出行最新版本（v5.0.4）上面，小巴和接送机业务均为插件，大家可以去体验。</p>
+<h1 id="插件化的现状"><a href="#插件化的现状" class="headerlink" title="插件化的现状"></a>插件化的现状</h1><p>到目前为止，业界已经有很多优秀的开源项目，比如早期的基于静态代理思想的DynamicLoadApk，随后的基于占坑思想的DynamicApk、Small，还有360手机助手的DroidPlugin。他们都是优秀的开源项目，他们很大程度上促进了国内插件化技术的发展。</p>
+<p>尽管有如此多的优秀框架存在，但是兼容性问题仍然是制约插件化发展的一个难题。一款插件化框架，也许可以在一款手机上完美运行，但是在数以千万的设备上却总是容易存在这样那样的兼容性问题。我相信上线过插件化的工程师应该深有体会。滴滴为什么还要自研一款新的插件化框架？因为我们需要一款功能完备的、兼容性优秀的、适用于滴滴业务的插件化框架，目前市面上的开源不能满足我们的需求，所以我们必须重新造轮子，于是VirtualAPK诞生了。</p>
+<h1 id="VirtualAPK的诞生"><a href="#VirtualAPK的诞生" class="headerlink" title="VirtualAPK的诞生"></a>VirtualAPK的诞生</h1><p>VirtualAPK是滴滴出行自研的一款优秀的插件化框架，主要有如下几个特性。</p>
+<h3 id="功能完备"><a href="#功能完备" class="headerlink" title="功能完备"></a>功能完备</h3><ul>
+<li><p>支持几乎所有的Android特性；</p>
 </li>
-<li><p><strong>@Url</strong>：不要  开始/</p>
+<li><p>四大组件方面<br><strong>四大组件均不需要在宿主manifest中预注册，每个组件都有完整的生命周期。</strong> </p>
+</li>
+<li><ol>
+<li>Activity：支持显示和隐式调用，支持Activity的theme和LaunchMode，支持透明主题；</li>
+<li>Service：支持显示和隐式调用，支持Service的start、stop、bind和unbind，并支持跨进程bind插件中的Service；</li>
+<li>Receiver：支持静态注册和动态注册的Receiver；</li>
+<li>ContentProvider：支持provider的所有操作，包括CRUD和call方法等，支持跨进程访问插件中的Provider。</li>
+</ol>
+</li>
+<li><p>自定义View：支持自定义View，支持自定义属性和style，支持动画；</p>
+</li>
+<li><p>PendingIntent：支持PendingIntent以及和其相关的Alarm、Notification和AppWidget；</p>
+</li>
+<li><p>支持插件Application以及插件manifest中的meta-data；</p>
+</li>
+<li><p>支持插件中的so。</p>
 </li>
 </ul>
-<p>例如</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">public interface APIService &#123;</div><div class="line"></div><div class="line">    @POST(&quot;user/list&quot;)</div><div class="line">    Call&lt;Users&gt; loadUsers();</div><div class="line"></div><div class="line">&#125;</div><div class="line"></div><div class="line">public void doSomething() &#123;</div><div class="line">    Retrofit retrofit = new Retrofit.Builder()</div><div class="line">            .baseUrl(&quot;http://api.nuuneoi.com/base/&quot;)</div><div class="line">            .addConverterFactory(GsonConverterFactory.create())</div><div class="line">            .build();</div><div class="line"></div><div class="line">    APIService service = retrofit.create(APIService.class);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p><code>loadUsers</code>从上面的代码将从<strong><a href="http://api.nuuneoi.com/base/user/list" target="_blank" rel="external">http://api.nuuneoi.com/base/user/list</a></strong>获取数据 <em>**</em></p>
-<p>此外，我们还可以<code>@Url</code> 在Retrofit 2.0 中声明完整的网址  ：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">public interface APIService &#123;</div><div class="line"></div><div class="line">    @POST(&quot;http://api.nuuneoi.com/special/user/list&quot;)</div><div class="line">    Call&lt;Users&gt; loadSpecialUsers();</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>对于这种情况，将忽略基本URL。</p>
-<p>您将看到URL解析有重大更改。它与以前的版本完全不同。如果你想将你的代码移动到Retrofit 2.0，不要忘记修复这些URL部分代码。</p>
-<h2 id="OkHttp现在是必需的"><a href="#OkHttp现在是必需的" class="headerlink" title="OkHttp现在是必需的"></a>OkHttp现在是必需的</h2><p>OkHttp在Retrofit 1.9中设置为可选。如果你想让Retrofit使用OkHttp作为HTTP连接接口，你必须自己手动包含okhttp  作为依赖。</p>
-<p>但是在Retrofit 2.0中，OkHttp现在是必需的，并且被自动设置为依赖。下面的代码从Retrofit 2.0的pom文件中捕获。你不需要做任何事情。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">&lt;dependencies&gt;</div><div class="line">  &lt;dependency&gt;</div><div class="line">    &lt;groupId&gt;com.squareup.okhttp&lt;/groupId&gt;</div><div class="line">    &lt;artifactId&gt;okhttp&lt;/artifactId&gt;</div><div class="line">  &lt;/dependency&gt;</div><div class="line"></div><div class="line">  ...</div><div class="line">&lt;/dependencies&gt;</div></pre></td></tr></table></figure>
-<p>OkHttp自动用作Retrofit 2.0中的HTTP接口，目的是启用OkHttp的  <code>Call</code> 模式，如上所述。</p>
-<h2 id="onResponse仍然被称为eventhough有响应的问题"><a href="#onResponse仍然被称为eventhough有响应的问题" class="headerlink" title="onResponse仍然被称为eventhough有响应的问题"></a>onResponse仍然被称为eventhough有响应的问题</h2><p>在Retrofit 1.9中，如果获取的响应无法解析到定义的对象中，<code>failure</code>将被调用。但是在Retrofit 2.0中，无论响应是否能够解析，<code>onResponse</code>都将被调用。但是在结果不能解析到对象的情况下，<code>response.body()</code>将返回为null。不要忘记处理的情况。</p>
-<p>如果响应有任何问题，例如404未找到。<code>onResponse</code>也将被调用。您可以从中检索错误正文<code>response.errorBody().string()</code>。</p>
-<p><img src="https://inthecheesefactory.com/uploads/source/blog/retrofit2/response.jpg" alt="img"></p>
-<p>响应/故障逻辑与Retrofit 1.9完全不同。如果您决定移动到Retrofit 2.0，请小心处理所有情况。</p>
-<h2 id="缺少INTERNET权限导致SecurityException抛出"><a href="#缺少INTERNET权限导致SecurityException抛出" class="headerlink" title="缺少INTERNET权限导致SecurityException抛出"></a>缺少INTERNET权限导致SecurityException抛出</h2><p>在Retrofit 1.9中，如果您忘记向您的<code>AndroidManifest.xml</code>文件中添加INTERNET权限。异步请求将立即落入<code>failure</code>具有<strong>PERMISSION DENIED</strong>  错误消息的回调方法中  。没有异常抛出。</p>
-<p>但在Retrofit 2.0中，当你调用  <code>call.enqueue</code>或  <code>call.execute</code>，  <code>SecurityException</code> 将立即抛出，如果你不处理的情况下try-catch可能会导致崩溃。</p>
-<p><img src="https://inthecheesefactory.com/uploads/source/blog/retrofit2/sec.png" alt="img"></p>
-<p>当你手动调用时，行为就像是一样  <code>HttpURLConnection</code>。无论如何这个问题不是一个大问题，因为当INTERNET权限被添加到AndroidManifest.xml中，没有什么可以关注了。</p>
-<h2 id="使用OkHttp中的拦截器"><a href="#使用OkHttp中的拦截器" class="headerlink" title="使用OkHttp中的拦截器"></a>使用OkHttp中的拦截器</h2><p>在Retrofit 1.9你可以使用  <code>RequestInterceptor</code> 拦截一个请求，但它已经从Retrofit 2.0删除，因为HTTP连接层已经移动到OkHttp。</p>
-<p>因此，我们现在必须<code>Interceptor</code> 从  <strong>OkHttp</strong>切换到   。首先，你必须创建一个<code>OkHttpClient</code>具有拦截器的对象，如下所示：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">OkHttpClient client = new OkHttpClient();</div><div class="line">client.interceptors().add(new Interceptor() &#123;</div><div class="line">    @Override</div><div class="line">    public Response intercept(Chain chain) throws IOException &#123;</div><div class="line">        Response response = chain.proceed(chain.request());</div><div class="line"></div><div class="line">        // Do anything with response here</div><div class="line"></div><div class="line">        return response;</div><div class="line">    &#125;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
-<p>并把创建的传递给<code>client</code>Retrofit的Builder链。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">Retrofit retrofit = new Retrofit.Builder()</div><div class="line">        .baseUrl(&quot;http://api.nuuneoi.com/base/&quot;)</div><div class="line">        .addConverterFactory(GsonConverterFactory.create())</div><div class="line">        .client(client)</div><div class="line">        .build();</div></pre></td></tr></table></figure>
-<p>就这样。</p>
-<p>要了解OkHttp拦截器可以做什么的更多信息，请浏览到  <a href="https://github.com/square/okhttp/wiki/Interceptors" target="_blank" rel="external">OkHttp拦截器</a>。</p>
-<h2 id="证书钉住"><a href="#证书钉住" class="headerlink" title="证书钉住"></a>证书钉住</h2><p>与拦截器相同，如果要对连接应用证书固定，则需要创建OkHttp客户端实例。这里是示例代码片段。首先，使用证书固定信息定义一个OkHttp客户端实例：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">OkHttpClient client = new OkHttpClient.Builder()</div><div class="line">        .certificatePinner(new CertificatePinner.Builder()</div><div class="line">                .add(&quot;publicobject.com&quot;, &quot;sha1/DmxUShsZuNiqPQsX2Oi9uv2sCnw=&quot;)</div><div class="line">                .add(&quot;publicobject.com&quot;, &quot;sha1/SXxoaOSEzPC6BgGmxAt/EAcsajw=&quot;)</div><div class="line">                .add(&quot;publicobject.com&quot;, &quot;sha1/blhOM3W9V/bVQhsWAcLYwPU6n24=&quot;)</div><div class="line">                .add(&quot;publicobject.com&quot;, &quot;sha1/T5x9IXmcrQ7YuQxXnxoCmeeQ84c=&quot;)</div><div class="line">                .build())</div><div class="line">        .build();</div></pre></td></tr></table></figure>
-<p>分配在Retrofit构建器链中创建的OkHttp客户端。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">Retrofit retrofit = new Retrofit.Builder()</div><div class="line">        .baseUrl(&quot;http://api.nuuneoi.com/base/&quot;)</div><div class="line">        .addConverterFactory(GsonConverterFactory.create())</div><div class="line">        .client(client)</div><div class="line">        .build();</div></pre></td></tr></table></figure>
-<p>有关sha1哈希证书固定的更多信息… Google会帮助很多，只是简单的搜索它如何实现那条数据。</p>
-<h2 id="RxJava与CallAdapter集成"><a href="#RxJava与CallAdapter集成" class="headerlink" title="RxJava与CallAdapter集成"></a>RxJava与CallAdapter集成</h2><p>除了声明与<code>Call</code> 模式的接口，我们也可以声明我们自己的类型，例如，  <code>MyCall</code>。机械师被称为“ <code>CallAdapter</code>”，它在Retrofit 2.0上可用</p>
-<p>Retrofit团队提供了一些即用的CallAdapter模块。最流行的模块之一可能是CallAdapter为<strong>RxJava</strong>，将返回为<code>Observable</code>。要使用它，必须包括两个模块作为项目的依赖项。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">compile &apos;com.squareup.retrofit:adapter-rxjava:2.0.0-beta2&apos;</div><div class="line">compile &apos;io.reactivex:rxandroid:1.0.1&apos;</div></pre></td></tr></table></figure>
-<p>同步Gradle并<code>addCallAdapterFactory</code> 在Retrofit Builder链中添加  如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">Retrofit retrofit = new Retrofit.Builder()</div><div class="line">        .baseUrl(&quot;http://api.nuuneoi.com/base/&quot;)</div><div class="line">        .addConverterFactory(GsonConverterFactory.create())</div><div class="line">        .addCallAdapterFactory(RxJavaCallAdapterFactory.create())</div><div class="line">        .build();</div></pre></td></tr></table></figure>
-<p>您的服务界面现在可以返回为  <code>Observable</code>！</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">public interface APIService &#123;</div><div class="line"></div><div class="line">    @POST(&quot;list&quot;)</div><div class="line">    Call&lt;DessertItemCollectionDao&gt; loadDessertList();</div><div class="line"></div><div class="line">    @POST(&quot;list&quot;)</div><div class="line">    Observable&lt;DessertItemCollectionDao&gt; loadDessertListRx();</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>你可以使用完全相同的RxJava方式。另外，如果你想让代码里面的订阅部分调用主线程，<code>observeOn(AndroidSchedulers.mainThread())</code> 需要添加到链中。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line">Observable&lt;DessertItemCollectionDao&gt; observable = service.loadDessertListRx();</div><div class="line"></div><div class="line">observable.subscribeOn(Schedulers.io())</div><div class="line">    .observeOn(AndroidSchedulers.mainThread())</div><div class="line">    .unsubscribeOn(Schedulers.io())</div><div class="line">    .subscribe(new Subscriber&lt;DessertItemCollectionDao&gt;() &#123;</div><div class="line">        @Override</div><div class="line">        public void onCompleted() &#123;</div><div class="line">            Toast.makeText(getApplicationContext(),</div><div class="line">                    &quot;Completed&quot;,</div><div class="line">                    Toast.LENGTH_SHORT)</div><div class="line">                .show();</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        @Override</div><div class="line">        public void onError(Throwable e) &#123;</div><div class="line">            Toast.makeText(getApplicationContext(),</div><div class="line">                    e.getMessage(),</div><div class="line">                    Toast.LENGTH_SHORT)</div><div class="line">                .show();</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        @Override</div><div class="line">        public void onNext(DessertItemCollectionDao dessertItemCollectionDao) &#123;</div><div class="line">            Toast.makeText(getApplicationContext(),</div><div class="line">                    dessertItemCollectionDao.getData().get(0).getName(),</div><div class="line">                    Toast.LENGTH_SHORT)</div><div class="line">                .show();</div><div class="line">        &#125;</div><div class="line">    &#125;);</div></pre></td></tr></table></figure>
-<p>完成！我相信RxJava风扇非常满意这个变化= D</p>
-<h2 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h2><p>还有一些其他更改，您可以检查官方<a href="https://github.com/square/retrofit/blob/master/CHANGELOG.md" target="_blank" rel="external">更改日志</a>  的更多详细信息。无论如何，我相信我已经涵盖了本文中的主要问题。</p>
-<p>你可能很好奇，是时候搬到Retrofit 2.0了吗？因为它仍然处于beta阶段，所以你可能想留在1.9首先除了你是一个早期采纳者像我一样，Retrofit 2.0工作相当伟大，没有发现任何错误，基于我自己的实验。</p>
-<p>请注意，Retrofit 1.9官方文档已从Square github网站删除。我建议你现在开始学习Retrofit 2.0，并考虑在不久的将来迁移到最新版本。= D</p>
+<h3 id="优秀的兼容性"><a href="#优秀的兼容性" class="headerlink" title="优秀的兼容性"></a>优秀的兼容性</h3><ul>
+<li>兼容市面上几乎所有的Android手机，这一点已经在滴滴出行客户端中得到验证；</li>
+<li>资源方面适配小米、Vivo、Nubia等，对未知机型采用自适应适配方案；</li>
+<li>极少的Binder Hook，目前仅仅hook了两个Binder：AMS和IContentProvider，Hook过程做了充分的兼容性适配；</li>
+<li>插件运行逻辑和宿主隔离，确保框架的任何问题都不会影响宿主的正常运行。</li>
+</ul>
+<h3 id="入侵性极低"><a href="#入侵性极低" class="headerlink" title="入侵性极低"></a>入侵性极低</h3><ul>
+<li>插件开发等同于原生开发，四大组件无需继承特定的基类；</li>
+<li>精简的插件包，插件可以依赖宿主中的代码和资源，也可以不依赖；</li>
+<li>插件的构建过程简单，通过Gradle插件来完成插件的构建，整个过程对开发者透明。</li>
+</ul>
+<h1 id="VirtualAPK的工作过程"><a href="#VirtualAPK的工作过程" class="headerlink" title="VirtualAPK的工作过程"></a>VirtualAPK的工作过程</h1><hr>
+<p>VirtualAPK对插件没有额外的约束，原生的apk即可作为插件。插件工程编译生成apk后，即可通过宿主App加载，每个插件apk被加载后，都会在宿主中创建一个单独的LoadedPlugin对象。如下图所示，通过这些LoadedPlugin对象，VirtualAPK就可以管理插件并赋予插件新的意义，使其可以像手机中安装过的App一样运行。 </p>
+<p><img src="https://ww3.sinaimg.cn/large/006tNbRwly1fd8g0n3x7ej30hs0950tg.jpg" alt=""></p>
+<h3 id="VirtualAPK的运行形态"><a href="#VirtualAPK的运行形态" class="headerlink" title="VirtualAPK的运行形态"></a>VirtualAPK的运行形态</h3><p>我们计划赋予VirtualAPK两种工作形态，耦合形态和独立形态。目前VirtualAPK对耦合形态已经有了很好的支持，我们接下来将计划支持独立形态。<br><strong>耦合形态</strong><br>插件对宿主可以有代码或者资源的依赖，也可以没有依赖。这种模式下，插件中的类不能和宿主重复，资源id也不能和宿主冲突。这是VirtualAPK的默认形态，也是适用于大多数业务的形态。<br><strong>独立形态</strong><br>插件对宿主没有代码或者资源的依赖。这种模式下，插件和宿主没有任何关系，所以插件中的类和资源均可以和宿主重复。这种形态的主要作用是用于运行一些第三方apk。</p>
+<h3 id="如何使用"><a href="#如何使用" class="headerlink" title="如何使用"></a>如何使用</h3><p>第一步： 初始化插件引擎</p>
+<p><img src="https://ww2.sinaimg.cn/large/006tNbRwly1fd8g0uu0kjj30hs03y3yr.jpg" alt=""></p>
+<p>第二步：加载插件</p>
+<p><img src="https://ww1.sinaimg.cn/large/006tNbRwly1fd8g13o04mj30hs031q33.jpg" alt=""></p>
+<p>我们对上述加载过程进行了一些封装，通过如下方式即可异步地去加载一个插件。</p>
+<p><img src="https://ww4.sinaimg.cn/large/006tNbRwly1fd8g191wqoj30hs07674z.jpg" alt=""></p>
+<p><strong>当插件入口被调用后，插件的后续逻辑均不需要宿主干预，均走原生的Android流程。</strong><br>比如，在插件内部，如下代码将正确执行：</p>
+<p><img src="https://ww4.sinaimg.cn/large/006tNbRwly1fd8g1jsot3j30hs09gab9.jpg" alt=""></p>
+<h1 id="探究原理"><a href="#探究原理" class="headerlink" title="探究原理"></a>探究原理</h1><h3 id="基本原理"><a href="#基本原理" class="headerlink" title="基本原理"></a>基本原理</h3><ul>
+<li><strong>合并宿主和插件的ClassLoader</strong><br>需要注意的是，插件中的类不可以和宿主重复</li>
+<li><strong>合并插件和宿主的资源</strong><br>重设插件资源的packageId，将插件资源和宿主资源合并</li>
+<li><strong>去除插件包对宿主的引用</strong><br>构建时通过Gradle插件去除插件对宿主的代码以及资源的引用</li>
+</ul>
+<h3 id="四大组件的实现原理"><a href="#四大组件的实现原理" class="headerlink" title="四大组件的实现原理"></a>四大组件的实现原理</h3><p><img src="https://ww3.sinaimg.cn/large/006tNbRwly1fd8g1y57iaj30ca0akq39.jpg" alt=""></p>
+<ul>
+<li><strong>Activity</strong><br>采用宿主manifest中占坑的方式来绕过系统校验，然后再加载真正的activity；</li>
+<li><strong>Service</strong><br>动态代理AMS，拦截service相关的请求，将其中转给一个虚拟空间（Matrix）去处理，Matrix会接管系统的所有操作；</li>
+<li><strong>Receiver</strong><br>将插件中静态注册的receiver重新注册一遍；</li>
+<li><strong>ContentProvider</strong><br>动态代理IContentProvider，拦截provider相关的请求，将其中转给一个虚拟空间（Matrix）去处理，Matrix会接管系统的所有操作。</li>
+</ul>
+<p>如下是VirtualAPK的整体结构图。<br><img src="https://ww1.sinaimg.cn/large/006tNbRwly1fd8g2ahan3j30hs0afwf6.jpg" alt=""></p>
+<h1 id="填坑之路"><a href="#填坑之路" class="headerlink" title="填坑之路"></a>填坑之路</h1><p>在实践中我们遇到了很多很多的问题，比如机型适配、API版本适配、Binder hook的稳定性保证等问题，这里拿一个典型的资源适配问题来说明。</p>
+<p>其实这是一个很无奈的问题，由于国内各大Rom厂商喜欢深度定制Android系统，所以就出现了这种适配问题。<br>正常情况下我们通过如下代码去创建插件的Resources对象：</p>
+<p><img src="https://ww4.sinaimg.cn/large/006tNbRwly1fd8g2p2atzj30hs01djrf.jpg" alt=""><br>然后在Vivo手机上，竟然出现了如下的类型转换错误，看起来是Vivo自己派生了Resources的子类。</p>
+<p><img src="https://ww2.sinaimg.cn/large/006tNbRwly1fd8g2wd9qqj30hs09f768.jpg" alt=""><br>于是反编译了下Vivo的framework代码，果不其然，在如下代码中进行了类型转换，所以在加载插件资源的时候就报错了。</p>
+<p><img src="https://ww2.sinaimg.cn/large/006tNbRwly1fd8g35jicrj30hs054mxr.jpg" alt=""><br>为了解决这个问题，我们分析了VivoResources的代码实现，然后在创建插件资源的时候，采用了如下的代码。</p>
+<p><img src="https://ww3.sinaimg.cn/large/006tNbRwly1fd8g3b1tcdj30hs04faao.jpg" alt=""></p>
+<p>除了Vivo以外，有类似问题的还有MiUI、Nubia以及其它不知名的机型。而且在Vivo手机上，除了类型转换错误的问题，还有其他很坑的问题。</p>
+<p>事实上我们还处理了很多其他的坑，这里无法一一说明，所以说如何保证插件化的稳定性是一件很有技术挑战的事情。</p>
+<h1 id="一些暂时不支持的特性"><a href="#一些暂时不支持的特性" class="headerlink" title="一些暂时不支持的特性"></a>一些暂时不支持的特性</h1><hr>
+<p>由于种种原因，VirtualAPK目前未能支持所有的Android的特性，如下是已知的几点。</p>
+<ul>
+<li>不支持Activity的部分属性，比如process、configChanges等；</li>
+<li>暂不支持overridePendingTransition(int enterAnim, int exitAnim)这种形式的转场动画；</li>
+<li>插件中弹通知，不能使用插件中的资源，比如图片。</li>
+</ul>
+<h1 id="开源计划"><a href="#开源计划" class="headerlink" title="开源计划"></a>开源计划</h1><hr>
+<p>我们的目标是打造一款功能完备的插件化框架，使得各个业务线都能以插件的形式集成，从而实现Android App的热更新能力。</p>
+<p>目前VirtualAPK还有一些特性需要进一步完善，待完善后，将会有开源计划。我们期望VirtualAPK开源后，可以让其他App能够无缝集成，无需考虑细节实现和兼容性问题即可轻松拥有热更新能力。</p>
+<p>请关注滴滴 App 开发技术微信公众号 <strong>DDApp</strong>，我们会在上面发布 VirtualAPK的最新进展，也将会把滴滴 iOS 和 Android 开发的干货技术文章分享给大家：</p>
+<p><img src="https://ww3.sinaimg.cn/large/006tNbRwly1fd8g3iq999j30by0by0tk.jpg" alt=""></p>
 
     
 
@@ -577,7 +558,7 @@
 <script>
     $('.btn_click_load').click(function() {  //click to load comments
         var disqus_config = function () {
-            this.page.url = 'http://wanghaonanlpc.github.io/2016/03/01/Retrofit-2-0：Android上最好的HTTP客户端库的最大更新/index.html';  // Replace PAGE_URL with your page's canonical URL variable
+            this.page.url = 'http://wanghaonanlpc.github.io/2016/12/27/VirtualAPK：滴滴-Android-插件化的实践之路/index.html';  // Replace PAGE_URL with your page's canonical URL variable
             this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
         };
         (function() { // DON'T EDIT BELOW THIS LINE
@@ -607,7 +588,7 @@
             <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
     <!-- Prev Nav -->
     
-        <a href="/2016/05/24/支持NFC的手机总结/" id="post_nav-newer" class="prev-content">
+        <a href="/2017/02/21/hello-world 2/" id="post_nav-newer" class="prev-content">
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
                 <i class="material-icons">arrow_back</i>
             </button>
@@ -621,7 +602,7 @@
 
     <!-- Next Nav -->
     
-        <a href="/2016/02/21/使用github pages服务搭建博客/" id="post_nav-older" class="next-content">
+        <a href="/2016/05/24/支持NFC的手机总结/" id="post_nav-older" class="next-content">
             旧篇
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
