@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://wanghaonanlpc.github.io/"/>
-  <updated>2017-03-03T15:02:32.000Z</updated>
+  <updated>2017-03-03T15:05:39.000Z</updated>
   <id>http://wanghaonanlpc.github.io/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://wanghaonanlpc.github.io/2017/03/03/Android%E6%8F%92%E4%BB%B6%E5%8C%96%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/"/>
     <id>http://wanghaonanlpc.github.io/2017/03/03/Android插件化从入门到放弃/</id>
     <published>2017-03-03T14:41:51.000Z</published>
-    <updated>2017-03-03T15:02:32.000Z</updated>
+    <updated>2017-03-03T15:05:39.000Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>最近研究插件化， 偶然发现此合集， 按照部分链接的文章实际简单写了些demo，受益良多， 觉得确实不错，特转载过来，给需要的人。</p>
@@ -63,8 +63,8 @@
 <p><a href="http://weishu.me/2016/05/11/understand-plugin-framework-service/" target="_blank" rel="external">18.Weishu—Android 插件化原理解析——Service的插件化</a><br>在 Activity生命周期管理 以及 广播的管理 中我们详细探讨了Android系统中的Activity、BroadcastReceiver组件的工作原理以及它们的插件化方案，相信读者已经对Android Framework和插件化技术有了一定的了解；</p>
 <p><strong>类库</strong><br><a href="https://github.com/Qihoo360/DroidPlugin" target="_blank" rel="external">1.DroidPlugin</a><br>是360手机助手在Android系统上实现了一种新的插件机制<br><a href="https://github.com/limpoxe/Android-Plugin-Framework" target="_blank" rel="external">2.Android-Plugin-Framework</a><br>此项目是Android插件开发框架完整源码及示例。用来通过动态加载的方式在宿主程序中运行插件APK。<br><a href="https://github.com/wequick/Small" target="_blank" rel="external">3.Small</a><br>世界那么大，组件那么小。Small，做最轻巧的跨平台插件化框架。里面有很详细的文档<br><a href="https://github.com/singwhatiwanna/dynamic-load-apk" target="_blank" rel="external">4.dynamic-load-apk</a><br>Android 使用动态加载框架DL进行插件化开发<br><a href="https://github.com/mmin18/AndroidDynamicLoader" target="_blank" rel="external">5.AndroidDynamicLoader</a><br>Android 动态加载框架，他不是用代理 Activity 的方式实现而是用 Fragment 以及 Schema 的方式实现<br><a href="https://github.com/CtripMobile/DynamicAPK" target="_blank" rel="external">6.DynamicAPK</a><br>实现Android App多apk插件化和动态加载，支持资源分包和热修复.携程App的插件化和动态加载框架.<br><a href="https://github.com/bunnyblue/ACDD/blob/master/README-Zh.md" target="_blank" rel="external">7.ACDD</a><br>非代理Android动态部署框架<br><a href="https://github.com/houkx/android-pluginmgr" target="_blank" rel="external">8.android-pluginmgr</a><br>不需要插件规范的apk动态加载框架。</p>
 <p><strong>参考视频</strong><br><a href="http://www.infoq.com/cn/presentations/the-realization-principle-and-application-of-droidplugin" target="_blank" rel="external">1.DroidPlugin的实现原理及其应用</a><br>Droid Plugin是360手机助手在2015年初研发的一个全新的基于Android平台的插件机制.<br><a href="http://v.youku.com/v_show/id_XNTMzMjYzMzM2.html" target="_blank" rel="external">2.android插件化及动态部署</a><br>阿里技术沙龙第十六期《android插件化及动态部署》视频</p>
-<p><strong>最近期待：</strong></p>
-<p><img src="https://ww3.sinaimg.cn/large/006tNbRwly1fda1oxw66rj31hc0u0t96.jpg" alt=""></p>
+<p><strong>最近期待</strong></p>
+<p><a href="2016/12/27/VirtualAPK-滴滴-Android-插件化的实践之路/">VirtualAPK: 滴滴 Android 插件化的实践之路</a></p>
 ]]></content>
     
     <summary type="html">
