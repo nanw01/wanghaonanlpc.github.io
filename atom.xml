@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://wanghaonanlpc.github.io/"/>
-  <updated>2017-03-03T03:56:10.000Z</updated>
+  <updated>2017-03-03T15:02:32.000Z</updated>
   <id>http://wanghaonanlpc.github.io/</id>
   
   <author>
@@ -14,6 +14,189 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Android插件化从入门到放弃</title>
+    <link href="http://wanghaonanlpc.github.io/2017/03/03/Android%E6%8F%92%E4%BB%B6%E5%8C%96%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/"/>
+    <id>http://wanghaonanlpc.github.io/2017/03/03/Android插件化从入门到放弃/</id>
+    <published>2017-03-03T14:41:51.000Z</published>
+    <updated>2017-03-03T15:02:32.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<p>最近研究插件化， 偶然发现此合集， 按照部分链接的文章实际简单写了些demo，受益良多， 觉得确实不错，特转载过来，给需要的人。</p>
+</blockquote>
+<p>插件化涉及的东西很多，所以我们需要多个维度去学习。大概分为5个部分：预备知识、入门、进阶、系列、类库。一步一步深入了解插件的原理。本专栏会不定时更新相关内容，请留意更新的消息。请加入QQ群：149581646.会统一通知最新的文章。<br>Posted2016-03-16<br>by Jomeslu.</p>
+<p><strong>基础</strong><br><a href="https://www.ibm.com/developerworks/cn/java/j-lo-classloader/" target="_blank" rel="external">1.Java 类加载器</a><br>类加载器（class loader）是 Java中的一个很重要的概念。类加载器负责加载 Java 类的字节代码到 Java 虚拟机中。本文首先详细介绍了 Java 类加载器的基本概念，包括代理模式、加载类的具体过程和线程上下文类加载器等，接着介绍如何开发自己的类加载器，最后介绍了类加载器在 Web 容器和 OSGi中的应用。</p>
+<p><a href="https://github.com/JustinSDK/JavaSE6Tutorial/blob/master/docs/CH16.md" target="_blank" rel="external">2.反射原理</a><br>Java 提供的反射機制允許您於執行時期動態載入類別、檢視類別資訊、生成物件或操作生成的物件，要舉反射機制的一個應用實例，就是在整合式開發環境中所提供的方法提示或是類別檢視工具，另外像 JSP 中的 JavaBean 自動收集請求資訊也使用到反射，而一些軟體開發框架（Framework）也常見到反射機制的使用，以達到動態載入使用者自訂類別的目的。</p>
+<p><a href="http://www.jianshu.com/p/6f6bb2f0ece9" target="_blank" rel="external">3.代理模式及Java实现动态代理</a><br>定义：给某个对象提供一个代理对象，并由代理对象控制对于原对象的访问，即客户不直接操控原对象，而是通过代理对象间接地操控原对象。</p>
+<p><strong>入门</strong><br><a href="http://blog.csdn.net/u013478336/article/details/50734108" target="_blank" rel="external">1.Android动态加载dex技术初探</a><br>Android使用Dalvik虚拟机加载可执行程序，所以不能直接加载基于class的jar，而是需要将class转化为dex字节码，从而执行代码。优化后的字节码文件可以存在一个<em>.jar中，只要其内部存放的是</em>.dex即可使用。</p>
+<p><a href="http://104.236.134.90/2016/02/02/Android%E6%8F%92%E4%BB%B6%E5%8C%96%E5%9F%BA%E7%A1%80/" target="_blank" rel="external">2.Android插件化入门</a><br>开发者将插件代码封装成Jar或者APK。宿主下载或者从本地加载Jar或者APK到宿主中。将宿主调用插件中的算法或者Android特定的Class（如Activity）</p>
+<p><a href="http://blog.csdn.net/u010687392/article/details/47121729?hmsr=toutiao.io&amp;utm_medium=toutiao.io&amp;utm_source=toutiao.io" target="_blank" rel="external">3.插件化开发—动态加载技术加载已安装和未安装的apk</a><br>动态加载技术就是使用类加载器加载相应的apk、dex、jar（必须含有dex文件），再通过反射获得该apk、dex、jar内部的资源（class、图片、color等等）进而供宿主app使用。</p>
+<p><a href="https://blog.tingyun.com/web/article/detail/166" target="_blank" rel="external">4.Android动态加载技术三个关键问题详解</a><br>动态加载技术（也叫插件化技术）在技术驱动型的公司中扮演着相当重要的角色，当项目越来越庞大的时候，需要通过插件化来减轻应用的内存和CPU占用，还可以实现热插拔，即在不发布新版本的情况下更新某些模块。</p>
+<p><strong>进阶</strong><br><a href="http://mp.weixin.qq.com/s?__biz=MzAwMTcwNTE0NA==&amp;mid=400217391&amp;idx=1&amp;sn=86181541ce0164156dfab135ed99bb5c&amp;scene=0&amp;key=b410d3164f5f798e61a5d4afb759fa38371c8b119384c6163a30c28163b4d4d5f59399f2400800ec842f1d0e0ffb84af&amp;ascene=0&amp;uin=MjExMjQ&amp;pass_ticket=Nt5Jaa28jjFxcQO9o+vQiXX+0iXG5DlZlHNW97Fk1Ew=" target="_blank" rel="external">1.携程Android App插件化和动态加载实践</a><br>携程Android App的插件化和动态加载框架已上线半年，经历了初期的探索和持续的打磨优化，新框架和工程配置经受住了生产实践的考验。本文将详细介绍Android平台插件式开发和动态加载技术的原理和实现细节，回顾携程Android App的架构演化过程，期望我们的经验能帮助到更多的Android工程师。</p>
+<p><a href="http://blog.csdn.net/hkxxx/article/details/42194387" target="_blank" rel="external">2.动态加载APK原理分享</a><br>被加载的apk称之为插件，因为机制类似于生物学的”寄生”，加载了插件的应用也被称为宿主。 往往不是所有的apk都可作为插件被加载，往往需要遵循一定的”开发规范”，还需要插件项目引入某种api类库，业界通常都是这么做的。</p>
+<p><a href="http://www.cnblogs.com/coding-way/p/4669591.html" target="_blank" rel="external">3.Android插件化的一种实现</a><br>Android的插件化已经是老生常谈的话题了，插件化的好处有很多：解除代码耦合，插件支持热插拔，静默升级，从根本上解决65K属性和方法的bug等等。下面给大家介绍一下我们正在用的差价化框架。本片主要以类图的方式向大家介绍插件话框架的实现。</p>
+<p><a href="http://mogu.io/117-117" target="_blank" rel="external">4.蘑菇街 App 的组件化之路</a><br>随着我街业务的蓬勃发展，产品和运营随时上新功能新活动的需求越来越强烈，经常可以听到“有个功能我想周x上，行不行”。行么？当然是不行啦，上新功能得发新版本啊，到时候费时费力打乱开发节奏不说，覆盖率也是个问题。</p>
+<p><a href="http://www.codekk.com/open-source-project-analysis/detail/Android/FFish/DynamicLoadApk%20%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90?hmsr=toutiao.io&amp;utm_medium=toutiao.io&amp;utm_source=toutiao.io" target="_blank" rel="external">5.DynamicLoadApk 源码解析</a><br>DynamicLoadApk 是一个开源的 Android 插件化框架。插件化的优点包括：(1) 模块解耦，(2) 动态升级，(3) 高效并行开发(编译速度更快) (4) 按需加载，内存占用更低等等DynamicLoadApk 提供了 3 种开发方式，让开发者在无需理解其工作原理的情况下快速的集成插件化功能。</p>
+<p><a href="http://blog.csdn.net/singwhatiwanna/article/details/22597587" target="_blank" rel="external">6.Android apk动态加载机制的研究</a><br>问题是这样的：我们知道，apk必须安装才能运行，如果不安装要是也能运行该多好啊，事实上，这不是完全不可能的，尽管它比较难实现。在理论层面上，我们可以通过一个宿主程序来运行一些未安装的apk，当然，实践层面上也能实现，不过这对未安装的apk有要求。我们的想法是这样的，首先要明白apk未安装是不能被直接调起来.</p>
+<p><a href="http://tech.meituan.com/mt-android-auto-split-dex.html" target="_blank" rel="external">7.美团Android DEX自动拆包及动态加载简介</a><br>作为一个android开发者，在开发应用时，随着业务规模发展到一定程度，不断地加入新功能、添加新的类库，代码在急剧的膨胀，相应的apk包的大小也急剧增加， 那么终有一天，你会不幸遇到这个错误.</p>
+<p><a href="http://mp.weixin.qq.com/s?__biz=MzAwOTE0ODEwMQ==&amp;mid=401731625&amp;idx=1&amp;sn=9bf2bacfbba43ba9dc7b2e854b64e66c&amp;scene=23&amp;srcid=1231ni0s2Y0OMfYSoNhkkJ47#rd&amp;ADUIN=289832127&amp;ADSESSION=1451551778&amp;ADTAG=CLIENT.QQ.5425_.0&amp;ADPUBNO=26509" target="_blank" rel="external">8.途牛原创|途牛Android App的插件实现</a><br>途牛的插件化是基于dynamic-load-apk（github）实现的。定义了宿主和插件的通信方式，使得两者能够互起对方的页面，调用彼此的功能。同时对activity的启动方式singletask等进行了模式实现，并增加了对Service的支持等。总之使得插件开发最大限度的保持着原有的Android开发习惯。</p>
+<p><a href="http://blog.csdn.net/singwhatiwanna/article/details/23387079" target="_blank" rel="external">9. Android apk资源加载和activity生命周期管理</a><br>博主分析了Android中apk的动态加载机制，并在文章的最后指出需要解决的两个复杂问题：资源的访问和activity生命周期的管理，而本文将会分析这两个复杂问题的解决方法。</p>
+<p><a href="http://blog.csdn.net/singwhatiwanna/article/details/39937639" target="_blank" rel="external">10.APK动态加载框架（DL）解析</a><br>首先要说的是动态加载技术（或者说插件化）在技术驱动型的公司中扮演这相当重要的角色，当项目越来越庞大的时候，需要通过插件化来减轻应用的内存和cpu占用，还可以实现热插拔，即在不发布新版本的情况下更新某些模块。</p>
+<p><strong>系列</strong><br><a href="https://segmentfault.com/a/1190000004062866" target="_blank" rel="external">1.Kaedea—Android动态加载技术 简单易懂的介绍</a><br>我们很早开始就在Android项目中采用了动态加载技术，主要目的是为了达到让用户不用重新安装APK就能升级应用的功能（特别是 SDK项目），这样一来不但可以大大提高应用新版本的覆盖率，也减少了服务器对旧版本接口兼容的压力，同时如果也可以快速修复一些线上的BUG。</p>
+<p><a href="https://segmentfault.com/a/1190000004062880" target="_blank" rel="external">2.Kaedea—Android动态加载基础 ClassLoader的工作机制</a><br>早期使用过Eclipse等Java编写的软件的同学可能比较熟悉，Eclipse可以加载许多第三方的插件（或者叫扩展），这就是动态加载。这些插件大多是一些Jar包，而使用插件其实就是动态加载Jar包里的Class进行工作。</p>
+<p><a href="https://segmentfault.com/a/1190000004062899" target="_blank" rel="external">3.Kaedea—Android动态加载补充 加载SD卡的SO库</a><br>Android中JNI的使用其实就包含了动态加载，APP运行时动态加载.so库并通过JNI调用其封装好的方法。后者一般是使用NDK工具从C/C++代码编译而成，运行在Native层，效率会比执行在虚拟机的Java代码高很多，所以Android中经常通过动态加载.so库来完成一些对性能比较有需求的工作（比如T9搜索、或者Bitmap的解码、图片高斯模糊处理等）。</p>
+<p><a href="https://segmentfault.com/a/1190000004062952" target="_blank" rel="external">4.Kaedea—Android动态加载入门 简单加载模式</a><br>Java程序中，JVM虚拟机是通过类加载器ClassLoader加载.jar文件里面的类的。Android也类似，不过Android用的是Dalvik/ART虚拟机，不是JVM，也不能直接加载.jar文件，而是加载dex文件。</p>
+<p><a href="https://segmentfault.com/a/1190000004062972" target="_blank" rel="external">5.Kaedea—Android动态加载进阶 代理Activity模式</a><br>简单模式中，使用ClassLoader加载外部的Dex或Apk文件，可以加载一些本地APP不存在的类，从而执行一些新的代码逻辑。但是使用这种方法却不能直接启动插件里的Activity。</p>
+<p><a href="https://segmentfault.com/a/1190000004077469" target="_blank" rel="external">6.Kaedea—Android动态加载黑科技 动态创建Activity模式</a><br>还记得我们在代理Activity模式里谈到启动插件APK里的Activity的两个难题吗，由于插件里的Activity没在主项目的Manifest里面注册，所以无法经历系统Framework层级的一系列初始化过程，最终导致获得的Activity实例并没有生命周期和无法使用res资源。</p>
+<p><a href="http://blog.csdn.net/jiangwei0910410003/article/details/17679823" target="_blank" rel="external">7.尼古拉斯—插件开发基础篇：动态加载技术解读</a><br>在目前的软硬件环境下，Native App与Web App在用户体验上有着明显的优势，但在实际项目中有些会因为业务的频繁变更而频繁的升级客户端，造成较差的用户体验，而这也恰恰是Web App的优势。本文对网上Android动态加载jar的资料进行梳理和实践在这里与大家一起分享，试图改善频繁升级这一弊病。</p>
+<p><a href="http://blog.csdn.net/jiangwei0910410003/article/details/41384667" target="_blank" rel="external">8.尼古拉斯—插件开发开篇：类加载器分析</a><br>这篇文章主要介绍了Android中主要的两个类加载器：PathClassLoader和DexClassLoader,他们的区别，联系，用法等问题，以及我们在制作插件的过程中会遇到哪些常见的问题。这篇文章也是后续两篇文章的基础，因为如果不了解这两个类的话，我们将无法进行后续的操作。</p>
+<p><a href="http://blog.csdn.net/jiangwei0910410003/article/details/47679843" target="_blank" rel="external">9.尼古拉斯—插件开发中篇：资源加载问题(换肤原理解析)</a><br>这篇文章主要通过现在一些应用自带的换肤技术的解读来看看，在开发插件的过程中如何解决一些资源加载上的问题，这个问题为何要单独拿出来解释，就是因为他涉及的知识很多，也是后面一篇文章的基础，我们在需要加载插件中的资源文件的时候。</p>
+<p><a href="http://blog.csdn.net/jiangwei0910410003/article/details/48104455" target="_blank" rel="external">10.尼古拉斯—插件开发终极篇：动态加载Activity(免安装运行程序)</a><br>这篇文章主要是讲解了如何加载插件中的Activity。从而实现免安装运行程序，同时这篇文章也是对前三篇文章知识的综合使用。下载很多应用都会使用到插件技术，因为包的大小和一些功能的优先级来决定哪些模块可以制作成插件。</p>
+<p><a href="http://weishu.me/2016/01/28/understand-plugin-framework-overview/" target="_blank" rel="external">11.Weishu—Android插件化原理解析——概要</a><br>类的加载可以使用Java的ClassLoader机制，但是对于Android来说，并不是说类加载进来就可以用了，很多组件都是有“生命”的；因此对于这些有血有肉的类，必须给它们注入活力，也就是所谓的组件生命周期管理.</p>
+<p><a href="http://weishu.me/2016/01/28/understand-plugin-framework-proxy-hook/" target="_blank" rel="external">12.Weishu—Android插件化原理解析——Hook机制之动态代理</a><br>使用代理机制进行API Hook进而达到方法增强是框架的常用手段，比如J2EE框架Spring通过动态代理优雅地实现了AOP编程，极大地提升了Web开发效率；同样，插件框架也广泛使用了代理机制来增强系统API从而达到插件化的目的.</p>
+<p><a href="http://weishu.me/2016/02/16/understand-plugin-framework-binder-hook/" target="_blank" rel="external">13.Weishu—Android插件化原理解析——Hook机制之Binder Hook</a><br>Android系统通过Binder机制给应用程序提供了一系列的系统服务，诸如ActivityManagerService，ClipboardManager， AudioManager等；这些广泛存在系统服务给应用程序提供了诸如任务管理，音频，视频等异常强大的功能。</p>
+<p><a href="http://weishu.me/2016/03/07/understand-plugin-framework-ams-pms-hook/" target="_blank" rel="external">14.Weishu—Android 插件化原理解析——Hook机制之AMS&amp;PMS</a><br>在前面的文章中我们介绍了DroidPlugin的Hook机制，也就是代理方式和Binder Hook；插件框架通过AOP实现了插件使用和开发的透明性。在讲述DroidPlugin如何实现四大组件的插件化之前，有必要说明一下它对AMS以及PMS的Hook方式。</p>
+<p><a href="http://weishu.me/2016/03/21/understand-plugin-framework-activity-management/" target="_blank" rel="external">15.Weishu—Android 插件化原理解析——Activity生命周期管理</a><br>之前的 Android插件化原理解析 系列文章揭开了Hook机制的神秘面纱，现在我们手握倚天屠龙，那么如何通过这种技术完成插件化方案呢？具体来说，插件中的Activity，Service等组件如何在Android系统上运行起来？</p>
+<p><a href="http://weishu.me/2016/04/05/understand-plugin-framework-classloader/" target="_blank" rel="external">16.Weishu—Android 插件化原理解析——插件加载机制</a><br>上文 Activity生命周期管理 中我们地完成了『启动没有在AndroidManifest.xml中显式声明的Activity』的任务；通过Hook AMS和拦截ActivityThread中H类对于组件调度我们成功地绕过了AndroidMAnifest.xml的限制。</p>
+<p><a href="http://weishu.me/2016/04/12/understand-plugin-framework-receiver/" target="_blank" rel="external">17.Weishu—Android插件化原理解析——广播的管理</a><br>在Activity生命周期管理 以及 插件加载机制 中我们详细讲述了插件化过程中对于Activity组件的处理方式，为了实现Activity的插件化我们付出了相当多的努力；那么Android系统的其他组件，比如BroadcastReceiver，Service还有ContentProvider，它们又该如何处理呢？</p>
+<p><a href="http://weishu.me/2016/05/11/understand-plugin-framework-service/" target="_blank" rel="external">18.Weishu—Android 插件化原理解析——Service的插件化</a><br>在 Activity生命周期管理 以及 广播的管理 中我们详细探讨了Android系统中的Activity、BroadcastReceiver组件的工作原理以及它们的插件化方案，相信读者已经对Android Framework和插件化技术有了一定的了解；</p>
+<p><strong>类库</strong><br><a href="https://github.com/Qihoo360/DroidPlugin" target="_blank" rel="external">1.DroidPlugin</a><br>是360手机助手在Android系统上实现了一种新的插件机制<br><a href="https://github.com/limpoxe/Android-Plugin-Framework" target="_blank" rel="external">2.Android-Plugin-Framework</a><br>此项目是Android插件开发框架完整源码及示例。用来通过动态加载的方式在宿主程序中运行插件APK。<br><a href="https://github.com/wequick/Small" target="_blank" rel="external">3.Small</a><br>世界那么大，组件那么小。Small，做最轻巧的跨平台插件化框架。里面有很详细的文档<br><a href="https://github.com/singwhatiwanna/dynamic-load-apk" target="_blank" rel="external">4.dynamic-load-apk</a><br>Android 使用动态加载框架DL进行插件化开发<br><a href="https://github.com/mmin18/AndroidDynamicLoader" target="_blank" rel="external">5.AndroidDynamicLoader</a><br>Android 动态加载框架，他不是用代理 Activity 的方式实现而是用 Fragment 以及 Schema 的方式实现<br><a href="https://github.com/CtripMobile/DynamicAPK" target="_blank" rel="external">6.DynamicAPK</a><br>实现Android App多apk插件化和动态加载，支持资源分包和热修复.携程App的插件化和动态加载框架.<br><a href="https://github.com/bunnyblue/ACDD/blob/master/README-Zh.md" target="_blank" rel="external">7.ACDD</a><br>非代理Android动态部署框架<br><a href="https://github.com/houkx/android-pluginmgr" target="_blank" rel="external">8.android-pluginmgr</a><br>不需要插件规范的apk动态加载框架。</p>
+<p><strong>参考视频</strong><br><a href="http://www.infoq.com/cn/presentations/the-realization-principle-and-application-of-droidplugin" target="_blank" rel="external">1.DroidPlugin的实现原理及其应用</a><br>Droid Plugin是360手机助手在2015年初研发的一个全新的基于Android平台的插件机制.<br><a href="http://v.youku.com/v_show/id_XNTMzMjYzMzM2.html" target="_blank" rel="external">2.android插件化及动态部署</a><br>阿里技术沙龙第十六期《android插件化及动态部署》视频</p>
+<p><strong>最近期待：</strong></p>
+<p><img src="https://ww3.sinaimg.cn/large/006tNbRwly1fda1oxw66rj31hc0u0t96.jpg" alt=""></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;最近研究插件化， 偶然发现此合集， 按照部分链接的文章实际简单写了些demo，受益良多， 觉得确实不错，特转载过来，给需要的人。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;插件化涉及的东西很多，所以我们需要多个维度去学习。大概分为5个部分：预备知识
+    
+    </summary>
+    
+      <category term="安卓" scheme="http://wanghaonanlpc.github.io/categories/%E5%AE%89%E5%8D%93/"/>
+    
+    
+      <category term="android" scheme="http://wanghaonanlpc.github.io/tags/android/"/>
+    
+      <category term="插件化" scheme="http://wanghaonanlpc.github.io/tags/%E6%8F%92%E4%BB%B6%E5%8C%96/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Android 组件化和插件化开发</title>
+    <link href="http://wanghaonanlpc.github.io/2017/03/03/Android-%E7%BB%84%E4%BB%B6%E5%8C%96%E5%92%8C%E6%8F%92%E4%BB%B6%E5%8C%96%E5%BC%80%E5%8F%91/"/>
+    <id>http://wanghaonanlpc.github.io/2017/03/03/Android-组件化和插件化开发/</id>
+    <published>2017-03-03T14:37:18.000Z</published>
+    <updated>2017-03-03T14:41:33.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="https://ww4.sinaimg.cn/large/006tNbRwly1fda139k6jgj30fa080mxf.jpg" alt=""></p>
+<p>组件化开发就是将一个app分成多个模块，每个模块都是一个组件（Module），开发的过程中我们可以让这些组件相互依赖或者单独调试部分组件等，但是最终发布的时候是将这些组件合并统一成一个apk，这就是组件化开发。</p>
+<p>插件化开发和组件化开发略有不用，插件化开发时将整个app拆分成很多模块，这些模块包括一个宿主和多个插件，每个模块都是一个apk（组件化的每个模块是个lib），最终打包的时候将宿主apk和插件apk分开或者联合打包。</p>
+<h2 id="组件化"><a href="#组件化" class="headerlink" title="组件化"></a>组件化</h2><h4 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h4><p>android工程的组件一般分为两种，lib组件和application组件</p>
+<p>application组件是指该组件本身就可以运行并打包成apk</p>
+<p>lib组件是指该组件属于app的一部分，可以供其它组件使用但是本身不能打包成apk</p>
+<h4 id="为什么要有组件化？"><a href="#为什么要有组件化？" class="headerlink" title="为什么要有组件化？"></a>为什么要有组件化？</h4><p>加入一个app工程只有一个组件，随着app业务的壮大模块越来越多，代码量超10万是很正常的，这个时候我们会遇到以下问题</p>
+<ul>
+<li>稍微改动一个模块的一点代码都要编译整个工程，耗时耗力</li>
+<li>公共资源、业务、模块混在一起耦合度太高</li>
+<li>不方便测试</li>
+</ul>
+<h4 id="组件化正确的姿势"><a href="#组件化正确的姿势" class="headerlink" title="组件化正确的姿势"></a>组件化正确的姿势</h4><p>既然选择使用组件化，那么如何正确的使用它呢？这里给出一种解决方案，如果你有更好的方案，欢迎交流。</p>
+<p>我们创建了一个app工程project，默认里面有一个app组件，这个app组件是可以直接运行的。</p>
+<p>怎么划分组件呢？</p>
+<ul>
+<li>1.新建一个lib组件，new Module—&gt;Andorid Library，取名BaseUtilLib，我们将所有的公共的工具类、网络分装等类放在其中</li>
+<li>2.新建一个lib组件，BaseReslLib，我们将所有的公共资源、drawable、String等类放在其中</li>
+<li>3.将app按照自己的规则划分成多个模块，比如按业务按地区等都可以</li>
+<li>4.逐一开发某个模块，比如Test模块，新建一个TestApp组件，TestApp组件引用[1][2]步骤的BaseUtilLib和BaseReslLib，在TestApp组件里添加并引用TestLib组件。在TestLib的activity中写代码写业务逻辑，TestApp只负责跳转和测试</li>
+<li>5.将工程中的所有类似TestLib组件（不是TestApp组件）引入到工程的app中<br>看着有点乱，整理出一张图<br><img src="http://img2.tuicool.com/NbQZV3R.png!web" alt="img"></li>
+</ul>
+<p>这样的好处有</p>
+<p>每个模块可以独立开发编译运行</p>
+<p>开发单个模块时可以共享资源和工具类</p>
+<p>可以针对单个模块测试</p>
+<p><a href="https://github.com/halibobo/ModuleBuild" target="_blank" rel="external">demo地址：https://github.com/halibobo/ModuleBuild</a></p>
+<h2 id="插件化"><a href="#插件化" class="headerlink" title="插件化"></a>插件化</h2><h4 id="为什么有插件化？"><a href="#为什么有插件化？" class="headerlink" title="为什么有插件化？"></a>为什么有插件化？</h4><p>有了组件化，为什么还要用插件化呢？插件化开发总的来说有以下几点好处（不同插件框架不一样）：</p>
+<ul>
+<li>宿主和插件分开编译</li>
+<li>并发开发</li>
+<li>动态更新插件</li>
+<li>按需下载模块</li>
+<li>方法数或变量数爆棚</li>
+</ul>
+<h4 id="处境"><a href="#处境" class="headerlink" title="处境"></a>处境</h4><p>开放出来的插件化开发框架比较多，他们各自都有自己的优势和和不足，实现的原理也有差别下面列</p>
+<h4 id="开源的插件化框架"><a href="#开源的插件化框架" class="headerlink" title="开源的插件化框架"></a>开源的插件化框架</h4><ul>
+<li><a href="https://github.com/Qihoo360/DroidPlugin" target="_blank" rel="external">Qihoo360/DroidPlugin</a></li>
+<li><a href="https://github.com/CtripMobile/DynamicAPK" target="_blank" rel="external">CtripMobile/DynamicAPK</a></li>
+<li><a href="https://github.com/mmin18/AndroidDynamicLoader" target="_blank" rel="external">mmin18/AndroidDynamicLoader</a></li>
+<li><a href="https://github.com/singwhatiwanna/dynamic-load-apk" target="_blank" rel="external">singwhatiwanna/dynamic-load-apk</a></li>
+<li><a href="https://github.com/houkx/android-pluginmgr" target="_blank" rel="external">houkx/android-pluginmgr</a></li>
+<li><a href="https://github.com/bunnyblue/ACDD" target="_blank" rel="external">bunnyblue/ACDD</a></li>
+<li><a href="https://github.com/wequick/Small" target="_blank" rel="external">wequick/Small</a></li>
+<li>……</li>
+</ul>
+<p>目前开源的这几个框架有宿主和插件分离的也有融合在一起的，每个框架的详细介绍和demo在github里都可以查看到。插件化demo运行起来比较简单，但是真正将它用到实际项目中还是要考虑很多小细节的，目前我也正处于研究阶段。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;https://ww4.sinaimg.cn/large/006tNbRwly1fda139k6jgj30fa080mxf.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;组件化开发就是将一个app分成多个模块，每个模块都是一个组件（Module），开发的过程中
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Lottie简介：Airbnb为本地应用程序添加动画的工具(原文)</title>
+    <link href="http://wanghaonanlpc.github.io/2017/03/03/Introducing-Lottie-%E5%8E%9F%E6%96%87/"/>
+    <id>http://wanghaonanlpc.github.io/2017/03/03/Introducing-Lottie-原文/</id>
+    <published>2017-03-03T03:23:46.000Z</published>
+    <updated>2017-03-03T03:57:07.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="http://airbnb.design/category/behind-the-scenes/" target="_blank" rel="external">BEHIND THE SCENES</a>     /  BY SALIH ABDUL-KARIM / 02.03<br><a href="http://airbnb.design/tag/animation/" target="_blank" rel="external">#ANIMATION</a> <a href="http://airbnb.design/tag/design/" target="_blank" rel="external">#DESIGN</a> <a href="http://airbnb.design/tag/engineering/" target="_blank" rel="external">#ENGINEERING</a> <a href="http://airbnb.design/tag/motion/" target="_blank" rel="external">#MOTION</a> <a href="http://airbnb.design/tag/open-source/" target="_blank" rel="external">#OPEN SOURCE</a> <a href="http://airbnb.design/tag/tools/" target="_blank" rel="external">#TOOLS</a></p>
+<h2 id="Lottie"><a href="#Lottie" class="headerlink" title="Lottie"></a>Lottie</h2><h3 id="Behind-the-scenes-of-our-new-open-source-animation-tool"><a href="#Behind-the-scenes-of-our-new-open-source-animation-tool" class="headerlink" title="Behind the scenes of our new open-source animation tool."></a>Behind the scenes of our new open-source animation tool.</h3><p>In the past, building complex animations for Android, iOS, and React Native apps was a difficult and lengthy process. You either had to add bulky image files for each screen size or write a thousand lines of brittle, hard-to-maintain code. Because of this, most apps weren’t using animation — despite it being a powerful tool for communicating ideas and creating compelling user experiences. One year ago, we set out to change that.</p>
+<p>Today, we’re happy to introduce our solution. Lottie is an iOS, Android, and React Native library that renders After Effects animations in real time, and allows native apps to use animations as easily as they use static assets. Lottie uses animation data exported as JSON files from an open-source After Effects extension called <a href="https://github.com/bodymovin/bodymovin" target="_blank" rel="external">Bodymovin</a>. The extension is bundled with a JavaScript player that can render the animations on the web. Since February of 2015, Bodymovin’s creator, <a href="https://twitter.com/airnanan" target="_blank" rel="external">Hernan Torrisi</a>, has built a solid foundation by adding features and improvements to the plugin on a monthly basis. Our team (<a href="http://github.com/buba447" target="_blank" rel="external">Brandon Withrow</a> on <a href="https://github.com/airbnb/lottie-ios" target="_blank" rel="external">iOS</a>, <a href="https://twitter.com/gpeal8" target="_blank" rel="external">Gabriel Peal</a> on <a href="https://github.com/airbnb/lottie-android" target="_blank" rel="external">Android</a>, <a href="https://twitter.com/intelligibabble" target="_blank" rel="external">Leland Richardson</a> on <a href="https://github.com/airbnb/lottie-react-native" target="_blank" rel="external">React Native</a>, and <a href="https://twitter.com/therealsalih?lang=en" target="_blank" rel="external">I</a> on experience design) began our journey by building on top of Torrisi’s phenomenal work.</p>
+<p><img src="http://airbnb.design/wp-content/uploads/2017/02/icons.gif" alt="icons"></p>
+<p>Lottie allows engineers to build richer animations without the painstaking overhead of re-writing them. Nick Butcher’s<a href="https://medium.com/google-developers/animation-jump-through-861f4f5b3de4#.xlw1n2u2d" target="_blank" rel="external"> jump through</a> animation, Bartek Lipinski’s <a href="https://android.jlelse.eu/animatedvectordrawablecompat-3d9568727c53#.fmiujhcdj" target="_blank" rel="external">hamburger menu</a>, and Miroslaw Stanek’s <a href="http://frogermcs.github.io/twitters-like-animation-in-android-alternative/" target="_blank" rel="external">Twitter heart</a> demonstrate just how difficult and time consuming it can be to re-create animations from scratch. With Lottie, digging through frameworks for reference, guessing durations, manually creating Bézier curves, and re-making animations with nothing more than a GIF for reference will be a thing of the past. Now engineers can use exactly what the designer intended, exactly how it was made. To demonstrate that, we’ve recreated their animations and provided After Effects and JSON files of each in our sample app.</p>
+<p>Our goal is to support as many After Effects features as we possibly can, to allow for a lot more than simple icon animations. We’ve created a handful of other examples to show the library’s flexibility, richness, and deep feature set. In the sample app, there are also source files for a variety of different kinds of animations, including basic line art, character-based animations, and dynamic logo animations with multiple angles and cuts.</p>
+<p><img src="http://airbnb.design/wp-content/uploads/2017/01/screens_1.gif" alt="screens_1"></p>
+<p>We’ve already started shipping our own Lottie animations on several screens, including in-app notifications, full-frame animated illustrations, and in our review flow. And we plan to greatly expand our usage of animations in a fun yet useful way moving forward.</p>
+<p><img src="http://airbnb.design/wp-content/uploads/2017/01/screens_2.gif" alt="screens_2"></p>
+<h2 id="Flexible-and-efficient-solution"><a href="#Flexible-and-efficient-solution" class="headerlink" title="Flexible and efficient solution"></a><strong>Flexible and efficient solution</strong></h2><p>Airbnb is a global company that supports millions of guests and hosts, so having a flexible animation format that is playable on multiple platforms was extremely important to us. There are libraries similar to Lottie, such as Marcus Eckert’s <a href="http://www.marcuseckert.com/squall/" target="_blank" rel="external">Squall</a> and Facebook’s <a href="https://github.com/facebookincubator/Keyframes" target="_blank" rel="external">Keyframes</a>, but our goals are slightly different. Facebook picked a small set of After Effects features to support, since they were focusing mainly on reactions, but we want to support as many as possible. As for Squall, designers at Airbnb use it in combination with Lottie because it has an amazing After Effects preview app that’s become a necessary part of our workflow. However, it only supports iOS and our engineering teams needed a cross-platform solution.</p>
+<p>Lottie also has several features built into its API to make it more versatile and efficient. It supports loading JSON files over the network, which is useful for A/B testing. It also has an optional caching mechanism, so frequently used animations, such as a wish-list heart, can load a cached copy each time. Lottie animations can be driven by gestures using the animated progress feature, and animation speed can be manipulated by changing a simple value. iOS even supports adding additional native UI to an animation at runtime, which can be used for complex animated transitions.</p>
+<p>In addition to all of the After Effects features and API additions we’ve worked on so far, we have many ideas for the future. These include mapping views to Lottie animations, controlling view transitions with Lottie, support for <a href="http://www.battleaxe.co/rubberhose/" target="_blank" rel="external">Battle Axe’s RubberHose</a>, gradient, type, and image support. The hardest part is picking which features to tackle next.</p>
+<p><img src="http://airbnb.design/wp-content/uploads/2017/01/hardware.png" alt="hardware"></p>
+<h2 id="Building-community"><a href="#Building-community" class="headerlink" title="Building community"></a><strong>Building community</strong></h2><p>Releasing something as open source is more than just putting it out there for the public to use. It’s a bridge that connects people and creates community. As we got closer to releasing Lottie to designers and engineers via GitHub, we wanted to be sure to connect with the animation folks as well.</p>
+<p>We were inspired by the communities that <a href="http://9-squares.tumblr.com/" target="_blank" rel="external">9 Squares</a>, <a href="https://motioncorpse.tumblr.com/" target="_blank" rel="external">Motion Corpse</a>, and <a href="https://animography.net/products/mobilo" target="_blank" rel="external">Animography</a> have created. All three have brought together people from around the world, who otherwise would never have worked together, to collaborate on public animation projects. These projects take months of work and a lot of organization and wrangling by the respective teams, but they undoubtedly provide immense value for the animation community as a whole. Motion Corpse and Animography publicly share the After Effects source files as well, which provide tons of insights on how people work.</p>
+<p>Following their collaborative lead, we reached out to all three teams to contribute animations to our sample app. We’ve included an animation from Motion Corpse created by J.R. Canest, one of Al Boardman’s squares from the 9 Squares project, and an animated keyboard using Animography’s Mobilo animated typeface, which features work from more than two dozen artists. We’re hoping that the merging of these animation communities with the powerful engineering community will spark something special.</p>
+<p><img src="http://airbnb.design/wp-content/uploads/2017/01/community.gif" alt="community">We’d love to hear how you’re using Lottie — no matter if you’re a designer, animator, or engineer. Feel free to reach out to us directly at lottie@airbnb.com with your thoughts, feedback, and insights. We’re excited to see what the community around the world will do when they begin to use Lottie in ways we never imagined.</p>
+<h3 id="Download-Bodymovin-Lottie-iOS-Android-and-React-Native"><a href="#Download-Bodymovin-Lottie-iOS-Android-and-React-Native" class="headerlink" title="Download Bodymovin, Lottie iOS, Android and React Native."></a>Download <a href="https://github.com/bodymovin/bodymovin" target="_blank" rel="external">Bodymovin</a>, Lottie <a href="https://github.com/airbnb/lottie-ios" target="_blank" rel="external">iOS</a>, <a href="https://github.com/airbnb/lottie-android" target="_blank" rel="external">Android</a> and <a href="https://github.com/airbnb/lottie-react-native" target="_blank" rel="external">React Native</a>.</h3><p>This article was co-written by  <a href="http://github.com/buba447" target="_blank" rel="external">Brandon Withrow</a>,  <a href="https://twitter.com/gpeal8" target="_blank" rel="external">Gabriel Peal</a> and <a href="https://twitter.com/therealsalih?lang=en" target="_blank" rel="external">Salih Abdul-Karim</a>.</p>
+<p><img src="http://airbnb.design/lottie/" alt="Salih Abdul-Karim](http://airbnb.design/wp-content/uploads/2017/01/SalihAbdul-Karim-profile.jpg) Salih Abdul-Karim is an Experience and Motion Designer at Airbnb."></p>
+]]></content>
+    
+    <summary type="html">
+    
+      introduce lottie
+    
+    </summary>
+    
+      <category term="安卓" scheme="http://wanghaonanlpc.github.io/categories/%E5%AE%89%E5%8D%93/"/>
+    
+    
+      <category term="android" scheme="http://wanghaonanlpc.github.io/tags/android/"/>
+    
+      <category term="ui" scheme="http://wanghaonanlpc.github.io/tags/ui/"/>
+    
+      <category term="开源" scheme="http://wanghaonanlpc.github.io/tags/%E5%BC%80%E6%BA%90/"/>
+    
+      <category term="Airbnb" scheme="http://wanghaonanlpc.github.io/tags/Airbnb/"/>
+    
+  </entry>
   
   <entry>
     <title>Lottie简介：Airbnb为本地应用程序添加动画的工具(翻译)</title>
@@ -45,53 +228,6 @@
 <p>在他们的合作领导下，我们接触了所有三个团队，为我们的示例应用程序贡献动画。我们已经包括了由JR Canest创建的Motion Corpse的动画，来自9 Squares项目的Al Boardman的方块之一，以及使用Animography的Mobilo动画字体的动画键盘，其中包含超过二十个艺术家的作品。我们希望这些动画社区与强大的工程社群的合并将产生一些特别的东西。</p>
 <p><img src="http://airbnb.design/wp-content/uploads/2017/01/community.gif" alt="社区">我们很想听听你如何使用Lottie - 无论你是一个设计师，动画师或工程师。欢迎随时通过lottie@airbnb.com与您的想法，反馈和见解联系。我们很高兴看到当他们开始以我们从未想象的方式使用Lottie时，世界上的社区会做什么。</p>
 <h3 id="下载Bodymovin，Lottie-iOS，Android和React-Native。"><a href="#下载Bodymovin，Lottie-iOS，Android和React-Native。" class="headerlink" title="下载Bodymovin，Lottie iOS，Android和React Native。"></a>下载<a href="https://github.com/bodymovin/bodymovin" target="_blank" rel="external">Bodymovin</a>，Lottie <a href="https://github.com/airbnb/lottie-ios" target="_blank" rel="external">iOS</a>，<a href="https://github.com/airbnb/lottie-android" target="_blank" rel="external">Android</a>和<a href="https://github.com/airbnb/lottie-react-native" target="_blank" rel="external">React Native</a>。</h3><p>本文由<a href="http://github.com/buba447" target="_blank" rel="external">Brandon Withrow</a>，  <a href="https://twitter.com/gpeal8" target="_blank" rel="external">Gabriel Peal</a>  和  <a href="http://airbnb.design/lottie/" target="_blank" rel="external">Salih Abdul-Karim](https://twitter.com/therealsalih?lang=en)共同撰写   。 </a></p>
-]]></content>
-    
-    <summary type="html">
-    
-      introduce lottie
-    
-    </summary>
-    
-      <category term="安卓" scheme="http://wanghaonanlpc.github.io/categories/%E5%AE%89%E5%8D%93/"/>
-    
-    
-      <category term="android" scheme="http://wanghaonanlpc.github.io/tags/android/"/>
-    
-      <category term="ui" scheme="http://wanghaonanlpc.github.io/tags/ui/"/>
-    
-      <category term="开源" scheme="http://wanghaonanlpc.github.io/tags/%E5%BC%80%E6%BA%90/"/>
-    
-      <category term="Airbnb" scheme="http://wanghaonanlpc.github.io/tags/Airbnb/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Lottie简介：Airbnb为本地应用程序添加动画的工具(原文)</title>
-    <link href="http://wanghaonanlpc.github.io/2017/03/03/Introducing-Lottie-%E5%8E%9F%E6%96%87/"/>
-    <id>http://wanghaonanlpc.github.io/2017/03/03/Introducing-Lottie-原文/</id>
-    <published>2017-03-03T03:23:46.000Z</published>
-    <updated>2017-03-03T03:57:07.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="http://airbnb.design/category/behind-the-scenes/" target="_blank" rel="external">BEHIND THE SCENES</a>     /  BY SALIH ABDUL-KARIM / 02.03<br><a href="http://airbnb.design/tag/animation/" target="_blank" rel="external">#ANIMATION</a> <a href="http://airbnb.design/tag/design/" target="_blank" rel="external">#DESIGN</a> <a href="http://airbnb.design/tag/engineering/" target="_blank" rel="external">#ENGINEERING</a> <a href="http://airbnb.design/tag/motion/" target="_blank" rel="external">#MOTION</a> <a href="http://airbnb.design/tag/open-source/" target="_blank" rel="external">#OPEN SOURCE</a> <a href="http://airbnb.design/tag/tools/" target="_blank" rel="external">#TOOLS</a></p>
-<h2 id="Lottie"><a href="#Lottie" class="headerlink" title="Lottie"></a>Lottie</h2><h3 id="Behind-the-scenes-of-our-new-open-source-animation-tool"><a href="#Behind-the-scenes-of-our-new-open-source-animation-tool" class="headerlink" title="Behind the scenes of our new open-source animation tool."></a>Behind the scenes of our new open-source animation tool.</h3><p>In the past, building complex animations for Android, iOS, and React Native apps was a difficult and lengthy process. You either had to add bulky image files for each screen size or write a thousand lines of brittle, hard-to-maintain code. Because of this, most apps weren’t using animation — despite it being a powerful tool for communicating ideas and creating compelling user experiences. One year ago, we set out to change that.</p>
-<p>Today, we’re happy to introduce our solution. Lottie is an iOS, Android, and React Native library that renders After Effects animations in real time, and allows native apps to use animations as easily as they use static assets. Lottie uses animation data exported as JSON files from an open-source After Effects extension called <a href="https://github.com/bodymovin/bodymovin" target="_blank" rel="external">Bodymovin</a>. The extension is bundled with a JavaScript player that can render the animations on the web. Since February of 2015, Bodymovin’s creator, <a href="https://twitter.com/airnanan" target="_blank" rel="external">Hernan Torrisi</a>, has built a solid foundation by adding features and improvements to the plugin on a monthly basis. Our team (<a href="http://github.com/buba447" target="_blank" rel="external">Brandon Withrow</a> on <a href="https://github.com/airbnb/lottie-ios" target="_blank" rel="external">iOS</a>, <a href="https://twitter.com/gpeal8" target="_blank" rel="external">Gabriel Peal</a> on <a href="https://github.com/airbnb/lottie-android" target="_blank" rel="external">Android</a>, <a href="https://twitter.com/intelligibabble" target="_blank" rel="external">Leland Richardson</a> on <a href="https://github.com/airbnb/lottie-react-native" target="_blank" rel="external">React Native</a>, and <a href="https://twitter.com/therealsalih?lang=en" target="_blank" rel="external">I</a> on experience design) began our journey by building on top of Torrisi’s phenomenal work.</p>
-<p><img src="http://airbnb.design/wp-content/uploads/2017/02/icons.gif" alt="icons"></p>
-<p>Lottie allows engineers to build richer animations without the painstaking overhead of re-writing them. Nick Butcher’s<a href="https://medium.com/google-developers/animation-jump-through-861f4f5b3de4#.xlw1n2u2d" target="_blank" rel="external"> jump through</a> animation, Bartek Lipinski’s <a href="https://android.jlelse.eu/animatedvectordrawablecompat-3d9568727c53#.fmiujhcdj" target="_blank" rel="external">hamburger menu</a>, and Miroslaw Stanek’s <a href="http://frogermcs.github.io/twitters-like-animation-in-android-alternative/" target="_blank" rel="external">Twitter heart</a> demonstrate just how difficult and time consuming it can be to re-create animations from scratch. With Lottie, digging through frameworks for reference, guessing durations, manually creating Bézier curves, and re-making animations with nothing more than a GIF for reference will be a thing of the past. Now engineers can use exactly what the designer intended, exactly how it was made. To demonstrate that, we’ve recreated their animations and provided After Effects and JSON files of each in our sample app.</p>
-<p>Our goal is to support as many After Effects features as we possibly can, to allow for a lot more than simple icon animations. We’ve created a handful of other examples to show the library’s flexibility, richness, and deep feature set. In the sample app, there are also source files for a variety of different kinds of animations, including basic line art, character-based animations, and dynamic logo animations with multiple angles and cuts.</p>
-<p><img src="http://airbnb.design/wp-content/uploads/2017/01/screens_1.gif" alt="screens_1"></p>
-<p>We’ve already started shipping our own Lottie animations on several screens, including in-app notifications, full-frame animated illustrations, and in our review flow. And we plan to greatly expand our usage of animations in a fun yet useful way moving forward.</p>
-<p><img src="http://airbnb.design/wp-content/uploads/2017/01/screens_2.gif" alt="screens_2"></p>
-<h2 id="Flexible-and-efficient-solution"><a href="#Flexible-and-efficient-solution" class="headerlink" title="Flexible and efficient solution"></a><strong>Flexible and efficient solution</strong></h2><p>Airbnb is a global company that supports millions of guests and hosts, so having a flexible animation format that is playable on multiple platforms was extremely important to us. There are libraries similar to Lottie, such as Marcus Eckert’s <a href="http://www.marcuseckert.com/squall/" target="_blank" rel="external">Squall</a> and Facebook’s <a href="https://github.com/facebookincubator/Keyframes" target="_blank" rel="external">Keyframes</a>, but our goals are slightly different. Facebook picked a small set of After Effects features to support, since they were focusing mainly on reactions, but we want to support as many as possible. As for Squall, designers at Airbnb use it in combination with Lottie because it has an amazing After Effects preview app that’s become a necessary part of our workflow. However, it only supports iOS and our engineering teams needed a cross-platform solution.</p>
-<p>Lottie also has several features built into its API to make it more versatile and efficient. It supports loading JSON files over the network, which is useful for A/B testing. It also has an optional caching mechanism, so frequently used animations, such as a wish-list heart, can load a cached copy each time. Lottie animations can be driven by gestures using the animated progress feature, and animation speed can be manipulated by changing a simple value. iOS even supports adding additional native UI to an animation at runtime, which can be used for complex animated transitions.</p>
-<p>In addition to all of the After Effects features and API additions we’ve worked on so far, we have many ideas for the future. These include mapping views to Lottie animations, controlling view transitions with Lottie, support for <a href="http://www.battleaxe.co/rubberhose/" target="_blank" rel="external">Battle Axe’s RubberHose</a>, gradient, type, and image support. The hardest part is picking which features to tackle next.</p>
-<p><img src="http://airbnb.design/wp-content/uploads/2017/01/hardware.png" alt="hardware"></p>
-<h2 id="Building-community"><a href="#Building-community" class="headerlink" title="Building community"></a><strong>Building community</strong></h2><p>Releasing something as open source is more than just putting it out there for the public to use. It’s a bridge that connects people and creates community. As we got closer to releasing Lottie to designers and engineers via GitHub, we wanted to be sure to connect with the animation folks as well.</p>
-<p>We were inspired by the communities that <a href="http://9-squares.tumblr.com/" target="_blank" rel="external">9 Squares</a>, <a href="https://motioncorpse.tumblr.com/" target="_blank" rel="external">Motion Corpse</a>, and <a href="https://animography.net/products/mobilo" target="_blank" rel="external">Animography</a> have created. All three have brought together people from around the world, who otherwise would never have worked together, to collaborate on public animation projects. These projects take months of work and a lot of organization and wrangling by the respective teams, but they undoubtedly provide immense value for the animation community as a whole. Motion Corpse and Animography publicly share the After Effects source files as well, which provide tons of insights on how people work.</p>
-<p>Following their collaborative lead, we reached out to all three teams to contribute animations to our sample app. We’ve included an animation from Motion Corpse created by J.R. Canest, one of Al Boardman’s squares from the 9 Squares project, and an animated keyboard using Animography’s Mobilo animated typeface, which features work from more than two dozen artists. We’re hoping that the merging of these animation communities with the powerful engineering community will spark something special.</p>
-<p><img src="http://airbnb.design/wp-content/uploads/2017/01/community.gif" alt="community">We’d love to hear how you’re using Lottie — no matter if you’re a designer, animator, or engineer. Feel free to reach out to us directly at lottie@airbnb.com with your thoughts, feedback, and insights. We’re excited to see what the community around the world will do when they begin to use Lottie in ways we never imagined.</p>
-<h3 id="Download-Bodymovin-Lottie-iOS-Android-and-React-Native"><a href="#Download-Bodymovin-Lottie-iOS-Android-and-React-Native" class="headerlink" title="Download Bodymovin, Lottie iOS, Android and React Native."></a>Download <a href="https://github.com/bodymovin/bodymovin" target="_blank" rel="external">Bodymovin</a>, Lottie <a href="https://github.com/airbnb/lottie-ios" target="_blank" rel="external">iOS</a>, <a href="https://github.com/airbnb/lottie-android" target="_blank" rel="external">Android</a> and <a href="https://github.com/airbnb/lottie-react-native" target="_blank" rel="external">React Native</a>.</h3><p>This article was co-written by  <a href="http://github.com/buba447" target="_blank" rel="external">Brandon Withrow</a>,  <a href="https://twitter.com/gpeal8" target="_blank" rel="external">Gabriel Peal</a> and <a href="https://twitter.com/therealsalih?lang=en" target="_blank" rel="external">Salih Abdul-Karim</a>.</p>
-<p><img src="http://airbnb.design/lottie/" alt="Salih Abdul-Karim](http://airbnb.design/wp-content/uploads/2017/01/SalihAbdul-Karim-profile.jpg) Salih Abdul-Karim is an Experience and Motion Designer at Airbnb."></p>
 ]]></content>
     
     <summary type="html">
@@ -1439,462 +1575,6 @@
     </summary>
     
       <category term="hexo" scheme="http://wanghaonanlpc.github.io/categories/hexo/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Hexo与github搭建个人博客(一)</title>
-    <link href="http://wanghaonanlpc.github.io/2017/02/21/Hexo%E4%B8%8Egithub%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2-%E4%B8%80/"/>
-    <id>http://wanghaonanlpc.github.io/2017/02/21/Hexo与github搭建个人博客-一/</id>
-    <published>2017-02-21T11:19:41.000Z</published>
-    <updated>2017-03-01T07:25:05.000Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote>
-<p>介绍Hexo</p>
-</blockquote>
-<h2 id="什么是Hexo？"><a href="#什么是Hexo？" class="headerlink" title="什么是Hexo？"></a>什么是Hexo？</h2><p>Hexo是一个快速，简单和强大的博客框架。你写的帖子在<a href="http://daringfireball.net/projects/markdown/" target="_blank" rel="external">Markdown</a>（或其他语言）和Hexo生成静态文件与美丽的主题在几秒钟内。</p>
-<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>它只需要几分钟来设置Hexo。如果你遇到一个问题，在这里找不到解决方案，请<a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">提交一个GitHub问题</a>，我会尽力解决它。</p>
-<h3 id="要求"><a href="#要求" class="headerlink" title="要求"></a>要求</h3><p>安装Hexo非常容易。但是，你需要先安装几个其他的东西：</p>
-<ul>
-<li><a href="http://nodejs.org/" target="_blank" rel="external">Node.js</a></li>
-<li><a href="http://git-scm.com/" target="_blank" rel="external">Git</a></li>
-</ul>
-<p>如果你的电脑已经有这些，恭喜你！只需用npm安装Hexo：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install -g hexo-cli</div></pre></td></tr></table></figure>
-<p>如果没有，请按照以下说明安装所有要求。</p>
-<blockquote>
-<p><strong>对于Mac用户</strong>编译时可能会遇到一些问题。请先从App Store安装Xcode。安装Xcode后，打开Xcode并转到<strong>首选项 - &gt;下载 - &gt;命令行工具 - &gt;安装</strong>以安装命令行工具。</p>
-</blockquote>
-<h3 id="安装Git"><a href="#安装Git" class="headerlink" title="安装Git"></a>安装Git</h3><ul>
-<li>Windows：下载并安装<a href="https://git-scm.com/download/win" target="_blank" rel="external">git</a>。</li>
-<li>苹果：用它安装<a href="http://mxcl.github.com/homebrew/" target="_blank" rel="external">自制</a>，<a href="http://www.macports.org/" target="_blank" rel="external">MacPorts的</a>或<a href="http://sourceforge.net/projects/git-osx-installer/" target="_blank" rel="external">安装程序</a>。</li>
-<li>Linux（Ubuntu，Debian）： <code>sudo apt-get install git-core</code></li>
-<li>Linux（Fedora，Red Hat，CentOS）： <code>sudo yum install git-core</code></li>
-</ul>
-<h3 id="安装Node-js"><a href="#安装Node-js" class="headerlink" title="安装Node.js"></a>安装Node.js</h3><p>安装Node.js的最好方法是使用<a href="https://github.com/creationix/nvm" target="_blank" rel="external">nvm</a>。</p>
-<p>卷曲：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | 嘘</div></pre></td></tr></table></figure>
-<p>Wget：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ wget -qO- https://raw.githubusercontent.com/creationix/nvm/master/install.sh | 嘘</div></pre></td></tr></table></figure>
-<p>安装nvm后，重新启动终端并运行以下命令以安装Node.js.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ nvm install stable</div></pre></td></tr></table></figure>
-<p>或者，下载并运行<a href="http://nodejs.org/" target="_blank" rel="external">安装程序</a>。</p>
-<h3 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h3><p>一旦所有要求都安装完毕，您可以使用npm安装Hexo。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install -g hexo-cli</div></pre></td></tr></table></figure>
-<h3 id="Setup"><a href="#Setup" class="headerlink" title="Setup"></a>Setup</h3><p>Once Hexo is installed, run the following commands to initialise Hexo in the target <folder>.</folder></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ hexo init &lt;folder&gt;</div><div class="line">$ cd &lt;folder&gt;</div><div class="line">$ npm install</div></pre></td></tr></table></figure>
-<p>Once initialised, here’s what your project folder will look like:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">.</div><div class="line">├── _config.yml</div><div class="line">├── package.json</div><div class="line">├── scaffolds</div><div class="line">├── source</div><div class="line">|   ├── _drafts</div><div class="line">|   └── _posts</div><div class="line">└── themes</div></pre></td></tr></table></figure>
-<h2 id="组态"><a href="#组态" class="headerlink" title="组态"></a>组态</h2><p>**</p>
-<p>您可以<code>_config.yml</code>在<a href="https://hexo.io/docs/configuration.html#Using-an-Alternate-Config" target="_blank" rel="external">备用配置文件</a>中或其中修改站点设置。</p>
-<h3 id="现场"><a href="#现场" class="headerlink" title="现场"></a>现场</h3><table>
-<thead>
-<tr>
-<th>设置</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>title</code></td>
-<td>您网站的标题</td>
-</tr>
-<tr>
-<td><code>subtitle</code></td>
-<td>您网站的字幕</td>
-</tr>
-<tr>
-<td><code>description</code></td>
-<td>您网站的描述</td>
-</tr>
-<tr>
-<td><code>author</code></td>
-<td>你的名字</td>
-</tr>
-<tr>
-<td><code>language</code></td>
-<td>您网站的语言。使用<a href="https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes" target="_blank" rel="external">2个字母ISO-639-1代码</a>。默认为<code>en</code>。</td>
-</tr>
-<tr>
-<td><code>timezone</code></td>
-<td>您网站的时区。Hexo默认情况下使用计算机上的设置。您可以在<a href="https://en.wikipedia.org/wiki/List_of_tz_database_time_zones" target="_blank" rel="external">这里</a>找到可用的时区列表。一些实例是<code>America/New_York</code>，<code>Japan</code>，和<code>UTC</code>。</td>
-</tr>
-</tbody>
-</table>
-<h3 id="网址"><a href="#网址" class="headerlink" title="网址"></a>网址</h3><table>
-<thead>
-<tr>
-<th>设置</th>
-<th>描述</th>
-<th>默认</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>url</code></td>
-<td>您网站的网址</td>
-<td></td>
-</tr>
-<tr>
-<td><code>root</code></td>
-<td>您网站的根目录</td>
-<td></td>
-</tr>
-<tr>
-<td><code>permalink</code></td>
-<td>文章的<a href="https://hexo.io/docs/permalinks.html" target="_blank" rel="external">永久链接</a>格式</td>
-<td><code>:year/:month/:day/:title/</code></td>
-</tr>
-<tr>
-<td><code>permalink_default</code></td>
-<td>固定链接中每个段的默认值</td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<p><strong>网站在子目录</strong>如果您的网站位于<code>http://example.org/blog</code>设置<code>url</code>为<code>http://example.org/blog</code>并设置<code>root</code>为的子目录（如）中<code>/blog/</code>。</p>
-</blockquote>
-<h3 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h3><table>
-<thead>
-<tr>
-<th>设置</th>
-<th>描述</th>
-<th>默认</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>source_dir</code></td>
-<td>源文件夹。您的内容存储在哪里</td>
-<td><code>source</code></td>
-</tr>
-<tr>
-<td><code>public_dir</code></td>
-<td>公共文件夹。将生成静态站点的位置</td>
-<td><code>public</code></td>
-</tr>
-<tr>
-<td><code>tag_dir</code></td>
-<td>标记目录</td>
-<td><code>tags</code></td>
-</tr>
-<tr>
-<td><code>archive_dir</code></td>
-<td>存档目录</td>
-<td><code>archives</code></td>
-</tr>
-<tr>
-<td><code>category_dir</code></td>
-<td>类别目录</td>
-<td><code>categories</code></td>
-</tr>
-<tr>
-<td><code>code_dir</code></td>
-<td>包括代码目录</td>
-<td><code>downloads/code</code></td>
-</tr>
-<tr>
-<td><code>i18n_dir</code></td>
-<td>i18n目录</td>
-<td><code>:lang</code></td>
-</tr>
-<tr>
-<td><code>skip_render</code></td>
-<td>不要渲染的路径。您可以使用<a href="https://github.com/isaacs/minimatch" target="_blank" rel="external">glob表达式</a>进行路径匹配</td>
-</tr>
-</tbody>
-</table>
-<h3 id="写作"><a href="#写作" class="headerlink" title="写作"></a>写作</h3><table>
-<thead>
-<tr>
-<th>设置</th>
-<th>描述</th>
-<th>默认</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>new_post_name</code></td>
-<td>新帖子的文件名格式</td>
-<td><code>:title.md</code></td>
-</tr>
-<tr>
-<td><code>default_layout</code></td>
-<td>默认布局</td>
-<td><code>post</code></td>
-</tr>
-<tr>
-<td><code>titlecase</code></td>
-<td>将标题转换为标题大小写？</td>
-<td><code>false</code></td>
-</tr>
-<tr>
-<td><code>external_link</code></td>
-<td>在新标签页中打开外部链接？</td>
-<td><code>true</code></td>
-</tr>
-<tr>
-<td><code>filename_case</code></td>
-<td>将文件名转换为<code>1</code>小写; <code>2</code>大写</td>
-<td><code>0</code></td>
-</tr>
-<tr>
-<td><code>render_drafts</code></td>
-<td>显示草稿？</td>
-<td><code>false</code></td>
-</tr>
-<tr>
-<td><code>post_asset_folder</code></td>
-<td>启用<a href="https://hexo.io/docs/asset-folders.html" target="_blank" rel="external">资产文件夹</a>？</td>
-<td><code>false</code></td>
-</tr>
-<tr>
-<td><code>relative_link</code></td>
-<td>相对于根文件夹创建链接？</td>
-<td><code>false</code></td>
-</tr>
-<tr>
-<td><code>future</code></td>
-<td>显示未来帖子？</td>
-<td><code>true</code></td>
-</tr>
-<tr>
-<td><code>highlight</code></td>
-<td>代码块设置</td>
-</tr>
-</tbody>
-</table>
-<h3 id="类别和标签"><a href="#类别和标签" class="headerlink" title="类别和标签"></a>类别和标签</h3><table>
-<thead>
-<tr>
-<th>设置</th>
-<th>描述</th>
-<th>默认</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>default_category</code></td>
-<td>默认类别</td>
-<td><code>uncategorized</code></td>
-</tr>
-<tr>
-<td><code>category_map</code></td>
-<td>类别lug。</td>
-<td></td>
-</tr>
-<tr>
-<td><code>tag_map</code></td>
-<td>标签lug。</td>
-</tr>
-</tbody>
-</table>
-<h3 id="日期-时间格式"><a href="#日期-时间格式" class="headerlink" title="日期/时间格式"></a>日期/时间格式</h3><p>Hexo使用<a href="http://momentjs.com/" target="_blank" rel="external">Moment.js</a>处理日期。</p>
-<table>
-<thead>
-<tr>
-<th>设置</th>
-<th>描述</th>
-<th>默认</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>date_format</code></td>
-<td>日期格式</td>
-<td><code>YYYY-MM-DD</code></td>
-</tr>
-<tr>
-<td><code>time_format</code></td>
-<td>时间格式</td>
-<td><code>HH:mm:ss</code></td>
-</tr>
-</tbody>
-</table>
-<h3 id="分页"><a href="#分页" class="headerlink" title="分页"></a>分页</h3><table>
-<thead>
-<tr>
-<th>设置</th>
-<th>描述</th>
-<th>默认</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>per_page</code></td>
-<td>单个页面上显示的帖子数量。<code>0</code>禁用分页</td>
-<td><code>10</code></td>
-</tr>
-<tr>
-<td><code>pagination_dir</code></td>
-<td>分页目录</td>
-<td><code>page</code></td>
-</tr>
-</tbody>
-</table>
-<h3 id="扩展"><a href="#扩展" class="headerlink" title="扩展"></a>扩展</h3><table>
-<thead>
-<tr>
-<th>设置</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>theme</code></td>
-<td>主题名称。<code>false</code>禁用主题</td>
-</tr>
-<tr>
-<td><code>deploy</code></td>
-<td>部署设置</td>
-</tr>
-</tbody>
-</table>
-<h3 id="使用备用配置"><a href="#使用备用配置" class="headerlink" title="使用备用配置"></a>使用备用配置</h3><p>可以通过将<code>--config</code>标志添加<code>hexo</code>到备用YAML或JSON配置文件的路径或多个YAML或JSON文件的逗号分隔列表（无空格）的路径来指定自定义配置文件路径。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">＃use&apos;custom.yml&apos;代替&apos;_config.yml&apos;</div><div class="line">$ hexo server --config custom.yml</div><div class="line"></div><div class="line">＃use&apos;custom.yml&apos;＆&apos;custom2.json&apos;，优先&apos;custom2.json&apos;</div><div class="line">$ hexo server --config custom.yml，custom2.json</div></pre></td></tr></table></figure>
-<p>使用多个文件组合所有配置文件并将合并的设置保存到<code>_multiconfig.yml</code>。后面的值优先。它适用于任意数量的具有任意深度对象的JSON和YAML文件。请注意，<strong>列表中不允许有空格</strong>。</p>
-<p>例如，在上面的例子<code>foo: bar</code>中<code>custom.yml</code>，如果是，但是<code>&quot;foo&quot;: &quot;dinosaur&quot;</code>在<code>custom2.json</code>，<code>_multiconfig.yml</code>将包含<code>foo: dinosaur</code>。**</p>
-<h2 id="命令"><a href="#命令" class="headerlink" title="命令"></a>命令</h2><h3 id="在里面"><a href="#在里面" class="headerlink" title="在里面"></a>在里面</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo init [文件夹]</div></pre></td></tr></table></figure>
-<p>初始化网站。如果没有<code>folder</code>提供，Hexo将在当前目录中设置网站。</p>
-<h3 id="新建"><a href="#新建" class="headerlink" title="新建"></a>新建</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new [layout] &lt;title&gt;</div></pre></td></tr></table></figure>
-<p>创建新文章。如果没有<code>layout</code>提供，Hexo将使用<code>default_layout</code>from <a href="https://hexo.io/docs/configuration.html" target="_blank" rel="external">_config.yml</a>。如果<code>title</code>包含空格，请用引号将其括起来。</p>
-<h3 id="生成"><a href="#生成" class="headerlink" title="生成"></a>生成</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo生成</div></pre></td></tr></table></figure>
-<p>生成静态文件。</p>
-<table>
-<thead>
-<tr>
-<th>选项</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>-d</code>， <code>--deploy</code></td>
-<td>一代完成后部署</td>
-</tr>
-<tr>
-<td><code>-w</code>， <code>--watch</code></td>
-<td>观察文件更改</td>
-</tr>
-</tbody>
-</table>
-<h3 id="发布"><a href="#发布" class="headerlink" title="发布"></a>发布</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo publish [layout] &lt;filename&gt;</div></pre></td></tr></table></figure>
-<p>发布草稿。</p>
-<h3 id="服务器"><a href="#服务器" class="headerlink" title="服务器"></a>服务器</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>启动本地服务器。默认情况下，这是<code>http://localhost:4000/</code>。</p>
-<table>
-<thead>
-<tr>
-<th>选项</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>-p</code>， <code>--port</code></td>
-<td>覆盖默认端口</td>
-</tr>
-<tr>
-<td><code>-s</code>， <code>--static</code></td>
-<td>仅提供静态文件</td>
-</tr>
-<tr>
-<td><code>-l</code>， <code>--log</code></td>
-<td>启用记录器。覆盖记录器格式。</td>
-</tr>
-</tbody>
-</table>
-<h3 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>部署您的网站。</p>
-<table>
-<thead>
-<tr>
-<th>选项</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>-g</code>， <code>--generate</code></td>
-<td>部署前生成</td>
-</tr>
-</tbody>
-</table>
-<h3 id="渲染"><a href="#渲染" class="headerlink" title="渲染"></a>渲染</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo render &lt;file1&gt; [file2] ...</div></pre></td></tr></table></figure>
-<p>渲染文件。</p>
-<table>
-<thead>
-<tr>
-<th>选项</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>-o</code>， <code>--output</code></td>
-<td>输出目的地</td>
-</tr>
-</tbody>
-</table>
-<h3 id="迁移"><a href="#迁移" class="headerlink" title="迁移"></a>迁移</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo migrate &lt; type &gt;</div></pre></td></tr></table></figure>
-<p><a href="https://hexo.io/docs/migration.html" target="_blank" rel="external">迁移</a>来自其他博客系统的内容。</p>
-<h3 id="清洁"><a href="#清洁" class="headerlink" title="清洁"></a>清洁</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo清洁</div></pre></td></tr></table></figure>
-<p>清除缓存文件（<code>db.json</code>）和生成的文件（<code>public</code>）。</p>
-<h3 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo list &lt; type &gt;</div></pre></td></tr></table></figure>
-<p>列出所有路线。</p>
-<h3 id="版"><a href="#版" class="headerlink" title="版"></a>版</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo version</div></pre></td></tr></table></figure>
-<p>显示版本信息。</p>
-<h2 id="选项"><a href="#选项" class="headerlink" title="选项"></a>选项</h2><h3 id="安全模式"><a href="#安全模式" class="headerlink" title="安全模式"></a>安全模式</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo --safe</div></pre></td></tr></table></figure>
-<p>禁用加载插件和脚本。如果您在安装新插件后遇到问题，请尝试此操作。</p>
-<h3 id="调试模式"><a href="#调试模式" class="headerlink" title="调试模式"></a>调试模式</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo --debug</div></pre></td></tr></table></figure>
-<p>将详细消息记录到终端和日志<code>debug.log</code>。如果您在Hexo遇到任何问题，请尝试此操作。如果您看到错误，请<a href="https://github.com/hexojs/hexo/issues/new" target="_blank" rel="external">提出一个GitHub问题</a>。</p>
-<h3 id="静音模式"><a href="#静音模式" class="headerlink" title="静音模式"></a>静音模式</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo --silent</div></pre></td></tr></table></figure>
-<p>静音输出到终端。</p>
-<h3 id="自定义配置文件路径"><a href="#自定义配置文件路径" class="headerlink" title="自定义配置文件路径"></a>自定义配置文件路径</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo --config custom.yml</div></pre></td></tr></table></figure>
-<p>使用自定义配置文件（而不是<code>_config.yml</code>）。还接受JSON或YAML配置文件的逗号分隔列表（无空格），这些文件将文件合并为一个<code>_multiconfig.yml</code>。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo --config custom.yml，custom2.json</div></pre></td></tr></table></figure>
-<h3 id="显示草稿"><a href="#显示草稿" class="headerlink" title="显示草稿"></a>显示草稿</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo --draft</div></pre></td></tr></table></figure>
-<p>显示草稿帖子（存储在<code>source/_drafts</code>文件夹中）。</p>
-<h3 id="自定义CWD"><a href="#自定义CWD" class="headerlink" title="自定义CWD"></a>自定义CWD</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo --cwd / path / to / cwd</div></pre></td></tr></table></figure>
-<p>自定义当前工作目录的路径。</p>
-<h2 id="总结："><a href="#总结：" class="headerlink" title="总结："></a>总结：</h2><p>到此已经使用Hexo创建了自己的个人博客。<a href="https://hexo.io/themes/" target="_blank" rel="external">Click this!</a>可以选择自己的喜欢的主题进行配置。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      Hexo与github搭建个人博客
-    
-    </summary>
-    
-      <category term="hexo" scheme="http://wanghaonanlpc.github.io/categories/hexo/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="http://wanghaonanlpc.github.io/2017/02/21/hello-world%202/"/>
-    <id>http://wanghaonanlpc.github.io/2017/02/21/hello-world 2/</id>
-    <published>2017-02-21T03:02:14.000Z</published>
-    <updated>2017-02-21T03:02:14.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
-    
-    </summary>
     
     
   </entry>

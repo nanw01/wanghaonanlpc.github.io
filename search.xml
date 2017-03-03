@@ -4,31 +4,51 @@
   
     
     <entry>
-      <title><![CDATA[Lottie简介：Airbnb为本地应用程序添加动画的工具(翻译)]]></title>
-      <url>http://wanghaonanlpc.github.io/2017/03/03/Introducing-Lottie%EF%BC%88%E7%BF%BB%E8%AF%91%EF%BC%89/</url>
-      <content type="html"><![CDATA[<h2 id="简介Lottie"><a href="#简介Lottie" class="headerlink" title="简介Lottie"></a>简介Lottie</h2><blockquote>
-<p><a href="http://airbnb.design/lottie/" target="_blank" rel="external">官网地址：http://airbnb.design/lottie/</a></p>
-<p><a href="https://github.com/airbnb" target="_blank" rel="external">Airbnb Github地址：https://github.com/airbnb</a></p>
-<p>作者：<a href="http://github.com/buba447" target="_blank" rel="external">Brandon Withrow</a>，<a href="https://twitter.com/gpeal8" target="_blank" rel="external">Gabriel Peal</a>，<a href="https://twitter.com/intelligibabble" target="_blank" rel="external">Leland Richardson</a>和<a href="https://twitter.com/therealsalih?lang=en" target="_blank" rel="external">Salih Abdul-Karim</a></p>
-<p><a href="http://airbnb.design/category/behind-the-scenes/" target="_blank" rel="external">在幕后</a>  /由SALIH ABDUL-KARIM / 02.03<br><a href="http://airbnb.design/tag/animation/" target="_blank" rel="external">#ANIMATION </a><a href="http://airbnb.design/tag/design/" target="_blank" rel="external">#DESIGN </a><a href="http://airbnb.design/tag/engineering/" target="_blank" rel="external">#ENGINEERING </a><a href="http://airbnb.design/tag/motion/" target="_blank" rel="external">#MOTION </a><a href="http://airbnb.design/tag/open-source/" target="_blank" rel="external">#OPEN SOURCE </a><a href="http://airbnb.design/tag/tools/" target="_blank" rel="external">#TOOLS</a></p>
+      <title><![CDATA[Android插件化从入门到放弃]]></title>
+      <url>http://wanghaonanlpc.github.io/2017/03/03/Android%E6%8F%92%E4%BB%B6%E5%8C%96%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/</url>
+      <content type="html"><![CDATA[<blockquote>
+<p>最近研究插件化， 偶然发现此合集， 按照部分链接的文章实际简单写了些demo，受益良多， 觉得确实不错，特转载过来，给需要的人。</p>
 </blockquote>
-<h2 id="Lottie"><a href="#Lottie" class="headerlink" title="Lottie"></a>Lottie</h2><h3 id="在我们的新的开源动画工具的幕后。"><a href="#在我们的新的开源动画工具的幕后。" class="headerlink" title="在我们的新的开源动画工具的幕后。"></a>在我们的新的开源动画工具的幕后。</h3><p>在过去，为Android，iOS和React Native应用程序构建复杂的动画是一个困难和漫长的过程。你必须为每个屏幕大小添加庞大的图像文件，或者编写一千行脆弱，难以维护的代码。因此，大多数应用程序不使用动画 - 尽管它是一个强大的工具，用于交流想法和创造引人注目的用户体验。一年前，我们开始改变这一点。</p>
-<p>今天，我们很乐意介绍我们的解决方案。Lottie是一个iOS，Android和React Native库，可以实时渲染After Effects动画，并允许本机应用程序像使用静态资源一样轻松地使用动画。Lottie使用从开源的After Effects扩展名为<a href="https://github.com/bodymovin/bodymovin" target="_blank" rel="external">Bodymovin</a>导出为JSON文件的动画数据。扩展程序与JavaScript播放器捆绑在一起，可以在网络上呈现动画。自2015年2月以来，Bodymovin的创始人<a href="https://twitter.com/airnanan" target="_blank" rel="external">Hernan Torrisi</a>已经通过每月为插件添加功能和改进功能打下坚实的基础。我们的团队（<a href="http://github.com/buba447" target="_blank" rel="external">Brandon Withrow</a>的<a href="https://github.com/airbnb/lottie-ios" target="_blank" rel="external">iOS</a>，<a href="https://twitter.com/gpeal8" target="_blank" rel="external">Gabriel Peal</a>的<a href="https://github.com/airbnb/lottie-android" target="_blank" rel="external">Android</a>，</p>
-<p><img src="http://airbnb.design/wp-content/uploads/2017/02/icons.gif" alt="图标"></p>
-<p>Lottie允许工程师构建更丰富的动画，而没有重写他们的艰苦的开销。Nick Butcher <a href="https://medium.com/google-developers/animation-jump-through-861f4f5b3de4#.xlw1n2u2d" target="_blank" rel="external">跳过</a>动画，Bartek Lipinski的<a href="https://android.jlelse.eu/animatedvectordrawablecompat-3d9568727c53#.fmiujhcdj" target="_blank" rel="external">汉堡包菜单</a>和Miroslaw Stanek的<a href="http://frogermcs.github.io/twitters-like-animation-in-android-alternative/" target="_blank" rel="external">Twitter心脏</a>展示了多么困难和耗时，可以从头开始重新创建动画。与Lottie，挖掘框架参考，猜测持续时间，手动创建Bézier曲线，并重新制作动画只是一个GIF的参考将是一个过去。现在工程师可以准确地使用设计师的意图，它是如何做的。为了演示这一点，我们重新创建了他们的动画，并在我们的示例应用程序中提供了After Effects和JSON文件。</p>
-<p>我们的目标是尽可能支持尽可能多的After Effects功能，以允许比简单的图标动画更多。我们创建了一些其他例子来展示图书馆的灵活性，丰富性和深入的功能集。在示例应用程序中，还有各种不同种类的动画的源文件，包括基本线条艺术，基于字符的动画，以及具有多个角度和剪切的动态徽标动画。</p>
-<p><img src="http://airbnb.design/wp-content/uploads/2017/01/screens_1.gif" alt="screens_1"></p>
-<p>我们已经开始在几个屏幕上发布我们自己的Lottie动画，包括应用内通知，全帧动画插图和在我们的审查流程。我们计划以一种有趣而有用的方式大大扩展我们对动画的使用。</p>
-<p><img src="http://airbnb.design/wp-content/uploads/2017/01/screens_2.gif" alt="screens_2"></p>
-<h2 id="灵活高效的解决方案"><a href="#灵活高效的解决方案" class="headerlink" title="灵活高效的解决方案"></a><strong>灵活高效的解决方案</strong></h2><p>Airbnb是一家支持数百万客人和主机的全球性公司，因此拥有一个可在多个平台上播放的灵活动画格式对我们来说非常重要。有类似于Lottie的图书馆，如Marcus Eckert的<a href="http://www.marcuseckert.com/squall/" target="_blank" rel="external">Squall</a>和Facebook的<a href="https://github.com/facebookincubator/Keyframes" target="_blank" rel="external">关键帧</a>，但我们的目标略有不同。Facebook选择了一套After Effects功能来支持，因为他们主要关注反应，但我们想尽可能多地支持。对于Squall，Airbnb的设计师将它与Lottie结合使用，因为它有一个惊人的After Effects预览应用程序，它成为我们工作流程的必要部分。但是，它只支持iOS，我们的工程团队需要一个跨平台解决方案。</p>
-<p>Lottie还在其API中内置了几个功能，使其更多样化和高效。它支持通过网络加载JSON文件，这对于A / B测试很有用。它还有一个可选的缓存机制，因此经常使用的动画，如愿望列表的心，可以每次加载缓存的副本。Lottie动画可以通过使用动画进度功能的手势驱动，并且动画速度可以通过改变一个简单的值来操纵。iOS甚至支持在运行时为动画添加额外的本地UI，可用于复杂的动画过渡。</p>
-<p>除了我们迄今为止所做的所有After Effects特性和API添加之外，我们还有许多未来的想法。这些包括将视图映射到Lottie动画，控制与Lottie的视图过渡，支持<a href="http://www.battleaxe.co/rubberhose/" target="_blank" rel="external">Battle Axe的RubberHose</a>，渐变，类型和图像支持。最难的部分是选择哪些功能来处理下一个。</p>
-<p><img src="http://airbnb.design/wp-content/uploads/2017/01/hardware.png" alt="硬件"></p>
-<h2 id="建筑社区"><a href="#建筑社区" class="headerlink" title="建筑社区"></a><strong>建筑社区</strong></h2><p>发布一些东西作为开源不仅仅是把它放在那里供公众使用。它是一个桥梁，连接人和创建社区。随着我们越来越接近通过GitHub向设计师和工程师发布Lottie，我们也希望与动画人员保持联系。</p>
-<p>我们受到了<a href="http://9-squares.tumblr.com/" target="_blank" rel="external">9 Squares</a>，<a href="https://motioncorpse.tumblr.com/" target="_blank" rel="external">Motion Corpse</a>和<a href="https://animography.net/products/mobilo" target="_blank" rel="external">Animography</a>创造的<a href="https://animography.net/products/mobilo" target="_blank" rel="external">社区的启发</a>。所有这三个人都聚集了来自世界各地的人，否则他们永远不会一起工作，在公共动画项目上合作。这些项目需要几个月的工作，很多组织和各自的团队争吵，但他们无疑为整个动画社会提供巨大的价值。运动公司和动画公开共享After Effects源文件，它提供了大量的洞察人们如何工作。</p>
-<p>在他们的合作领导下，我们接触了所有三个团队，为我们的示例应用程序贡献动画。我们已经包括了由JR Canest创建的Motion Corpse的动画，来自9 Squares项目的Al Boardman的方块之一，以及使用Animography的Mobilo动画字体的动画键盘，其中包含超过二十个艺术家的作品。我们希望这些动画社区与强大的工程社群的合并将产生一些特别的东西。</p>
-<p><img src="http://airbnb.design/wp-content/uploads/2017/01/community.gif" alt="社区">我们很想听听你如何使用Lottie - 无论你是一个设计师，动画师或工程师。欢迎随时通过lottie@airbnb.com与您的想法，反馈和见解联系。我们很高兴看到当他们开始以我们从未想象的方式使用Lottie时，世界上的社区会做什么。</p>
-<h3 id="下载Bodymovin，Lottie-iOS，Android和React-Native。"><a href="#下载Bodymovin，Lottie-iOS，Android和React-Native。" class="headerlink" title="下载Bodymovin，Lottie iOS，Android和React Native。"></a>下载<a href="https://github.com/bodymovin/bodymovin" target="_blank" rel="external">Bodymovin</a>，Lottie <a href="https://github.com/airbnb/lottie-ios" target="_blank" rel="external">iOS</a>，<a href="https://github.com/airbnb/lottie-android" target="_blank" rel="external">Android</a>和<a href="https://github.com/airbnb/lottie-react-native" target="_blank" rel="external">React Native</a>。</h3><p>本文由<a href="http://github.com/buba447" target="_blank" rel="external">Brandon Withrow</a>，  <a href="https://twitter.com/gpeal8" target="_blank" rel="external">Gabriel Peal</a>  和  <a href="http://airbnb.design/lottie/" target="_blank" rel="external">Salih Abdul-Karim](https://twitter.com/therealsalih?lang=en)共同撰写   。 </a></p>
+<p>插件化涉及的东西很多，所以我们需要多个维度去学习。大概分为5个部分：预备知识、入门、进阶、系列、类库。一步一步深入了解插件的原理。本专栏会不定时更新相关内容，请留意更新的消息。请加入QQ群：149581646.会统一通知最新的文章。<br>Posted2016-03-16<br>by Jomeslu.</p>
+<p><strong>基础</strong><br><a href="https://www.ibm.com/developerworks/cn/java/j-lo-classloader/" target="_blank" rel="external">1.Java 类加载器</a><br>类加载器（class loader）是 Java中的一个很重要的概念。类加载器负责加载 Java 类的字节代码到 Java 虚拟机中。本文首先详细介绍了 Java 类加载器的基本概念，包括代理模式、加载类的具体过程和线程上下文类加载器等，接着介绍如何开发自己的类加载器，最后介绍了类加载器在 Web 容器和 OSGi中的应用。</p>
+<p><a href="https://github.com/JustinSDK/JavaSE6Tutorial/blob/master/docs/CH16.md" target="_blank" rel="external">2.反射原理</a><br>Java 提供的反射機制允許您於執行時期動態載入類別、檢視類別資訊、生成物件或操作生成的物件，要舉反射機制的一個應用實例，就是在整合式開發環境中所提供的方法提示或是類別檢視工具，另外像 JSP 中的 JavaBean 自動收集請求資訊也使用到反射，而一些軟體開發框架（Framework）也常見到反射機制的使用，以達到動態載入使用者自訂類別的目的。</p>
+<p><a href="http://www.jianshu.com/p/6f6bb2f0ece9" target="_blank" rel="external">3.代理模式及Java实现动态代理</a><br>定义：给某个对象提供一个代理对象，并由代理对象控制对于原对象的访问，即客户不直接操控原对象，而是通过代理对象间接地操控原对象。</p>
+<p><strong>入门</strong><br><a href="http://blog.csdn.net/u013478336/article/details/50734108" target="_blank" rel="external">1.Android动态加载dex技术初探</a><br>Android使用Dalvik虚拟机加载可执行程序，所以不能直接加载基于class的jar，而是需要将class转化为dex字节码，从而执行代码。优化后的字节码文件可以存在一个<em>.jar中，只要其内部存放的是</em>.dex即可使用。</p>
+<p><a href="http://104.236.134.90/2016/02/02/Android%E6%8F%92%E4%BB%B6%E5%8C%96%E5%9F%BA%E7%A1%80/" target="_blank" rel="external">2.Android插件化入门</a><br>开发者将插件代码封装成Jar或者APK。宿主下载或者从本地加载Jar或者APK到宿主中。将宿主调用插件中的算法或者Android特定的Class（如Activity）</p>
+<p><a href="http://blog.csdn.net/u010687392/article/details/47121729?hmsr=toutiao.io&amp;utm_medium=toutiao.io&amp;utm_source=toutiao.io" target="_blank" rel="external">3.插件化开发—动态加载技术加载已安装和未安装的apk</a><br>动态加载技术就是使用类加载器加载相应的apk、dex、jar（必须含有dex文件），再通过反射获得该apk、dex、jar内部的资源（class、图片、color等等）进而供宿主app使用。</p>
+<p><a href="https://blog.tingyun.com/web/article/detail/166" target="_blank" rel="external">4.Android动态加载技术三个关键问题详解</a><br>动态加载技术（也叫插件化技术）在技术驱动型的公司中扮演着相当重要的角色，当项目越来越庞大的时候，需要通过插件化来减轻应用的内存和CPU占用，还可以实现热插拔，即在不发布新版本的情况下更新某些模块。</p>
+<p><strong>进阶</strong><br><a href="http://mp.weixin.qq.com/s?__biz=MzAwMTcwNTE0NA==&amp;mid=400217391&amp;idx=1&amp;sn=86181541ce0164156dfab135ed99bb5c&amp;scene=0&amp;key=b410d3164f5f798e61a5d4afb759fa38371c8b119384c6163a30c28163b4d4d5f59399f2400800ec842f1d0e0ffb84af&amp;ascene=0&amp;uin=MjExMjQ&amp;pass_ticket=Nt5Jaa28jjFxcQO9o+vQiXX+0iXG5DlZlHNW97Fk1Ew=" target="_blank" rel="external">1.携程Android App插件化和动态加载实践</a><br>携程Android App的插件化和动态加载框架已上线半年，经历了初期的探索和持续的打磨优化，新框架和工程配置经受住了生产实践的考验。本文将详细介绍Android平台插件式开发和动态加载技术的原理和实现细节，回顾携程Android App的架构演化过程，期望我们的经验能帮助到更多的Android工程师。</p>
+<p><a href="http://blog.csdn.net/hkxxx/article/details/42194387" target="_blank" rel="external">2.动态加载APK原理分享</a><br>被加载的apk称之为插件，因为机制类似于生物学的”寄生”，加载了插件的应用也被称为宿主。 往往不是所有的apk都可作为插件被加载，往往需要遵循一定的”开发规范”，还需要插件项目引入某种api类库，业界通常都是这么做的。</p>
+<p><a href="http://www.cnblogs.com/coding-way/p/4669591.html" target="_blank" rel="external">3.Android插件化的一种实现</a><br>Android的插件化已经是老生常谈的话题了，插件化的好处有很多：解除代码耦合，插件支持热插拔，静默升级，从根本上解决65K属性和方法的bug等等。下面给大家介绍一下我们正在用的差价化框架。本片主要以类图的方式向大家介绍插件话框架的实现。</p>
+<p><a href="http://mogu.io/117-117" target="_blank" rel="external">4.蘑菇街 App 的组件化之路</a><br>随着我街业务的蓬勃发展，产品和运营随时上新功能新活动的需求越来越强烈，经常可以听到“有个功能我想周x上，行不行”。行么？当然是不行啦，上新功能得发新版本啊，到时候费时费力打乱开发节奏不说，覆盖率也是个问题。</p>
+<p><a href="http://www.codekk.com/open-source-project-analysis/detail/Android/FFish/DynamicLoadApk%20%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90?hmsr=toutiao.io&amp;utm_medium=toutiao.io&amp;utm_source=toutiao.io" target="_blank" rel="external">5.DynamicLoadApk 源码解析</a><br>DynamicLoadApk 是一个开源的 Android 插件化框架。插件化的优点包括：(1) 模块解耦，(2) 动态升级，(3) 高效并行开发(编译速度更快) (4) 按需加载，内存占用更低等等DynamicLoadApk 提供了 3 种开发方式，让开发者在无需理解其工作原理的情况下快速的集成插件化功能。</p>
+<p><a href="http://blog.csdn.net/singwhatiwanna/article/details/22597587" target="_blank" rel="external">6.Android apk动态加载机制的研究</a><br>问题是这样的：我们知道，apk必须安装才能运行，如果不安装要是也能运行该多好啊，事实上，这不是完全不可能的，尽管它比较难实现。在理论层面上，我们可以通过一个宿主程序来运行一些未安装的apk，当然，实践层面上也能实现，不过这对未安装的apk有要求。我们的想法是这样的，首先要明白apk未安装是不能被直接调起来.</p>
+<p><a href="http://tech.meituan.com/mt-android-auto-split-dex.html" target="_blank" rel="external">7.美团Android DEX自动拆包及动态加载简介</a><br>作为一个android开发者，在开发应用时，随着业务规模发展到一定程度，不断地加入新功能、添加新的类库，代码在急剧的膨胀，相应的apk包的大小也急剧增加， 那么终有一天，你会不幸遇到这个错误.</p>
+<p><a href="http://mp.weixin.qq.com/s?__biz=MzAwOTE0ODEwMQ==&amp;mid=401731625&amp;idx=1&amp;sn=9bf2bacfbba43ba9dc7b2e854b64e66c&amp;scene=23&amp;srcid=1231ni0s2Y0OMfYSoNhkkJ47#rd&amp;ADUIN=289832127&amp;ADSESSION=1451551778&amp;ADTAG=CLIENT.QQ.5425_.0&amp;ADPUBNO=26509" target="_blank" rel="external">8.途牛原创|途牛Android App的插件实现</a><br>途牛的插件化是基于dynamic-load-apk（github）实现的。定义了宿主和插件的通信方式，使得两者能够互起对方的页面，调用彼此的功能。同时对activity的启动方式singletask等进行了模式实现，并增加了对Service的支持等。总之使得插件开发最大限度的保持着原有的Android开发习惯。</p>
+<p><a href="http://blog.csdn.net/singwhatiwanna/article/details/23387079" target="_blank" rel="external">9. Android apk资源加载和activity生命周期管理</a><br>博主分析了Android中apk的动态加载机制，并在文章的最后指出需要解决的两个复杂问题：资源的访问和activity生命周期的管理，而本文将会分析这两个复杂问题的解决方法。</p>
+<p><a href="http://blog.csdn.net/singwhatiwanna/article/details/39937639" target="_blank" rel="external">10.APK动态加载框架（DL）解析</a><br>首先要说的是动态加载技术（或者说插件化）在技术驱动型的公司中扮演这相当重要的角色，当项目越来越庞大的时候，需要通过插件化来减轻应用的内存和cpu占用，还可以实现热插拔，即在不发布新版本的情况下更新某些模块。</p>
+<p><strong>系列</strong><br><a href="https://segmentfault.com/a/1190000004062866" target="_blank" rel="external">1.Kaedea—Android动态加载技术 简单易懂的介绍</a><br>我们很早开始就在Android项目中采用了动态加载技术，主要目的是为了达到让用户不用重新安装APK就能升级应用的功能（特别是 SDK项目），这样一来不但可以大大提高应用新版本的覆盖率，也减少了服务器对旧版本接口兼容的压力，同时如果也可以快速修复一些线上的BUG。</p>
+<p><a href="https://segmentfault.com/a/1190000004062880" target="_blank" rel="external">2.Kaedea—Android动态加载基础 ClassLoader的工作机制</a><br>早期使用过Eclipse等Java编写的软件的同学可能比较熟悉，Eclipse可以加载许多第三方的插件（或者叫扩展），这就是动态加载。这些插件大多是一些Jar包，而使用插件其实就是动态加载Jar包里的Class进行工作。</p>
+<p><a href="https://segmentfault.com/a/1190000004062899" target="_blank" rel="external">3.Kaedea—Android动态加载补充 加载SD卡的SO库</a><br>Android中JNI的使用其实就包含了动态加载，APP运行时动态加载.so库并通过JNI调用其封装好的方法。后者一般是使用NDK工具从C/C++代码编译而成，运行在Native层，效率会比执行在虚拟机的Java代码高很多，所以Android中经常通过动态加载.so库来完成一些对性能比较有需求的工作（比如T9搜索、或者Bitmap的解码、图片高斯模糊处理等）。</p>
+<p><a href="https://segmentfault.com/a/1190000004062952" target="_blank" rel="external">4.Kaedea—Android动态加载入门 简单加载模式</a><br>Java程序中，JVM虚拟机是通过类加载器ClassLoader加载.jar文件里面的类的。Android也类似，不过Android用的是Dalvik/ART虚拟机，不是JVM，也不能直接加载.jar文件，而是加载dex文件。</p>
+<p><a href="https://segmentfault.com/a/1190000004062972" target="_blank" rel="external">5.Kaedea—Android动态加载进阶 代理Activity模式</a><br>简单模式中，使用ClassLoader加载外部的Dex或Apk文件，可以加载一些本地APP不存在的类，从而执行一些新的代码逻辑。但是使用这种方法却不能直接启动插件里的Activity。</p>
+<p><a href="https://segmentfault.com/a/1190000004077469" target="_blank" rel="external">6.Kaedea—Android动态加载黑科技 动态创建Activity模式</a><br>还记得我们在代理Activity模式里谈到启动插件APK里的Activity的两个难题吗，由于插件里的Activity没在主项目的Manifest里面注册，所以无法经历系统Framework层级的一系列初始化过程，最终导致获得的Activity实例并没有生命周期和无法使用res资源。</p>
+<p><a href="http://blog.csdn.net/jiangwei0910410003/article/details/17679823" target="_blank" rel="external">7.尼古拉斯—插件开发基础篇：动态加载技术解读</a><br>在目前的软硬件环境下，Native App与Web App在用户体验上有着明显的优势，但在实际项目中有些会因为业务的频繁变更而频繁的升级客户端，造成较差的用户体验，而这也恰恰是Web App的优势。本文对网上Android动态加载jar的资料进行梳理和实践在这里与大家一起分享，试图改善频繁升级这一弊病。</p>
+<p><a href="http://blog.csdn.net/jiangwei0910410003/article/details/41384667" target="_blank" rel="external">8.尼古拉斯—插件开发开篇：类加载器分析</a><br>这篇文章主要介绍了Android中主要的两个类加载器：PathClassLoader和DexClassLoader,他们的区别，联系，用法等问题，以及我们在制作插件的过程中会遇到哪些常见的问题。这篇文章也是后续两篇文章的基础，因为如果不了解这两个类的话，我们将无法进行后续的操作。</p>
+<p><a href="http://blog.csdn.net/jiangwei0910410003/article/details/47679843" target="_blank" rel="external">9.尼古拉斯—插件开发中篇：资源加载问题(换肤原理解析)</a><br>这篇文章主要通过现在一些应用自带的换肤技术的解读来看看，在开发插件的过程中如何解决一些资源加载上的问题，这个问题为何要单独拿出来解释，就是因为他涉及的知识很多，也是后面一篇文章的基础，我们在需要加载插件中的资源文件的时候。</p>
+<p><a href="http://blog.csdn.net/jiangwei0910410003/article/details/48104455" target="_blank" rel="external">10.尼古拉斯—插件开发终极篇：动态加载Activity(免安装运行程序)</a><br>这篇文章主要是讲解了如何加载插件中的Activity。从而实现免安装运行程序，同时这篇文章也是对前三篇文章知识的综合使用。下载很多应用都会使用到插件技术，因为包的大小和一些功能的优先级来决定哪些模块可以制作成插件。</p>
+<p><a href="http://weishu.me/2016/01/28/understand-plugin-framework-overview/" target="_blank" rel="external">11.Weishu—Android插件化原理解析——概要</a><br>类的加载可以使用Java的ClassLoader机制，但是对于Android来说，并不是说类加载进来就可以用了，很多组件都是有“生命”的；因此对于这些有血有肉的类，必须给它们注入活力，也就是所谓的组件生命周期管理.</p>
+<p><a href="http://weishu.me/2016/01/28/understand-plugin-framework-proxy-hook/" target="_blank" rel="external">12.Weishu—Android插件化原理解析——Hook机制之动态代理</a><br>使用代理机制进行API Hook进而达到方法增强是框架的常用手段，比如J2EE框架Spring通过动态代理优雅地实现了AOP编程，极大地提升了Web开发效率；同样，插件框架也广泛使用了代理机制来增强系统API从而达到插件化的目的.</p>
+<p><a href="http://weishu.me/2016/02/16/understand-plugin-framework-binder-hook/" target="_blank" rel="external">13.Weishu—Android插件化原理解析——Hook机制之Binder Hook</a><br>Android系统通过Binder机制给应用程序提供了一系列的系统服务，诸如ActivityManagerService，ClipboardManager， AudioManager等；这些广泛存在系统服务给应用程序提供了诸如任务管理，音频，视频等异常强大的功能。</p>
+<p><a href="http://weishu.me/2016/03/07/understand-plugin-framework-ams-pms-hook/" target="_blank" rel="external">14.Weishu—Android 插件化原理解析——Hook机制之AMS&amp;PMS</a><br>在前面的文章中我们介绍了DroidPlugin的Hook机制，也就是代理方式和Binder Hook；插件框架通过AOP实现了插件使用和开发的透明性。在讲述DroidPlugin如何实现四大组件的插件化之前，有必要说明一下它对AMS以及PMS的Hook方式。</p>
+<p><a href="http://weishu.me/2016/03/21/understand-plugin-framework-activity-management/" target="_blank" rel="external">15.Weishu—Android 插件化原理解析——Activity生命周期管理</a><br>之前的 Android插件化原理解析 系列文章揭开了Hook机制的神秘面纱，现在我们手握倚天屠龙，那么如何通过这种技术完成插件化方案呢？具体来说，插件中的Activity，Service等组件如何在Android系统上运行起来？</p>
+<p><a href="http://weishu.me/2016/04/05/understand-plugin-framework-classloader/" target="_blank" rel="external">16.Weishu—Android 插件化原理解析——插件加载机制</a><br>上文 Activity生命周期管理 中我们地完成了『启动没有在AndroidManifest.xml中显式声明的Activity』的任务；通过Hook AMS和拦截ActivityThread中H类对于组件调度我们成功地绕过了AndroidMAnifest.xml的限制。</p>
+<p><a href="http://weishu.me/2016/04/12/understand-plugin-framework-receiver/" target="_blank" rel="external">17.Weishu—Android插件化原理解析——广播的管理</a><br>在Activity生命周期管理 以及 插件加载机制 中我们详细讲述了插件化过程中对于Activity组件的处理方式，为了实现Activity的插件化我们付出了相当多的努力；那么Android系统的其他组件，比如BroadcastReceiver，Service还有ContentProvider，它们又该如何处理呢？</p>
+<p><a href="http://weishu.me/2016/05/11/understand-plugin-framework-service/" target="_blank" rel="external">18.Weishu—Android 插件化原理解析——Service的插件化</a><br>在 Activity生命周期管理 以及 广播的管理 中我们详细探讨了Android系统中的Activity、BroadcastReceiver组件的工作原理以及它们的插件化方案，相信读者已经对Android Framework和插件化技术有了一定的了解；</p>
+<p><strong>类库</strong><br><a href="https://github.com/Qihoo360/DroidPlugin" target="_blank" rel="external">1.DroidPlugin</a><br>是360手机助手在Android系统上实现了一种新的插件机制<br><a href="https://github.com/limpoxe/Android-Plugin-Framework" target="_blank" rel="external">2.Android-Plugin-Framework</a><br>此项目是Android插件开发框架完整源码及示例。用来通过动态加载的方式在宿主程序中运行插件APK。<br><a href="https://github.com/wequick/Small" target="_blank" rel="external">3.Small</a><br>世界那么大，组件那么小。Small，做最轻巧的跨平台插件化框架。里面有很详细的文档<br><a href="https://github.com/singwhatiwanna/dynamic-load-apk" target="_blank" rel="external">4.dynamic-load-apk</a><br>Android 使用动态加载框架DL进行插件化开发<br><a href="https://github.com/mmin18/AndroidDynamicLoader" target="_blank" rel="external">5.AndroidDynamicLoader</a><br>Android 动态加载框架，他不是用代理 Activity 的方式实现而是用 Fragment 以及 Schema 的方式实现<br><a href="https://github.com/CtripMobile/DynamicAPK" target="_blank" rel="external">6.DynamicAPK</a><br>实现Android App多apk插件化和动态加载，支持资源分包和热修复.携程App的插件化和动态加载框架.<br><a href="https://github.com/bunnyblue/ACDD/blob/master/README-Zh.md" target="_blank" rel="external">7.ACDD</a><br>非代理Android动态部署框架<br><a href="https://github.com/houkx/android-pluginmgr" target="_blank" rel="external">8.android-pluginmgr</a><br>不需要插件规范的apk动态加载框架。</p>
+<p><strong>参考视频</strong><br><a href="http://www.infoq.com/cn/presentations/the-realization-principle-and-application-of-droidplugin" target="_blank" rel="external">1.DroidPlugin的实现原理及其应用</a><br>Droid Plugin是360手机助手在2015年初研发的一个全新的基于Android平台的插件机制.<br><a href="http://v.youku.com/v_show/id_XNTMzMjYzMzM2.html" target="_blank" rel="external">2.android插件化及动态部署</a><br>阿里技术沙龙第十六期《android插件化及动态部署》视频</p>
+<p><strong>最近期待：</strong></p>
+<p><img src="https://ww3.sinaimg.cn/large/006tNbRwly1fda1oxw66rj31hc0u0t96.jpg" alt=""></p>
 ]]></content>
       
         <categories>
@@ -42,13 +62,64 @@
             
             <tag> android </tag>
             
-            <tag> ui </tag>
-            
-            <tag> 开源 </tag>
-            
-            <tag> Airbnb </tag>
+            <tag> 插件化 </tag>
             
         </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Android 组件化和插件化开发]]></title>
+      <url>http://wanghaonanlpc.github.io/2017/03/03/Android-%E7%BB%84%E4%BB%B6%E5%8C%96%E5%92%8C%E6%8F%92%E4%BB%B6%E5%8C%96%E5%BC%80%E5%8F%91/</url>
+      <content type="html"><![CDATA[<p><img src="https://ww4.sinaimg.cn/large/006tNbRwly1fda139k6jgj30fa080mxf.jpg" alt=""></p>
+<p>组件化开发就是将一个app分成多个模块，每个模块都是一个组件（Module），开发的过程中我们可以让这些组件相互依赖或者单独调试部分组件等，但是最终发布的时候是将这些组件合并统一成一个apk，这就是组件化开发。</p>
+<p>插件化开发和组件化开发略有不用，插件化开发时将整个app拆分成很多模块，这些模块包括一个宿主和多个插件，每个模块都是一个apk（组件化的每个模块是个lib），最终打包的时候将宿主apk和插件apk分开或者联合打包。</p>
+<h2 id="组件化"><a href="#组件化" class="headerlink" title="组件化"></a>组件化</h2><h4 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h4><p>android工程的组件一般分为两种，lib组件和application组件</p>
+<p>application组件是指该组件本身就可以运行并打包成apk</p>
+<p>lib组件是指该组件属于app的一部分，可以供其它组件使用但是本身不能打包成apk</p>
+<h4 id="为什么要有组件化？"><a href="#为什么要有组件化？" class="headerlink" title="为什么要有组件化？"></a>为什么要有组件化？</h4><p>加入一个app工程只有一个组件，随着app业务的壮大模块越来越多，代码量超10万是很正常的，这个时候我们会遇到以下问题</p>
+<ul>
+<li>稍微改动一个模块的一点代码都要编译整个工程，耗时耗力</li>
+<li>公共资源、业务、模块混在一起耦合度太高</li>
+<li>不方便测试</li>
+</ul>
+<h4 id="组件化正确的姿势"><a href="#组件化正确的姿势" class="headerlink" title="组件化正确的姿势"></a>组件化正确的姿势</h4><p>既然选择使用组件化，那么如何正确的使用它呢？这里给出一种解决方案，如果你有更好的方案，欢迎交流。</p>
+<p>我们创建了一个app工程project，默认里面有一个app组件，这个app组件是可以直接运行的。</p>
+<p>怎么划分组件呢？</p>
+<ul>
+<li>1.新建一个lib组件，new Module—&gt;Andorid Library，取名BaseUtilLib，我们将所有的公共的工具类、网络分装等类放在其中</li>
+<li>2.新建一个lib组件，BaseReslLib，我们将所有的公共资源、drawable、String等类放在其中</li>
+<li>3.将app按照自己的规则划分成多个模块，比如按业务按地区等都可以</li>
+<li>4.逐一开发某个模块，比如Test模块，新建一个TestApp组件，TestApp组件引用[1][2]步骤的BaseUtilLib和BaseReslLib，在TestApp组件里添加并引用TestLib组件。在TestLib的activity中写代码写业务逻辑，TestApp只负责跳转和测试</li>
+<li>5.将工程中的所有类似TestLib组件（不是TestApp组件）引入到工程的app中<br>看着有点乱，整理出一张图<br><img src="http://img2.tuicool.com/NbQZV3R.png!web" alt="img"></li>
+</ul>
+<p>这样的好处有</p>
+<p>每个模块可以独立开发编译运行</p>
+<p>开发单个模块时可以共享资源和工具类</p>
+<p>可以针对单个模块测试</p>
+<p><a href="https://github.com/halibobo/ModuleBuild" target="_blank" rel="external">demo地址：https://github.com/halibobo/ModuleBuild</a></p>
+<h2 id="插件化"><a href="#插件化" class="headerlink" title="插件化"></a>插件化</h2><h4 id="为什么有插件化？"><a href="#为什么有插件化？" class="headerlink" title="为什么有插件化？"></a>为什么有插件化？</h4><p>有了组件化，为什么还要用插件化呢？插件化开发总的来说有以下几点好处（不同插件框架不一样）：</p>
+<ul>
+<li>宿主和插件分开编译</li>
+<li>并发开发</li>
+<li>动态更新插件</li>
+<li>按需下载模块</li>
+<li>方法数或变量数爆棚</li>
+</ul>
+<h4 id="处境"><a href="#处境" class="headerlink" title="处境"></a>处境</h4><p>开放出来的插件化开发框架比较多，他们各自都有自己的优势和和不足，实现的原理也有差别下面列</p>
+<h4 id="开源的插件化框架"><a href="#开源的插件化框架" class="headerlink" title="开源的插件化框架"></a>开源的插件化框架</h4><ul>
+<li><a href="https://github.com/Qihoo360/DroidPlugin" target="_blank" rel="external">Qihoo360/DroidPlugin</a></li>
+<li><a href="https://github.com/CtripMobile/DynamicAPK" target="_blank" rel="external">CtripMobile/DynamicAPK</a></li>
+<li><a href="https://github.com/mmin18/AndroidDynamicLoader" target="_blank" rel="external">mmin18/AndroidDynamicLoader</a></li>
+<li><a href="https://github.com/singwhatiwanna/dynamic-load-apk" target="_blank" rel="external">singwhatiwanna/dynamic-load-apk</a></li>
+<li><a href="https://github.com/houkx/android-pluginmgr" target="_blank" rel="external">houkx/android-pluginmgr</a></li>
+<li><a href="https://github.com/bunnyblue/ACDD" target="_blank" rel="external">bunnyblue/ACDD</a></li>
+<li><a href="https://github.com/wequick/Small" target="_blank" rel="external">wequick/Small</a></li>
+<li>……</li>
+</ul>
+<p>目前开源的这几个框架有宿主和插件分离的也有融合在一起的，每个框架的详细介绍和demo在github里都可以查看到。插件化demo运行起来比较简单，但是真正将它用到实际项目中还是要考虑很多小细节的，目前我也正处于研究阶段。</p>
+]]></content>
+      
         
     </entry>
     
@@ -74,6 +145,55 @@
 <p><img src="http://airbnb.design/wp-content/uploads/2017/01/community.gif" alt="community">We’d love to hear how you’re using Lottie — no matter if you’re a designer, animator, or engineer. Feel free to reach out to us directly at lottie@airbnb.com with your thoughts, feedback, and insights. We’re excited to see what the community around the world will do when they begin to use Lottie in ways we never imagined.</p>
 <h3 id="Download-Bodymovin-Lottie-iOS-Android-and-React-Native"><a href="#Download-Bodymovin-Lottie-iOS-Android-and-React-Native" class="headerlink" title="Download Bodymovin, Lottie iOS, Android and React Native."></a>Download <a href="https://github.com/bodymovin/bodymovin" target="_blank" rel="external">Bodymovin</a>, Lottie <a href="https://github.com/airbnb/lottie-ios" target="_blank" rel="external">iOS</a>, <a href="https://github.com/airbnb/lottie-android" target="_blank" rel="external">Android</a> and <a href="https://github.com/airbnb/lottie-react-native" target="_blank" rel="external">React Native</a>.</h3><p>This article was co-written by  <a href="http://github.com/buba447" target="_blank" rel="external">Brandon Withrow</a>,  <a href="https://twitter.com/gpeal8" target="_blank" rel="external">Gabriel Peal</a> and <a href="https://twitter.com/therealsalih?lang=en" target="_blank" rel="external">Salih Abdul-Karim</a>.</p>
 <p><img src="http://airbnb.design/lottie/" alt="Salih Abdul-Karim](http://airbnb.design/wp-content/uploads/2017/01/SalihAbdul-Karim-profile.jpg) Salih Abdul-Karim is an Experience and Motion Designer at Airbnb."></p>
+]]></content>
+      
+        <categories>
+            
+            <category> 安卓 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> android </tag>
+            
+            <tag> ui </tag>
+            
+            <tag> 开源 </tag>
+            
+            <tag> Airbnb </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Lottie简介：Airbnb为本地应用程序添加动画的工具(翻译)]]></title>
+      <url>http://wanghaonanlpc.github.io/2017/03/03/Introducing-Lottie%EF%BC%88%E7%BF%BB%E8%AF%91%EF%BC%89/</url>
+      <content type="html"><![CDATA[<h2 id="简介Lottie"><a href="#简介Lottie" class="headerlink" title="简介Lottie"></a>简介Lottie</h2><blockquote>
+<p><a href="http://airbnb.design/lottie/" target="_blank" rel="external">官网地址：http://airbnb.design/lottie/</a></p>
+<p><a href="https://github.com/airbnb" target="_blank" rel="external">Airbnb Github地址：https://github.com/airbnb</a></p>
+<p>作者：<a href="http://github.com/buba447" target="_blank" rel="external">Brandon Withrow</a>，<a href="https://twitter.com/gpeal8" target="_blank" rel="external">Gabriel Peal</a>，<a href="https://twitter.com/intelligibabble" target="_blank" rel="external">Leland Richardson</a>和<a href="https://twitter.com/therealsalih?lang=en" target="_blank" rel="external">Salih Abdul-Karim</a></p>
+<p><a href="http://airbnb.design/category/behind-the-scenes/" target="_blank" rel="external">在幕后</a>  /由SALIH ABDUL-KARIM / 02.03<br><a href="http://airbnb.design/tag/animation/" target="_blank" rel="external">#ANIMATION </a><a href="http://airbnb.design/tag/design/" target="_blank" rel="external">#DESIGN </a><a href="http://airbnb.design/tag/engineering/" target="_blank" rel="external">#ENGINEERING </a><a href="http://airbnb.design/tag/motion/" target="_blank" rel="external">#MOTION </a><a href="http://airbnb.design/tag/open-source/" target="_blank" rel="external">#OPEN SOURCE </a><a href="http://airbnb.design/tag/tools/" target="_blank" rel="external">#TOOLS</a></p>
+</blockquote>
+<h2 id="Lottie"><a href="#Lottie" class="headerlink" title="Lottie"></a>Lottie</h2><h3 id="在我们的新的开源动画工具的幕后。"><a href="#在我们的新的开源动画工具的幕后。" class="headerlink" title="在我们的新的开源动画工具的幕后。"></a>在我们的新的开源动画工具的幕后。</h3><p>在过去，为Android，iOS和React Native应用程序构建复杂的动画是一个困难和漫长的过程。你必须为每个屏幕大小添加庞大的图像文件，或者编写一千行脆弱，难以维护的代码。因此，大多数应用程序不使用动画 - 尽管它是一个强大的工具，用于交流想法和创造引人注目的用户体验。一年前，我们开始改变这一点。</p>
+<p>今天，我们很乐意介绍我们的解决方案。Lottie是一个iOS，Android和React Native库，可以实时渲染After Effects动画，并允许本机应用程序像使用静态资源一样轻松地使用动画。Lottie使用从开源的After Effects扩展名为<a href="https://github.com/bodymovin/bodymovin" target="_blank" rel="external">Bodymovin</a>导出为JSON文件的动画数据。扩展程序与JavaScript播放器捆绑在一起，可以在网络上呈现动画。自2015年2月以来，Bodymovin的创始人<a href="https://twitter.com/airnanan" target="_blank" rel="external">Hernan Torrisi</a>已经通过每月为插件添加功能和改进功能打下坚实的基础。我们的团队（<a href="http://github.com/buba447" target="_blank" rel="external">Brandon Withrow</a>的<a href="https://github.com/airbnb/lottie-ios" target="_blank" rel="external">iOS</a>，<a href="https://twitter.com/gpeal8" target="_blank" rel="external">Gabriel Peal</a>的<a href="https://github.com/airbnb/lottie-android" target="_blank" rel="external">Android</a>，</p>
+<p><img src="http://airbnb.design/wp-content/uploads/2017/02/icons.gif" alt="图标"></p>
+<p>Lottie允许工程师构建更丰富的动画，而没有重写他们的艰苦的开销。Nick Butcher <a href="https://medium.com/google-developers/animation-jump-through-861f4f5b3de4#.xlw1n2u2d" target="_blank" rel="external">跳过</a>动画，Bartek Lipinski的<a href="https://android.jlelse.eu/animatedvectordrawablecompat-3d9568727c53#.fmiujhcdj" target="_blank" rel="external">汉堡包菜单</a>和Miroslaw Stanek的<a href="http://frogermcs.github.io/twitters-like-animation-in-android-alternative/" target="_blank" rel="external">Twitter心脏</a>展示了多么困难和耗时，可以从头开始重新创建动画。与Lottie，挖掘框架参考，猜测持续时间，手动创建Bézier曲线，并重新制作动画只是一个GIF的参考将是一个过去。现在工程师可以准确地使用设计师的意图，它是如何做的。为了演示这一点，我们重新创建了他们的动画，并在我们的示例应用程序中提供了After Effects和JSON文件。</p>
+<p>我们的目标是尽可能支持尽可能多的After Effects功能，以允许比简单的图标动画更多。我们创建了一些其他例子来展示图书馆的灵活性，丰富性和深入的功能集。在示例应用程序中，还有各种不同种类的动画的源文件，包括基本线条艺术，基于字符的动画，以及具有多个角度和剪切的动态徽标动画。</p>
+<p><img src="http://airbnb.design/wp-content/uploads/2017/01/screens_1.gif" alt="screens_1"></p>
+<p>我们已经开始在几个屏幕上发布我们自己的Lottie动画，包括应用内通知，全帧动画插图和在我们的审查流程。我们计划以一种有趣而有用的方式大大扩展我们对动画的使用。</p>
+<p><img src="http://airbnb.design/wp-content/uploads/2017/01/screens_2.gif" alt="screens_2"></p>
+<h2 id="灵活高效的解决方案"><a href="#灵活高效的解决方案" class="headerlink" title="灵活高效的解决方案"></a><strong>灵活高效的解决方案</strong></h2><p>Airbnb是一家支持数百万客人和主机的全球性公司，因此拥有一个可在多个平台上播放的灵活动画格式对我们来说非常重要。有类似于Lottie的图书馆，如Marcus Eckert的<a href="http://www.marcuseckert.com/squall/" target="_blank" rel="external">Squall</a>和Facebook的<a href="https://github.com/facebookincubator/Keyframes" target="_blank" rel="external">关键帧</a>，但我们的目标略有不同。Facebook选择了一套After Effects功能来支持，因为他们主要关注反应，但我们想尽可能多地支持。对于Squall，Airbnb的设计师将它与Lottie结合使用，因为它有一个惊人的After Effects预览应用程序，它成为我们工作流程的必要部分。但是，它只支持iOS，我们的工程团队需要一个跨平台解决方案。</p>
+<p>Lottie还在其API中内置了几个功能，使其更多样化和高效。它支持通过网络加载JSON文件，这对于A / B测试很有用。它还有一个可选的缓存机制，因此经常使用的动画，如愿望列表的心，可以每次加载缓存的副本。Lottie动画可以通过使用动画进度功能的手势驱动，并且动画速度可以通过改变一个简单的值来操纵。iOS甚至支持在运行时为动画添加额外的本地UI，可用于复杂的动画过渡。</p>
+<p>除了我们迄今为止所做的所有After Effects特性和API添加之外，我们还有许多未来的想法。这些包括将视图映射到Lottie动画，控制与Lottie的视图过渡，支持<a href="http://www.battleaxe.co/rubberhose/" target="_blank" rel="external">Battle Axe的RubberHose</a>，渐变，类型和图像支持。最难的部分是选择哪些功能来处理下一个。</p>
+<p><img src="http://airbnb.design/wp-content/uploads/2017/01/hardware.png" alt="硬件"></p>
+<h2 id="建筑社区"><a href="#建筑社区" class="headerlink" title="建筑社区"></a><strong>建筑社区</strong></h2><p>发布一些东西作为开源不仅仅是把它放在那里供公众使用。它是一个桥梁，连接人和创建社区。随着我们越来越接近通过GitHub向设计师和工程师发布Lottie，我们也希望与动画人员保持联系。</p>
+<p>我们受到了<a href="http://9-squares.tumblr.com/" target="_blank" rel="external">9 Squares</a>，<a href="https://motioncorpse.tumblr.com/" target="_blank" rel="external">Motion Corpse</a>和<a href="https://animography.net/products/mobilo" target="_blank" rel="external">Animography</a>创造的<a href="https://animography.net/products/mobilo" target="_blank" rel="external">社区的启发</a>。所有这三个人都聚集了来自世界各地的人，否则他们永远不会一起工作，在公共动画项目上合作。这些项目需要几个月的工作，很多组织和各自的团队争吵，但他们无疑为整个动画社会提供巨大的价值。运动公司和动画公开共享After Effects源文件，它提供了大量的洞察人们如何工作。</p>
+<p>在他们的合作领导下，我们接触了所有三个团队，为我们的示例应用程序贡献动画。我们已经包括了由JR Canest创建的Motion Corpse的动画，来自9 Squares项目的Al Boardman的方块之一，以及使用Animography的Mobilo动画字体的动画键盘，其中包含超过二十个艺术家的作品。我们希望这些动画社区与强大的工程社群的合并将产生一些特别的东西。</p>
+<p><img src="http://airbnb.design/wp-content/uploads/2017/01/community.gif" alt="社区">我们很想听听你如何使用Lottie - 无论你是一个设计师，动画师或工程师。欢迎随时通过lottie@airbnb.com与您的想法，反馈和见解联系。我们很高兴看到当他们开始以我们从未想象的方式使用Lottie时，世界上的社区会做什么。</p>
+<h3 id="下载Bodymovin，Lottie-iOS，Android和React-Native。"><a href="#下载Bodymovin，Lottie-iOS，Android和React-Native。" class="headerlink" title="下载Bodymovin，Lottie iOS，Android和React Native。"></a>下载<a href="https://github.com/bodymovin/bodymovin" target="_blank" rel="external">Bodymovin</a>，Lottie <a href="https://github.com/airbnb/lottie-ios" target="_blank" rel="external">iOS</a>，<a href="https://github.com/airbnb/lottie-android" target="_blank" rel="external">Android</a>和<a href="https://github.com/airbnb/lottie-react-native" target="_blank" rel="external">React Native</a>。</h3><p>本文由<a href="http://github.com/buba447" target="_blank" rel="external">Brandon Withrow</a>，  <a href="https://twitter.com/gpeal8" target="_blank" rel="external">Gabriel Peal</a>  和  <a href="http://airbnb.design/lottie/" target="_blank" rel="external">Salih Abdul-Karim](https://twitter.com/therealsalih?lang=en)共同撰写   。 </a></p>
 ]]></content>
       
         <categories>
@@ -1752,6 +1872,114 @@
 <p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
 ]]></content>
       
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[VirtualAPK: 滴滴 Android 插件化的实践之路]]></title>
+      <url>http://wanghaonanlpc.github.io/2016/12/27/VirtualAPK-%E6%BB%B4%E6%BB%B4-Android-%E6%8F%92%E4%BB%B6%E5%8C%96%E7%9A%84%E5%AE%9E%E8%B7%B5%E4%B9%8B%E8%B7%AF/</url>
+      <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><hr>
+<p>在Android插件化技术日新月异的今天，开发并落地一款插件化框架到底是简单还是困难，这个问题不同人会有不同的答案。但是我相信，完成一个插件化框架的demo并不是多难的事，但是要开发一款完善的插件化框架却不是一件容易的事，尤其在国内，各大Rom厂商都对Android系统做了一定程度的定制，这进一步加剧了Android本身的碎片化问题。</p>
+<p>滴滴出行在插件化上的探索起步较晚，由于滴滴业务发展较快，业务迭代占据了大量的时间，这使得我们在2016年才开始研究这方面的技术。经过半年的开发、测试、适配和线上验证，目前我们推出了一款比较完善的插件化框架：VirtualAPK。之所以现在推出来，是因为VirtualAPK在我们内部已经得到了很好的验证，我们在迭代过程中不断地做机型适配和细节特性的支持，目前已经达到一个非常稳定的状况，足以支撑滴滴部分乃至全部业务的动态发版需求。目前滴滴出行最新版本（v5.0.4）上面，小巴和接送机业务均为插件，大家可以去体验。</p>
+<h1 id="插件化的现状"><a href="#插件化的现状" class="headerlink" title="插件化的现状"></a>插件化的现状</h1><hr>
+<p>到目前为止，业界已经有很多优秀的开源项目，比如早期的基于静态代理思想的DynamicLoadApk，随后的基于占坑思想的DynamicApk、Small，还有360手机助手的DroidPlugin。他们都是优秀的开源项目，他们很大程度上促进了国内插件化技术的发展。</p>
+<p>尽管有如此多的优秀框架存在，但是兼容性问题仍然是制约插件化发展的一个难题。一款插件化框架，也许可以在一款手机上完美运行，但是在数以千万的设备上却总是容易存在这样那样的兼容性问题。我相信上线过插件化的工程师应该深有体会。滴滴为什么还要自研一款新的插件化框架？因为我们需要一款功能完备的、兼容性优秀的、适用于滴滴业务的插件化框架，目前市面上的开源不能满足我们的需求，所以我们必须重新造轮子，于是VirtualAPK诞生了。</p>
+<h1 id="VirtualAPK的诞生"><a href="#VirtualAPK的诞生" class="headerlink" title="VirtualAPK的诞生"></a>VirtualAPK的诞生</h1><hr>
+<p>VirtualAPK是滴滴出行自研的一款优秀的插件化框架，主要有如下几个特性。</p>
+<h3 id="功能完备"><a href="#功能完备" class="headerlink" title="功能完备"></a>功能完备</h3><ul>
+<li><p>支持几乎所有的Android特性；</p>
+</li>
+<li><p>四大组件方面<br><strong>四大组件均不需要在宿主manifest中预注册，每个组件都有完整的生命周期。</strong> </p>
+</li>
+<li><ol>
+<li>Activity：支持显示和隐式调用，支持Activity的theme和LaunchMode，支持透明主题；</li>
+<li>Service：支持显示和隐式调用，支持Service的start、stop、bind和unbind，并支持跨进程bind插件中的Service；</li>
+<li>Receiver：支持静态注册和动态注册的Receiver；</li>
+<li>ContentProvider：支持provider的所有操作，包括CRUD和call方法等，支持跨进程访问插件中的Provider。</li>
+</ol>
+</li>
+<li><p>自定义View：支持自定义View，支持自定义属性和style，支持动画；</p>
+</li>
+<li><p>PendingIntent：支持PendingIntent以及和其相关的Alarm、Notification和AppWidget；</p>
+</li>
+<li><p>支持插件Application以及插件manifest中的meta-data；</p>
+</li>
+<li><p>支持插件中的so。</p>
+</li>
+</ul>
+<h3 id="优秀的兼容性"><a href="#优秀的兼容性" class="headerlink" title="优秀的兼容性"></a>优秀的兼容性</h3><ul>
+<li>兼容市面上几乎所有的Android手机，这一点已经在滴滴出行客户端中得到验证；</li>
+<li>资源方面适配小米、Vivo、Nubia等，对未知机型采用自适应适配方案；</li>
+<li>极少的Binder Hook，目前仅仅hook了两个Binder：AMS和IContentProvider，Hook过程做了充分的兼容性适配；</li>
+<li>插件运行逻辑和宿主隔离，确保框架的任何问题都不会影响宿主的正常运行。</li>
+</ul>
+<h3 id="入侵性极低"><a href="#入侵性极低" class="headerlink" title="入侵性极低"></a>入侵性极低</h3><ul>
+<li>插件开发等同于原生开发，四大组件无需继承特定的基类；</li>
+<li>精简的插件包，插件可以依赖宿主中的代码和资源，也可以不依赖；</li>
+<li>插件的构建过程简单，通过Gradle插件来完成插件的构建，整个过程对开发者透明。</li>
+</ul>
+<h1 id="VirtualAPK的工作过程"><a href="#VirtualAPK的工作过程" class="headerlink" title="VirtualAPK的工作过程"></a>VirtualAPK的工作过程</h1><hr>
+<p>VirtualAPK对插件没有额外的约束，原生的apk即可作为插件。插件工程编译生成apk后，即可通过宿主App加载，每个插件apk被加载后，都会在宿主中创建一个单独的LoadedPlugin对象。如下图所示，通过这些LoadedPlugin对象，VirtualAPK就可以管理插件并赋予插件新的意义，使其可以像手机中安装过的App一样运行。 </p>
+<p><img src="https://ww2.sinaimg.cn/large/006tNbRwly1fda1lpr2e2j30hs0950tg.jpg" alt=""></p>
+<h3 id="VirtualAPK的运行形态"><a href="#VirtualAPK的运行形态" class="headerlink" title="VirtualAPK的运行形态"></a>VirtualAPK的运行形态</h3><p>我们计划赋予VirtualAPK两种工作形态，耦合形态和独立形态。目前VirtualAPK对耦合形态已经有了很好的支持，我们接下来将计划支持独立形态。<br><strong>耦合形态</strong><br>插件对宿主可以有代码或者资源的依赖，也可以没有依赖。这种模式下，插件中的类不能和宿主重复，资源id也不能和宿主冲突。这是VirtualAPK的默认形态，也是适用于大多数业务的形态。<br><strong>独立形态</strong><br>插件对宿主没有代码或者资源的依赖。这种模式下，插件和宿主没有任何关系，所以插件中的类和资源均可以和宿主重复。这种形态的主要作用是用于运行一些第三方apk。</p>
+<h3 id="如何使用"><a href="#如何使用" class="headerlink" title="如何使用"></a>如何使用</h3><p>第一步： 初始化插件引擎</p>
+<p><img src="https://ww2.sinaimg.cn/large/006tNbRwly1fda1m1lpb7j30hs03y3yr.jpg" alt=""></p>
+<p>第二步：加载插件</p>
+<p><img src="https://ww3.sinaimg.cn/large/006tNbRwly1fda1m64k9yj30hs031q33.jpg" alt=""></p>
+<p>我们对上述加载过程进行了一些封装，通过如下方式即可异步地去加载一个插件。</p>
+<p><img src="https://ww3.sinaimg.cn/large/006tNbRwly1fda1mdawowj30hs07674z.jpg" alt=""></p>
+<p><strong>当插件入口被调用后，插件的后续逻辑均不需要宿主干预，均走原生的Android流程。</strong><br>比如，在插件内部，如下代码将正确执行：</p>
+<p><img src="https://ww1.sinaimg.cn/large/006tNbRwly1fda1mjo6tzj30hs09gab9.jpg" alt=""></p>
+<h1 id="探究原理"><a href="#探究原理" class="headerlink" title="探究原理"></a>探究原理</h1><p>### </p>
+<hr>
+<h3 id="基本原理"><a href="#基本原理" class="headerlink" title="基本原理"></a>基本原理</h3><ul>
+<li><strong>合并宿主和插件的ClassLoader</strong><br>需要注意的是，插件中的类不可以和宿主重复</li>
+<li><strong>合并插件和宿主的资源</strong><br>重设插件资源的packageId，将插件资源和宿主资源合并</li>
+<li><strong>去除插件包对宿主的引用</strong><br>构建时通过Gradle插件去除插件对宿主的代码以及资源的引用</li>
+</ul>
+<h3 id="四大组件的实现原理"><a href="#四大组件的实现原理" class="headerlink" title="四大组件的实现原理"></a>四大组件的实现原理</h3><p><img src="https://ww4.sinaimg.cn/large/006tNbRwly1fda1mpm6gyj30ca0akq39.jpg" alt=""></p>
+<ul>
+<li><strong>Activity</strong><br>采用宿主manifest中占坑的方式来绕过系统校验，然后再加载真正的activity；</li>
+<li><strong>Service</strong><br>动态代理AMS，拦截service相关的请求，将其中转给一个虚拟空间（Matrix）去处理，Matrix会接管系统的所有操作；</li>
+<li><strong>Receiver</strong><br>将插件中静态注册的receiver重新注册一遍；</li>
+<li><strong>ContentProvider</strong><br>动态代理IContentProvider，拦截provider相关的请求，将其中转给一个虚拟空间（Matrix）去处理，Matrix会接管系统的所有操作。</li>
+</ul>
+<p>如下是VirtualAPK的整体结构图。<br><img src="https://ww3.sinaimg.cn/large/006tNbRwly1fda1muac67j30hs0afwf6.jpg" alt=""></p>
+<h1 id="填坑之路"><a href="#填坑之路" class="headerlink" title="填坑之路"></a>填坑之路</h1><hr>
+<p>在实践中我们遇到了很多很多的问题，比如机型适配、API版本适配、Binder hook的稳定性保证等问题，这里拿一个典型的资源适配问题来说明。</p>
+<p>其实这是一个很无奈的问题，由于国内各大Rom厂商喜欢深度定制Android系统，所以就出现了这种适配问题。<br>正常情况下我们通过如下代码去创建插件的Resources对象：</p>
+<p><img src="https://ww2.sinaimg.cn/large/006tNbRwly1fda1mz3wwnj30hs01djrf.jpg" alt=""><br>然后在Vivo手机上，竟然出现了如下的类型转换错误，看起来是Vivo自己派生了Resources的子类。</p>
+<p><img src="https://ww1.sinaimg.cn/large/006tNbRwly1fda1n39pxuj30hs09f768.jpg" alt=""><br>于是反编译了下Vivo的framework代码，果不其然，在如下代码中进行了类型转换，所以在加载插件资源的时候就报错了。</p>
+<p><img src="https://ww3.sinaimg.cn/large/006tNbRwly1fda1n94nfvj30hs054mxr.jpg" alt=""><br>为了解决这个问题，我们分析了VivoResources的代码实现，然后在创建插件资源的时候，采用了如下的代码。</p>
+<p><img src="https://ww1.sinaimg.cn/large/006tNbRwly1fda1ndesp9j30hs04faao.jpg" alt=""></p>
+<p>除了Vivo以外，有类似问题的还有MiUI、Nubia以及其它不知名的机型。而且在Vivo手机上，除了类型转换错误的问题，还有其他很坑的问题。</p>
+<p>事实上我们还处理了很多其他的坑，这里无法一一说明，所以说如何保证插件化的稳定性是一件很有技术挑战的事情。</p>
+<h1 id="一些暂时不支持的特性"><a href="#一些暂时不支持的特性" class="headerlink" title="一些暂时不支持的特性"></a>一些暂时不支持的特性</h1><hr>
+<p>由于种种原因，VirtualAPK目前未能支持所有的Android的特性，如下是已知的几点。</p>
+<ul>
+<li>不支持Activity的部分属性，比如process、configChanges等；</li>
+<li>暂不支持overridePendingTransition(int enterAnim, int exitAnim)这种形式的转场动画；</li>
+<li>插件中弹通知，不能使用插件中的资源，比如图片。</li>
+</ul>
+<h1 id="开源计划"><a href="#开源计划" class="headerlink" title="开源计划"></a>开源计划</h1><hr>
+<p>我们的目标是打造一款功能完备的插件化框架，使得各个业务线都能以插件的形式集成，从而实现Android App的热更新能力。</p>
+<p>目前VirtualAPK还有一些特性需要进一步完善，待完善后，将会有开源计划。我们期望VirtualAPK开源后，可以让其他App能够无缝集成，无需考虑细节实现和兼容性问题即可轻松拥有热更新能力。</p>
+]]></content>
+      
+        <categories>
+            
+            <category> 安卓 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> android </tag>
+            
+            <tag> 插件化 </tag>
+            
+        </tags>
         
     </entry>
     

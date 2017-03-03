@@ -10,7 +10,7 @@
     
     <title>
         
-            Hexo主题Material的使用 | 
+            Android 组件化和插件化开发 | 
         
         一个老白 | 野厨
     </title>
@@ -27,7 +27,7 @@
     <meta name="theme-color" content="#0097A7">
     <meta name="author" content="Alex">
     <meta name="description" content="null">
-    <meta name="keywords" content="null,hexo">
+    <meta name="keywords" content="null">
 
     <!--iOS -->
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
@@ -48,9 +48,9 @@
     <!-- The Open Graph protocol -->
     <meta property="og:url" content="http://wanghaonanlpc.github.io">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="Hexo主题Material的使用 | 一个老白 | 野厨">
+    <meta property="og:title" content="Android 组件化和插件化开发 | 一个老白 | 野厨">
     <meta property="og:description" content="null">
-    <meta property="og:article:tag" content="hexo"> 
+    
 
     <!--[if lte IE 9]>
         <link rel="stylesheet" href="/css/ie-blocker.css">
@@ -234,7 +234,7 @@
     </button>
 
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#安装「Material」"><span class="post-toc-number">1.</span> <span class="post-toc-text">安装「Material」</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Github"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">Github</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#NPM"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">NPM</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#启用「Material」"><span class="post-toc-number">2.</span> <span class="post-toc-text">启用「Material」</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#更新「Material」"><span class="post-toc-number">3.</span> <span class="post-toc-text">更新「Material」</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Github-1"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">Github</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#NPM-1"><span class="post-toc-number">3.2.</span> <span class="post-toc-text">NPM</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#npm-update"><span class="post-toc-number">3.2.1.</span> <span class="post-toc-text">npm-update</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#npm-check"><span class="post-toc-number">3.2.2.</span> <span class="post-toc-text">npm-check</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#基本设定"><span class="post-toc-number">4.</span> <span class="post-toc-text">基本设定</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#语言"><span class="post-toc-number">4.1.</span> <span class="post-toc-text">语言</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#URL"><span class="post-toc-number">4.2.</span> <span class="post-toc-text">URL</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#作者名称"><span class="post-toc-number">4.3.</span> <span class="post-toc-text">作者名称</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#站点描述设置"><span class="post-toc-number">4.4.</span> <span class="post-toc-text">站点描述设置</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#RSS"><span class="post-toc-number">4.5.</span> <span class="post-toc-text">RSS</span></a></li></ol></li></ol>
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#组件化"><span class="post-toc-number">1.</span> <span class="post-toc-text">组件化</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#概述"><span class="post-toc-number">1.0.1.</span> <span class="post-toc-text">概述</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#为什么要有组件化？"><span class="post-toc-number">1.0.2.</span> <span class="post-toc-text">为什么要有组件化？</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#组件化正确的姿势"><span class="post-toc-number">1.0.3.</span> <span class="post-toc-text">组件化正确的姿势</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#插件化"><span class="post-toc-number">2.</span> <span class="post-toc-text">插件化</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#为什么有插件化？"><span class="post-toc-number">2.0.1.</span> <span class="post-toc-text">为什么有插件化？</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#处境"><span class="post-toc-number">2.0.2.</span> <span class="post-toc-text">处境</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#开源的插件化框架"><span class="post-toc-number">2.0.3.</span> <span class="post-toc-text">开源的插件化框架</span></a></li></ol></li></ol></li></ol>
 
         <!--
         <li class="mdl-menu__item">
@@ -270,7 +270,7 @@
         
     
             <p class="article-headline-p">
-                Hexo主题Material的使用
+                Android 组件化和插件化开发
             </p>
         </div>
 
@@ -289,7 +289,7 @@
     <!-- Author Name & Date -->
     <div>
         <strong>Alex</strong>
-        <span>2月 26, 2017</span>
+        <span>3月 03, 2017</span>
     </div>
 
     <div class="section-spacer"></div>
@@ -310,7 +310,7 @@
         </button>
         <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button">
             <li class="mdl-menu__item">在其它设备中阅读本文章</li>
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPYAAAD2CAAAAADAeSUUAAACyUlEQVR42u3aQXLbMBAEQP3/0841VYmZGSySSEDzpJJpEg0dtnYWr68rrxc2NjY2NjY2Njb2W7Jf8fXrf/3m0d/c/4cFlf+1uGZsbGzso9nJa/KF/vz98+d8QzesGRsbG/sC9ncFIL8nKSTJhu5aDzY2Njb2cxF6LmnPW5Bv2XxrsLGxsbEXX1M2JJOnYWNjY2PnAU1beJL4KQf/tywNGxsb++3Z+aLf5/M/nW9jY2NjvzG7vZ7Do3Yw3B7TGa0cGxsb+1D22rB2fkwzWcN8ndjY2Nj3sNdGvPlYN+G1TUgbOWFjY2Pfw37+vm1X8rHxZNgclUBsbGzso9mTgzJ5aRk1Ekv3Y2NjY9/GXisqf6PkTO6sCxg2Njb2h7PzaGat8CTj3raUJgUymm9jY2NjH8FuC1i7Ke272qdtCJWwsbGxP5ydlJbk/qQh2TXuzUMrbGxs7HvY+TBgL3je5BTbhI2NjX00O3nZnJEsOmlj2oYHGxsb+2x2fsgmiYH2hvvJexdbEWxsbOzj2Am+3ay1v7bls7gfGxsb+2h223LkmDZyaoe7xQ+AjY2NfSg7Lw/tMHhvw9M2P9jY2Ng3s9tjlJOYKS+HyVWEStjY2NjXsNsIfm3pbWyEjY2NjZ23DUnzMC9+a9vU/mDY2NjYp7LXjsvPh7j55s6HzdjY2Ni3sdvmYe37FtyuZPHMKTY2NvZx7LX2Ix8JrIG/li5sbGzse9h5cNPG92vPb8e9iwUMGxsb+2PZdRkIYqY2bMqbory8YWNjY9/DXisGbYuStz0Jow2/sLGxsW9gr41U21I0GRK0IVcRKmFjY2MfxM6LR3tcZhIMzeMkbGxsbOxJxNNuyiTGqkMlbGxsbOxNB33W7szjLWxsbOx72PNAZ1fANBkD1AUMGxsb+wh2HtPM46T5MaANhy+xsbGxD2Lfc2FjY2NjY2NjY2O/zfUD1Sia3fZtphcAAAAASUVORK5CYII=">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQ4AAAEOCAAAAABd2qZ5AAADg0lEQVR42u3aQW7cQAwEwP3/p5OrAQPrbnJG0KF0ChJZ0lQONNn8/HP9uD4IcODAgQMHDhw4cOB4Mccnvr7/VPTi8mnJnb/vr8+CAwcOHDgucCTHSP51dmfCmmO1Z8GBAwcOHPc4koLXfkRehqNPj7+tKN44cODAgeNlHHnhTI7X0mzOggMHDhw43smRPKEdBeZPwIEDBw4cb+a4N9TLI6s89GpHkzhw4MCB40mOfAng/X9+dL8DBw4cOHD84phFQXnpPbvEMBss/nEiHDhw4MBxlCMvVG3I9B2oXbbOlyeS78eBAwcOHPc48lWDfcHLm8NTR43GkThw4MCB40GOBKJt3lrcNqbKIygcOHDgwHGPI19laAd8OehmONgGVDhw4MCB4x7HrEnLVwraYnkqrCrux4EDBw4cRzn2xS8Z+bUt3Gb42LZ2OHDgwIHjLMdsoaGNhdrCOUNsB4g4cODAgeMGRzt02yzJnfqptsyvZqU4cODAgWPB0Y75ZsVvv6BwankCBw4cOHA8z5E/tG3kZssH+QCx+A/AgQMHDhxHOZL4Z9bOtYU2H0pGYVL+NBw4cODAcZQjj4I2MdUnvtpo6srvHThw4MCB41DP0gZL+2W4/JAtVgKBAwcOHDie5MhfMBsa5gduKfPADAcOHDhw3OBolxs2r78dXCUBVbHQgAMHDhw4jnKsXlC2XnmjmJfYfEkCBw4cOHCc5ZgN/mZN2qzEfv/alnu4KocDBw4cOEqOtt3Kl9U2Cwr5EHO29IADBw4cOG5wtAWvHd4lfG1rl7dzUVOKAwcOHDgucOQLBPvBX1smN3HXsNDiwIEDB471qlz7QW0s1BbXfUxVtJo4cODAgeMCx4ambcxm6xFnCz8OHDhw4HieI2mZTkVHyd/MgqVoJQIHDhw4cFzj2BS/pG2bPXNP/EdjiQMHDhw4HudoFxraQV4L2r7xj7fjwIEDB46jHO3VHiz/rCSyagv8cL8DBw4cOHAsODZlMo98kvvzkjwLvYrfO3DgwIEDx5pjMwrctG1t0c3bs+JLcODAgQPHNY5Z4cxR8jFf29RdmZXiwIEDB47HOTZLCW3ctRlB4sCBAweO93O0Sw+r4V35VUnbhgMHDhw4nuHYLzG08VUeI7Xjv6Js48CBAweOCxybQVvbSrVFOg+Z2mgKBw4cOHDc4HDhwIEDBw4cOHDgwIHjZdd/FV6bdGt2k5UAAAAASUVORK5CYII=">
         </ul>
     
 
@@ -322,7 +322,7 @@
     </button>
     <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
         <li class="mdl-menu__item">
-        <a class="post_tag-link" href="/tags/hexo/">hexo</a>
+        
     </ul>
     
 
@@ -336,7 +336,7 @@
     <!-- Leancloud Views -->
         <a class="post_share-link" href="#">
             <li class="mdl-menu__item">
-                <span id="/2017/02/26/Material的使用/" class="leancloud-views_num" data-flag-title="Hexo主题Material的使用">
+                <span id="/2017/03/03/Android-组件化和插件化开发/" class="leancloud-views_num" data-flag-title="Android 组件化和插件化开发">
      &nbsp;浏览量
 </span>
 
@@ -359,7 +359,7 @@
 
     <!-- Share Weibo -->
     
-        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=Hexo主题Material的使用&url=http://wanghaonanlpc.github.io//2017/02/26/Material的使用/index.html&pic=&searchPic=false&style=simple" target="_blank">
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=Android 组件化和插件化开发&url=http://wanghaonanlpc.github.io//2017/03/03/Android-组件化和插件化开发/index.html&pic=&searchPic=false&style=simple" target="_blank">
             <li class="mdl-menu__item">
                 分享到微博
             </li>
@@ -368,7 +368,7 @@
 
     <!-- Share Twitter -->
     
-        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=Hexo主题Material的使用&url=http://wanghaonanlpc.github.io//2017/02/26/Material的使用/index.html&via=Alex" target="_blank">
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=Android 组件化和插件化开发&url=http://wanghaonanlpc.github.io//2017/03/03/Android-组件化和插件化开发/index.html&via=Alex" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Twitter
             </li>
@@ -377,7 +377,7 @@
 
     <!-- Share Facebook -->
     
-        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://wanghaonanlpc.github.io//2017/02/26/Material的使用/index.html" target="_blank">
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://wanghaonanlpc.github.io//2017/03/03/Android-组件化和插件化开发/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Facebook
             </li>
@@ -386,7 +386,7 @@
 
     <!-- Share Google+ -->
     
-        <a class="post_share-link" href="https://plus.google.com/share?url=http://wanghaonanlpc.github.io//2017/02/26/Material的使用/index.html" target="_blank">
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://wanghaonanlpc.github.io//2017/03/03/Android-组件化和插件化开发/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Google+
             </li>
@@ -398,7 +398,7 @@
 
     <!-- Share QQ -->
     
-        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=一个老白 | 野厨&title=Hexo主题Material的使用&summary=null&pics=http://wanghaonanlpc.github.io/img/favicon.png&url=http://wanghaonanlpc.github.io/2017/02/26/Material的使用/index.html" target="_blank">
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=一个老白 | 野厨&title=Android 组件化和插件化开发&summary=null&pics=http://wanghaonanlpc.github.io/img/favicon.png&url=http://wanghaonanlpc.github.io/2017/03/03/Android-组件化和插件化开发/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 QQ
             </li>
@@ -416,60 +416,53 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <p>安装Hexo后，运行以下命令在目标中初始化Hexo ``。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ hexo init &lt;folder&gt;</div><div class="line">$ cd &lt;folder&gt;</div><div class="line">$ npm install</div></pre></td></tr></table></figure>
-<p>一旦初始化，这里是你的项目文件夹将是什么样子：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">.</div><div class="line">├── _config.yml</div><div class="line">├── package.json</div><div class="line">├── scaffolds</div><div class="line">├── source</div><div class="line">|   ├── _drafts</div><div class="line">|   └── _posts</div><div class="line">└── themes</div></pre></td></tr></table></figure>
-<h2 id="安装「Material」"><a href="#安装「Material」" class="headerlink" title="安装「Material」"></a>安装「Material」</h2><p>Hexo 安装主题的方式非常简单，只需要将主题文件放置于站点目录的 <code>themes</code> 目录下，然后修改下配置文件即可。<br>具体到 Material 来说，有 <code>Github</code> 和 <code>NPM</code> 两种方式。</p>
-<h3 id="Github"><a href="#Github" class="headerlink" title="Github"></a>Github</h3><blockquote>
-<p>可以选择 克隆 或者 下载 <a href="https://github.com/viosey/hexo-theme-material/releases" target="_blank" rel="external">稳定的发布版本</a>。</p>
-</blockquote>
-<p>为了方便之后的更新，建议使用 <strong>克隆</strong> 的方式。克隆命令如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ cd your-hexo-site/themes</div><div class="line">$ git clone https://github.com/viosey/hexo-theme-material.git material</div></pre></td></tr></table></figure>
-<h3 id="NPM"><a href="#NPM" class="headerlink" title="NPM"></a>NPM</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install hexo-material</div></pre></td></tr></table></figure>
-<p>该方式会把 Material 主题下载到 <code>hexo</code> 目录下的 <code>node_modules</code> 文件夹中。<br>找到 <code>hexo-material</code> 文件夹，然后把文件复制到 <code>themes</code> 目录中的 <code>Material</code> 主题文件夹里。</p>
-<h2 id="启用「Material」"><a href="#启用「Material」" class="headerlink" title="启用「Material」"></a>启用「Material」</h2><p>克隆完成后，修改主题文件夹名称，将其改为 <code>material</code> 。<br>然后打开 <strong>站点配置文件</strong>，找到 <code>theme</code> 字段，并将其值更改为 <code>material</code> 。</p>
-<blockquote>
-<p>文件夹名称可自由修改，并不是唯一的，只需 <code>theme</code> 字段与之对应即可。</p>
-</blockquote>
-<p>运行 <code>hexo s --debug</code>，并访问 <code>http://localhost:4000</code>，确保站点正确运行。</p>
-<h2 id="更新「Material」"><a href="#更新「Material」" class="headerlink" title="更新「Material」"></a>更新「Material」</h2><h3 id="Github-1"><a href="#Github-1" class="headerlink" title="Github"></a>Github</h3><p>使用</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git pull</div></pre></td></tr></table></figure>
-<p>即可拉取最新版本。</p>
-<h3 id="NPM-1"><a href="#NPM-1" class="headerlink" title="NPM"></a>NPM</h3><p>NPM 更新有两种方式：</p>
-<h4 id="npm-update"><a href="#npm-update" class="headerlink" title="npm-update"></a>npm-update</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm update hexo-material</div></pre></td></tr></table></figure>
-<p>然后将文件复制到 <code>Material</code> 主题文件夹中。</p>
-<h4 id="npm-check"><a href="#npm-check" class="headerlink" title="npm-check"></a>npm-check</h4><p><a href="https://www.npmjs.com/package/npm-check" target="_blank" rel="external">npm-check</a> 是用来检查 npm 依赖包是否有更新，错误以及不在使用的，我们也可以使用 npm-check 进行包的更新。</p>
-<p>安装 npm-check：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install -g npm-check</div></pre></td></tr></table></figure>
-<p>检查 npm 包的状态:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm-check hexo-material</div></pre></td></tr></table></figure>
-<p>使用空格键可以选择需要处理的包，回车直接进行处理。</p>
-<h2 id="基本设定"><a href="#基本设定" class="headerlink" title="基本设定"></a>基本设定</h2><h3 id="语言"><a href="#语言" class="headerlink" title="语言"></a>语言</h3><p>编辑 <strong>站点配置文件</strong>，将 <code>language</code> 设置成你所需要的语言。<br>可用的语言如下：</p>
+        <p><img src="https://ww4.sinaimg.cn/large/006tNbRwly1fda139k6jgj30fa080mxf.jpg" alt=""></p>
+<p>组件化开发就是将一个app分成多个模块，每个模块都是一个组件（Module），开发的过程中我们可以让这些组件相互依赖或者单独调试部分组件等，但是最终发布的时候是将这些组件合并统一成一个apk，这就是组件化开发。</p>
+<p>插件化开发和组件化开发略有不用，插件化开发时将整个app拆分成很多模块，这些模块包括一个宿主和多个插件，每个模块都是一个apk（组件化的每个模块是个lib），最终打包的时候将宿主apk和插件apk分开或者联合打包。</p>
+<h2 id="组件化"><a href="#组件化" class="headerlink" title="组件化"></a>组件化</h2><h4 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h4><p>android工程的组件一般分为两种，lib组件和application组件</p>
+<p>application组件是指该组件本身就可以运行并打包成apk</p>
+<p>lib组件是指该组件属于app的一部分，可以供其它组件使用但是本身不能打包成apk</p>
+<h4 id="为什么要有组件化？"><a href="#为什么要有组件化？" class="headerlink" title="为什么要有组件化？"></a>为什么要有组件化？</h4><p>加入一个app工程只有一个组件，随着app业务的壮大模块越来越多，代码量超10万是很正常的，这个时候我们会遇到以下问题</p>
 <ul>
-<li>العَرَبِيَّة (ar)</li>
-<li>English (en)</li>
-<li>Español (es)</li>
-<li>Français (fr)</li>
-<li>Deutsche (de)</li>
-<li>日本語 (ja)</li>
-<li>Malay (ms)</li>
-<li>简体中文 (zh-CN)</li>
-<li>繁體中文 (zh-TW)</li>
+<li>稍微改动一个模块的一点代码都要编译整个工程，耗时耗力</li>
+<li>公共资源、业务、模块混在一起耦合度太高</li>
+<li>不方便测试</li>
 </ul>
-<blockquote>
-<p>例如：选用繁體中文，则配置为：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&gt; language: zh-TW</div><div class="line">&gt;</div></pre></td></tr></table></figure>
-</blockquote>
-<h3 id="URL"><a href="#URL" class="headerlink" title="URL"></a>URL</h3><p>编辑 <strong>站点配置文件</strong>，<code>url</code> 填写主域名，<code>root</code> 填写 子目录/根域名</p>
-<blockquote>
-<p>例如：站点域名为 <code>http://example.com/hexo</code>：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&gt; url: http://example.com</div><div class="line">&gt; root: /hexo</div><div class="line">&gt;</div></pre></td></tr></table></figure>
-</blockquote>
-<p>若你的站点没有运行在子目录中，则 <code>root</code> 填写为 <code>/</code>。</p>
-<h3 id="作者名称"><a href="#作者名称" class="headerlink" title="作者名称"></a>作者名称</h3><p>编辑 <strong>站点配置文件</strong>，设置 <code>author</code> 为你的昵称。</p>
-<h3 id="站点描述设置"><a href="#站点描述设置" class="headerlink" title="站点描述设置"></a>站点描述设置</h3><p>编辑 <strong>站点配置文件</strong>，设置 <code>description</code> 字段为你的站点描述。站点描述可以是你喜欢的一句签名:)</p>
-<h3 id="RSS"><a href="#RSS" class="headerlink" title="RSS"></a>RSS</h3><p>安装插件：<a href="https://github.com/hexojs/hexo-generator-feed" target="_blank" rel="external">hexo-generator-feed</a>，配置方式如插件 <code>README.md</code> 所示。<br>然后在 <a href="https://material.viosey.com/intro/#url" target="_blank" rel="external">url: rss</a> 中添加生成的 feed 路径。</p>
+<h4 id="组件化正确的姿势"><a href="#组件化正确的姿势" class="headerlink" title="组件化正确的姿势"></a>组件化正确的姿势</h4><p>既然选择使用组件化，那么如何正确的使用它呢？这里给出一种解决方案，如果你有更好的方案，欢迎交流。</p>
+<p>我们创建了一个app工程project，默认里面有一个app组件，这个app组件是可以直接运行的。</p>
+<p>怎么划分组件呢？</p>
+<ul>
+<li>1.新建一个lib组件，new Module—&gt;Andorid Library，取名BaseUtilLib，我们将所有的公共的工具类、网络分装等类放在其中</li>
+<li>2.新建一个lib组件，BaseReslLib，我们将所有的公共资源、drawable、String等类放在其中</li>
+<li>3.将app按照自己的规则划分成多个模块，比如按业务按地区等都可以</li>
+<li>4.逐一开发某个模块，比如Test模块，新建一个TestApp组件，TestApp组件引用[1][2]步骤的BaseUtilLib和BaseReslLib，在TestApp组件里添加并引用TestLib组件。在TestLib的activity中写代码写业务逻辑，TestApp只负责跳转和测试</li>
+<li>5.将工程中的所有类似TestLib组件（不是TestApp组件）引入到工程的app中<br>看着有点乱，整理出一张图<br><img src="http://img2.tuicool.com/NbQZV3R.png!web" alt="img"></li>
+</ul>
+<p>这样的好处有</p>
+<p>每个模块可以独立开发编译运行</p>
+<p>开发单个模块时可以共享资源和工具类</p>
+<p>可以针对单个模块测试</p>
+<p><a href="https://github.com/halibobo/ModuleBuild" target="_blank" rel="external">demo地址：https://github.com/halibobo/ModuleBuild</a></p>
+<h2 id="插件化"><a href="#插件化" class="headerlink" title="插件化"></a>插件化</h2><h4 id="为什么有插件化？"><a href="#为什么有插件化？" class="headerlink" title="为什么有插件化？"></a>为什么有插件化？</h4><p>有了组件化，为什么还要用插件化呢？插件化开发总的来说有以下几点好处（不同插件框架不一样）：</p>
+<ul>
+<li>宿主和插件分开编译</li>
+<li>并发开发</li>
+<li>动态更新插件</li>
+<li>按需下载模块</li>
+<li>方法数或变量数爆棚</li>
+</ul>
+<h4 id="处境"><a href="#处境" class="headerlink" title="处境"></a>处境</h4><p>开放出来的插件化开发框架比较多，他们各自都有自己的优势和和不足，实现的原理也有差别下面列</p>
+<h4 id="开源的插件化框架"><a href="#开源的插件化框架" class="headerlink" title="开源的插件化框架"></a>开源的插件化框架</h4><ul>
+<li><a href="https://github.com/Qihoo360/DroidPlugin" target="_blank" rel="external">Qihoo360/DroidPlugin</a></li>
+<li><a href="https://github.com/CtripMobile/DynamicAPK" target="_blank" rel="external">CtripMobile/DynamicAPK</a></li>
+<li><a href="https://github.com/mmin18/AndroidDynamicLoader" target="_blank" rel="external">mmin18/AndroidDynamicLoader</a></li>
+<li><a href="https://github.com/singwhatiwanna/dynamic-load-apk" target="_blank" rel="external">singwhatiwanna/dynamic-load-apk</a></li>
+<li><a href="https://github.com/houkx/android-pluginmgr" target="_blank" rel="external">houkx/android-pluginmgr</a></li>
+<li><a href="https://github.com/bunnyblue/ACDD" target="_blank" rel="external">bunnyblue/ACDD</a></li>
+<li><a href="https://github.com/wequick/Small" target="_blank" rel="external">wequick/Small</a></li>
+<li>……</li>
+</ul>
+<p>目前开源的这几个框架有宿主和插件分离的也有融合在一起的，每个框架的详细介绍和demo在github里都可以查看到。插件化demo运行起来比较简单，但是真正将它用到实际项目中还是要考虑很多小细节的，目前我也正处于研究阶段。</p>
 
     
 
@@ -538,7 +531,7 @@
 <script>
     $('.btn_click_load').click(function() {  //click to load comments
         var disqus_config = function () {
-            this.page.url = 'http://wanghaonanlpc.github.io/2017/02/26/Material的使用/index.html';  // Replace PAGE_URL with your page's canonical URL variable
+            this.page.url = 'http://wanghaonanlpc.github.io/2017/03/03/Android-组件化和插件化开发/index.html';  // Replace PAGE_URL with your page's canonical URL variable
             this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
         };
         (function() { // DON'T EDIT BELOW THIS LINE
@@ -568,7 +561,7 @@
             <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
     <!-- Prev Nav -->
     
-        <a href="/2017/02/26/mac下查找端口是否占用及关闭占用端口进程/" id="post_nav-newer" class="prev-content">
+        <a href="/2017/03/03/Android插件化从入门到放弃/" id="post_nav-newer" class="prev-content">
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
                 <i class="material-icons">arrow_back</i>
             </button>
@@ -582,7 +575,7 @@
 
     <!-- Next Nav -->
     
-        <a href="/2017/02/26/hello-world/" id="post_nav-older" class="next-content">
+        <a href="/2017/03/03/Introducing-Lottie-原文/" id="post_nav-older" class="next-content">
             旧篇
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
