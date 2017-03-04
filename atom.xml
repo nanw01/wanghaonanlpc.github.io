@@ -90,7 +90,7 @@
     <link href="http://wanghaonanlpc.github.io/2017/03/03/Android-%E7%BB%84%E4%BB%B6%E5%8C%96%E5%92%8C%E6%8F%92%E4%BB%B6%E5%8C%96%E5%BC%80%E5%8F%91/"/>
     <id>http://wanghaonanlpc.github.io/2017/03/03/Android-组件化和插件化开发/</id>
     <published>2017-03-03T14:37:18.000Z</published>
-    <updated>2017-03-03T15:09:54.000Z</updated>
+    <updated>2017-03-04T02:33:06.000Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>重点是末尾开源框架列表</p>
@@ -154,6 +154,12 @@
     
     </summary>
     
+      <category term="安卓" scheme="http://wanghaonanlpc.github.io/categories/%E5%AE%89%E5%8D%93/"/>
+    
+    
+      <category term="android" scheme="http://wanghaonanlpc.github.io/tags/android/"/>
+    
+      <category term="插件化" scheme="http://wanghaonanlpc.github.io/tags/%E6%8F%92%E4%BB%B6%E5%8C%96/"/>
     
   </entry>
   

@@ -123,6 +123,20 @@
 <p>目前开源的这几个框架有宿主和插件分离的也有融合在一起的，每个框架的详细介绍和demo在github里都可以查看到。插件化demo运行起来比较简单，但是真正将它用到实际项目中还是要考虑很多小细节的，目前我也正处于研究阶段。</p>
 ]]></content>
       
+        <categories>
+            
+            <category> 安卓 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> android </tag>
+            
+            <tag> 插件化 </tag>
+            
+        </tags>
         
     </entry>
     
