@@ -10,7 +10,7 @@
     
     <title>
         
-            归档: 2016/3 | 
+            Android Studio 2.3 | 
         
         一个老白 | 野厨
     </title>
@@ -48,7 +48,7 @@
     <!-- The Open Graph protocol -->
     <meta property="og:url" content="http://wanghaonanlpc.github.io">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="归档: 2016/3 | 一个老白 | 野厨">
+    <meta property="og:title" content="Android Studio 2.3 | 一个老白 | 野厨">
     <meta property="og:description" content="null">
     
 
@@ -208,96 +208,376 @@
                         </button>
                     
 
-                    <!-- Index Module -->
-<div class="material-index mdl-grid">
-    
-    <div class="locate-thumbnail-symbol"></div>
+                    <!-- Post TOC -->
 
-    <!-- Pin on top -->
     
-        
-    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
 
-    <!-- Normal Post -->
-    
-        
-        
-            <!-- Paradox Thumbnail -->
-            <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
+    <!-- Left aligned menu below button -->
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Android-Studio-2-3-更新小记"><span class="post-toc-number">1.</span> <span class="post-toc-text">Android Studio 2.3 更新小记</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#编译相关"><span class="post-toc-number">2.</span> <span class="post-toc-text">编译相关</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Instant-Run-的改进和-UI-变化"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">Instant Run 的改进和 UI 变化</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Build-Cache"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">Build Cache</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#设计相关"><span class="post-toc-number">3.</span> <span class="post-toc-text">设计相关</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#约束布局中的链接和比例"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">约束布局中的链接和比例</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#布局控件面板"><span class="post-toc-number">3.2.</span> <span class="post-toc-text">布局控件面板</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#收藏常用属性"><span class="post-toc-number">3.3.</span> <span class="post-toc-text">收藏常用属性</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#支持-WebP"><span class="post-toc-number">3.4.</span> <span class="post-toc-text">支持 WebP</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Material-Icon-库"><span class="post-toc-number">3.5.</span> <span class="post-toc-text">Material Icon 库</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#开发相关"><span class="post-toc-number">4.</span> <span class="post-toc-text">开发相关</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Lint-基准线"><span class="post-toc-number">4.1.</span> <span class="post-toc-text">Lint 基准线</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#App-Links-助手"><span class="post-toc-number">4.2.</span> <span class="post-toc-text">App Links 助手</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#模版更新"><span class="post-toc-number">4.3.</span> <span class="post-toc-text">模版更新</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#IntelliJ-Platform-更新"><span class="post-toc-number">4.4.</span> <span class="post-toc-text">IntelliJ Platform 更新</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#测试相关"><span class="post-toc-number">5.</span> <span class="post-toc-text">测试相关</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#安卓模拟器复制粘贴功能"><span class="post-toc-number">5.1.</span> <span class="post-toc-text">安卓模拟器复制粘贴功能</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#安卓模拟器命令行工具"><span class="post-toc-number">5.2.</span> <span class="post-toc-text">安卓模拟器命令行工具</span></a></li></ol></li></ol>
+
+        <!--
+        <li class="mdl-menu__item">
+            Some Action
+        </li>
+        -->
+    </ul>
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
     
         
             <!-- Random Thumbnail -->
             <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
+            <script>
+    var randomNum = Math.floor(Math.random() * 19 + 1);
 
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2016/03/01/Retrofit-2-0：Android上最好的HTTP客户端库的最大更新/">Retrofit 2.0：Android上最好的HTTP客户端库的最大更新</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            Retrofit是Android最受欢迎的HTTP客户端库之一，由于其简单性和与其他应用程序相比的出色性能。
-无论如何，它的弱点是没有...
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2016/03/01/Retrofit-2-0：Android上最好的HTTP客户端库的最大更新/" target="_self">继续阅读</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="Alex's avatar">
-            </div>
-            <div>
-                <strong>Alex</strong>
-                <span>3月 01, 2016</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-            <!-- Category -->
-            <span class="post_entry-category">
-                <a class="post_category-link" href="/categories/android/">android</a>
-            </span>
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-        
-        
-        
-    
-
-    
-
-    
-        <script>
-    var randomNum;
-
-    var locatePost = $('.locate-thumbnail-symbol').next();
-    for(var i = 0; i < 10; i++) {
-        randomNum = Math.floor(Math.random() * 19 + 1);
-
-        locatePost.children('.post_thumbnail-random').attr('id', 'random_thumbnail-'+randomNum);
-        locatePost.children('.post_thumbnail-random').css('background-image', 'url(' + '/img/random/material-' + randomNum + '.png' + ')')
-
-        locatePost = locatePost.next();
-    }
+    $('.post_thumbnail-random').css('background-image', 'url(' + '/img/random/material-' + randomNum + '.png' + ')');
 </script>
 
+        
+    
+            <p class="article-headline-p">
+                Android Studio 2.3
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/avatar.png" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>Alex</strong>
+        <span>3月 09, 2017</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+        <button id="article-functions-qrcode-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+            <i class="material-icons" role="presentation">devices other</i>
+            <span class="visuallyhidden">devices other</span>
+        </button>
+        <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button">
+            <li class="mdl-menu__item">在其它设备中阅读本文章</li>
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPYAAAD2CAAAAADAeSUUAAAC5ElEQVR42u3a207rMBAF0P7/T5/zioSa7j0OItgrT6hxEy8jMczl9e/I64WNjY2NjY2NjY39SPYrvq7Xf7+brP+65t2uvq9p94yNjY19AvvDn/43r7++m2z93bvebX22Z2xsbOxz2Ndh6R0mP6AkcLZHluwZGxsbG/s6Vbg+iNmBzsIkNjY2NvZsc20wa48VGxsbG/veotJ1cMo/mYW3X6ulYWNjYz+e3TZ6n/DzL/S3sbGxsR/JHg4yBgWg5G7eWk6C1oc9Y2NjY2/Kzkv/eeE+H9ycpT1tUQwbGxt7b/ZK8WglwORhL//8w4FiY2NjH8Bu04Ab0oO4jJWXuqL2ADY2NvZG7PzLs4HItjU7bOLOuiLY2NjYW7DbZKAt/dxV6G+fg42NjX0mOw9a7SB7mzwUpaI87GFjY2Nvyl4ZoLl3ZHMWum6YOcXGxsbegr2ScuRr2kNpS0gfdoKNjY29KTt/QZKQ5AWgNuHJi1/Y2NjYp7GT8lC+lbZV0BaYkl8SNjY29mns/MU/14htk5M8xGJjY2OfzG7Dz8o4Tl6KapMobGxs7HPYKw2D9ZGdlcP9wUklbGxs7D/CniUh+ZpZm3b2/GEtDRsbG3sLdl76X2nB3hv86kEfbGxs7E3Z7T/962GsSB5GaQk2Njb2yex2TCdJadoSfz7oWadA2NjY2Juyk4HLlXbsevrRFqduKCphY2Nj/1l2nnLMivt5AeveJ2BjY2OfwG5DwvDFo1ZukpBEe8bGxsY+jJ2nE234uTfxKJoZ2NjY2Juy26sNNnlikxx025bAxsbGPoE9Cwx5urIyiNMGvw/HgY2Njb01Ow9a7XG0Izs5rA512NjY2Aew22GavGEwG/p5lRc2NjY2dpsGJCEw+W5bfmqDLjY2Njb2rCXQFqRmyUyRomBjY2MfwG6bu/ndvEiUk+oDwsbGxt6afUPJJuDNgmKbtPxgfxsbGxv7kexzLmxsbGxsbGxsbOzHXP8BvwyRA6vrH0wAAAAASUVORK5CYII=">
+        </ul>
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        
+    </ul>
+    
+
+    <!-- Share -->
+    <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+    <!-- Leancloud Views -->
+        <a class="post_share-link" href="#">
+            <li class="mdl-menu__item">
+                <span id="/2017/03/09/Android-Studio-2-3/" class="leancloud-views_num" data-flag-title="Android Studio 2.3">
+     &nbsp;浏览量
+</span>
+
+            </li>
+        </a>
+    
+
+    
+        
+            <!-- Busuanzi Views -->
+            <a class="post_share-link" href="#">
+                <li class="mdl-menu__item">
+                    <span id="busuanzi_container_page_pv">
+                        <span id="busuanzi_value_page_pv"></span>&nbsp;浏览量
+                    </span>
+                </li>
+            </a>
+        
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=Android Studio 2.3&url=http://wanghaonanlpc.github.io//2017/03/09/Android-Studio-2-3/index.html&pic=&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=Android Studio 2.3&url=http://wanghaonanlpc.github.io//2017/03/09/Android-Studio-2-3/index.html&via=Alex" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://wanghaonanlpc.github.io//2017/03/09/Android-Studio-2-3/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://wanghaonanlpc.github.io//2017/03/09/Android-Studio-2-3/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=一个老白 | 野厨&title=Android Studio 2.3&summary=null&pics=http://wanghaonanlpc.github.io/img/favicon.png&url=http://wanghaonanlpc.github.io/2017/03/09/Android-Studio-2-3/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 QQ
+            </li>
+        </a>
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <h1 id="Android-Studio-2-3-更新小记"><a href="#Android-Studio-2-3-更新小记" class="headerlink" title="Android Studio 2.3 更新小记"></a>Android Studio 2.3 更新小记</h1><p>作为 Google 官方出版并维护的 IDE，被全球数以百万计的 Android 开发者钟爱并使用的开发工具，Android Studio，在前几天的三月二号，正式迎来了 2.3 稳定版的更新。身为 Android 迷的你，赶快来和我一起看看新版 Android Studio 给我们带来了哪些变化吧。</p>
+<h1 id="编译相关"><a href="#编译相关" class="headerlink" title="编译相关"></a>编译相关</h1><hr>
+<h2 id="Instant-Run-的改进和-UI-变化"><a href="#Instant-Run-的改进和-UI-变化" class="headerlink" title="Instant Run 的改进和 UI 变化"></a>Instant Run 的改进和 UI 变化</h2><p>Instant Run 基本上能够解决中小型项目的编译缓慢问题。作为 Google 重点关注的一个功能，Android Studio 2.3 版本在原来的基础上再次做了优化，进一步减少安装替换代码的时间。同时，在 Android Studio 的导航栏上将 run 和 instant run 按钮分开显示，供开发者选择调试策略。</p>
+<p><img src="https://user-gold-cdn.xitu.io/2017/3/7/e37bc920cdc6f91459686f612a118e89.png" alt="img"></p>
+<p><a href="https://developer.android.com/studio/run/index.html#instant-run" target="_blank" rel="external">Learn more</a></p>
+<h2 id="Build-Cache"><a href="#Build-Cache" class="headerlink" title="Build Cache"></a>Build Cache</h2><p>编译缓存是 Android Studio 2.2 版本被引入的的一个功能，能够缓存项目中导入的 AAR、Libray，能够加快调试过程中的编译时间。新版本在此基础上进一步优化，同时默认打开这个功能，在 2.2 版本上默认处于关闭状态。</p>
+<p><a href="http://d.android.com/studio/build/build-cache.html" target="_blank" rel="external">Learn more</a></p>
+<h1 id="设计相关"><a href="#设计相关" class="headerlink" title="设计相关"></a>设计相关</h1><hr>
+<h2 id="约束布局中的链接和比例"><a href="#约束布局中的链接和比例" class="headerlink" title="约束布局中的链接和比例"></a>约束布局中的链接和比例</h2><p>Constraint Layout (约束布局) 想必大家有所耳闻了，但不知道是否用的习惯，目前我还没有在项目中正式使用。不过 Google 官方对此布局方式尤为看重，这不新版 Android Studio 又来改进了。介绍改进点之前，先给大家推荐一篇「郭霖」对于约束布局的介绍，非常详尽：<a href="http://blog.csdn.net/guolin_blog/article/details/53122387" target="_blank" rel="external">Android新特性介绍，ConstraintLayout完全解析</a>。看完之后，保证你一定跃跃欲试。</p>
+<p>2.3 版本的 Android Studio 支持在约束布局中使用链接（Chains）和比例（Ratios）。Chains 的概念大致是，在使用约束布局的 layout 中，我们可以链接多个控件，一起设置约束条件，比如：</p>
+<p><img src="https://user-gold-cdn.xitu.io/2017/3/7/6e82c17219040c4d02a810de608afc49.gif" alt="img"></p>
+<p>Ratios 的概念也比较好理解，看图说话：</p>
+<p><img src="https://user-gold-cdn.xitu.io/2017/3/7/f20d095c463087429690a0d9fc8f1989.gif" alt="img"></p>
+<p>Chains 和 Ratios 都支持动态设置，有相应的 <a href="https://developer.android.com/reference/android/support/constraint/ConstraintSet.html" target="_blank" rel="external">ConstraintSet APIs</a> 可用。</p>
+<p><a href="https://developer.android.com/studio/run/index.html#instant-run" target="_blank" rel="external">Learn more</a></p>
+<h2 id="布局控件面板"><a href="#布局控件面板" class="headerlink" title="布局控件面板"></a>布局控件面板</h2><p>如果你经常使用拖拽控件的形式设计布局的话，那这个更新点对你简直如虎添翼。新版 Widget Palette 提供搜索、排序和过滤功能，帮助我们找到所需要的控件。同时，在你选择拖拽之前，提供对应控件的 UI 预览。如图：</p>
+<p><img src="https://user-gold-cdn.xitu.io/2017/3/7/2bec92a95115899403b4ed5d391a9328.png" alt="img">Layout Editor Widget Palette</p>
+<p><a href="https://developer.android.com/studio/write/layout-editor.html" target="_blank" rel="external">Learn more</a></p>
+<h2 id="收藏常用属性"><a href="#收藏常用属性" class="headerlink" title="收藏常用属性"></a>收藏常用属性</h2><p>在 layout design 模式下，我们可以在 Properties 面板中保存常用属性，然后这些属性就会出现在收藏区域，帮助我们快速使用。如图：</p>
+<p><img src="https://user-gold-cdn.xitu.io/2017/3/7/7c8d47a888e13699640dbe3d48f9bc8b.gif" alt="img">Favorites Attributes on Layout Editor Properties Panel</p>
+<p><a href="https://developer.android.com/studio/write/layout-editor.html#edit-properties" target="_blank" rel="external">Learn more</a></p>
+<h2 id="支持-WebP"><a href="#支持-WebP" class="headerlink" title="支持 WebP"></a>支持 WebP</h2><p>相比 PNG 格式的图片，WebP 无损压缩格式能够减少 <a href="https://developers.google.com/speed/webp/docs/webp_lossless_alpha_study#results" target="_blank" rel="external">25%</a> 的文件大小。在 Android Studio 2.3 版本中，我们可以自由转换图片格式，PNG to WebP，或者是 WebP to PNG，同时你还可以通过控制质量从而调整文件大小。如图：</p>
+<p><img src="https://user-gold-cdn.xitu.io/2017/3/7/3719fcda2bf934649d15dd5030a991af.png" alt="img">WebP Image Conversion Wizard</p>
+<p><a href="https://developer.android.com/studio/write/convert-webp.html" target="_blank" rel="external">Learn more</a></p>
+<h2 id="Material-Icon-库"><a href="#Material-Icon-库" class="headerlink" title="Material Icon 库"></a>Material Icon 库</h2><p>新版的 Material Icon 矢量图标库支持搜索过滤功能，同时为每个 Icon 设置相应的 Label，以供搜索。一个非常人性化的改进：</p>
+<p><img src="https://user-gold-cdn.xitu.io/2017/3/7/263a9adc96df33cd0c44c6a981ab2db8.png" alt="img">Vector Asset Wizard</p>
+<p><a href="https://developer.android.com/studio/write/vector-asset-studio.html#materialicon" target="_blank" rel="external">Learn more</a></p>
+<h1 id="开发相关"><a href="#开发相关" class="headerlink" title="开发相关"></a>开发相关</h1><hr>
+<h2 id="Lint-基准线"><a href="#Lint-基准线" class="headerlink" title="Lint 基准线"></a>Lint 基准线</h2><p>Android Lint 是优化项目必不可少的一个工具，使用中你可能会遇到这样的问题。在此之前，每次执行 Lint 命令，该工具会自动遍历所有的目标文件，并将不符规范的问题分类列举出来，然后我们一一处理。但如果你没有处理完的话，再次 Lint 时就又得从头开始解决问题，新旧问题融合到一起。此时如果你只想处理新的问题的话，就无迹可寻。而基准线（BaseLine）的出现就能解你燃眉之急。给每一次执行 Lint 设置一个 BaseLine，让你只想解决新 issues 的想法成为可能。</p>
+<p><img src="https://user-gold-cdn.xitu.io/2017/3/7/eb03cbbc5a30a3161a3a0e2e1ed23f57.png" alt="img">Lint Baseline Support</p>
+<p><a href="https://developer.android.com/studio/write/lint.html#snapshot" target="_blank" rel="external">Learn more</a> and <a href="https://developer.android.com/studio/releases/index.html" target="_blank" rel="external">new Lint checks &amp; annotations</a></p>
+<h2 id="App-Links-助手"><a href="#App-Links-助手" class="headerlink" title="App Links 助手"></a>App Links 助手</h2><p>在 2015 年 I/O 大会上，Google 正式宣布 Android M 系统支持 App 链接，在 web url 到 native app 之间建立关联通道。比如，点击手机短信中的 url 链接和浏览器中的某个 url 就可以打开支持 App Links 的相应 App，一个非常赞的设计。要做到这个功能，需要在项目中添加相应的设置，修改 Manifest 文件等。新版本开发工具提供了可视化的工具帮助我们进行这些设置，如：</p>
+<p><img src="https://user-gold-cdn.xitu.io/2017/3/7/3418d2ab53ff92b544e8ae4dd22589f9.png" alt="img">App Links Assistant</p>
+<p><a href="https://developer.android.com/studio/write/app-link-indexing.html" target="_blank" rel="external">Learn more</a></p>
+<h2 id="模版更新"><a href="#模版更新" class="headerlink" title="模版更新"></a>模版更新</h2><p>从 Android Studio 2.3 版本开始，新建项目时用到的所有 templates 默认使用 ConstraintLayout，而在此之前，默认都是 RelativeLayout。这一点，也再次说明约束布局的重要性。同时，新版也增加一个新的底部导航模式的模板，默认实现 Material Design 设计中的 Bottom Navigation，设计细节参考：<a href="https://material.io/guidelines/components/bottom-navigation.html" target="_blank" rel="external">guideline</a>。</p>
+<p><img src="https://user-gold-cdn.xitu.io/2017/3/7/76ba4e9f9a0b8bdb94df2124f32ac6f4.png" alt="img">New Project Wizard Templates</p>
+<p><a href="https://developer.android.com/studio/projects/templates.html" target="_blank" rel="external">Learn more templates</a></p>
+<h2 id="IntelliJ-Platform-更新"><a href="#IntelliJ-Platform-更新" class="headerlink" title="IntelliJ Platform 更新"></a>IntelliJ Platform 更新</h2><p>Android Studio 2.3 版本使用 IntelliJ 2016.2 release，在一些 IDE 上的更新窗口和通知系统上有所改进。</p>
+<p><a href="https://www.jetbrains.com/idea/whatsnew/#v2016-2" target="_blank" rel="external">Learn more</a></p>
+<h1 id="测试相关"><a href="#测试相关" class="headerlink" title="测试相关"></a>测试相关</h1><hr>
+<h2 id="安卓模拟器复制粘贴功能"><a href="#安卓模拟器复制粘贴功能" class="headerlink" title="安卓模拟器复制粘贴功能"></a>安卓模拟器复制粘贴功能</h2><p>为响应广大开发者的需求，Google 在新版模拟器 (v25.3.1) 上实现了 PC 主机和模拟器之间的相互复制粘贴功能，主要通过共享剪贴板实现。需要注意的事，Copy &amp; Paste 功能仅在 x86 Google API Emulator 同时 API Level 19（Android 4.4-Kitkat）和更高版本中起到作用。效果如图：</p>
+<p><img src="https://user-gold-cdn.xitu.io/2017/3/7/2175955c855819ee70d64e2ccd38a775.gif" alt="img">Copy &amp; Paste support in Android Emulator</p>
+<h2 id="安卓模拟器命令行工具"><a href="#安卓模拟器命令行工具" class="headerlink" title="安卓模拟器命令行工具"></a>安卓模拟器命令行工具</h2><p>Android SDK Tools 25.3 开始，SDK Tools 文件夹中的 emulator 文件被转移到一个独立的模拟器文件夹，过去使用的 <code>android avd</code> 命令被废弃和替换。如果过去你使用到有关于此的脚本文件就需要在目录路径上稍作改动。当然，如果使用 Android Studio 启动模拟器的话，不受任何影响。</p>
+<p><a href="https://developer.android.com/studio/releases/sdk-tools.html" target="_blank" rel="external">Learn more</a></p>
+<p>至此，Android Studio 2.3 版本的更新内容介绍完毕。英文阅读无障碍的话，也可以自备<a href="http://buytizi.com/?r=225bb619613ec09e" target="_blank" rel="external">梯子</a>，查阅 [Android Developers Blog]。</p>
+
+    
+
     
 </div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+
+
+
+
+    <!-- 使用 DISQUS_CLICK -->
+    <div id="disqus-comment">	
+        <div id="disqus_thread"></div>
+<!-- include js -->
+<script src="/js/ripple.js"></script>
+
+<!-- add animation -->
+<style>
+        .ripple-container {
+        }
+        .ripple-container .ripple{
+            background-color: rgba(255,255,255,0.4);
+            animation: ripple 2s forwards cubic-bezier(0, 0, 0.2, 1);
+        }
+        @keyframes ripple {
+            0% {
+                transform: scale(0);
+                opacity: 1;
+            }
+            80% {
+                transform: scale(1);
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+		.disqus_click_btn {
+            background-color: dodgerblue;
+            color: white;
+            padding: 10px 20px;
+            border:0;
+            font-size: 14px;
+            cursor: pointer
+        }
+</style>
+	
+<!-- add data-ripple attribute -->
+<div class="btn_click_load"> 
+    <button class="disqus_click_btn" data-ripple>阅读评论 「请确保 disq.us &amp; disquscdn.com &amp; disqus.com 可以正常加载」</button>
+</div>
+	
+<script>
+    // add effect to elements
+    Array.prototype.forEach.call(document.querySelectorAll('[data-ripple]'), function(element){
+        // find all elements and attach effect
+        new RippleEffect(element); // element is instance of javascript element node
+    });
+</script>
+
+<script>
+    $('.btn_click_load').click(function() {  //click to load comments
+        var disqus_config = function () {
+            this.page.url = 'http://wanghaonanlpc.github.io/2017/03/09/Android-Studio-2-3/index.html';  // Replace PAGE_URL with your page's canonical URL variable
+            this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        };
+        (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document;
+            var s = d.createElement('script');
+            s.src = '//wanghaonanlpc.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', + new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+        $('.btn_click_load').css('display','none');
+    });
+</script>
+  	
+
+    </div>
+    <style>
+        #disqus-comment{
+            background-color: #eee;
+            padding: 2pc;
+        }
+    </style>
+
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2017/03/03/Android插件化从入门到放弃/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
 
 
                     

@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://wanghaonanlpc.github.io/"/>
-  <updated>2017-03-03T15:11:13.000Z</updated>
+  <updated>2017-03-09T09:53:15.000Z</updated>
   <id>http://wanghaonanlpc.github.io/</id>
   
   <author>
@@ -14,6 +14,69 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Android Studio 2.3</title>
+    <link href="http://wanghaonanlpc.github.io/2017/03/09/Android-Studio-2-3/"/>
+    <id>http://wanghaonanlpc.github.io/2017/03/09/Android-Studio-2-3/</id>
+    <published>2017-03-09T09:39:58.000Z</published>
+    <updated>2017-03-09T09:53:15.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Android-Studio-2-3-更新小记"><a href="#Android-Studio-2-3-更新小记" class="headerlink" title="Android Studio 2.3 更新小记"></a>Android Studio 2.3 更新小记</h1><p>作为 Google 官方出版并维护的 IDE，被全球数以百万计的 Android 开发者钟爱并使用的开发工具，Android Studio，在前几天的三月二号，正式迎来了 2.3 稳定版的更新。身为 Android 迷的你，赶快来和我一起看看新版 Android Studio 给我们带来了哪些变化吧。</p>
+<h1 id="编译相关"><a href="#编译相关" class="headerlink" title="编译相关"></a>编译相关</h1><hr>
+<h2 id="Instant-Run-的改进和-UI-变化"><a href="#Instant-Run-的改进和-UI-变化" class="headerlink" title="Instant Run 的改进和 UI 变化"></a>Instant Run 的改进和 UI 变化</h2><p>Instant Run 基本上能够解决中小型项目的编译缓慢问题。作为 Google 重点关注的一个功能，Android Studio 2.3 版本在原来的基础上再次做了优化，进一步减少安装替换代码的时间。同时，在 Android Studio 的导航栏上将 run 和 instant run 按钮分开显示，供开发者选择调试策略。</p>
+<p><img src="https://user-gold-cdn.xitu.io/2017/3/7/e37bc920cdc6f91459686f612a118e89.png" alt="img"></p>
+<p><a href="https://developer.android.com/studio/run/index.html#instant-run" target="_blank" rel="external">Learn more</a></p>
+<h2 id="Build-Cache"><a href="#Build-Cache" class="headerlink" title="Build Cache"></a>Build Cache</h2><p>编译缓存是 Android Studio 2.2 版本被引入的的一个功能，能够缓存项目中导入的 AAR、Libray，能够加快调试过程中的编译时间。新版本在此基础上进一步优化，同时默认打开这个功能，在 2.2 版本上默认处于关闭状态。</p>
+<p><a href="http://d.android.com/studio/build/build-cache.html" target="_blank" rel="external">Learn more</a></p>
+<h1 id="设计相关"><a href="#设计相关" class="headerlink" title="设计相关"></a>设计相关</h1><hr>
+<h2 id="约束布局中的链接和比例"><a href="#约束布局中的链接和比例" class="headerlink" title="约束布局中的链接和比例"></a>约束布局中的链接和比例</h2><p>Constraint Layout (约束布局) 想必大家有所耳闻了，但不知道是否用的习惯，目前我还没有在项目中正式使用。不过 Google 官方对此布局方式尤为看重，这不新版 Android Studio 又来改进了。介绍改进点之前，先给大家推荐一篇「郭霖」对于约束布局的介绍，非常详尽：<a href="http://blog.csdn.net/guolin_blog/article/details/53122387" target="_blank" rel="external">Android新特性介绍，ConstraintLayout完全解析</a>。看完之后，保证你一定跃跃欲试。</p>
+<p>2.3 版本的 Android Studio 支持在约束布局中使用链接（Chains）和比例（Ratios）。Chains 的概念大致是，在使用约束布局的 layout 中，我们可以链接多个控件，一起设置约束条件，比如：</p>
+<p><img src="https://user-gold-cdn.xitu.io/2017/3/7/6e82c17219040c4d02a810de608afc49.gif" alt="img"></p>
+<p>Ratios 的概念也比较好理解，看图说话：</p>
+<p><img src="https://user-gold-cdn.xitu.io/2017/3/7/f20d095c463087429690a0d9fc8f1989.gif" alt="img"></p>
+<p>Chains 和 Ratios 都支持动态设置，有相应的 <a href="https://developer.android.com/reference/android/support/constraint/ConstraintSet.html" target="_blank" rel="external">ConstraintSet APIs</a> 可用。</p>
+<p><a href="https://developer.android.com/studio/run/index.html#instant-run" target="_blank" rel="external">Learn more</a></p>
+<h2 id="布局控件面板"><a href="#布局控件面板" class="headerlink" title="布局控件面板"></a>布局控件面板</h2><p>如果你经常使用拖拽控件的形式设计布局的话，那这个更新点对你简直如虎添翼。新版 Widget Palette 提供搜索、排序和过滤功能，帮助我们找到所需要的控件。同时，在你选择拖拽之前，提供对应控件的 UI 预览。如图：</p>
+<p><img src="https://user-gold-cdn.xitu.io/2017/3/7/2bec92a95115899403b4ed5d391a9328.png" alt="img">Layout Editor Widget Palette</p>
+<p><a href="https://developer.android.com/studio/write/layout-editor.html" target="_blank" rel="external">Learn more</a></p>
+<h2 id="收藏常用属性"><a href="#收藏常用属性" class="headerlink" title="收藏常用属性"></a>收藏常用属性</h2><p>在 layout design 模式下，我们可以在 Properties 面板中保存常用属性，然后这些属性就会出现在收藏区域，帮助我们快速使用。如图：</p>
+<p><img src="https://user-gold-cdn.xitu.io/2017/3/7/7c8d47a888e13699640dbe3d48f9bc8b.gif" alt="img">Favorites Attributes on Layout Editor Properties Panel</p>
+<p><a href="https://developer.android.com/studio/write/layout-editor.html#edit-properties" target="_blank" rel="external">Learn more</a></p>
+<h2 id="支持-WebP"><a href="#支持-WebP" class="headerlink" title="支持 WebP"></a>支持 WebP</h2><p>相比 PNG 格式的图片，WebP 无损压缩格式能够减少 <a href="https://developers.google.com/speed/webp/docs/webp_lossless_alpha_study#results" target="_blank" rel="external">25%</a> 的文件大小。在 Android Studio 2.3 版本中，我们可以自由转换图片格式，PNG to WebP，或者是 WebP to PNG，同时你还可以通过控制质量从而调整文件大小。如图：</p>
+<p><img src="https://user-gold-cdn.xitu.io/2017/3/7/3719fcda2bf934649d15dd5030a991af.png" alt="img">WebP Image Conversion Wizard</p>
+<p><a href="https://developer.android.com/studio/write/convert-webp.html" target="_blank" rel="external">Learn more</a></p>
+<h2 id="Material-Icon-库"><a href="#Material-Icon-库" class="headerlink" title="Material Icon 库"></a>Material Icon 库</h2><p>新版的 Material Icon 矢量图标库支持搜索过滤功能，同时为每个 Icon 设置相应的 Label，以供搜索。一个非常人性化的改进：</p>
+<p><img src="https://user-gold-cdn.xitu.io/2017/3/7/263a9adc96df33cd0c44c6a981ab2db8.png" alt="img">Vector Asset Wizard</p>
+<p><a href="https://developer.android.com/studio/write/vector-asset-studio.html#materialicon" target="_blank" rel="external">Learn more</a></p>
+<h1 id="开发相关"><a href="#开发相关" class="headerlink" title="开发相关"></a>开发相关</h1><hr>
+<h2 id="Lint-基准线"><a href="#Lint-基准线" class="headerlink" title="Lint 基准线"></a>Lint 基准线</h2><p>Android Lint 是优化项目必不可少的一个工具，使用中你可能会遇到这样的问题。在此之前，每次执行 Lint 命令，该工具会自动遍历所有的目标文件，并将不符规范的问题分类列举出来，然后我们一一处理。但如果你没有处理完的话，再次 Lint 时就又得从头开始解决问题，新旧问题融合到一起。此时如果你只想处理新的问题的话，就无迹可寻。而基准线（BaseLine）的出现就能解你燃眉之急。给每一次执行 Lint 设置一个 BaseLine，让你只想解决新 issues 的想法成为可能。</p>
+<p><img src="https://user-gold-cdn.xitu.io/2017/3/7/eb03cbbc5a30a3161a3a0e2e1ed23f57.png" alt="img">Lint Baseline Support</p>
+<p><a href="https://developer.android.com/studio/write/lint.html#snapshot" target="_blank" rel="external">Learn more</a> and <a href="https://developer.android.com/studio/releases/index.html" target="_blank" rel="external">new Lint checks &amp; annotations</a></p>
+<h2 id="App-Links-助手"><a href="#App-Links-助手" class="headerlink" title="App Links 助手"></a>App Links 助手</h2><p>在 2015 年 I/O 大会上，Google 正式宣布 Android M 系统支持 App 链接，在 web url 到 native app 之间建立关联通道。比如，点击手机短信中的 url 链接和浏览器中的某个 url 就可以打开支持 App Links 的相应 App，一个非常赞的设计。要做到这个功能，需要在项目中添加相应的设置，修改 Manifest 文件等。新版本开发工具提供了可视化的工具帮助我们进行这些设置，如：</p>
+<p><img src="https://user-gold-cdn.xitu.io/2017/3/7/3418d2ab53ff92b544e8ae4dd22589f9.png" alt="img">App Links Assistant</p>
+<p><a href="https://developer.android.com/studio/write/app-link-indexing.html" target="_blank" rel="external">Learn more</a></p>
+<h2 id="模版更新"><a href="#模版更新" class="headerlink" title="模版更新"></a>模版更新</h2><p>从 Android Studio 2.3 版本开始，新建项目时用到的所有 templates 默认使用 ConstraintLayout，而在此之前，默认都是 RelativeLayout。这一点，也再次说明约束布局的重要性。同时，新版也增加一个新的底部导航模式的模板，默认实现 Material Design 设计中的 Bottom Navigation，设计细节参考：<a href="https://material.io/guidelines/components/bottom-navigation.html" target="_blank" rel="external">guideline</a>。</p>
+<p><img src="https://user-gold-cdn.xitu.io/2017/3/7/76ba4e9f9a0b8bdb94df2124f32ac6f4.png" alt="img">New Project Wizard Templates</p>
+<p><a href="https://developer.android.com/studio/projects/templates.html" target="_blank" rel="external">Learn more templates</a></p>
+<h2 id="IntelliJ-Platform-更新"><a href="#IntelliJ-Platform-更新" class="headerlink" title="IntelliJ Platform 更新"></a>IntelliJ Platform 更新</h2><p>Android Studio 2.3 版本使用 IntelliJ 2016.2 release，在一些 IDE 上的更新窗口和通知系统上有所改进。</p>
+<p><a href="https://www.jetbrains.com/idea/whatsnew/#v2016-2" target="_blank" rel="external">Learn more</a></p>
+<h1 id="测试相关"><a href="#测试相关" class="headerlink" title="测试相关"></a>测试相关</h1><hr>
+<h2 id="安卓模拟器复制粘贴功能"><a href="#安卓模拟器复制粘贴功能" class="headerlink" title="安卓模拟器复制粘贴功能"></a>安卓模拟器复制粘贴功能</h2><p>为响应广大开发者的需求，Google 在新版模拟器 (v25.3.1) 上实现了 PC 主机和模拟器之间的相互复制粘贴功能，主要通过共享剪贴板实现。需要注意的事，Copy &amp; Paste 功能仅在 x86 Google API Emulator 同时 API Level 19（Android 4.4-Kitkat）和更高版本中起到作用。效果如图：</p>
+<p><img src="https://user-gold-cdn.xitu.io/2017/3/7/2175955c855819ee70d64e2ccd38a775.gif" alt="img">Copy &amp; Paste support in Android Emulator</p>
+<h2 id="安卓模拟器命令行工具"><a href="#安卓模拟器命令行工具" class="headerlink" title="安卓模拟器命令行工具"></a>安卓模拟器命令行工具</h2><p>Android SDK Tools 25.3 开始，SDK Tools 文件夹中的 emulator 文件被转移到一个独立的模拟器文件夹，过去使用的 <code>android avd</code> 命令被废弃和替换。如果过去你使用到有关于此的脚本文件就需要在目录路径上稍作改动。当然，如果使用 Android Studio 启动模拟器的话，不受任何影响。</p>
+<p><a href="https://developer.android.com/studio/releases/sdk-tools.html" target="_blank" rel="external">Learn more</a></p>
+<p>至此，Android Studio 2.3 版本的更新内容介绍完毕。英文阅读无障碍的话，也可以自备<a href="http://buytizi.com/?r=225bb619613ec09e" target="_blank" rel="external">梯子</a>，查阅 [Android Developers Blog]。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;Android-Studio-2-3-更新小记&quot;&gt;&lt;a href=&quot;#Android-Studio-2-3-更新小记&quot; class=&quot;headerlink&quot; title=&quot;Android Studio 2.3 更新小记&quot;&gt;&lt;/a&gt;Android Studio 2.
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>Android插件化从入门到放弃</title>
@@ -164,53 +227,6 @@
   </entry>
   
   <entry>
-    <title>Lottie简介：Airbnb为本地应用程序添加动画的工具(原文)</title>
-    <link href="http://wanghaonanlpc.github.io/2017/03/03/Introducing-Lottie-%E5%8E%9F%E6%96%87/"/>
-    <id>http://wanghaonanlpc.github.io/2017/03/03/Introducing-Lottie-原文/</id>
-    <published>2017-03-03T03:23:46.000Z</published>
-    <updated>2017-03-03T03:57:07.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="http://airbnb.design/category/behind-the-scenes/" target="_blank" rel="external">BEHIND THE SCENES</a>     /  BY SALIH ABDUL-KARIM / 02.03<br><a href="http://airbnb.design/tag/animation/" target="_blank" rel="external">#ANIMATION</a> <a href="http://airbnb.design/tag/design/" target="_blank" rel="external">#DESIGN</a> <a href="http://airbnb.design/tag/engineering/" target="_blank" rel="external">#ENGINEERING</a> <a href="http://airbnb.design/tag/motion/" target="_blank" rel="external">#MOTION</a> <a href="http://airbnb.design/tag/open-source/" target="_blank" rel="external">#OPEN SOURCE</a> <a href="http://airbnb.design/tag/tools/" target="_blank" rel="external">#TOOLS</a></p>
-<h2 id="Lottie"><a href="#Lottie" class="headerlink" title="Lottie"></a>Lottie</h2><h3 id="Behind-the-scenes-of-our-new-open-source-animation-tool"><a href="#Behind-the-scenes-of-our-new-open-source-animation-tool" class="headerlink" title="Behind the scenes of our new open-source animation tool."></a>Behind the scenes of our new open-source animation tool.</h3><p>In the past, building complex animations for Android, iOS, and React Native apps was a difficult and lengthy process. You either had to add bulky image files for each screen size or write a thousand lines of brittle, hard-to-maintain code. Because of this, most apps weren’t using animation — despite it being a powerful tool for communicating ideas and creating compelling user experiences. One year ago, we set out to change that.</p>
-<p>Today, we’re happy to introduce our solution. Lottie is an iOS, Android, and React Native library that renders After Effects animations in real time, and allows native apps to use animations as easily as they use static assets. Lottie uses animation data exported as JSON files from an open-source After Effects extension called <a href="https://github.com/bodymovin/bodymovin" target="_blank" rel="external">Bodymovin</a>. The extension is bundled with a JavaScript player that can render the animations on the web. Since February of 2015, Bodymovin’s creator, <a href="https://twitter.com/airnanan" target="_blank" rel="external">Hernan Torrisi</a>, has built a solid foundation by adding features and improvements to the plugin on a monthly basis. Our team (<a href="http://github.com/buba447" target="_blank" rel="external">Brandon Withrow</a> on <a href="https://github.com/airbnb/lottie-ios" target="_blank" rel="external">iOS</a>, <a href="https://twitter.com/gpeal8" target="_blank" rel="external">Gabriel Peal</a> on <a href="https://github.com/airbnb/lottie-android" target="_blank" rel="external">Android</a>, <a href="https://twitter.com/intelligibabble" target="_blank" rel="external">Leland Richardson</a> on <a href="https://github.com/airbnb/lottie-react-native" target="_blank" rel="external">React Native</a>, and <a href="https://twitter.com/therealsalih?lang=en" target="_blank" rel="external">I</a> on experience design) began our journey by building on top of Torrisi’s phenomenal work.</p>
-<p><img src="http://airbnb.design/wp-content/uploads/2017/02/icons.gif" alt="icons"></p>
-<p>Lottie allows engineers to build richer animations without the painstaking overhead of re-writing them. Nick Butcher’s<a href="https://medium.com/google-developers/animation-jump-through-861f4f5b3de4#.xlw1n2u2d" target="_blank" rel="external"> jump through</a> animation, Bartek Lipinski’s <a href="https://android.jlelse.eu/animatedvectordrawablecompat-3d9568727c53#.fmiujhcdj" target="_blank" rel="external">hamburger menu</a>, and Miroslaw Stanek’s <a href="http://frogermcs.github.io/twitters-like-animation-in-android-alternative/" target="_blank" rel="external">Twitter heart</a> demonstrate just how difficult and time consuming it can be to re-create animations from scratch. With Lottie, digging through frameworks for reference, guessing durations, manually creating Bézier curves, and re-making animations with nothing more than a GIF for reference will be a thing of the past. Now engineers can use exactly what the designer intended, exactly how it was made. To demonstrate that, we’ve recreated their animations and provided After Effects and JSON files of each in our sample app.</p>
-<p>Our goal is to support as many After Effects features as we possibly can, to allow for a lot more than simple icon animations. We’ve created a handful of other examples to show the library’s flexibility, richness, and deep feature set. In the sample app, there are also source files for a variety of different kinds of animations, including basic line art, character-based animations, and dynamic logo animations with multiple angles and cuts.</p>
-<p><img src="http://airbnb.design/wp-content/uploads/2017/01/screens_1.gif" alt="screens_1"></p>
-<p>We’ve already started shipping our own Lottie animations on several screens, including in-app notifications, full-frame animated illustrations, and in our review flow. And we plan to greatly expand our usage of animations in a fun yet useful way moving forward.</p>
-<p><img src="http://airbnb.design/wp-content/uploads/2017/01/screens_2.gif" alt="screens_2"></p>
-<h2 id="Flexible-and-efficient-solution"><a href="#Flexible-and-efficient-solution" class="headerlink" title="Flexible and efficient solution"></a><strong>Flexible and efficient solution</strong></h2><p>Airbnb is a global company that supports millions of guests and hosts, so having a flexible animation format that is playable on multiple platforms was extremely important to us. There are libraries similar to Lottie, such as Marcus Eckert’s <a href="http://www.marcuseckert.com/squall/" target="_blank" rel="external">Squall</a> and Facebook’s <a href="https://github.com/facebookincubator/Keyframes" target="_blank" rel="external">Keyframes</a>, but our goals are slightly different. Facebook picked a small set of After Effects features to support, since they were focusing mainly on reactions, but we want to support as many as possible. As for Squall, designers at Airbnb use it in combination with Lottie because it has an amazing After Effects preview app that’s become a necessary part of our workflow. However, it only supports iOS and our engineering teams needed a cross-platform solution.</p>
-<p>Lottie also has several features built into its API to make it more versatile and efficient. It supports loading JSON files over the network, which is useful for A/B testing. It also has an optional caching mechanism, so frequently used animations, such as a wish-list heart, can load a cached copy each time. Lottie animations can be driven by gestures using the animated progress feature, and animation speed can be manipulated by changing a simple value. iOS even supports adding additional native UI to an animation at runtime, which can be used for complex animated transitions.</p>
-<p>In addition to all of the After Effects features and API additions we’ve worked on so far, we have many ideas for the future. These include mapping views to Lottie animations, controlling view transitions with Lottie, support for <a href="http://www.battleaxe.co/rubberhose/" target="_blank" rel="external">Battle Axe’s RubberHose</a>, gradient, type, and image support. The hardest part is picking which features to tackle next.</p>
-<p><img src="http://airbnb.design/wp-content/uploads/2017/01/hardware.png" alt="hardware"></p>
-<h2 id="Building-community"><a href="#Building-community" class="headerlink" title="Building community"></a><strong>Building community</strong></h2><p>Releasing something as open source is more than just putting it out there for the public to use. It’s a bridge that connects people and creates community. As we got closer to releasing Lottie to designers and engineers via GitHub, we wanted to be sure to connect with the animation folks as well.</p>
-<p>We were inspired by the communities that <a href="http://9-squares.tumblr.com/" target="_blank" rel="external">9 Squares</a>, <a href="https://motioncorpse.tumblr.com/" target="_blank" rel="external">Motion Corpse</a>, and <a href="https://animography.net/products/mobilo" target="_blank" rel="external">Animography</a> have created. All three have brought together people from around the world, who otherwise would never have worked together, to collaborate on public animation projects. These projects take months of work and a lot of organization and wrangling by the respective teams, but they undoubtedly provide immense value for the animation community as a whole. Motion Corpse and Animography publicly share the After Effects source files as well, which provide tons of insights on how people work.</p>
-<p>Following their collaborative lead, we reached out to all three teams to contribute animations to our sample app. We’ve included an animation from Motion Corpse created by J.R. Canest, one of Al Boardman’s squares from the 9 Squares project, and an animated keyboard using Animography’s Mobilo animated typeface, which features work from more than two dozen artists. We’re hoping that the merging of these animation communities with the powerful engineering community will spark something special.</p>
-<p><img src="http://airbnb.design/wp-content/uploads/2017/01/community.gif" alt="community">We’d love to hear how you’re using Lottie — no matter if you’re a designer, animator, or engineer. Feel free to reach out to us directly at lottie@airbnb.com with your thoughts, feedback, and insights. We’re excited to see what the community around the world will do when they begin to use Lottie in ways we never imagined.</p>
-<h3 id="Download-Bodymovin-Lottie-iOS-Android-and-React-Native"><a href="#Download-Bodymovin-Lottie-iOS-Android-and-React-Native" class="headerlink" title="Download Bodymovin, Lottie iOS, Android and React Native."></a>Download <a href="https://github.com/bodymovin/bodymovin" target="_blank" rel="external">Bodymovin</a>, Lottie <a href="https://github.com/airbnb/lottie-ios" target="_blank" rel="external">iOS</a>, <a href="https://github.com/airbnb/lottie-android" target="_blank" rel="external">Android</a> and <a href="https://github.com/airbnb/lottie-react-native" target="_blank" rel="external">React Native</a>.</h3><p>This article was co-written by  <a href="http://github.com/buba447" target="_blank" rel="external">Brandon Withrow</a>,  <a href="https://twitter.com/gpeal8" target="_blank" rel="external">Gabriel Peal</a> and <a href="https://twitter.com/therealsalih?lang=en" target="_blank" rel="external">Salih Abdul-Karim</a>.</p>
-<p><img src="http://airbnb.design/lottie/" alt="Salih Abdul-Karim](http://airbnb.design/wp-content/uploads/2017/01/SalihAbdul-Karim-profile.jpg) Salih Abdul-Karim is an Experience and Motion Designer at Airbnb."></p>
-]]></content>
-    
-    <summary type="html">
-    
-      introduce lottie
-    
-    </summary>
-    
-      <category term="安卓" scheme="http://wanghaonanlpc.github.io/categories/%E5%AE%89%E5%8D%93/"/>
-    
-    
-      <category term="android" scheme="http://wanghaonanlpc.github.io/tags/android/"/>
-    
-      <category term="ui" scheme="http://wanghaonanlpc.github.io/tags/ui/"/>
-    
-      <category term="开源" scheme="http://wanghaonanlpc.github.io/tags/%E5%BC%80%E6%BA%90/"/>
-    
-      <category term="Airbnb" scheme="http://wanghaonanlpc.github.io/tags/Airbnb/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Lottie简介：Airbnb为本地应用程序添加动画的工具(翻译)</title>
     <link href="http://wanghaonanlpc.github.io/2017/03/03/Introducing-Lottie%EF%BC%88%E7%BF%BB%E8%AF%91%EF%BC%89/"/>
     <id>http://wanghaonanlpc.github.io/2017/03/03/Introducing-Lottie（翻译）/</id>
@@ -240,6 +256,53 @@
 <p>在他们的合作领导下，我们接触了所有三个团队，为我们的示例应用程序贡献动画。我们已经包括了由JR Canest创建的Motion Corpse的动画，来自9 Squares项目的Al Boardman的方块之一，以及使用Animography的Mobilo动画字体的动画键盘，其中包含超过二十个艺术家的作品。我们希望这些动画社区与强大的工程社群的合并将产生一些特别的东西。</p>
 <p><img src="http://airbnb.design/wp-content/uploads/2017/01/community.gif" alt="社区">我们很想听听你如何使用Lottie - 无论你是一个设计师，动画师或工程师。欢迎随时通过lottie@airbnb.com与您的想法，反馈和见解联系。我们很高兴看到当他们开始以我们从未想象的方式使用Lottie时，世界上的社区会做什么。</p>
 <h3 id="下载Bodymovin，Lottie-iOS，Android和React-Native。"><a href="#下载Bodymovin，Lottie-iOS，Android和React-Native。" class="headerlink" title="下载Bodymovin，Lottie iOS，Android和React Native。"></a>下载<a href="https://github.com/bodymovin/bodymovin" target="_blank" rel="external">Bodymovin</a>，Lottie <a href="https://github.com/airbnb/lottie-ios" target="_blank" rel="external">iOS</a>，<a href="https://github.com/airbnb/lottie-android" target="_blank" rel="external">Android</a>和<a href="https://github.com/airbnb/lottie-react-native" target="_blank" rel="external">React Native</a>。</h3><p>本文由<a href="http://github.com/buba447" target="_blank" rel="external">Brandon Withrow</a>，  <a href="https://twitter.com/gpeal8" target="_blank" rel="external">Gabriel Peal</a>  和  <a href="http://airbnb.design/lottie/" target="_blank" rel="external">Salih Abdul-Karim](https://twitter.com/therealsalih?lang=en)共同撰写   。 </a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      introduce lottie
+    
+    </summary>
+    
+      <category term="安卓" scheme="http://wanghaonanlpc.github.io/categories/%E5%AE%89%E5%8D%93/"/>
+    
+    
+      <category term="android" scheme="http://wanghaonanlpc.github.io/tags/android/"/>
+    
+      <category term="ui" scheme="http://wanghaonanlpc.github.io/tags/ui/"/>
+    
+      <category term="开源" scheme="http://wanghaonanlpc.github.io/tags/%E5%BC%80%E6%BA%90/"/>
+    
+      <category term="Airbnb" scheme="http://wanghaonanlpc.github.io/tags/Airbnb/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Lottie简介：Airbnb为本地应用程序添加动画的工具(原文)</title>
+    <link href="http://wanghaonanlpc.github.io/2017/03/03/Introducing-Lottie-%E5%8E%9F%E6%96%87/"/>
+    <id>http://wanghaonanlpc.github.io/2017/03/03/Introducing-Lottie-原文/</id>
+    <published>2017-03-03T03:23:46.000Z</published>
+    <updated>2017-03-03T03:57:07.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="http://airbnb.design/category/behind-the-scenes/" target="_blank" rel="external">BEHIND THE SCENES</a>     /  BY SALIH ABDUL-KARIM / 02.03<br><a href="http://airbnb.design/tag/animation/" target="_blank" rel="external">#ANIMATION</a> <a href="http://airbnb.design/tag/design/" target="_blank" rel="external">#DESIGN</a> <a href="http://airbnb.design/tag/engineering/" target="_blank" rel="external">#ENGINEERING</a> <a href="http://airbnb.design/tag/motion/" target="_blank" rel="external">#MOTION</a> <a href="http://airbnb.design/tag/open-source/" target="_blank" rel="external">#OPEN SOURCE</a> <a href="http://airbnb.design/tag/tools/" target="_blank" rel="external">#TOOLS</a></p>
+<h2 id="Lottie"><a href="#Lottie" class="headerlink" title="Lottie"></a>Lottie</h2><h3 id="Behind-the-scenes-of-our-new-open-source-animation-tool"><a href="#Behind-the-scenes-of-our-new-open-source-animation-tool" class="headerlink" title="Behind the scenes of our new open-source animation tool."></a>Behind the scenes of our new open-source animation tool.</h3><p>In the past, building complex animations for Android, iOS, and React Native apps was a difficult and lengthy process. You either had to add bulky image files for each screen size or write a thousand lines of brittle, hard-to-maintain code. Because of this, most apps weren’t using animation — despite it being a powerful tool for communicating ideas and creating compelling user experiences. One year ago, we set out to change that.</p>
+<p>Today, we’re happy to introduce our solution. Lottie is an iOS, Android, and React Native library that renders After Effects animations in real time, and allows native apps to use animations as easily as they use static assets. Lottie uses animation data exported as JSON files from an open-source After Effects extension called <a href="https://github.com/bodymovin/bodymovin" target="_blank" rel="external">Bodymovin</a>. The extension is bundled with a JavaScript player that can render the animations on the web. Since February of 2015, Bodymovin’s creator, <a href="https://twitter.com/airnanan" target="_blank" rel="external">Hernan Torrisi</a>, has built a solid foundation by adding features and improvements to the plugin on a monthly basis. Our team (<a href="http://github.com/buba447" target="_blank" rel="external">Brandon Withrow</a> on <a href="https://github.com/airbnb/lottie-ios" target="_blank" rel="external">iOS</a>, <a href="https://twitter.com/gpeal8" target="_blank" rel="external">Gabriel Peal</a> on <a href="https://github.com/airbnb/lottie-android" target="_blank" rel="external">Android</a>, <a href="https://twitter.com/intelligibabble" target="_blank" rel="external">Leland Richardson</a> on <a href="https://github.com/airbnb/lottie-react-native" target="_blank" rel="external">React Native</a>, and <a href="https://twitter.com/therealsalih?lang=en" target="_blank" rel="external">I</a> on experience design) began our journey by building on top of Torrisi’s phenomenal work.</p>
+<p><img src="http://airbnb.design/wp-content/uploads/2017/02/icons.gif" alt="icons"></p>
+<p>Lottie allows engineers to build richer animations without the painstaking overhead of re-writing them. Nick Butcher’s<a href="https://medium.com/google-developers/animation-jump-through-861f4f5b3de4#.xlw1n2u2d" target="_blank" rel="external"> jump through</a> animation, Bartek Lipinski’s <a href="https://android.jlelse.eu/animatedvectordrawablecompat-3d9568727c53#.fmiujhcdj" target="_blank" rel="external">hamburger menu</a>, and Miroslaw Stanek’s <a href="http://frogermcs.github.io/twitters-like-animation-in-android-alternative/" target="_blank" rel="external">Twitter heart</a> demonstrate just how difficult and time consuming it can be to re-create animations from scratch. With Lottie, digging through frameworks for reference, guessing durations, manually creating Bézier curves, and re-making animations with nothing more than a GIF for reference will be a thing of the past. Now engineers can use exactly what the designer intended, exactly how it was made. To demonstrate that, we’ve recreated their animations and provided After Effects and JSON files of each in our sample app.</p>
+<p>Our goal is to support as many After Effects features as we possibly can, to allow for a lot more than simple icon animations. We’ve created a handful of other examples to show the library’s flexibility, richness, and deep feature set. In the sample app, there are also source files for a variety of different kinds of animations, including basic line art, character-based animations, and dynamic logo animations with multiple angles and cuts.</p>
+<p><img src="http://airbnb.design/wp-content/uploads/2017/01/screens_1.gif" alt="screens_1"></p>
+<p>We’ve already started shipping our own Lottie animations on several screens, including in-app notifications, full-frame animated illustrations, and in our review flow. And we plan to greatly expand our usage of animations in a fun yet useful way moving forward.</p>
+<p><img src="http://airbnb.design/wp-content/uploads/2017/01/screens_2.gif" alt="screens_2"></p>
+<h2 id="Flexible-and-efficient-solution"><a href="#Flexible-and-efficient-solution" class="headerlink" title="Flexible and efficient solution"></a><strong>Flexible and efficient solution</strong></h2><p>Airbnb is a global company that supports millions of guests and hosts, so having a flexible animation format that is playable on multiple platforms was extremely important to us. There are libraries similar to Lottie, such as Marcus Eckert’s <a href="http://www.marcuseckert.com/squall/" target="_blank" rel="external">Squall</a> and Facebook’s <a href="https://github.com/facebookincubator/Keyframes" target="_blank" rel="external">Keyframes</a>, but our goals are slightly different. Facebook picked a small set of After Effects features to support, since they were focusing mainly on reactions, but we want to support as many as possible. As for Squall, designers at Airbnb use it in combination with Lottie because it has an amazing After Effects preview app that’s become a necessary part of our workflow. However, it only supports iOS and our engineering teams needed a cross-platform solution.</p>
+<p>Lottie also has several features built into its API to make it more versatile and efficient. It supports loading JSON files over the network, which is useful for A/B testing. It also has an optional caching mechanism, so frequently used animations, such as a wish-list heart, can load a cached copy each time. Lottie animations can be driven by gestures using the animated progress feature, and animation speed can be manipulated by changing a simple value. iOS even supports adding additional native UI to an animation at runtime, which can be used for complex animated transitions.</p>
+<p>In addition to all of the After Effects features and API additions we’ve worked on so far, we have many ideas for the future. These include mapping views to Lottie animations, controlling view transitions with Lottie, support for <a href="http://www.battleaxe.co/rubberhose/" target="_blank" rel="external">Battle Axe’s RubberHose</a>, gradient, type, and image support. The hardest part is picking which features to tackle next.</p>
+<p><img src="http://airbnb.design/wp-content/uploads/2017/01/hardware.png" alt="hardware"></p>
+<h2 id="Building-community"><a href="#Building-community" class="headerlink" title="Building community"></a><strong>Building community</strong></h2><p>Releasing something as open source is more than just putting it out there for the public to use. It’s a bridge that connects people and creates community. As we got closer to releasing Lottie to designers and engineers via GitHub, we wanted to be sure to connect with the animation folks as well.</p>
+<p>We were inspired by the communities that <a href="http://9-squares.tumblr.com/" target="_blank" rel="external">9 Squares</a>, <a href="https://motioncorpse.tumblr.com/" target="_blank" rel="external">Motion Corpse</a>, and <a href="https://animography.net/products/mobilo" target="_blank" rel="external">Animography</a> have created. All three have brought together people from around the world, who otherwise would never have worked together, to collaborate on public animation projects. These projects take months of work and a lot of organization and wrangling by the respective teams, but they undoubtedly provide immense value for the animation community as a whole. Motion Corpse and Animography publicly share the After Effects source files as well, which provide tons of insights on how people work.</p>
+<p>Following their collaborative lead, we reached out to all three teams to contribute animations to our sample app. We’ve included an animation from Motion Corpse created by J.R. Canest, one of Al Boardman’s squares from the 9 Squares project, and an animated keyboard using Animography’s Mobilo animated typeface, which features work from more than two dozen artists. We’re hoping that the merging of these animation communities with the powerful engineering community will spark something special.</p>
+<p><img src="http://airbnb.design/wp-content/uploads/2017/01/community.gif" alt="community">We’d love to hear how you’re using Lottie — no matter if you’re a designer, animator, or engineer. Feel free to reach out to us directly at lottie@airbnb.com with your thoughts, feedback, and insights. We’re excited to see what the community around the world will do when they begin to use Lottie in ways we never imagined.</p>
+<h3 id="Download-Bodymovin-Lottie-iOS-Android-and-React-Native"><a href="#Download-Bodymovin-Lottie-iOS-Android-and-React-Native" class="headerlink" title="Download Bodymovin, Lottie iOS, Android and React Native."></a>Download <a href="https://github.com/bodymovin/bodymovin" target="_blank" rel="external">Bodymovin</a>, Lottie <a href="https://github.com/airbnb/lottie-ios" target="_blank" rel="external">iOS</a>, <a href="https://github.com/airbnb/lottie-android" target="_blank" rel="external">Android</a> and <a href="https://github.com/airbnb/lottie-react-native" target="_blank" rel="external">React Native</a>.</h3><p>This article was co-written by  <a href="http://github.com/buba447" target="_blank" rel="external">Brandon Withrow</a>,  <a href="https://twitter.com/gpeal8" target="_blank" rel="external">Gabriel Peal</a> and <a href="https://twitter.com/therealsalih?lang=en" target="_blank" rel="external">Salih Abdul-Karim</a>.</p>
+<p><img src="http://airbnb.design/lottie/" alt="Salih Abdul-Karim](http://airbnb.design/wp-content/uploads/2017/01/SalihAbdul-Karim-profile.jpg) Salih Abdul-Karim is an Experience and Motion Designer at Airbnb."></p>
 ]]></content>
     
     <summary type="html">
@@ -1537,57 +1600,6 @@
       <category term="浏览器" scheme="http://wanghaonanlpc.github.io/tags/%E6%B5%8F%E8%A7%88%E5%99%A8/"/>
     
       <category term="ios" scheme="http://wanghaonanlpc.github.io/tags/ios/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hexo与github搭建个人博客(二)</title>
-    <link href="http://wanghaonanlpc.github.io/2017/02/21/Hexo%E4%B8%8Egithub%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2-%E4%BA%8C/"/>
-    <id>http://wanghaonanlpc.github.io/2017/02/21/Hexo与github搭建个人博客-二/</id>
-    <published>2017-02-21T11:25:48.000Z</published>
-    <updated>2017-03-01T13:04:50.000Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote>
-<p>介绍本地Hexo博客网站与Github叠加</p>
-</blockquote>
-<h2 id="Github"><a href="#Github" class="headerlink" title="Github"></a>Github</h2><h3 id="创建仓库"><a href="#创建仓库" class="headerlink" title="创建仓库"></a>创建仓库</h3><p>新建一个名为<code>你的用户名.github.io</code>的仓库，比如说，如果你的github用户名是test，那么你就新建<code>test.github.io</code>的仓库（必须是你的用户名，其它名称无效）。</p>
-<p>注意事项</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">1. 注册的邮箱一定要验证，否则不会成功；</div><div class="line">2. 仓库名字必须是：username.github.io，其中username是你的用户名；</div><div class="line">3. 仓库创建成功不会立即生效，需要过一段时间，大概10-30分钟，或者更久，我的等了半个小时才生效；</div></pre></td></tr></table></figure>
-<h3 id="绑定域名"><a href="#绑定域名" class="headerlink" title="绑定域名"></a>绑定域名</h3><blockquote>
-<p>此部分以后在介绍</p>
-</blockquote>
-<h2 id="Hexo"><a href="#Hexo" class="headerlink" title="Hexo"></a>Hexo</h2><h3 id="上传到Github"><a href="#上传到Github" class="headerlink" title="上传到Github"></a>上传到Github</h3><p>首先，<code>ssh key</code>必须要配置好</p>
-<p>然后，配置<code>_config.yml</code>中有关deploy的部分：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">  type: git</div><div class="line">  repository: git@github.com:wanghaonanlpc/wanghaonanlpc.github.io.git</div><div class="line">  branch: master</div></pre></td></tr></table></figure>
-<p>此时直接执行<code>hexo d</code>的话一般会报如下错误：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Deployer not found: github 或者 Deployer not found: git</div></pre></td></tr></table></figure>
-<p>原因是还需要安装一个插件：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install hexo-deployer-git --save</div></pre></td></tr></table></figure>
-<p>其它命令不确定，部署这个命令一定要用git bash，否则会提示<code>Permission denied (publickey).</code></p>
-<p>打开你的git bash，输入<code>hexo d</code>就会将本次有改动的代码全部提交，没有改动的不会：</p>
-<h2 id="常用hexo命令"><a href="#常用hexo命令" class="headerlink" title="常用hexo命令"></a>常用hexo命令</h2><p>常见命令</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">hexo new &quot;postName&quot; #新建文章</div><div class="line">hexo new page &quot;pageName&quot; #新建页面</div><div class="line">hexo generate #生成静态页面至public目录</div><div class="line">hexo server #开启预览访问端口（默认端口4000，&apos;ctrl + c&apos;关闭server）</div><div class="line">hexo deploy #部署到GitHub</div><div class="line">hexo help  # 查看帮助</div><div class="line">hexo version  #查看Hexo的版本</div></pre></td></tr></table></figure>
-<p>缩写：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">hexo n == hexo new</div><div class="line">hexo g == hexo generate</div><div class="line">hexo s == hexo server</div><div class="line">hexo d == hexo deploy</div></pre></td></tr></table></figure>
-<p>组合命令：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">hexo s -g #生成并本地预览</div><div class="line">hexo d -g #生成并上传</div></pre></td></tr></table></figure>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>到此已经可以完成Hexo与Github搭建个人博客。</p>
-<blockquote>
-<p>相关文章<a href="http://www.cnblogs.com/liuxianan/p/build-blog-website-by-hexo-github.html#绑定域名" target="_blank" rel="external">小茗同学的博客园</a></p>
-</blockquote>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;blockquote&gt;
-&lt;p&gt;介绍本地Hexo博客网站与Github叠加&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&quot;Github&quot;&gt;&lt;a href=&quot;#Github&quot; class=&quot;headerlink&quot; title=&quot;Github&quot;&gt;&lt;/a&gt;Github&lt;/h2&gt;&lt;
-    
-    </summary>
-    
-      <category term="hexo" scheme="http://wanghaonanlpc.github.io/categories/hexo/"/>
-    
     
   </entry>
   
