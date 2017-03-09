@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://wanghaonanlpc.github.io/"/>
-  <updated>2017-03-09T09:53:15.000Z</updated>
+  <updated>2017-03-09T09:57:46.000Z</updated>
   <id>http://wanghaonanlpc.github.io/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://wanghaonanlpc.github.io/2017/03/09/Android-Studio-2-3/"/>
     <id>http://wanghaonanlpc.github.io/2017/03/09/Android-Studio-2-3/</id>
     <published>2017-03-09T09:39:58.000Z</published>
-    <updated>2017-03-09T09:53:15.000Z</updated>
+    <updated>2017-03-09T09:57:46.000Z</updated>
     
     <content type="html"><![CDATA[<h1 id="Android-Studio-2-3-更新小记"><a href="#Android-Studio-2-3-更新小记" class="headerlink" title="Android Studio 2.3 更新小记"></a>Android Studio 2.3 更新小记</h1><p>作为 Google 官方出版并维护的 IDE，被全球数以百万计的 Android 开发者钟爱并使用的开发工具，Android Studio，在前几天的三月二号，正式迎来了 2.3 稳定版的更新。身为 Android 迷的你，赶快来和我一起看看新版 Android Studio 给我们带来了哪些变化吧。</p>
 <h1 id="编译相关"><a href="#编译相关" class="headerlink" title="编译相关"></a>编译相关</h1><hr>
