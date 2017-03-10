@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://wanghaonanlpc.github.io/"/>
-  <updated>2017-03-09T10:06:40.000Z</updated>
+  <updated>2017-03-10T09:34:38.000Z</updated>
   <id>http://wanghaonanlpc.github.io/</id>
   
   <author>
@@ -14,6 +14,134 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>何为软件即服务（SaaS）？</title>
+    <link href="http://wanghaonanlpc.github.io/2017/03/10/%E4%BD%95%E4%B8%BA%E8%BD%AF%E4%BB%B6%E5%8D%B3%E6%9C%8D%E5%8A%A1%EF%BC%88SaaS%EF%BC%89%EF%BC%9F/"/>
+    <id>http://wanghaonanlpc.github.io/2017/03/10/何为软件即服务（SaaS）？/</id>
+    <published>2017-03-10T09:02:57.000Z</published>
+    <updated>2017-03-10T09:34:38.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<p>原    文：<a href="https://empireflippers.com/saas-business-model-explained/" target="_blank" rel="external">The SaaS Business Model Explained</a><br>译    文：Alex<br>作    者：Greg Elfrink</p>
+</blockquote>
+<p>软件即服务（SaaS）是一种相对较新的商业模式。</p>
+<p>这是另一个模型，字面上不存在没有互联网。前提是一件软件托管在云基础架构上（即通过网络浏览器操作），企业每月支付费用以访问该软件。</p>
+<p>SaaS业务一般可能是我们的解释器系列中最复杂的业务模式。它通常需要大量的编码知识，结合大量的用户界面设计技能，真正使SaaS产品值得。</p>
+<p>SaaS企业和软件公司之间的主要区别是SaaS托管在云中。基本上，这消除了对最终用户许可证激活软件和托管软件的任何基础设施的需要。相反，SaaS公司承载其成员资格。客户只需登录他们的帐户，他们就可以获得完全访问权限。</p>
+<h2 id="SaaS在需求"><a href="#SaaS在需求" class="headerlink" title="SaaS在需求"></a>SaaS在需求</h2><p>你可以想象，这是一个令人难以置信的吸引力作为一种服务。不想投入大量资金创建IT基础架构的企业主通常使用SaaS解决方案，而且SaaS解决方案通常对其业务（例如使用SalesForce的销售团队或使用Zendesk的客户服务部门）变得非常不可或缺。SaaS业务为为其业务使用服务的客户消除了这种风险，他们通常只支付小额的会员费用。</p>
+<p>虽然SaaS业务有很多方式可以赚钱，但SaaS业务的面包和黄油通常是会员收入。这个会员费是让客户访问产品和软件的功能。</p>
+<p>当我们进入增长战略时，我们将更深入地了解其他收入流，SaaS业务所有者可以考虑增加他们的频道。</p>
+<p>在我们这样做之前，重要的是要注意，重视SaaS业务可能与我们覆盖的其他业务模式有点不同。这是因为经常需要增长SaaS业务的巨大再投资可以通过所有的利润吃饭，导致许多人基于他们对持续，稳定增长的信心购买SaaS业务。</p>
+<h2 id="SaaS业务的3个时期"><a href="#SaaS业务的3个时期" class="headerlink" title="SaaS业务的3个时期"></a>SaaS业务的3个时期</h2><p>对于每个SaaS业务，有三个主要阶段，他们将要体验。大多数人都理解启动阶段，然后每个人都梦想稳定的金鹅阶段，当钱正在滚动。其中一个阶段，通常没有谈到，虽然它是一个SaaS业务的主要压力时期之一他们要么打破它，要么打破它，被称为Hypergrowth。</p>
+<p>让我们深入三个阶段：</p>
+<ol>
+<li><strong>启动</strong> - 这包括获得一切，编程工作产品，“上市”，以获得您的前几个客户。</li>
+<li><strong>过度增长</strong> - 如果市场喜欢您的产品，您可能会在企业采用您的软件时很快体验到巨大的增长。虽然这听起来不错，但这通常会花费更多的钱，因为您需要快速扩展数据，存储，带宽和各种技术特性，以支持新收购的客户。记住SaaS产品的客户经常喜欢的产品，因为他们不需要为他们的业务创建一个IT基础设施？嗯，他们不需要创建一个的原因是因为你的SaaS产品通过他们的成员为他们提供后端。</li>
+<li><strong>稳定的黄金鹅</strong> - 这是您的SaaS业务稳定下来的阶段。你开始获得一个非常健康的利润，并以快速的速度获得新客户不会测试你的基础设施限制，就像在增长阶段。你也会熟悉“搅拌”，我们即将进入。</li>
+</ol>
+<p>许多SaaS产品实际上是相当不错的，但是不能管理过度增长是许多企业所遭受的，这可能导致许多失败。我们将在本解释文章的“生长策略”部分中讨论如何缓解这一点。</p>
+<h2 id="成功的SaaS业务示例"><a href="#成功的SaaS业务示例" class="headerlink" title="成功的SaaS业务示例"></a>成功的SaaS业务示例</h2><p>SaaS业务可以是涵盖许多不同事物的一系列软件。然而，SaaS企业通过允许其更有效地运行，对其他企业最有帮助。</p>
+<p>让我们来看看SaaS世界中的一些重大成功。</p>
+<p><a href="http://www.salesforce.com/" target="_blank" rel="external">SalesForce.com</a></p>
+<p>销售队伍是最早成立于1999年的软件公司SaaS业务之一。他们帮助无数企业管理他们的销售团队，处理他们的潜在客户，并有效地帮助他们跟踪他们最好的潜在客户。该产品已取得巨大成功，并且是大多数SaaS业主希望通过自己的产品实现的典范。</p>
+<p><a href="https://meetedgar.com/" target="_blank" rel="external">认识Edgar</a></p>
+<p>Edgar是一种社交媒体自动化SaaS产品，可以在某人的工作负载上消除数百小时的时间。它自动填充一个社交队列，并允许职位被回收一段时间。</p>
+<p>它运行的前提是，由于大多数社交媒体帖子不会被跟随某人的Twitter Feed或Facebook页面的人所看到，因此该内容可以被回收，并随着时间的推移向更多的受众展示。</p>
+<p>虽然当然小于SalesForce.com，但是Edgar在社交媒体SaaS领域已经变得非常重要，值得观看和模拟其他SaaS业务。</p>
+<p><a href="https://meetedgar.com/" target="_blank" rel="external">Zendesk</a></p>
+<p>然后有这个SaaS的juggernaut。Zendesk是一个客户服务票务系统，因其小型，中型甚至大型企业的可用性而闻名，更好地控制其客户服务，最终为终端消费者带来更好的体验。</p>
+<h2 id="SaaS商业模式的优势"><a href="#SaaS商业模式的优势" class="headerlink" title="SaaS商业模式的优势"></a>SaaS商业模式的优势</h2><p>SaaS业务模式的优点是，您的客户可以疯狂地忠实于您的产品。如果您的SaaS产品代表的是其业务不可或缺的一部分，这一点尤其重要。毕竟，他们通常成为你的秘密社会的“成员”。</p>
+<p>例如，Zendesk提供的软件可帮助企业创建有效的客户服务解决方案。可能有一个新的票务软件出来，打击了Zendesk出水，但因为Zendesk对于企业的成功至关重要，并且对于该业务流程是不可或缺的，业务不可能改变新的和改进的解决方案的一切。</p>
+<p>这种忠诚度可以创造持续多年和多年的客户，增加了新兴的经常性收入，使SaaS产品如此有利可图。</p>
+<p>显然，这是SaaS模式的下一个大项目。每个客户在技术上只是每月租用您的软件，而不是直接拥有一次性购买。</p>
+<p>这意味着每个月你都会从这个客户那里赚取更多的利润。经常性收入往往是那些参与在线业务的人的梦想，而SaaS业务模式有这种经常性收入的想法的核心。</p>
+<h2 id="SaaS模型的缺点"><a href="#SaaS模型的缺点" class="headerlink" title="SaaS模型的缺点"></a>SaaS模型的缺点</h2><p>虽然经常性收入是非常好的，大量的金钱，让你的SaaS业务进行不是几乎同样有吸引力。</p>
+<p>有一开始你必须做的各种投资，如雇用良好的开发人员和程序员和UI设计师，将结合他们的技能，使您的产品尽可能用户友好和高效。</p>
+<p>一旦你有一个产品落地，并有少数客户证明模型的价值，你很可能需要重新投资你的所有利润 - 加上一些更多的资本，以扩大业务。您将需要扩展您的数据功能，安全性，存储，让您的团队周围处理维护，并管理任何意外的问题，可能会在这个增长阶段出现。</p>
+<p>在资本密集型商业模式之外，SaaS的另一个消极面是，它通常不是一个简单的产品。虽然模型本身很容易理解，即使对于理解所有编码的人来说，有效地保持实际的产品也是困难的。</p>
+<p>这可能会使SaaS产品的销售更加困难，因为您正在寻找更多的潜在商业买家，比如对<a href="https://empireflippers.com/amazon-fba-business-model-explained/" target="_blank" rel="external">亚马逊FBA</a>或<a href="https://empireflippers.com/lead-gen-business-model-explained/" target="_blank" rel="external">主要业务</a>感兴趣的人。</p>
+<h2 id="买家需要知道的"><a href="#买家需要知道的" class="headerlink" title="买家需要知道的"></a>买家需要知道的</h2><p>当涉及到购买一个较小的SaaS业务时，只有真正了解软件所涉及的编程或编码才是值得的。这当然不是这样的情况，如果它是一个更大的SaaS业务 - 开发团队与收购，卖方已经概述了所有的流程和系统，所以如果团队已经离开，你可以找到另一个开发商相对容易占据他们的地位。</p>
+<p>您还要确保卖家拥有SaaS业务的所有编码，知识产权和品牌。确保您购买的是整个交易，而不仅仅是SaaS业务的一部分。</p>
+<p>您绝对需要知道流失率是什么（客户每月订阅软件的速率）以及终身价值（LTV）和每个客户的成本获取（CAC）。这些是重要的指标，因为这些是业务的生命迹象。如果你的CAC太高，太低的LTV由于高流失率，SaaS业务不会是有吸引力的购买。</p>
+<p>除非你相当擅长调整和增长各种营销渠道。在这种情况下，如果您知道产品运行良好，并且您确切知道营销漏斗或用户界面的哪些部分需要修复以解决这种情况，那么SaaS业务可能是您的极低价值的购买。</p>
+<p>最后，当寻找SaaS业务来购买时，最好购买一个已经达到一个一致的客户增长水平，而不是爆炸性增长。如前所述，爆炸式增长可能会导致相当多的问题，在适当扩大一切。</p>
+<p>最好是购买一个稳定的业务（几乎总是），而不是一个仍在经历大规模增长周期的业务。稳定的业务将使您能够更有效地调整您的营销渠道并优化业务。</p>
+<h2 id="什么卖家需要知道"><a href="#什么卖家需要知道" class="headerlink" title="什么卖家需要知道"></a>什么卖家需要知道</h2><p>SaaS业务卖家可以做的第一件事是找到尽可能增加他们的LTV的方法。</p>
+<p>LTV数字越高，业务越有吸引力，因为SaaS业务是所有经常性收入。如果LTV足够高或者轨道增加，这可能是一个巨大的交易者。</p>
+<p>显然，你也想减少你的CAC和搅动。这可以通过调整营销渠道，甚至可以更改订阅定价。</p>
+<p>除了这两个明显的指标，你应该有一个良好的开发团队，交给新的所有者。或者至少，有大量的文档和资源供买家用来寻找新的开发人员。用于创建软件的代码应完全由您拥有，包括与业务相关的所有内容（品牌，营销等）。</p>
+<p>最后，训练你的软件买家。提供某种培训手册供他们阅读，以熟悉实际的产品和业务。在这个培训中，你应该真正突出你所拥有的任何障碍，以及增长潜力在哪里，所以新买家可以开始向这个方向移动。</p>
+<p>不要害怕谈论你的业务的负面因素。很多时候，负面因素正是启发新买家实际购买您的SaaS业务的原因，因为他们看到解决这个问题的解决方案。</p>
+<h2 id="谁最适合SaaS商业模式？"><a href="#谁最适合SaaS商业模式？" class="headerlink" title="谁最适合SaaS商业模式？"></a>谁最适合SaaS商业模式？</h2><p>如上所述，购买SaaS业务的人的利基将比其他业务模式更为狭窄，因为增长和维护这种业务所需的内在技能。</p>
+<p>话虽如此，有些人适合各种各样的买家角色，仍然非常渴望购买像这样的企业 - 有很好的理由。</p>
+<h3 id="战略Sally"><a href="#战略Sally" class="headerlink" title="战略Sally"></a>战略Sally</h3><p>SaaS业务对像战略Sally这样的人来说非常有意义，他们试图转向某个市场或人口。例如，如果Strategic Sally还有一个信息产品业务进行有效的客户关系管理，她可能会注意到一个SaaS业务，可以用作CRM来推销她的信息产品客户。</p>
+<h3 id="DIY戴夫"><a href="#DIY戴夫" class="headerlink" title="DIY戴夫"></a>DIY戴夫</h3><p>SaaS业务模式真的会吸引那些拥有“自己动手”态度的人。这些业务非常适合像DIY Dave这样的人深入了解。他们可以深入了解实际产品的编程和编码，学习如何降低客户获取成本（CAC），同时调整营销渠道以提高每个客户的终身价值（LTV）。</p>
+<h3 id="投资者伊万"><a href="#投资者伊万" class="headerlink" title="投资者伊万"></a>投资者伊万</h3><p>SaaS业务是投资者Ivan投资一些资本的理想场所。SaaS业务可以有巨大的收入潜力，经常性收入来启动，并且由于SaaS业务确实需要一些资金真正起起来和运行，投资者Ivan可能会发现一个业务合作伙伴在这个利基比一个<a href="https://empireflippers.com/adsense-business-model-explained/" target="_blank" rel="external">Adsense业务</a>更容易<a href="https://empireflippers.com/adsense-business-model-explained/" target="_blank" rel="external">模型</a>。</p>
+<h2 id="SaaS增长策略"><a href="#SaaS增长策略" class="headerlink" title="SaaS增长策略"></a>SaaS增长策略</h2><p>当涉及到SaaS业务的发展时，你可以采取很多方向。</p>
+<p>你选择的增长策略确实取决于你的核心竞争力和过去为你带来的最大的挑战。无论如何，这里有一些想法，可以用来将SaaS业务发展到下一阶段的收入。</p>
+<h3 id="增加有机流量"><a href="#增加有机流量" class="headerlink" title="增加有机流量"></a>增加有机流量</h3><p>不言而喻，转换最高流量的最佳流量通常是来自Google和Bing等地区的自然搜索流量。有一种方法可以看到如何增加你的有机搜索是通过简单地看看你当前排名使用一个工具，如SEMRush的位置。</p>
+<p>这实际上是一个很容易实施的策略，我在这篇文章中详细讨论<a href="https://empireflippers.com/growing-adsense-amazon-sites/" target="_blank" rel="external">了Adsense和亚马逊企业的低迷</a>。</p>
+<h3 id="推出新的营销渠道"><a href="#推出新的营销渠道" class="headerlink" title="推出新的营销渠道"></a>推出新的营销渠道</h3><p>当谈到测试一个新的战略，有一些牵引目标到位。确保您将在新的营销渠道投入足够的资金，您可以达到统计显着的数字。否则，投资没有真正的意义。</p>
+<p>一个新的营销渠道可以简单到拿你最好的有机排名或最流行的内容，并将这些内容转换成Youtube视频。毕竟，这是世界上第二大的搜索引擎，所以值得在那里找到。</p>
+<h3 id="添加产品销量"><a href="#添加产品销量" class="headerlink" title="添加产品销量"></a>添加产品销量</h3><p>这是一个梦幻般的选择提供给现有客户，因为它为他们更好地，并将赢得更多。这些加售可以是更高端的包，其中客户每月支付更多以接收额外的特征，好处，数据存储或所有上述。它也可以是一个单一的加售 - 也许是一个信息产品，如高影响力的网络研讨会，如何使用该软件，以你的最佳优势。</p>
+<p>无论您决定何种加售，始终确保考虑提供该服务的成本，因此您可以将其纳入您的客户必须为升级服务支付的最终定价。</p>
+<h3 id="更快。更强。清洁器。"><a href="#更快。更强。清洁器。" class="headerlink" title="更快。更强。清洁器。"></a>更快。更强。清洁器。</h3><p>你可以做的一件事来提高客户满意度和忠诚度（并降低一些基础设施成本）是通过减少坏的代码使你的软件运行更快。冗长的错误或浪费的代码可以提高你的软件的速度，从而增加你的客户整体的幸福与产品巨大的不同。</p>
+<p>使它精益，平均，甚至更有利可图。</p>
+<h3 id="添加联属计划"><a href="#添加联属计划" class="headerlink" title="添加联属计划"></a>添加联属计划</h3><p>添加联属计划可以为您的业务带来巨大的福利。特别是如果你提供一个有利可图的程序，可以吸引熟练的附属机构推广你的报价。</p>
+<p>有很多路线可以去，但如果你想要最好的方式吸引附属公司，你可能想提供一个剩余收入机会。在SaaS业务模式中，这通常比一次性付款更有吸引力。</p>
+<p>另一方面，如果你有你的CAC和LTV号码，你可能只是提供一个大的，预付，一次性付款给联属网络 - 知道一般客户将留在足够长的时间，以收回支付联盟的成本那钱。</p>
+<p>一些关联公司实际上更喜欢这种，因为他们的营销活动通常是在剃刀薄利润。</p>
+<p>无论如何，联盟计划可以是一个惊人的方式，以提高你的营销力量，同时还需要大量的实际营销工作，你的盘子。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;原    文：&lt;a href=&quot;https://empireflippers.com/saas-business-model-explained/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;The SaaS Business 
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>IaaS，PaaS和SaaS公司做什么？</title>
+    <link href="http://wanghaonanlpc.github.io/2017/03/10/IaaS%EF%BC%8CPaaS%E5%92%8CSaaS%E5%85%AC%E5%8F%B8%E5%81%9A%E4%BB%80%E4%B9%88%EF%BC%9F/"/>
+    <id>http://wanghaonanlpc.github.io/2017/03/10/IaaS，PaaS和SaaS公司做什么？/</id>
+    <published>2017-03-10T04:08:59.000Z</published>
+    <updated>2017-03-10T09:35:49.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<p>原    文：<a href="http://venturebeat.com/2011/11/14/cloud-iaas-paas-saas/" target="_blank" rel="external">Cloud 101: What the heck do IaaS, PaaS and SaaS companies do?</a><br>作    者：<a href="http://venturebeat.com/author/sean-ludwig" target="_blank" rel="external">SEAN LUDWIG</a><br>译    文：<a href="https://wanghaonanlpc.github.io/">一个老白</a></p>
+</blockquote>
+<p>任何遵循技术趋势的人都无疑听到过去几个月中云服务在几十亿亿次的时间里出现。但是如果你不知道PaaS，IaaS和SaaS之间的区别，不要担心 - 你远不是孤独。</p>
+<p>让我们从头开始。“云”是互联网的比喻，“云计算”正在使用互联网来访问存储或运行在远程服务器上的应用程序，数据或服务。</p>
+<p>当你打破它，任何提供基于互联网的计算，存储和开发方法的公司可以在技术上被称为云公司。然而，并不是所有的云公司都是一样的。通常，这些公司专注于提供三类云计算服务之一。这些不同的段被称为云的“层”。</p>
+<p>不是每个人都是CTO或IT经理，所以有时候跟随云技术背后的隐语可能会很艰难。随着我们在本月底<a href="http://venturebeat.com/events/cloudbeat2011/" target="_blank" rel="external">召开</a>的第一届<a href="http://venturebeat.com/events/cloudbeat2011/" target="_blank" rel="external">CloudBeat 2011年会议</a>，我们认为这将是一个很好的机会，了解每一层服务的目的和一些公司的例子，以帮助给每个词更有意义。</p>
+<h3 id="云层"><a href="#云层" class="headerlink" title="云层"></a>云层</h3><p>云计算公司是通过互联网提供其服务的任何公司。这些服务分为三个不同的类别或层。云计算的各个层面相互依存，是基础设施即服务（IaaS），平台即服务（PaaS）和软件即服务（SaaS）。基础设施位于底部，平台在中间，软件在顶部。其他“软”层也可以添加在这些层的顶部，使用成本和安全性等元素扩展了云的大小和灵活性。</p>
+<p>下面是一个图表，显示了云计算的三个主要层的简化说明：</p>
+<p><a href="http://1u88jj3r4db2x4txp44yqfj1.wpengine.netdna-cdn.com/wp-content/uploads/2011/11/iaas-paas-saas.jpg" target="_blank" rel="external"><img src="http://1u88jj3r4db2x4txp44yqfj1.wpengine.netdna-cdn.com/wp-content/uploads/2011/11/iaas-paas-saas.jpg" alt="IaaS-PaaS-SaaS"></a></p>
+<h3 id="IaaS：基础设施即服务"><a href="#IaaS：基础设施即服务" class="headerlink" title="IaaS：基础设施即服务"></a>IaaS：基础设施即服务</h3><p>第一个主要层是基础架构即服务或IaaS。（有时称为硬件即服务）几年前，如果你想在办公室运行业务应用程序并控制公司网站，你会购买服务器和其他昂贵的硬件，以控制本地应用程序，并使你的业务运行顺利。</p>
+<p>但现在，使用IaaS，您可以将您的硬件需求外包给其他人。IaaS公司提供非现场服务器，存储和网络硬件，您可以通过Internet租用和访问。从维护成本和浪费的办公空间中，公司可以在这个硬件上运行他们的应用程序，并随时访问它。</p>
+<p>IaaS中的一些最大的名字包括亚马逊，微软，VMWare，Rackspace和红帽。虽然这些公司有不同的专业 - 有些，如亚马逊和微软，想要提供给你而不仅仅是IaaS - 他们是通过销售你原始计算能力和托管你的网站的愿望。</p>
+<h3 id="PaaS：平台即服务"><a href="#PaaS：平台即服务" class="headerlink" title="PaaS：平台即服务"></a>PaaS：平台即服务</h3><p>云的第二个主要层称为平台即服务（PaaS），有时称为中间件。这个类别的基本思想是，您公司的所有开发都可以在这一层上发生，从而节省您的时间和资源。</p>
+<p>PaaS公司提供各种各样的解决方案，用于通过Internet开发和部署应用程序，如虚拟化服务器和操作系统。这为您节省了硬件上的金钱，也使分散的员工更容易协作。Web应用程序管理，应用程序设计，应用程序托管，存储，安全和应用程序开发协作工具都属于这一类。</p>
+<p>目前最大的PaaS提供商有Google App Engine，Microsoft Azure，Saleforce的Force.com，Salesforce拥有的Heroku和<a href="http://venturebeat.com/2011/08/23/engine-yard-acquires-orchestra/" target="_blank" rel="external">Engine Yard</a>。我们撰写的一些PaaS初创公司包括<a href="http://venturebeat.com/2011/08/11/appfog-raises-8m-to-host-powerful-web-apps-in-the-cloud/" target="_blank" rel="external">AppFog</a>，<a href="http://venturebeat.com/2011/10/31/mendix-grabs-13m-to-fuel-fast-enterprise-app-development/" target="_blank" rel="external">Mendix</a>和<a href="http://venturebeat.com/2011/11/10/standing-cloud-cloud-app-management/" target="_blank" rel="external">Standing Cloud</a>。</p>
+<h3 id="SaaS：软件即服务"><a href="#SaaS：软件即服务" class="headerlink" title="SaaS：软件即服务"></a>SaaS：软件即服务</h3><p>云的第三层和最后一层是软件即服务或SaaS。这个层是你最有可能在你的日常生活中进行交互的层，它几乎总是可以通过网络浏览器访问。在可以通过Internet访问的远程服务器上托管的任何应用程序都被视为SaaS。</p>
+<p>您完全从网络消费的服务，如Netflix，MOG，Google Apps，Box.net，Dropbox和<a href="http://venturebeat.com/2011/10/28/icloud-steve-jobs-legacy/" target="_blank" rel="external">苹果的新iCloud</a>属于这一类。无论这些Web服务是用于商业，娱乐还是两者，它们都是技术上的一部分。</p>
+<p>用于业务的一些常见SaaS应用包括Citrix的GoToMeeting，Cisco的WebEx，Salesforce的CRM，ADP，Workday和SuccessFactors。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;原    文：&lt;a href=&quot;http://venturebeat.com/2011/11/14/cloud-iaas-paas-saas/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Cloud 101: What the 
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>Android Studio 2.3</title>
@@ -1487,117 +1615,6 @@
     
     </summary>
     
-    
-  </entry>
-  
-  <entry>
-    <title>那些你听到的前端名词</title>
-    <link href="http://wanghaonanlpc.github.io/2017/02/22/%E9%82%A3%E4%BA%9B%E4%BD%A0%E5%90%AC%E5%88%B0%E7%9A%84%E5%89%8D%E7%AB%AF%E5%90%8D%E8%AF%8D/"/>
-    <id>http://wanghaonanlpc.github.io/2017/02/22/那些你听到的前端名词/</id>
-    <published>2017-02-22T12:55:04.000Z</published>
-    <updated>2017-02-22T13:30:06.000Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote>
-<p>那些你听到的前端名词</p>
-</blockquote>
-<h3 id="NodeJs"><a href="#NodeJs" class="headerlink" title="NodeJs"></a>NodeJs</h3><blockquote>
-<p>Node.js是JavaScript在服务器端的一个运行环境，也是一个工具库，用来和服务器端其他软件互动。它的JavaScript解释器，采用了Google公司的V8引擎。</p>
-</blockquote>
-<p>nodejs是由<a href="https://github.com/ry" target="_blank" rel="external">Ryan Dahl</a>写的。他做nodejs的初衷是为了做一个高性能是web服务器。<br>为了实现高性能服务器，实现要点是：</p>
-<ul>
-<li>事件驱动</li>
-<li>非阻塞I / O（异步I / O）</li>
-</ul>
-<h4 id="nodejs的特点"><a href="#nodejs的特点" class="headerlink" title="nodejs的特点"></a>nodejs的特点</h4><ul>
-<li>异步I / O</li>
-<li>事件与回调函数</li>
-<li>单线程</li>
-</ul>
-<h4 id="nodejs优缺点"><a href="#nodejs优缺点" class="headerlink" title="nodejs优缺点"></a>nodejs优缺点</h4><p>优点</p>
-<ul>
-<li>高并发（最重要的优点）</li>
-<li>适合I / O密集型应用</li>
-</ul>
-<h5 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h5><ul>
-<li>不适合CPU密集型应用; CPU密集型应用给节点带来的挑战主要是：由于JavaScript单线程的原因，如果有长时间运行的计算（比如大循环），将会导致CPU时间片不能释放，使得后续I / O无法发起<br>解决方案：分解大型运算任务为多个小任务，使得运算能够适时释放，不阻塞I / O调用的发起</li>
-<li>可靠性低，一旦代码某个环节崩溃，整个系统都崩溃<br>解决方案：Nnigx反向代理，负载均衡，开多个进程，绑定多个端口;开多个进程监听同一个端口，使用集群模块;也可以使用forever或pm2模块</li>
-<li>开源组件库质量参差不齐，更新快，向下不兼容</li>
-</ul>
-<h3 id="Vue-js"><a href="#Vue-js" class="headerlink" title="Vue.js"></a>Vue.js</h3><blockquote>
-<p>Vue.js（读音 /vjuː/, 类似于 <strong>view</strong>） 是一套构建用户界面的 <strong>渐进式框架</strong>。与其他重量级框架不同的是，Vue 采用自底向上增量开发的设计。Vue 的核心库只关注视图层，并且非常容易学习，非常容易与其它库或已有项目整合。另一方面，Vue 完全有能力驱动采用<a href="http://cn.vuejs.org/v2/guide/single-file-components.html" target="_blank" rel="external">单文件组件</a>和 <a href="http://github.com/vuejs/awesome-vue#libraries--plugins" target="_blank" rel="external">Vue 生态系统支持的库</a>开发的复杂单页应用。</p>
-</blockquote>
-<h4 id="Vue-js-主要是干啥的？"><a href="#Vue-js-主要是干啥的？" class="headerlink" title="Vue.js 主要是干啥的？"></a>Vue.js 主要是干啥的？</h4><p>​    它是一个 MVVM 前端框架<br>​    Model / View / ViewModel<br>​    我们不需要撰写任何 DOM 操作代码：被绑定增强的 HTML 模板是底层数据状态的声明式的映射，    数据不过是普通 JavaScript 对象。我们的视图完全由数据驱动。</p>
-<h4 id="为什么要用Vue-js"><a href="#为什么要用Vue-js" class="headerlink" title="为什么要用Vue.js"></a>为什么要用Vue.js</h4><pre><code>1.  清晰简单的API让业务代码更好的组织
-2.  解决了前端交互复杂而带来的性能问题
-3.  健全、颜值高的官⽅⽂档
-4.  完整的开发生态链
-</code></pre><h4 id="哪些公司在用Vue-js"><a href="#哪些公司在用Vue-js" class="headerlink" title="哪些公司在用Vue.js"></a>哪些公司在用Vue.js</h4><p>​    Google，Facebook，Airbnb，微博 小米 阿里巴巴，百度，饿了么，58</p>
-<h3 id="React-js"><a href="#React-js" class="headerlink" title="React.js"></a>React.js</h3><blockquote>
-<p>待整理</p>
-</blockquote>
-<h3 id="Angular-js"><a href="#Angular-js" class="headerlink" title="Angular.js"></a>Angular.js</h3><blockquote>
-<p>待整理</p>
-</blockquote>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;blockquote&gt;
-&lt;p&gt;那些你听到的前端名词&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h3 id=&quot;NodeJs&quot;&gt;&lt;a href=&quot;#NodeJs&quot; class=&quot;headerlink&quot; title=&quot;NodeJs&quot;&gt;&lt;/a&gt;NodeJs&lt;/h3&gt;&lt;blockquote&gt;
-    
-    </summary>
-    
-      <category term="前端" scheme="http://wanghaonanlpc.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
-    
-      <category term="javascript" scheme="http://wanghaonanlpc.github.io/categories/%E5%89%8D%E7%AB%AF/javascript/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>移动端app内置浏览器优化</title>
-    <link href="http://wanghaonanlpc.github.io/2017/02/21/%E7%A7%BB%E5%8A%A8%E7%AB%AFapp%E5%86%85%E7%BD%AE%E6%B5%8F%E8%A7%88%E5%99%A8%E4%BC%98%E5%8C%96/"/>
-    <id>http://wanghaonanlpc.github.io/2017/02/21/移动端app内置浏览器优化/</id>
-    <published>2017-02-21T13:01:06.000Z</published>
-    <updated>2017-02-22T12:59:04.000Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote>
-<p>未总结完，待续</p>
-</blockquote>
-<h5 id="微信"><a href="#微信" class="headerlink" title="微信"></a>微信</h5><p>Blink内核与Webkit内核</p>
-<p>Blink内核</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">blink内核是由谷歌开发，chromium/chrome浏览器的内核，实际上也是由webkit衍生而来。</div></pre></td></tr></table></figure>
-<p>Webkit内核</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">webkit是通用内核，适合各种各样的平台，chromium只是其中一个。开源，有专门团队维护。苹果的safari浏览器脱自webkit内核，话语权中。后来Google chromium的理念与webkit有分歧，谷歌自立门户，开始Blink。</div></pre></td></tr></table></figure>
-<h5 id="支付宝"><a href="#支付宝" class="headerlink" title="支付宝"></a>支付宝</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">安卓的好像是UC的，ios的应该是Safar</div></pre></td></tr></table></figure>
-<p>安卓app替换webview</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">低于android 4.4 的webview 是蹩脚的Android WebKit浏览器内核（android版本越低性能就越差,android 4.4以上已经使用了Chromium ）</div></pre></td></tr></table></figure>
-<h5 id="几款web引擎"><a href="#几款web引擎" class="headerlink" title="几款web引擎"></a>几款web引擎</h5><ol>
-<li>Crosswalk</li>
-<li>Tencent X5</li>
-</ol>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;blockquote&gt;
-&lt;p&gt;未总结完，待续&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h5 id=&quot;微信&quot;&gt;&lt;a href=&quot;#微信&quot; class=&quot;headerlink&quot; title=&quot;微信&quot;&gt;&lt;/a&gt;微信&lt;/h5&gt;&lt;p&gt;Blink内核与Webkit内核&lt;/p&gt;
-&lt;p&gt;Blin
-    
-    </summary>
-    
-      <category term="移动端" scheme="http://wanghaonanlpc.github.io/categories/%E7%A7%BB%E5%8A%A8%E7%AB%AF/"/>
-    
-    
-      <category term="android" scheme="http://wanghaonanlpc.github.io/tags/android/"/>
-    
-      <category term="浏览器" scheme="http://wanghaonanlpc.github.io/tags/%E6%B5%8F%E8%A7%88%E5%99%A8/"/>
-    
-      <category term="ios" scheme="http://wanghaonanlpc.github.io/tags/ios/"/>
     
   </entry>
   
