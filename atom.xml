@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://wanghaonanlpc.github.io/"/>
-  <updated>2017-03-17T02:02:51.000Z</updated>
+  <updated>2017-03-17T03:34:24.000Z</updated>
   <id>http://wanghaonanlpc.github.io/</id>
   
   <author>
@@ -14,6 +14,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>node 升级 node.js</title>
+    <link href="http://wanghaonanlpc.github.io/2017/03/17/node-%E5%8D%87%E7%BA%A7-node-js/"/>
+    <id>http://wanghaonanlpc.github.io/2017/03/17/node-升级-node-js/</id>
+    <published>2017-03-17T03:32:03.000Z</published>
+    <updated>2017-03-17T03:34:24.000Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="node-升级-node-js"><a href="#node-升级-node-js" class="headerlink" title="node 升级 node.js"></a>node 升级 node.js</h3><p>第一步，先查看本机node.js版本：</p>
+<pre><code>$ node -v
+</code></pre><p>第二步，清除node.js的cache：</p>
+   <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ sudo npm cache clean -f</div></pre></td></tr></table></figure>
+<p>第三步，安装 n 工具，这个工具是专门用来管理node.js版本的，别怀疑这个工具的名字，是他是他就是他，他的名字就是 “n”<br>    $ sudo npm install -g n</p>
+<p>第四步，安装最新版本的node.js<br>    $ sudo n stable</p>
+<p>第五步，再次查看本机的node.js版本：<br>    $ node -v</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;node-升级-node-js&quot;&gt;&lt;a href=&quot;#node-升级-node-js&quot; class=&quot;headerlink&quot; title=&quot;node 升级 node.js&quot;&gt;&lt;/a&gt;node 升级 node.js&lt;/h3&gt;&lt;p&gt;第一步，先查看本机node.js版本
+    
+    </summary>
+    
+      <category term="node.js" scheme="http://wanghaonanlpc.github.io/categories/node-js/"/>
+    
+    
+  </entry>
   
   <entry>
     <title> 阿里巴巴 fastjson 爆出远程代码执行高危漏洞</title>
@@ -1568,126 +1595,6 @@
       &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
     
     </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>新产品开发过程（一）</title>
-    <link href="http://wanghaonanlpc.github.io/2017/02/25/%E6%96%B0%E4%BA%A7%E5%93%81%E5%BC%80%E5%8F%91%E8%BF%87%E7%A8%8B/"/>
-    <id>http://wanghaonanlpc.github.io/2017/02/25/新产品开发过程/</id>
-    <published>2017-02-25T14:14:40.000Z</published>
-    <updated>2017-03-01T13:10:57.000Z</updated>
-    
-    <content type="html"><![CDATA[<h4 id="大纲"><a href="#大纲" class="headerlink" title="大纲"></a>大纲</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">- 定义</div><div class="line">- 阶段回顾法</div><div class="line">- 阶段关卡发</div><div class="line">- 瀑布式开发法</div><div class="line">- 敏捷式开发法</div><div class="line">- 精益生产开发法</div><div class="line">- 设计思考</div><div class="line">- 过程拥有者</div></pre></td></tr></table></figure>
-<h4 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h4><h5 id="过程定义："><a href="#过程定义：" class="headerlink" title="-过程定义："></a>-过程定义：</h5><p>新产品开发过程</p>
-<ol>
-<li>一组严谨定义的任务与步骤，用以描述一家公司将初期构想各自转换成可以销售的产品与或服务的正规方法。</li>
-<li>新产品开发词汇表。<strong><em>（存疑）</em></strong></li>
-</ol>
-<p>步骤、活动、决策、目标的组合</p>
-<p>如果执行得当将会产生出组织需要的新产品</p>
-<h5 id="为什么需要过程"><a href="#为什么需要过程" class="headerlink" title="-为什么需要过程"></a>-为什么需要过程</h5><p>10项能赢的重要成功因素</p>
-<ol>
-<li>独特优越的产品</li>
-<li>强力的市场导向</li>
-<li>更多前期的研究</li>
-<li>在开发前敏锐而提早的产品定义</li>
-<li>正确的组织架构 —— 团队合作</li>
-<li>创新而又支持性的环境</li>
-<li>领导阶层支持</li>
-<li>创建一个漏斗而非隧道</li>
-<li>将产品管理视为过程</li>
-<li>给予产品开发足够的资源</li>
-</ol>
-<h5 id="前期多做研究是否意味上市时间落后？"><a href="#前期多做研究是否意味上市时间落后？" class="headerlink" title="- 前期多做研究是否意味上市时间落后？"></a>- 前期多做研究是否意味上市时间落后？</h5><p>​    在前期话费较多时间和金钱可以大幅改善成功的机会 - 对此有明显的证据</p>
-<p>​    更多的黄钻被工作会导致更好更敏捷的产品和项目定义 - 这会加速开发阶段（较少不断地浪费时间）</p>
-<p>​    完成前期准备工作可以预先考虑到产品问题和设计改更 - 这些产品设计变更可以在这过程早起完成，而不是等产品上市才做</p>
-<h5 id="各种过程的演化"><a href="#各种过程的演化" class="headerlink" title="-各种过程的演化"></a>-各种过程的演化</h5><p>​    大多数公司修改新产品开发过程以符合所需</p>
-<p>​    任何种类的新产品开发过程都比没有任何过程要有生产力</p>
-<p>​    其他一致的系统有：</p>
-<ul>
-<li>阶段回顾</li>
-<li>阶段关卡</li>
-</ul>
-<h4 id="阶段回顾法"><a href="#阶段回顾法" class="headerlink" title="阶段回顾法"></a>阶段回顾法</h4><h5 id="阶段回顾法-1"><a href="#阶段回顾法-1" class="headerlink" title="阶段回顾法"></a>阶段回顾法</h5><p>​    在阶段性的产品开发过程中，首先，一项功能完成一组任务，然后将产生的信息持续不断地传递给其他功能，在逐次地完成西一组任务并将所有信息传递给下一功能。</p>
-<p>在这种产品开发过程中，非常缺乏多功能的团队合作。</p>
-<p>也称为接力过程</p>
-<p>大多数公司已从这种流程转移至使用多功能软对的阶段关卡发</p>
-<p><br></p>
-<p>阶段一：识别机会、选择</p>
-<p>阶段二：产生概念</p>
-<p>阶段三：概念项目评量</p>
-<p>阶段四：开发</p>
-<p>阶段五：上市</p>
-<h5 id="模糊的的前端"><a href="#模糊的的前端" class="headerlink" title="模糊的的前端"></a>模糊的的前端</h5><p>阶段1~3成为模糊的前端</p>
-<p>当产品概念仍然很模糊的时候，产品呢开发的刚起步时期会很混乱</p>
-<p>在更正式的产品开发过程之前，一般包括三项任务</p>
-<ul>
-<li>策略规则</li>
-<li>概念产生</li>
-<li>预做技术评量</li>
-</ul>
-<p>这些活动通常杂乱无章，不可预期，毫无组织</p>
-<p>比较起来，后来的新产品开发过程典型的有组织、可预期以及有条理，具有一组规定的活动，应回答的问题以及该做的决定</p>
-<h4 id="阶段关卡法"><a href="#阶段关卡法" class="headerlink" title="阶段关卡法"></a>阶段关卡法</h4><p>阶段关卡过程是为了将一种新产品的项目从想法逐渐转变成上市产品的一种概念</p>
-<p>阶段关卡法讲所要付出的努力以管理决策关卡区分成不同的阶段</p>
-<p>跨功能团队在管理层批准进行下一阶段的产品开发之前，必须成功地完成每一阶段所规定的一组跨功能任务</p>
-<p><img src="https://ww4.sinaimg.cn/large/006tNbRwly1fd7nanvqd8g30fu02tmx8.gif" alt=""></p>
-<h5 id="阶段-1-2"><a href="#阶段-1-2" class="headerlink" title="阶段(1/2)"></a>阶段(1/2)</h5><p>阶段是跨功能的（其中没有研究和开发或营销阶段）以及为了提升上市的速度，每一项活动是并行的</p>
-<p>每一阶段的成本都高于前一阶段，结果是渐进的承诺。一旦不确定性降低，可以提高支出，风险也可管控（As uncertainties decrease, expenditures are allowed to rise and risk is managed.）</p>
-<p><img src="https://ww4.sinaimg.cn/large/006tNbRwly1fd7naxr3brg30ai02tjra.gif" alt=""></p>
-<h5 id="阶段-2-2"><a href="#阶段-2-2" class="headerlink" title="阶段(2/2)"></a>阶段(2/2)</h5><p>活动：团队必须根据项目计划进行工作</p>
-<p>集成分析：所有功能性活动结果的团队集成分析可以藉由跨功能互动推衍</p>
-<p>集成物：代表集成分析的结果</p>
-<p>活动 + 分析 = 交付物</p>
-<p><img src="https://ww4.sinaimg.cn/large/006tNbRwly1fd7nbb7jyog3080030q2t.gif" alt=""></p>
-<h5 id="关卡"><a href="#关卡" class="headerlink" title="关卡"></a>关卡</h5><p>交付物：关卡查验的输入 - 项目领导者和团队交付至会议的东西</p>
-<p>标准：为了能做出继续/终止以及优先序的决策，项目在接受评判时所需的条件</p>
-<p>输出：关卡查验的结果。关卡必须清楚地表达结果，须包括：一项决策（继续、终止、暂停、循环）以及下一步怎么走（核准的项目计划，日期以及下一关卡所同意的交付物）</p>
-<p><img src="https://ww4.sinaimg.cn/large/006tNbRwly1fd7nbh2dvtg3080030wed.gif" alt=""></p>
-<h5 id="关卡通过标准"><a href="#关卡通过标准" class="headerlink" title="关卡通过标准"></a>关卡通过标准</h5><h6 id="必须符合"><a href="#必须符合" class="headerlink" title="必须符合"></a>必须符合</h6><p>​    有是非题，一个NO表示终止的决定，检查清单是用来表示必须符合条目最平常的格式</p>
-<h6 id="应该符合"><a href="#应该符合" class="headerlink" title="应该符合"></a>应该符合</h6><p>​    有高度渴望的项目特性，但是对问题回答NO并不会终止该项目；确切的地说是对这些问题加以评分并决定项目的分数，评分模型将‘应该符合’的问题处理得很好</p>
-<h5 id="关卡会议"><a href="#关卡会议" class="headerlink" title="关卡会议"></a>关卡会议</h5><p>把关者（守门人）包括技术和商业人民</p>
-<p>可以透过鄙视来对比评量标准以审核关于项目的想法</p>
-<p>这一份必须符合标准的清单会以“是”、“否”来给分，并且所有的答案必须是“是”；只要有一个“否”便会终止此项目</p>
-<p>当高层主管在关卡会议批准团队的行动计划，表示他们也愿意拨出资源：金钱，人力以及给予项目领导者和团队时间</p>
-<h5 id="阶段0：探索发现-Discovery"><a href="#阶段0：探索发现-Discovery" class="headerlink" title="阶段0：探索发现 Discovery"></a>阶段0：探索发现 Discovery</h5><p>设计前置工作一发现并揭露机会以及产生想法（点子）</p>
-<p>关键活动</p>
-<pre><code>1. 想法的捕捉和处理系统
-2. 在顾客产业中策略性分裂
-3. 产生剧本
-4. 顾客声音的研究
-5. 和领先用户一同工作
-6. 趋势导向的技术开发
-</code></pre><h5 id="探索发现Discovery（阶段0）（1-2）"><a href="#探索发现Discovery（阶段0）（1-2）" class="headerlink" title="探索发现Discovery（阶段0）（1/2）"></a>探索发现Discovery（阶段0）（1/2）</h5><p>这是任何产品开发的第一部分，无论是否为阶段关卡模型都会使用</p>
-<p>开发团队决定哪些项目是公司想要的并有能力追求的</p>
-<p>对公司而言，在这阶段参与想法产生活动，例如头脑风暴或其他团队思考阶段，是很普通的</p>
-<p>一旦点子产生团队选定一个他们想要进行的项目，此项目通过由组织决策选的第一关卡</p>
-<h5 id="探索发现Discovery（阶段0）（2-2）"><a href="#探索发现Discovery（阶段0）（2-2）" class="headerlink" title="探索发现Discovery（阶段0）（2/2）"></a>探索发现Discovery（阶段0）（2/2）</h5><p>当寻找产品点子时，为了能启发商业机会，组织能去看看外面的世界是有益的</p>
-<p>与顾客沟通以了解他们如何使用产品后，对于点子产生会有很大的突破。特别是和领先用户沟通可以对开发者提供极大的反馈，领先用户是最有可能对陈品感到热情的顾客</p>
-<p>除了和领先用户沟通，和供货商沟通也许会有帮助。了解所有商业种类如何运用原料或许可以据此发现之前尚未被开发的可能性</p>
-<h5 id="阶段0：主要输出"><a href="#阶段0：主要输出" class="headerlink" title="阶段0：主要输出"></a>阶段0：主要输出</h5><h6 id="机会概念"><a href="#机会概念" class="headerlink" title="机会概念"></a>机会概念</h6><p>一家公司的技能和资源，或顾客问题。技术驱动或者市场驱动或者两者都是</p>
-<h6 id="产品创新章程"><a href="#产品创新章程" class="headerlink" title="产品创新章程"></a>产品创新章程</h6><p>组织努力的中心是将新产品推向市场，这包括项目开始的原因、目标、目的，指导方针以及项目的范围，章程要包括市场喜好，顾客需求，以及潜在销售和利润的假设。</p>
-<h5 id="关卡-1：筛选点子"><a href="#关卡-1：筛选点子" class="headerlink" title="关卡 1：筛选点子"></a>关卡 1：筛选点子</h5><p>筛选点子是讲资源投入项目的第一项选择，项目就此诞生</p>
-<p>假设在发现阶段获得很多点子，接着的任务便是筛选并排列出值得话费时间和金钱的点子</p>
-<p>关卡1是一般性筛选，奖项木透过少数关键的“必须符合”以及“应该符合”的标准作判断</p>
-<p>财务标准并非典型第一步筛选的一部分</p>
-<blockquote>
-<p>以下晚点更新</p>
-</blockquote>
-<h5 id="关卡-1-评估标准（1-2）"><a href="#关卡-1-评估标准（1-2）" class="headerlink" title="关卡 1 评估标准（1/2）"></a>关卡 1 评估标准（1/2）</h5><h5 id="关卡-1-评估标准（2-2）"><a href="#关卡-1-评估标准（2-2）" class="headerlink" title="关卡 1 评估标准（2/2）"></a>关卡 1 评估标准（2/2）</h5><h5 id="阶段1：定义范围"><a href="#阶段1：定义范围" class="headerlink" title="阶段1：定义范围"></a>阶段1：定义范围</h5><h5 id="阶段1：定义范围-1"><a href="#阶段1：定义范围-1" class="headerlink" title="阶段1：定义范围"></a>阶段1：定义范围</h5><h5 id="关卡2：二次筛选"><a href="#关卡2：二次筛选" class="headerlink" title="关卡2：二次筛选"></a>关卡2：二次筛选</h5><h5 id="关卡2：评估标准"><a href="#关卡2：评估标准" class="headerlink" title="关卡2：评估标准"></a>关卡2：评估标准</h5><h5 id="阶段2：建立商业论证"><a href="#阶段2：建立商业论证" class="headerlink" title="阶段2：建立商业论证"></a>阶段2：建立商业论证</h5><h5 id="主要输出"><a href="#主要输出" class="headerlink" title="主要输出"></a>主要输出</h5><h5 id="关卡3：开始开发"><a href="#关卡3：开始开发" class="headerlink" title="关卡3：开始开发"></a>关卡3：开始开发</h5><h5 id="关卡3：必须满足的评估标准"><a href="#关卡3：必须满足的评估标准" class="headerlink" title="关卡3：必须满足的评估标准"></a>关卡3：必须满足的评估标准</h5><h5 id="关卡3：应该满足的评估标准（1-2）"><a href="#关卡3：应该满足的评估标准（1-2）" class="headerlink" title="关卡3：应该满足的评估标准（1/2）"></a>关卡3：应该满足的评估标准（1/2）</h5><h5 id="关卡3：应该满足的评估标准（2-2）"><a href="#关卡3：应该满足的评估标准（2-2）" class="headerlink" title="关卡3：应该满足的评估标准（2/2）"></a>关卡3：应该满足的评估标准（2/2）</h5><h5 id="阶段3：开发"><a href="#阶段3：开发" class="headerlink" title="阶段3：开发"></a>阶段3：开发</h5><h5 id="关卡4：开始测试"><a href="#关卡4：开始测试" class="headerlink" title="关卡4：开始测试"></a>关卡4：开始测试</h5><h5 id="阶段4：测试与验证"><a href="#阶段4：测试与验证" class="headerlink" title="阶段4：测试与验证"></a>阶段4：测试与验证</h5><h5 id="阶段4：主要活动与输出"><a href="#阶段4：主要活动与输出" class="headerlink" title="阶段4：主要活动与输出"></a>阶段4：主要活动与输出</h5><h5 id="测试与验证（阶段4）"><a href="#测试与验证（阶段4）" class="headerlink" title="测试与验证（阶段4）"></a>测试与验证（阶段4）</h5><h5 id="关卡5：上市"><a href="#关卡5：上市" class="headerlink" title="关卡5：上市"></a>关卡5：上市</h5><h5 id="阶段5：上市"><a href="#阶段5：上市" class="headerlink" title="阶段5：上市"></a>阶段5：上市</h5><h5 id="产品上市（阶段5）"><a href="#产品上市（阶段5）" class="headerlink" title="产品上市（阶段5）"></a>产品上市（阶段5）</h5><h5 id="决策"><a href="#决策" class="headerlink" title="决策"></a>决策</h5><h5 id="过程例外"><a href="#过程例外" class="headerlink" title="过程例外"></a>过程例外</h5><h5 id="先产品开发是每个人的责任"><a href="#先产品开发是每个人的责任" class="headerlink" title="先产品开发是每个人的责任"></a>先产品开发是每个人的责任</h5><h4 id="瀑布式开发法"><a href="#瀑布式开发法" class="headerlink" title="瀑布式开发法"></a>瀑布式开发法</h4><blockquote>
-<p>未完待续</p>
-</blockquote>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h4 id=&quot;大纲&quot;&gt;&lt;a href=&quot;#大纲&quot; class=&quot;headerlink&quot; title=&quot;大纲&quot;&gt;&lt;/a&gt;大纲&lt;/h4&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div c
-    
-    </summary>
-    
-      <category term="npdp" scheme="http://wanghaonanlpc.github.io/categories/npdp/"/>
     
     
   </entry>
