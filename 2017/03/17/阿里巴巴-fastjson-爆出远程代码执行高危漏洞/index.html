@@ -10,7 +10,7 @@
     
     <title>
         
-            标签: 生活 | 
+             阿里巴巴 fastjson 爆出远程代码执行高危漏洞 | 
         
         一个老白 | 野厨
     </title>
@@ -48,7 +48,7 @@
     <!-- The Open Graph protocol -->
     <meta property="og:url" content="http://wanghaonanlpc.github.io">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="标签: 生活 | 一个老白 | 野厨">
+    <meta property="og:title" content=" 阿里巴巴 fastjson 爆出远程代码执行高危漏洞 | 一个老白 | 野厨">
     <meta property="og:description" content="null">
     
 
@@ -208,98 +208,355 @@
                         </button>
                     
 
-                    <!-- Index Module -->
-<div class="material-index mdl-grid">
-    
-    <div class="locate-thumbnail-symbol"></div>
+                    <!-- Post TOC -->
 
-    <!-- Pin on top -->
     
-        
-    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
 
-    <!-- Normal Post -->
-    
-        
-        
-            <!-- Paradox Thumbnail -->
-            <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
+    <!-- Left aligned menu below button -->
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#安全升级公告"><span class="post-toc-number">1.</span> <span class="post-toc-text">安全升级公告</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#更新方法"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">更新方法</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-Maven依赖配置更新"><span class="post-toc-number">1.1.1.</span> <span class="post-toc-text">1. Maven依赖配置更新</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-直接下载"><span class="post-toc-number">1.1.2.</span> <span class="post-toc-text">2. 直接下载</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#常见问题"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">常见问题</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-升级遇到不兼容问题怎么办？"><span class="post-toc-number">1.2.1.</span> <span class="post-toc-text">1. 升级遇到不兼容问题怎么办？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-升级之后报错autotype-is-not-support"><span class="post-toc-number">1.2.2.</span> <span class="post-toc-text">2. 升级之后报错autotype is not support</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-通过配置打开autotype之后是否存在安全漏洞"><span class="post-toc-number">1.2.3.</span> <span class="post-toc-text">3. 通过配置打开autotype之后是否存在安全漏洞</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#4-Android环境使用是否需要升级"><span class="post-toc-number">1.2.4.</span> <span class="post-toc-text">4. Android环境使用是否需要升级</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#5-升级遇到问题希望提供支持怎么办？"><span class="post-toc-number">1.2.5.</span> <span class="post-toc-text">5. 升级遇到问题希望提供支持怎么办？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#6-有没有漏洞利用详情可以提供"><span class="post-toc-number">1.2.6.</span> <span class="post-toc-text">6. 有没有漏洞利用详情可以提供</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#7-是否有在WAF上检测的办法"><span class="post-toc-number">1.2.7.</span> <span class="post-toc-text">7. 是否有在WAF上检测的办法</span></a></li></ol></li></ol></li></ol>
+
+        <!--
+        <li class="mdl-menu__item">
+            Some Action
+        </li>
+        -->
+    </ul>
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
     
         
             <!-- Random Thumbnail -->
             <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
+            <script>
+    var randomNum = Math.floor(Math.random() * 19 + 1);
 
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2014/01/29/hello-2015/">Welcome to Hux Blog</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            
-“Yeah It’s on. ”
-
-
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2014/01/29/hello-2015/" target="_self">继续阅读</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="Alex's avatar">
-            </div>
-            <div>
-                <strong>Alex</strong>
-                <span>1月 29, 2014</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-            <!-- Category -->
-            <span class="post_entry-category">
-                
-            </span>
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-        
-        
-        
-    
-
-    
-
-    
-        <script>
-    var randomNum;
-
-    var locatePost = $('.locate-thumbnail-symbol').next();
-    for(var i = 0; i < 10; i++) {
-        randomNum = Math.floor(Math.random() * 19 + 1);
-
-        locatePost.children('.post_thumbnail-random').attr('id', 'random_thumbnail-'+randomNum);
-        locatePost.children('.post_thumbnail-random').css('background-image', 'url(' + '/img/random/material-' + randomNum + '.png' + ')')
-
-        locatePost = locatePost.next();
-    }
+    $('.post_thumbnail-random').css('background-image', 'url(' + '/img/random/material-' + randomNum + '.png' + ')');
 </script>
 
+        
+    
+            <p class="article-headline-p">
+                 阿里巴巴 fastjson 爆出远程代码执行高危漏洞
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/avatar.png" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>Alex</strong>
+        <span>3月 17, 2017</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+        <button id="article-functions-qrcode-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+            <i class="material-icons" role="presentation">devices other</i>
+            <span class="visuallyhidden">devices other</span>
+        </button>
+        <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button">
+            <li class="mdl-menu__item">在其它设备中阅读本文章</li>
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASYAAAEmCAAAAADqr2IGAAAEIElEQVR42u3aS3YbMQwEQN//0sk2G0ndwDjSUDUrP3k+ZHEBAsTPH1dw/SDAhAkTJkyYXJgwYcL08Uw/8dU+9fDzD9726M5//5t/K3nqxRwxYcKECdNBTC9CY8D0/PcoAD9dks39wzliwoQJE6bjmJ5P/vngEtBk0MkCtO9v54gJEyZMmDDlTyXhPN9e5KE9GT8mTJgwYcKU33NVmXWGvh8/JkyYMGH6BqZ8wknAToabJM+z0vCba+GYMGHChOnDmNrAfMe//2t/EyZMmDBh+him9sobZfLNQfu2fMuymikmTJgwYTqCKQ+c7VNXlXrbRZodnWLChAkTpu9huhYxB8rH0G5Zkm1KfeqLCRMmTJhuy9Ri/V7KumnWye95+BQmTJgwYTqCqW2FSX5PQm+bWucLlmxEku0FJkyYMGE6iak9emxDbw6XL0ybruebHkyYMGHCdB5Tm4jmaWr7npZ7s5Av3okJEyZMmA5i2jfitAeQ7VT3KXc9HkyYMGHCdBDTJundJLT5BJKNSLKoRTkbEyZMmDAdxHRt0TafxlXp7qa5Z5j6YsKECROmmzC1g0tCe178zYeeBP6r2oMwYcKECdNJTLPya15mnYXn5LubJYk2KJgwYcKE6QimFmUG1yLmi5cT1Kk1JkyYMGE6gqn95Obw8qrpzbYdl9XCMWHChAnTDZlmRdtfaZeJ0922rFzzYcKECROm45iSqW6S3mvT46SRaDUXTJgwYcJ0BFN9yHdRgM8DdvJ7TjDcEGDChAkTppszbV7XbhRmKXReMm6bdTBhwoQJ0zcwXbsVaMuvG6zk68mdmDBhwoTpe5hyoLxEmxxSJl9JvntVQRkTJkyYMJ3B1B4QJuF2M732u3nSnheUMWHChAnTSUxtIlp/rGzlyb+YL8lw+TFhwoQJ0xFMm4FutgKzpp9Z+05eOMaECRMmTOcxzZpgNu04SWCeJd7J2IolxIQJEyZMRzAlSWkevDfHmW2yOlvmYr6YMGHChOkIprwAOgu6bThvDz7zxcgTbEyYMGHCdCpT2xaThPZZSpwH+xaxWHJMmDBhwnQE036S7wrks6R6uCHAhAkTJkw3Z9pPZh/C82PRtlVo1jyECRMmTJjOYMpbalrW5MByT9CWp4vUHRMmTJgwHcHUXkkCuWHdLEBShr64yIsJEyZMmD6eqS3gzrYO+VP5MswajJJvYcKECROm85ja0m0ehq+izw8jZxuOYX8TJkyYMGG6FdOs2JqH5E0z0FWF3XwZMGHChAnTNzPtaTbE7XFpkpZjwoQJEyZMyVTbouqLMuv6iDTfLhRFXkyYMGHCdFumvFmnnd4mPO+PKt9wnIkJEyZMmD6MqS2J5seHz7GS+9vkNh/PiwNaTJgwYcJ0BJMr2hC4MGHChAkTJkwuTJgwfcr1F61aAWDOIBywAAAAAElFTkSuQmCC">
+        </ul>
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        
+    </ul>
+    
+
+    <!-- Share -->
+    <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+    <!-- Leancloud Views -->
+        <a class="post_share-link" href="#">
+            <li class="mdl-menu__item">
+                <span id="/2017/03/17/阿里巴巴-fastjson-爆出远程代码执行高危漏洞/" class="leancloud-views_num" data-flag-title=" 阿里巴巴 fastjson 爆出远程代码执行高危漏洞">
+     &nbsp;浏览量
+</span>
+
+            </li>
+        </a>
+    
+
+    
+        
+            <!-- Busuanzi Views -->
+            <a class="post_share-link" href="#">
+                <li class="mdl-menu__item">
+                    <span id="busuanzi_container_page_pv">
+                        <span id="busuanzi_value_page_pv"></span>&nbsp;浏览量
+                    </span>
+                </li>
+            </a>
+        
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title= 阿里巴巴 fastjson 爆出远程代码执行高危漏洞&url=http://wanghaonanlpc.github.io//2017/03/17/阿里巴巴-fastjson-爆出远程代码执行高危漏洞/index.html&pic=&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text= 阿里巴巴 fastjson 爆出远程代码执行高危漏洞&url=http://wanghaonanlpc.github.io//2017/03/17/阿里巴巴-fastjson-爆出远程代码执行高危漏洞/index.html&via=Alex" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://wanghaonanlpc.github.io//2017/03/17/阿里巴巴-fastjson-爆出远程代码执行高危漏洞/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://wanghaonanlpc.github.io//2017/03/17/阿里巴巴-fastjson-爆出远程代码执行高危漏洞/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=一个老白 | 野厨&title= 阿里巴巴 fastjson 爆出远程代码执行高危漏洞&summary=null&pics=http://wanghaonanlpc.github.io/img/favicon.png&url=http://wanghaonanlpc.github.io/2017/03/17/阿里巴巴-fastjson-爆出远程代码执行高危漏洞/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 QQ
+            </li>
+        </a>
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <blockquote>
+<p>官方解决方案: <a href="https://github.com/alibaba/fastjson/wiki/security_update_20170315" target="_blank" rel="external">GitHub-fastjson-security_update_20170315</a></p>
+</blockquote>
+<h1 id="安全升级公告"><a href="#安全升级公告" class="headerlink" title="安全升级公告"></a>安全升级公告</h1><p>最近发现fastjson在1.2.24以及之前版本存在远程代码执行高危安全漏洞，为了保证系统安全，请升级到1.2.28/1.2.29或者更新版本。</p>
+<p>1.2.29是在1.2.28版本上修复了一些大家升级过程中遇到的问题的版本，非安全问题，如果升级到1.2.24~1.2.28以及各种sec01版本的，也是没有安全问题的。</p>
+<p>1.2.25/1.2.26/1.2.27都是在升级的过程中修复不兼容问题发布的过度版本，如果你是在此之前升级到这些版本，不用因为这次的安全问题再次升级。</p>
+<h2 id="更新方法"><a href="#更新方法" class="headerlink" title="更新方法"></a>更新方法</h2><h3 id="1-Maven依赖配置更新"><a href="#1-Maven依赖配置更新" class="headerlink" title="1. Maven依赖配置更新"></a>1. Maven依赖配置更新</h3><p>通过maven配置更新，使用最新版本，如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;dependency&gt;</div><div class="line">    &lt;groupId&gt;com.alibaba&lt;/groupId&gt;</div><div class="line">    &lt;artifactId&gt;fastjson&lt;/artifactId&gt;</div><div class="line">    &lt;version&gt;1.2.29&lt;/version&gt;</div><div class="line">&lt;/dependency&gt;</div></pre></td></tr></table></figure>
+<p>注意，版本号1.2.3~1.2.9版本都比1.2.29小，都是需要升级的。</p>
+<h3 id="2-直接下载"><a href="#2-直接下载" class="headerlink" title="2. 直接下载"></a>2. 直接下载</h3><p>1.2.28版本下载地址 <a href="http://repo1.maven.org/maven2/com/alibaba/fastjson/1.2.29/" target="_blank" rel="external">http://repo1.maven.org/maven2/com/alibaba/fastjson/1.2.29/</a></p>
+<h2 id="常见问题"><a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h2><h3 id="1-升级遇到不兼容问题怎么办？"><a href="#1-升级遇到不兼容问题怎么办？" class="headerlink" title="1. 升级遇到不兼容问题怎么办？"></a>1. 升级遇到不兼容问题怎么办？</h3><p>1.2.28/1.2.29已经修复了绝大多数兼容问题，但是总会有一些特殊的用法导致不兼容，如果你遇到不兼容问题，通过 <a href="https://github.com/alibaba/fastjson/wiki/incompatible_change_list" target="_blank" rel="external">https://github.com/alibaba/fastjson/wiki/incompatible_change_list</a> 查看不兼容问题，链接的后面提供了遇到不兼容问题之后的使用相应的sec01版本解决办法。</p>
+<h3 id="2-升级之后报错autotype-is-not-support"><a href="#2-升级之后报错autotype-is-not-support" class="headerlink" title="2. 升级之后报错autotype is not support"></a>2. 升级之后报错autotype is not support</h3><p>安全升级包禁用了部分autotype的功能，也就是”@type”这种指定类型的功能会被限制在一定范围内使用。如果你使用场景中包括了这个功能，<a href="https://github.com/alibaba/fastjson/wiki/enable_autotype" target="_blank" rel="external">https://github.com/alibaba/fastjson/wiki/enable_autotype</a> 这里有一个介绍如何添加白名单或者打开autotype功能。</p>
+<h3 id="3-通过配置打开autotype之后是否存在安全漏洞"><a href="#3-通过配置打开autotype之后是否存在安全漏洞" class="headerlink" title="3. 通过配置打开autotype之后是否存在安全漏洞"></a>3. 通过配置打开autotype之后是否存在安全漏洞</h3><p>在1.2.28/1.2.29以及所有的.sec01版本中，有多重保护，但打开autotype之后仍会存在风险，不建议打开，而是使用一个较小范围的白名单。</p>
+<h3 id="4-Android环境使用是否需要升级"><a href="#4-Android环境使用是否需要升级" class="headerlink" title="4. Android环境使用是否需要升级"></a>4. Android环境使用是否需要升级</h3><p>目前未发现漏洞对Android系统产生影响，在Android环境中使用不用升级。</p>
+<h3 id="5-升级遇到问题希望提供支持怎么办？"><a href="#5-升级遇到问题希望提供支持怎么办？" class="headerlink" title="5. 升级遇到问题希望提供支持怎么办？"></a>5. 升级遇到问题希望提供支持怎么办？</h3><p>作者愿意帮助大家一起解决问题，如果遇到文档中没说明到的问题，请通过如下方式联系作者：</p>
+<ul>
+<li>钉钉号 wenshaojin2017</li>
+<li>微信号 wenshaojin</li>
+<li>微博 <a href="http://weibo.com/wengaotie" target="_blank" rel="external">http://weibo.com/wengaotie</a></li>
+</ul>
+<h3 id="6-有没有漏洞利用详情可以提供"><a href="#6-有没有漏洞利用详情可以提供" class="headerlink" title="6. 有没有漏洞利用详情可以提供"></a>6. 有没有漏洞利用详情可以提供</h3><p>为了保证更多用户的安全，目前不适合扩散漏洞利用的细节</p>
+<h3 id="7-是否有在WAF上检测的办法"><a href="#7-是否有在WAF上检测的办法" class="headerlink" title="7. 是否有在WAF上检测的办法"></a>7. 是否有在WAF上检测的办法</h3><p>检测post内容中是否包含如下字符</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&quot;@type&quot;</div></pre></td></tr></table></figure>
+<p>注意，为了减少误报，包括双引号</p>
+
+    
+
     
 </div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+
+
+
+
+    <!-- 使用 DISQUS_CLICK -->
+    <div id="disqus-comment">	
+        <div id="disqus_thread"></div>
+<!-- include js -->
+<script src="/js/ripple.js"></script>
+
+<!-- add animation -->
+<style>
+        .ripple-container {
+        }
+        .ripple-container .ripple{
+            background-color: rgba(255,255,255,0.4);
+            animation: ripple 2s forwards cubic-bezier(0, 0, 0.2, 1);
+        }
+        @keyframes ripple {
+            0% {
+                transform: scale(0);
+                opacity: 1;
+            }
+            80% {
+                transform: scale(1);
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+		.disqus_click_btn {
+            background-color: dodgerblue;
+            color: white;
+            padding: 10px 20px;
+            border:0;
+            font-size: 14px;
+            cursor: pointer
+        }
+</style>
+	
+<!-- add data-ripple attribute -->
+<div class="btn_click_load"> 
+    <button class="disqus_click_btn" data-ripple>阅读评论 「请确保 disq.us &amp; disquscdn.com &amp; disqus.com 可以正常加载」</button>
+</div>
+	
+<script>
+    // add effect to elements
+    Array.prototype.forEach.call(document.querySelectorAll('[data-ripple]'), function(element){
+        // find all elements and attach effect
+        new RippleEffect(element); // element is instance of javascript element node
+    });
+</script>
+
+<script>
+    $('.btn_click_load').click(function() {  //click to load comments
+        var disqus_config = function () {
+            this.page.url = 'http://wanghaonanlpc.github.io/2017/03/17/阿里巴巴-fastjson-爆出远程代码执行高危漏洞/index.html';  // Replace PAGE_URL with your page's canonical URL variable
+            this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        };
+        (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document;
+            var s = d.createElement('script');
+            s.src = '//wanghaonanlpc.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', + new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+        $('.btn_click_load').css('display','none');
+    });
+</script>
+  	
+
+    </div>
+    <style>
+        #disqus-comment{
+            background-color: #eee;
+            padding: 2pc;
+        }
+    </style>
+
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2017/03/11/How-to-Write-For-Your-Business-While-Still-Sounding-Like-a-Human/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
 
 
                     
@@ -509,6 +766,14 @@ It will not impact the appearance and can give developers a lot of support :)
 </aside>
 
                     
+
+                    
+                        <!-- Footer Top Button -->
+                        <div class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
 
                     
 
