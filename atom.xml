@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://wanghaonanlpc.github.io/"/>
-  <updated>2017-03-19T03:42:27.000Z</updated>
+  <updated>2017-03-19T03:54:41.000Z</updated>
   <id>http://wanghaonanlpc.github.io/</id>
   
   <author>
@@ -14,6 +14,39 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Using Pug Templates With Express</title>
+    <link href="http://wanghaonanlpc.github.io/2017/03/19/Using-Pug-Templates-With-Express/"/>
+    <id>http://wanghaonanlpc.github.io/2017/03/19/Using-Pug-Templates-With-Express/</id>
+    <published>2017-03-19T03:47:40.000Z</published>
+    <updated>2017-03-19T03:54:41.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>In my <a href="http://funkyjavascript.com/web-dev-with-express/" target="_blank" rel="external">first post about express</a>, I showed you a simple hello world example. All the app did was show the text “Wazzup?”</p>
+<p>If we want to make web applications, we need to generate some HTML, and if we want to be able to programmatically customize that HTML while it’s still on the server we need a templating language like <a href="https://github.com/pugjs" target="_blank" rel="external">Pug</a>.</p>
+<p><a href="https://github.com/pugjs/pug/issues/2184" target="_blank" rel="external">Pug used to be called Jade</a>. In fact, there doesn’t seem to be a documentation site with the new name yet. Looks like <a href="http://jade-lang.com/" target="_blank" rel="external">jade-lang.com</a> is still the spot to go for docs.</p>
+<p>Whatever its name is, pug or jade, its a simple templating language you can use to generate HTML. If you’d like to follow along with this example I’m about to throw down, just create a new Node project and install <code>express</code> and <code>pug</code>.</p>
+<p>Next, let’s create a super-simple template:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">html  </div><div class="line">  head</div><div class="line">    title= title</div><div class="line">  body</div><div class="line">    h1= message</div></pre></td></tr></table></figure>
+<p>Create a <code>views</code> directory and save the above file as <code>views/index.pug</code>.</p>
+<p>Now let’s make our <code>index.js</code> file:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">var express = require(&apos;express&apos;)  </div><div class="line">var app = express()  </div><div class="line">app.set(&apos;view engine&apos;, &apos;pug&apos;)</div><div class="line"></div><div class="line">app.get(&apos;/&apos;, function (req, res) &#123;  </div><div class="line">    res.render(</div><div class="line">        &apos;index&apos;,</div><div class="line">        &#123; title: &apos;Hey Hey Hey!&apos;, message: &apos;Yo Yo&apos;&#125;)</div><div class="line">&#125;)</div><div class="line"></div><div class="line">app.listen(3000, function () &#123;  </div><div class="line">    console.log(&apos;Example app listening on port 3000!&apos;)</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<p>The HTML that gets rendered to <a href="http://localhost:3000/" target="_blank" rel="external">http://localhost:3000/</a> should look like this:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">&lt;html&gt;  </div><div class="line">    &lt;head&gt;</div><div class="line">        &lt;title&gt;Hey Hey Hey!&lt;/title&gt;</div><div class="line">    &lt;/head&gt;</div><div class="line">    &lt;body&gt;</div><div class="line">        &lt;h1&gt;Yo Yo&lt;/h1&gt;</div><div class="line">    &lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure>
+<p>Pretty slick right? Instead of having to write brackets as well as opening and closing tags, you can just write the tag name, and that’s it! Any dynamic parts you need can just be handed to the rendering engine as an object.</p>
+<p>Pug is a language all it’s own. There’s lots to take advantage of here. I’ll go into the details in a later post, maybe a few posts. :)</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;In my &lt;a href=&quot;http://funkyjavascript.com/web-dev-with-express/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;first post about express&lt;/a&gt;, I showed yo
+    
+    </summary>
+    
+      <category term="nodejs" scheme="http://wanghaonanlpc.github.io/categories/nodejs/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>Express application generator</title>
@@ -1546,35 +1579,6 @@
     
     
       <category term="hexo" scheme="http://wanghaonanlpc.github.io/tags/hexo/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>mac下查找端口是否占用及关闭占用端口进程</title>
-    <link href="http://wanghaonanlpc.github.io/2017/02/26/mac%E4%B8%8B%E6%9F%A5%E6%89%BE%E7%AB%AF%E5%8F%A3%E6%98%AF%E5%90%A6%E5%8D%A0%E7%94%A8%E5%8F%8A%E5%85%B3%E9%97%AD%E5%8D%A0%E7%94%A8%E7%AB%AF%E5%8F%A3%E8%BF%9B%E7%A8%8B/"/>
-    <id>http://wanghaonanlpc.github.io/2017/02/26/mac下查找端口是否占用及关闭占用端口进程/</id>
-    <published>2017-02-26T11:34:32.000Z</published>
-    <updated>2017-02-26T11:36:08.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>如何查找某个端口是否被占用:</p>
-<p>我们查找下 4000 端口当前被谁占用</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">AlexdeMacBook-Air:Hexo_Material apple$ lsof -i:4000</div></pre></td></tr></table></figure>
-<p>结果显示:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">COMMAND  PID  USER   FD   TYPE             DEVICE SIZE/OFF NODE NAME</div><div class="line">node    1341 apple   28u  IPv4 0x72e37ef4542a1f31      0t0  TCP *:terabase (LISTEN)</div><div class="line">node    1341 apple   35u  IPv4 0x72e37ef454cfc449      0t0  TCP localhost:terabase-&gt;localhost:53866 (CLOSE_WAIT)</div><div class="line">node    1341 apple   36u  IPv4 0x72e37ef44b50d259      0t0  TCP localhost:terabase-&gt;localhost:53867 (CLOSE_WAIT)</div><div class="line">node    1341 apple   37u  IPv4 0x72e37ef44b87e259      0t0  TCP localhost:terabase-&gt;localhost:53868 (CLOSE_WAIT)</div><div class="line">node    1341 apple   38u  IPv4 0x72e37ef447e55f31      0t0  TCP localhost:terabase-&gt;localhost:53869 (CLOSE_WAIT)</div><div class="line">node    1341 apple   39u  IPv4 0x72e37ef448b52b51      0t0  TCP localhost:terabase-&gt;localhost:53870 (CLOSE_WAIT)</div></pre></td></tr></table></figure>
-<p>可以看到一个node进程占用了 4000 端口.</p>
-<p>如何关闭此进程:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">AlexdeMacBook-Air:Hexo_Material apple$ kill -9 1341</div></pre></td></tr></table></figure>
-<p>ok,这样就结束了占用 4000 端口的进程.</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;如何查找某个端口是否被占用:&lt;/p&gt;
-&lt;p&gt;我们查找下 4000 端口当前被谁占用&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div
-    
-    </summary>
-    
     
   </entry>
   

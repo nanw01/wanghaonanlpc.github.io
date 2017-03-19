@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title><![CDATA[Using Pug Templates With Express]]></title>
+      <url>http://wanghaonanlpc.github.io/2017/03/19/Using-Pug-Templates-With-Express/</url>
+      <content type="html"><![CDATA[<p>In my <a href="http://funkyjavascript.com/web-dev-with-express/" target="_blank" rel="external">first post about express</a>, I showed you a simple hello world example. All the app did was show the text “Wazzup?”</p>
+<p>If we want to make web applications, we need to generate some HTML, and if we want to be able to programmatically customize that HTML while it’s still on the server we need a templating language like <a href="https://github.com/pugjs" target="_blank" rel="external">Pug</a>.</p>
+<p><a href="https://github.com/pugjs/pug/issues/2184" target="_blank" rel="external">Pug used to be called Jade</a>. In fact, there doesn’t seem to be a documentation site with the new name yet. Looks like <a href="http://jade-lang.com/" target="_blank" rel="external">jade-lang.com</a> is still the spot to go for docs.</p>
+<p>Whatever its name is, pug or jade, its a simple templating language you can use to generate HTML. If you’d like to follow along with this example I’m about to throw down, just create a new Node project and install <code>express</code> and <code>pug</code>.</p>
+<p>Next, let’s create a super-simple template:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">html  </div><div class="line">  head</div><div class="line">    title= title</div><div class="line">  body</div><div class="line">    h1= message</div></pre></td></tr></table></figure>
+<p>Create a <code>views</code> directory and save the above file as <code>views/index.pug</code>.</p>
+<p>Now let’s make our <code>index.js</code> file:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">var express = require(&apos;express&apos;)  </div><div class="line">var app = express()  </div><div class="line">app.set(&apos;view engine&apos;, &apos;pug&apos;)</div><div class="line"></div><div class="line">app.get(&apos;/&apos;, function (req, res) &#123;  </div><div class="line">    res.render(</div><div class="line">        &apos;index&apos;,</div><div class="line">        &#123; title: &apos;Hey Hey Hey!&apos;, message: &apos;Yo Yo&apos;&#125;)</div><div class="line">&#125;)</div><div class="line"></div><div class="line">app.listen(3000, function () &#123;  </div><div class="line">    console.log(&apos;Example app listening on port 3000!&apos;)</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<p>The HTML that gets rendered to <a href="http://localhost:3000/" target="_blank" rel="external">http://localhost:3000/</a> should look like this:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">&lt;html&gt;  </div><div class="line">    &lt;head&gt;</div><div class="line">        &lt;title&gt;Hey Hey Hey!&lt;/title&gt;</div><div class="line">    &lt;/head&gt;</div><div class="line">    &lt;body&gt;</div><div class="line">        &lt;h1&gt;Yo Yo&lt;/h1&gt;</div><div class="line">    &lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure>
+<p>Pretty slick right? Instead of having to write brackets as well as opening and closing tags, you can just write the tag name, and that’s it! Any dynamic parts you need can just be handed to the rendering engine as an object.</p>
+<p>Pug is a language all it’s own. There’s lots to take advantage of here. I’ll go into the details in a later post, maybe a few posts. :)</p>
+]]></content>
+      
+        <categories>
+            
+            <category> nodejs </category>
+            
+        </categories>
+        
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[Express application generator]]></title>
       <url>http://wanghaonanlpc.github.io/2017/03/19/Express-application-generator/</url>
       <content type="html"><![CDATA[<blockquote>
@@ -1748,9 +1775,9 @@
             
             <tag> android </tag>
             
-            <tag> 浏览器 </tag>
-            
             <tag> ios </tag>
+            
+            <tag> 浏览器 </tag>
             
         </tags>
         
