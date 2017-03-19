@@ -6,9 +6,13 @@
     <entry>
       <title><![CDATA[Express application generator]]></title>
       <url>http://wanghaonanlpc.github.io/2017/03/19/Express-application-generator/</url>
-      <content type="html"><![CDATA[<h4 id="使用express-生成器"><a href="#使用express-生成器" class="headerlink" title="使用express 生成器"></a>使用express 生成器</h4><blockquote>
+      <content type="html"><![CDATA[<blockquote>
 <p>花了一天的时间学习了下nodejs 及 nodejs 框架express基础知识</p>
 <p>分享下 express-generator </p>
+</blockquote>
+<h4 id="指令"><a href="#指令" class="headerlink" title="指令:"></a>指令:</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">//用应用程序生成器工具</div><div class="line">$ npm install express-generator -g</div><div class="line"></div><div class="line">//添加依赖:</div><div class="line">$ cd myapp</div><div class="line">$ npm install</div><div class="line"></div><div class="line">//运行程序</div><div class="line">$ DEBUG=myapp:* npm start</div></pre></td></tr></table></figure>
+<h4 id="日志"><a href="#日志" class="headerlink" title="日志:"></a>日志:</h4><blockquote>
+<p>本机执行指令的结果</p>
 </blockquote>
 <p>Last login: Sun Mar 19 10:23:16 on ttys000<br>AlexdeMacBook-Air:~ apple$ cd /Users/apple/Documents/nodejs学习/02_expressjs_INTA/02_express_generator<br>AlexdeMacBook-Air:02_express_generator apple$ npm install express-generator -g<br>/usr/local/bin/express -&gt; /usr/local/lib/node_modules/express-generator/bin/express<br>/usr/local/lib<br>└── express-generator@4.14.1 </p>
 <p>AlexdeMacBook-Air:02_express_generator apple$ express -h</p>
