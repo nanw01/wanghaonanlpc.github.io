@@ -10,7 +10,7 @@
     
     <title>
         
-            使用github pages服务搭建博客 | 
+            Express application generator | 
         
         一个老白 | 野厨
     </title>
@@ -27,7 +27,7 @@
     <meta name="theme-color" content="#0097A7">
     <meta name="author" content="Alex">
     <meta name="description" content="null">
-    <meta name="keywords" content="null,hello">
+    <meta name="keywords" content="null">
 
     <!--iOS -->
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
@@ -48,9 +48,9 @@
     <!-- The Open Graph protocol -->
     <meta property="og:url" content="http://wanghaonanlpc.github.io">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="使用github pages服务搭建博客 | 一个老白 | 野厨">
+    <meta property="og:title" content="Express application generator | 一个老白 | 野厨">
     <meta property="og:description" content="null">
-    <meta property="og:article:tag" content="hello"> 
+    
 
     <!--[if lte IE 9]>
         <link rel="stylesheet" href="/css/ie-blocker.css">
@@ -234,7 +234,7 @@
     </button>
 
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#前言"><span class="post-toc-number">1.</span> <span class="post-toc-text">前言</span></a></li></ol>
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#使用express-生成器"><span class="post-toc-number">1.</span> <span class="post-toc-text">使用express 生成器</span></a></li></ol>
 
         <!--
         <li class="mdl-menu__item">
@@ -258,19 +258,11 @@
                 
     <!-- Paradox Post Header -->
     
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-            <script>
-    var randomNum = Math.floor(Math.random() * 19 + 1);
-
-    $('.post_thumbnail-random').css('background-image', 'url(' + '/img/random/material-' + randomNum + '.png' + ')');
-</script>
-
-        
+        <!-- Custom Thumbnail -->
+        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50" style="background-image:url(https://ww1.sinaimg.cn/large/006tKfTcgy1fdrzn1b4xcj31040loac2.jpg)">
     
             <p class="article-headline-p">
-                使用github pages服务搭建博客
+                Express application generator
             </p>
         </div>
 
@@ -289,7 +281,7 @@
     <!-- Author Name & Date -->
     <div>
         <strong>Alex</strong>
-        <span>2月 21, 2016</span>
+        <span>3月 19, 2017</span>
     </div>
 
     <div class="section-spacer"></div>
@@ -310,7 +302,7 @@
         </button>
         <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button">
             <li class="mdl-menu__item">在其它设备中阅读本文章</li>
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQ4AAAEOCAAAAABd2qZ5AAADg0lEQVR42u3aS44iMRAFQO5/6ZntSAj6vUybZqTwCtFdVXawyMrP44/1z3ogwIEDBw4cOHDgwIHjizke8Xp11fP3rz4/XzX7/+fnrs6CAwcOHDgucPwQisrHnyJ4v7f3P0ZxFQ4cOHDguMaRHyAPgY/FykP47Cw4cODAgeN7ONpHvgd6BTqjx4EDBw4c/y/H7D5JcM1BceDAgQPHN3MkBbV2E0lhMT9M/pN8qFaKAwcOHDjWAw3f//mj8x04cODAgeOJo12z0mEepPPAmQw9RCfCgQMHDhxHOfJAlYTnnG/TcMobWtHIHQ4cOHDguMbRNpPaTZ9qNc3SziKjxYEDBw4chzjyEYRZgpckb0lQz/d/LIXDgQMHDhwlR36jfFv5wEGe/u0bZnUXDgcOHDhwjDhmyVuyxeRu7feztPNlIMeBAwcOHBc4ZgnSqZGF9nh5qbEelcOBAwcOHIc48rRtP6CwGZ5o9xbdAQcOHDhwXOaYNYpODTrsm1LJPnHgwIEDx22OWfK2ocmPPSsyrgItDhw4cOBYcNwuxs2Ssbyh1ZYpfwi0OHDgwIFjzdGGrnYcIR93SJpPbWoXpaY4cODAgeODHLOkK2lo5cFyU4hc1Upx4MCBA8eCIz92vtGWYJ/atYkfDhw4cOC4x5G3/9uhuk0S2PJdee/AgQMHDhwlRx6u8k3vy3mzkYg8gcSBAwcOHPc4Zsfbt46SJ+YpZV6CxIEDBw4cn+GYlfySLbYHbsPq7M44cODAgeOTHLMUKw+NeQGxffrsVQAHDhw4cNzgaLeSDyucPdKmjFhntDhw4MCB4yhHfrzZ95tA3o4+4MCBAweOz3PkBb48Tdo3llrQYcERBw4cOHBc5sgLdnlRrx1xa2lm5UgcOHDgwHGbYxNWN8R5wTEPq8W4Aw4cOHDguMbx/uJN4tQGyBv0OHDgwIHjtzhmLZy8kNeWI/MyYvJEHDhw4MBxm6Nds63MVr6H9ufBgQMHDhz3OGabm/1n0hzKA+0shEfvHThw4MCBY80xC66zsYb2brNiZVHKxIEDBw4c1zjyAHa2UZQXHGcvBwdqpThw4MCB4zJHm3TlcEXqdSiRw4EDBw4c38mRFATbYt/siS0uDhw4cOC4x5GnUmch2hQuR4woceDAgQPHBY59oS1pO+V/3T+9GLzDgQMHDhxHOSwcOHDgwIEDBw4cOHB82foLlx1xSll99/IAAAAASUVORK5CYII=">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPYAAAD2CAAAAADAeSUUAAAC00lEQVR42u3a0W7bQAwEQP//T7evBVrLS9IK1OPoKbBl+eYChDkuX79WXi9sbGxsbGxsbGzsR7Jf8fWPB/31evLZ69ffLvqPd3trxsbGxj6b/eFPf3BPvilVfHWD3n4KGxsbewH7XQFI7rnGvFvW9UZM1oONjY2NnXxNteRcP7N6mMHGxsbGnrDzNtDXys8TChg2Njb249l5a75alu5+5fZeGjY2Nvbj2Xlo+pyffzTfxsbGxn4wuxff9oKB6qfyY0+0cmxsbOxD2XlhyA8neaN/Eifkz8fGxsbewM6b7PNmUPXA04uKsbGxsfewewHAfEwzP9jkY5ofnomNjY29jD1p4uQNpmorKl8bNjY29h52XmDKTZzxcM+kdGFjY2PvYVcLT++zkwGg/JVyUwkbGxv7CHa1Ed8Lie9rKiVFDhsbG3sDuzqC02v95IHuZCXNphI2Njb2f8vOW0jVkpMcD/Lv7TWnsLGxsTewe//iV8tMdeDy9uFLbGxs7IPYk0PFtwrY5NeQ3ImNjY19NrtXqKrHjGro+61oGRsbG3sDOyH1StqkYVSNeKPAABsbG3sBuzpeU8X3BoAmkTA2Njb2Bna+oDysnTf0f2j4EhsbG/sI9jxYrZac6kFisinY2NjYG9iT5SaBa75l+XZXvx0bGxt7A3sStVbfzUtOb+gnigewsbGxD2X3otmkyPUa+r0DTLmAYWNjYx/HrjabvhXWJmuYlDFsbGzsPew7mj6TQpiX1Q9bjI2NjX0ou1wGxq2f6hBPPhKKjY2NvZP9iq9q46k6iDPflGa+jY2NjX0Eu1pyeq3//CCRt5OS52BjY2PvYVebNckW9ADzCxsbGxu7eiSoRgt56JvHDx9+GdjY2NjYgyB20nK6vjOJCrCxsbH3sCfhbrVQTUKIXvyAjY2NfTa7WnjK4zLxISQpV3kRxcbGxt7A3nNhY2NjY2NjY2NjP+b6DdKDmt05xiqqAAAAAElFTkSuQmCC">
         </ul>
     
 
@@ -322,7 +314,7 @@
     </button>
     <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
         <li class="mdl-menu__item">
-        <a class="post_tag-link" href="/tags/hello/">hello</a>
+        
     </ul>
     
 
@@ -336,7 +328,7 @@
     <!-- Leancloud Views -->
         <a class="post_share-link" href="#">
             <li class="mdl-menu__item">
-                <span id="/2016/02/21/使用github pages服务搭建博客/" class="leancloud-views_num" data-flag-title="使用github pages服务搭建博客">
+                <span id="/2017/03/19/Express-application-generator/" class="leancloud-views_num" data-flag-title="Express application generator">
      &nbsp;浏览量
 </span>
 
@@ -359,7 +351,7 @@
 
     <!-- Share Weibo -->
     
-        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=使用github pages服务搭建博客&url=http://wanghaonanlpc.github.io//2016/02/21/使用github pages服务搭建博客/index.html&pic=&searchPic=false&style=simple" target="_blank">
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=Express application generator&url=http://wanghaonanlpc.github.io//2017/03/19/Express-application-generator/index.html&pic=&searchPic=false&style=simple" target="_blank">
             <li class="mdl-menu__item">
                 分享到微博
             </li>
@@ -368,7 +360,7 @@
 
     <!-- Share Twitter -->
     
-        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=使用github pages服务搭建博客&url=http://wanghaonanlpc.github.io//2016/02/21/使用github pages服务搭建博客/index.html&via=Alex" target="_blank">
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=Express application generator&url=http://wanghaonanlpc.github.io//2017/03/19/Express-application-generator/index.html&via=Alex" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Twitter
             </li>
@@ -377,7 +369,7 @@
 
     <!-- Share Facebook -->
     
-        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://wanghaonanlpc.github.io//2016/02/21/使用github pages服务搭建博客/index.html" target="_blank">
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://wanghaonanlpc.github.io//2017/03/19/Express-application-generator/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Facebook
             </li>
@@ -386,7 +378,7 @@
 
     <!-- Share Google+ -->
     
-        <a class="post_share-link" href="https://plus.google.com/share?url=http://wanghaonanlpc.github.io//2016/02/21/使用github pages服务搭建博客/index.html" target="_blank">
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://wanghaonanlpc.github.io//2017/03/19/Express-application-generator/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Google+
             </li>
@@ -398,7 +390,7 @@
 
     <!-- Share QQ -->
     
-        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=一个老白 | 野厨&title=使用github pages服务搭建博客&summary=null&pics=http://wanghaonanlpc.github.io/img/favicon.png&url=http://wanghaonanlpc.github.io/2016/02/21/使用github pages服务搭建博客/index.html" target="_blank">
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=一个老白 | 野厨&title=Express application generator&summary=null&pics=http://wanghaonanlpc.github.io/img/favicon.png&url=http://wanghaonanlpc.github.io/2017/03/19/Express-application-generator/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 QQ
             </li>
@@ -416,18 +408,34 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>使用github pages服务搭建博客的好处有：</p>
-<ol>
-<li>全是静态文件，访问速度快；</li>
-<li>免费方便，不用花一分钱就可以搭建一个自由的个人博客，不需要服务器不需要后台；</li>
-<li>可以随意绑定自己的域名，不仔细看的话根本看不出来你的网站是基于github的；</li>
-</ol>
-<a id="more"></a>
-<ol>
-<li>数据绝对安全，基于github的版本管理，想恢复到哪个历史版本都行；</li>
-<li>博客内容可以轻松打包、转移、发布到其它平台；</li>
-<li>等等；</li>
-</ol>
+        <h4 id="使用express-生成器"><a href="#使用express-生成器" class="headerlink" title="使用express 生成器"></a>使用express 生成器</h4><blockquote>
+<p>花了一天的时间学习了下nodejs 及 nodejs 框架express基础知识</p>
+<p>分享下 express-generator </p>
+</blockquote>
+<p>Last login: Sun Mar 19 10:23:16 on ttys000<br>AlexdeMacBook-Air:~ apple$ cd /Users/apple/Documents/nodejs学习/02_expressjs_INTA/02_express_generator<br>AlexdeMacBook-Air:02_express_generator apple$ npm install express-generator -g<br>/usr/local/bin/express -&gt; /usr/local/lib/node_modules/express-generator/bin/express<br>/usr/local/lib<br>└── express-generator@4.14.1 </p>
+<p>AlexdeMacBook-Air:02_express_generator apple$ express -h</p>
+<p>  Usage: express [options] [dir]</p>
+<p>  Options:</p>
+<pre><code>-h, --help           output usage information
+    --version        output the version number
+-e, --ejs            add ejs engine support
+    --pug            add pug engine support
+    --hbs            add handlebars engine support
+-H, --hogan          add hogan.js engine support
+-v, --view &lt;engine&gt;  add view &lt;engine&gt; support (ejs|hbs|hjs|jade|pug|twig|vash) (defaults to jade)
+-c, --css &lt;engine&gt;   add stylesheet &lt;engine&gt; support (less|stylus|compass|sass) (defaults to plain css)
+    --git            add .gitignore
+-f, --force          force on non-empty directory
+</code></pre><p>AlexdeMacBook-Air:02_express_generator apple$ express –view=pug yigelaobai</p>
+<p>   create : yigelaobai<br>   create : yigelaobai/package.json<br>   create : yigelaobai/app.js<br>   create : yigelaobai/public<br>   create : yigelaobai/public/javascripts<br>   create : yigelaobai/public/images<br>   create : yigelaobai/public/stylesheets<br>   create : yigelaobai/public/stylesheets/style.css<br>   create : yigelaobai/routes<br>   create : yigelaobai/routes/index.js<br>   create : yigelaobai/routes/users.js<br>   create : yigelaobai/views<br>   create : yigelaobai/views/index.pug<br>   create : yigelaobai/views/layout.pug<br>   create : yigelaobai/views/error.pug<br>   create : yigelaobai/bin<br>   create : yigelaobai/bin/www</p>
+<p>   install dependencies:<br>     $ cd yigelaobai &amp;&amp; npm install</p>
+<p>   run the app:<br>     $ DEBUG=yigelaobai:* npm start</p>
+<p>AlexdeMacBook-Air:02_express_generator apple$ cd yigelaobai<br>AlexdeMacBook-Air:yigelaobai apple$ npm install<br>yigelaobai@0.0.0 /Users/apple/Documents/nodejs学习/02_expressjs_INTA/02_express_generator/yigelaobai<br>├─┬ body-parser@1.16.1<br>│ ├── bytes@2.4.0<br>│ ├── content-type@1.0.2<br>│ ├── debug@2.6.1<br>│ ├── depd@1.1.0<br>│ ├─┬ http-errors@1.5.1<br>│ │ ├── inherits@2.0.3<br>│ │ ├── setprototypeof@1.0.2<br>│ │ └── statuses@1.3.1<br>│ ├── iconv-lite@0.4.15<br>│ ├─┬ on-finished@2.3.0<br>│ │ └── ee-first@1.1.1<br>│ ├── qs@6.2.1<br>│ ├─┬ raw-body@2.2.0<br>│ │ └── unpipe@1.0.0<br>│ └─┬ type-is@1.6.14<br>│   ├── media-typer@0.3.0<br>│   └─┬ mime-types@2.1.14<br>│     └── mime-db@1.26.0<br>├─┬ cookie-parser@1.4.3<br>│ ├── cookie@0.3.1<br>│ └── cookie-signature@1.0.6<br>├─┬ debug@2.6.3<br>│ └── ms@0.7.2<br>├─┬ express@4.14.1<br>│ ├─┬ accepts@1.3.3<br>│ │ └── negotiator@0.6.1<br>│ ├── array-flatten@1.1.1<br>│ ├── content-disposition@0.5.2<br>│ ├─┬ debug@2.2.0<br>│ │ └── ms@0.7.1<br>│ ├── encodeurl@1.0.1<br>│ ├── escape-html@1.0.3<br>│ ├── etag@1.7.0<br>│ ├─┬ finalhandler@0.5.1<br>│ │ └─┬ debug@2.2.0<br>│ │   └── ms@0.7.1<br>│ ├── fresh@0.3.0<br>│ ├── merge-descriptors@1.0.1<br>│ ├── methods@1.1.2<br>│ ├── parseurl@1.3.1<br>│ ├── path-to-regexp@0.1.7<br>│ ├─┬ proxy-addr@1.1.3<br>│ │ ├── forwarded@0.1.0<br>│ │ └── ipaddr.js@1.2.0<br>│ ├── qs@6.2.0<br>│ ├── range-parser@1.2.0<br>│ ├─┬ send@0.14.2<br>│ │ ├─┬ debug@2.2.0<br>│ │ │ └── ms@0.7.1<br>│ │ ├── destroy@1.0.4<br>│ │ └── mime@1.3.4<br>│ ├── serve-static@1.11.2<br>│ ├── utils-merge@1.0.0<br>│ └── vary@1.1.0<br>├─┬ morgan@1.7.0<br>│ ├── basic-auth@1.0.4<br>│ ├─┬ debug@2.2.0<br>│ │ └── ms@0.7.1<br>│ └── on-headers@1.0.1<br>├─┬ pug@2.0.0-beta11<br>│ ├─┬ pug-code-gen@1.1.1<br>│ │ ├─┬ constantinople@3.1.0<br>│ │ │ ├── acorn@3.3.0<br>│ │ │ └── is-expression@2.1.0<br>│ │ ├── doctypes@1.1.0<br>│ │ ├── js-stringify@1.0.2<br>│ │ ├── pug-attrs@2.0.2<br>│ │ ├── pug-error@1.3.2<br>│ │ ├── void-elements@2.0.1<br>│ │ └─┬ with@5.1.1<br>│ │   └─┬ acorn-globals@3.1.0<br>│ │     └── acorn@4.0.11<br>│ ├─┬ pug-filters@2.1.1<br>│ │ ├─┬ clean-css@3.4.25<br>│ │ │ ├─┬ commander@2.8.1<br>│ │ │ │ └── graceful-readlink@1.0.1<br>│ │ │ └─┬ source-map@0.4.4<br>│ │ │   └── amdefine@1.0.1<br>│ │ ├─┬ jstransformer@1.0.0<br>│ │ │ ├── is-promise@2.1.0<br>│ │ │ └─┬ promise@7.1.1<br>│ │ │   └── asap@2.0.5<br>│ │ ├── pug-walk@1.1.1<br>│ │ ├─┬ resolve@1.3.2<br>│ │ │ └── path-parse@1.0.5<br>│ │ └─┬ uglify-js@2.8.13<br>│ │   ├── source-map@0.5.6<br>│ │   ├── uglify-to-browserify@1.0.2<br>│ │   └─┬ yargs@3.10.0<br>│ │     ├── camelcase@1.2.1<br>│ │     ├─┬ cliui@2.1.0<br>│ │     │ ├─┬ center-align@0.1.3<br>│ │     │ │ ├─┬ align-text@0.1.4<br>│ │     │ │ │ ├─┬ kind-of@3.1.0<br>│ │     │ │ │ │ └── is-buffer@1.1.5<br>│ │     │ │ │ ├── longest@1.0.1<br>│ │     │ │ │ └── repeat-string@1.6.1<br>│ │     │ │ └── lazy-cache@1.0.4<br>│ │     │ ├── right-align@0.1.3<br>│ │     │ └── wordwrap@0.0.2<br>│ │     ├── decamelize@1.2.0<br>│ │     └── window-size@0.1.0<br>│ ├─┬ pug-lexer@3.0.0<br>│ │ ├─┬ character-parser@2.2.0<br>│ │ │ └─┬ is-regex@1.0.4<br>│ │ │   └─┬ has@1.0.1<br>│ │ │     └── function-bind@1.1.0<br>│ │ └─┬ is-expression@3.0.0<br>│ │   └── acorn@4.0.11<br>│ ├── pug-linker@2.0.2<br>│ ├─┬ pug-load@2.0.5<br>│ │ └── object-assign@4.1.1<br>│ ├─┬ pug-parser@2.0.2<br>│ │ └── token-stream@0.0.1<br>│ ├── pug-runtime@2.0.3<br>│ └── pug-strip-comments@1.0.2<br>└── serve-favicon@2.3.2 </p>
+<p>AlexdeMacBook-Air:yigelaobai apple$ DEBUG=yigelaobai:* npm start</p>
+<blockquote>
+<p>yigelaobai@0.0.0 start /Users/apple/Documents/nodejs学习/02_expressjs_INTA/02_express_generator/yigelaobai<br>node ./bin/www</p>
+</blockquote>
+<p>  yigelaobai:server Listening on port 3000 +0ms<br>GET / 200 564.023 ms - 170<br>GET /stylesheets/style.css 200 6.483 ms - 111<br>GET /favicon.ico 404 35.647 ms - 1665</p>
 
     
 
@@ -496,7 +504,7 @@
 <script>
     $('.btn_click_load').click(function() {  //click to load comments
         var disqus_config = function () {
-            this.page.url = 'http://wanghaonanlpc.github.io/2016/02/21/使用github pages服务搭建博客/index.html';  // Replace PAGE_URL with your page's canonical URL variable
+            this.page.url = 'http://wanghaonanlpc.github.io/2017/03/19/Express-application-generator/index.html';  // Replace PAGE_URL with your page's canonical URL variable
             this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
         };
         (function() { // DON'T EDIT BELOW THIS LINE
@@ -526,21 +534,13 @@
             <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
     <!-- Prev Nav -->
     
-        <a href="/2016/03/01/Retrofit-2-0：Android上最好的HTTP客户端库的最大更新/" id="post_nav-newer" class="prev-content">
-            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
-                <i class="material-icons">arrow_back</i>
-            </button>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            新篇
-        </a>
-    
 
     <!-- Section Spacer -->
     <div class="section-spacer"></div>
 
     <!-- Next Nav -->
     
-        <a href="/2014/01/29/hello-2015/" id="post_nav-older" class="next-content">
+        <a href="/2017/03/18/nodejs-学习/" id="post_nav-older" class="next-content">
             旧篇
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
