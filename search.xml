@@ -4,6 +4,220 @@
   
     
     <entry>
+      <title><![CDATA[Android移动app架构设计浅谈]]></title>
+      <url>http://wanghaonanlpc.github.io/2017/03/21/Android%E7%A7%BB%E5%8A%A8app%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%E6%B5%85%E8%B0%88/</url>
+      <content type="html"><![CDATA[<blockquote>
+<p>原    址:<a href="https://m.aliyun.com/yunqi/articles/11876?spm=5176.100239.0.0.9l3OVA" target="_blank" rel="external"> [ 架构篇 ] Android 移动 app 架构设计浅谈</a></p>
+<p>作    者:<a href="https://m.aliyun.com/yunqi/users/1895759156739057?spm=5176.100239.0.0.ZbMlP9" target="_blank" rel="external">hudan2714 ( 云溪社区 ) </a></p>
+</blockquote>
+<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><blockquote>
+<p>架构，又名软件架构，是有关软件整体结构与组件的抽象描述，用于指导大型软件系统各个方面的设计。</p>
+</blockquote>
+<h3 id="软件架构设计目标"><a href="#软件架构设计目标" class="headerlink" title="软件架构设计目标"></a>软件架构设计目标</h3><ol>
+<li>可靠性（Reliable）。软件架构的可靠是产品设计的前提。 </li>
+<li>安全性（Secure）。软件架构的安全性是产品可持续发展的条件。 </li>
+<li>可扩展性（Scalable）。软件架构必须能够不同的功能需求情况下，支持可扩散性。 </li>
+<li>可定制化（Customizable）。同样的一套软件，可以根据客户群的不同和市场需求的变化进行调整。 </li>
+<li>可伸缩 （Extensible）。在新技术出现的时候，一个软件架构应当允许导入新技术，从而对现有系统进行功能和性能的扩展。 </li>
+<li>可维护性（Maintainable）。软件系统的维护包括两方面，一是排除现有的错误，二是将新的软件需求反映到现有系统中去。一个易于维护的系统可以有效地降低技术支持的花费。</li>
+</ol>
+<p>架构是项目形成到一定阶段的趋势。是对整个产品是否合格的有效保证。对于很多项目设计人员，<strong>在不考虑产品本身，不考虑团队，不考虑时间周期的前提下，一味的强调软件构架，是不合理的，也不利于整个产品的发展</strong>。当然，一个好的项目架构师，是很能清楚，项目在不同阶段，所需要处理的不同职责。能够最大限度的发挥能效，将产品周期，与功能模块做出最合适的匹配规划，这才是一个架构师所必须追求的。</p>
+<p>以下是个人对Android移动项目架构设计简单的经验之谈。欢迎与更多的朋友交流，若有疑问，或不合理之处，都可以随时交流。</p>
+<h3 id="从项目功能开始"><a href="#从项目功能开始" class="headerlink" title="从项目功能开始"></a><strong>从项目功能开始</strong></h3><p>每一个项目架构师，在拿到一个新项目的时候，都会不同的着重点。在项目规划风格上，都会有不同的考虑。而我个人在着手项目时，都会从功能上去着手。先了解项目整体的功能模块，区分出主体功能模块有哪些类，对不同的功能模块进行细致的划分。这是我开始的第一步。因为，只有对项目整体有个把握，才能更快的对项目有了解，才能知道怎样去合理安排项目的研发，才能更好的去安排项目进度流程，和人员的安排调度。</p>
+<p>功能划分之后，接下来就是项目的实际研发阶段。这个阶段就是项目实际进展阶段了。必须要有合理的安排调度，才是保证项目的高效。比如：我们进行的大部分项目，都有网络交互的部分，也有本地功能部分，还有一些基础数据模块部分，这些功能必须要有合理的时间安排。</p>
+<p>项目研发之前，几点提要说明： </p>
+<ol>
+<li>团队之间统一编码规范。 </li>
+<li>需求文档统一管理。 </li>
+<li>多人协同开发，根据文档开发（一切以文档为主）。</li>
+</ol>
+<p><strong>项目以功能划分，功能以模块划分</strong>。在项目初期，除了产品原型可能是提前设计成形外，其它的项目文档都还未出来，产品也是有个确定功能，但是细节文档还未成形，这个时候已经是项目开始阶段，即使在有一些文档还未成形前，也可以开始项目的基础开发了。</p>
+<h3 id="功能模块"><a href="#功能模块" class="headerlink" title="功能模块"></a><strong>功能模块</strong></h3><p><strong>网络模块，数据库存储模块，数据加密模块，数据缓存模块，数据解析器，日志信息收集模块等</strong>。这些都是项目的基本模块，也可以独立于功能的模块，可以提前开发，测试。便于后期直接使用。</p>
+<h3 id="移动安全机制"><a href="#移动安全机制" class="headerlink" title="移动安全机制"></a><strong>移动安全机制</strong></h3><p>做过移动项目的都知道，移动安全是项目前期需要考虑的一个重要环节。所以，在项目之初，就应该对自身的数据存储做必要的数据加密，对网络传输的数据进行必要加密。<br>移动数据加密分为两种：<br>一种是本地数据加密，只是本机存储的信息，本地加密保存。<br>一种是网络传输数据加密，这是涉及到网络协议，与服务器之间的加密协议。</p>
+<p>本地加密方式有很多种： </p>
+<ol>
+<li>MD5加密算法。 MD5是个不可逆的算法 没有解密的算法（目前据说也有方法破解）。 </li>
+<li>DES加密。可逆。 </li>
+<li>RSA加密。可逆 </li>
+</ol>
+<p>对于不是需要绝对足够安全的项目，以上三种加密足够用。</p>
+<p>网络数据加密主要从两个方面考虑： </p>
+<ol>
+<li>保证API的调用者是经过自己授权的App； </li>
+<li>保证数据传输的安全。</li>
+</ol>
+<p>保证API是自己授权的App，采用设计签名的方式。对每个移动平台，都会有不同的AppKey和AppSecret。在调用API时，将AppKey加入到请求参数中，然后，把AppSecret与其它参数，通过某种签名算法生成一个签名字符串，把数据传输给服务器端。而服务器根据AppKey和AppSecret，用相同的签名算法生成的签名与之一致，则说明请求安全。签名算法可以采用自己规定的一套签名算法（更安全），也可采用外部公开的签名算法（初期使用）。另外，在参数列表中再加入一个时间戳，还可以防止部分重放攻击。<br>对于数据传输安全，可以使用HTTPS。因为HTTPS添加了ssl安全协议。但是android项目开发，大部分都没有去实现。主要是没有对ssl证书进行安全性检查。</p>
+<h3 id="API协议标准化"><a href="#API协议标准化" class="headerlink" title="API协议标准化"></a><strong>API协议标准化</strong></h3><p>项目开发，协议一定需要标准化，并且需要严格执行接口协议。完成每个版本的协议文档更新，方便后续使用者查看。<br>目前协议都是使用Json格式传输。需要注意的是，JSON数据和实体对象在传输时，序列化和反序列化因平台不同，会产生不同的区别。比如：JSON库将Date类型的数据序列化时会转为String，传输到服务器时，服务器反序列化经常会出现不同的结果。</p>
+<h3 id="API接口版本控制"><a href="#API接口版本控制" class="headerlink" title="API接口版本控制"></a><strong>API接口版本控制</strong></h3><p>一般解决接口更新变化问题，我们采取的做法是，每个API接口，都会带有协议的版本，若是协议发生改变，则版本号相应改变，在处理数据请求时，则可以根据不同协议的版本进行处理，解决了版本的兼容性问题。</p>
+<h3 id="架构分层"><a href="#架构分层" class="headerlink" title="架构分层"></a><strong>架构分层</strong></h3><p>架构设计，主要的目的就解决功能和代码的复用，减少重复开发，方便功能扩展，降低功能和代码层级的耦合。<br>目前移动设计框架，主流的有三种：MVC、MVP、MVVM三种方式（具体详情，<a href="http://blog.csdn.net/hudan2714/article/details/50990359" target="_blank" rel="external">请参考框架小结</a>）。<br>任何的框架设计都是在满足开发需求为前提，千万不能为了设计而设计，不要问我这三种设计，哪种最合适开发？如果你还这样去问，那只能说你还不是一个成熟的产品设计者。三种框架都有各自的利弊，是应该在不同的阶段和不同人员的配备情况下，选择更合理的方式。我曾经参与一个创业团队开发视频项目，前期只有两个移动开发人员，项目时间紧的情况下。项目负责人就只会天天在那里修改需求，谈项目架构。初期的项目，在产品验证功能阶段，在项目需要快速迭代阶段，应该使用最有效的框架，才是合理的选择。而且项目的发展，一定是随着项目功能的确立，产品的定型和需求完善，对项目本身的稳定性和性能的要求，才是一个逐步提高的过程。想要一步达到完美的产品，不仅是在设计上很难做到，而且在目前所有的产品中，都是很难达到的。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">任何框架都是在此三层数据模型上。View，Model，Controller/Presenter/ViewModel。上层View：用户行为操作，数据结果显示。底层Model：数据处理，提供显示数据。中间的就是业务逻辑层。</div></pre></td></tr></table></figure>
+<p>Android项目设计，重在对项目的理解，重在对需求功能的划分，重在对团队合理分配。高效的产出，快速的迭代，才是移动项目的生存之道。</p>
+<h3 id="Android测试"><a href="#Android测试" class="headerlink" title="Android测试"></a><strong>Android测试</strong></h3><p>移动开发，为保证质量产出，需要进行必须要逻辑测试。而在项目框架设计中，简单的mvc模式，若view和model中混有业务逻辑，则不利于接口测试。所以，在后续版本的迭代中，需要逐渐使用mvp或mvvm框架设计，让view和model与业务逻辑实现完整的解耦合。</p>
+<h3 id="Android环境"><a href="#Android环境" class="headerlink" title="Android环境"></a><strong>Android环境</strong></h3><p>自从Android提供了更高效稳定的android studio之后，对于开发者来说是更便捷，更方便了。在android gradle多平台打包。proguard代码优化，混淆。随着android studio的越来越强大，越来越稳定，相信开发android项目也会变得越来越so easy了。</p>
+<h3 id="总结在最后"><a href="#总结在最后" class="headerlink" title="总结在最后"></a><strong>总结在最后</strong></h3><p>一个合格的移动项目架构师，必须是在不断的项目开发中成长的。不仅仅懂得项目的高效快速部署，也懂得怎样合理优化团队，才能有更优质的产品产出。移动产品，是一个快速产出的产品，怎样做出适合团队产出的产品，才是移动架构师的学习之道。</p>
+]]></content>
+      
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[ 实用的 atom 插件]]></title>
+      <url>http://wanghaonanlpc.github.io/2017/03/19/%E5%AE%9E%E7%94%A8%E7%9A%84-atom-%E6%8F%92%E4%BB%B6/</url>
+      <content type="html"><![CDATA[<blockquote>
+<p>sublime text 确实是前端开发的神器，但入坑三四年一直使用，难免会有些视觉疲劳，最近折腾起了atom编辑器，发现这货也是前端开发的利器，没错，就是利器。</p>
+</blockquote>
+<p>俗话说，人靠衣装，佛靠金装，再好的编辑器也不会在软件本身集成各种插件，第三方支持等，于是就需要我们针对自己的日常开发选择一些常用的、实用的插件，最大程度的提高日常开发效率。</p>
+<h3 id="Ⅰ：atom-是什么"><a href="#Ⅰ：atom-是什么" class="headerlink" title="Ⅰ：atom 是什么"></a>Ⅰ：atom 是什么</h3><p>Atom 是github在2015年开源的一款编辑器，相比较于sublime text，最吸引人的莫过于 Atom 是基于 Chromium Embedded Framework，基本上就是个 web app，源码都是 CoffeeScript 写的，连界面都可以用 CSS 来自定义。</p>
+<p>Atom 的扩展也是用 JS 或者 Coffee 在 Node + webkit 的环境下开发，并且可以使用 npm 的包，这对于前端和 Node 开发者是很有诱惑力的，需要的话完全可以把 Atom 打造成一个 IDE。</p>
+<p>官网：<a href="https://atom.io/" target="_blank" rel="external">atom官网</a>，可以在官网下载进行安装，安装过程很简单，这里就不进行赘述了。</p>
+<h3 id="Ⅱ：好用的-atom-插件"><a href="#Ⅱ：好用的-atom-插件" class="headerlink" title="Ⅱ：好用的 atom 插件"></a>Ⅱ：好用的 atom 插件</h3><ul>
+<li>点击菜单里面的 Preferences（抑或使用快捷键 <code>cmd + ,</code>），点击 install 选项，输入要安装的插件，点击安装即可。</li>
+<li>通过 Preferences-install 来安装插件经常会遇到问题，好在atom做的很人性化，我们可以通过终端来进行插件安装，命令为 apm，是不是有点眼熟，这个基于atom 的一个包管理器，他过这个命令可以愉快的他过终端来安装你想要的插件啦，是不是很方便</li>
+</ul>
+<p>apm 安装的方法如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"># 安装指定包</div><div class="line">$ apm install &lt;package_name&gt;</div><div class="line"># 安装指定版本的包</div><div class="line">$ apm install &lt;package_name&gt;@&lt;package_version&gt;</div><div class="line"># 查找包</div><div class="line">$ apm search &lt;package_name&gt;</div><div class="line"># 查看包更多详情</div><div class="line">$ apm view &lt;packge_name&gt;</div><div class="line"># 查看当前已安装包(包含atom里面自带的一些包和你自己安装的包)</div><div class="line">$ apm list</div></pre></td></tr></table></figure>
+<p>apm list 里面我安装的如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">/Users/liucui/.atom/packages</div><div class="line">├── activate-power-mode@0.5.2</div><div class="line">├── atom-beautify@0.29.7</div><div class="line">├── autocomplete-paths@1.0.2</div><div class="line">├── color-picker@2.1.1</div><div class="line">├── docblockr@0.7.3</div><div class="line">├── emmet@2.4.3</div><div class="line">├── file-icons@1.7.11</div><div class="line">├── git-plus@5.13.4</div><div class="line">├── javascript-snippets@1.2.1</div><div class="line">├── linter@1.11.4</div><div class="line">├── linter-jshint@2.1.0</div><div class="line">├── markdown-scroll-sync@2.1.2</div><div class="line">├── markdown-table-formatter@2.8.3</div><div class="line">├── minimap@4.23.5</div><div class="line">├── minimap-find-and-replace@4.5.1</div><div class="line">├── terminal-panel@1.14.1</div><div class="line">└── vim-mode@0.65.1</div></pre></td></tr></table></figure>
+<p>那么到底有哪些好用的、必备的插件呢，下面就来给大家推荐几个所常用的。</p>
+<h4 id="1、emmet"><a href="#1、emmet" class="headerlink" title="1、emmet"></a>1、emmet</h4><p>前端开发都懂得的，html 代码补全，使用方法还有文档可以查阅<a href="http://docs.emmet.io/" target="_blank" rel="external">emmet使用文档</a>。</p>
+<p>下载链接：<a href="https://atom.io/packages/emmet" target="_blank" rel="external">emmet</a></p>
+<h4 id="2、file-icons"><a href="#2、file-icons" class="headerlink" title="2、file-icons"></a>2、file-icons</h4><p>不同格式的文本现实不同颜色和类型的图标，便于分辨。</p>
+<p><img src="http://images.iqianduan.net/file_icons_bg.png" alt="file_icons_bg"></p>
+<p>下载链接：<a href="https://atom.io/packages/file-icons" target="_blank" rel="external">file-icons</a></p>
+<p>另外：siti-ui 主题也可以以不同的颜色和类型图标展示不同类型文件，大家可以下载试试。</p>
+<h4 id="3、color-picker"><a href="#3、color-picker" class="headerlink" title="3、color-picker"></a>3、color-picker</h4><p>顾名思义，颜色采集器，非常清晰好用。快捷键 cmd+shift+code 启动。</p>
+<p><img src="http://images.iqianduan.net/color_picker_bg.png" alt="color-picker"></p>
+<p>下载链接：<a href="https://atom.io/packages/color-picker" target="_blank" rel="external">color-picker</a></p>
+<h4 id="4、atom-beautify"><a href="#4、atom-beautify" class="headerlink" title="4、atom-beautify"></a>4、atom-beautify</h4><p>美化格式插件，规范缩进，删除多余空行等等。快捷键 ctrl+option+b 启动使用。</p>
+<p>下载链接：<a href="https://atom.io/packages/atom-beautify" target="_blank" rel="external">atom-beautify</a></p>
+<h4 id="5、markdown-scroll-sync"><a href="#5、markdown-scroll-sync" class="headerlink" title="5、markdown-scroll-sync"></a>5、markdown-scroll-sync</h4><p>atom 自带markdown 预览功能，快捷键 ctrl+shift+m会打开两个面板的视图，但文档太长的时候，不会跟着同步滚动，这个插件就是做这个用的，滚动文档的时候预览内容同步滚动。</p>
+<p><img src="http://images.iqianduan.net/markdown_scroll_sync_bg.gif" alt="markdown-scroll-sync"></p>
+<p>下载链接：<a href="https://atom.io/packages/markdown_scroll_sync" target="_blank" rel="external">markdown-scroll-sync</a></p>
+<h4 id="6、minimap"><a href="#6、minimap" class="headerlink" title="6、minimap"></a>6、minimap</h4><p>编辑器右侧小面板，快捷展示当前编辑的内容在整个文档中的位置。</p>
+<p><img src="http://images.iqianduan.net/minimap.png" alt="minimap"></p>
+<p>下载链接：<a href="https://github.com/atom-minimap/minimap" target="_blank" rel="external">minimap</a></p>
+<h4 id="7、docblocker"><a href="#7、docblocker" class="headerlink" title="7、docblocker"></a>7、docblocker</h4><p>便捷的添加注释代码，/** 按tab键即添加注释代码快。</p>
+<p><img src="http://images.iqianduan.net/docblocker_bg.gif" alt="docblocker"></p>
+<p>下载链接：<a href="https://atom.io/packages/docblockr" target="_blank" rel="external">docblocker</a></p>
+<h4 id="8、terminal-panel"><a href="#8、terminal-panel" class="headerlink" title="8、terminal-panel"></a>8、terminal-panel</h4><p>快速调取使用终端面板，快捷键 『ctrl+`』 启动，底部工具条的 + 也可以点击展示终端面板。</p>
+<p><img src="http://images.iqianduan.net/terminal_panel_bg.gif" alt="terminal-panel"></p>
+<p>下载链接：<a href="https://atom.io/packages/terminal-panel" target="_blank" rel="external">terminal-panel</a></p>
+<h4 id="9、javascript-snippets"><a href="#9、javascript-snippets" class="headerlink" title="9、javascript-snippets"></a>9、javascript-snippets</h4><p>js/nodejs 方法快捷输入，不过有些方法的简写需要去文档里面熟悉一下，多用几次你会发现真的可以提高效率。</p>
+<p><img src="http://images.iqianduan.net/javascript_snippets_bg.gif" alt="javascript-snippets"></p>
+<p>下载链接：<a href="https://atom.io/packages/activate-power-mode" target="_blank" rel="external">javascript-snippets</a></p>
+<h4 id="10、autocomplete-paths"><a href="#10、autocomplete-paths" class="headerlink" title="10、autocomplete-paths"></a>10、autocomplete-paths</h4><p>代码提示补全插件，</p>
+<p><img src="http://images.iqianduan.net/autocomplete_paths.gif" alt="autocomplete-paths"></p>
+<p>下载地址：<a href="https://atom.io/packages/autocomplete-paths" target="_blank" rel="external">autocomplete-paths</a></p>
+<h4 id="11、linter"><a href="#11、linter" class="headerlink" title="11、linter"></a>11、linter</h4><p>代码风格检查工具</p>
+<p><img src="http://images.iqianduan.net/code_linter_bg.gif" alt="linter"></p>
+<blockquote>
+<p>单单装了linter 还不行，我们要针对自己使用的语言不同去安装不同的语言支持，例如，我装了js的检查工具：linter-jshint，大家可以根据需要自行安装，<a href="http://atomlinter.github.io/" target="_blank" rel="external">语言风格审查列表</a></p>
+</blockquote>
+<p>下载链接：<a href="https://atom.io/packages/linter" target="_blank" rel="external">linter</a></p>
+<h4 id="12、vim-mode"><a href="#12、vim-mode" class="headerlink" title="12、vim-mode"></a>12、vim-mode</h4><p>atom 的vim 模式，安装后按ESC键即启用vim 模式，在另一篇文章 <a href="http://iqianduan.net/blog/the-editor-vim-mode" target="_blank" rel="external">编辑器的vim模式使用</a> 中，有详细的介绍，让你的 Atom 用起来超乎你的想象。</p>
+<h4 id="13、activate-power-mode"><a href="#13、activate-power-mode" class="headerlink" title="13、activate-power-mode"></a>13、activate-power-mode</h4><p>这个插件纯粹是用来炫技的，只适合拿来玩玩，长时间使用，我相信你的视力一定会下降的，不要怪我没提醒你哦。</p>
+<p><img src="http://images.iqianduan.net/activate_power_mode_bg.gif" alt="activate-power-mode"></p>
+<p>下载链接：<a href="https://atom.io/packages/activate-power-mode" target="_blank" rel="external">activate-power-mode</a></p>
+<h3 id="Ⅲ：另附–常用快捷键"><a href="#Ⅲ：另附–常用快捷键" class="headerlink" title="Ⅲ：另附–常用快捷键"></a>Ⅲ：另附–常用快捷键</h3><table>
+<thead>
+<tr>
+<th>快捷键</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>shift + cmd + p</td>
+<td>命令版(可以看到所有快捷键)</td>
+</tr>
+<tr>
+<td>alt + shift + s</td>
+<td>查看文件相关语言的代码块(snippet)</td>
+</tr>
+<tr>
+<td>cmd + f</td>
+<td>搜索当前文件</td>
+</tr>
+<tr>
+<td>cmd+shift+f</td>
+<td>搜索整个项目</td>
+</tr>
+<tr>
+<td>alt + cmd + [</td>
+<td>代码折叠, 我不喜欢用</td>
+</tr>
+<tr>
+<td>alt + cmd + ]</td>
+<td>代码展开</td>
+</tr>
+<tr>
+<td>cmd + /</td>
+<td>快速注释当前行</td>
+</tr>
+<tr>
+<td>cmd + [</td>
+<td>代码左缩进</td>
+</tr>
+<tr>
+<td>cmd + ]</td>
+<td>代码右缩进</td>
+</tr>
+<tr>
+<td>cmd + b</td>
+<td>快速跳转打开的文件</td>
+</tr>
+<tr>
+<td>alt+B或alt+left</td>
+<td>光标按单词左移</td>
+</tr>
+<tr>
+<td>alt+F或alt+right</td>
+<td>光标按单词右移</td>
+</tr>
+<tr>
+<td>cmd+right或ctrl+e</td>
+<td>光标移动到行最右最后一个非空字符</td>
+</tr>
+<tr>
+<td>cmd+left或ctrl+a</td>
+<td>光标移动到行最左第一个非空字符</td>
+</tr>
+<tr>
+<td>cmd + up</td>
+<td>光标移动到文件头</td>
+</tr>
+<tr>
+<td>cmd + down</td>
+<td>贯标移动到文件尾</td>
+</tr>
+<tr>
+<td>ctrl + g</td>
+<td>行跳转, 语法为行号:列号</td>
+</tr>
+<tr>
+<td>cmd + r</td>
+<td>按当前文件方法跳转</td>
+</tr>
+<tr>
+<td>cmd + t</td>
+<td>全项目模糊查找关键字并跳转</td>
+</tr>
+<tr>
+<td>ctrl + m</td>
+<td>按照括号匹配跳转</td>
+</tr>
+<tr>
+<td>cmd + F2或cmd+fn+f2</td>
+<td>给某一行设置书签显示在行号右侧</td>
+</tr>
+</tbody>
+</table>
+]]></content>
+      
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[Using Pug Templates With Express]]></title>
       <url>http://wanghaonanlpc.github.io/2017/03/19/Using-Pug-Templates-With-Express/</url>
       <content type="html"><![CDATA[<p>In my <a href="http://funkyjavascript.com/web-dev-with-express/" target="_blank" rel="external">first post about express</a>, I showed you a simple hello world example. All the app did was show the text “Wazzup?”</p>
@@ -1775,9 +1989,9 @@
             
             <tag> android </tag>
             
-            <tag> ios </tag>
-            
             <tag> 浏览器 </tag>
+            
+            <tag> ios </tag>
             
         </tags>
         

@@ -10,7 +10,7 @@
     
     <title>
         
-            分类: 移动端 | 
+             实用的 atom 插件 | 
         
         一个老白 | 野厨
     </title>
@@ -48,7 +48,7 @@
     <!-- The Open Graph protocol -->
     <meta property="og:url" content="http://wanghaonanlpc.github.io">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="分类: 移动端 | 一个老白 | 野厨">
+    <meta property="og:title" content=" 实用的 atom 插件 | 一个老白 | 野厨">
     <meta property="og:description" content="null">
     
 
@@ -208,98 +208,488 @@
                         </button>
                     
 
-                    <!-- Index Module -->
-<div class="material-index mdl-grid">
-    
-    <div class="locate-thumbnail-symbol"></div>
+                    <!-- Post TOC -->
 
-    <!-- Pin on top -->
     
-        
-    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
 
-    <!-- Normal Post -->
-    
-        
-        
-            <!-- Paradox Thumbnail -->
-            <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
+    <!-- Left aligned menu below button -->
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Ⅰ：atom-是什么"><span class="post-toc-number">1.</span> <span class="post-toc-text">Ⅰ：atom 是什么</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Ⅱ：好用的-atom-插件"><span class="post-toc-number">2.</span> <span class="post-toc-text">Ⅱ：好用的 atom 插件</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1、emmet"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">1、emmet</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2、file-icons"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">2、file-icons</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#3、color-picker"><span class="post-toc-number">2.3.</span> <span class="post-toc-text">3、color-picker</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#4、atom-beautify"><span class="post-toc-number">2.4.</span> <span class="post-toc-text">4、atom-beautify</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#5、markdown-scroll-sync"><span class="post-toc-number">2.5.</span> <span class="post-toc-text">5、markdown-scroll-sync</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#6、minimap"><span class="post-toc-number">2.6.</span> <span class="post-toc-text">6、minimap</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#7、docblocker"><span class="post-toc-number">2.7.</span> <span class="post-toc-text">7、docblocker</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#8、terminal-panel"><span class="post-toc-number">2.8.</span> <span class="post-toc-text">8、terminal-panel</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#9、javascript-snippets"><span class="post-toc-number">2.9.</span> <span class="post-toc-text">9、javascript-snippets</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#10、autocomplete-paths"><span class="post-toc-number">2.10.</span> <span class="post-toc-text">10、autocomplete-paths</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#11、linter"><span class="post-toc-number">2.11.</span> <span class="post-toc-text">11、linter</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#12、vim-mode"><span class="post-toc-number">2.12.</span> <span class="post-toc-text">12、vim-mode</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#13、activate-power-mode"><span class="post-toc-number">2.13.</span> <span class="post-toc-text">13、activate-power-mode</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Ⅲ：另附–常用快捷键"><span class="post-toc-number">3.</span> <span class="post-toc-text">Ⅲ：另附–常用快捷键</span></a></li></ol>
+
+        <!--
+        <li class="mdl-menu__item">
+            Some Action
+        </li>
+        -->
+    </ul>
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
     
         
             <!-- Random Thumbnail -->
             <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
+            <script>
+    var randomNum = Math.floor(Math.random() * 19 + 1);
 
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2017/02/21/移动端app内置浏览器优化/">移动端app内置浏览器优化</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            
-未总结完，待续
-
-
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2017/02/21/移动端app内置浏览器优化/" target="_self">继续阅读</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="Alex's avatar">
-            </div>
-            <div>
-                <strong>Alex</strong>
-                <span>2月 21, 2017</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-            <!-- Category -->
-            <span class="post_entry-category">
-                <a class="post_category-link" href="/categories/移动端/">移动端</a>
-            </span>
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-        
-        
-        
-    
-
-    
-
-    
-        <script>
-    var randomNum;
-
-    var locatePost = $('.locate-thumbnail-symbol').next();
-    for(var i = 0; i < 10; i++) {
-        randomNum = Math.floor(Math.random() * 19 + 1);
-
-        locatePost.children('.post_thumbnail-random').attr('id', 'random_thumbnail-'+randomNum);
-        locatePost.children('.post_thumbnail-random').css('background-image', 'url(' + '/img/random/material-' + randomNum + '.png' + ')')
-
-        locatePost = locatePost.next();
-    }
+    $('.post_thumbnail-random').css('background-image', 'url(' + '/img/random/material-' + randomNum + '.png' + ')');
 </script>
 
+        
+    
+            <p class="article-headline-p">
+                 实用的 atom 插件
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/avatar.png" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>Alex</strong>
+        <span>3月 19, 2017</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+        <button id="article-functions-qrcode-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+            <i class="material-icons" role="presentation">devices other</i>
+            <span class="visuallyhidden">devices other</span>
+        </button>
+        <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button">
+            <li class="mdl-menu__item">在其它设备中阅读本文章</li>
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPYAAAD2CAAAAADAeSUUAAAC2ElEQVR42u3a0W7DMAgF0P7/T2+vk7qkF0ir1D55mtbE5TjSmIHHz5bXAxsbGxsbGxsbG/uW7Ed8/bNQcM/fO5+fev70PKpJzNjY2Nhrs1/86Y+DTj49/96jLZjEjI2Njb0P+zxh5KFPgjuPrRczNjY2NnZOzdNecgjJtwAbGxsbu7zEaXBvCRobGxsb+6Ki0jnv2uZBXnh6ey0NGxsb+/bsvGl6n58/2t/GxsbGvjG7evWavtWElD9biBwbGxt7UXZvZCffoGvXT4pZh5uLjY2NvTQ7acrmIc5HfCYbgY2Njb0bOwH0Bm7ystR8bKhZVMLGxsZejt0bmum1dfOUmcDKIzvY2NjYy7HzNFZIGPEh4dq2BDY2NvbO7F5wkyH7vETVG6zHxsbG3od9VerKy0nVBkNefjp8PdjY2NgbsCdlo95gZYKsDtBjY2Nj78zuHTZ64z7VBkC+/gUjO9jY2Nhfy84TWK9BW20AVDfrRSrFxsbG3oDdaxhMBjTnbYNC0sXGxsZeml09hORHlGrQk983hy+xsbGxv5ydwPK0lJeKeltWbQlgY2Nj78bO/7mvNl/z+6upqxA/NjY29tLs6oBOXk5KUmB1/V4aw8bGxl6V3TuEvKPY1NuIQoTY2NjYi7LzYZ2kkXCeciYN4HkbGBsbG3ttdrV12jwMtLaml64u6IpgY2NjfyG7V9Dvle+rbYle+wEbGxt7Z3avcN/j5ckp4Y0SGDY2NvYS7ElA1WSTD/H0VsbGxsbegV29qkeRpJ2cv4B8NWxsbOx92JPEkJd1qmmp16goH0WwsbGxF2InSSsai0nK9HEpqpcmD+/ExsbG3oBdHabJGwb5RszLVdjY2NjYvXZvnhR7h4q8DXD4YrCxsbGx48NJ7/iRFKTyrcTGxsbek11IBsWWQDPQwcgONjY29m7s3nLz+5OtzJ8tH0WwsbGxl2Dvc2FjY2NjY2NjY2Pf5voFkASrBYwKRBQAAAAASUVORK5CYII=">
+        </ul>
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        
+    </ul>
+    
+
+    <!-- Share -->
+    <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+    <!-- Leancloud Views -->
+        <a class="post_share-link" href="#">
+            <li class="mdl-menu__item">
+                <span id="/2017/03/19/实用的-atom-插件/" class="leancloud-views_num" data-flag-title=" 实用的 atom 插件">
+     &nbsp;浏览量
+</span>
+
+            </li>
+        </a>
+    
+
+    
+        
+            <!-- Busuanzi Views -->
+            <a class="post_share-link" href="#">
+                <li class="mdl-menu__item">
+                    <span id="busuanzi_container_page_pv">
+                        <span id="busuanzi_value_page_pv"></span>&nbsp;浏览量
+                    </span>
+                </li>
+            </a>
+        
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title= 实用的 atom 插件&url=http://wanghaonanlpc.github.io//2017/03/19/实用的-atom-插件/index.html&pic=&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text= 实用的 atom 插件&url=http://wanghaonanlpc.github.io//2017/03/19/实用的-atom-插件/index.html&via=Alex" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://wanghaonanlpc.github.io//2017/03/19/实用的-atom-插件/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://wanghaonanlpc.github.io//2017/03/19/实用的-atom-插件/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=一个老白 | 野厨&title= 实用的 atom 插件&summary=null&pics=http://wanghaonanlpc.github.io/img/favicon.png&url=http://wanghaonanlpc.github.io/2017/03/19/实用的-atom-插件/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 QQ
+            </li>
+        </a>
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <blockquote>
+<p>sublime text 确实是前端开发的神器，但入坑三四年一直使用，难免会有些视觉疲劳，最近折腾起了atom编辑器，发现这货也是前端开发的利器，没错，就是利器。</p>
+</blockquote>
+<p>俗话说，人靠衣装，佛靠金装，再好的编辑器也不会在软件本身集成各种插件，第三方支持等，于是就需要我们针对自己的日常开发选择一些常用的、实用的插件，最大程度的提高日常开发效率。</p>
+<h3 id="Ⅰ：atom-是什么"><a href="#Ⅰ：atom-是什么" class="headerlink" title="Ⅰ：atom 是什么"></a>Ⅰ：atom 是什么</h3><p>Atom 是github在2015年开源的一款编辑器，相比较于sublime text，最吸引人的莫过于 Atom 是基于 Chromium Embedded Framework，基本上就是个 web app，源码都是 CoffeeScript 写的，连界面都可以用 CSS 来自定义。</p>
+<p>Atom 的扩展也是用 JS 或者 Coffee 在 Node + webkit 的环境下开发，并且可以使用 npm 的包，这对于前端和 Node 开发者是很有诱惑力的，需要的话完全可以把 Atom 打造成一个 IDE。</p>
+<p>官网：<a href="https://atom.io/" target="_blank" rel="external">atom官网</a>，可以在官网下载进行安装，安装过程很简单，这里就不进行赘述了。</p>
+<h3 id="Ⅱ：好用的-atom-插件"><a href="#Ⅱ：好用的-atom-插件" class="headerlink" title="Ⅱ：好用的 atom 插件"></a>Ⅱ：好用的 atom 插件</h3><ul>
+<li>点击菜单里面的 Preferences（抑或使用快捷键 <code>cmd + ,</code>），点击 install 选项，输入要安装的插件，点击安装即可。</li>
+<li>通过 Preferences-install 来安装插件经常会遇到问题，好在atom做的很人性化，我们可以通过终端来进行插件安装，命令为 apm，是不是有点眼熟，这个基于atom 的一个包管理器，他过这个命令可以愉快的他过终端来安装你想要的插件啦，是不是很方便</li>
+</ul>
+<p>apm 安装的方法如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"># 安装指定包</div><div class="line">$ apm install &lt;package_name&gt;</div><div class="line"># 安装指定版本的包</div><div class="line">$ apm install &lt;package_name&gt;@&lt;package_version&gt;</div><div class="line"># 查找包</div><div class="line">$ apm search &lt;package_name&gt;</div><div class="line"># 查看包更多详情</div><div class="line">$ apm view &lt;packge_name&gt;</div><div class="line"># 查看当前已安装包(包含atom里面自带的一些包和你自己安装的包)</div><div class="line">$ apm list</div></pre></td></tr></table></figure>
+<p>apm list 里面我安装的如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">/Users/liucui/.atom/packages</div><div class="line">├── activate-power-mode@0.5.2</div><div class="line">├── atom-beautify@0.29.7</div><div class="line">├── autocomplete-paths@1.0.2</div><div class="line">├── color-picker@2.1.1</div><div class="line">├── docblockr@0.7.3</div><div class="line">├── emmet@2.4.3</div><div class="line">├── file-icons@1.7.11</div><div class="line">├── git-plus@5.13.4</div><div class="line">├── javascript-snippets@1.2.1</div><div class="line">├── linter@1.11.4</div><div class="line">├── linter-jshint@2.1.0</div><div class="line">├── markdown-scroll-sync@2.1.2</div><div class="line">├── markdown-table-formatter@2.8.3</div><div class="line">├── minimap@4.23.5</div><div class="line">├── minimap-find-and-replace@4.5.1</div><div class="line">├── terminal-panel@1.14.1</div><div class="line">└── vim-mode@0.65.1</div></pre></td></tr></table></figure>
+<p>那么到底有哪些好用的、必备的插件呢，下面就来给大家推荐几个所常用的。</p>
+<h4 id="1、emmet"><a href="#1、emmet" class="headerlink" title="1、emmet"></a>1、emmet</h4><p>前端开发都懂得的，html 代码补全，使用方法还有文档可以查阅<a href="http://docs.emmet.io/" target="_blank" rel="external">emmet使用文档</a>。</p>
+<p>下载链接：<a href="https://atom.io/packages/emmet" target="_blank" rel="external">emmet</a></p>
+<h4 id="2、file-icons"><a href="#2、file-icons" class="headerlink" title="2、file-icons"></a>2、file-icons</h4><p>不同格式的文本现实不同颜色和类型的图标，便于分辨。</p>
+<p><img src="http://images.iqianduan.net/file_icons_bg.png" alt="file_icons_bg"></p>
+<p>下载链接：<a href="https://atom.io/packages/file-icons" target="_blank" rel="external">file-icons</a></p>
+<p>另外：siti-ui 主题也可以以不同的颜色和类型图标展示不同类型文件，大家可以下载试试。</p>
+<h4 id="3、color-picker"><a href="#3、color-picker" class="headerlink" title="3、color-picker"></a>3、color-picker</h4><p>顾名思义，颜色采集器，非常清晰好用。快捷键 cmd+shift+code 启动。</p>
+<p><img src="http://images.iqianduan.net/color_picker_bg.png" alt="color-picker"></p>
+<p>下载链接：<a href="https://atom.io/packages/color-picker" target="_blank" rel="external">color-picker</a></p>
+<h4 id="4、atom-beautify"><a href="#4、atom-beautify" class="headerlink" title="4、atom-beautify"></a>4、atom-beautify</h4><p>美化格式插件，规范缩进，删除多余空行等等。快捷键 ctrl+option+b 启动使用。</p>
+<p>下载链接：<a href="https://atom.io/packages/atom-beautify" target="_blank" rel="external">atom-beautify</a></p>
+<h4 id="5、markdown-scroll-sync"><a href="#5、markdown-scroll-sync" class="headerlink" title="5、markdown-scroll-sync"></a>5、markdown-scroll-sync</h4><p>atom 自带markdown 预览功能，快捷键 ctrl+shift+m会打开两个面板的视图，但文档太长的时候，不会跟着同步滚动，这个插件就是做这个用的，滚动文档的时候预览内容同步滚动。</p>
+<p><img src="http://images.iqianduan.net/markdown_scroll_sync_bg.gif" alt="markdown-scroll-sync"></p>
+<p>下载链接：<a href="https://atom.io/packages/markdown_scroll_sync" target="_blank" rel="external">markdown-scroll-sync</a></p>
+<h4 id="6、minimap"><a href="#6、minimap" class="headerlink" title="6、minimap"></a>6、minimap</h4><p>编辑器右侧小面板，快捷展示当前编辑的内容在整个文档中的位置。</p>
+<p><img src="http://images.iqianduan.net/minimap.png" alt="minimap"></p>
+<p>下载链接：<a href="https://github.com/atom-minimap/minimap" target="_blank" rel="external">minimap</a></p>
+<h4 id="7、docblocker"><a href="#7、docblocker" class="headerlink" title="7、docblocker"></a>7、docblocker</h4><p>便捷的添加注释代码，/** 按tab键即添加注释代码快。</p>
+<p><img src="http://images.iqianduan.net/docblocker_bg.gif" alt="docblocker"></p>
+<p>下载链接：<a href="https://atom.io/packages/docblockr" target="_blank" rel="external">docblocker</a></p>
+<h4 id="8、terminal-panel"><a href="#8、terminal-panel" class="headerlink" title="8、terminal-panel"></a>8、terminal-panel</h4><p>快速调取使用终端面板，快捷键 『ctrl+`』 启动，底部工具条的 + 也可以点击展示终端面板。</p>
+<p><img src="http://images.iqianduan.net/terminal_panel_bg.gif" alt="terminal-panel"></p>
+<p>下载链接：<a href="https://atom.io/packages/terminal-panel" target="_blank" rel="external">terminal-panel</a></p>
+<h4 id="9、javascript-snippets"><a href="#9、javascript-snippets" class="headerlink" title="9、javascript-snippets"></a>9、javascript-snippets</h4><p>js/nodejs 方法快捷输入，不过有些方法的简写需要去文档里面熟悉一下，多用几次你会发现真的可以提高效率。</p>
+<p><img src="http://images.iqianduan.net/javascript_snippets_bg.gif" alt="javascript-snippets"></p>
+<p>下载链接：<a href="https://atom.io/packages/activate-power-mode" target="_blank" rel="external">javascript-snippets</a></p>
+<h4 id="10、autocomplete-paths"><a href="#10、autocomplete-paths" class="headerlink" title="10、autocomplete-paths"></a>10、autocomplete-paths</h4><p>代码提示补全插件，</p>
+<p><img src="http://images.iqianduan.net/autocomplete_paths.gif" alt="autocomplete-paths"></p>
+<p>下载地址：<a href="https://atom.io/packages/autocomplete-paths" target="_blank" rel="external">autocomplete-paths</a></p>
+<h4 id="11、linter"><a href="#11、linter" class="headerlink" title="11、linter"></a>11、linter</h4><p>代码风格检查工具</p>
+<p><img src="http://images.iqianduan.net/code_linter_bg.gif" alt="linter"></p>
+<blockquote>
+<p>单单装了linter 还不行，我们要针对自己使用的语言不同去安装不同的语言支持，例如，我装了js的检查工具：linter-jshint，大家可以根据需要自行安装，<a href="http://atomlinter.github.io/" target="_blank" rel="external">语言风格审查列表</a></p>
+</blockquote>
+<p>下载链接：<a href="https://atom.io/packages/linter" target="_blank" rel="external">linter</a></p>
+<h4 id="12、vim-mode"><a href="#12、vim-mode" class="headerlink" title="12、vim-mode"></a>12、vim-mode</h4><p>atom 的vim 模式，安装后按ESC键即启用vim 模式，在另一篇文章 <a href="http://iqianduan.net/blog/the-editor-vim-mode" target="_blank" rel="external">编辑器的vim模式使用</a> 中，有详细的介绍，让你的 Atom 用起来超乎你的想象。</p>
+<h4 id="13、activate-power-mode"><a href="#13、activate-power-mode" class="headerlink" title="13、activate-power-mode"></a>13、activate-power-mode</h4><p>这个插件纯粹是用来炫技的，只适合拿来玩玩，长时间使用，我相信你的视力一定会下降的，不要怪我没提醒你哦。</p>
+<p><img src="http://images.iqianduan.net/activate_power_mode_bg.gif" alt="activate-power-mode"></p>
+<p>下载链接：<a href="https://atom.io/packages/activate-power-mode" target="_blank" rel="external">activate-power-mode</a></p>
+<h3 id="Ⅲ：另附–常用快捷键"><a href="#Ⅲ：另附–常用快捷键" class="headerlink" title="Ⅲ：另附–常用快捷键"></a>Ⅲ：另附–常用快捷键</h3><table>
+<thead>
+<tr>
+<th>快捷键</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>shift + cmd + p</td>
+<td>命令版(可以看到所有快捷键)</td>
+</tr>
+<tr>
+<td>alt + shift + s</td>
+<td>查看文件相关语言的代码块(snippet)</td>
+</tr>
+<tr>
+<td>cmd + f</td>
+<td>搜索当前文件</td>
+</tr>
+<tr>
+<td>cmd+shift+f</td>
+<td>搜索整个项目</td>
+</tr>
+<tr>
+<td>alt + cmd + [</td>
+<td>代码折叠, 我不喜欢用</td>
+</tr>
+<tr>
+<td>alt + cmd + ]</td>
+<td>代码展开</td>
+</tr>
+<tr>
+<td>cmd + /</td>
+<td>快速注释当前行</td>
+</tr>
+<tr>
+<td>cmd + [</td>
+<td>代码左缩进</td>
+</tr>
+<tr>
+<td>cmd + ]</td>
+<td>代码右缩进</td>
+</tr>
+<tr>
+<td>cmd + b</td>
+<td>快速跳转打开的文件</td>
+</tr>
+<tr>
+<td>alt+B或alt+left</td>
+<td>光标按单词左移</td>
+</tr>
+<tr>
+<td>alt+F或alt+right</td>
+<td>光标按单词右移</td>
+</tr>
+<tr>
+<td>cmd+right或ctrl+e</td>
+<td>光标移动到行最右最后一个非空字符</td>
+</tr>
+<tr>
+<td>cmd+left或ctrl+a</td>
+<td>光标移动到行最左第一个非空字符</td>
+</tr>
+<tr>
+<td>cmd + up</td>
+<td>光标移动到文件头</td>
+</tr>
+<tr>
+<td>cmd + down</td>
+<td>贯标移动到文件尾</td>
+</tr>
+<tr>
+<td>ctrl + g</td>
+<td>行跳转, 语法为行号:列号</td>
+</tr>
+<tr>
+<td>cmd + r</td>
+<td>按当前文件方法跳转</td>
+</tr>
+<tr>
+<td>cmd + t</td>
+<td>全项目模糊查找关键字并跳转</td>
+</tr>
+<tr>
+<td>ctrl + m</td>
+<td>按照括号匹配跳转</td>
+</tr>
+<tr>
+<td>cmd + F2或cmd+fn+f2</td>
+<td>给某一行设置书签显示在行号右侧</td>
+</tr>
+</tbody>
+</table>
+
+    
+
     
 </div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+
+
+
+
+    <!-- 使用 DISQUS_CLICK -->
+    <div id="disqus-comment">	
+        <div id="disqus_thread"></div>
+<!-- include js -->
+<script src="/js/ripple.js"></script>
+
+<!-- add animation -->
+<style>
+        .ripple-container {
+        }
+        .ripple-container .ripple{
+            background-color: rgba(255,255,255,0.4);
+            animation: ripple 2s forwards cubic-bezier(0, 0, 0.2, 1);
+        }
+        @keyframes ripple {
+            0% {
+                transform: scale(0);
+                opacity: 1;
+            }
+            80% {
+                transform: scale(1);
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+		.disqus_click_btn {
+            background-color: dodgerblue;
+            color: white;
+            padding: 10px 20px;
+            border:0;
+            font-size: 14px;
+            cursor: pointer
+        }
+</style>
+	
+<!-- add data-ripple attribute -->
+<div class="btn_click_load"> 
+    <button class="disqus_click_btn" data-ripple>阅读评论 「请确保 disq.us &amp; disquscdn.com &amp; disqus.com 可以正常加载」</button>
+</div>
+	
+<script>
+    // add effect to elements
+    Array.prototype.forEach.call(document.querySelectorAll('[data-ripple]'), function(element){
+        // find all elements and attach effect
+        new RippleEffect(element); // element is instance of javascript element node
+    });
+</script>
+
+<script>
+    $('.btn_click_load').click(function() {  //click to load comments
+        var disqus_config = function () {
+            this.page.url = 'http://wanghaonanlpc.github.io/2017/03/19/实用的-atom-插件/index.html';  // Replace PAGE_URL with your page's canonical URL variable
+            this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        };
+        (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document;
+            var s = d.createElement('script');
+            s.src = '//wanghaonanlpc.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', + new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+        $('.btn_click_load').css('display','none');
+    });
+</script>
+  	
+
+    </div>
+    <style>
+        #disqus-comment{
+            background-color: #eee;
+            padding: 2pc;
+        }
+    </style>
+
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+        <a href="/2017/03/21/Android移动app架构设计浅谈/" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            新篇
+        </a>
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2017/03/19/Using-Pug-Templates-With-Express/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
 
 
                     

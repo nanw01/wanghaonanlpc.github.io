@@ -10,7 +10,7 @@
     
     <title>
         
-            分类: 移动端 | 
+            Android移动app架构设计浅谈 | 
         
         一个老白 | 野厨
     </title>
@@ -48,7 +48,7 @@
     <!-- The Open Graph protocol -->
     <meta property="og:url" content="http://wanghaonanlpc.github.io">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="分类: 移动端 | 一个老白 | 野厨">
+    <meta property="og:title" content="Android移动app架构设计浅谈 | 一个老白 | 野厨">
     <meta property="og:description" content="null">
     
 
@@ -208,98 +208,380 @@
                         </button>
                     
 
-                    <!-- Index Module -->
-<div class="material-index mdl-grid">
-    
-    <div class="locate-thumbnail-symbol"></div>
+                    <!-- Post TOC -->
 
-    <!-- Pin on top -->
     
-        
-    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
 
-    <!-- Normal Post -->
-    
-        
-        
-            <!-- Paradox Thumbnail -->
-            <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
+    <!-- Left aligned menu below button -->
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#前言"><span class="post-toc-number">1.</span> <span class="post-toc-text">前言</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#软件架构设计目标"><span class="post-toc-number">2.</span> <span class="post-toc-text">软件架构设计目标</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#从项目功能开始"><span class="post-toc-number">3.</span> <span class="post-toc-text">从项目功能开始</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#功能模块"><span class="post-toc-number">4.</span> <span class="post-toc-text">功能模块</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#移动安全机制"><span class="post-toc-number">5.</span> <span class="post-toc-text">移动安全机制</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#API协议标准化"><span class="post-toc-number">6.</span> <span class="post-toc-text">API协议标准化</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#API接口版本控制"><span class="post-toc-number">7.</span> <span class="post-toc-text">API接口版本控制</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#架构分层"><span class="post-toc-number">8.</span> <span class="post-toc-text">架构分层</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Android测试"><span class="post-toc-number">9.</span> <span class="post-toc-text">Android测试</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Android环境"><span class="post-toc-number">10.</span> <span class="post-toc-text">Android环境</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#总结在最后"><span class="post-toc-number">11.</span> <span class="post-toc-text">总结在最后</span></a></li></ol>
+
+        <!--
+        <li class="mdl-menu__item">
+            Some Action
+        </li>
+        -->
+    </ul>
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
     
         
             <!-- Random Thumbnail -->
             <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
+            <script>
+    var randomNum = Math.floor(Math.random() * 19 + 1);
 
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2017/02/21/移动端app内置浏览器优化/">移动端app内置浏览器优化</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            
-未总结完，待续
-
-
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2017/02/21/移动端app内置浏览器优化/" target="_self">继续阅读</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="Alex's avatar">
-            </div>
-            <div>
-                <strong>Alex</strong>
-                <span>2月 21, 2017</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-            <!-- Category -->
-            <span class="post_entry-category">
-                <a class="post_category-link" href="/categories/移动端/">移动端</a>
-            </span>
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-        
-        
-        
-    
-
-    
-
-    
-        <script>
-    var randomNum;
-
-    var locatePost = $('.locate-thumbnail-symbol').next();
-    for(var i = 0; i < 10; i++) {
-        randomNum = Math.floor(Math.random() * 19 + 1);
-
-        locatePost.children('.post_thumbnail-random').attr('id', 'random_thumbnail-'+randomNum);
-        locatePost.children('.post_thumbnail-random').css('background-image', 'url(' + '/img/random/material-' + randomNum + '.png' + ')')
-
-        locatePost = locatePost.next();
-    }
+    $('.post_thumbnail-random').css('background-image', 'url(' + '/img/random/material-' + randomNum + '.png' + ')');
 </script>
 
+        
+    
+            <p class="article-headline-p">
+                Android移动app架构设计浅谈
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/avatar.png" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>Alex</strong>
+        <span>3月 21, 2017</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+        <button id="article-functions-qrcode-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+            <i class="material-icons" role="presentation">devices other</i>
+            <span class="visuallyhidden">devices other</span>
+        </button>
+        <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button">
+            <li class="mdl-menu__item">在其它设备中阅读本文章</li>
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQ4AAAEOCAAAAABd2qZ5AAADgklEQVR42u3aQY7bQAwEQP//08k1gLHabnLGcIDSyQdZI5UOLXL4+uP453ghwIEDBw4cOHDgwIHjizle8fH+r/ffp678vOKPDzZbEQcOHDhwXOBIlnle/vlfyWO//27XnT0LDhw4cOC4x/FTIOXnPJ85C/I96C8vBgcOHDhwfBlHG3tJ+fd8Zn5lHDhw4MDx/3LMCrP8pqNiDAcOHDhwfBlHG3htcD7faMI9C+CLvVIcOHDgwLEeaPj+3x+d78CBAwcOHG8c7dEu1oZo/hGQXCF6Ihw4cODAcZRjs6WUDxm0hd+saTh8SThw4MCB4yhHfqHnMYJZW/DUo86aiThw4MCB45Mcm5hshw+SMzcDeXVFiwMHDhw4Fhx5wbN/pLPtv1mRiQMHDhw4PsNx6qaTMev8nP1m1YFeKQ4cOHDgGHEkxVt+03vo/Dqb14ADBw4cOO5x5CHaDi6cHZ54ZmqvgAMHDhw4bnPkwblpCCZNwPyx8yEJHDhw4MDxGY42YpNBh5amfYy2XCyCFgcOHDhwHOJIgmpT4LUDCu0W16rAw4EDBw4c1zjaCJy18NpQ32xHRc+IAwcOHDgucJyKz3YjKn+AWVvwQHMQBw4cOHCMONqFk+Dct/lOfQr8UjriwIEDB46jHO2YQr51lHMXwweLobpjk4M4cODAgSMu4WbLJxF7Y2NpFsxFcxAHDhw4cIw48oVnown5kMFsw6ltREbfHThw4MCB4yhHu5l09kZn0T4LYxw4cODAcYPjbIm1H4yYDTes1sWBAwcOHEc52pZfO77QxnMbnHnkF98dOHDgwIHjEEc71jbbgppFdb4ZlrwAHDhw4MBxm2MWkHkMz86ZQdSr48CBAweOD3Lk7bn8SFbJA372UnHgwIEDx22O2ZDBvm2Xo0RtvhEKDhw4cOC4zZEHWxuNs6ZeMqbQfjTgwIEDB47PcLRbSvlQWn6L+ebWvlzEgQMHDhw3ONpjNgCxic+ksGxfIQ4cOHDguMfRbhe1kbxpGiZl3uwKOHDgwIHjNkcbrrPxhST8ZqG72bjCgQMHDhz3ODZbO0k854VW/qizDwUcOHDgwPFtHHvKWbmVBGp7ZRw4cODA8W0cm+Jts8n0ofkOHDhw4MCx4JgVWqvG3AWmtsmIAwcOHDhucMxCKwnpGUEbmauNKxw4cODAcZTDgQMHDhw4cODAgQMHji87/gJVgnyFmPLnsQAAAABJRU5ErkJggg==">
+        </ul>
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        
+    </ul>
+    
+
+    <!-- Share -->
+    <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+    <!-- Leancloud Views -->
+        <a class="post_share-link" href="#">
+            <li class="mdl-menu__item">
+                <span id="/2017/03/21/Android移动app架构设计浅谈/" class="leancloud-views_num" data-flag-title="Android移动app架构设计浅谈">
+     &nbsp;浏览量
+</span>
+
+            </li>
+        </a>
+    
+
+    
+        
+            <!-- Busuanzi Views -->
+            <a class="post_share-link" href="#">
+                <li class="mdl-menu__item">
+                    <span id="busuanzi_container_page_pv">
+                        <span id="busuanzi_value_page_pv"></span>&nbsp;浏览量
+                    </span>
+                </li>
+            </a>
+        
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=Android移动app架构设计浅谈&url=http://wanghaonanlpc.github.io//2017/03/21/Android移动app架构设计浅谈/index.html&pic=&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=Android移动app架构设计浅谈&url=http://wanghaonanlpc.github.io//2017/03/21/Android移动app架构设计浅谈/index.html&via=Alex" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://wanghaonanlpc.github.io//2017/03/21/Android移动app架构设计浅谈/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://wanghaonanlpc.github.io//2017/03/21/Android移动app架构设计浅谈/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=一个老白 | 野厨&title=Android移动app架构设计浅谈&summary=null&pics=http://wanghaonanlpc.github.io/img/favicon.png&url=http://wanghaonanlpc.github.io/2017/03/21/Android移动app架构设计浅谈/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 QQ
+            </li>
+        </a>
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <blockquote>
+<p>原    址:<a href="https://m.aliyun.com/yunqi/articles/11876?spm=5176.100239.0.0.9l3OVA" target="_blank" rel="external"> [ 架构篇 ] Android 移动 app 架构设计浅谈</a></p>
+<p>作    者:<a href="https://m.aliyun.com/yunqi/users/1895759156739057?spm=5176.100239.0.0.ZbMlP9" target="_blank" rel="external">hudan2714 ( 云溪社区 ) </a></p>
+</blockquote>
+<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><blockquote>
+<p>架构，又名软件架构，是有关软件整体结构与组件的抽象描述，用于指导大型软件系统各个方面的设计。</p>
+</blockquote>
+<h3 id="软件架构设计目标"><a href="#软件架构设计目标" class="headerlink" title="软件架构设计目标"></a>软件架构设计目标</h3><ol>
+<li>可靠性（Reliable）。软件架构的可靠是产品设计的前提。 </li>
+<li>安全性（Secure）。软件架构的安全性是产品可持续发展的条件。 </li>
+<li>可扩展性（Scalable）。软件架构必须能够不同的功能需求情况下，支持可扩散性。 </li>
+<li>可定制化（Customizable）。同样的一套软件，可以根据客户群的不同和市场需求的变化进行调整。 </li>
+<li>可伸缩 （Extensible）。在新技术出现的时候，一个软件架构应当允许导入新技术，从而对现有系统进行功能和性能的扩展。 </li>
+<li>可维护性（Maintainable）。软件系统的维护包括两方面，一是排除现有的错误，二是将新的软件需求反映到现有系统中去。一个易于维护的系统可以有效地降低技术支持的花费。</li>
+</ol>
+<p>架构是项目形成到一定阶段的趋势。是对整个产品是否合格的有效保证。对于很多项目设计人员，<strong>在不考虑产品本身，不考虑团队，不考虑时间周期的前提下，一味的强调软件构架，是不合理的，也不利于整个产品的发展</strong>。当然，一个好的项目架构师，是很能清楚，项目在不同阶段，所需要处理的不同职责。能够最大限度的发挥能效，将产品周期，与功能模块做出最合适的匹配规划，这才是一个架构师所必须追求的。</p>
+<p>以下是个人对Android移动项目架构设计简单的经验之谈。欢迎与更多的朋友交流，若有疑问，或不合理之处，都可以随时交流。</p>
+<h3 id="从项目功能开始"><a href="#从项目功能开始" class="headerlink" title="从项目功能开始"></a><strong>从项目功能开始</strong></h3><p>每一个项目架构师，在拿到一个新项目的时候，都会不同的着重点。在项目规划风格上，都会有不同的考虑。而我个人在着手项目时，都会从功能上去着手。先了解项目整体的功能模块，区分出主体功能模块有哪些类，对不同的功能模块进行细致的划分。这是我开始的第一步。因为，只有对项目整体有个把握，才能更快的对项目有了解，才能知道怎样去合理安排项目的研发，才能更好的去安排项目进度流程，和人员的安排调度。</p>
+<p>功能划分之后，接下来就是项目的实际研发阶段。这个阶段就是项目实际进展阶段了。必须要有合理的安排调度，才是保证项目的高效。比如：我们进行的大部分项目，都有网络交互的部分，也有本地功能部分，还有一些基础数据模块部分，这些功能必须要有合理的时间安排。</p>
+<p>项目研发之前，几点提要说明： </p>
+<ol>
+<li>团队之间统一编码规范。 </li>
+<li>需求文档统一管理。 </li>
+<li>多人协同开发，根据文档开发（一切以文档为主）。</li>
+</ol>
+<p><strong>项目以功能划分，功能以模块划分</strong>。在项目初期，除了产品原型可能是提前设计成形外，其它的项目文档都还未出来，产品也是有个确定功能，但是细节文档还未成形，这个时候已经是项目开始阶段，即使在有一些文档还未成形前，也可以开始项目的基础开发了。</p>
+<h3 id="功能模块"><a href="#功能模块" class="headerlink" title="功能模块"></a><strong>功能模块</strong></h3><p><strong>网络模块，数据库存储模块，数据加密模块，数据缓存模块，数据解析器，日志信息收集模块等</strong>。这些都是项目的基本模块，也可以独立于功能的模块，可以提前开发，测试。便于后期直接使用。</p>
+<h3 id="移动安全机制"><a href="#移动安全机制" class="headerlink" title="移动安全机制"></a><strong>移动安全机制</strong></h3><p>做过移动项目的都知道，移动安全是项目前期需要考虑的一个重要环节。所以，在项目之初，就应该对自身的数据存储做必要的数据加密，对网络传输的数据进行必要加密。<br>移动数据加密分为两种：<br>一种是本地数据加密，只是本机存储的信息，本地加密保存。<br>一种是网络传输数据加密，这是涉及到网络协议，与服务器之间的加密协议。</p>
+<p>本地加密方式有很多种： </p>
+<ol>
+<li>MD5加密算法。 MD5是个不可逆的算法 没有解密的算法（目前据说也有方法破解）。 </li>
+<li>DES加密。可逆。 </li>
+<li>RSA加密。可逆 </li>
+</ol>
+<p>对于不是需要绝对足够安全的项目，以上三种加密足够用。</p>
+<p>网络数据加密主要从两个方面考虑： </p>
+<ol>
+<li>保证API的调用者是经过自己授权的App； </li>
+<li>保证数据传输的安全。</li>
+</ol>
+<p>保证API是自己授权的App，采用设计签名的方式。对每个移动平台，都会有不同的AppKey和AppSecret。在调用API时，将AppKey加入到请求参数中，然后，把AppSecret与其它参数，通过某种签名算法生成一个签名字符串，把数据传输给服务器端。而服务器根据AppKey和AppSecret，用相同的签名算法生成的签名与之一致，则说明请求安全。签名算法可以采用自己规定的一套签名算法（更安全），也可采用外部公开的签名算法（初期使用）。另外，在参数列表中再加入一个时间戳，还可以防止部分重放攻击。<br>对于数据传输安全，可以使用HTTPS。因为HTTPS添加了ssl安全协议。但是android项目开发，大部分都没有去实现。主要是没有对ssl证书进行安全性检查。</p>
+<h3 id="API协议标准化"><a href="#API协议标准化" class="headerlink" title="API协议标准化"></a><strong>API协议标准化</strong></h3><p>项目开发，协议一定需要标准化，并且需要严格执行接口协议。完成每个版本的协议文档更新，方便后续使用者查看。<br>目前协议都是使用Json格式传输。需要注意的是，JSON数据和实体对象在传输时，序列化和反序列化因平台不同，会产生不同的区别。比如：JSON库将Date类型的数据序列化时会转为String，传输到服务器时，服务器反序列化经常会出现不同的结果。</p>
+<h3 id="API接口版本控制"><a href="#API接口版本控制" class="headerlink" title="API接口版本控制"></a><strong>API接口版本控制</strong></h3><p>一般解决接口更新变化问题，我们采取的做法是，每个API接口，都会带有协议的版本，若是协议发生改变，则版本号相应改变，在处理数据请求时，则可以根据不同协议的版本进行处理，解决了版本的兼容性问题。</p>
+<h3 id="架构分层"><a href="#架构分层" class="headerlink" title="架构分层"></a><strong>架构分层</strong></h3><p>架构设计，主要的目的就解决功能和代码的复用，减少重复开发，方便功能扩展，降低功能和代码层级的耦合。<br>目前移动设计框架，主流的有三种：MVC、MVP、MVVM三种方式（具体详情，<a href="http://blog.csdn.net/hudan2714/article/details/50990359" target="_blank" rel="external">请参考框架小结</a>）。<br>任何的框架设计都是在满足开发需求为前提，千万不能为了设计而设计，不要问我这三种设计，哪种最合适开发？如果你还这样去问，那只能说你还不是一个成熟的产品设计者。三种框架都有各自的利弊，是应该在不同的阶段和不同人员的配备情况下，选择更合理的方式。我曾经参与一个创业团队开发视频项目，前期只有两个移动开发人员，项目时间紧的情况下。项目负责人就只会天天在那里修改需求，谈项目架构。初期的项目，在产品验证功能阶段，在项目需要快速迭代阶段，应该使用最有效的框架，才是合理的选择。而且项目的发展，一定是随着项目功能的确立，产品的定型和需求完善，对项目本身的稳定性和性能的要求，才是一个逐步提高的过程。想要一步达到完美的产品，不仅是在设计上很难做到，而且在目前所有的产品中，都是很难达到的。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">任何框架都是在此三层数据模型上。View，Model，Controller/Presenter/ViewModel。上层View：用户行为操作，数据结果显示。底层Model：数据处理，提供显示数据。中间的就是业务逻辑层。</div></pre></td></tr></table></figure>
+<p>Android项目设计，重在对项目的理解，重在对需求功能的划分，重在对团队合理分配。高效的产出，快速的迭代，才是移动项目的生存之道。</p>
+<h3 id="Android测试"><a href="#Android测试" class="headerlink" title="Android测试"></a><strong>Android测试</strong></h3><p>移动开发，为保证质量产出，需要进行必须要逻辑测试。而在项目框架设计中，简单的mvc模式，若view和model中混有业务逻辑，则不利于接口测试。所以，在后续版本的迭代中，需要逐渐使用mvp或mvvm框架设计，让view和model与业务逻辑实现完整的解耦合。</p>
+<h3 id="Android环境"><a href="#Android环境" class="headerlink" title="Android环境"></a><strong>Android环境</strong></h3><p>自从Android提供了更高效稳定的android studio之后，对于开发者来说是更便捷，更方便了。在android gradle多平台打包。proguard代码优化，混淆。随着android studio的越来越强大，越来越稳定，相信开发android项目也会变得越来越so easy了。</p>
+<h3 id="总结在最后"><a href="#总结在最后" class="headerlink" title="总结在最后"></a><strong>总结在最后</strong></h3><p>一个合格的移动项目架构师，必须是在不断的项目开发中成长的。不仅仅懂得项目的高效快速部署，也懂得怎样合理优化团队，才能有更优质的产品产出。移动产品，是一个快速产出的产品，怎样做出适合团队产出的产品，才是移动架构师的学习之道。</p>
+
+    
+
     
 </div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+
+
+
+
+    <!-- 使用 DISQUS_CLICK -->
+    <div id="disqus-comment">	
+        <div id="disqus_thread"></div>
+<!-- include js -->
+<script src="/js/ripple.js"></script>
+
+<!-- add animation -->
+<style>
+        .ripple-container {
+        }
+        .ripple-container .ripple{
+            background-color: rgba(255,255,255,0.4);
+            animation: ripple 2s forwards cubic-bezier(0, 0, 0.2, 1);
+        }
+        @keyframes ripple {
+            0% {
+                transform: scale(0);
+                opacity: 1;
+            }
+            80% {
+                transform: scale(1);
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+		.disqus_click_btn {
+            background-color: dodgerblue;
+            color: white;
+            padding: 10px 20px;
+            border:0;
+            font-size: 14px;
+            cursor: pointer
+        }
+</style>
+	
+<!-- add data-ripple attribute -->
+<div class="btn_click_load"> 
+    <button class="disqus_click_btn" data-ripple>阅读评论 「请确保 disq.us &amp; disquscdn.com &amp; disqus.com 可以正常加载」</button>
+</div>
+	
+<script>
+    // add effect to elements
+    Array.prototype.forEach.call(document.querySelectorAll('[data-ripple]'), function(element){
+        // find all elements and attach effect
+        new RippleEffect(element); // element is instance of javascript element node
+    });
+</script>
+
+<script>
+    $('.btn_click_load').click(function() {  //click to load comments
+        var disqus_config = function () {
+            this.page.url = 'http://wanghaonanlpc.github.io/2017/03/21/Android移动app架构设计浅谈/index.html';  // Replace PAGE_URL with your page's canonical URL variable
+            this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        };
+        (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document;
+            var s = d.createElement('script');
+            s.src = '//wanghaonanlpc.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', + new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+        $('.btn_click_load').css('display','none');
+    });
+</script>
+  	
+
+    </div>
+    <style>
+        #disqus-comment{
+            background-color: #eee;
+            padding: 2pc;
+        }
+    </style>
+
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2017/03/19/实用的-atom-插件/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
 
 
                     
