@@ -137,6 +137,105 @@
   </entry>
   
   <entry>
+    <title>Android团队项目开发之统一代码规范</title>
+    <link href="http://wanghaonanlpc.github.io/2017/03/21/Android%E5%9B%A2%E9%98%9F%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91%E4%B9%8B%E7%BB%9F%E4%B8%80%E4%BB%A3%E7%A0%81%E8%A7%84%E8%8C%83/"/>
+    <id>http://wanghaonanlpc.github.io/2017/03/21/Android团队项目开发之统一代码规范/</id>
+    <published>2017-03-21T01:12:06.000Z</published>
+    <updated>2017-04-03T05:10:34.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<p>原    址:<a href="https://m.aliyun.com/yunqi/articles/11875?spm=5176.100239.0.0.9l3OVA" target="_blank" rel="external">【项目篇】Android团队项目开发之统一代码规范</a></p>
+<p>作    者:<a href="https://m.aliyun.com/yunqi/users/1895759156739057?spm=5176.100239.0.0.ZbMlP9" target="_blank" rel="external">hudan2714 ( 云溪社区 ) </a></p>
+</blockquote>
+<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>团队项目开发前的统一三要素：统一需求/开发文档，统一代码规范，统一环境（编译/测试/发布）。</p>
+<p>一个项目团队，要想有高效的产出，必须在团队协作上下好功夫，必须在项目开发统一进度上做好协调。只有在高效的协同环境下，才能有优质的产出。这是我多年的经验之谈。也是配合过多个团队之后的深刻感悟。</p>
+<p>每一个程序员都是有独立开发思维模式，都有自己的编码行为和操作习惯。所以，在一个团队中，怎么做到更高效的协同，不仅仅是每个开发者自身的协同配合能力，更重要的是项目管理者，怎样做到统一要求和统一实行。</p>
+<p>举个很简单的例子。以前在一个小团队里，每次进行代码更新的时候，都是有一大堆更新。最后发现很多不是代码功能的个性，而只是大家的code style不一样。每次merge代码都要diff查看修改的地方，这样很影响效率。而且如果你只是做为一个普通的开发者，要求其它人和你用统一style，别人未必接受。这时的项目管理者，才是最需要去统一规范的。保持规范统一，才是高效协作产出的前提。</p>
+<p>Android项目开发需要统一哪些规范呢？<br>在些列出一些常用规范，和容易出问题的地方，方便自己查找，也方便和更多的朋友交流！<br>一、编码方式统一：UTF-8。一般项目都用utf-8。有其它编码的，可自行要求修改。<br>在项目代码中右键，就能出现如下：<br><img src="http://img.blog.csdn.net/20160328150409162" alt="修改编码"></p>
+<p>或者去个性配置文件：<br><img src="http://img.blog.csdn.net/20160328150459694" alt="修改编码"></p>
+<p>二、代码样式code style：比如，tab缩进4个空格，或者 tab size等。<br>\1. 自定义的编码格式xml 文件。没有的话，可以下载<br>\2. 把xml文件复制到 C:/Users/YourUserName/.AndroidStudio/config/codestyles 目录下，如果没有codestyles目录可以自己新建一个。 (目前还不支持导入)<br>\3. 重启android studio<br>\4. android studio 中 Setting-&gt; Editor-&gt; Code Style-&gt; JAVA-&gt; Scheme 选择自定义的编码格式文件。<br>具体如下图：<br><img src="http://img.blog.csdn.net/20160328153328856" alt="样式"></p>
+<p>保持代码格式的一致性，对项目的协同开发很有必要。优秀的代码习惯是，提交代码前格式化代码，让代码统一规则上传，保证代码的整洁。所以，在团队中必须支持规范代码。提交前所有修改的类都必须ctrl+f（规范代码），然后再提前。良好的编码习惯，能让代码变得更优雅漂亮。</p>
+<h2 id="命名规范"><a href="#命名规范" class="headerlink" title="命名规范"></a>命名规范</h2><p>Java代码一般使用驼峰式规则，用名词或名词词组命名，每个单词的首字母大写。常用类的命名：</p>
+<blockquote>
+<ul>
+<li>activity类，命名以Activity为后缀，如：LoginActivity</li>
+<li>fragment类，命名以Fragment为后缀，如：ShareDialogFragment</li>
+<li>service类，命名以Service为后缀，如：DownloadService</li>
+<li>adapter类，命名以Adapter为后缀，如：CouponListAdapter</li>
+<li>工具类，命名以Util为后缀，如：EncryptUtil</li>
+<li>模型类，命名以BO为后缀，如：CouponBO</li>
+<li>接口实现类，命名以Impl为后缀，如：ApiImpl</li>
+</ul>
+</blockquote>
+<h3 id="方法命名"><a href="#方法命名" class="headerlink" title="方法命名"></a>方法命名</h3><blockquote>
+<ul>
+<li>初始化方法，命名以init开头，例：initView</li>
+<li>按钮点击方法，命名以to开头，例：toLogin</li>
+<li>设置方法，命名以set开头，例：setData</li>
+<li>具有返回值的获取方法，命名以get开头，例：getData</li>
+<li>通过异步加载数据的方法，命名以load开头，例：loadData</li>
+<li>布尔型的判断方法，命名以is或has，或具有逻辑意义的单词如equals，例：isEmpty</li>
+</ul>
+</blockquote>
+<h3 id="控件命名"><a href="#控件命名" class="headerlink" title="控件命名"></a>控件命名</h3><p>控件命名，一般都有各自习惯。但为了保证代码的整洁，尽量保持统一风格。<br><img src="http://img.blog.csdn.net/20160328155235197" alt="控件"></p>
+<h3 id="常量命名"><a href="#常量命名" class="headerlink" title="常量命名"></a>常量命名</h3><p>全部为大写单词，单词之间用下划线分开。<br>public final static int PAGE_SIZE = 20;</p>
+<h3 id="变量命名"><a href="#变量命名" class="headerlink" title="变量命名"></a>变量命名</h3><p>{范围描述+}意义描述+类型描述的组合，用驼峰式，首字母小<br><code>private TextView headerTitleTxt; // 标题栏的标题 private Button loginBtn; // 登录按钮</code></p>
+<h3 id="控件id命名"><a href="#控件id命名" class="headerlink" title="控件id命名"></a>控件id命名</h3><p>控件缩写<em>{范围</em>}意义，范围可选，只在有明确定义的范围内才需要加上。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">&lt;!-- 这是标题栏的标题 --&gt;</div><div class="line">&lt;TextView</div><div class="line">    android:id=&quot;@+id/txt_header_title&quot;</div><div class="line">    ... /&gt;</div><div class="line"></div><div class="line">&lt;!-- 这是登录按钮 --&gt;</div><div class="line">&lt;Button</div><div class="line">    android:id=&quot;@+id/btn_login&quot;</div><div class="line">    ... /&gt;</div></pre></td></tr></table></figure>
+<h3 id="layout命名"><a href="#layout命名" class="headerlink" title="layout命名"></a>layout命名</h3><p>组件类型<em>{范围</em>}功能，范围可选，只在有明确定义的范围内才需要加上。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">activity_&#123;范围_&#125;功能，为Activity的命名格式 </div><div class="line">fragment_&#123;范围_&#125;功能，为Fragment的命名格式</div><div class="line">dialog_&#123;范围_&#125;功能，为Dialog的命名格式 </div><div class="line">item_list_&#123;范围_&#125;功能，为ListView的item命名格式</div><div class="line">item_grid_&#123;范围_&#125;功能，为GridView的item命名格式</div><div class="line">header_list_&#123;范围_&#125;功能，为ListView的HeaderView命名格式</div><div class="line">footer_list_&#123;范围_&#125;功能，为ListView的FooterView命名格式</div></pre></td></tr></table></figure>
+<h3 id="strings的命名"><a href="#strings的命名" class="headerlink" title="strings的命名"></a>strings的命名</h3><p>类型<em>{范围</em>}功能，范围可选。<br>以下为几种常用的命名：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">页面标题，命名格式为：title_页面</div><div class="line">按钮文字，命名格式为：btn_按钮事件</div><div class="line">标签文字，命名格式为：label_标签文字</div><div class="line">选项卡文字，命名格式为：tab_选项卡文字</div><div class="line">消息框文字，命名格式为：toast_消息</div><div class="line">编辑框的提示文字，命名格式为：hint_提示信息</div><div class="line">图片的描述文字，命名格式为：desc_图片文字</div><div class="line">对话框的文字，命名格式为：dialog_文字</div><div class="line">menu的item文字，命名格式为：action_文字</div></pre></td></tr></table></figure>
+<h3 id="colors的命名"><a href="#colors的命名" class="headerlink" title="colors的命名"></a>colors的命名</h3><p>前缀{<em>控件}{</em>范围}{_后缀}，控件、范围、后缀可选，但控件和范围至少要有一个。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">背景颜色，添加bg前缀</div><div class="line">文本颜色，添加text前缀</div><div class="line">分割线颜色，添加div前缀</div><div class="line">区分状态时，默认状态的颜色，添加normal后缀</div><div class="line">区分状态时，按下时的颜色，添加pressed后缀</div><div class="line">区分状态时，选中时的颜色，添加selected后缀</div><div class="line">区分状态时，不可用时的颜色，添加disable后缀</div></pre></td></tr></table></figure>
+<h3 id="drawable的命名"><a href="#drawable的命名" class="headerlink" title="drawable的命名"></a>drawable的命名</h3><p>前缀{<em>控件}{</em>范围}{_后缀}，控件、范围、后缀可选，但控件和范围至少要有一个。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">图标类，添加ic前缀</div><div class="line">背景类，添加bg前缀</div><div class="line">分隔类，添加div前缀</div><div class="line">默认类，添加def前缀</div><div class="line">区分状态时，默认状态，添加normal后缀</div><div class="line">区分状态时，按下时的状态，添加pressed后缀</div><div class="line">区分状态时，选中时的状态，添加selected后缀</div><div class="line">区分状态时，不可用时的状态，添加disable后缀</div><div class="line">多种状态的，添加selector后缀（一般为ListView的selector或按钮的selector）</div></pre></td></tr></table></figure>
+<h3 id="动画文件命名"><a href="#动画文件命名" class="headerlink" title="动画文件命名"></a>动画文件命名</h3><p>动画类型_动画方向。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">fade_in，淡入</div><div class="line">fade_out，淡出</div><div class="line">push_down_in，从下方推入</div><div class="line">push_down_out，从下方推出</div><div class="line">slide_in_from_top，从头部滑动进入</div><div class="line">zoom_enter，变形进入</div><div class="line">shrink_to_middle，中间缩小</div></pre></td></tr></table></figure>
+<h3 id="注释规范"><a href="#注释规范" class="headerlink" title="注释规范"></a>注释规范</h3><ol>
+<li>文件头注释</li>
+</ol>
+<p>文件顶部统一添加版权声明，声明的格式如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">/**</div><div class="line"> * Copyright (c) 2015. Keegan小钢 Inc. All rights reserved.</div><div class="line"> */</div></pre></td></tr></table></figure>
+<ol>
+<li>类和接口注释<br>类和接口统一添加javadoc注释，格式如下：</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">/**</div><div class="line"> * 类或接口的描述信息</div><div class="line"> *</div><div class="line"> * @author $&#123;USER&#125;</div><div class="line"> * @date $&#123;DATE&#125;</div><div class="line"> */</div></pre></td></tr></table></figure>
+<ol>
+<li>方法注释<br>下面几种方法，都必须添加javadoc注释，说明该方法的用途和参数说明，以及返回值的说明。<ul>
+<li>接口中定义的所有方法</li>
+<li>抽象类中自定义的抽象方法</li>
+<li>抽象父类的自定义公用方法</li>
+<li>工具类的公用方法</li>
+</ul>
+</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">/**</div><div class="line"> * 登录</div><div class="line"> *</div><div class="line"> * @param loginName 登录名</div><div class="line"> * @param password  密码</div><div class="line"> * @param listener  回调监听器</div><div class="line"> */</div><div class="line">public void login(String loginName, String password, ActionCallbackListener&lt;Void&gt; listener);</div></pre></td></tr></table></figure>
+<ol>
+<li>变量和常量注释</li>
+</ol>
+<p>下面几种情况下的常量和变量，都要添加注释说明，优先采用右侧//来注释，若注释说明太长则在上方添加注释。</p>
+<ul>
+<li>接口中定义的所有常量</li>
+<li>公有类的公有常量</li>
+<li>枚举类定义的所有枚举常量</li>
+<li>实体类的所有属性变量</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">public static final int TYPE_CASH = 1; // 现金券</div><div class="line">public static final int TYPE_DEBIT = 2; // 抵扣券</div><div class="line">public static final int TYPE_DISCOUNT = 3; // 折扣券</div><div class="line"></div><div class="line">private int id;                // 券id</div><div class="line">private String name;           // 券名称</div><div class="line">private String introduce;      // 券简介</div></pre></td></tr></table></figure>
+<p>注：部分信息来源于网络，若有使用不当，请联系！感谢！</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;原    址:&lt;a href=&quot;https://m.aliyun.com/yunqi/articles/11875?spm=5176.100239.0.0.9l3OVA&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;【项目篇】An
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
     <title>Android移动app架构设计浅谈</title>
     <link href="http://wanghaonanlpc.github.io/2017/03/21/Android%E7%A7%BB%E5%8A%A8app%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%E6%B5%85%E8%B0%88/"/>
     <id>http://wanghaonanlpc.github.io/2017/03/21/Android移动app架构设计浅谈/</id>
@@ -1251,28 +1350,6 @@
       <category term="android" scheme="http://wanghaonanlpc.github.io/tags/android/"/>
     
       <category term="浏览器" scheme="http://wanghaonanlpc.github.io/tags/%E6%B5%8F%E8%A7%88%E5%99%A8/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>8阶单元5词汇</title>
-    <link href="http://wanghaonanlpc.github.io/2017/02/28/8%E9%98%B6%E5%8D%95%E5%85%835%E8%AF%8D%E6%B1%87/"/>
-    <id>http://wanghaonanlpc.github.io/2017/02/28/8阶单元5词汇/</id>
-    <published>2017-02-28T11:25:20.000Z</published>
-    <updated>2017-03-01T07:24:38.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>8级 单元 5</p>
-<p>belt    [英式][belt] [美式][belt]    noun    腰带, 皮带<br>blouse    [英式] [blaʊz] [美式] [blaʊs]    noun    女式罩衫<br>cashmere    [英式] [ˈkæʃmɪə(r)] [美式] [ˈkæʒmɪr]    noun    山羊绒<br>disappointed    [英式] [ˌdɪsəˈpɔɪntɪd] [美式] [ˌdɪsəˈpɔɪntɪd]    adj.    感到失望的, 灰心的<br>enthusiastic    [英式][ɪnˌθjuːziˈæstɪk] [美式][ɪnˌθuːziˈæstɪk]    adj.    热情的<br>exquisite    [英式] [ɪkˈskwɪzɪt] [美式] [ɪkˈskwɪzɪt]    adj.    精美<br>genuine    [英式][ˈdʒenjuɪn] [美式][ˈdʒenjuɪn]    adj.    真实的, 纯正的<br>handmade    [英式][ˌhændˈmeɪd] [美式][ˌhændˈmeɪd]    adj.    手工制造<br>neutral    [英式][ˈnjuːtrəl] [美式][ˈnuːtrəl]    adj.    无明显特性的<br>skinny    [英式] [ˈskɪni] [美式] [ˈskɪni]    adj.    枯瘦的,骨瘦如柴的<br>soft    [英式] [sɒft] [美式] [sɔːft]    adj.    柔软的<br>turquoise    [英式] [ˈtɜːkwɔɪz] [美式] [ˈtɜːrkwɔɪz]    noun    蓝绿色<br>unique    [英式] [juˈniːk] [美式] [juˈniːk]    adj.    独一无二的, 独有的, 独特的<br>blend    [英式] [blend] [美式] [blend]    noun    混合物;(不同类型东西的)混合品<br>cashier    [英式] [kæˈʃɪə(r)] [美式] [kæˈʃɪr]    noun    收银员<br>debit card        noun    借记卡<br>percentage    [英式] [pəˈsentɪdʒ] [美式] [pərˈsentɪdʒ]    noun    百分比; 百分率,比例,部分<br>press    [英式] [pres] [美式] [pres]    verb    压, 贴, 挤<br>sales tax        noun    营业税, 销售税<br>sign    [英式] [saɪn] [美式] [saɪn]    verb    签名<br>slide    [英式] [slaɪd] [美式] [slaɪd]    verb    滑, 滑动<br>total    [英式] [ˈtəʊtl] [美式] [ˈtoʊtl]    adj.    总计的, 全体的, 总括的, 总体的<br>within    [英式] [wɪˈðɪn] [美式] [wɪˈðɪn]    prep.    在……之内<br>describe    [英式] [dɪˈskraɪb] [美式] [dɪˈskraɪb]    verb    描述<br>flat    [英式] [flæt] [美式] [flæt]    adj.    平的<br>heated    [英式] [ˈhiːtɪd] [美式] [ˈhiːtɪd]    adj.    加热<br>humankind    [英式] [ˌhjuːmənˈkaɪnd] [美式] [ˌhjuːmənˈkaɪnd]    noun    人类<br>invent    [英式] [ɪnˈvent] [美式] [ɪnˈvent]    verb    发明, 创造<br>mobile    [英式] [ˈməʊbaɪl] [美式] [ˈmoʊbl]    adj.    可移动的, 非固定的<br>organization    [英式] [ˌɔːɡənaɪˈzeɪʃn] [美式] [ˌɔːrɡənəˈzeɪʃn]    noun    组织, 机构<br>revolution    [英式] [ˌrevəˈluːʃn] [美式] [ˌrevəˈluːʃn]    noun    革命<br>run    [英式] [rʌn] [美式] [rʌn]    verb    经营<br>touch screen        noun    触摸屏<br>video game        noun    电视游戏<br>wall    [英式] [wɔːl] [美式] [wɔːl]    noun    墙, 墙壁, 围墙<br>battery    [英式] [ˈbætri] [美式] [ˈbætri]    noun    电池<br>chat    [英式] [tʃæt] [美式] [tʃæt]    verb    聊天<br>connection    [英式] [kəˈnekʃn] [美式] [kəˈnekʃn]    noun    连接物<br>dead    [英式] [ded] [美式] [ded]    adj.    不通电的, 无电流的<br>file    [英式] [faɪl] [美式] [faɪl]    noun    文件, 档案<br>gigabyte    [英式] [ˈɡɪɡəbaɪt] [美式] [ˈɡɪɡəbaɪt]    noun    技嘉科技<br>impact    [英式] [ˈɪmpækt] [美式] [ˈɪmpækt]    noun    影响, 冲击力<br>memory    [英式] [ˈmeməri] [美式] [ˈmeməri]    noun    存储器, 存储, 内存<br>rethink    [英式] [ˌriːˈθɪŋk] [美式] [ˌriːˈθɪŋk]    verb    重新考虑,再考虑<br>search    [英式] [sɜːtʃ] [美式] [sɜːrtʃ]    noun    寻找, 研究<br>produce    [英式] [prəˈdjuːs] [美式] [prəˈduːs]    verb    生产, 制造<br>stop    [英式] [stɒp] [美式] [stɑːp]    verb    停止, 中止<br>text    [英式] [tekst] [美式] [tekst]    verb    发短信<br>topic    [英式] [ˈtɒpɪk] [美式] [ˈtɑːpɪk]    noun    题目, 主题<br>useful    [英式] [ˈjuːsfl] [美式] [ˈjuːsfl]    adj.    有用的, 有益的, 实用的</p>
-]]></content>
-    
-    <summary type="html">
-    
-      英语单词词汇
-    
-    </summary>
-    
-      <category term="英语" scheme="http://wanghaonanlpc.github.io/categories/%E8%8B%B1%E8%AF%AD/"/>
-    
     
   </entry>
   
