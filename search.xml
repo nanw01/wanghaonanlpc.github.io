@@ -4,6 +4,82 @@
   
     
     <entry>
+      <title><![CDATA[Android 日常开发好习惯]]></title>
+      <url>http://wanghaonanlpc.github.io/2017/04/06/Android-%E6%97%A5%E5%B8%B8%E5%BC%80%E5%8F%91%E5%A5%BD%E4%B9%A0%E6%83%AF/</url>
+      <content type="html"><![CDATA[<h3 id="Android编码规范"><a href="#Android编码规范" class="headerlink" title="Android编码规范"></a>Android编码规范</h3><ol>
+<li>java代码中不出现中文，最多注释中可以出现中文；</li>
+<li>局部变量命名、静态成员变量命名：只能包含字母，单词首字母出第一个都为大写，其他字母都为小写；</li>
+<li>常量命名：只能包含字母和<em>，字母全部大写，单词之间用</em>隔开；</li>
+<li>layout中的id命名：命名模式为：view缩写_模块名称_view的逻辑名称 view的缩写详情如下 LinearLayout：ll RelativeLayout:rl TextView:tv ImageView:iv ImageButton:ib Button:btn</li>
+<li>activity中的view变量命名 命名模式为：view缩写+逻辑名称 建议：如果layout文件很复杂，建议将layout分成多个模块，每个模块定义一个moduleViewHolder，其成员变量包含所属view</li>
+<li>strings.xml中的id命名： 命名模式：activity名称<em>功能模块名称</em>逻辑名称 activity名称<em>逻辑名称 common</em>逻辑名称 strings.xml中，使用activity名称注释，将文件内容区分开来</li>
+<li>drawable中的图片命名 命名模式：activity名称<em>逻辑名称/common</em>逻辑名称 7.styles.xml：将layout中不断重现的style提炼出通用的style通用组件，放到styles.xml中；</li>
+<li>使用layer-list和selector</li>
+<li>图片尽量分拆成多个可重用的图片</li>
+<li>服务端可以实现的，就不要放在客户端</li>
+<li>引用第三方库要慎重，避免应用大容量的第三方库，导致客户端包非常大</li>
+<li>处理应用全局异常和错误，将错误以邮件的形式发送给服务端</li>
+<li>图片的.9处理</li>
+<li>使用静态变量方式实现界面间共享要慎重</li>
+<li>Log(系统名称 模块名称 接口名称，详细描述)</li>
+<li>单元测试（逻辑测试、界面测试）</li>
+<li>不要重用父类的handler，对应一个类的handler也不应该让其子类用到，否则会导致message.what冲突</li>
+<li>activity中在一个View.OnClickListener中处理所有的逻辑</li>
+<li>strings.xml中使用%1$s实现字符串的通配</li>
+<li>如果多个Activity中包含共同的UI处理，那么可以提炼一个CommonActivity，把通用部分叫由它来处理，其他activity只要继承它即可</li>
+<li>使用button+activitgroup实现tab效果时，使用Button.setSelected(true)，确保按钮处于选择状态，并使activitygroup的当前activity与该button对应</li>
+<li>如果所开发的为通用组件，为避免冲突，将drawable/layout/menu/values目录下的文件名增加前缀</li>
+<li>数据一定要效验，例如 字符型转数字型，如果转换失败一定要有缺省值； 服务端响应数据是否有效判断；</li>
+</ol>
+<h3 id="Android性能优化"><a href="#Android性能优化" class="headerlink" title="Android性能优化"></a>Android性能优化</h3><ol>
+<li>http用gzip压缩，设置连接超时时间和响应超时时间 http请求按照业务需求，分为是否可以缓存和不可缓存，那么在无网络的环境中，仍然通过缓存的httpresponse浏览部分数据，实现离线阅读。</li>
+<li>listview 性能优化<ol>
+<li>复用convertView 在getItemView中，判断convertView是否为空，如果不为空，可复用。如果couvertview中的view需要添加listerner，代码一定要在if(convertView==null){}之外。</li>
+<li>异步加载图片 item中如果包含有webimage，那么最好异步加载</li>
+<li>快速滑动时不显示图片 当快速滑动列表时（SCROLL_STATE_FLING），item中的图片或获取需要消耗资源的view，可以不显示出来；而处于其他两种状态（SCROLL_STATE_IDLE 和SCROLL_STATE_TOUCH_SCROLL），则将那些view显示出来</li>
+</ol>
+</li>
+<li>使用线程池，分为核心线程池和普通线程池，下载图片等耗时任务放置在普通线程池，避免耗时任务阻塞线程池后，导致所有异步任务都必须等待</li>
+<li>异步任务，分为核心任务和普通任务，只有核心任务中出现的系统级错误才会报错，异步任务的ui操作需要判断原activity是否处于激活状态</li>
+<li>尽量避免static成员变量引用资源耗费过多的实例,比如Context</li>
+<li>使用WeakReference代替强引用，弱引用可以让您保持对对象的引用，同时允许GC在必要时释放对象，回收内存。对于那些创建便宜但耗费大量内存的对象，即希望保持该对象，又要在应用程序需要时使用，同时希望GC必要时回收时，可以考虑使用弱引用。</li>
+<li>超级大胖子Bitmap 及时的销毁(Activity的onDestroy时，将bitmap回收) 设置一定的采样率 巧妙的运用软引用 drawable对应resid的资源，bitmap对应其他资源8.保证Cursor 占用的内存被及时的释放掉，而不是等待GC来处理。并且 Android明显是倾向于编程者手动的将Cursor close掉</li>
+<li>线程也是造成内存泄露的一个重要的源头。线程产生内存泄露的主要原因在于线程生命周期的不可控</li>
+<li>如果ImageView的图片是来自网络，进行异步加载</li>
+<li>应用开发中自定义View的时候，交互部分，千万不要写成线程不断刷新界面显示，而是根据TouchListener事件主动触发界面的更新</li>
+</ol>
+<h3 id="Android-UI优化"><a href="#Android-UI优化" class="headerlink" title="Android UI优化"></a>Android UI优化</h3><ol>
+<li>layout组件化，尽量使用merge及include复用</li>
+<li>使用styles，复用样式定义</li>
+<li>软键盘的弹出控制，不要让其覆盖输入框</li>
+<li>数字、字母和汉字混排占位问题：将数字和字母全角化。由于现在大多数情况下我们的输入都是半角，所以 字母和数字的占位无法确定，但是一旦全角化之后，数字、字母的占位就和一个汉字的占位相同了，这样就可以避免由于占位导致的排版问题。</li>
+<li>英文文档排版：textview自动换行时要保持单词的完整性，解决方案是计算字符串长度，然后手动设定每一行显示多少个字母并加上‘n‘</li>
+<li>复杂布局使用RelativeLayout</li>
+<li>自适应屏幕，使用dp替代pix</li>
+<li>使用android:layout_weight或者TableLayout制作等分布局</li>
+<li>使用animation-list制作动画效果</li>
+</ol>
+<h3 id="其他的一些Android开发建议"><a href="#其他的一些Android开发建议" class="headerlink" title="其他的一些Android开发建议"></a>其他的一些Android开发建议</h3><ol>
+<li>跟上时代的步伐，把Eclipse换成Android Studio，把SVN换成Git，这当然要适合项目开发属性的需要，Git学习中文网站：<a href="https://git-scm.com/book/zh/" target="_blank" rel="external">https://git-scm.com/book/v2zh/v2</a></li>
+<li>勤做总结，推荐使用印象笔记，把一些懂的经验总结起来，把还不懂的文章挂里面，有时间就慢慢消化；</li>
+<li>定期code review，不断迭代，你总会发现一些不合理的代码，或者需要优化的地方。</li>
+<li>关注一些知名的技术大V或网站，里面许多东西值得你去消化，推荐：<a href="http://p.codekk.com/" target="_blank" rel="external">Android 开源项目集合</a>，<a href="http://tech.meituan.com/" target="_blank" rel="external">http://tech.meituan.com/</a>，<a href="https://www.zhihu.com/people/stormzhang" target="_blank" rel="external">stormzhang</a>，但总归来说，去Android官网或者参考一份Java API文档虽说枯燥，但熟悉之后，你会有更大的进步。</li>
+<li>如想更深入了解可阅读珍藏许久的文章：<a href="http://www.uml.org.cn/mobiledev/201211063.asp#1" target="_blank" rel="external">Android应用程序开发以及背后的设计思想深度剖析</a></li>
+<li>如果你公司没有强大的测试团队，发布应用前最好把应用放到测试平台去测测，比如云测之类的；</li>
+<li>取应用包名的时候切忌取太容易重复的，如果同款手机已经有该包名，那么会因为签名不同而导致安装不上，这也怪中国安卓市场太多，无法像Google Play那样进行包名审核。</li>
+</ol>
+]]></content>
+      
+        <categories>
+            
+            <category> 安卓 </category>
+            
+        </categories>
+        
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[Android StrictMode 使用详解]]></title>
       <url>http://wanghaonanlpc.github.io/2017/04/03/Android-StrictMode-%E4%BD%BF%E7%94%A8%E8%AF%A6%E8%A7%A3/</url>
       <content type="html"><![CDATA[<p>   StrictMode类是Android 2.3 （API 9）引入的一个工具类，可以用来帮助开发者发现代码中的一些不规范的问题，以达到提升应用响应能力的目的。举个例子来说，如果开发者在UI线程中进行了网络操作或者文件系统的操作，而这些缓慢的操作会严重影响应用的响应能力，甚至出现ANR对话框。为了在开发中发现这些容易忽略的问题，我们使用StrictMode，系统检测出主线程违例的情况并做出相应的反应，最终帮助开发者优化和改善代码逻辑。</p>
@@ -916,51 +992,6 @@
     </entry>
     
     <entry>
-      <title><![CDATA[Lottie简介：Airbnb为本地应用程序添加动画的工具(原文)]]></title>
-      <url>http://wanghaonanlpc.github.io/2017/03/03/Introducing-Lottie-%E5%8E%9F%E6%96%87/</url>
-      <content type="html"><![CDATA[<p><a href="http://airbnb.design/category/behind-the-scenes/" target="_blank" rel="external">BEHIND THE SCENES</a>     /  BY SALIH ABDUL-KARIM / 02.03<br><a href="http://airbnb.design/tag/animation/" target="_blank" rel="external">#ANIMATION</a> <a href="http://airbnb.design/tag/design/" target="_blank" rel="external">#DESIGN</a> <a href="http://airbnb.design/tag/engineering/" target="_blank" rel="external">#ENGINEERING</a> <a href="http://airbnb.design/tag/motion/" target="_blank" rel="external">#MOTION</a> <a href="http://airbnb.design/tag/open-source/" target="_blank" rel="external">#OPEN SOURCE</a> <a href="http://airbnb.design/tag/tools/" target="_blank" rel="external">#TOOLS</a></p>
-<h2 id="Lottie"><a href="#Lottie" class="headerlink" title="Lottie"></a>Lottie</h2><h3 id="Behind-the-scenes-of-our-new-open-source-animation-tool"><a href="#Behind-the-scenes-of-our-new-open-source-animation-tool" class="headerlink" title="Behind the scenes of our new open-source animation tool."></a>Behind the scenes of our new open-source animation tool.</h3><p>In the past, building complex animations for Android, iOS, and React Native apps was a difficult and lengthy process. You either had to add bulky image files for each screen size or write a thousand lines of brittle, hard-to-maintain code. Because of this, most apps weren’t using animation — despite it being a powerful tool for communicating ideas and creating compelling user experiences. One year ago, we set out to change that.</p>
-<p>Today, we’re happy to introduce our solution. Lottie is an iOS, Android, and React Native library that renders After Effects animations in real time, and allows native apps to use animations as easily as they use static assets. Lottie uses animation data exported as JSON files from an open-source After Effects extension called <a href="https://github.com/bodymovin/bodymovin" target="_blank" rel="external">Bodymovin</a>. The extension is bundled with a JavaScript player that can render the animations on the web. Since February of 2015, Bodymovin’s creator, <a href="https://twitter.com/airnanan" target="_blank" rel="external">Hernan Torrisi</a>, has built a solid foundation by adding features and improvements to the plugin on a monthly basis. Our team (<a href="http://github.com/buba447" target="_blank" rel="external">Brandon Withrow</a> on <a href="https://github.com/airbnb/lottie-ios" target="_blank" rel="external">iOS</a>, <a href="https://twitter.com/gpeal8" target="_blank" rel="external">Gabriel Peal</a> on <a href="https://github.com/airbnb/lottie-android" target="_blank" rel="external">Android</a>, <a href="https://twitter.com/intelligibabble" target="_blank" rel="external">Leland Richardson</a> on <a href="https://github.com/airbnb/lottie-react-native" target="_blank" rel="external">React Native</a>, and <a href="https://twitter.com/therealsalih?lang=en" target="_blank" rel="external">I</a> on experience design) began our journey by building on top of Torrisi’s phenomenal work.</p>
-<p><img src="http://airbnb.design/wp-content/uploads/2017/02/icons.gif" alt="icons"></p>
-<p>Lottie allows engineers to build richer animations without the painstaking overhead of re-writing them. Nick Butcher’s<a href="https://medium.com/google-developers/animation-jump-through-861f4f5b3de4#.xlw1n2u2d" target="_blank" rel="external"> jump through</a> animation, Bartek Lipinski’s <a href="https://android.jlelse.eu/animatedvectordrawablecompat-3d9568727c53#.fmiujhcdj" target="_blank" rel="external">hamburger menu</a>, and Miroslaw Stanek’s <a href="http://frogermcs.github.io/twitters-like-animation-in-android-alternative/" target="_blank" rel="external">Twitter heart</a> demonstrate just how difficult and time consuming it can be to re-create animations from scratch. With Lottie, digging through frameworks for reference, guessing durations, manually creating Bézier curves, and re-making animations with nothing more than a GIF for reference will be a thing of the past. Now engineers can use exactly what the designer intended, exactly how it was made. To demonstrate that, we’ve recreated their animations and provided After Effects and JSON files of each in our sample app.</p>
-<p>Our goal is to support as many After Effects features as we possibly can, to allow for a lot more than simple icon animations. We’ve created a handful of other examples to show the library’s flexibility, richness, and deep feature set. In the sample app, there are also source files for a variety of different kinds of animations, including basic line art, character-based animations, and dynamic logo animations with multiple angles and cuts.</p>
-<p><img src="http://airbnb.design/wp-content/uploads/2017/01/screens_1.gif" alt="screens_1"></p>
-<p>We’ve already started shipping our own Lottie animations on several screens, including in-app notifications, full-frame animated illustrations, and in our review flow. And we plan to greatly expand our usage of animations in a fun yet useful way moving forward.</p>
-<p><img src="http://airbnb.design/wp-content/uploads/2017/01/screens_2.gif" alt="screens_2"></p>
-<h2 id="Flexible-and-efficient-solution"><a href="#Flexible-and-efficient-solution" class="headerlink" title="Flexible and efficient solution"></a><strong>Flexible and efficient solution</strong></h2><p>Airbnb is a global company that supports millions of guests and hosts, so having a flexible animation format that is playable on multiple platforms was extremely important to us. There are libraries similar to Lottie, such as Marcus Eckert’s <a href="http://www.marcuseckert.com/squall/" target="_blank" rel="external">Squall</a> and Facebook’s <a href="https://github.com/facebookincubator/Keyframes" target="_blank" rel="external">Keyframes</a>, but our goals are slightly different. Facebook picked a small set of After Effects features to support, since they were focusing mainly on reactions, but we want to support as many as possible. As for Squall, designers at Airbnb use it in combination with Lottie because it has an amazing After Effects preview app that’s become a necessary part of our workflow. However, it only supports iOS and our engineering teams needed a cross-platform solution.</p>
-<p>Lottie also has several features built into its API to make it more versatile and efficient. It supports loading JSON files over the network, which is useful for A/B testing. It also has an optional caching mechanism, so frequently used animations, such as a wish-list heart, can load a cached copy each time. Lottie animations can be driven by gestures using the animated progress feature, and animation speed can be manipulated by changing a simple value. iOS even supports adding additional native UI to an animation at runtime, which can be used for complex animated transitions.</p>
-<p>In addition to all of the After Effects features and API additions we’ve worked on so far, we have many ideas for the future. These include mapping views to Lottie animations, controlling view transitions with Lottie, support for <a href="http://www.battleaxe.co/rubberhose/" target="_blank" rel="external">Battle Axe’s RubberHose</a>, gradient, type, and image support. The hardest part is picking which features to tackle next.</p>
-<p><img src="http://airbnb.design/wp-content/uploads/2017/01/hardware.png" alt="hardware"></p>
-<h2 id="Building-community"><a href="#Building-community" class="headerlink" title="Building community"></a><strong>Building community</strong></h2><p>Releasing something as open source is more than just putting it out there for the public to use. It’s a bridge that connects people and creates community. As we got closer to releasing Lottie to designers and engineers via GitHub, we wanted to be sure to connect with the animation folks as well.</p>
-<p>We were inspired by the communities that <a href="http://9-squares.tumblr.com/" target="_blank" rel="external">9 Squares</a>, <a href="https://motioncorpse.tumblr.com/" target="_blank" rel="external">Motion Corpse</a>, and <a href="https://animography.net/products/mobilo" target="_blank" rel="external">Animography</a> have created. All three have brought together people from around the world, who otherwise would never have worked together, to collaborate on public animation projects. These projects take months of work and a lot of organization and wrangling by the respective teams, but they undoubtedly provide immense value for the animation community as a whole. Motion Corpse and Animography publicly share the After Effects source files as well, which provide tons of insights on how people work.</p>
-<p>Following their collaborative lead, we reached out to all three teams to contribute animations to our sample app. We’ve included an animation from Motion Corpse created by J.R. Canest, one of Al Boardman’s squares from the 9 Squares project, and an animated keyboard using Animography’s Mobilo animated typeface, which features work from more than two dozen artists. We’re hoping that the merging of these animation communities with the powerful engineering community will spark something special.</p>
-<p><img src="http://airbnb.design/wp-content/uploads/2017/01/community.gif" alt="community">We’d love to hear how you’re using Lottie — no matter if you’re a designer, animator, or engineer. Feel free to reach out to us directly at lottie@airbnb.com with your thoughts, feedback, and insights. We’re excited to see what the community around the world will do when they begin to use Lottie in ways we never imagined.</p>
-<h3 id="Download-Bodymovin-Lottie-iOS-Android-and-React-Native"><a href="#Download-Bodymovin-Lottie-iOS-Android-and-React-Native" class="headerlink" title="Download Bodymovin, Lottie iOS, Android and React Native."></a>Download <a href="https://github.com/bodymovin/bodymovin" target="_blank" rel="external">Bodymovin</a>, Lottie <a href="https://github.com/airbnb/lottie-ios" target="_blank" rel="external">iOS</a>, <a href="https://github.com/airbnb/lottie-android" target="_blank" rel="external">Android</a> and <a href="https://github.com/airbnb/lottie-react-native" target="_blank" rel="external">React Native</a>.</h3><p>This article was co-written by  <a href="http://github.com/buba447" target="_blank" rel="external">Brandon Withrow</a>,  <a href="https://twitter.com/gpeal8" target="_blank" rel="external">Gabriel Peal</a> and <a href="https://twitter.com/therealsalih?lang=en" target="_blank" rel="external">Salih Abdul-Karim</a>.</p>
-<p><img src="http://airbnb.design/lottie/" alt="Salih Abdul-Karim](http://airbnb.design/wp-content/uploads/2017/01/SalihAbdul-Karim-profile.jpg) Salih Abdul-Karim is an Experience and Motion Designer at Airbnb."></p>
-]]></content>
-      
-        <categories>
-            
-            <category> 安卓 </category>
-            
-        </categories>
-        
-        
-        <tags>
-            
-            <tag> android </tag>
-            
-            <tag> ui </tag>
-            
-            <tag> 开源 </tag>
-            
-            <tag> Airbnb </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
       <title><![CDATA[Lottie简介：Airbnb为本地应用程序添加动画的工具(翻译)]]></title>
       <url>http://wanghaonanlpc.github.io/2017/03/03/Introducing-Lottie%EF%BC%88%E7%BF%BB%E8%AF%91%EF%BC%89/</url>
       <content type="html"><![CDATA[<h2 id="简介Lottie"><a href="#简介Lottie" class="headerlink" title="简介Lottie"></a>简介Lottie</h2><blockquote>
@@ -986,6 +1017,51 @@
 <p>在他们的合作领导下，我们接触了所有三个团队，为我们的示例应用程序贡献动画。我们已经包括了由JR Canest创建的Motion Corpse的动画，来自9 Squares项目的Al Boardman的方块之一，以及使用Animography的Mobilo动画字体的动画键盘，其中包含超过二十个艺术家的作品。我们希望这些动画社区与强大的工程社群的合并将产生一些特别的东西。</p>
 <p><img src="http://airbnb.design/wp-content/uploads/2017/01/community.gif" alt="社区">我们很想听听你如何使用Lottie - 无论你是一个设计师，动画师或工程师。欢迎随时通过lottie@airbnb.com与您的想法，反馈和见解联系。我们很高兴看到当他们开始以我们从未想象的方式使用Lottie时，世界上的社区会做什么。</p>
 <h3 id="下载Bodymovin，Lottie-iOS，Android和React-Native。"><a href="#下载Bodymovin，Lottie-iOS，Android和React-Native。" class="headerlink" title="下载Bodymovin，Lottie iOS，Android和React Native。"></a>下载<a href="https://github.com/bodymovin/bodymovin" target="_blank" rel="external">Bodymovin</a>，Lottie <a href="https://github.com/airbnb/lottie-ios" target="_blank" rel="external">iOS</a>，<a href="https://github.com/airbnb/lottie-android" target="_blank" rel="external">Android</a>和<a href="https://github.com/airbnb/lottie-react-native" target="_blank" rel="external">React Native</a>。</h3><p>本文由<a href="http://github.com/buba447" target="_blank" rel="external">Brandon Withrow</a>，  <a href="https://twitter.com/gpeal8" target="_blank" rel="external">Gabriel Peal</a>  和  <a href="http://airbnb.design/lottie/" target="_blank" rel="external">Salih Abdul-Karim](https://twitter.com/therealsalih?lang=en)共同撰写   。 </a></p>
+]]></content>
+      
+        <categories>
+            
+            <category> 安卓 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> android </tag>
+            
+            <tag> ui </tag>
+            
+            <tag> 开源 </tag>
+            
+            <tag> Airbnb </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Lottie简介：Airbnb为本地应用程序添加动画的工具(原文)]]></title>
+      <url>http://wanghaonanlpc.github.io/2017/03/03/Introducing-Lottie-%E5%8E%9F%E6%96%87/</url>
+      <content type="html"><![CDATA[<p><a href="http://airbnb.design/category/behind-the-scenes/" target="_blank" rel="external">BEHIND THE SCENES</a>     /  BY SALIH ABDUL-KARIM / 02.03<br><a href="http://airbnb.design/tag/animation/" target="_blank" rel="external">#ANIMATION</a> <a href="http://airbnb.design/tag/design/" target="_blank" rel="external">#DESIGN</a> <a href="http://airbnb.design/tag/engineering/" target="_blank" rel="external">#ENGINEERING</a> <a href="http://airbnb.design/tag/motion/" target="_blank" rel="external">#MOTION</a> <a href="http://airbnb.design/tag/open-source/" target="_blank" rel="external">#OPEN SOURCE</a> <a href="http://airbnb.design/tag/tools/" target="_blank" rel="external">#TOOLS</a></p>
+<h2 id="Lottie"><a href="#Lottie" class="headerlink" title="Lottie"></a>Lottie</h2><h3 id="Behind-the-scenes-of-our-new-open-source-animation-tool"><a href="#Behind-the-scenes-of-our-new-open-source-animation-tool" class="headerlink" title="Behind the scenes of our new open-source animation tool."></a>Behind the scenes of our new open-source animation tool.</h3><p>In the past, building complex animations for Android, iOS, and React Native apps was a difficult and lengthy process. You either had to add bulky image files for each screen size or write a thousand lines of brittle, hard-to-maintain code. Because of this, most apps weren’t using animation — despite it being a powerful tool for communicating ideas and creating compelling user experiences. One year ago, we set out to change that.</p>
+<p>Today, we’re happy to introduce our solution. Lottie is an iOS, Android, and React Native library that renders After Effects animations in real time, and allows native apps to use animations as easily as they use static assets. Lottie uses animation data exported as JSON files from an open-source After Effects extension called <a href="https://github.com/bodymovin/bodymovin" target="_blank" rel="external">Bodymovin</a>. The extension is bundled with a JavaScript player that can render the animations on the web. Since February of 2015, Bodymovin’s creator, <a href="https://twitter.com/airnanan" target="_blank" rel="external">Hernan Torrisi</a>, has built a solid foundation by adding features and improvements to the plugin on a monthly basis. Our team (<a href="http://github.com/buba447" target="_blank" rel="external">Brandon Withrow</a> on <a href="https://github.com/airbnb/lottie-ios" target="_blank" rel="external">iOS</a>, <a href="https://twitter.com/gpeal8" target="_blank" rel="external">Gabriel Peal</a> on <a href="https://github.com/airbnb/lottie-android" target="_blank" rel="external">Android</a>, <a href="https://twitter.com/intelligibabble" target="_blank" rel="external">Leland Richardson</a> on <a href="https://github.com/airbnb/lottie-react-native" target="_blank" rel="external">React Native</a>, and <a href="https://twitter.com/therealsalih?lang=en" target="_blank" rel="external">I</a> on experience design) began our journey by building on top of Torrisi’s phenomenal work.</p>
+<p><img src="http://airbnb.design/wp-content/uploads/2017/02/icons.gif" alt="icons"></p>
+<p>Lottie allows engineers to build richer animations without the painstaking overhead of re-writing them. Nick Butcher’s<a href="https://medium.com/google-developers/animation-jump-through-861f4f5b3de4#.xlw1n2u2d" target="_blank" rel="external"> jump through</a> animation, Bartek Lipinski’s <a href="https://android.jlelse.eu/animatedvectordrawablecompat-3d9568727c53#.fmiujhcdj" target="_blank" rel="external">hamburger menu</a>, and Miroslaw Stanek’s <a href="http://frogermcs.github.io/twitters-like-animation-in-android-alternative/" target="_blank" rel="external">Twitter heart</a> demonstrate just how difficult and time consuming it can be to re-create animations from scratch. With Lottie, digging through frameworks for reference, guessing durations, manually creating Bézier curves, and re-making animations with nothing more than a GIF for reference will be a thing of the past. Now engineers can use exactly what the designer intended, exactly how it was made. To demonstrate that, we’ve recreated their animations and provided After Effects and JSON files of each in our sample app.</p>
+<p>Our goal is to support as many After Effects features as we possibly can, to allow for a lot more than simple icon animations. We’ve created a handful of other examples to show the library’s flexibility, richness, and deep feature set. In the sample app, there are also source files for a variety of different kinds of animations, including basic line art, character-based animations, and dynamic logo animations with multiple angles and cuts.</p>
+<p><img src="http://airbnb.design/wp-content/uploads/2017/01/screens_1.gif" alt="screens_1"></p>
+<p>We’ve already started shipping our own Lottie animations on several screens, including in-app notifications, full-frame animated illustrations, and in our review flow. And we plan to greatly expand our usage of animations in a fun yet useful way moving forward.</p>
+<p><img src="http://airbnb.design/wp-content/uploads/2017/01/screens_2.gif" alt="screens_2"></p>
+<h2 id="Flexible-and-efficient-solution"><a href="#Flexible-and-efficient-solution" class="headerlink" title="Flexible and efficient solution"></a><strong>Flexible and efficient solution</strong></h2><p>Airbnb is a global company that supports millions of guests and hosts, so having a flexible animation format that is playable on multiple platforms was extremely important to us. There are libraries similar to Lottie, such as Marcus Eckert’s <a href="http://www.marcuseckert.com/squall/" target="_blank" rel="external">Squall</a> and Facebook’s <a href="https://github.com/facebookincubator/Keyframes" target="_blank" rel="external">Keyframes</a>, but our goals are slightly different. Facebook picked a small set of After Effects features to support, since they were focusing mainly on reactions, but we want to support as many as possible. As for Squall, designers at Airbnb use it in combination with Lottie because it has an amazing After Effects preview app that’s become a necessary part of our workflow. However, it only supports iOS and our engineering teams needed a cross-platform solution.</p>
+<p>Lottie also has several features built into its API to make it more versatile and efficient. It supports loading JSON files over the network, which is useful for A/B testing. It also has an optional caching mechanism, so frequently used animations, such as a wish-list heart, can load a cached copy each time. Lottie animations can be driven by gestures using the animated progress feature, and animation speed can be manipulated by changing a simple value. iOS even supports adding additional native UI to an animation at runtime, which can be used for complex animated transitions.</p>
+<p>In addition to all of the After Effects features and API additions we’ve worked on so far, we have many ideas for the future. These include mapping views to Lottie animations, controlling view transitions with Lottie, support for <a href="http://www.battleaxe.co/rubberhose/" target="_blank" rel="external">Battle Axe’s RubberHose</a>, gradient, type, and image support. The hardest part is picking which features to tackle next.</p>
+<p><img src="http://airbnb.design/wp-content/uploads/2017/01/hardware.png" alt="hardware"></p>
+<h2 id="Building-community"><a href="#Building-community" class="headerlink" title="Building community"></a><strong>Building community</strong></h2><p>Releasing something as open source is more than just putting it out there for the public to use. It’s a bridge that connects people and creates community. As we got closer to releasing Lottie to designers and engineers via GitHub, we wanted to be sure to connect with the animation folks as well.</p>
+<p>We were inspired by the communities that <a href="http://9-squares.tumblr.com/" target="_blank" rel="external">9 Squares</a>, <a href="https://motioncorpse.tumblr.com/" target="_blank" rel="external">Motion Corpse</a>, and <a href="https://animography.net/products/mobilo" target="_blank" rel="external">Animography</a> have created. All three have brought together people from around the world, who otherwise would never have worked together, to collaborate on public animation projects. These projects take months of work and a lot of organization and wrangling by the respective teams, but they undoubtedly provide immense value for the animation community as a whole. Motion Corpse and Animography publicly share the After Effects source files as well, which provide tons of insights on how people work.</p>
+<p>Following their collaborative lead, we reached out to all three teams to contribute animations to our sample app. We’ve included an animation from Motion Corpse created by J.R. Canest, one of Al Boardman’s squares from the 9 Squares project, and an animated keyboard using Animography’s Mobilo animated typeface, which features work from more than two dozen artists. We’re hoping that the merging of these animation communities with the powerful engineering community will spark something special.</p>
+<p><img src="http://airbnb.design/wp-content/uploads/2017/01/community.gif" alt="community">We’d love to hear how you’re using Lottie — no matter if you’re a designer, animator, or engineer. Feel free to reach out to us directly at lottie@airbnb.com with your thoughts, feedback, and insights. We’re excited to see what the community around the world will do when they begin to use Lottie in ways we never imagined.</p>
+<h3 id="Download-Bodymovin-Lottie-iOS-Android-and-React-Native"><a href="#Download-Bodymovin-Lottie-iOS-Android-and-React-Native" class="headerlink" title="Download Bodymovin, Lottie iOS, Android and React Native."></a>Download <a href="https://github.com/bodymovin/bodymovin" target="_blank" rel="external">Bodymovin</a>, Lottie <a href="https://github.com/airbnb/lottie-ios" target="_blank" rel="external">iOS</a>, <a href="https://github.com/airbnb/lottie-android" target="_blank" rel="external">Android</a> and <a href="https://github.com/airbnb/lottie-react-native" target="_blank" rel="external">React Native</a>.</h3><p>This article was co-written by  <a href="http://github.com/buba447" target="_blank" rel="external">Brandon Withrow</a>,  <a href="https://twitter.com/gpeal8" target="_blank" rel="external">Gabriel Peal</a> and <a href="https://twitter.com/therealsalih?lang=en" target="_blank" rel="external">Salih Abdul-Karim</a>.</p>
+<p><img src="http://airbnb.design/lottie/" alt="Salih Abdul-Karim](http://airbnb.design/wp-content/uploads/2017/01/SalihAbdul-Karim-profile.jpg) Salih Abdul-Karim is an Experience and Motion Designer at Airbnb."></p>
 ]]></content>
       
         <categories>
