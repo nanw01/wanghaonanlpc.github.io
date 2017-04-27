@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://wanghaonanlpc.github.io/"/>
-  <updated>2017-04-06T01:23:59.000Z</updated>
+  <updated>2017-04-27T03:35:31.000Z</updated>
   <id>http://wanghaonanlpc.github.io/</id>
   
   <author>
@@ -14,6 +14,452 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Google Analytics (初级) 资料</title>
+    <link href="http://wanghaonanlpc.github.io/2017/04/27/Google-Analytics-%E5%88%9D%E7%BA%A7-%E8%B5%84%E6%96%99/"/>
+    <id>http://wanghaonanlpc.github.io/2017/04/27/Google-Analytics-初级-资料/</id>
+    <published>2017-04-27T03:31:28.000Z</published>
+    <updated>2017-04-27T03:35:31.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Google-Analytics-初级-资料"><a href="#Google-Analytics-初级-资料" class="headerlink" title="Google Analytics (初级) 资料"></a>Google Analytics (初级) 资料</h1><p><img src="http://ww2.sinaimg.cn/large/006tKfTcgy1ff1306m7zoj30jl09k3yy.jpg" alt=""></p>
+<h1 id="欢迎使用Google-Analytics（分析）初学者"><a href="#欢迎使用Google-Analytics（分析）初学者" class="headerlink" title="欢迎使用Google Analytics（分析）初学者"></a>欢迎使用Google Analytics（分析）初学者</h1><h4 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h4><p>嗨，我是Justin Cutroni。我是克里斯塔·西登（Krista Seiden）。Google是Google Analytics（分析）倡导者。欢迎使用Google Analytics（分析）初学者。在本课程中，您将了解Google Analytics（分析）的基本知识。</p>
+<p>我们将向您展示如何创建和实施帐户，设置视图和过滤器，阅读基本报告，设置仪表板，执行基本分析以及设置目标和活动跟踪。</p>
+<h4 id="定义数字分析"><a href="#定义数字分析" class="headerlink" title="定义数字分析"></a>定义数字分析</h4><p>首先，我们先来定义“数字分析”，以及为什么重要。那么克里斯塔呢，数字分析有什么处理？</p>
+<p>贾斯汀，人们通常分阶段购买商品。</p>
+<p>在营销方面，我们有一个采购渠道的概念。渠道中有不同的阶段描述客户互动。基本购买渠道包括以下步骤：</p>
+<ul>
+<li>收购涉及建立意识并获得用户兴趣</li>
+<li>行为是用户与您的业务互动</li>
+<li>转换是用户成为客户并与您的业务进行交易</li>
+</ul>
+<p><img src="https://lh3.googleusercontent.com/dWu1SKVLPYKtn4F8yC-6rzZmt6MXi-Gz5ctQimLYh6dy2euozQe2duyiCgEg56_RW89a=w400-h280" alt="img"></p>
+<p>在离线世界中，这个过程很难衡量。但在网络世界中，我们可以使用数字分析来衡量渠道的许多不同方面。我们可以跟踪什么在线行为导致购买，并使用这些数据做出明智的决定如何接触新的和现有的客户。</p>
+<h4 id="数字分析在实践中"><a href="#数字分析在实践中" class="headerlink" title="数字分析在实践中"></a>数字分析在实践中</h4><p>想想一个网上商店，如Google商品商店。可能有一个目标是销售更多的T恤。使用数字分析，商店可以收集和分析其在线广告活动中的数据，以查看哪些是最有效的并扩展这些营销工作。</p>
+<p>例如，商店可以分析地理销售数据，以了解某些地方的人是否购买了大量衬衫，然后在这些地区开展其他广告活动。他们还可以使用分析来了解用户如何通过他们的在线购物车进步。如果他们注意到用户在他们的网站上遇到特定步骤的麻烦，他们可以对网站进行更改以解决问题。</p>
+<p>不同类型的企业可以从数字分析中受益：</p>
+<ul>
+<li>发行商可以使用它来创建一个忠实，高度参与的观众，并更好地使现场广告与用户兴趣相一致。</li>
+<li>电子商务企业可以使用数字分析来了解客户的在线购买行为，并更好地营销其产品和服务。</li>
+<li>潜在客户网站可以收集销售团队的用户信息，以便与潜在的潜在客户联系。</li>
+</ul>
+<p>虽然我们主要讨论从网站收集数据，但Google Analytics（分析）也可以收集来自各种系统的行为数据，例如移动应用程序，在线销售点系统，视频游戏机，客户关系管理系统或其他互联网连接的平台。</p>
+<p>那就对了。此数据汇总到Google Analytics（分析）报告中，您可以使用这些数据进行深入分析，以更好地了解客户和购买行为。那么您可以测试出新的解决方案来改善您的业务。</p>
+<h1 id="收集分析数据的过程"><a href="#收集分析数据的过程" class="headerlink" title="收集分析数据的过程"></a>收集分析数据的过程</h1><p>所以Justin对于从未使用Google Analytics（分析）的人来说，它是如何正常工作的？</p>
+<p>请记住，Google Analytics（分析）是收集数据并将其编译成有用报告的平台。</p>
+<h4 id="跟踪网站"><a href="#跟踪网站" class="headerlink" title="跟踪网站"></a>跟踪网站</h4><p>要跟踪网站，您首先必须创建一个Google Analytics（分析）帐户。然后，您需要在您网站的每个页面上添加一小段Javascript跟踪代码。每次用户访问网页时，跟踪代码将收集有关该用户与该页面进行互动的匿名信息。</p>
+<p>对于Google商店，跟踪代码可以显示有多少用户访问过销售炊具的网页与销售家庭用品的网页。或者它可以告诉我们，有多少用户通过跟踪是否将它们提交到购买确认页面来购买像Android娃娃的项目。</p>
+<p><img src="https://lh3.googleusercontent.com/G4EvfrJgRY37f_jXIZIJQ2T8YX_pseQs-10kYjDrPpBWay-FBXWzbdU8RrUGDwMmXO4=w450-h260" alt="img"></p>
+<p>但跟踪代码还将从浏览器中收集信息，例如浏览器设置的语言，浏览器的类型（如Chrome或Safari）以及用于访问Google Store的设备和操作系统。甚至可以收集“流量来源”，这是首先将用户带到网站。这可能是搜索引擎，他们点击的广告或电子邮件营销活动。</p>
+<p>请记住，每次加载页面时，跟踪代码将收集和发送有关用户活动的更新信息。Google Analytics（分析）将此活动分为一段时间称为“会话”。当用户浏览到包含Google Analytics（分析）跟踪代码的页面时，会话开始。30分钟后，会话结束。如果用户在会话结束后返回页面，则会开始一个新的会话。</p>
+<h4 id="处理和报告"><a href="#处理和报告" class="headerlink" title="处理和报告"></a>处理和报告</h4><p>当跟踪代码收集数据时，它将该信息打包并将其发送到Google Analytics（分析），以处理为报告。当Google Analytics（分析）处理数据时，它将根据特定条件（如用户的设备是移动设备还是桌面设备）或他们正在使用的浏览器来聚合和组织数据。</p>
+<p>但也有配置设置允许您自定义数据的处理方式。例如，您可能需要应用过滤器，以确保您的数据不包括任何内部公司流量，或者仅包括对您的业务很重要的特定国家或地区的数据。</p>
+<p><img src="https://lh3.googleusercontent.com/AIFpRSMWBNNjsxvUKT9_9RVfV90tdE1YnfhltUWS1BYwn1G16ESdYzn3bMLJCwBS_A=w895-h250" alt="img"></p>
+<p>和贾斯汀，一个非常重要的事情要记住。</p>
+<p>那是什么？</p>
+<p><strong><em>一旦Analytics（分析）处理数据，它就会存储在不能更改的数据库中\</em></strong></p>
+<p>好点，克里斯塔！所以请记住，当您设置配置时，不要排除您以后想要分析的任何数据。一旦数据被处理并存储在数据库中，它将作为报告显示在Google Analytics（分析）中。稍后我们会向您显示这些报告。</p>
+<h1 id="Google-Analytics（分析）实施的基本部分"><a href="#Google-Analytics（分析）实施的基本部分" class="headerlink" title="Google Analytics（分析）实施的基本部分"></a>Google Analytics（分析）实施的基本部分</h1><p>现在您通常了解Google Analytics（分析）如何收集数据，我们来看看Google Analytics（分析）帐户结构。</p>
+<p>Google Analytics（分析）帐户已分级设置。每个帐户可以有多个属性，每个属性可以有多个视图。这可以帮助您组织Google Analytics（分析）数据来反映您的业务。帐户，属性和视图允许您在每个级别应用配置设置，以确定在收集和处理数据时要包括，排除或修改哪些数据。设置帐户时要考虑一点，因为Google Analytics（分析）处理完毕后无法更改数据。</p>
+<p><img src="https://lh3.googleusercontent.com/DBGkC0EkK_-gJ1-uyLMszCifY1EB1VifZOSs4pkszwTDPIy8d600Jo5o6XMuXIzLAU8=w310-h285" alt="img"></p>
+<p>Krista，您已经在数百个Google Analytics（分析）实施中工作。你为什么不告诉我们更多关于Google Analytics（分析）帐户。</p>
+<p>当然。Google Analytics（分析）“帐户”是您组织如何从所有网站收集数据的方式，并管理谁可以访问该数据。通常，您将为不同的业务或业务部门创建单独的帐户。</p>
+<p>每个Google Analytics（分析）帐户至少有一个“属性”可以使用Javascript跟踪代码中显示的唯一跟踪ID来独立收集数据。</p>
+<p>每个帐户可以有多个属性，因此您可以从与业务相关联的不同网站，移动应用程序或其他数字资产中收集数据。例如，您可能希望为不同的销售地区或不同的品牌分别设置属性。这样，您就可以轻松查看业务单独部分的数据，但请记住，这不允许您从集合中查看单独属性的数据。</p>
+<p>正如每个帐户可以拥有多个“属性”一样，每个属性都可以有多个“视图”。您可以在这些视图中查看收集的Google Analytics（分析）数据的报告。</p>
+<h4 id="查看设置"><a href="#查看设置" class="headerlink" title="查看设置"></a>查看设置</h4><p>您可以在配置设置中使用名为过滤器的功能来确定要在每个视图中包含，排除或修改的数据。</p>
+<p>例如，Google Store从不同地理区域的网站销售商品。他们可以创建一个包含所有网站数据的全球视图，以及北美，欧洲和亚洲的不同观点。然后他们可以使用这些视图来查看仅包含这些个别地区的数据的报告。如果Google Store希望仅查看不包括自己的店铺员工的外部流量的数据，那么他们还可以设置一个视图，该视图会根据IP地址过滤掉内部流量。</p>
+<p>在视图级别，您还可以设置Google Analytics（分析）“目标”。目标是从您的网站跟踪转化（或业务目标）的简单方法。目标可能是有多少用户注册了电子邮件通讯，或者有多少用户购买了产品。我们将在以后的课程中讨论目标和转换。</p>
+<p>在我们继续访问用户访问权限之前，有一些关于视图非常重要的事情要注意。新视图只包含从创建视图之日起的数据。创建新视图时，不会包含过去的数据。您只能为每个属性设置25个视图，如果删除视图，只有管理员才能在35天内恢复该视图。否则，该视图将被永久删除。</p>
+<h4 id="用户权限"><a href="#用户权限" class="headerlink" title="用户权限"></a>用户权限</h4><p>您可以向帐户，属性或视图级别的其他用户分配权限。每个级别从它上面的级别继承权限。</p>
+<p>例如，如果您有权访问帐户，那么您对该帐户下的属性和视图具有相同的访问权限。但是，如果您只对视图具有访问权限，则您将无权修改与该视图关联的属性或帐户。</p>
+<p>通过点击“管理员”标签，Google Analytics（分析）可让您设置“管理用户”，“编辑”，“协作”或“阅读和分析”的用户权限。“管理用户”可让用户添加或删除用户对该帐户的访问，财产或观点。“编辑”允许用户更改配置设置。“协作”允许用户分享仪表板或某些测量设置等内容。最后，“读取和分析”可让用户查看数据，分析报告和创建仪表板，但限制用户对设置进行更改或添加新用户。</p>
+<p><img src="https://lh3.googleusercontent.com/JCbyC-yEF-kpLf47750JZrp_Q8_RX4VSTMblLcMC0tHIZ2IOHlKZzK-OCt6dmfNQiQY=w850-h450" alt="img"></p>
+<p>配置帐户，属性和视图的方式可能会影响您收集的数据和数据的质量。</p>
+<p>克里斯塔是完全正确的。设置Google Analytics（分析）实施时，您应该非常周到，并确保您将您收集的数据的属性和视图与整体业务结构保持一致。</p>
+<h1 id="如何使用过滤器设置帐户视图"><a href="#如何使用过滤器设置帐户视图" class="headerlink" title="如何使用过滤器设置帐户视图"></a>如何使用过滤器设置帐户视图</h1><p>要查看属性当前可用的视图，请点击顶部的“管理”标签。</p>
+<p><img src="https://lh3.googleusercontent.com/z2BKc9nM0cTx1IklZLuEw8b4q6_pNNq_3vPb7JgW6Wv9uPBHd9nNPqgc5-E4okczMdM=w895" alt="img"></p>
+<p>然后，在“查看”下，单击“查看设置”。</p>
+<p>您可以看到，当您首次创建一个属性时，Google Analytics（分析）会自动设置一个名为“所有网站数据”的未过滤的视图，其中包含您为该属性收集的所有原始未更改的数据。我们建议将名称更改为“原始数据”，以便您知道数据未被过滤。要更改名称，我们只需输入新名称即可。现在点击“保存”。</p>
+<p><img src="https://lh3.googleusercontent.com/_trQJ4Yg7YYB9wKFEtLzOyGfUiS-GQuBUSTXW4mfJhQYb5F_HXuOdHGeMXhKB08Mr7Xh=w895" alt="img"></p>
+<h4 id="设置测试视图"><a href="#设置测试视图" class="headerlink" title="设置测试视图"></a>设置测试视图</h4><p>接下来，我们将设置一个“测试视图”来测试我们的设置。如果我们配置不正确，我们可能会无意中丢失我们想要收集的数据。所以最好先测试这个测试视图中的所有配置。</p>
+<ul>
+<li>要设置测试视图，请在左上角单击视图选择器下拉菜单。</li>
+<li>然后选择“创建新视图”。我们将这个视图命名为“测试视图”。</li>
+</ul>
+<p><img src="https://lh3.googleusercontent.com/JOQEMhXOOQhRXdJwwxV0HbsJ2LfLs_AiZ6o-MtHqDnjjHTXJaei6EHhsKnGNLrnajsk=w895" alt="img"></p>
+<ul>
+<li>现在点击“创建视图”。</li>
+</ul>
+<p><img src="https://lh3.googleusercontent.com/h4XetqkZ_fZm7yYooOoaLGsL1k7VBz6pMmYNG7alMBRudI9yCddtAe3lZK_Y2av6MvA=w895" alt="img"></p>
+<p>请注意，我们现在处于此属性的“测试视图”中。我们建议您向测试视图添加一个设置，以过滤自动机器人和蜘蛛流量的数据。</p>
+<ul>
+<li>对于此测试视图，选择“查看设置”。</li>
+<li>然后我们将向下滚动。</li>
+<li>在“Bot Filtering”下，选择“从已知的机器人和蜘蛛中排除所有匹配”。这将有助于过滤掉bot流量。</li>
+</ul>
+<p><img src="https://lh3.googleusercontent.com/7B7tGlU1FLDga1PWWwBzTwkrh3BD_wJTsbl-I65e7JgMUGBJXwKJEGJRaJaq7m1GxJAa=w895" alt="img"></p>
+<ul>
+<li>现在点击“保存”。</li>
+</ul>
+<h4 id="创建主视图"><a href="#创建主视图" class="headerlink" title="创建主视图"></a>创建主视图</h4><p>接下来，我们来创建主视图。这将是我们用来做所有报告和分析的观点。我们可以简单地复制测试视图并重命名它。</p>
+<ul>
+<li>要复制视图，请点击右上角的“复制视图”。</li>
+</ul>
+<p><img src="https://lh3.googleusercontent.com/a1h5riJY2tPxcz9p2lP6MBIZE0e2CwOSaCxZ2etSTtgBVHjdyxiluL4diyTrZaqrbyg=w895" alt="img"></p>
+<ul>
+<li>我们将重命名视图“主视图”。</li>
+<li>现在点击“复制视图”。</li>
+</ul>
+<p>如果您进入“查看”菜单，可以看到我们已经成功复制并创建了这个新视图。通过复制视图，我们创建的所有设置和过滤器（如排除bot流量）也将包含在新视图中。</p>
+<h4 id="添加其他过滤器"><a href="#添加其他过滤器" class="headerlink" title="添加其他过滤器"></a>添加其他过滤器</h4><p>现在我们有三个意见可以用来备份我们的数据，测试新的分析配置，并进行日常报告和分析。</p>
+<p><img src="https://lh3.googleusercontent.com/Eqocf2qilfZMhePPo7fyYKfMoUXUJNVkp6xAKX9ikYSFRy4fqyBL1LHKTFZ7XidnqgI=w895" alt="img"></p>
+<p>但是，我们仍然需要添加过滤器来确定要在每个视图中显示哪些数据。我们将首先在“测试”视图上设置一个公共过滤器，以排除内部IP流量。这样一来，我们就可以对外部客户严格测量在线Google Store行为，没有任何员工影响力。</p>
+<ul>
+<li>在“查看”下的右侧列中，将视图选择器从“主视图”更改为“测试视图”。这将确保我们在正确的视图中创建我们的过滤器。</li>
+<li>现在点击“过滤器”。</li>
+</ul>
+<p><img src="https://lh3.googleusercontent.com/g1DubF-Quf-0qYeJ2iX_Kb9lVQesQdkCdtC4elhTHoIgXdbNsn_EErlE-sr6dMx0nA=w895" alt="img"></p>
+<ul>
+<li>然后点击“添加过滤器”。我们将此过滤器命名为“排除内部流量”。</li>
+</ul>
+<p>Google Analytics（分析）提供两种过滤器，即“预定义”和“自定义”过滤器。预定义过滤器是您将使用的最常见过滤器的模板。自定义过滤器可让您设计一个过滤器来包含，排除或修改数据。由于通过IP地址排除数据是常见的，因此Google Analytics（分析）提供了一个预定义的过滤器，因此我们将过滤器类型保留为“预定义”。</p>
+<ul>
+<li>接下来，点击“选择过滤器类型”。</li>
+</ul>
+<p><img src="https://lh3.googleusercontent.com/yctH20gGT2LxVIE_mxvMPgWCVaX260pVCQwp4jRbMVWEVhvby3N9jmtOzbrTiNFiGQwg=w895" alt="img"></p>
+<ul>
+<li>然后选择“排除”。</li>
+<li>现在点击“选择源或目的地”</li>
+</ul>
+<p><img src="https://lh3.googleusercontent.com/w-Wz4gRk-U5qyf4ZSenXbXfDGigYcyuGy9Am7_rNJy-u5f9Fd6_dr1lOSnZ8sGi_1w=w895" alt="img"></p>
+<ul>
+<li>并从IP地址中选择“流量”。</li>
+<li>最后点击“选择表达式”，然后选择“等于”。</li>
+</ul>
+<p><img src="https://lh3.googleusercontent.com/uHLkH4WNBrAftTcHmh7PuMBt6q3xD9XY37Dcaa0yKK-TEzmSdFU9u8ND-GDTicZUWjd6=w895" alt="img"></p>
+<ul>
+<li>现在我们输入要排除的IP地址。您可以在Google中打开一个新标签并搜索“我的ip是什么？”，找到您的公共IP地址。</li>
+<li>现在我们将IP地址复制到IP地址字段中。</li>
+</ul>
+<p><img src="https://lh3.googleusercontent.com/A6vc5GGlM9ljTuaA_oc9NybgD6HP8B4c8K5BkkLC-zLwO5I9XXktWK6K4xvNxjCHEbg=w895" alt="img"></p>
+<ul>
+<li>在底部，点击“保存”。</li>
+</ul>
+<p>请注意，我们刚刚创建的过滤器现在显示在过滤器列表中。</p>
+<p><img src="https://lh3.googleusercontent.com/DrEMMtjf8FpwRbm4NahI9-QLI8ZindHX_1_zxl-4ZfxcbX-TJDAlpGw0FqAe0fUDAQ=w895" alt="img"></p>
+<p>保存此过滤器并将其应用于视图后，Google Analytics（分析）将检查网络媒体资源的流量IP地址，并排除与过滤器匹配的IP地址。过滤器需要一点时间才能捕获所有流量。要测试过滤器是否排除内部流量，请单击报告。然后，单击左侧导航中的“实时”。现在点击“概述”。</p>
+<p><img src="https://lh3.googleusercontent.com/-HZfBLXRPz6wW0V_ZHXNA3cQbIfKdF2Ew1opwTzcoqQDnSRvhr9QaY_mJffjGm6OqA=w895" alt="img"></p>
+<p>这将显示您的网站实时流量的报告。如果您在内部网络上，则应注意您的内部用户流量在接下来的30分钟内下降。一旦过滤器生效，Google Analytics（分析）就不会收集您过滤的IP地址的任何内部活动。</p>
+<p>验证此过滤器后，您的测试视图中可以将其添加到主视图中。再次单击管理选项卡。然后选择查看下拉菜单。</p>
+<p><img src="https://lh3.googleusercontent.com/Jy8Xp34WTZ14UXAznq7whB7Qv0FNszKLX-CE5qtAUwnWM3T15TkYtyZ7Q4GfHfNfrkk=w895" alt="img"></p>
+<p>选择“主视图”，然后单击“过滤器”。然后单击“添加过滤器”。现在，而不是“创建新过滤器”，选择“应用现有过滤器”的单选按钮。</p>
+<p><img src="https://lh3.googleusercontent.com/orFsfPvX1XwEXTZeyXFO0VM-kuw6lk4yjR1zDrfQWfCt0EXVw00i95W1Lajthakh2g=w895" alt="img"></p>
+<p>这将允许您从之前创建的过滤器列表中进行选择。单击保存。</p>
+<p>现在您可以看到过滤器已应用于“主视图”。</p>
+<p><img src="https://lh3.googleusercontent.com/5hrNrt_9IdduhHgoq8MqJyR05n13GXBp5u__eV_ANNuW8VMv5GfWcaSMaJBxGVFE_A=w895" alt="img"></p>
+<p>请注意，如果将多个过滤器应用于视图，则每个过滤器将按照过滤器设置中显示的顺序应用。所以如果你有两个过滤器，数据将通过第一个过滤器，然后再通过第二个过滤器。所以请注意您应用过滤器的顺序。</p>
+<p>这样可以轻松创建或添加预定义的视图过滤器，以确保您正在收集和保护所需的数据。</p>
+<h1 id="欢迎参加Google-Analytics（分析）界面的导览"><a href="#欢迎参加Google-Analytics（分析）界面的导览" class="headerlink" title="欢迎参加Google Analytics（分析）界面的导览"></a>欢迎参加Google Analytics（分析）界面的导览</h1><h4 id="帐户-属性-查看切换器"><a href="#帐户-属性-查看切换器" class="headerlink" title="帐户/属性/查看切换器"></a><strong>帐户/属性/查看切换器</strong></h4><p>如果您设置了多个帐户，属性或视图，则可以通过单击左下角的“查看”标题的下拉菜单轻松地切换它们。</p>
+<p><img src="https://lh3.googleusercontent.com/Jpt3VM1A6BMaycQ62aGmHJ5WB8aYe0tQURriqsUui45csq72FrW5TDuNRST1s_eDERk=w675" alt="img"></p>
+<p>当您打开帐户选择器时，您可以通过帐户，财产或视图进行选择。您也可以按名称搜索这些。要关闭帐户选择器，请单击选择器外部屏幕上的任意位置。</p>
+<h4 id="警报图标"><a href="#警报图标" class="headerlink" title="警报图标"></a><strong>警报图标</strong></h4><p>点击右上角的铃声图标可以显示您的Google Analytics（分析）资源和视图的提醒。</p>
+<p><img src="https://lh3.googleusercontent.com/g8jJxDdIDpJfMuCNXMINGCL8GMICX6loXsWRlTngMKJRwyll1RkEKii5f7tVOW8hlnY=w288" alt="img"></p>
+<h4 id="警报菜单"><a href="#警报菜单" class="headerlink" title="警报菜单"></a><strong>警报菜单</strong></h4><p>单击铃声图标将显示所有警报的列表。这可能包括未正确收集的数据或需要优化的设置。要关闭警报菜单，请单击警报外的屏幕上的任意位置。</p>
+<p><img src="https://lh3.googleusercontent.com/CDAKzR3RSC04VXmcMO1qJi6EIAojiX_cCNG-_1wb_ehdLPQdWDyRaA5QpTx_X_YALw=w652" alt="img"></p>
+<h4 id="设置，反馈和帮助"><a href="#设置，反馈和帮助" class="headerlink" title="设置，反馈和帮助"></a><strong>设置，反馈和帮助</strong></h4><p>Google Analytics（分析）数据视图的右上角有几个图标：</p>
+<ul>
+<li>方形点将使您能够在Google Analytics（分析）套件中切换工具</li>
+<li>垂直点可让您修改用户设置，向Google Analytics（分析）发送反馈或搜索帮助文章</li>
+<li>用户图标可让您在不同的Google Analytics（分析）组织或公司之间切换</li>
+<li>最后一个图标可让您在Google帐户之间切换或注销</li>
+</ul>
+<p><img src="https://lh3.googleusercontent.com/g8jJxDdIDpJfMuCNXMINGCL8GMICX6loXsWRlTngMKJRwyll1RkEKii5f7tVOW8hlnY=w288" alt="img"></p>
+<h4 id="搜索报告"><a href="#搜索报告" class="headerlink" title="搜索报告"></a><strong>搜索报告</strong></h4><p>要查找特定报告，您可以在左侧导航栏顶部的搜索栏中输入报告的名称。</p>
+<p><img src="https://lh3.googleusercontent.com/IzpXNJLLvg-0ZhKkA45OHIwrtrvZekoUjlg-jS_s-TAj-cvMWpu_vstn93y_tIDRBMY=w257" alt="img"></p>
+<h4 id="定制"><a href="#定制" class="headerlink" title="定制"></a><strong>定制</strong></h4><p>“自定义”部分允许您创建特定于您的业务的自定义报告。我们将涵盖高级课程中的定制。</p>
+<p><img src="https://lh3.googleusercontent.com/U1RN6r0A0pmC16m3fr0FlH5DlzpxdXZTHWu17cRYi2GilcX_oFd9OIbKax3gIRRcVQ=w258" alt="img"></p>
+<h4 id="左侧导航"><a href="#左侧导航" class="headerlink" title="左侧导航"></a><strong>左侧导航</strong></h4><p>要在报告之间导航，您将使用左侧的导航。点击这些部分的每个部分将公开属于每个部分的报告。</p>
+<p><img src="https://lh3.googleusercontent.com/bGI8qGRZIsGdlplTwPDj9LEIJSZB0XBqeS4xveN9rh_lyBif7XJTZN-X60znWwVr_-k=w258" alt="img"></p>
+<h4 id="实时报告"><a href="#实时报告" class="headerlink" title="实时报告"></a><strong>实时报告</strong></h4><p>实时报告可让您查看网站上的实时用户行为，包括用户来自哪里以及转换的信息。</p>
+<p><img src="https://lh3.googleusercontent.com/VFjRFs_I7oA8nqm8rmmljtErJZuV9qJ9csC3kKLRKDkK0v2O06e-FVbEw-vqe8kXD-I=w256" alt="img"></p>
+<h4 id="观众报告"><a href="#观众报告" class="headerlink" title="观众报告"></a><strong>观众报告</strong></h4><p>受众群体报告向您展示了您的用户的特征，如年龄和性别，他们来自哪里，他们的兴趣，他们的关系，他们是新人还是返回的用户，以及他们使用什么技术。</p>
+<p><img src="https://lh3.googleusercontent.com/aohBBYkyokC6YgK4JWPAIkT0NYdQEw_QxYBIUuA6qp85WXPO7VGIm2dwRLLs4Z8BIs9B=w257" alt="img"></p>
+<h4 id="收购报告"><a href="#收购报告" class="headerlink" title="收购报告"></a><strong>收购报告</strong></h4><p>收购报告显示哪些渠道（如广告或营销活动）将用户带到您的网站。这可能包括不同的营销渠道，如：</p>
+<ul>
+<li>“有机”（或无偿搜索）</li>
+<li>“CPC”（“每次点击费用”或付费搜索）</li>
+<li>“转介”（来自另一网站的流量）</li>
+<li>“社会”（来自社交网络）</li>
+<li>或“其他”（一组低容量流量来源）</li>
+</ul>
+<p><img src="https://lh3.googleusercontent.com/AeLlZa2vjJn1fTNNpr5FJt15qe08rwitqXxhtUruC9PafLOEkOP1bE03WtiaU-0UlLEG=w255" alt="img"></p>
+<h4 id="行为报告"><a href="#行为报告" class="headerlink" title="行为报告"></a><strong>行为报告</strong></h4><p>行为报告显示人们在您的网站上的参与，包括他们查看的网页以及他们的登陆和退出页面。通过额外的实现，您甚至可以跟踪用户在您的网站上搜索的内容，以及它们是否与特定元素进行交互。</p>
+<p><img src="https://lh3.googleusercontent.com/U_LKS8CKVH0q4zzfKfq-fnUpmF2xmnkw1A3JAwgc_pRm-zvoKh1RSaJntuZTNcMCP7w=w256" alt="img"></p>
+<h4 id="转换报表"><a href="#转换报表" class="headerlink" title="转换报表"></a><strong>转换报表</strong></h4><p>转换报表可让您根据业务目标跟踪网站目标。</p>
+<p><img src="https://lh3.googleusercontent.com/noZxWhqsadwFaEiH5vIw2FrSUNYtuustF_zsXQ3oRHWvQf9BgKq176ubGZqi8WQMrUsJ=w255" alt="img"></p>
+<h4 id="管理员"><a href="#管理员" class="headerlink" title="管理员"></a><strong>管理员</strong></h4><p>管理员部分包含所有Google Analytics（分析）设置，例如用户权限，跟踪代码，视图设置和过滤器。</p>
+<p><img src="https://lh3.googleusercontent.com/BSI8Ne0prypiouLzbA28bPYCUoeTnNAi4U86V4gkJdOTI4R9CLk4IXlY1hgw6kGpx0s=w257" alt="img"></p>
+<h4 id="折叠左侧导航"><a href="#折叠左侧导航" class="headerlink" title="折叠左侧导航"></a><strong>折叠左侧导航</strong></h4><p>使用此指针缩小导航并为报告提供更多空间。</p>
+<p><img src="https://lh3.googleusercontent.com/eiE70K3uhrToo43PDDHSnCC5rz6_6JFh_NNUYbvuolAbunZiYOfU6g6Gdpm5M5nr2w=w257" alt="img"></p>
+<h1 id="欢迎参加观众概览报告导览"><a href="#欢迎参加观众概览报告导览" class="headerlink" title="欢迎参加观众概览报告导览"></a>欢迎参加观众概览报告导览</h1><h4 id="日期范围"><a href="#日期范围" class="headerlink" title="日期范围"></a><strong>日期范围</strong></h4><p>每个报告的顶部都是日期范围。这可以让您设置分析报告数据的时间段。单击日期范围打开日期范围选择器。</p>
+<p><img src="https://lh3.googleusercontent.com/na-KqqaOCrGQcVLCRaV-DAlosVFKPxb7RiNSCE3a3B7R92DYzLpfL6fYOKaJ_1kNJ1c=w666" alt="img"></p>
+<h4 id="日期范围选择器"><a href="#日期范围选择器" class="headerlink" title="日期范围选择器"></a><strong>日期范围选择器</strong></h4><p>这将打开左侧的日历，您可以在其中选择日期范围。更改日期范围时，会影响视图中的所有报告。因此，您可以在不同报表之间进行切换，而无需每次调整日期范围。</p>
+<p>您可以选择上周，最后一个月份或最近30天之间的日期范围。但您也可以通过单击开始和结束日期字段并选择日历日期来设置特定日期。如果您想选择整个月份，只需点击左侧日历中的月份名称即可。</p>
+<p><img src="https://lh3.googleusercontent.com/GPxWuuACMHV1gwvkfrNUzTt-3bXZoFUrDmlaU00K2HhuownjwVZIrTkqHyt-pVidGg=w675" alt="img"></p>
+<h4 id="日期范围比较"><a href="#日期范围比较" class="headerlink" title="日期范围比较"></a><strong>日期范围比较</strong></h4><p>您还可以通过点击“比较到”并添加您希望比较的日期范围来比较两个不同日期范围的数据。这样可以让您了解您的业务随时间的变化。 </p>
+<p><img src="https://lh3.googleusercontent.com/MRJonKdOcRc8nK_03vhc9x3JfIPB55_X-TiUKHW-jftuCZztcw4PvuROVrI3iuk8pQ=w462" alt="img"></p>
+<h4 id="分段选择器"><a href="#分段选择器" class="headerlink" title="分段选择器"></a><strong>分段选择器</strong></h4><p>在报告的顶部，请注意分段选择器。细分是查看特定数据集和比较指标的方法。我们将在高级课程中介绍。现在，请注意，默认细分受众群包括在指定日期范围内访问过您网站的所有用户。</p>
+<p><img src="https://lh3.googleusercontent.com/yK8poT6AMBEo1abfsdvG6Ywwq0VvkDFR3ec977umHcU9ZS6m3aYwD1JXKKIej_kpqQ=w685" alt="img"></p>
+<h4 id="线形图"><a href="#线形图" class="headerlink" title="线形图"></a><strong>线形图</strong></h4><p>分段选择器下方是不同格式的“观众概览”报告的不同指标。最突出的是一个线图，默认情况下显示您所选日期范围内每天用户数量的数据点。 </p>
+<p><img src="https://lh3.googleusercontent.com/JLtC0xsRCLC4KObvUtXDnpzLpxk9VsJbvZA88Tx8iecjjT7gWrmYyN0kmmkfRcyzyMA=w685" alt="img"></p>
+<h4 id="持续时间选择器"><a href="#持续时间选择器" class="headerlink" title="持续时间选择器"></a><strong>持续时间选择器</strong></h4><p>如果您希望更具体地查看这些数据，您可以将数据点更改为每小时，每周或每月显示。这在查看大型日期集时尤其有用。如果您在一天内查看数据，视图将默认为每小时。</p>
+<p><img src="https://lh3.googleusercontent.com/G5YdAjn8lW5882JxvXaDtTIjCRO0mey3RPB9Mk07mdFqpl6SDYMQOw3ZCkgA1pUPtg=w392" alt="img"></p>
+<h4 id="公制选择器"><a href="#公制选择器" class="headerlink" title="公制选择器"></a><strong>公制选择器</strong></h4><p>您可以通过选择“概述”选项卡下的下拉菜单，将用户显示的指标更改为其他指标。通过点击“选择指标”，您可以使用Google Analytics（分析）在同一时间段内将其与第二个指标进行比较。</p>
+<p><img src="https://lh3.googleusercontent.com/TCmdh27PNEqBYA6WVv73XRf7jBd2UhzPGzjPtkw5493umyMVAt1n4R-POx42FwjEqQ=w470" alt="img"></p>
+<h4 id="图形注释器"><a href="#图形注释器" class="headerlink" title="图形注释器"></a><strong>图形注释器</strong></h4><p>注意线形图底部的小箭头。点击箭头，您可以使用有用的注释来注释图形，以将业务上下文添加到数据。添加注释后，图表上将会显示一个小指标，其他用户可以访问该视图。点击下面的任何指标将在上面的线形图中显示这些指标的数据点。</p>
+<p><img src="https://lh3.googleusercontent.com/16Nv2kr9Wu7UGkQtwDEVpGkqOySNLYxr-PYUC6civgpf-zA4yXVclSiIwlck6vN31Q=w685" alt="img"></p>
+<h4 id="指标"><a href="#指标" class="headerlink" title="指标"></a><strong>指标</strong></h4><p>线形图下面有一些有用的指标：</p>
+<ul>
+<li>“会话”是给定日期范围的会话总数。 </li>
+<li>“用户”是指定日期范围内访问的用户总数，</li>
+<li>“浏览量”是将Google Analytics（分析）跟踪代码添加到用户的总次数。这包括同一用户重复查看单页。</li>
+<li>“每个会话页数”是每个会话期间查看的平均页面数。这还包括重复查看单个页面。</li>
+<li>“平均会话持续时间”是根据在所选日期范围内访问您的网站的用户的会话平均长度。</li>
+<li>“跳出率”是在您的网站上查看单个网页后不再采取任何其他操作的用户所占的百分比。</li>
+<li>“新会话的百分比”是您的日期范围内作为您的网站的新用户的会话百分比。</li>
+</ul>
+<p><img src="https://lh3.googleusercontent.com/kAr-jWhcH-6BjC_GBYOdPIJpeWCTEUTdfuMBnVUAAFkiNRpskpmc-oqjwOsb5AFbAYEa=w685" alt="img"></p>
+<h4 id="新的和回归的用户"><a href="#新的和回归的用户" class="headerlink" title="新的和回归的用户"></a>新的和回归的用户</h4><p>在指标的右侧是一个饼图，显示新的和返回的用户的百分比。</p>
+<p><img src="https://lh3.googleusercontent.com/ntyPUprxqabB2jvCj_eAGswe54zpQ-PalXEYhTiRxOqxvkfRcoZjqsd1tywARFiKs9o=w266" alt="img"></p>
+<h4 id="尺寸和指标"><a href="#尺寸和指标" class="headerlink" title="尺寸和指标"></a>尺寸和指标</h4><p><a href="https://www.youtube.com/watch?v=ejKM5FohGfY" target="_blank" rel="external">了解维度和指标（0:51）</a></p>
+<p>点击报告左下角的尺寸，您可以查看每个类别中的前10个维度和指标。 </p>
+<p><img src="https://lh3.googleusercontent.com/yKn9KVZfPG5M172nbCJC0cUdiOoqYGbBA-mNfvABL623N_tq79CNsx7yZ_BS6ptYxw=w471" alt="img"></p>
+<h4 id="语言维度"><a href="#语言维度" class="headerlink" title="语言维度"></a>语言维度</h4><p>“受众群体概述”报告中选择的默认维度为“语言”。选择语言时，请注意，右侧的表格包含前10种语言及其会话。您还可以查看国家和城市的十大指标。</p>
+<p><img src="https://lh3.googleusercontent.com/uLBKyROe8eir3qQ8E0_1oojrWqZ1vX9DPfGKbPM5XAaPmfJMxbU7fT2FsopjYhismik=w685" alt="img"></p>
+<p>要查看关于人们正在使用哪些技术来查看您的网站的指标，请单击浏览器，操作系统和服务提供商。</p>
+<h1 id="浏览完整报告：第1部分"><a href="#浏览完整报告：第1部分" class="headerlink" title="浏览完整报告：第1部分"></a>浏览完整报告：第1部分</h1><h4 id="介绍-1"><a href="#介绍-1" class="headerlink" title="介绍"></a>介绍</h4><p>嘿，我们回来了！以前，我们向您展示了“观众概览”报告的高级版本。在该报告的底部，有一个“查看完整报告”的链接，您可以在左侧导航栏中查看每个受众群体报告的扩展版本。</p>
+<p>现在，我们来看看一个完整的报告。</p>
+<p>当您打开完整的报告时，您将在分段选择器下方看到控制报表中不同类型数据的链接。“摘要”视图是按采集，行为和转化指标分类的维度的摘要。这使得我们在第1单元讨论的营销漏斗的上下文中更容易地解释这些指标。</p>
+<p><img src="https://lh3.googleusercontent.com/TL1URdPAdlFo4Vewc1ehH2p0vLWsLCiGRX9GDjvbBfVRWjj94SDNyjqlCHHtageG6j0=w895" alt="img"></p>
+<p>“网站使用情况”显示用户，每个用户的会话，新用户，会话，每个会话的页面和平均会话持续时间等行为指标。“目标”将根据您配置的目标数量显示指标，只有在Google Analytics（分析）中设置目标后才会显示，稍后我们将讨论。如果您在Google Analytics（分析）中设置了电子商务跟踪，“电子商务”将显示交易指标。现在让我们切换回摘要视图。</p>
+<p>图表下方是主数据表。您可以看到第一列显示当前维度“国家”，这是我们在“概述”报告中选择的最后一个人口统计类别。您可以通过单击数据表上方的链接，在其他维度（如城市，大陆和次大陆）之间切换。重要的是要知道，您还可以在表中添加另一个维度来进行更具体的分析。我们称之为次要维度，这是分析数据时的常用技术。例如，您可以向“位置”报告添加“设备类别”的辅助维度，以查看访问您的网站时不同国家/地区的用户使用了哪些设备。</p>
+<p><img src="https://lh3.googleusercontent.com/uRAdYJ5F2x11poqvaX0iiGPR8ZoJ7TGtvLYUperA-aVYRj4VxqVAXYmbaNo0OnKnusk=w895" alt="img"></p>
+<p>在这里，您可以看到表的每一行表示“国家/地区”维度中不同的流量。请注意，Google Analytics（分析）仅向您显示前10行数据，并且只显示适合屏幕的列数。要查看其他行，请使用表格右下角的“显示行”下拉菜单来选择要查看的行数，或者使用左右箭头一次滚动10行。如果您想查看所有列，您可能需要使用报表底部的水平滚动条。</p>
+<p>您可以以不同的方式分析数据表。单击表中的每列可以在升序和降序之间切换数据排序。列标题中的箭头显示您当前正在排序的列。请注意，Google Analytics（分析）默认情况下，用户会排序此报告。</p>
+<p>过滤数据表也仅适用于重要流量段。使用表顶部的过滤器字段仅包含主维度包含过滤条件的行。例如，您可能需要查看特定国家/地区的数据，例如印度，因此，您可以简单地在过滤器字段中输入“India”，而不是滚动浏览表，而Analytics（分析）只会显示包含术语“印度“。”搜索框旁边的“高级”可让您应用更复杂的过滤规则。我们将介绍高级课程中的高级过滤技术。</p>
+<h4 id="报告可视化"><a href="#报告可视化" class="headerlink" title="报告可视化"></a>报告可视化</h4><ul>
+<li>在“高级”链接旁边，有几种不同的可视化选项：</li>
+<li>“数据表”视图是大多数报告的默认可视化。这将根据收购，行为和转化指标细分为观众和收购报告中的数据。</li>
+<li>“饼图”图标根据您的数据创建饼图。这有助于您比较整体的百分比，例如台式机，平板电脑和手机上有多少用户。您可以使用下拉菜单选择报表中应显示在哪个指标中的饼形图。</li>
+<li>“性能”视图显示了数据的条形图。这有助于您将各个细分市场并排排列在哪个国家带来最高的流量。您还可以使用下拉菜单选择要以条形表示的各种指标。</li>
+<li>“比较视图”显示一个条形图，以快速查看表中的每个条目是否高于或低于所选指标的站点平均值。如果给定行的值优于平均值，则显示为绿色。如果低于平均水平，则显示为红色。同样，您可以使用下拉菜单来选择应显示哪个指标。</li>
+<li>最后，“数据透视”视图创建一个数据透视表，其中行和列都可以显示不同的维度值进行比较。例如，数据透视表可以显示Google Store的每个着陆页和设备类型的跳出率和会话次数。</li>
+</ul>
+<h1 id="浏览完整报告：第2部分"><a href="#浏览完整报告：第2部分" class="headerlink" title="浏览完整报告：第2部分"></a>浏览完整报告：第2部分</h1><h4 id="共享和自定义报告"><a href="#共享和自定义报告" class="headerlink" title="共享和自定义报告"></a>共享和自定义报告</h4><p>在您的报告中找到有意义的数据后，Google Analytics（分析）提供了几种方法，可以在顶部的报告名称下分享或引用该报告。</p>
+<p><img src="https://lh3.googleusercontent.com/SiNhJ306A-xBff8s6fgvQR_Njzz_k-0TLNT3PjONTWBr-z81yAu77hWiyzWMOm9h5o0g=w640" alt="img"></p>
+<p>虽然它更高级，但是“自定义”可以通过添加度量标准组，过滤器或其他视图来进入和自定义报告内容。这将在标题栏的“自定义”标签下创建一个新报告。</p>
+<p>“电子邮件”可让您以附件形式发送该报告的副本，甚至安排定期的电子邮件更新。</p>
+<p>“导出”可以将报表以各种可导入电子表格的文件格式（如PDF或CSV文件）保存到桌面。</p>
+<p>“添加到仪表板”允许您将称为窗口小部件的报告的小型表示添加到可以在一个位置查看多个报表窗口小部件的区域。</p>
+<p>而“快捷方式”可以在左侧导航栏的“快捷方式”菜单中创建指向特定报告的链接。这与Web浏览器中的书签类似。</p>
+<p>我们将在下一课中讨论仪表板和快照。</p>
+<p>关于报告的最后一句话。</p>
+<p>您会注意到右上角的下拉菜单默认设置为“较慢的响应，更高的精度”。有时，Analytics（分析）必须收集如此多的数据，为了更快地返回报告，它只会分析收集的数据样本。我们称之为“抽样”，这意味着它会根据您的数据样本返回精确计数的估计值。如果您希望数据更准确，并且不介意额外的响应时间，请保留此设置。如果您希望加快报告速度，并愿意牺牲更精确的指标，请选择“更快的响应，更少的精度”。菜单左侧是一个指示会议数量和当前用于计算的会话百分比的指标您的报告指标。</p>
+<p>另外，请注意菜单右侧的教育图标。点击图标将打开一个带有视频和实用信息的上下文教育选项卡，以便教你如何使每个报表工作。</p>
+<p><img src="https://lh3.googleusercontent.com/NXT3CmTp4mvXzyCM7cxEjpnQp-Gcz4J_J43KWS-Vo6i4d_dfeurKMGHmGXKsFGSXFCqy=w550-h300" alt="img"></p>
+<p>现在您参加了这次旅游，您应该熟悉Google Analytics（分析）中的大部分报告。</p>
+<h1 id="仪表板和快捷方式介绍"><a href="#仪表板和快捷方式介绍" class="headerlink" title="仪表板和快捷方式介绍"></a>仪表板和快捷方式介绍</h1><p>我们一直在研究各种报告，很明显，其中一些指标对您的业务比其他指标更有用。在某些情况下，甚至可能会有定期检查的指标来衡量您的业务或特定广告系列的运行状况。您可以使用仪表板和快捷方式快速找到这些指标，而无需导航到特定的报告。</p>
+<h4 id="仪表板"><a href="#仪表板" class="headerlink" title="仪表板"></a>仪表板</h4><p>仪表板灵活，可用于不同的目的。例如，您可以通过在单个页面上将不同报告的摘要显示为窗口小部件，从而概述您的网站的效果。</p>
+<p>或者您可以收集关键业务指标列表，以一目了然地显示您的业务状况，或者将不同的报告并排比较。</p>
+<p>您会注意到许多报告的顶部有一个“添加到仪表板”按钮。定制报表以显示所需数据后，您可以点击“添加到仪表板”将该报表保存为仪表板小部件。您还可以在保存报表时在表格中显示哪些部分，例如表，图表或两者。</p>
+<p><img src="https://lh3.googleusercontent.com/gSGVw-0TlTUwlr999WmS8RbPEdVCDYYPMwNfPMsKyvVsc1W7cc8YZI8O8dR9f8kv8jY=w520-h250" alt="img"></p>
+<p>信息板可以保存最多12个报表小部件。要将报表小部件添加到信息中心，只需选择已创建的信息中心或选择“新建”。</p>
+<p>点击左侧导航栏中的“仪表板”可以轻松查看您收集的报告。</p>
+<p>您可以通过单击顶部的“添加小部件”按钮将小部件添加到信息中心。这将让您命名要在仪表板上显示的小部件报告，并选择可视化类型。您可以选择以数字，时间轴，地图，表格，饼形图或条形图的形式查看数据。</p>
+<p><img src="https://lh3.googleusercontent.com/f0gVSRQW87aq5cBBvLsQBDgHidIyouKXOf1gKYodH1RYVkkDi-0b08A8ZEtxDEcxixI=w600-h400" alt="img"></p>
+<p>您可以为标准或实时指标选择其中一些可视化。使用下面的“添加指标”下拉菜单来搜索并添加要包括的特定指标。将报告窗口小部件带入仪表板后，您甚至可以添加过滤器，就像我们之前在视图级别设置过滤器的方式一样。</p>
+<p>在报告中，当您使用“添加小部件”按钮添加小部件时，该小部件将包含一个返回原始报告的链接。但是，请注意，如果您在仪表板上修改窗口小部件中的数据，则当您单击链接回到原始报告时，这些更改将不会持续。如果要将报表的更改保留在信息中心中，则必须返回原始报告，进行更改，重新复制该报告的URL，然后使用正确的URL更新窗口小部件。</p>
+<p>创建仪表板后，您可以通过单击“自定义仪表板”并选择布局进行格式化。您还可以将现有的小部件拖放到仪表板中的不同位置。鼠标悬停在窗口小部件上将显示一个编辑图标，您可以使用它编辑进入报表窗口小部件的数据。它还显示一个删除图标，允许您从仪表板中删除小部件。</p>
+<p>有两种类型的仪表板：私有和共享。在该视图中，您只能看到私人信息中心。任何有权访问该视图的人都可以看到共享的信息中心。每个用户可以拥有20个专用仪表板，每个视图可以有50个共享仪表板。如果您与其他用户共享仪表板，则可以更改显示板上显示的信息，但只能对其进行更改。您共享的原始仪表板无法由其他用户更改。</p>
+<p>如果您希望分享信息中心，只需点击顶部的“分享”按钮即可。选择“共享对象”将与访问视图的任何用户共享仪表板。选择“共享模板链接”将共享一个可以添加到任何其他Google Analytics（分析）数据视图中的信息板模板的链接（但不要担心，这不包括任何数据）。如果您希望更广泛地分享您的模板，您可以通过点击“在解决方案库中共享”将信息中心模板添加到“Google Analytics（分析）解决方案库”。解决方案库是Google Analytics（分析）用户可以共享不同类型的自定义项仪表板 它也是一个很好的地方找到仪表板模板，您可以导入，然后自定义为您自己的业务。</p>
+<h4 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h4><p>访问报告的另一个简单方法是创建报告的快捷方式，类似于在Web浏览器中保存书签的方式。关于快捷键的很酷的是它们包括你对报告的任何自定义设置。例如，如果您已经过滤了数据表，那么当您从快捷方式访问报表时，该过滤器将自动应用。要创建快捷方式，只需在报表中单击“快捷方式”即可。命名快捷方式，它将被保存在导航的快捷方式部分。</p>
+<p><img src="https://lh3.googleusercontent.com/ltEjwxnycY1ubNjGS14vYTylReCbRKGoaw7_QFSWOCe_q1NyAVAUtziNcfHMvTTkpPU=w539" alt="img"></p>
+<p>使用仪表板和快捷方式轻松检索对您的业务有价值的报告，或与其他利益相关者分享。</p>
+<p>请务必查看“Google Analytics（分析）解决方案库”中的一些好主意。</p>
+<h1 id="观众报告概述"><a href="#观众报告概述" class="headerlink" title="观众报告概述"></a>观众报告概述</h1><p>观众报告位于左侧导航栏的“受众群体”下。这些报告可以帮助您更好地了解用户的特征。这可以包括他们在哪些国家，他们说什么语言，以及他们访问您的网站的技术。但它也可以包括年龄和性别，他们的参与度和忠诚度，甚至一些他们的兴趣的数据。</p>
+<h4 id="活动用户报告"><a href="#活动用户报告" class="headerlink" title="活动用户报告"></a>活动用户报告</h4><p>我们从“活跃用户”报告开始。这可以显示您在最后一天，7天，14天和30天内有多少用户在您的网站上至少有一个会话。我们称之为“网站覆盖”或“粘性”。如果您的营销活动和网站内容鼓励用户访问并返回到您的网站，每个时间框架中的活跃用户应该会增长。</p>
+<p><img src="https://lh3.googleusercontent.com/ef15sDtWCIbFy-DAhXovJEdL_yMZ5aZmOoQk_xp3qylQYGPwnFpJ_CGBgijpgw9Tdy1M=w800-h340" alt="img"></p>
+<h4 id="人口统计和兴趣报告"><a href="#人口统计和兴趣报告" class="headerlink" title="人口统计和兴趣报告"></a>人口统计和兴趣报告</h4><p>接下来，我们来看看“人口统计”和“兴趣”报告。“人口统计”报告提供有关用户年龄和性别的信息。“兴趣”报告显示您的用户对某些类型的网络内容（如技术，音乐，旅游或电视）的偏好。此信息有两种方式。首先，如果您了解您的目标受众，可以帮助您验证您是否接触到合适的用户。第二，它可以帮助指导您的营销和内容策略的决策。</p>
+<ul>
+<li>请注意，要查看这些报告中的数据，您必须先在每个媒体资源的“客层和兴趣”报告中启用广告功能。进入“属性”下的“管理”选项卡，然后选择“属性设置”。在“广告功能”下，将“启用人口统计和兴趣报告”设置为on。</li>
+</ul>
+<p><img src="https://lh3.googleusercontent.com/xbJhbbRzcMkB-DNpdAfofU2b-DsEYeYKSfjcBXXisIbx550_ISTnP31f3tDzb_88cXo=w617" alt="img"></p>
+<p>激活后，您将在“受众特征和兴趣”报告中看到有关用户的年龄，性别和兴趣的数据。请注意，如果您刚刚启用了此功能，则可能需要一两天才能在这些报告中显示数据。此外，如果您的网站流量非常低，或您的细分受众太小，则受众特征报告可能不包含任何数据。</p>
+<h4 id="地理报告"><a href="#地理报告" class="headerlink" title="地理报告"></a>地理报告</h4><p>“地理位置”下的“位置”报告是最有用的受众群体报告之一。Google Analytics（分析）可以通过浏览器使用的IP地址匿名地确定用户的大陆，亚洲大陆，国家和城市。请注意报告顶部的地理热图，您可以调整该图以显示不同的指标。例如，切换地图以显示“新访问的百分比”，您可以根据您网站的新用户流量来识别潜在的新市场。这可以帮助您决定是否在特定地点建立意识或投资客户忠诚度。</p>
+<p>您还可以使用可视化文件下的表格来识别具有大量转化（或交易）但流量低的区域。这可能表明未开发的市场将以广告为目标。</p>
+<p>另一种分析技术是确定您已经拥有较大受众群体的地区，但低于平均水平。例如，如果某些区域的跳出率高于平均水平（或在查看单页后离开的用户），则可能需要优化广告或网站。也许您需要将您的广告或网站翻译成当地语言或添加地理位置特定的内容。</p>
+<h4 id="行为报告-1"><a href="#行为报告-1" class="headerlink" title="行为报告"></a>行为报告</h4><p>“Geo”下方是一组行为报告，可帮助您了解用户访问和返回网站的频率。“新回报”报告突破了新用户和返回用户的收购，行为和转化目标指标。随着时间推移，您可以看看这种比较，看看观众的忠诚度可能会如何变化。在评估新用户和返回用户到您的站点的组合时，请考虑您的网站目标以及您的营销活动。</p>
+<p><img src="https://lh3.googleusercontent.com/VYkdy75cSEjORvg33TVEDO4sxNupNeoZRY7wZPuJNaglgz77KMZPs1Qp3IJif_fLmng=w800-h340" alt="img"></p>
+<h4 id="技术和移动报告"><a href="#技术和移动报告" class="headerlink" title="技术和移动报告"></a>技术和移动报告</h4><p>在行为报告下，“技术”和“移动”报告可以帮助您了解您的受众用来消费您的网站内容的技术。这些报告可以帮助您微调您的网站，以确保其在不同的设备和浏览器上功能齐全。</p>
+<p>例如，您可以使用“浏览器和操作系统”报告快速识别您网站上某些浏览器的问题。如果您的网站在移动浏览器上的跳出率相对较高，则可能需要创建具有流动优化版本的网站，具有流线型的内容和更简单的导航。</p>
+<p>了解用户是否从桌面移动到移动设备，并相应地规划您的开发也是一个好主意。您可以使用“移动”下的“概述”报告查看基于智能手机，平板电脑和桌面设备的流量细目。查看此报告，了解您的网站的移动使用量随时间的增长有多快。</p>
+<p><img src="https://lh3.googleusercontent.com/G5QS44IsPss7bzjzAWsNKBbSCi5lu7qJF2pGXs_evhwljS10wJOzd3WLoUB-ssqWlLY=w800-h340" alt="img"></p>
+<p>“设备”报告可让您查看有关用于浏览网站的设备的其他详细信息。这包括移动设备名称，品牌，服务提供商，输入选择器，操作系统以及屏幕分辨率等其他维度。这些报告可以让您的开发人员和设计师指导如何创建适合您的用户的移动优化体验。</p>
+<h1 id="收购报告概述"><a href="#收购报告概述" class="headerlink" title="收购报告概述"></a>收购报告概述</h1><p>“收购”报告位于左侧导航栏的“收购”部分。您可以使用采集报告来比较不同营销渠道的效果，并发现哪些来源为您提供最高质量的流量和转化。这可以帮助您更好地决定在哪里集中营销工作。</p>
+<p>在我们讨论采购报告之前，了解Google Analytics（分析）如何识别您的网站的流量来源可能会有帮助。当用户登陆您的网站时，Google Analytics（分析）跟踪代码会自动捕获用户来自哪里的几个属性（或维度）。这包括交通媒介，来源和营销活动名称。</p>
+<p><img src="https://lh3.googleusercontent.com/kaWdxkaDaW07AJrOfeWHLVt67f_f5fdD2ejrRxwyqWEjyTARIP8-MavcCXjrbJFHhjk=w500-h230" alt="img"></p>
+<p>您可以将媒介视为将用户传递到您的网站的机制。媒介的一些常见例子是“有机”，“cpc”，“推荐”，“电子邮件”和“无”。我们来看看这些不同类型的媒介：</p>
+<ul>
+<li><strong>“有机”</strong>用于通过非付费搜索（如非付费Google搜索结果）来识别到达您网站的流量。</li>
+<li>“ <strong>CPC</strong> ”表示通过付费搜索广告系列（如Google AdWords文字广告）到达的流量。</li>
+<li>“ <strong>Referral</strong> ”用于在用户点击搜索引擎以外的网站时到达您网站的流量。</li>
+<li>“ <strong>电子邮件</strong> ”表示来自电子邮件营销活动的流量。</li>
+<li>通过直接在浏览器中输入URL，将“ <strong>（无）</strong> ”应用于直接进入您的网站的用户。在您的报告中，您将看到这些用户的“直接”来源为“（无）”。</li>
+</ul>
+<p>“来源”提供了有关媒介的更多信息。例如，如果介质是“引荐”，则源将是将用户引用到该站点的网站的URL。如果介质是“有机”，则源将是搜索引擎的名称，例如“google”。</p>
+<p>在“全部流量”下，我们将使用2015年8月1日至2015年8月31日期间的Google Store Analytics帐户中的“来源/媒介”报告。这显示了来源及其各自的媒体发送转介，搜索引擎流量和直接流量到网站。请注意，默认排序是用户。</p>
+<p><img src="https://lh3.googleusercontent.com/XRHKqdxKFxZBA_5x8-eOzwoW6rIEq4bf7kBZhvujjS7J0bcncgiuzWmHMnjadG7Lpg=w800-h400" alt="img"></p>
+<p>为了识别有效的流量来源，我们可以查看与大多数用户的源/媒体组合，但并不一定意味着这是最佳流量。理想情况下，流量应该是“高品质”，这意味着从源头到达的用户与网站接触或完成转化。交通质量的一个很好的指标可以是跳出率。</p>
+<p>我们最大的流量来源是Google自然搜索，与其他来源相比，跳出率相对较低。我们的第二大流量来源是直接流量。YouTube转介次数是流量第三高，但是跳频率最高。让我们进行更多的分析来了解这是否是一个问题。</p>
+<p>我们可以点击比较视图，并选择指标“跳出率”，以将每个来源/媒体组合的跳出率与网站平均值进行比较。果然，我们可以看到我们的YouTube流量正在以比网站平均水平高出的速度反弹。Google商店可能需要进行调查，以确保YouTube流量降落在对这些用户有价值的网页上。</p>
+<p><img src="https://lh3.googleusercontent.com/HJhGpGiToybJ2Rn8tWEKXcqyhFJGBVRAmLbjb24hLT96dcxxxM_FiZGG41MsJCQVnsA=w800-h400" alt="img"></p>
+<p>如果我们只想看到发送流量到站点的“有机”源，我们可以在过滤器中输入“有机”。您可以看到Google比其他非付费来源提供的流量更多，与其他来源相比，跳出率相对较低。这意味着从Google自然搜索到达的用户正在高度相关的网页上登陆。</p>
+<p>现在我们来比较我们通过将过滤器更改为“google”来生成流量的所有Google营销活动的效果。现在我们可以看到有机流量是我们最大的流量来源，其次是谷歌/ cpc，代表付费搜索流量使用Google AdWords。这是为您的分析添加上下文并了解哪些营销活动为您的业务创造成功的好方法。</p>
+<h4 id="渠道报告"><a href="#渠道报告" class="headerlink" title="渠道报告"></a>渠道报告</h4><p>还有其他方法可以查看哪些流量来源将最有吸引力的用户带到网站。使用“渠道”报告，我们可以通过渠道查看流量，每个渠道将渠道捆绑在一起。流量来源自动分为基本类别（或渠道），如有机，社交，直接，推荐，显示等。</p>
+<p>点击每个频道可以打破该频道的各个来源。如果您希望对来源进行分组，您可以在Google Analytics（分析）中创建自己的渠道分组。我们将在高级课程中更多地介绍。</p>
+<h4 id="推荐报告"><a href="#推荐报告" class="headerlink" title="推荐报告"></a>推荐报告</h4><p>如果您想查看由哪些网站链接到您的网站，您可以查看“推荐”报告。</p>
+<p>您甚至可以点击单个引荐来查看哪些特定网页链接回您的网站。如果您想了解您网站的哪些特定网页被链接，您可以在报告中添加“着陆页”的辅助维度。这将显示哪些外部网站向每个特定网页发送流量，并可能为您提供与这些引荐网站的新广告合作伙伴关系的来源。</p>
+<h1 id="行为报告概述"><a href="#行为报告概述" class="headerlink" title="行为报告概述"></a>行为报告概述</h1><p>您可以在左侧导航栏中的“行为”下找到“行为”报告。了解Google Analytics（分析）如何计算行为数据很重要。如果您还记得，Google Analytics（分析）会在您的网站上使用一小段JavaScript代码来收集数据。每当用户在您的网站上加载网页时，此跟踪代码将创建一个在Google Analytics（分析）中报告的“浏览量”。Google Analytics（分析）使用它来计算行为报告中的许多指标。例如，“总浏览量”指标只是每次用户在网站上加载网页的总和。</p>
+<p>我们先看看位于“站点内容”下的<strong>“所有页面”</strong>报告，然后向下滚动到数据表。</p>
+<p><img src="https://lh3.googleusercontent.com/5KP2YQtb2bc4CjIhnJoq4yPjYcrcT-YiyMptBVSRZalTBVO3CoaQqrMghMOTHMWwR45f=w600-h300" alt="img"></p>
+<ul>
+<li>“浏览量”指标显示您网站上每个网页被浏览的频率。默认情况下，此报告将按页面URI显示数据。URI是浏览器位置栏中域名后的URL的一部分。如果将报表的主要维度切换为“页面标题”，则可以按照网页HTML中列出的标题查看此报告。</li>
+<li>“所有页面”报告中的其他指标，如“平均在线时间”和“跳出率”表示您网站的每个页面上的用户数量。您可以按照这些指标对报告进行排序，以便快速找到需要改进或效果不佳的内容，以便指导未来内容决策的效果欠佳的网页。</li>
+</ul>
+<p>根据您的网站<strong>目录结构</strong>，“网站内容”组下的<strong>“内容深入”</strong>报告页面。您可以点击一个目录来查看该目录中网站的页面。如果您想了解网站特定部分内容的效果，这一点尤其有用。如果切换到饼图视图，您可以快速查看您的网站哪些部分最受用户欢迎。</p>
+<p>“网站内容”下的<strong>“目标网页”</strong>报告列出了用户首次到达的网站页面。这些是在会话中查看的第一个页面。您可以使用此报告来监控每个着陆页的跳出次数和跳出率。较高的跳出率通常表示目标网页内容与这些用户无关或互动。</p>
+<p>“网站内容”下的<strong>“退出页面”</strong>报告显示用户离开您网站的页面。因为您不希望用户退出重要页面（如购物车结帐），因此定期查看此报告以最大程度减少不必要的退出情况是一个好主意。</p>
+<p>该<strong>“事件”</strong>报告跟踪用户与网站上的特定元素进行交互。例如，您可以使用此报告跟踪用户点击视频播放器或下载链接。事件跟踪需要除Google Analytics（分析）跟踪代码段之外的其他实施，我们将在高级Google Analytics（分析）课程中更详细地讨论。</p>
+<h1 id="如何跟踪营销活动"><a href="#如何跟踪营销活动" class="headerlink" title="如何跟踪营销活动"></a>如何跟踪营销活动</h1><p>营销活动可以采取多种形式。您的公司可能希望在搜索引擎结果上使用文字广告，在战略发布商网站上投放横幅广告，也可以将社交媒体或电子邮件广告系列与客户沟通您的品牌和产品。通过这些营销活动的结合来推动销售和网站转化。</p>
+<p><img src="https://lh3.googleusercontent.com/QV04xm3M7TsR_d4U_fi77Xxd-jS98JcH1RpSoarUEXuPOULIzYtnnCQgvDFD9CiXUae8=w230-h175" alt="img"> <img src="https://lh3.googleusercontent.com/xU3z1PJFoXf6IkBY1eP3y8JjFiMuVjkv8TYnVM1UNBkbW4bNdH03w0FBsgWus3fvJy0=w230-h175" alt="img"> <img src="https://lh3.googleusercontent.com/B7qzvI9ZY5QE8NmLyA5OsY2WiG5zHcG2z6axZW4JwGOJzTPlsJtEP7uBz1FYpR-P-p8=w230-h175" alt="img"></p>
+<p>营销活动通过“广告系列标记”在Google Analytics（分析）中进行跟踪。广告系列标签是您添加到在线营销或广告资料的网址链接中的额外信息。这些包括跟踪参数，后跟等号和单个字或连字符，您指定的字。</p>
+<p>当用户点击带有附加参数的链接时，Google Analytics（分析）跟踪代码将从链接中提取信息，并将该用户及其行为与您的营销活动相关联。这样，您可以通过各种营销活动知道哪些人来到您的网站。</p>
+<p>例如，Google商店每月发送一封电子邮件通讯，发送给客户，并返回Google Store网站。在这些链接中添加“电子邮件”的广告系列标签，商店可以从Google Analytics（分析）的电子邮件通讯中轻松识别来自网站的用户。</p>
+<p>有五种不同的广告系列代码可帮助您识别有关广告系列流量的具体信息。<strong>中等，来源和广告系列</strong>是必需的广告系列代码。您还可以添加<strong>内容和期限的</strong>标签。</p>
+<p>当我们向您介绍采购报告时，我们讨论了中等和来源。</p>
+<ul>
+<li><strong>“中”</strong>通信机制，或您如何将消息发送给用户。您可以为电子邮件广告系列添加“电子邮件”，为付费搜索广告添加“cpc”，还可以为社交网络添加“社交”。</li>
+<li><strong>“来源”</strong>通信用户来自哪里。这可能是一个特定的网页或电子邮件中的链接。来源也可以区分媒体类型。所以如果媒体是“cpc”（或“每次点击费用”支付的流量），则可能是“google”，“bing”或“yahoo”。如果媒体是“电子邮件”，则该来源可能是“通讯“。</li>
+<li><strong>“运动”</strong>可以传达您的营销活动的名称，例如“2015年退学”或“2015年假期销售”。</li>
+<li><strong>“内容”</strong>可用于区分促销的版本。当您想要测试哪个版本的广告或促销活动更有效时，这很有用。如果您在两个不同版本的通讯之间进行测试，则可能需要标记这些标签“v1-10dollars-off”和“v2-nopromo”，以帮助区分Google Analytics（分析）中与数据相关联的哪个通讯。</li>
+<li><strong>“期限”</strong>用于识别付费搜索广告系列的关键字。如果您手动标记Bing或Yahoo！等付费搜索广告系列，则只能使用此字段。我们将在稍后的课程中讨论跟踪Google AdWords的最佳方式。</li>
+</ul>
+<p>要将这些参数添加到与您的广告相关联的网址中，Google Analytics（分析）会在我们的帮助中心中提供一个名为“网址制作工具”的工具，接下来我们将介绍一下。</p>
+<h1 id="使用网址制作工具跟踪广告系列"><a href="#使用网址制作工具跟踪广告系列" class="headerlink" title="使用网址制作工具跟踪广告系列"></a>使用网址制作工具跟踪广告系列</h1><p>要导航到帮助中心的URL构建器，请单击本课末尾的链接，并向下滚动到URL构建器窗体。</p>
+<p>在第一步中，输入您网站的网址（或您希望广告或广告系列链接到用户的位置）。然后填写广告系列，来源和媒体的字段。或者，您可以填写术语，内容和名称的字段。期限，内容和名称可以是您想要的任何值，只需确定它们具有足够的描述性，可以识别何时出现在Google Analytics（分析）报告中。</p>
+<p><img src="https://lh3.googleusercontent.com/7-or-aj0aapBKGt8y7AF1UlKNYLENObftE_OmG6N1KswDMucw1vtPqwGBF31HAazrN4=w450-h375" alt="img"></p>
+<p><strong>关于命名约定的简要说明。</strong>通常，您将使用单个字来命名您的标签。如果您使用短语，则URL构建器将在单词之间添加下划线，以避免URL中的空格。输入标签值时，请务必使用一致的拼写和大小写。由于Google Analytics（分析）区分大小写，所有名称为“PROMO1”的广告系列全部以大写形式显示，与名为“promo1”的广告系列分开显示，全部为小写。另外，请确保您使用一致的媒体名称，如横幅广告的“显示”和电子邮件广告系列的“电子邮件”。</p>
+<p>当您点击底部的“生成网址”时，您可以看到，URL Builder会生成链接，其中包含所有正确的广告系列参数。</p>
+<p><img src="https://lh3.googleusercontent.com/gYxrqTG_ZXTqmVYn99LZsJBL0e_vVI7EDElGH0xyMWEav3nReBjZJc9qnV3sxqiwiXL5=w500-h125" alt="img"></p>
+<p>这提供了一种快速生成用于跟踪的广告系列代码的简单方法。但请记住，您只能一次使用它来构建一个URL，因此如果您有一个大型广告系列，您可能不希望使用它来构建每个URL。相反，您可以使用电子表格来简化流程。我们在本课结尾提供了一个示例模板，您可以使用它来管理广告系列价值以进行批量URL建立。</p>
+<p>在启动包含此链接的广告系列之前，您需要验证您的跟踪代码是否正常运行。有时，网站配置可能会中断Google Analytics（分析）广告系列跟踪。在启动广告系列之前，您可以使用以下简单方法来测试广告系列 首先打开隐身窗口或私人浏览会话。然后，将您创建的链接复制并粘贴到浏览器的地址栏中。加载网站后，浏览您的网站，并完成一些关键操作。例如，如果您的一个网站目标是试用注册，请完成您网站上的注册过程。或者，如果您的广告系列包含优惠券，请尝试使用优惠券提交交易。</p>
+<p><img src="https://lh3.googleusercontent.com/SF-jf6RRSRpWDMBZogFo48IHV0JFB71RvJBG0NEAaGTZiYO3uTqNO05uhckzn43nzw=w350-h250" alt="img"><img src="https://lh3.googleusercontent.com/5OwckPDir8kJrjcmaeHVWsW2SK2XMAjMdnRBHRi_9tlo_Q2Ryzqvm2CLfe5EHN9ZLUI=w350-h250" alt="img"></p>
+<p>It’s a good idea to try this with each URL you created. You can instantly see campaign information in the Real Time reports or wait a few hours to review the data in your standard Campaign reports. Then visit the “All Campaigns” report in the “Acquisition” section under “Campaigns.” This report lets you compare incoming traffic from your various marketing campaigns. To verify that the campaign is collecting data properly, type the name of the campaign into the filter. You should see an overview of the campaign clicks that you tested.</p>
+<p>If you click on the campaign name, you can see the source and medium data that you entered into the URL Builder. If you want to verify the other campaign tags you added to your URL, add a secondary dimension such as “ad content.”</p>
+<p>这可让您查看“添加到您的链接”的“内容”标签细分的“源/中”的主要维度。Google Store通过是否提供促销来区分电子邮件通讯的“内容”标签。通过添加“广告内容”的二级维度，我们可以看到哪些促销活动最有效地吸引了用户访问该网站。</p>
+<p>有很多其他方式可以分析广告系列数据，我们将在高级课程中介绍。通过使用URL Builder与Google Analytics（分析）报告功能，您可以快速了解哪些广告系列将最高质量的流量带入您的网站。</p>
+<p>在Google Analytics（分析）中设定目标之前，我们来区分两种目标：业务目标和Google Analytics（分析）目标。</p>
+<p><strong>业务目标</strong>是您希望用户在您的网站上执行的操作。每当用户完成您的业务目标之一时，我们称之为“转换”。这可能是注册通讯或购买产品。</p>
+<p><img src="https://lh3.googleusercontent.com/cWqKKuPNDqreyYPtbBbAZ4d2WwTQHxbpjFAIz-JaSu7xewCdJGJ8HbgvBrnu6rYEO-Y=w500-h200" alt="img"></p>
+<p>但是，在Google Analytics（分析）中，您可以使用名为<strong>“目标”</strong>的功能来跟踪这些转化。配置目标后，Google Analytics（分析）将创建与转化相关的指标。像总转化次数，以及转换的用户的百分比。我们称之为“转换率”。</p>
+<p>在Google Analytics（分析）中设置目标时，您还可以设置“目标渠道”。这是完成目标所需的不同步骤的数据可视化。这种视觉可以帮助您识别用户在转换过程中脱落的位置。电子商务企业可以使用目标和渠道来查看用户是否能够完成多步骤结帐流程。其他企业可以跟踪通讯注册，联系表单完成，页面导航，会话中查看的页面数或现场时间。</p>
+<p>您必须是您要在Google Analytics（分析）中启用目标的视图中的管理员。另请注意，您每个视图最多只能设置20个目标，因此请仔细考虑哪些目标对您的业务至关重要。</p>
+<p>首先，您需要根据您的业务目标来决定要跟踪的内容。由于Google Store是一家电子商务商店，所以他们可以跟踪的一个目标是成功结帐。所以，每当用户到达结帐确认页面时，我们设置一个目标。我们还将设置渠道可视化，因此我们可以看到用户是否正在脱离确认页面。请注意，此目标不会追踪实际收入; 它将简单地跟踪用户在目标的每个阶段获得的距离以及他们可能放弃进程的程度。创建漏斗可视化来跟踪目标完成是完全可选的，但它可以为转换流的每个步骤添加大量可见性。</p>
+<h4 id="目标设定"><a href="#目标设定" class="headerlink" title="目标设定"></a>目标设定</h4><p>要开始使用，我们将进入“管理”部分。然后，在“视图”下，我们点击“目标”，然后点击“新目标”。请注意，您的目标设置可能与Google商店有所不同，具体取决于您的业务类型。Analytics（分析）为您提供一些预设的业务目标模板。由于我们想跟踪用户是否将其存入Google Store的结帐页面，因此我们将选择“购买商品”，然后点击“继续”。</p>
+<p>因为我们要跟踪结帐确认，所以我们将命名目标：“结帐完成”。每个目标使用一个特定的“目标槽位ID”，编号从一到二十。目标插槽ID是组织目标的简单方式。默认插槽将始终为可用的下一个插槽。如果您创建了第一个目标，那么目标插槽ID将为“1”，但如果您有一定的目标，您可以选择不同的插槽。</p>
+<p><img src="https://lh3.googleusercontent.com/VShtuYpOOB-OgVlUdZWyWMLvlW0untXMSA2abJfH_5E44H4edbCNxjobfOszZ1qBCGuR=w600-h500" alt="img"></p>
+<p>接下来我们将选择四种目标类型之一。这些类型中的每一种都是由特定用户操作触发的。</p>
+<ul>
+<li>“目的地”是指用户到达您网站上的特定页面，如感谢页面;</li>
+<li>“持续时间”是基于用户会话的长度;</li>
+<li>“页面或屏幕”基于用户在会话中查看的页面数量;</li>
+<li>“事件”用于跟踪站点上的具体操作。我们将在高级课程中更广泛地介绍活动。</li>
+</ul>
+<p>请注意，如果要创建渠道可视化，您只能使用“目标”类型目标，因此我们将选择“目标”，然后单击“继续”。</p>
+<p>接下来，我们将在“目的地”字段中输入“订单完成”页面的目标网址。目标网址是当用户转换或完成转换过程时显示的页面的URL。而不是输入整个网址，我们希望在该网址中寻找独特的东西，这样我们才能使用这个网页跟踪我们的目标。由于Google商店中的其他网页都没有在网址中具有“SubmitOrder”，我们将用它来标识我们的“订单完成”页面。</p>
+<p>You’ll notice that if we select “Equals to,” type “forward-slash SubmitOrder,” and click “Verify” at the bottom, we don’t see any conversion data for this goal. This is because the SubmitOrder page is part of a longer dynamic URL. In order to track this goal, we’ll actually need to use what’s called a “regular expression” and enter the value “forward slash SubmitOrder” to indicate that the URL preceding it can be variable. Now if we click “Re-verify,” we can see that the conversion rate is above 0, which means we’ll be able to track data. We’ll cover regular expressions more in an advanced Analytics course.</p>
+<h4 id="Goal-Value"><a href="#Goal-Value" class="headerlink" title="Goal Value"></a>Goal Value</h4><p>如果要为转换目标分配金额，您可以将“价值”切换翻转为“开”，并输入每次转化的价值。如果每次转换对您的业务都是一致的，那么您只能使用此功能。例如，如果每个简报的注册价值为您的商家1美元，您可以设定一个目标值等于“1”。由于我们正在跟踪Google Store订单的完成次数，每个订单是不同的金额，我们将离开此值现在设置为“关”。如果我们想追踪购买的实际收入，我们需要开启电子商务跟踪，我们在电子商务分析课程中讨论。</p>
+<h4 id="目标漏斗"><a href="#目标漏斗" class="headerlink" title="目标漏斗"></a>目标漏斗</h4><p>验证您的设置后，将渠道开关翻转为“开”即可添加渠道步骤。每个渠道步骤代表您的网站上需要采取的操作，以完成目标。在这种情况下，我们需要为用户查看的每个页面包含一个URL的唯一部分，以便签出并进行购买。我们可以为我们的渠道中的每个步骤命名，并添加URL的唯一部分。如果需要步骤来完成目标，请将“必需”切换移至“是”。例如，如果我们只希望在第一步输入渠道的用户显示在我们的渠道可视化报告中，我们可以设置第一步要求。</p>
+<p><img src="https://lh3.googleusercontent.com/o0ujgsVnWUbjwc1dyzLN6jMp4Jq3svS99sKDuufRT1CzSf1XMdwJeln92_Zf6nQVD5-D=w600-h575" alt="img"></p>
+<p>请注意，转化报告中的目标完成号码不会受到您设置的渠道的影响，即使您已经执行了一些必要步骤，因为这些步骤仅在渠道可视化报告中报告。</p>
+<p>点击保存后，您将看到目标出现在目标列表中。</p>
+<p>要查看您的目标指标，请返回“报表”视图并在“转化”报告中点击“目标”，然后点击“概览”。更重要的是，您现在可以在几乎所有其他Google Analytics（分析）报告中查看目标数据，例如观众和收购报告。</p>
+<p>要查看相关渠道可视化，请在转化下单击渠道可视化报告。向下滚动，您可以在渠道的每个步骤中看到用户活动，以及每个步骤进行了多少用户。如果您看到用户在特定步骤中大幅度下降，您可能需要进一步调查。漏斗的这个阶段可能会出现技术问题，阻止用户进行。</p>
+<p><img src="https://lh3.googleusercontent.com/VRaQf6t3fflR2Nuv9oIG72Cqmd8wS17aPaiT4T0Hw5cNYA7_pzddlBf8p-plDNOAr4Fg=w500-h450" alt="img"></p>
+<p>除了创建自己的自定义目标之外，Google Analytics（分析）解决方案库还提供了其他用户构建的许多目标，您可以将其添加到您的Google Analytics（分析）帐户中，以用于您自己的业务目的。</p>
+<h1 id="如何使用Google-Analytics（分析）与AdWords"><a href="#如何使用Google-Analytics（分析）与AdWords" class="headerlink" title="如何使用Google Analytics（分析）与AdWords"></a>如何使用Google Analytics（分析）与AdWords</h1><p>AdWords是Google的广告系统，允许企业生成文字和展示广告。Google搜索结果旁边会显示文字广告，方法是匹配您可以通过用户的搜索查询出价的关键字。展示广告是由大量收录的Google多媒体广告联播网的文字，图片，动画或影片组成的广告。</p>
+<p><img src="https://lh3.googleusercontent.com/pXW8JvHW9nnZY1hTy2MWTUf2KdIRQnoi3bxSqoLj-vSLF9rUArBJzo36BZNHMMuICis=w300-h200" alt="img"><img src="https://lh3.googleusercontent.com/X5ucn3FKdNrdcStAYv4ztTiHZEqn2AaSqp3C6jAPCTjg9eNGWsYXE9oSvP6EdE_t4n2U=w300-h200" alt="img"></p>
+<p>由于Google Store想要销售T恤，他们可以针对诸如“Google T恤”和“Google服装”等关键字出价。当Google搜索特定产品时，例如“非常酷的Google T恤”，AdWords如果广告符合AdWord的质量指南，将会显示Google商店的相关文字广告。这种类型的广告可以帮助每天从数百万人使用Google搜索和展示广告网络吸引客户。</p>
+<p>当您将Google Analytics（分析）帐户与Google AdWords帐户关联时，您可以：</p>
+<ul>
+<li>查看AdWords点击和费用数据以及Google Analytics（分析）中的网站参与度数据;</li>
+<li>在Google Analytics（分析）中创建再营销列表，用于AdWords广告系列;</li>
+<li>将Google Analytics（分析）目标和交易转化为AdWords，</li>
+<li>并查看AdWords中的Google Analytics（分析）网站参与度数据。</li>
+</ul>
+<p>要设置AdWords帐户，请转到本课末尾的链接，并按照说明创建一个帐户。需要不到二十分钟。</p>
+<p>要将Google Analytics（分析）与AdWords相关联，首先请确保您使用与AdWords帐户相同的电子邮件登录Google Analytics（分析）。您可以在右上角找到您登录的电子邮件。请注意，您必须是这两个帐户的管理员。</p>
+<p>接下来，单击管理选项卡。然后确保您选择了您要链接到AdWords帐户的帐户和资源。在“媒体资源”部分下，选择“AdWords关联”。点击“新建链接组”按钮。您已链接到Google帐户的所有AdWords帐户都将自动显示。检查您要链接的帐户，然后点击“继续”。接下来，输入“链接组标题”。这可以是您的AdWords帐户ID。</p>
+<p>现在选择要显示AdWords数据的视图，然后选择“链接帐户”。链接的帐户将显示在您输入的标题的“链接”列表中。</p>
+<p><img src="https://lh3.googleusercontent.com/emUdkz1NY92FXjn9HQ2SrTxh5Ww2-jtAx7J7bO4fH6a2jW9Xa91wNJh8Z8zLry8aFjjH=w500-h450" alt="img"></p>
+<h4 id="自动标记"><a href="#自动标记" class="headerlink" title="自动标记"></a>自动标记</h4><p>当您连结Google Analytics（分析）和AdWords帐户时，这两个系统之间共享广告系列数据，但仍需要进行广告系列跟踪。尽管如前所述，您可以使用网址制作工具手动将广告系列跟踪代码添加到AdWords网址，但有一个更好的选择。AdWords可以通过称为自动标记的功能，自动为您的AdWords网址添加特殊的广告系列代码。在Google Analytics（分析）中获取特定的AdWords维度需要自动标记。以下是AdWords尺寸的一些：</p>
+<ul>
+<li>查询匹配类型显示AdWords关键字如何与用户搜索查询匹配。</li>
+<li>广告组显示与关键字/广告素材相关联的广告组，然后点击。</li>
+<li>目标网址显示AdWords广告中配置的AdWords目标网址。</li>
+<li>广告格式描述广告是文字广告，展示型广告还是视频。</li>
+<li>广告分销网络显示用于投放广告的网络。</li>
+<li>展示位置域是您的广告展示位置的内容网络上的域。</li>
+<li>AdWords客户ID是分配给您的AdWords帐户的唯一ID。</li>
+</ul>
+<p>所有这些数据可以帮助您更好地分析AdWords广告系列的效果。例如，您可以使用“广告格式”维度快速比较不同广告格式的效果。您还可以通过根据匹配类型分析关键字的效果，来调整关键字匹配策略。请注意，这些附加维度和报告功能仅在您关联Google Analytics（分析）和AdWords帐户时可用。</p>
+<p>将AdWords与Analytics（分析）关联后，我们可以在左侧导航栏中的“采集”下找到AdWords报告。</p>
+<h4 id="广告活动"><a href="#广告活动" class="headerlink" title="广告活动"></a>广告活动</h4><p>如果我们点击“广告系列”报告，我们可以看到我们的各种AdWords广告系列的效果如何。请注意，此报告使用AdWords分配的名称组织AdWords广告系列。这是将AdWords与Google Analytics（分析）关联的好处之一。</p>
+<p><img src="https://lh3.googleusercontent.com/XA9JRF0t9HJx3N0VS6tonVbFftcrLVPy4LXmi9uPzBiqaXHU5QMClNb9h17FRsQN5TY=w500-h425" alt="img"></p>
+<p>请注意报告顶部，您可以在桌面设备，移动设备和平板电脑指标之间切换，以查看不同设备上的广告系列的效果。在下面的数据表中，您可以使用采集指标来了解每个广告系列的点击次数以及这些点击支付的总金额。每次点击费用显示平均费用。在“行为”下，您可以查看每个广告系列的用户参与度。在“转化次数”下，您可以使用下拉菜单查看转化率，实际目标达成次数以及每个AdWords广告系列最终为您的企业带来的转化次数。</p>
+<p>如果您想查看Google搜索页面上的广告，您可以添加“广告位置”的辅助维度，这样可以更好地了解广告在搜索结果页上的显示位置。如果您想要更多详细信息，请点击广告系列的名称并查看广告组。</p>
+<h4 id="关键词"><a href="#关键词" class="headerlink" title="关键词"></a>关键词</h4><p>现在来看看“关键字”报告。这可以帮助您了解关键字和个人广告的效果。例如，如果关键字带来了大量流量，但跳出率较高，则可能表示广告和目标网页内容之间断开连接。如果您的转化率很高，而且显示的曝光次数（或广告的展示次数）低的关键字，则可能需要提高该关键字的出价，因此广告更频繁地展示，并吸引更多受众群体。您还可以添加“设备类别”作为辅助维度，以便根据用户点击您的广告并访问您的网站时所用的设备种类来分解这些关键字。</p>
+<h4 id="出价调整"><a href="#出价调整" class="headerlink" title="出价调整"></a>出价调整</h4><p>最后，我们来看看“出价调整”报告。出价调整是AdWords功能，用于根据用户的设备，位置或时间自动调整关键字出价。例如，如果Google商店在假期期间打开临时位置以销售商品，则他们可能需要添加出价调整，以在营业时间内提高商店三英里内的移动设备的广告可见度。</p>
+<p>Google Analytics（分析）中的出价调整报表可让您分析AdWords针对广告系列设置的出价调整幅度。您可以使用表格顶部的选择器来评估设备，位置，时段和再营销列表出价调整的广告系列效果。我们将在高级课程中介绍再营销。要查看特定广告系列的所有出价调整和指标，您可以在列表中点击该广告系列名称。</p>
+<p>与Google Analytics（分析）配对时，您可以看到AdWords对您的业务有多强大。它可以让您真正了解营销的价值，并进行调整以提高投资回报。</p>
+<h1 id="Google-Analytics（分析）初学者总结"><a href="#Google-Analytics（分析）初学者总结" class="headerlink" title="Google Analytics（分析）初学者总结"></a>Google Analytics（分析）初学者总结</h1><h4 id="课程回顾"><a href="#课程回顾" class="headerlink" title="课程回顾"></a>课程回顾</h4><p>我们来了解您在Google Analytics（分析）初学者中学到的知识。我们讨论过了：</p>
+<ul>
+<li>数字分析如何帮助您的业务</li>
+<li>向您展示了Google Analytics（分析）如何运作</li>
+<li>并向您介绍如何创建帐户，安装跟踪代码，并使用筛选器设置不同的视图进行测试。</li>
+</ul>
+<p>您还应该对如何浏览Google Analytics（分析），如何阅读概述和完整报告感到满意，以及如何设置信息中心和快捷方式，以快速找到所需的数据。</p>
+<p>我们希望您也了解如何在“受众群体，获取和行为”报告中执行基本分析。最后，我们向您介绍了广告系列跟踪以及如何设定目标来衡量转化次数。</p>
+<p>我们还向您展示了如何将Google Analytics（分析）和AdWords帐户相关联，以跟踪和优化AdWords广告系列。</p>
+<h4 id="下一步"><a href="#下一步" class="headerlink" title="下一步"></a>下一步</h4><p>但是在我们走之前，我们来看几个其他的方式来改善你的业务使用Google Analytics（分析）数据。</p>
+<p>好主意，贾斯汀。如果您想查看新用户的表现最佳的网页，请在“行为”下方访问“网站内容”，然后点击“所有网页”报告。然后添加“用户类型”的辅助维度，以便您可以看到新用户正在访问哪些首页。这可以帮助您了解您的网站内容和营销活动策略，以获得更多的用户。</p>
+<p>如果您想确定无效的目标网页，请转到“网站内容”下的“行为”报告，然后打开“目标网页”报告。按“跳出率”排序，查看哪些页面对您的网站没有任何人的离开负责。如果您正在投放广告系列并希望将这些着陆页与您的营销活动相关联，请添加“广告系列”或“源媒体”的辅助维度。然后，您可以检查哪些广告系列和目标网页已转向用户并进行更正。</p>
+<p>此外，了解不同设备上的用户如何响应数字营销活动非常重要。要跨设备查看用户活动数据，请进入采集报告，然后选择“广告系列”，然后选择“所有广告系列”。然后将“设备类别”的辅助维度添加到报告中。现在，您可以轻松查看不同设备上的用户对数字营销活动的响应。</p>
+<p>还可以使用地理数据和目标优化您的数字广告系列。转到Google Analytics（分析）地理位置部分的位置报告。然后在右侧的“转化次数”下拉菜单中，选择一个您感兴趣的目标，然后按“目标转化率”进行排序。这将有助于您了解哪些城市或国家/地区的转化次数最高，并帮助您相应地定位到这些位置。</p>
+<p>您现在应该知道如何使用Google Analytics（分析）来更好地了解您的受众群体，提高数字营销的效率，并增加网站转化。不要忘记将多个视图设置为Google Analytics（分析）帐户进行测试，并添加过滤器以创建可靠，准确的数据。另外，设定目标跟踪您的网站转化，并确保您已正确标记了您的营销活动进行跟踪。</p>
+<p>感谢您参与Google Analytics（分析）初学者，不要忘记进行最终评估以获得您的证书。请参加我们简短的课后调查！我们显然喜欢数据，并使用您的反馈来改进我们未来的Analytics（分析）学院课程。</p>
+<p>快乐分析！</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;Google-Analytics-初级-资料&quot;&gt;&lt;a href=&quot;#Google-Analytics-初级-资料&quot; class=&quot;headerlink&quot; title=&quot;Google Analytics (初级) 资料&quot;&gt;&lt;/a&gt;Google Analytics (
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>Android 日常开发好习惯</title>
@@ -1253,108 +1699,6 @@
       <category term="开源" scheme="http://wanghaonanlpc.github.io/tags/%E5%BC%80%E6%BA%90/"/>
     
       <category term="Airbnb" scheme="http://wanghaonanlpc.github.io/tags/Airbnb/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Bugly实现热更新</title>
-    <link href="http://wanghaonanlpc.github.io/2017/03/01/Bugly%E5%AE%9E%E7%8E%B0%E7%83%AD%E6%9B%B4%E6%96%B0/"/>
-    <id>http://wanghaonanlpc.github.io/2017/03/01/Bugly实现热更新/</id>
-    <published>2017-03-01T12:49:44.000Z</published>
-    <updated>2017-03-02T05:40:14.000Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote>
-<p>推荐阅读：<a href="http://www.jianshu.com/p/2d0f70e30111#" target="_blank" rel="external">Bugly热更新SDK你需要知道的一些事</a></p>
-</blockquote>
-<p>列举一些大家比较熟悉的一些热更新方案：</p>
-<p>微信开源：<a href="https://github.com/Tencent/tinker" target="_blank" rel="external">Tinker</a><br>大众点评：<a href="https://github.com/jasonross/Nuwa" target="_blank" rel="external">Nuwa</a><br>阿里巴巴：<a href="https://github.com/alibaba/dexposed" target="_blank" rel="external">Dexposed</a><br>阿里巴巴：<a href="https://github.com/alibaba/AndFix" target="_blank" rel="external">AndFix</a><br>美团：<a href="http://tech.meituan.com/android_robust.html" target="_blank" rel="external">Robust</a></p>
-<p><strong>Bugly也是出于高可用性的考虑，Tinker支持动态下发代码、So库以及资源，所以我们最终选择了Tinker方案作为我们SDK的一项能力。</strong></p>
-<p><a href="https://bugly.qq.com/docs/user-guide/instruction-manual-android-hotfix/?v=20170205190410" target="_blank" rel="external">Bugly热修复官方文档</a></p>
-<h3 id="一、配置参数"><a href="#一、配置参数" class="headerlink" title="一、配置参数"></a>一、配置参数</h3><ul>
-<li><strong>添加插件依赖</strong></li>
-</ul>
-<p>工程根目录下“build.gradle”文件中添加：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">buildscript &#123;</div><div class="line">    repositories &#123;</div><div class="line">        jcenter()</div><div class="line">    &#125;</div><div class="line">    dependencies &#123;</div><div class="line">        // tinkersupport插件，其中latest.release指代最新版本号，也可以指定明确的版本号，例如1.0.3</div><div class="line">        classpath &quot;com.tencent.bugly:tinker-support:latest.release&quot;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="二、集成SDK"><a href="#二、集成SDK" class="headerlink" title="二、集成SDK"></a>二、集成SDK</h3><ul>
-<li><strong>gradle配置</strong></li>
-</ul>
-<p>在app module的“build.gradle”文件中添加（示例配置）:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">dependencies &#123;</div><div class="line">      compile &quot;com.android.support:multidex:1.0.1&quot; </div><div class="line">      compile &apos;com.tencent.bugly:crashreport_upgrade:latest.release&apos;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>在app module的“build.gradle”文件中添加：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">// 依赖插件脚本</div><div class="line">apply from: &apos;tinker-support.gradle&apos;</div></pre></td></tr></table></figure>
-<ul>
-<li><strong>tinker-support.gradle</strong>内容如下所示（示例配置）：</li>
-</ul>
-<p><em>需要在同级目录下创建tinker-support.gradle这个文件</em></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div></pre></td><td class="code"><pre><div class="line">apply plugin: &apos;com.tencent.bugly.tinker-support&apos;</div><div class="line"></div><div class="line">def bakPath = file(&quot;$&#123;buildDir&#125;/bakApk/&quot;)</div><div class="line"></div><div class="line">def appName = &quot;app-0111-15-18-41&quot;</div><div class="line"></div><div class="line">/**</div><div class="line">* 对于插件各参数的详细解析请参考</div><div class="line">*/</div><div class="line">tinkerSupport &#123;</div><div class="line"></div><div class="line">    // 开启tinker-support插件，默认值true</div><div class="line">    enable = true</div><div class="line"></div><div class="line">    // 指定归档目录，默认值当前module的子目录tinker</div><div class="line">    autoBackupApkDir = &quot;$&#123;bakPath&#125;&quot;</div><div class="line"></div><div class="line">    // 是否启用覆盖tinkerPatch配置功能，默认值false</div><div class="line">    // 开启后tinkerPatch配置不生效，即无需添加tinkerPatch</div><div class="line">    overrideTinkerPatchConfiguration = true</div><div class="line"></div><div class="line">    // 编译补丁包时，必需指定基线版本的apk，默认值为空</div><div class="line">    // 如果为空，则表示不是进行补丁包的编译</div><div class="line">    // @&#123;link tinkerPatch.oldApk &#125;</div><div class="line">    baseApk =  &quot;$&#123;bakPath&#125;/$&#123;appName&#125;/app-release.apk&quot;</div><div class="line"></div><div class="line">    // 对应tinker插件applyMapping</div><div class="line">    baseApkProguardMapping = &quot;$&#123;bakPath&#125;/$&#123;appName&#125;/app-release-mapping.txt&quot;</div><div class="line"></div><div class="line">    // 对应tinker插件applyResourceMapping</div><div class="line">    baseApkResourceMapping = &quot;$&#123;bakPath&#125;/$&#123;appName&#125;/app-release-R.txt&quot;</div><div class="line"></div><div class="line">    // 唯一标识当前版本</div><div class="line">    tinkerId = &quot;1.0.1-base&quot;</div><div class="line"></div><div class="line">    // 是否开启代理Application，设置之后无须改造Application，默认为false</div><div class="line">    enableProxyApplication = false</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="三、初始化SDK"><a href="#三、初始化SDK" class="headerlink" title="三、初始化SDK"></a>三、初始化SDK</h3><p><strong>enableProxyApplication = false 的情况</strong></p>
-<ul>
-<li>自定义Application</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">public class SampleApplication extends TinkerApplication &#123;</div><div class="line">    public SampleApplication() &#123;</div><div class="line">        super(ShareConstants.TINKER_ENABLE_ALL, &quot;com.yiba.test.buglypatch.SampleApplicationLike&quot;,</div><div class="line">                &quot;com.tencent.tinker.loader.TinkerLoader&quot;, false);</div><div class="line">    &#125;</div><div class="line">&#125;123456123456</div></pre></td></tr></table></figure>
-<ul>
-<li>自定义ApplicationLike</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div></pre></td><td class="code"><pre><div class="line">public class SampleApplicationLike extends DefaultApplicationLike &#123;</div><div class="line"></div><div class="line">    public static final String TAG = &quot;Tinker.SampleApplicationLike&quot;;</div><div class="line"></div><div class="line">    public SampleApplicationLike(Application application, int tinkerFlags,</div><div class="line">            boolean tinkerLoadVerifyFlag, long applicationStartElapsedTime,</div><div class="line">            long applicationStartMillisTime, Intent tinkerResultIntent, Resources[] resources,</div><div class="line">            ClassLoader[] classLoader, AssetManager[] assetManager) &#123;</div><div class="line">        super(application, tinkerFlags, tinkerLoadVerifyFlag, applicationStartElapsedTime,</div><div class="line">                applicationStartMillisTime, tinkerResultIntent, resources, classLoader,</div><div class="line">                assetManager);</div><div class="line">    &#125;</div><div class="line"></div><div class="line"></div><div class="line">    @Override</div><div class="line">    public void onCreate() &#123;</div><div class="line">        super.onCreate();</div><div class="line">        // 这里实现SDK初始化，appId替换成你的在Bugly平台申请的appId</div><div class="line">        Bugly.init(getApplication(), &quot;900029763&quot;, true);</div><div class="line">    &#125;</div><div class="line"></div><div class="line"></div><div class="line">    @TargetApi(Build.VERSION_CODES.ICE_CREAM_SANDWICH)</div><div class="line">    @Override</div><div class="line">    public void onBaseContextAttached(Context base) &#123;</div><div class="line">        super.onBaseContextAttached(base);</div><div class="line">        // you must install multiDex whatever tinker is installed!</div><div class="line">        MultiDex.install(base);</div><div class="line"></div><div class="line">        // 安装tinker</div><div class="line">        // TinkerManager.installTinker(this); 替换成下面Bugly提供的方法</div><div class="line">        Beta.installTinker(this);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    @TargetApi(Build.VERSION_CODES.ICE_CREAM_SANDWICH)</div><div class="line">    public void registerActivityLifecycleCallback(Application.ActivityLifecycleCallbacks callbacks) &#123;</div><div class="line">        getApplication().registerActivityLifecycleCallbacks(callbacks);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="四、AndroidManifest-xml配置"><a href="#四、AndroidManifest-xml配置" class="headerlink" title="四、AndroidManifest.xml配置"></a>四、AndroidManifest.xml配置</h3><ul>
-<li>权限配置</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&lt;uses-permission android:name=&quot;android.permission.READ_PHONE_STATE&quot; /&gt;</div><div class="line">&lt;uses-permission android:name=&quot;android.permission.INTERNET&quot; /&gt;</div><div class="line">&lt;uses-permission android:name=&quot;android.permission.ACCESS_NETWORK_STATE&quot; /&gt;</div><div class="line">&lt;uses-permission android:name=&quot;android.permission.ACCESS_WIFI_STATE&quot; /&gt;</div><div class="line">&lt;uses-permission android:name=&quot;android.permission.READ_LOGS&quot; /&gt;</div><div class="line">&lt;uses-permission android:name=&quot;android.permission.WRITE_EXTERNAL_STORAGE&quot; /&gt;</div><div class="line">&lt;uses-permission android:name=&quot;android.permission.READ_EXTERNAL_STORAGE&quot;/&gt;</div></pre></td></tr></table></figure>
-<ul>
-<li>Activity配置</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;activity</div><div class="line">    android:name=&quot;com.tencent.bugly.beta.ui.BetaActivity&quot;</div><div class="line">    android:theme=&quot;@android:style/Theme.Translucent&quot; /&gt;</div></pre></td></tr></table></figure>
-<ul>
-<li><p>配置FileProvider（<a href="http://lib.csdn.net/base/android" target="_blank" rel="external">Android</a> N之后配置）</p>
-<p>见<a href="https://bugly.qq.com/docs/user-guide/instruction-manual-android-hotfix/?v=20170205190410" target="_blank" rel="external">文档</a></p>
-</li>
-</ul>
-<h3 id="五、混淆配置"><a href="#五、混淆配置" class="headerlink" title="五、混淆配置"></a>五、混淆配置</h3><p>为了避免混淆SDK，在Proguard混淆文件中增加以下配置：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">-dontwarn com.tencent.bugly.**</div><div class="line">-keep public class com.tencent.bugly.**&#123;*;&#125;</div></pre></td></tr></table></figure>
-<p>如果你使用了support-v4包，你还需要配置以下混淆规则：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">-keep class android.support.**&#123;*;&#125;</div></pre></td></tr></table></figure>
-<hr>
-<h3 id="六、编译基准包"><a href="#六、编译基准包" class="headerlink" title="六、编译基准包"></a>六、编译基准包</h3><p>基准包就是原先运行有bug的包。</p>
-<p>点击Android Studio右上角的Gradle按钮，找到项目的assembleRelease任务，双击执行assembleRelease任务。</p>
-<p><img src="http://oe9ggtbcb.bkt.clouddn.com/K%29RNI48%5DNN%28PS~MG%5B3LK%7BEK.png" alt="image"></p>
-<p>任务执行完成后，会在build的目录下生成如下文件：</p>
-<p><img src="http://oe9ggtbcb.bkt.clouddn.com/RCMZ3Q%29%5D7B%7B_YYQ%28HC6$RTS.png" alt="image"></p>
-<h3 id="七、修复基准版代码"><a href="#七、修复基准版代码" class="headerlink" title="七、修复基准版代码"></a>七、修复基准版代码</h3><p>修复前代码：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">public class BugClass &#123;</div><div class="line"></div><div class="line">    public String bug() &#123;</div><div class="line">        String str = &quot;This is a bug&quot;;</div><div class="line">        str = null;</div><div class="line">        Log.e(&quot;zhang&quot;, &quot;BugClass --&gt; bug--&gt; str length :&quot; + str.length());</div><div class="line">        return str;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<hr>
-<p>修复后代码:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">public class BugClass &#123;</div><div class="line"></div><div class="line">    public String bug() &#123;</div><div class="line">        String str = &quot;This is a bug&quot;;</div><div class="line">//        str = null;</div><div class="line">        Log.e(&quot;zhang&quot;, &quot;BugClass --&gt; bug--&gt; str length :&quot; + str.length());</div><div class="line">        return str + &quot;  , fixed!!!&quot;;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<hr>
-<p>调用代码：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">public class MainActivity extends AppCompatActivity &#123;</div><div class="line"></div><div class="line">    @Override</div><div class="line">    protected void onCreate(Bundle savedInstanceState) &#123;</div><div class="line">        super.onCreate(savedInstanceState);</div><div class="line">        setContentView(R.layout.activity_main);</div><div class="line"></div><div class="line">        Button btn = (Button) findViewById(R.id.btn);</div><div class="line"></div><div class="line">        btn.setOnClickListener(new View.OnClickListener() &#123;</div><div class="line">            @Override</div><div class="line">            public void onClick(View v) &#123;</div><div class="line">                BugClass bugClass = new BugClass();</div><div class="line">                String bug = bugClass.bug();</div><div class="line">                Toast.makeText(MainActivity.this, bug, Toast.LENGTH_SHORT).show();</div><div class="line">            &#125;</div><div class="line">        &#125;);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="八、生成补丁包"><a href="#八、生成补丁包" class="headerlink" title="八、生成补丁包"></a>八、生成补丁包</h3><ul>
-<li>修改appName名称以及文件名称都需要保持一致。同时将基准包的tinkerid=1.0.1-base改为补丁包的tinkerid=1.0.1-patch。</li>
-</ul>
-<p><img src="http://oe9ggtbcb.bkt.clouddn.com/R4TK_IQ9@7JMDN4H%289A7HLH.png" alt="image"></p>
-<ul>
-<li><strong>生成补丁包</strong></li>
-</ul>
-<p>执行生成补丁包的任务操作：</p>
-<p><img src="http://oe9ggtbcb.bkt.clouddn.com/GD8C4NOLEE0%5BBBLFB_R4%29$U.png" alt="image"></p>
-<p>任务执行完之后，会生成3个文件，其中patch_signed_7zip.apk是我们需要的补丁包</p>
-<p><img src="http://oe9ggtbcb.bkt.clouddn.com/E4TCAATO%5B4E%602_S5PO6%5B0G6.png" alt="image"></p>
-<p>将补丁包上传至bugly的应用升级模块的热更新中</p>
-<p>具体见<a href="https://bugly.qq.com/docs/user-guide/instruction-manual-android-hotfix-demo/?v=20170205190410" target="_blank" rel="external">bugly的官方文档</a>。</p>
-<p><img src="https://ww3.sinaimg.cn/large/006tNbRwly1fd7nh2frm9j30wb0b641r.jpg" alt=""></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;blockquote&gt;
-&lt;p&gt;推荐阅读：&lt;a href=&quot;http://www.jianshu.com/p/2d0f70e30111#&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Bugly热更新SDK你需要知道的一些事&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquo
-    
-    </summary>
-    
-      <category term="安卓" scheme="http://wanghaonanlpc.github.io/categories/%E5%AE%89%E5%8D%93/"/>
-    
-    
-      <category term="安卓" scheme="http://wanghaonanlpc.github.io/tags/%E5%AE%89%E5%8D%93/"/>
     
   </entry>
   
