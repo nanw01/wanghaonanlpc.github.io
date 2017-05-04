@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://wanghaonanlpc.github.io/"/>
-  <updated>2017-04-27T03:35:31.000Z</updated>
+  <updated>2017-05-04T06:58:50.000Z</updated>
   <id>http://wanghaonanlpc.github.io/</id>
   
   <author>
@@ -14,6 +14,56 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title> 产品的激励 系统</title>
+    <link href="http://wanghaonanlpc.github.io/2017/05/04/%E4%BA%A7%E5%93%81%E7%9A%84%E6%BF%80%E5%8A%B1-%E7%B3%BB%E7%BB%9F/"/>
+    <id>http://wanghaonanlpc.github.io/2017/05/04/产品的激励-系统/</id>
+    <published>2017-05-04T06:57:08.000Z</published>
+    <updated>2017-05-04T06:58:50.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>产品中的等级激励系统本质上类似游戏的设计，不断的通过各种激励手段促使用户完成任务。所以可以借鉴一些游戏的方法，而要做好一个游戏，需要在四个最核心的要素上进行打磨：机制、故事、设计、技术。</p>
+<p>游戏设计的关键四个要素</p>
+<p>游戏的机制指用户通过什么样的任务来升级，升级的数据模型如何，以及会获得什么样的奖励，这是底层的、用户不可见的规则。</p>
+<p>还需要通过一个精彩的、吸引人的故事进行包装，向用户传达这一规则。同时采用与故事贴合的设计将构思呈现出来。一个吸引人的游戏，都具有一个动人的、使人有共鸣或使命感的故事，例如经典的《魔兽世界》、《植物大战僵尸》、《阴阳师》等等。</p>
+<p>一些具有优秀故事设定的游戏</p>
+<p>而技术作为一个独特的元素，可以为整个游戏设计提供新的可能性，同时再考虑其他三个要素时，也需要将技术纳入可行性的考虑。</p>
+<p>在产品设计中，常常会需要用到激励机制，来鼓励用户完成某些任务，带动产品数据的提升，包括活跃和留存。</p>
+<p>例如QQ会员的成长机制，可以提升用户使用产品的粘性，并付费。</p>
+<p>QQ会员等级系统</p>
+<p>KEEP这个健身APP通过提供用户等级激励用户持续使用这个产品进行健身运动，刺激活跃。</p>
+<p>KEEP健身APP中的用户等级系统</p>
+<p>要构建一个合理的、持续吸引用户的激励机制同样可以借鉴游戏的关键要素来考虑：我们可以先忽略技术要素（与游戏不同，多数情况下技术不会对产品激励系统的设计造成门槛），从三个要素来拆分构建：1.机制、2.构建、3.设计。</p>
+<p>产品激励系统设计中的三个关键要素</p>
+<p>以我们在做的一个直播短视频类型的APP激励系统为例：</p>
+<h4 id="1-机制"><a href="#1-机制" class="headerlink" title="1.机制"></a>1.机制</h4><p>激励机制可以从维度、数据、奖励三个维度来构建：</p>
+<p>维度即根据产品目标选择需要激励用户作出的行为，例如本产品期望激励创作者尽可能提供高质量的内容，所以具体的就是通过创作者的粉丝、直播内容时长、直播质量评级、收到的打赏钻石等这些维度来衡量。</p>
+<p>一个内容产品的激励机制</p>
+<p>将这些维度按照不同权重来设计换算为成长值的公式，再对应到等级，给予相应的奖励设计，就完成了机制的搭建。</p>
+<p>需要注意的是：随着用户等级越高，所需要达成的条件也需要指数级上升，以提供更多的刺激阈值，使用户不断的面临更高挑战，而不是平稳的匀速升级。原因是：新用户刚开始升级，难度较低，就可以比较快的收获奖励，更愿意留存。而升到一定级别的用户，可以被认为是产品的忠实用户了，对挑战的接受度也更高。</p>
+<p>例如QQ会员的成长曲线，越到高级，升级越难。这样的升级曲线在游戏中非常常见，例如Pokemon也有类似的升级曲线。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/50232-6d0b54132f6a5172.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="img"></p>
+<h4 id="2-故事"><a href="#2-故事" class="headerlink" title="2.故事"></a>2.故事</h4><p>确定好机制后，我们开始创造一个故事，使用户融入其中。这是一个直播内容型产品，创造者在产品中的最大期望是可以收获更多粉丝，成长为网红。我们期望用户可以体验到升级过程像一个从新人成长到偶像明星、天王巨星的感受，所以我们设定了这样的故事：</p>
+<p>产品的舞台邀请用户参与到这场明星的挑战中，通过不断的创造更好的内容，挑战升级关卡，获得荣耀的偶像称号，最终成长为传奇。</p>
+<h4 id="3-设计"><a href="#3-设计" class="headerlink" title="3.设计"></a>3.设计</h4><p>围绕这个故事，设计了主播的等级页面，每一个关卡包装为一个荣誉卡片，上面展示荣誉徽章、称号，升级需要的成长值，以及挑战成功后会获得的奖励，点亮一个才可以解锁下一个。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/50232-8a395e2f913a8412.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="img"></p>
+<p>为每一个称号都有对应的徽章：图形精致度逐级升高：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/50232-c6d5e01beb041470.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="img"></p>
+<p>为了在用户每一次发表内容后强化对等级的认知，专门对发表内容的结束页做了包装设计：通过动画展示刚刚发表内容的评级，并告知用户距离下一成就还差多少成长值。</p>
+<p>发表内容结束页的评级展示</p>
+<p>游戏中很多方法对于产品设计是共通的，通过游戏化设计可以使产品多一些趣味性，提升产品对用户的吸引力，尤其是激励机制的部分，使用户在挑战中上瘾、逐步沉浸到产品中，是最理想的效果。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;产品中的等级激励系统本质上类似游戏的设计，不断的通过各种激励手段促使用户完成任务。所以可以借鉴一些游戏的方法，而要做好一个游戏，需要在四个最核心的要素上进行打磨：机制、故事、设计、技术。&lt;/p&gt;
+&lt;p&gt;游戏设计的关键四个要素&lt;/p&gt;
+&lt;p&gt;游戏的机制指用户通过什么样的任务来
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>Google Analytics (初级) 资料</title>
@@ -1634,53 +1684,6 @@
 <p>在他们的合作领导下，我们接触了所有三个团队，为我们的示例应用程序贡献动画。我们已经包括了由JR Canest创建的Motion Corpse的动画，来自9 Squares项目的Al Boardman的方块之一，以及使用Animography的Mobilo动画字体的动画键盘，其中包含超过二十个艺术家的作品。我们希望这些动画社区与强大的工程社群的合并将产生一些特别的东西。</p>
 <p><img src="http://airbnb.design/wp-content/uploads/2017/01/community.gif" alt="社区">我们很想听听你如何使用Lottie - 无论你是一个设计师，动画师或工程师。欢迎随时通过lottie@airbnb.com与您的想法，反馈和见解联系。我们很高兴看到当他们开始以我们从未想象的方式使用Lottie时，世界上的社区会做什么。</p>
 <h3 id="下载Bodymovin，Lottie-iOS，Android和React-Native。"><a href="#下载Bodymovin，Lottie-iOS，Android和React-Native。" class="headerlink" title="下载Bodymovin，Lottie iOS，Android和React Native。"></a>下载<a href="https://github.com/bodymovin/bodymovin" target="_blank" rel="external">Bodymovin</a>，Lottie <a href="https://github.com/airbnb/lottie-ios" target="_blank" rel="external">iOS</a>，<a href="https://github.com/airbnb/lottie-android" target="_blank" rel="external">Android</a>和<a href="https://github.com/airbnb/lottie-react-native" target="_blank" rel="external">React Native</a>。</h3><p>本文由<a href="http://github.com/buba447" target="_blank" rel="external">Brandon Withrow</a>，  <a href="https://twitter.com/gpeal8" target="_blank" rel="external">Gabriel Peal</a>  和  <a href="http://airbnb.design/lottie/" target="_blank" rel="external">Salih Abdul-Karim](https://twitter.com/therealsalih?lang=en)共同撰写   。 </a></p>
-]]></content>
-    
-    <summary type="html">
-    
-      introduce lottie
-    
-    </summary>
-    
-      <category term="安卓" scheme="http://wanghaonanlpc.github.io/categories/%E5%AE%89%E5%8D%93/"/>
-    
-    
-      <category term="android" scheme="http://wanghaonanlpc.github.io/tags/android/"/>
-    
-      <category term="ui" scheme="http://wanghaonanlpc.github.io/tags/ui/"/>
-    
-      <category term="开源" scheme="http://wanghaonanlpc.github.io/tags/%E5%BC%80%E6%BA%90/"/>
-    
-      <category term="Airbnb" scheme="http://wanghaonanlpc.github.io/tags/Airbnb/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Lottie简介：Airbnb为本地应用程序添加动画的工具(原文)</title>
-    <link href="http://wanghaonanlpc.github.io/2017/03/03/Introducing-Lottie-%E5%8E%9F%E6%96%87/"/>
-    <id>http://wanghaonanlpc.github.io/2017/03/03/Introducing-Lottie-原文/</id>
-    <published>2017-03-03T03:23:46.000Z</published>
-    <updated>2017-03-03T03:57:07.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="http://airbnb.design/category/behind-the-scenes/" target="_blank" rel="external">BEHIND THE SCENES</a>     /  BY SALIH ABDUL-KARIM / 02.03<br><a href="http://airbnb.design/tag/animation/" target="_blank" rel="external">#ANIMATION</a> <a href="http://airbnb.design/tag/design/" target="_blank" rel="external">#DESIGN</a> <a href="http://airbnb.design/tag/engineering/" target="_blank" rel="external">#ENGINEERING</a> <a href="http://airbnb.design/tag/motion/" target="_blank" rel="external">#MOTION</a> <a href="http://airbnb.design/tag/open-source/" target="_blank" rel="external">#OPEN SOURCE</a> <a href="http://airbnb.design/tag/tools/" target="_blank" rel="external">#TOOLS</a></p>
-<h2 id="Lottie"><a href="#Lottie" class="headerlink" title="Lottie"></a>Lottie</h2><h3 id="Behind-the-scenes-of-our-new-open-source-animation-tool"><a href="#Behind-the-scenes-of-our-new-open-source-animation-tool" class="headerlink" title="Behind the scenes of our new open-source animation tool."></a>Behind the scenes of our new open-source animation tool.</h3><p>In the past, building complex animations for Android, iOS, and React Native apps was a difficult and lengthy process. You either had to add bulky image files for each screen size or write a thousand lines of brittle, hard-to-maintain code. Because of this, most apps weren’t using animation — despite it being a powerful tool for communicating ideas and creating compelling user experiences. One year ago, we set out to change that.</p>
-<p>Today, we’re happy to introduce our solution. Lottie is an iOS, Android, and React Native library that renders After Effects animations in real time, and allows native apps to use animations as easily as they use static assets. Lottie uses animation data exported as JSON files from an open-source After Effects extension called <a href="https://github.com/bodymovin/bodymovin" target="_blank" rel="external">Bodymovin</a>. The extension is bundled with a JavaScript player that can render the animations on the web. Since February of 2015, Bodymovin’s creator, <a href="https://twitter.com/airnanan" target="_blank" rel="external">Hernan Torrisi</a>, has built a solid foundation by adding features and improvements to the plugin on a monthly basis. Our team (<a href="http://github.com/buba447" target="_blank" rel="external">Brandon Withrow</a> on <a href="https://github.com/airbnb/lottie-ios" target="_blank" rel="external">iOS</a>, <a href="https://twitter.com/gpeal8" target="_blank" rel="external">Gabriel Peal</a> on <a href="https://github.com/airbnb/lottie-android" target="_blank" rel="external">Android</a>, <a href="https://twitter.com/intelligibabble" target="_blank" rel="external">Leland Richardson</a> on <a href="https://github.com/airbnb/lottie-react-native" target="_blank" rel="external">React Native</a>, and <a href="https://twitter.com/therealsalih?lang=en" target="_blank" rel="external">I</a> on experience design) began our journey by building on top of Torrisi’s phenomenal work.</p>
-<p><img src="http://airbnb.design/wp-content/uploads/2017/02/icons.gif" alt="icons"></p>
-<p>Lottie allows engineers to build richer animations without the painstaking overhead of re-writing them. Nick Butcher’s<a href="https://medium.com/google-developers/animation-jump-through-861f4f5b3de4#.xlw1n2u2d" target="_blank" rel="external"> jump through</a> animation, Bartek Lipinski’s <a href="https://android.jlelse.eu/animatedvectordrawablecompat-3d9568727c53#.fmiujhcdj" target="_blank" rel="external">hamburger menu</a>, and Miroslaw Stanek’s <a href="http://frogermcs.github.io/twitters-like-animation-in-android-alternative/" target="_blank" rel="external">Twitter heart</a> demonstrate just how difficult and time consuming it can be to re-create animations from scratch. With Lottie, digging through frameworks for reference, guessing durations, manually creating Bézier curves, and re-making animations with nothing more than a GIF for reference will be a thing of the past. Now engineers can use exactly what the designer intended, exactly how it was made. To demonstrate that, we’ve recreated their animations and provided After Effects and JSON files of each in our sample app.</p>
-<p>Our goal is to support as many After Effects features as we possibly can, to allow for a lot more than simple icon animations. We’ve created a handful of other examples to show the library’s flexibility, richness, and deep feature set. In the sample app, there are also source files for a variety of different kinds of animations, including basic line art, character-based animations, and dynamic logo animations with multiple angles and cuts.</p>
-<p><img src="http://airbnb.design/wp-content/uploads/2017/01/screens_1.gif" alt="screens_1"></p>
-<p>We’ve already started shipping our own Lottie animations on several screens, including in-app notifications, full-frame animated illustrations, and in our review flow. And we plan to greatly expand our usage of animations in a fun yet useful way moving forward.</p>
-<p><img src="http://airbnb.design/wp-content/uploads/2017/01/screens_2.gif" alt="screens_2"></p>
-<h2 id="Flexible-and-efficient-solution"><a href="#Flexible-and-efficient-solution" class="headerlink" title="Flexible and efficient solution"></a><strong>Flexible and efficient solution</strong></h2><p>Airbnb is a global company that supports millions of guests and hosts, so having a flexible animation format that is playable on multiple platforms was extremely important to us. There are libraries similar to Lottie, such as Marcus Eckert’s <a href="http://www.marcuseckert.com/squall/" target="_blank" rel="external">Squall</a> and Facebook’s <a href="https://github.com/facebookincubator/Keyframes" target="_blank" rel="external">Keyframes</a>, but our goals are slightly different. Facebook picked a small set of After Effects features to support, since they were focusing mainly on reactions, but we want to support as many as possible. As for Squall, designers at Airbnb use it in combination with Lottie because it has an amazing After Effects preview app that’s become a necessary part of our workflow. However, it only supports iOS and our engineering teams needed a cross-platform solution.</p>
-<p>Lottie also has several features built into its API to make it more versatile and efficient. It supports loading JSON files over the network, which is useful for A/B testing. It also has an optional caching mechanism, so frequently used animations, such as a wish-list heart, can load a cached copy each time. Lottie animations can be driven by gestures using the animated progress feature, and animation speed can be manipulated by changing a simple value. iOS even supports adding additional native UI to an animation at runtime, which can be used for complex animated transitions.</p>
-<p>In addition to all of the After Effects features and API additions we’ve worked on so far, we have many ideas for the future. These include mapping views to Lottie animations, controlling view transitions with Lottie, support for <a href="http://www.battleaxe.co/rubberhose/" target="_blank" rel="external">Battle Axe’s RubberHose</a>, gradient, type, and image support. The hardest part is picking which features to tackle next.</p>
-<p><img src="http://airbnb.design/wp-content/uploads/2017/01/hardware.png" alt="hardware"></p>
-<h2 id="Building-community"><a href="#Building-community" class="headerlink" title="Building community"></a><strong>Building community</strong></h2><p>Releasing something as open source is more than just putting it out there for the public to use. It’s a bridge that connects people and creates community. As we got closer to releasing Lottie to designers and engineers via GitHub, we wanted to be sure to connect with the animation folks as well.</p>
-<p>We were inspired by the communities that <a href="http://9-squares.tumblr.com/" target="_blank" rel="external">9 Squares</a>, <a href="https://motioncorpse.tumblr.com/" target="_blank" rel="external">Motion Corpse</a>, and <a href="https://animography.net/products/mobilo" target="_blank" rel="external">Animography</a> have created. All three have brought together people from around the world, who otherwise would never have worked together, to collaborate on public animation projects. These projects take months of work and a lot of organization and wrangling by the respective teams, but they undoubtedly provide immense value for the animation community as a whole. Motion Corpse and Animography publicly share the After Effects source files as well, which provide tons of insights on how people work.</p>
-<p>Following their collaborative lead, we reached out to all three teams to contribute animations to our sample app. We’ve included an animation from Motion Corpse created by J.R. Canest, one of Al Boardman’s squares from the 9 Squares project, and an animated keyboard using Animography’s Mobilo animated typeface, which features work from more than two dozen artists. We’re hoping that the merging of these animation communities with the powerful engineering community will spark something special.</p>
-<p><img src="http://airbnb.design/wp-content/uploads/2017/01/community.gif" alt="community">We’d love to hear how you’re using Lottie — no matter if you’re a designer, animator, or engineer. Feel free to reach out to us directly at lottie@airbnb.com with your thoughts, feedback, and insights. We’re excited to see what the community around the world will do when they begin to use Lottie in ways we never imagined.</p>
-<h3 id="Download-Bodymovin-Lottie-iOS-Android-and-React-Native"><a href="#Download-Bodymovin-Lottie-iOS-Android-and-React-Native" class="headerlink" title="Download Bodymovin, Lottie iOS, Android and React Native."></a>Download <a href="https://github.com/bodymovin/bodymovin" target="_blank" rel="external">Bodymovin</a>, Lottie <a href="https://github.com/airbnb/lottie-ios" target="_blank" rel="external">iOS</a>, <a href="https://github.com/airbnb/lottie-android" target="_blank" rel="external">Android</a> and <a href="https://github.com/airbnb/lottie-react-native" target="_blank" rel="external">React Native</a>.</h3><p>This article was co-written by  <a href="http://github.com/buba447" target="_blank" rel="external">Brandon Withrow</a>,  <a href="https://twitter.com/gpeal8" target="_blank" rel="external">Gabriel Peal</a> and <a href="https://twitter.com/therealsalih?lang=en" target="_blank" rel="external">Salih Abdul-Karim</a>.</p>
-<p><img src="http://airbnb.design/lottie/" alt="Salih Abdul-Karim](http://airbnb.design/wp-content/uploads/2017/01/SalihAbdul-Karim-profile.jpg) Salih Abdul-Karim is an Experience and Motion Designer at Airbnb."></p>
 ]]></content>
     
     <summary type="html">
